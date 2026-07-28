@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Architectural Luxury Palette */
+    --navy-deep: #060e1a;
+    --navy-primary: #0f1d3d;
+    --navy-blue: #132448;
+    
+    /* Warm Champagne Gold */
+    --gold-primary: #d4af37;
+    --gold-dark: #c9a033;
+    --gold-accent: #f0da8a;
+    --gold-light: #faf2d8;
+    
+    /* Off-white & Canvas */
+    --canvas-bg: #f7f6f2;
+    --card-bg: #ffffff;
+    --surface-light: #efeee8;
+    --border-architectural: rgba(15, 29, 61, 0.12);
+    --border-gold-shimmer: rgba(212, 175, 55, 0.35);
+
+    /* Text */
+    --text-dark: #121824;
+    --text-muted-dark: #3f4756;
+    --text-muted-light: #6b7280;
+  }
+
+  body {
+    background-color: var(--canvas-bg);
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Cinzel', serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Architectural Grid Blueprint Background */
+.blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(15, 29, 61, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 29, 61, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.blueprint-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 29, 61, 0.09);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(15, 29, 61, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  box-shadow: 0 16px 40px rgba(15, 29, 61, 0.12), 0 0 0 1.5px rgba(212, 175, 55, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Gold Gradient Effects */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d4af37 0%, #f7e49a 40%, #b89028 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-shimmer {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  position: relative;
+}
+
+/* Premium Buttons */
+.btn-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a033 50%, #b89028 100%);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 0.9rem 2rem;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  border: none;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #e5c358 0%, #d4af37 50%, #c9a033 100%);
+  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0f1d3d 0%, #16264c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.9rem 2rem;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(15, 29, 61, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #16264c 0%, #1e3566 100%);
+  box-shadow: 0 8px 26px rgba(15, 29, 61, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Badges */
+.badge-rera {
+  background: rgba(15, 29, 61, 0.06);
+  border: 1px solid rgba(15, 29, 61, 0.14);
+  color: #0f1d3d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.divider-gold {
+  height: 3px;
+  width: 50px;
+  background: linear-gradient(90deg, #d4af37, #f0da8a);
+  border-radius: 2px;
+}
+
+.section-navy {
+  background: linear-gradient(135deg, #060e1a 0%, #0f1d3d 50%, #132448 100%);
+  color: #ffffff;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
