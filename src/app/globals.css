@@ -1,160 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 @import "tailwindcss";
 
 @layer base {
   :root {
-    /* Architectural Luxury Palette */
-    --navy-deep: #060e1a;
-    --navy-primary: #0f1d3d;
-    --navy-blue: #132448;
+    /* Royal Navy & Gold Palette */
+    --primary-navy: #0B1F3A;
+    --accent-gold: #C8A34D;
+    --accent-gold-dark: #b5903b;
+    --bg-white: #FFFFFF;
+    --bg-secondary: #F8F8F5;
+    --text-primary: #1A1A1A;
+    --text-muted: #555555;
     
-    /* Warm Champagne Gold */
-    --gold-primary: #d4af37;
-    --gold-dark: #c9a033;
-    --gold-accent: #f0da8a;
-    --gold-light: #faf2d8;
-    
-    /* Off-white & Canvas */
-    --canvas-bg: #f7f6f2;
-    --card-bg: #ffffff;
-    --surface-light: #efeee8;
-    --border-architectural: rgba(15, 29, 61, 0.12);
-    --border-gold-shimmer: rgba(212, 175, 55, 0.35);
-
-    /* Text */
-    --text-dark: #121824;
-    --text-muted-dark: #3f4756;
-    --text-muted-light: #6b7280;
+    --border-light: rgba(11, 31, 58, 0.1);
+    --border-gold: rgba(200, 163, 77, 0.35);
   }
 
   body {
-    background-color: var(--canvas-bg);
-    color: var(--text-dark);
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, h4, .font-heading {
-    font-family: 'Cinzel', serif;
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Playfair Display', serif;
     letter-spacing: -0.01em;
   }
-
-  .font-mono-code {
-    font-family: 'JetBrains Mono', monospace;
-  }
 }
 
-/* Architectural Grid Blueprint Background */
-.blueprint-grid {
-  background-image: 
-    linear-gradient(to right, rgba(15, 29, 61, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 29, 61, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-.blueprint-grid-dark {
-  background-image: 
-    linear-gradient(to right, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* Glassmorphism Cards */
+/* Glassmorphism Cards with Soft Shadows */
 .glass-card {
-  background: #ffffff;
-  border: 1px solid rgba(15, 29, 61, 0.09);
+  background: #FFFFFF;
+  border: 1px solid rgba(11, 31, 58, 0.08);
   border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(15, 29, 61, 0.04);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  box-shadow: 0 16px 40px rgba(15, 29, 61, 0.12), 0 0 0 1.5px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 20px 45px rgba(11, 31, 58, 0.12), 0 0 0 1.5px rgba(200, 163, 77, 0.5);
   transform: translateY(-4px);
 }
 
-/* Gold Gradient Effects */
+/* Gold Gradient Text */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #d4af37 0%, #f7e49a 40%, #b89028 100%);
+  background: linear-gradient(135deg, #C8A34D 0%, #E6C875 50%, #B08A35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-border-shimmer {
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  position: relative;
-}
-
-/* Premium Buttons */
+/* Gold Button with Royal Navy Text */
 .btn-gold {
-  background: linear-gradient(135deg, #d4af37 0%, #c9a033 50%, #b89028 100%);
-  color: #ffffff;
-  font-weight: 800;
-  padding: 0.9rem 2rem;
-  border-radius: 0.625rem;
+  background: linear-gradient(135deg, #C8A34D 0%, #D4B25B 50%, #B5903B 100%);
+  color: #0B1F3A;
+  font-weight: 700;
+  padding: 0.85rem 1.8rem;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 18px rgba(200, 163, 77, 0.35);
   border: none;
-  letter-spacing: 0.04em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .btn-gold:hover {
-  background: linear-gradient(135deg, #e5c358 0%, #d4af37 50%, #c9a033 100%);
-  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.55);
+  background: linear-gradient(135deg, #D4B25B 0%, #E6C875 50%, #C8A34D 100%);
+  box-shadow: 0 8px 25px rgba(200, 163, 77, 0.5);
   transform: translateY(-2px);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0f1d3d 0%, #16264c 100%);
-  color: #ffffff;
-  font-weight: 700;
-  padding: 0.9rem 2rem;
-  border-radius: 0.625rem;
+  background: #0B1F3A;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.85rem 1.8rem;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(15, 29, 61, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 18px rgba(11, 31, 58, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #16264c 0%, #1e3566 100%);
-  box-shadow: 0 8px 26px rgba(15, 29, 61, 0.35);
+  background: #142E54;
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.35);
   transform: translateY(-2px);
-}
-
-/* Badges */
-.badge-rera {
-  background: rgba(15, 29, 61, 0.06);
-  border: 1px solid rgba(15, 29, 61, 0.14);
-  color: #0f1d3d;
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.35rem 0.85rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  letter-spacing: 0.03em;
 }
 
 .divider-gold {
   height: 3px;
-  width: 50px;
-  background: linear-gradient(90deg, #d4af37, #f0da8a);
+  width: 60px;
+  background: linear-gradient(90deg, #C8A34D, #E6C875);
   border-radius: 2px;
 }
 
 .section-navy {
-  background: linear-gradient(135deg, #060e1a 0%, #0f1d3d 50%, #132448 100%);
-  color: #ffffff;
+  background: #0B1F3A;
+  color: #FFFFFF;
 }
 
 @keyframes float {

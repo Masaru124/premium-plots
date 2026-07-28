@@ -9,133 +9,156 @@ export default function Footer({ setActivePage }) {
   const displayPhone = '+91 84319 09508';
 
   return (
-    <footer className="bg-[#0f1d3d] text-white/60 pt-20 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-white/10">
+    <footer className="bg-[#0B1F3A] text-white/70 pt-16 pb-12 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#d4af37] to-[#b8922f] flex items-center justify-center shadow-lg">
-                <MapPin className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-xl bg-[#C8A34D] flex items-center justify-center shadow-lg">
+                <MapPin className="w-5 h-5 text-[#0B1F3A]" />
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="text-2xl font-bold tracking-tight text-white font-heading">PREMIUM</span>
-                <span className="text-2xl font-bold tracking-tight text-[#d4af37] font-heading">PLOTS</span>
+                <span className="text-2xl font-bold tracking-tight text-[#C8A34D] font-heading">PROPERTIES</span>
               </div>
             </div>
 
-            <p className="text-sm leading-relaxed text-white/50 pr-4">
-              Bengaluru's premier real estate portal dedicated exclusively to verified open plot projects and luxury villa plots. Direct developer access, 100% legal clarity, and transparent investment guidance.
+            <p className="text-xs leading-relaxed text-white/60 pr-4">
+              Independent Real Estate Consultancy & Authorized Channel Partner for premier open plot townships, luxury villa developments, high-rise apartments, and Dubai waterfront investments.
             </p>
 
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 text-sm">
-                <MapPin className="w-4 h-4 text-[#d4af37] shrink-0 mt-1" />
-                <span>Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar 100ft Road, Bengaluru, Karnataka 560001</span>
+            <div className="space-y-2.5 pt-2 text-xs">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-[#C8A34D] shrink-0 mt-0.5" />
+                <span>Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar, Bengaluru, Karnataka 560001</span>
               </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Phone className="w-4 h-4 text-[#d4af37] shrink-0" />
-                <a href={`tel:+918431909508`} className="text-white font-bold hover:text-[#d4af37] transition-colors">
-                  {displayPhone}
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
+              <div className="flex items-center gap-3">
+                <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I am looking for open plots in Bengaluru.')}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I want property details & consultation.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#25D366] font-bold hover:underline"
+                  className="text-emerald-400 font-bold hover:underline"
                 >
-                  WhatsApp: {displayPhone}
+                  Contact Helpline: {displayPhone}
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Mail className="w-4 h-4 text-[#d4af37] shrink-0" />
-                <span>invest@premiumplotsbengaluru.com</span>
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-[#C8A34D] shrink-0" />
+                <span>invest@premiumpropertiesbengaluru.com</span>
               </div>
             </div>
           </div>
 
-          {/* Hot Corridors */}
+          {/* Property Portfolios */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider font-heading">Growth Corridors</h3>
-            <ul className="space-y-2.5 text-sm">
-              {BENGALURU_CORRIDORS.map((corridor) => (
-                <li key={corridor.id}>
-                  <button
-                    onClick={() => setActivePage('projects')}
-                    className="hover:text-[#d4af37] transition-colors text-left flex items-center gap-1.5 group text-white/50"
-                  >
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span>{corridor.name.split('(')[0]}</span>
-                  </button>
-                </li>
-              ))}
+            <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Property Portfolios</h3>
+            <ul className="space-y-2 text-xs text-white/70">
+              <li>
+                <button onClick={() => setActivePage('plots')} className="hover:text-[#C8A34D] transition-colors">
+                  🏞 Open Plots (Devanahalli STRR)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActivePage('villas')} className="hover:text-[#C8A34D] transition-colors">
+                  🏡 Custom Luxury Villas (Vinra Alora)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActivePage('apartments')} className="hover:text-[#C8A34D] transition-colors">
+                  🏢 High-Rise Apartments (Prestige)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActivePage('dubai')} className="hover:text-[#C8A34D] transition-colors">
+                  🌍 Dubai Investments (Emaar Harbour)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActivePage('interior')} className="hover:text-[#C8A34D] transition-colors">
+                  🎨 Turnkey Interior Design (Vinra)
+                </button>
+              </li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider font-heading">Navigation</h3>
-            <ul className="space-y-2.5 text-sm text-white/50">
+            <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Quick Links</h3>
+            <ul className="space-y-2 text-xs text-white/70">
               <li>
-                <button onClick={() => setActivePage('home')} className="hover:text-[#d4af37] transition-colors">
-                  Home
+                <button onClick={() => setActivePage('home')} className="hover:text-[#C8A34D] transition-colors">
+                  Home Page
                 </button>
               </li>
               <li>
-                <button onClick={() => setActivePage('projects')} className="hover:text-[#d4af37] transition-colors">
-                  All Verified Projects
+                <button onClick={() => setActivePage('about')} className="hover:text-[#C8A34D] transition-colors">
+                  About Consultancy
                 </button>
               </li>
               <li>
-                <button onClick={() => setActivePage('why-invest')} className="hover:text-[#d4af37] transition-colors">
-                  Why Invest in Bengaluru
+                <button onClick={() => setActivePage('contact')} className="hover:text-[#C8A34D] transition-colors">
+                  Contact Us
                 </button>
               </li>
               <li>
-                <button onClick={() => setActivePage('about')} className="hover:text-[#d4af37] transition-colors">
-                  About Premium Plots
+                <button onClick={() => setActivePage('privacy')} className="hover:text-[#C8A34D] transition-colors">
+                  Privacy Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => setActivePage('blog')} className="hover:text-[#d4af37] transition-colors">
-                  Blog & Legal Guide
+                <button onClick={() => setActivePage('terms')} className="hover:text-[#C8A34D] transition-colors">
+                  Terms & Conditions
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Trust Guarantees */}
+          {/* Channel Partner Trust */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider font-heading">Trust Guarantees</h3>
-            <div className="space-y-3 text-xs">
-              <div className="bg-white/5 p-3.5 rounded-xl border border-white/8 flex items-start gap-2.5">
-                <ShieldCheck className="w-5 h-5 text-[#d4af37] shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold text-white">100% Legal Clearance</div>
-                  <div className="text-white/40 text-[11px] mt-0.5">30-year mother deed & clear title verified by advocates.</div>
+            <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Consultancy Assurance</h3>
+            <div className="space-y-2.5 text-[11px]">
+              <div className="bg-white/5 p-3 rounded-xl border border-white/10 space-y-1">
+                <div className="font-bold text-white flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
+                  <span>Authorized Channel Partner</span>
                 </div>
+                <p className="text-white/50 leading-relaxed">
+                  Working directly with reputed developers for plot & villa allocations.
+                </p>
               </div>
-              <div className="bg-white/5 p-3.5 rounded-xl border border-white/8 flex items-start gap-2.5">
-                <Award className="w-5 h-5 text-[#d4af37] shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold text-white">RERA & Bank Approved</div>
-                  <div className="text-white/40 text-[11px] mt-0.5">Instant home loan sanction up to 80% from SBI, HDFC, ICICI.</div>
+              <div className="bg-white/5 p-3 rounded-xl border border-white/10 space-y-1">
+                <div className="font-bold text-white flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5 text-[#C8A34D]" />
+                  <span>0% Brokerage to Buyers</span>
                 </div>
+                <p className="text-white/50 leading-relaxed">
+                  Direct developer price quotes with complimentary VIP site visits.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Mandatory Channel Partner Disclaimer */}
+        <div className="bg-white/5 p-5 rounded-2xl border border-white/10 text-xs text-white/50 space-y-2 leading-relaxed">
+          <div className="font-bold text-white text-[11px] uppercase tracking-wider text-[#C8A34D]">
+            Disclaimer & Transparency Disclosure
+          </div>
+          <p>
+            We are an independent real estate consultancy and Channel Partner associated with multiple reputed developers. Project details, pricing, approvals and availability are provided by the respective developers and are subject to change.
+          </p>
+        </div>
+
         {/* Bottom Disclaimer */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
-          <p>© 2026 Premium Plots Bengaluru. All Rights Reserved. Contact WhatsApp: {displayPhone}.</p>
+        <div className="pt-2 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-white/40">
+          <p>© 2026 Premium Properties Real Estate Consultancy. Contact: {displayPhone}.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white/60">Privacy Policy</a>
-            <a href="#" className="hover:text-white/60">Terms of Service</a>
-            <a href="#" className="hover:text-white/60">RERA Disclaimer</a>
+            <button onClick={() => setActivePage('privacy')} className="hover:text-white/70">Privacy Policy</button>
+            <button onClick={() => setActivePage('terms')} className="hover:text-white/70">Terms & Conditions</button>
+            <button onClick={() => setActivePage('disclaimer')} className="hover:text-white/70">Disclaimer</button>
           </div>
         </div>
       </div>

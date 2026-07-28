@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ShieldCheck, MapPin, Download, Calendar, CheckCircle2, Building, Phone, ArrowLeft, Share2, Sparkles, Navigation, MessageCircle, ExternalLink } from 'lucide-react';
-import { usePlots } from '../context/PlotsContext';
+import { ShieldCheck, MapPin, Download, Calendar, CheckCircle2, Building, Phone, ArrowLeft, Share2, Sparkles, Navigation, MessageCircle, ExternalLink, Home, Layers, Sparkle } from 'lucide-react';
+import { usePlots, INTERIOR_PACKAGES } from '../context/PlotsContext';
 import PlotMasterplanViewer from '../components/PlotMasterplanViewer';
 
 export default function ProjectDetailsPage({ projectId, setActivePage }) {
@@ -10,8 +10,8 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
   const project = projects.find((p) => p.id === projectId) || projects[0] || {};
 
   const [activeImage, setActiveImage] = useState(project.heroImage || '/images/nisarga-boulevard.jpg');
-  const whatsappNumber = '917676077879';
-  const pgrPhone = project.developerPhone || '+91 9886161155';
+  const whatsappNumber = '918431909508';
+  const pgrPhone = project.developerPhone || '+91 8431909508';
   const googleMapsUrl = project.googleMapsUrl || 'https://maps.app.goo.gl/nd1REcJDzUBVkFAg9';
 
   return (
@@ -98,7 +98,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
         <div className="lg:col-span-8 h-[420px] rounded-2xl overflow-hidden border border-[#e2e8f0] shadow-lg relative bg-black">
           <img src={activeImage} alt={project.title} className="w-full h-full object-cover" />
           <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#e2e8f0] text-xs text-[#4a5568] font-medium">
-            {project.title} Masterplan & Layout View
+            {project.title} Masterplan & Elevation View
           </div>
         </div>
 
@@ -141,6 +141,65 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
           {/* INTERACTIVE MASTERPLAN LAYOUT GRID */}
           <PlotMasterplanViewer project={project} />
 
+          {/* TURNKEY INTERIOR DESIGN PACKAGES (If Vinra Alora or custom villa plots) */}
+          {project.id === 'project-vinra-alora' && (
+            <div className="bg-gradient-to-br from-[#060e1a] to-[#132448] p-6 sm:p-8 rounded-3xl text-white shadow-xl space-y-6">
+              <div className="flex items-center gap-2 text-[#d4af37] text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-4 h-4" />
+                Vinra Interiors & Renovations Pvt Ltd • Package Add-ons
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-black text-white font-heading">Turnkey Villa Construction & Interior Packages</h3>
+                <p className="text-xs text-white/70 mt-1">
+                  Choose from Silver, Gold, and Platinum interior design packages tailored for Vinra Alora plot owners.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white/10 p-5 rounded-2xl border border-white/15 backdrop-blur-md space-y-3">
+                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span className="text-sm font-bold text-[#d4af37] font-heading">SILVER PACKAGE</span>
+                    <span className="text-[11px] text-white/70">₹1,000 / sq.ft</span>
+                  </div>
+                  <ul className="text-xs text-white/80 space-y-2">
+                    <li>• Dry Area: ₹1,000 / Sq.Ft</li>
+                    <li>• Wet Area: ₹1,350 / Sq.Ft</li>
+                    <li>• Core Material: MDF Pre-Laminated & BWR Ply</li>
+                    <li>• Hardware: EBCO Regular or Equivalent</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/15 p-5 rounded-2xl border border-[#d4af37]/50 backdrop-blur-md space-y-3 relative shadow-lg">
+                  <span className="absolute -top-2.5 right-4 bg-[#d4af37] text-[#060e1a] text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase">MOST POPULAR</span>
+                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span className="text-sm font-bold text-[#d4af37] font-heading">GOLD PACKAGE</span>
+                    <span className="text-[11px] text-white/70">₹1,300 / sq.ft</span>
+                  </div>
+                  <ul className="text-xs text-white/90 space-y-2">
+                    <li>• Dry Area: ₹1,300 / Sq.Ft</li>
+                    <li>• Wet Area: ₹1,500 / Sq.Ft</li>
+                    <li>• Core Material: MR Ply (Century/Green) & BWP Ply</li>
+                    <li>• Hardware: HETTICH / HAFELE Regular</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 p-5 rounded-2xl border border-white/15 backdrop-blur-md space-y-3">
+                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span className="text-sm font-bold text-[#d4af37] font-heading">PLATINUM PACKAGE</span>
+                    <span className="text-[11px] text-white/70">₹1,550 / sq.ft</span>
+                  </div>
+                  <ul className="text-xs text-white/80 space-y-2">
+                    <li>• Dry Area: ₹1,550 / Sq.Ft</li>
+                    <li>• Wet Area: ₹1,850 / Sq.Ft</li>
+                    <li>• Core Material: MR Ply / MDF Century & BWP Ply</li>
+                    <li>• Hardware: HETTICH / HAFELE Soft Close</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Proximity & Distance Key */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#e2e8f0] shadow-sm space-y-4">
             <h3 className="text-xl font-bold text-[#0f1d3d] flex items-center gap-2 font-heading">
@@ -172,12 +231,12 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
             <div className="space-y-3 text-xs text-[#4a5568]">
               <div className="flex justify-between py-2 border-b border-[#e2e8f0]">
-                <span className="text-[#718096]">Total Plots:</span>
+                <span className="text-[#718096]">Total Plots / Parcels:</span>
                 <span className="font-bold text-[#0f1d3d]">{project.totalPlots} Units</span>
               </div>
               <div className="flex justify-between py-2 border-b border-[#e2e8f0]">
-                <span className="text-[#718096]">Available Plots:</span>
-                <span className="font-bold text-[#1e3a6e]">{project.availablePlots} Plots Open</span>
+                <span className="text-[#718096]">Available Units:</span>
+                <span className="font-bold text-[#1e3a6e]">{project.availablePlots} Open</span>
               </div>
               <div className="flex justify-between py-2 border-b border-[#e2e8f0]">
                 <span className="text-[#718096]">Approval Body:</span>

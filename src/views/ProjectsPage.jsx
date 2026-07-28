@@ -1,141 +1,223 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Search, Filter, ShieldCheck, MapPin, CheckCircle2, ChevronRight, Grid, List, MessageCircle, ExternalLink, Download } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, Filter, ShieldCheck, MapPin, CheckCircle2, ChevronRight, Grid, List, MessageCircle, ExternalLink, Download, Home, Building2, Globe, Sparkles } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 import { BENGALURU_CORRIDORS } from '../data/plotsData';
 
-export default function ProjectsPage({ setActivePage, setSelectedProjectId }) {
+export default function ProjectsPage({ setActivePage, setSelectedProjectId, filterType = 'all' }) {
   const { projects } = usePlots();
   const [search, setSearch] = useState('');
-  const [corridorFilter, setCorridorFilter] = useState('all');
-  const whatsappNumber = '917676077879';
+  const [selectedPropertyType, setSelectedPropertyType] = useState(filterType);
+  const [selectedCorridor, setSelectedCorridor] = useState('all');
+  const [selectedStatus, setSelectedStatus] = useState('all');
+  const [maxPrice, setMaxPrice] = useState(35000000);
+
+  const whatsappNumber = '918431909508';
+  const displayPhone = '+91 84319 09508';
+
+  useEffect(() => {
+    setSelectedPropertyType(filterType);
+  }, [filterType]);
 
   const filteredProjects = projects.filter((p) => {
-    const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase()) || p.location.toLowerCase().includes(search.toLowerCase());
-    const matchesCorridor = corridorFilter === 'all' || p.corridorId === corridorFilter;
-    return matchesSearch && matchesCorridor;
+    const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase()) || 
+                          p.location.toLowerCase().includes(search.toLowerCase()) ||
+                          p.developer.toLowerCase().includes(search.toLowerCase());
+    const matchesType = selectedPropertyType === 'all' || p.propertyType === selectedPropertyType;
+    const matchesCorridor = selectedCorridor === 'all' || p.corridorId === selectedCorridor;
+    const matchesStatus = selectedStatus === 'all' || p.constructionStatus === selectedStatus;
+    const matchesPrice = p.startPrice <= maxPrice;
+
+    return matchesSearch && matchesType && matchesCorridor && matchesStatus && matchesPrice;
   });
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
-      {/* Title Header */}
-      <div className="space-y-3 border-b border-[#e2e8f0] pb-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0f1d3d]/8 border border-[#0f1d3d]/15 text-[#0f1d3d] text-xs font-semibold">
-          <ShieldCheck className="w-4 h-4 text-[#d4af37]" />
-          100% Legal Clearance & Verified Title Deeds
+      {/* Page Title Header */}
+      <div className="space-y-3 border-b border-[#0B1F3A]/10 pb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/8 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-bold uppercase tracking-wider">
+          <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
+          Verified Channel Partner Portfolio
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0f1d3d] tracking-tight font-heading">
-          Verified Plotted Developments in Bengaluru
+        <h1 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
+          {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
         </h1>
-        <p className="text-[#718096] text-sm sm:text-base max-w-3xl">
-          Browse premium open plot developments across Devanahalli Airport Hub, Sarjapur Tech Corridor, Yelahanka Aerospace Zone & Whitefield East.
+        <p className="text-[#555555] text-sm sm:text-base max-w-3xl">
+          Browse verified open plot townships, custom villa developments, high-rise apartments, and Dubai luxury investments across premier corridors.
         </p>
       </div>
 
-      {/* Filter Bar */}
-      <div className="bg-white p-6 rounded-2xl border border-[#e2e8f0] shadow-sm space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative">
-            <label className="block text-[11px] font-semibold text-[#718096] uppercase mb-1">Search Project or Location</label>
+      {/* Comprehensive Search & Filter Controls */}
+      <div className="glass-card p-6 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          {/* Keyword Search */}
+          <div>
+            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Search Keywords</label>
             <div className="relative">
               <Search className="w-4 h-4 text-[#a0aec0] absolute left-3 top-3" />
               <input
-                type="text" placeholder="Devanahalli, STRR, Nisarga..." value={search}
+                type="text"
+                placeholder="Devanahalli, Whitefield, Emaar..."
+                value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-[#f8f9fc] border border-[#e2e8f0] rounded-xl pl-9 pr-4 py-2.5 text-xs text-[#1a202c] focus:outline-none focus:border-[#0f1d3d]/40"
+                className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg pl-9 pr-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
               />
             </div>
           </div>
 
+          {/* Property Type Filter */}
           <div>
-            <label className="block text-[11px] font-semibold text-[#718096] uppercase mb-1">Filter Growth Corridor</label>
-            <select value={corridorFilter} onChange={(e) => setCorridorFilter(e.target.value)}
-              className="w-full bg-[#f8f9fc] border border-[#e2e8f0] rounded-xl px-3 py-2.5 text-xs text-[#4a5568] focus:outline-none focus:border-[#0f1d3d]/40"
+            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Property Type</label>
+            <select
+              value={selectedPropertyType}
+              onChange={(e) => setSelectedPropertyType(e.target.value)}
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer"
             >
-              <option value="all">All Corridors ({projects.length})</option>
+              <option value="all">All Property Types ({projects.length})</option>
+              <option value="Open Plots">🏞 Open Plots</option>
+              <option value="Villas">🏡 Custom Villas</option>
+              <option value="Apartments">🏢 High-Rise Apartments</option>
+              <option value="Dubai Apartments">🌍 Dubai Investments</option>
+            </select>
+          </div>
+
+          {/* Location Corridor Filter */}
+          <div>
+            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Location Corridor</label>
+            <select
+              value={selectedCorridor}
+              onChange={(e) => setSelectedCorridor(e.target.value)}
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer"
+            >
+              <option value="all">All Corridors</option>
               {BENGALURU_CORRIDORS.map((c) => (
                 <option key={c.id} value={c.id}>{c.name.split('(')[0]}</option>
               ))}
             </select>
           </div>
+
+          {/* Construction Status Filter */}
+          <div>
+            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Construction Status</label>
+            <select
+              value={selectedStatus}
+              onChange={(e) => setSelectedStatus(e.target.value)}
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer"
+            >
+              <option value="all">All Statuses</option>
+              <option value="Ready for Construction">Ready for Construction</option>
+              <option value="Under Construction">Under Construction</option>
+            </select>
+          </div>
+
+          {/* Max Price Slider */}
+          <div>
+            <div className="flex justify-between items-center text-[10px] font-bold text-[#555555] uppercase mb-1">
+              <span>Max Budget</span>
+              <span className="text-[#C8A34D] font-extrabold">₹{(maxPrice / 100000).toFixed(0)} Lakhs</span>
+            </div>
+            <input
+              type="range"
+              min="4000000"
+              max="40000000"
+              step="1000000"
+              value={maxPrice}
+              onChange={(e) => setMaxPrice(Number(e.target.value))}
+              className="w-full h-2 bg-[#0B1F3A]/10 rounded-lg appearance-none cursor-pointer accent-[#C8A34D] mt-2"
+            />
+          </div>
+
         </div>
       </div>
 
-      {/* Projects Grid List */}
+      {/* Grid Results */}
       <div className="space-y-6">
-        <div className="flex justify-between items-center text-xs text-[#718096] border-b border-[#e2e8f0] pb-3">
-          <span>Showing <strong className="text-[#0f1d3d]">{filteredProjects.length}</strong> verified project listings</span>
-          <span className="text-[#1e3a6e] font-semibold">Direct Developer Allocation • 0% Brokerage</span>
+        <div className="flex justify-between items-center text-xs text-[#555555] border-b border-[#0B1F3A]/10 pb-3">
+          <span>Showing <strong className="text-[#0B1F3A]">{filteredProjects.length}</strong> verified property listings</span>
+          <span className="text-[#C8A34D] font-bold">Direct Developer Allocations • 0% Brokerage</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((proj) => (
-            <div key={proj.id} className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
-              <div>
-                <div className="relative h-60 overflow-hidden bg-[#060e1a]">
-                  <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#060e1a]/80 via-transparent to-transparent" />
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-[#0f1d3d] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-lg">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#d4af37]" />
-                      {proj.approvalType}
-                    </span>
+        {filteredProjects.length === 0 ? (
+          <div className="glass-card p-12 text-center space-y-3">
+            <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">No properties match your filter criteria</h3>
+            <p className="text-xs text-[#555555]">Try adjusting the budget slider or select "All Property Types".</p>
+            <button
+              onClick={() => { setSearch(''); setSelectedPropertyType('all'); setSelectedCorridor('all'); setSelectedStatus('all'); setMaxPrice(40000000); }}
+              className="btn-gold py-2 px-6 text-xs"
+            >
+              Reset Filters
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((proj) => (
+              <div key={proj.id} className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div>
+                  <div className="relative h-60 overflow-hidden bg-[#0B1F3A]">
+                    <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-transparent to-transparent" />
+                    <div className="absolute top-3 left-3">
+                      <span className="inline-flex items-center gap-1.5 bg-[#C8A34D] text-[#0B1F3A] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md">
+                        {proj.approvalType.split('&')[0]}
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <span className="text-[11px] text-[#C8A34D] font-bold block uppercase">📍 {proj.location}</span>
+                      <h3 className="text-xl font-bold text-white font-heading">{proj.title}</h3>
+                    </div>
                   </div>
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <span className="text-[11px] text-[#d4af37] font-bold block uppercase">📍 {proj.location}</span>
-                    <h3 className="text-xl font-bold text-white font-heading">{proj.title}</h3>
+
+                  <div className="p-6 space-y-4">
+                    <p className="text-xs text-[#555555] line-clamp-2">{proj.overview}</p>
+
+                    <div className="grid grid-cols-2 gap-2 text-xs bg-[#F8F8F5] p-3 rounded-xl border border-[#0B1F3A]/10">
+                      <div>
+                        <div className="text-[#555555] text-[10px]">Starting Price</div>
+                        <div className="text-[#C8A34D] font-extrabold text-sm">{proj.formattedStartPrice}</div>
+                      </div>
+                      <div>
+                        <div className="text-[#555555] text-[10px]">Developer</div>
+                        <div className="text-[#0B1F3A] font-bold text-xs truncate">{proj.developer}</div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-1 text-xs text-[#555555]">
+                      <div className="text-[10px] text-[#555555] font-bold uppercase">Configurations</div>
+                      <div className="flex flex-wrap gap-1.5 pt-0.5">
+                        {(proj.dimensions || []).map((d, i) => (
+                          <span key={i} className="px-2.5 py-1 rounded bg-[#0B1F3A]/5 border border-[#0B1F3A]/10 text-[10px] font-bold text-[#0B1F3A]">
+                            {d}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 space-y-4">
-                  <p className="text-xs text-[#718096] line-clamp-2">{proj.overview}</p>
+                <div className="p-6 pt-0 grid grid-cols-2 gap-3">
+                  <button
+                    onClick={() => { setSelectedProjectId(proj.id); setActivePage('project-details'); }}
+                    className="btn-primary py-3 text-xs"
+                  >
+                    View Details
+                  </button>
 
-                  <div className="grid grid-cols-2 gap-2 text-xs bg-[#f8f9fc] p-3 rounded-xl border border-[#e2e8f0]">
-                    <div>
-                      <div className="text-[#a0aec0] text-[10px]">Indicative Price</div>
-                      <div className="text-[#d4af37] font-bold text-sm">{proj.formattedStartPrice}</div>
-                    </div>
-                    <div>
-                      <div className="text-[#a0aec0] text-[10px]">Available Units</div>
-                      <div className="text-[#1e3a6e] font-bold text-sm">{proj.availablePlots} / {proj.totalPlots} Plots</div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-1 text-xs text-[#4a5568]">
-                    <div className="text-[11px] text-[#a0aec0] font-semibold uppercase">Configurations</div>
-                    <div className="flex flex-wrap gap-1.5 pt-0.5">
-                      {(proj.dimensions || []).map((d, i) => (
-                        <span key={i} className="px-2.5 py-1 rounded bg-[#f0f2f7] border border-[#e2e8f0] text-[11px] font-bold text-[#0f1d3d]">
-                          {d}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                  <a
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want to book a site visit for ${proj.title} in ${proj.location}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-gold py-3 text-xs text-center flex items-center justify-center gap-1.5"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 fill-[#0B1F3A]" />
+                    Book Visit
+                  </a>
                 </div>
               </div>
-
-              <div className="p-6 pt-0 grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => { setSelectedProjectId(proj.id); setActivePage('project-details'); }}
-                  className="py-3 rounded-xl bg-[#f0f2f7] text-[#0f1d3d] text-xs font-bold hover:bg-[#e2e8f0] transition-colors text-center border border-[#e2e8f0]"
-                >
-                  View Layout Map
-                </button>
-
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want to book a site visit for ${proj.title} in ${proj.location}.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-gold py-3 text-xs uppercase font-extrabold text-center flex items-center justify-center gap-1.5"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                  Book Visit
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
