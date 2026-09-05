@@ -16,6 +16,7 @@ import AboutPage from '../views/AboutPage';
 import ContactPage from '../views/ContactPage';
 import { PrivacyPolicyPage, TermsPage, DisclaimerPage } from '../views/LegalPagesView';
 import AdminPage from '../views/AdminPage';
+import PropertyMatchmakerPage from '../views/PropertyMatchmakerPage';
 
 function AppContent() {
   const [activePage, setActivePage] = useState('home');
@@ -33,17 +34,40 @@ function AppContent() {
 
         if (hash === '#admin' || search.includes('page=admin') || pathname === '/admin') {
           setActivePage('admin');
+        } else if (
+          hash === '#matchmaker' || hash === '#finder' || hash === '#qna' ||
+          search.includes('page=matchmaker') || search.includes('page=finder') || search.includes('page=qna') ||
+          pathname === '/matchmaker' || pathname === '/qna' || pathname === '/property-finder'
+        ) {
+          setActivePage('matchmaker');
+        } else if (search.includes('page=')) {
+          const params = new URLSearchParams(window.location.search);
+          const p = params.get('page');
+          if (p) setActivePage(p);
         }
       }
     };
 
     handleUrlCheck();
     window.addEventListener('hashchange', handleUrlCheck);
-    return () => window.removeEventListener('hashchange', handleUrlCheck);
+    window.addEventListener('popstate', handleUrlCheck);
+    return () => {
+      window.removeEventListener('hashchange', handleUrlCheck);
+      window.removeEventListener('popstate', handleUrlCheck);
+    };
   }, []);
 
   const handleNavClick = (pageId, typeFilter = 'all') => {
     setActivePage(pageId);
+    if (typeof window !== 'undefined') {
+      if (pageId === 'matchmaker') {
+        window.history.pushState(null, '', '/matchmaker');
+      } else if (pageId === 'home') {
+        window.history.pushState(null, '', '/');
+      } else {
+        window.history.pushState(null, '', `/?page=${pageId}`);
+      }
+    }
     if (pageId === 'plots') {
       setFilterType('Open Plots');
     } else if (pageId === 'villas') {
@@ -92,6 +116,10 @@ function AppContent() {
           )}
 
           {activePage === 'about' && <AboutPage setActivePage={handleNavClick} />}
+
+          {(activePage === 'matchmaker' || activePage === 'finder') && (
+            <PropertyMatchmakerPage setActivePage={handleNavClick} />
+          )}
 
           {activePage === 'contact' && <ContactPage />}
 

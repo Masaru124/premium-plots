@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import {
   Search, MapPin, ShieldCheck, TrendingUp, Calendar, ArrowRight, Star, Award,
   CheckCircle2, ChevronRight, PhoneCall, Sparkles, MessageCircle, Navigation,
-  Building2, Globe, Layers, Eye, Grid, ExternalLink, Download, Phone, Home, Paintbrush
+  Building2, Globe, Layers, Eye, Grid, ExternalLink, Download, Phone, Home, Paintbrush, Car
 } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 import ROICalculator from '../components/ROICalculator';
@@ -53,53 +53,72 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   return (
     <div className="space-y-0 pb-0 bg-[#F8F8F5]">
       
-      {/* 1. LUXURY HOMEPAGE HERO */}
-      <section className="relative pt-12 sm:pt-20 pb-28 bg-[#0B1F3A] text-white overflow-hidden border-b border-[#C8A34D]/20">
+      {/* 1. LUXURY HOMEPAGE HERO WITH ARCHITECTURAL CAD GRID */}
+      <section className="relative pt-12 sm:pt-20 pb-28 bg-[#0B1F3A] text-white overflow-hidden border-b border-[#C8A34D]/25 cad-grid">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B1F3A]/60 to-[#0B1F3A] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 text-center sm:text-left">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#C8A34D]" />
-            Independent Real Estate Consultancy & Channel Partner
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/50 text-[#E6C875] text-xs font-extrabold uppercase tracking-wider shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#E6C875]" />
+            Authorized Real Estate Consultancy & Channel Partner
           </div>
 
           <div className="space-y-4 max-w-4xl">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] font-heading">
               Find Premium Properties Across <span className="gold-gradient-text">Bengaluru & Dubai</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#C8A34D] font-semibold tracking-wide font-heading">
-              Plots • Villas • Apartments • Interior Design • Dubai Investments
+            <p className="text-lg sm:text-xl text-[#E6C875] font-semibold tracking-wide font-heading">
+              Plots • Luxury Villa Layouts • High-Rise Apartments • Dubai Waterfront
             </p>
           </div>
 
           <p className="text-base sm:text-lg text-white/80 max-w-2xl font-light leading-relaxed">
-            Compare verified open plots, custom luxury villa layouts, high-rise apartments, and Dubai waterfront investments with 0% brokerage to buyers.
+            Direct developer inventory with zero brokerage to buyers. Explore verified open plots along the STRR Expressway, bespoke villa enclaves in Devanahalli, and tax-free Dubai waterfront residences.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-4 pt-2 justify-center sm:justify-start">
             <button
-              onClick={() => setActivePage('projects')}
-              className="btn-gold py-4 px-8"
+              onClick={() => setActivePage('matchmaker')}
+              className="btn-gold py-4 px-8 shadow-2xl flex items-center gap-2 group cursor-pointer text-xs uppercase font-extrabold"
             >
-              Explore Projects
+              <Sparkles className="w-4 h-4 text-[#0B1F3A] group-hover:rotate-12 transition-transform" />
+              <span>Smart Plot Matchmaker (60s)</span>
+              <ArrowRight className="w-4 h-4 text-[#0B1F3A]" />
             </button>
 
             <button
-              onClick={() => setActivePage('contact')}
-              className="btn-primary py-4 px-8 border border-white/20"
+              onClick={() => setActivePage('projects')}
+              className="btn-primary py-4 px-8 border border-white/20 hover:border-[#C8A34D] cursor-pointer text-xs uppercase font-bold"
             >
-              Book Site Visit
+              Browse All Projects
             </button>
 
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I want details on plots, villas, apartments & Dubai properties.')}`}
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi Premium Properties Advisory! I am browsing your Bengaluru & Dubai properties. Please share verified masterplans and pricing details.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-4 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition-all flex items-center gap-2 shadow-lg"
+              className="px-6 py-4 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-black transition-all flex items-center gap-2 shadow-xl hover:scale-105"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
-              WhatsApp ({displayPhone})
+              <span>WhatsApp Hotline ({displayPhone})</span>
             </a>
+          </div>
+
+          {/* Value Assurance Badges */}
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-4 text-xs font-bold text-[#E6C875]">
+            <span className="flex items-center gap-1.5 bg-white/5 py-1 px-3.5 rounded-full border border-white/10">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
+              100% RERA & BIAAPA Cleared
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/5 py-1 px-3.5 rounded-full border border-white/10">
+              <Award className="w-3.5 h-3.5 text-emerald-400" />
+              0% Brokerage (Direct Channel Partner)
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/5 py-1 px-3.5 rounded-full border border-white/10">
+              <Car className="w-3.5 h-3.5 text-[#C8A34D]" />
+              Free AC Chauffeur Cab Site Visits
+            </span>
           </div>
 
         </div>
@@ -112,16 +131,47 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             <button
               key={cat.id}
               onClick={() => setActivePage(cat.id)}
-              className="glass-card p-6 text-left space-y-3 group hover:border-[#C8A34D] cursor-pointer"
+              className="glass-card tactile-card p-6 text-left space-y-3 group border border-slate-200 hover:border-[#C8A34D] cursor-pointer bg-white"
             >
-              <div className="text-3xl">{cat.icon}</div>
+              <div className="w-12 h-12 rounded-xl bg-[#0B1F3A]/5 group-hover:bg-[#0B1F3A] flex items-center justify-center text-2xl transition-colors">
+                {cat.icon}
+              </div>
               <div>
-                <h3 className="text-base font-bold text-[#0B1F3A] font-heading group-hover:text-[#C8A34D] transition-colors">{cat.title}</h3>
-                <span className="text-[10px] text-[#C8A34D] font-extrabold block mt-0.5">{cat.count}</span>
+                <h3 className="text-base font-extrabold text-[#0B1F3A] font-heading group-hover:text-[#C8A34D] transition-colors">{cat.title}</h3>
+                <span className="text-[10px] text-[#C8A34D] font-black block mt-0.5">{cat.count}</span>
               </div>
               <p className="text-[11px] text-[#555555] leading-relaxed">{cat.desc}</p>
             </button>
           ))}
+        </div>
+      </section>
+
+      {/* 2.5 INTERACTIVE SMART PLOT FINDER SPOTLIGHT BANNER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="bg-gradient-to-r from-[#0B1F3A] via-[#142E54] to-[#0B1F3A] rounded-3xl p-7 sm:p-10 border-2 border-[#C8A34D]/40 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-3 max-w-2xl text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-[11px] font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-[#C8A34D]" />
+              Interactive Property Matchmaker
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black font-heading leading-snug">
+              Unsure which plot size or corridor fits your budget?
+            </h3>
+            <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light">
+              Take our 5-step interactive quiz. Visualize plot dimensions in real-time, pick your preferred Bengaluru corridor, and receive verified RERA layouts & direct developer pricing directly on WhatsApp.
+            </p>
+          </div>
+
+          <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <button
+              onClick={() => setActivePage('matchmaker')}
+              className="btn-gold w-full sm:w-auto py-4 px-8 text-xs uppercase font-extrabold flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
+            >
+              <Sparkles className="w-4 h-4 text-[#0B1F3A]" />
+              <span>Launch Plot Finder</span>
+              <ArrowRight className="w-4 h-4 text-[#0B1F3A]" />
+            </button>
+          </div>
         </div>
       </section>
 

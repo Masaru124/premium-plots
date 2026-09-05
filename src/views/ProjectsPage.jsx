@@ -46,6 +46,39 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
         <p className="text-[#555555] text-sm sm:text-base max-w-3xl">
           Browse verified open plot townships, custom villa developments, high-rise apartments, and Dubai luxury investments across premier corridors.
         </p>
+
+        {/* Quick Segmented Filter Pills */}
+        <div className="flex flex-wrap items-center gap-2 pt-2">
+          {[
+            { id: 'all', label: 'All Portfolios' },
+            { id: 'Open Plots', label: '🏞 Open Plots' },
+            { id: 'Villas', label: '🏡 Custom Villas' },
+            { id: 'Apartments', label: '🏢 Apartments' },
+            { id: 'Dubai Apartments', label: '🌍 Dubai Investments' }
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setSelectedPropertyType(tab.id)}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                selectedPropertyType === tab.id
+                  ? 'bg-[#0B1F3A] text-[#C8A34D] shadow-md border border-[#C8A34D]/50'
+                  : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-300'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+
+          <button
+            type="button"
+            onClick={() => setActivePage('matchmaker')}
+            className="ml-auto px-4 py-2 rounded-xl bg-gradient-to-r from-[#C8A34D] to-[#E6C875] text-[#0B1F3A] text-xs font-black flex items-center gap-1.5 shadow-sm hover:scale-105 transition-all cursor-pointer"
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>✨ Matchmaker Quiz (60s)</span>
+          </button>
+        </div>
       </div>
 
       {/* Comprehensive Search & Filter Controls */}

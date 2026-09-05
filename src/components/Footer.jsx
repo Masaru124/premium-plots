@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Phone, Mail, ShieldCheck, ArrowUpRight, Award, MessageCircle } from 'lucide-react';
+import { Compass, MapPin, Phone, Mail, ShieldCheck, ArrowUpRight, Award, MessageCircle } from 'lucide-react';
 import { BENGALURU_CORRIDORS } from '../data/plotsData';
 
 export default function Footer({ setActivePage }) {
@@ -16,12 +16,19 @@ export default function Footer({ setActivePage }) {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#C8A34D] flex items-center justify-center shadow-lg">
-                <MapPin className="w-5 h-5 text-[#0B1F3A]" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E6C875] via-[#C8A34D] to-[#997328] p-0.5 shadow-lg flex items-center justify-center">
+                <div className="w-full h-full bg-[#0B1F3A] rounded-[10px] flex items-center justify-center">
+                  <Compass className="w-5 h-5 text-[#E6C875]" />
+                </div>
               </div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-bold tracking-tight text-white font-heading">PREMIUM</span>
-                <span className="text-2xl font-bold tracking-tight text-[#C8A34D] font-heading">PROPERTIES</span>
+              <div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xl font-bold tracking-tight text-white font-heading">PREMIUM</span>
+                  <span className="text-xl font-bold tracking-tight text-[#E6C875] font-heading">PROPERTIES</span>
+                </div>
+                <p className="text-[9px] uppercase tracking-widest text-[#E6C875] font-mono font-bold">
+                  BENGALURU • DUBAI
+                </p>
               </div>
             </div>
 
@@ -37,12 +44,12 @@ export default function Footer({ setActivePage }) {
               <div className="flex items-center gap-3">
                 <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I want property details & consultation.')}`}
+                  href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent('Hi Premium Properties Advisory! I want property details & consultation.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-emerald-400 font-bold hover:underline"
                 >
-                  Contact Helpline: {displayPhone}
+                  Contact Hotline: {displayPhone}
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -91,6 +98,11 @@ export default function Footer({ setActivePage }) {
               <li>
                 <button onClick={() => setActivePage('home')} className="hover:text-[#C8A34D] transition-colors">
                   Home Page
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActivePage('matchmaker')} className="text-[#C8A34D] font-bold hover:underline transition-colors flex items-center gap-1">
+                  <span>✨ Smart Plot Matchmaker</span>
                 </button>
               </li>
               <li>
