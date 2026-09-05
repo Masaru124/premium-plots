@@ -24,7 +24,6 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
   const [customWidth, setCustomWidth] = useState('30');
   const [customLength, setCustomLength] = useState('40');
   const [budget, setBudget] = useState('Under ₹35 Lakhs');
-  const [orientation, setOrientation] = useState('Corner Plot Only');
   const [timeline, setTimeline] = useState('Within 30 Days (Ready)');
   const [notes, setNotes] = useState('');
 
@@ -39,9 +38,9 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
   // Available options
   const locationOptions = [
     'North Bengaluru (Airport & STRR Corridor)',
-    'Whitefield / East Bengaluru',
+    'East Bengaluru (Budigere Cross & Hoskote)',
     'Sarjapur Road / Outer Ring Road',
-    'Electronic City / South Bengaluru',
+    'Whitefield',
     'Kanakapura Road / NICE Corridor',
     'Mysore Road / West Bengaluru',
     'Other / Custom Locality'
@@ -69,15 +68,6 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
     '₹50 Lakhs - ₹75 Lakhs',
     '₹75 Lakhs - ₹1.2 Crore',
     'Above ₹1.2 Crore'
-  ];
-
-  const orientationOptions = [
-    'Corner Plot Only',
-    'East Facing',
-    'North Facing',
-    'North-East Corner',
-    'West / South Facing',
-    'Any Good Facing'
   ];
 
   const timelineOptions = [
@@ -108,7 +98,6 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
 • Preferred Location: ${resolvedLocationStr}
 • Property Category: ${propertyType}
 • Plot Dimensions / Size: ${resolvedPlotSizeStr}
-• Orientation Preference: ${orientation}
 • Estimated Budget: ${budget}
 • Purchase Readiness: ${timeline}
 ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━━━━━━━━━━━━
@@ -169,8 +158,8 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
 
         {/* 1. GOOGLE FORM TOP BANNER & HEADER CARD */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          {/* Top colored accent stripe (Signature Google Form bar in Luxury Navy & Gold) */}
-          <div className="h-3 bg-gradient-to-r from-[#0B1F3A] via-[#C8A34D] to-[#0B1F3A]" />
+          {/* Top colored accent stripe (Signature Google Form bar in Luxury Architectural Gold) */}
+          <div className="h-3 bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C]" />
 
           <div className="p-6 sm:p-8 space-y-4">
             <div className="flex items-center gap-2 text-xs font-bold text-[#C8A34D] uppercase tracking-wider">
@@ -181,10 +170,6 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
             <h1 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] font-heading tracking-tight leading-snug">
               Find Your Ideal Plot or Property in Bengaluru
             </h1>
-
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Complete this brief 60-second questionnaire. Our senior land advisors will verify current RERA masterplans, available corner plots, and direct developer pricing, and dispatch them straight to your WhatsApp.
-            </p>
 
             {/* Value Trust Signals */}
             <div className="flex flex-wrap items-center gap-3 pt-2 text-[11px] font-semibold text-slate-600 border-t border-slate-100">
@@ -216,11 +201,11 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
                       if (firstInput) firstInput.focus();
                     }, 100);
                   }}
-                  className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#0B1F3A] via-[#142E54] to-[#0B1F3A] hover:bg-[#142E54] text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-[#C8A34D]/40 group"
+                  className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C] hover:from-[#C8A34D] hover:to-[#B8933D] text-[#0B1F3A] font-black text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-[0_6px_25px_rgba(184,147,61,0.35)] hover:shadow-[0_8px_30px_rgba(184,147,61,0.5)] hover:scale-[1.01] transition-all cursor-pointer border border-[#C8A34D] group"
                 >
-                  <Sparkles className="w-4 h-4 text-[#E6C875] group-hover:rotate-12 transition-transform" />
+                  <Sparkles className="w-4 h-4 text-[#0B1F3A] group-hover:rotate-12 transition-transform" />
                   <span>Book Consultation & Start Form</span>
-                  <ArrowRight className="w-4 h-4 text-[#E6C875] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             )}
@@ -299,9 +284,6 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
               <label htmlFor="fullNameInput" className="block text-sm font-bold text-[#0B1F3A]">
                 1. Your Full Name <span className="text-rose-500">*</span>
               </label>
-              <p className="text-xs text-slate-500">
-                Enter your name so our advisor knows who to address.
-              </p>
               <input
                 id="fullNameInput"
                 type="text"
@@ -318,9 +300,6 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
               <label htmlFor="phoneInput" className="block text-sm font-bold text-[#0B1F3A]">
                 2. Contact / WhatsApp Number <span className="text-rose-500">*</span>
               </label>
-              <p className="text-xs text-slate-500">
-                Verified RERA masterplan PDFs and pricing sheets will be sent to this number.
-              </p>
               <div className="flex gap-2">
                 <select
                   value={countryCode}
@@ -519,37 +498,10 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
               </div>
             </div>
 
-            {/* QUESTION 7: ORIENTATION PREFERENCE */}
+            {/* QUESTION 7: PURCHASE READINESS */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
               <label className="block text-sm font-bold text-[#0B1F3A]">
-                7. Orientation / Facing Preference
-              </label>
-              <p className="text-xs text-slate-500">
-                Optional: Vastu facing preference.
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {orientationOptions.map((facing) => (
-                  <button
-                    key={facing}
-                    type="button"
-                    onClick={() => setOrientation(facing)}
-                    className={`px-3 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer border ${
-                      orientation === facing
-                        ? 'bg-[#0B1F3A] text-[#C8A34D] border-[#C8A34D] shadow-sm'
-                        : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                    }`}
-                  >
-                    {orientation === facing ? '✓ ' : ''}{facing}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* QUESTION 8: PURCHASE READINESS */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-              <label className="block text-sm font-bold text-[#0B1F3A]">
-                8. Purchase Readiness / Timeline
+                7. Purchase Readiness / Timeline
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {timelineOptions.map((t) => (
@@ -569,10 +521,10 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
               </div>
             </div>
 
-            {/* QUESTION 9: SPECIFIC NOTES */}
+            {/* QUESTION 8: SPECIFIC NOTES */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
               <label htmlFor="notesInput" className="block text-sm font-bold text-[#0B1F3A]">
-                9. Specific Requirements or Notes (Optional)
+                8. Specific Requirements or Notes (Optional)
               </label>
               <textarea
                 id="notesInput"

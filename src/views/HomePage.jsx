@@ -58,8 +58,8 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B1F3A]/60 to-[#0B1F3A] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 text-center sm:text-left">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/50 text-[#E6C875] text-xs font-extrabold uppercase tracking-wider shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#E6C875]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/50 text-[#C8A34D] text-xs font-extrabold uppercase tracking-wider shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#C8A34D]" />
             Authorized Real Estate Consultancy & Channel Partner
           </div>
 
@@ -67,7 +67,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] font-heading">
               Find Premium Properties Across <span className="gold-gradient-text">Bengaluru & Dubai</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#E6C875] font-semibold tracking-wide font-heading">
+            <p className="text-lg sm:text-xl text-[#C8A34D] font-semibold tracking-wide font-heading">
               Plots • Luxury Villa Layouts • High-Rise Apartments • Dubai Waterfront
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
           </div>
 
           {/* Value Assurance Badges */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-4 text-xs font-bold text-[#E6C875]">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-4 text-xs font-bold text-[#C8A34D]">
             <span className="flex items-center gap-1.5 bg-white/5 py-1 px-3.5 rounded-full border border-white/10">
               <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
               100% RERA & BIAAPA Cleared

@@ -61,8 +61,8 @@ export default function FloatingActions() {
       >
         <div className="relative">
           <MessageCircle className="w-6 h-6 fill-white text-emerald-500" />
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-amber-300 rounded-full animate-ping" />
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-amber-400 rounded-full" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#C8A34D] rounded-full animate-ping" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#C8A34D] rounded-full" />
         </div>
         
         <div className="text-left leading-tight hidden sm:block">

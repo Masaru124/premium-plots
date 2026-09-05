@@ -16,17 +16,17 @@ export default function Footer({ setActivePage }) {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E6C875] via-[#C8A34D] to-[#997328] p-0.5 shadow-lg flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C8A34D] via-[#B8933D] to-[#8C6820] p-0.5 shadow-lg flex items-center justify-center">
                 <div className="w-full h-full bg-[#0B1F3A] rounded-[10px] flex items-center justify-center">
-                  <Compass className="w-5 h-5 text-[#E6C875]" />
+                  <Compass className="w-5 h-5 text-[#C8A34D]" />
                 </div>
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-xl font-bold tracking-tight text-white font-heading">PREMIUM</span>
-                  <span className="text-xl font-bold tracking-tight text-[#E6C875] font-heading">PROPERTIES</span>
+                  <span className="text-xl font-bold tracking-tight text-[#C8A34D] font-heading">PROPERTIES</span>
                 </div>
-                <p className="text-[9px] uppercase tracking-widest text-[#E6C875] font-mono font-bold">
+                <p className="text-[9px] uppercase tracking-widest text-[#C8A34D] font-mono font-bold">
                   BENGALURU • DUBAI
                 </p>
               </div>

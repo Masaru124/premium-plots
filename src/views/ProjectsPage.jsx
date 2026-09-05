@@ -73,9 +73,9 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
           <button
             type="button"
             onClick={() => setActivePage('matchmaker')}
-            className="ml-auto px-4 py-2 rounded-xl bg-gradient-to-r from-[#C8A34D] to-[#E6C875] text-[#0B1F3A] text-xs font-black flex items-center gap-1.5 shadow-sm hover:scale-105 transition-all cursor-pointer"
+            className="ml-auto px-4 py-2 rounded-xl bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C] hover:from-[#C8A34D] hover:to-[#B8933D] text-[#0B1F3A] text-xs font-black flex items-center gap-1.5 shadow-sm hover:scale-105 transition-all cursor-pointer border border-[#C8A34D]/50"
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Sparkles className="w-3.5 h-3.5 text-[#0B1F3A]" />
             <span>✨ Matchmaker Quiz (60s)</span>
           </button>
         </div>

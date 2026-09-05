@@ -46,21 +46,21 @@
 
 /* Gold Gradient Text */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #C8A34D 0%, #E6C875 50%, #B08A35 100%);
+  background: linear-gradient(135deg, #B8933D 0%, #D4AF37 50%, #997328 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Gold Button with Royal Navy Text */
 .btn-gold {
-  background: linear-gradient(135deg, #C8A34D 0%, #D4B25B 50%, #B5903B 100%);
+  background: linear-gradient(135deg, #B8933D 0%, #C8A34D 50%, #A37B2C 100%);
   color: #0B1F3A;
   font-weight: 700;
   padding: 0.85rem 1.8rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(200, 163, 77, 0.35);
-  border: none;
+  box-shadow: 0 4px 18px rgba(184, 147, 61, 0.35);
+  border: 1px solid rgba(200, 163, 77, 0.5);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -71,8 +71,8 @@
 }
 
 .btn-gold:hover {
-  background: linear-gradient(135deg, #D4B25B 0%, #E6C875 50%, #C8A34D 100%);
-  box-shadow: 0 8px 25px rgba(200, 163, 77, 0.5);
+  background: linear-gradient(135deg, #C8A34D 0%, #D4AF37 50%, #B8933D 100%);
+  box-shadow: 0 8px 25px rgba(184, 147, 61, 0.5);
   transform: translateY(-2px);
 }
 
@@ -100,7 +100,7 @@
 .divider-gold {
   height: 3px;
   width: 60px;
-  background: linear-gradient(90deg, #C8A34D, #E6C875);
+  background: linear-gradient(90deg, #997328, #C8A34D, #997328);
   border-radius: 2px;
 }
 
