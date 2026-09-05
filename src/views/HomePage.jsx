@@ -116,8 +116,8 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               0% Brokerage (Direct Channel Partner)
             </span>
             <span className="flex items-center gap-1.5 bg-white/5 py-1 px-3.5 rounded-full border border-white/10">
-              <Car className="w-3.5 h-3.5 text-[#C8A34D]" />
-              Free AC Chauffeur Cab Site Visits
+              <Calendar className="w-3.5 h-3.5 text-[#C8A34D]" />
+              VIP Guided Site Tours
             </span>
           </div>
 

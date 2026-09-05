@@ -2,13 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  Compass, MapPin, Phone, Menu, X, Flame, MessageCircle,
-  Car, ShieldCheck, Sparkles, ChevronRight, Award, Globe, Building2, Layers, Home, Paintbrush
+  Compass, MapPin, Phone, Menu, X, MessageCircle,
+  ShieldCheck, Sparkles, ChevronRight, Award, Globe, Building2, Layers, Home
 } from 'lucide-react';
-import { usePlots } from '../context/PlotsContext';
 
 export default function Navbar({ activePage, setActivePage }) {
-  const { openSiteVisitModal } = usePlots();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -18,16 +16,15 @@ export default function Navbar({ activePage, setActivePage }) {
     'Hello Premium Properties Advisory! I am browsing your Bengaluru & Dubai properties. Please share verified masterplans and pricing details.'
   )}`;
 
-  // Scroll shadow effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 15);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile drawer on Escape
+  // Close on Escape
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') setMobileMenuOpen(false);
@@ -49,14 +46,13 @@ export default function Navbar({ activePage, setActivePage }) {
     { id: 'home', label: 'Home' },
     {
       id: 'matchmaker',
-      label: '✨ Smart Matchmaker',
-      isSpecial: true,
-      badge: 'AI Concierge'
+      label: 'Plot Matchmaker',
+      isSpecial: true
     },
     { id: 'plots', label: 'Plots', icon: Layers },
     { id: 'villas', label: 'Villas', icon: Home },
     { id: 'apartments', label: 'Apartments', icon: Building2 },
-    { id: 'dubai', label: 'Dubai 🌍' },
+    { id: 'dubai', label: 'Dubai' },
     { id: 'interior', label: 'Interiors' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' }
@@ -65,7 +61,6 @@ export default function Navbar({ activePage, setActivePage }) {
   const handleNavClick = (id) => {
     setActivePage(id);
     setMobileMenuOpen(false);
-    // Smooth scroll to top when changing views
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -73,42 +68,29 @@ export default function Navbar({ activePage, setActivePage }) {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'nav-glass shadow-2xl' : 'bg-[#0B1F3A]'
     }`}>
-      {/* 1. TOP LIVE REAL ESTATE TICKER / ANNOUNCEMENT BAR */}
-      <div className="bg-[#071527] text-white/85 text-[11px] py-1.5 px-4 border-b border-white/10 overflow-hidden">
+      {/* 1. ULTRA-CLEAN LUXURY PRESTIGE TOP BAR */}
+      <div className="bg-[#071527] text-white/80 text-[11px] py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           
-          {/* Trust badges and live corridor signals */}
-          <div className="flex items-center gap-4 text-xs">
-            <span className="inline-flex items-center gap-1.5 py-0.5 px-2.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#E6C875] font-extrabold text-[10px] tracking-wide">
+          {/* Trust signals */}
+          <div className="flex items-center gap-3 text-[11px]">
+            <span className="inline-flex items-center gap-1.5 text-[#E6C875] font-bold">
               <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
-              Authorized Developer Channel Partner
+              <span>Verified Developer Channel Partner</span>
             </span>
-
-            <div className="hidden lg:flex items-center gap-3 text-white/70 text-[11px]">
-              <span className="flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                <span className="text-emerald-400 font-bold">Live:</span> STRR Expressway & Airport Corridor Plots
-              </span>
-              <span className="text-white/30">•</span>
-              <span className="flex items-center gap-1 text-white/70">
-                <Award className="w-3 h-3 text-[#C8A34D]" />
-                0% Brokerage to Buyers
-              </span>
-            </div>
+            <span className="hidden md:inline text-white/30">•</span>
+            <span className="hidden md:inline text-white/60">
+              Bengaluru & Dubai Luxury Real Estate Portfolio
+            </span>
+            <span className="hidden lg:inline text-white/30">•</span>
+            <span className="hidden lg:inline text-emerald-400 font-semibold">
+              0% Brokerage to Buyers
+            </span>
           </div>
 
-          {/* Quick Contact & Chauffeur Cab Note */}
-          <div className="flex items-center gap-3 text-[11px]">
-            <button
-              onClick={() => openSiteVisitModal()}
-              className="hidden sm:inline-flex items-center gap-1.5 text-[#E6C875] hover:text-white transition-colors cursor-pointer font-semibold"
-            >
-              <Car className="w-3.5 h-3.5 text-[#C8A34D]" />
-              <span>Free AC Cab Site Visits</span>
-            </button>
-
-            <span className="hidden sm:inline text-white/20">|</span>
-
+          {/* Direct WhatsApp Advisory Hotline */}
+          <div className="flex items-center gap-2 text-[11px] shrink-0">
+            <span className="text-white/50 hidden sm:inline">Advisory Hotline:</span>
             <a
               href={whatsappUrl}
               target="_blank"
@@ -116,54 +98,45 @@ export default function Navbar({ activePage, setActivePage }) {
               className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-bold transition-colors"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Hotline: {displayPhone}</span>
+              <span>{displayPhone}</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* 2. MAIN NAVIGATIONAL MASTHEAD */}
+      {/* 2. REFINED ARCHITECTURAL NAVIGATION BAR */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         
-        {/* Brand Logo with Architectural Crest */}
+        {/* Brand Logo */}
         <button
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-3 group text-left shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A34D] rounded-xl p-1"
+          className="flex items-center gap-3 group text-left shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A34D] rounded-xl"
           aria-label="Premium Properties Home"
         >
           {/* Architectural Crest Symbol */}
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#E6C875] via-[#C8A34D] to-[#997328] p-0.5 shadow-xl group-hover:scale-105 transition-transform flex items-center justify-center relative">
-            <div className="w-full h-full bg-[#0B1F3A] rounded-[10px] flex items-center justify-center">
-              <Compass className="w-6 h-6 text-[#E6C875] group-hover:rotate-45 transition-transform duration-500" />
-            </div>
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-[#0B1F3A] flex items-center justify-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-white" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E6C875] via-[#C8A34D] to-[#997328] p-0.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center">
+            <div className="w-full h-full bg-[#0B1F3A] rounded-[9px] flex items-center justify-center">
+              <Compass className="w-5 h-5 text-[#E6C875] group-hover:rotate-45 transition-transform duration-500" />
             </div>
           </div>
 
-          <div>
+          <div className="space-y-0.5">
             <div className="flex items-center gap-1.5">
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-white font-heading">
+              <span className="text-lg sm:text-xl font-black tracking-tight text-white font-heading">
                 PREMIUM
               </span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-[#E6C875] font-heading">
+              <span className="text-lg sm:text-xl font-black tracking-tight text-[#E6C875] font-heading">
                 PROPERTIES
               </span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <p className="text-[9px] uppercase tracking-widest text-white/65 font-bold font-mono">
-                BENGALURU
-              </p>
-              <span className="text-[#C8A34D] text-[9px]">•</span>
-              <p className="text-[9px] uppercase tracking-widest text-[#E6C875] font-bold font-mono">
-                DUBAI
-              </p>
-            </div>
+            <p className="text-[9px] uppercase tracking-[0.22em] text-[#C8A34D] font-bold font-mono">
+              BENGALURU • DUBAI
+            </p>
           </div>
         </button>
 
         {/* 3. DESKTOP NAVIGATION LINKS (Visible from lg: 1024px+) */}
-        <div className="hidden lg:flex items-center gap-1 bg-white/5 p-1 rounded-2xl border border-white/10 shadow-inner">
+        <div className="hidden lg:flex items-center gap-1 xl:gap-2">
           {navItems.map((item) => {
             const isActive = activePage === item.id;
             const isSpecial = item.isSpecial;
@@ -173,19 +146,14 @@ export default function Navbar({ activePage, setActivePage }) {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`relative px-3.5 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 cursor-pointer shadow-md ${
+                  className={`relative px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
                     isActive
-                      ? 'bg-[#C8A34D] text-[#0B1F3A] shadow-lg scale-105'
-                      : 'text-[#E6C875] bg-gradient-to-r from-[#C8A34D]/25 to-[#E6C875]/20 border border-[#C8A34D]/60 hover:bg-[#C8A34D]/35 hover:scale-105'
+                      ? 'bg-[#C8A34D] text-[#0B1F3A] shadow-md font-extrabold'
+                      : 'text-[#E6C875] bg-[#C8A34D]/15 border border-[#C8A34D]/40 hover:bg-[#C8A34D]/25 hover:border-[#C8A34D]'
                   }`}
                 >
-                  <Sparkles className={`w-3.5 h-3.5 ${isActive ? 'text-[#0B1F3A]' : 'text-[#E6C875] animate-spin'}`} />
-                  <span>{item.label.replace('✨ ', '')}</span>
-                  <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-tighter ${
-                    isActive ? 'bg-[#0B1F3A] text-[#E6C875]' : 'bg-[#C8A34D] text-[#0B1F3A]'
-                  }`}>
-                    {item.badge}
-                  </span>
+                  <Sparkles className={`w-3.5 h-3.5 ${isActive ? 'text-[#0B1F3A]' : 'text-[#E6C875]'}`} />
+                  <span>{item.label}</span>
                 </button>
               );
             }
@@ -194,47 +162,36 @@ export default function Navbar({ activePage, setActivePage }) {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                className={`relative px-3 py-2 text-xs transition-all cursor-pointer rounded-lg font-medium flex flex-col items-center ${
                   isActive
-                    ? 'bg-[#C8A34D] text-[#0B1F3A] font-extrabold shadow-sm'
-                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                    ? 'text-[#E6C875] font-bold'
+                    : 'text-white/80 hover:text-white hover:bg-white/5'
                 }`}
               >
-                {item.label}
+                <span>{item.label}</span>
+                {isActive && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D] mt-0.5" />
+                )}
               </button>
             );
           })}
         </div>
 
-        {/* 4. DESKTOP ACTION HUB (CTAs) */}
-        <div className="hidden lg:flex items-center gap-2.5 shrink-0">
-          
-          {/* Free Site Visit Chauffeur Cab Modal Trigger */}
-          <button
-            onClick={() => openSiteVisitModal()}
-            className="px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer hover:border-[#C8A34D]/50"
-            title="Book Free AC Cab Site Visit with Pick & Drop"
-          >
-            <Car className="w-4 h-4 text-[#E6C875]" />
-            <span>Free Cab Visit</span>
-          </button>
-
-          {/* Primary WhatsApp Direct Advisor Button */}
+        {/* 4. DESKTOP CONTACT BUTTON (Single, sleek, never overflows) */}
+        <div className="hidden lg:flex items-center shrink-0">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold py-2.5 px-4 text-xs uppercase font-extrabold flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#C8A34D] via-[#D4B25B] to-[#C8A34D] hover:from-[#D4B25B] hover:to-[#E6C875] text-[#0B1F3A] font-extrabold text-xs tracking-wide shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer whitespace-nowrap"
           >
             <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-            <span className="hidden xl:inline">Advisor:</span>
-            <span>+91 84319</span>
+            <span>WhatsApp Advisory</span>
           </a>
         </div>
 
-        {/* 5. MOBILE MENU HAMBURGER BUTTON */}
-        <div className="flex lg:hidden items-center gap-2">
-          {/* Quick WhatsApp Pill on Mobile */}
+        {/* 5. MOBILE ACTIONS & HAMBURGER */}
+        <div className="flex lg:hidden items-center gap-2 shrink-0">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -258,17 +215,17 @@ export default function Navbar({ activePage, setActivePage }) {
       {/* 6. LUXURY FULL-SCREEN OFF-CANVAS MOBILE DRAWER */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden animate-fadeIn">
-          {/* Dark Backdrop Overlay */}
+          {/* Backdrop Overlay */}
           <div
             className="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity"
             onClick={() => setMobileMenuOpen(false)}
           />
 
-          {/* Slide-in Content Panel */}
-          <div className="fixed inset-y-0 right-0 max-w-sm w-full bg-[#0B1F3A] border-l border-[#C8A34D]/30 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto cad-grid text-white">
+          {/* Slide-in Drawer */}
+          <div className="fixed inset-y-0 right-0 max-w-sm w-full bg-[#0B1F3A] border-l border-[#C8A34D]/30 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto text-white cad-grid">
             
             <div className="space-y-6">
-              {/* Drawer Top Header */}
+              {/* Top Header */}
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2.5">
                   <div className="w-9 h-9 rounded-lg bg-[#C8A34D] flex items-center justify-center text-[#0B1F3A]">
@@ -289,29 +246,29 @@ export default function Navbar({ activePage, setActivePage }) {
                 </button>
               </div>
 
-              {/* Highlighted Matchmaker Spotlight Tile in Mobile Menu */}
+              {/* Matchmaker Spotlight Tile */}
               <button
                 onClick={() => handleNavClick('matchmaker')}
-                className="w-full p-4 rounded-2xl bg-gradient-to-r from-[#C8A34D] to-[#E6C875] text-[#0B1F3A] text-left space-y-1 shadow-xl hover:scale-[1.02] transition-transform cursor-pointer border border-white/30"
+                className="w-full p-4 rounded-2xl bg-gradient-to-r from-[#C8A34D] to-[#E6C875] text-[#0B1F3A] text-left space-y-1 shadow-lg hover:scale-[1.02] transition-transform cursor-pointer border border-white/30"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-black uppercase tracking-wider bg-[#0B1F3A] text-[#E6C875] px-2 py-0.5 rounded-full">
-                    AI Concierge (60s)
+                    60-Second Quiz
                   </span>
-                  <Sparkles className="w-4 h-4 text-[#0B1F3A] animate-spin" />
+                  <Sparkles className="w-4 h-4 text-[#0B1F3A]" />
                 </div>
                 <h4 className="text-base font-black font-heading">
                   ✨ Smart Plot Matchmaker
                 </h4>
                 <p className="text-xs font-semibold text-[#0B1F3A]/80 leading-tight">
-                  Interactive CAD blueprint simulator, Vastu compass & instant RERA masterplans.
+                  CAD blueprint simulator, Vastu compass & verified WhatsApp layouts.
                 </p>
               </button>
 
-              {/* Primary Navigation Links */}
+              {/* Navigation Items List */}
               <div className="space-y-1">
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-white/40 block mb-2">
-                  EXPLORE PORTFOLIO
+                  NAVIGATION
                 </span>
                 
                 {navItems.filter(i => i.id !== 'matchmaker').map((item) => {
@@ -336,27 +293,6 @@ export default function Navbar({ activePage, setActivePage }) {
                   );
                 })}
               </div>
-
-              {/* Free AC Cab Visit Trigger */}
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
-                <div className="flex items-center gap-2 text-[#E6C875] text-xs font-bold">
-                  <Car className="w-4 h-4" />
-                  <span>VIP Site Visit Assistance</span>
-                </div>
-                <p className="text-[11px] text-white/70">
-                  Complimentary AC chauffeur cab pickup from any Bengaluru address to project sites.
-                </p>
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    openSiteVisitModal();
-                  }}
-                  className="w-full py-2.5 px-3 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/20 cursor-pointer"
-                >
-                  <Car className="w-3.5 h-3.5 text-[#E6C875]" />
-                  <span>Schedule Free Cab Pickup</span>
-                </button>
-              </div>
             </div>
 
             {/* Drawer Bottom Actions: Direct Phone & WhatsApp */}
@@ -368,7 +304,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 className="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs uppercase flex items-center justify-center gap-2 shadow-lg transition-all"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Chat on WhatsApp ({displayPhone})</span>
+                <span>WhatsApp Senior Advisor</span>
               </a>
 
               <a
