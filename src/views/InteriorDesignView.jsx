@@ -11,7 +11,7 @@ export default function InteriorDesignView({ setActivePage }) {
   return (
     <div className="space-y-16 py-10 bg-[#F8F8F5]">
       {/* Hero Banner */}
-      <section className="relative py-20 bg-[#0B1F3A] text-white border-b border-[#C8A34D]/30 overflow-hidden">
+      <section className="relative py-20 bg-[#0B1F3A] text-white border-b border-[#C8A34D]/30 overflow-hidden cad-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[#C8A34D]" />
@@ -31,7 +31,7 @@ export default function InteriorDesignView({ setActivePage }) {
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi Vinra Interiors! I want to request an interior design quote & 3D consultation.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold py-4 px-8"
+              className="btn-gold py-4 px-8 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
               Book Interior Consultation ({displayPhone})
@@ -106,7 +106,7 @@ export default function InteriorDesignView({ setActivePage }) {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Vinra Interiors! I want details on the ${pkg.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-gold w-full text-center text-xs py-3.5"
+                  className="btn-gold w-full text-center text-xs py-3.5 cursor-pointer"
                 >
                   Select {pkg.name}
                 </a>

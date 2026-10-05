@@ -80,15 +80,15 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#C8A34D] selection:text-[#0B1F3A]">
+    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
       <div>
         {/* Sticky Navbar */}
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
 
         {/* Global Toast Notification */}
         {toastMessage && (
-          <div className="fixed top-24 right-6 z-50 bg-[#0B1F3A] border border-[#C8A34D] text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 animate-bounce">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#C8A34D] animate-ping" />
+          <div className="fixed top-24 right-6 z-50 bg-[#0B1F3A] border border-[#F2B705] text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 animate-fadeIn">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#F2B705] animate-ping" />
             <span>{toastMessage}</span>
           </div>
         )}

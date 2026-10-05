@@ -11,7 +11,7 @@ export default function DirectAdminRoute() {
 
   return (
     <PlotsProvider>
-      <div className="min-h-screen bg-[#faf9f6] text-[#121824] flex flex-col justify-between selection:bg-[#d4af37] selection:text-white">
+      <div className="min-h-screen bg-[#faf9f6] text-[#121824] flex flex-col justify-between selection:bg-[#FFC727] selection:text-white">
         <div>
           <Navbar activePage={activePage} setActivePage={setActivePage} />
           <main className="animate-fadeIn">

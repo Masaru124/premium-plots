@@ -54,7 +54,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
             { id: 'Open Plots', label: '🏞 Open Plots' },
             { id: 'Villas', label: '🏡 Custom Villas' },
             { id: 'Apartments', label: '🏢 Apartments' },
-            { id: 'Dubai Apartments', label: '🌍 Dubai Investments' }
+            { id: 'Dubai Apartments', label: '🌍 Dubai Properties' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -69,15 +69,6 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
               {tab.label}
             </button>
           ))}
-
-          <button
-            type="button"
-            onClick={() => setActivePage('matchmaker')}
-            className="ml-auto px-4 py-2 rounded-xl bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C] hover:from-[#C8A34D] hover:to-[#B8933D] text-[#0B1F3A] text-xs font-black flex items-center gap-1.5 shadow-sm hover:scale-105 transition-all cursor-pointer border border-[#C8A34D]/50"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#0B1F3A]" />
-            <span>✨ Matchmaker Quiz (60s)</span>
-          </button>
         </div>
       </div>
 
@@ -112,7 +103,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
               <option value="Open Plots">🏞 Open Plots</option>
               <option value="Villas">🏡 Custom Villas</option>
               <option value="Apartments">🏢 High-Rise Apartments</option>
-              <option value="Dubai Apartments">🌍 Dubai Investments</option>
+              <option value="Dubai Apartments">🌍 Dubai Properties</option>
             </select>
           </div>
 
@@ -178,9 +169,9 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
             <p className="text-xs text-[#555555]">Try adjusting the budget slider or select "All Property Types".</p>
             <button
               onClick={() => { setSearch(''); setSelectedPropertyType('all'); setSelectedCorridor('all'); setSelectedStatus('all'); setMaxPrice(40000000); }}
-              className="btn-gold py-2 px-6 text-xs"
+              className="btn-gold text-xs py-2 px-5 cursor-pointer"
             >
-              Reset Filters
+              Reset All Filters
             </button>
           </div>
         ) : (
@@ -192,65 +183,82 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                     <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-transparent to-transparent" />
                     <div className="absolute top-3 left-3">
-                      <span className="inline-flex items-center gap-1.5 bg-[#C8A34D] text-[#0B1F3A] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md">
-                        {proj.approvalType.split('&')[0]}
+                      <span className="bg-[#C8A34D] text-[#0B1F3A] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md">
+                        {proj.propertyType}
                       </span>
                     </div>
                     <div className="absolute bottom-3 left-3 right-3">
-                      <span className="text-[11px] text-[#C8A34D] font-bold block uppercase">📍 {proj.location}</span>
+                      <span className="text-[11px] text-[#C8A34D] font-bold block uppercase">{proj.location}</span>
                       <h3 className="text-xl font-bold text-white font-heading">{proj.title}</h3>
                     </div>
                   </div>
 
                   <div className="p-6 space-y-4">
-                    <p className="text-xs text-[#555555] line-clamp-2">{proj.overview}</p>
-
-                    <div className="grid grid-cols-2 gap-2 text-xs bg-[#F8F8F5] p-3 rounded-xl border border-[#0B1F3A]/10">
+                    <div className="flex justify-between items-center text-xs border-b border-[#0B1F3A]/10 pb-3">
                       <div>
-                        <div className="text-[#555555] text-[10px]">Starting Price</div>
-                        <div className="text-[#C8A34D] font-extrabold text-sm">{proj.formattedStartPrice}</div>
+                        <span className="text-[10px] text-[#555555] block">Developer</span>
+                        <span className="font-bold text-[#0B1F3A] text-xs">{proj.developer}</span>
                       </div>
-                      <div>
-                        <div className="text-[#555555] text-[10px]">Developer</div>
-                        <div className="text-[#0B1F3A] font-bold text-xs truncate">{proj.developer}</div>
+                      <div className="text-right">
+                        <span className="text-[10px] text-[#555555] block">RERA Status</span>
+                        <span className="font-bold text-[#C8A34D] text-[11px]">{proj.approvalType.split('&')[0]}</span>
                       </div>
                     </div>
 
-                    <div className="space-y-1 text-xs text-[#555555]">
-                      <div className="text-[10px] text-[#555555] font-bold uppercase">Configurations</div>
-                      <div className="flex flex-wrap gap-1.5 pt-0.5">
-                        {(proj.dimensions || []).map((d, i) => (
-                          <span key={i} className="px-2.5 py-1 rounded bg-[#0B1F3A]/5 border border-[#0B1F3A]/10 text-[10px] font-bold text-[#0B1F3A]">
-                            {d}
-                          </span>
-                        ))}
+                    <p className="text-xs text-[#555555] leading-relaxed line-clamp-2">{proj.overview}</p>
+
+                    <div className="bg-[#F8F8F5] p-3.5 rounded-xl border border-[#0B1F3A]/10 flex justify-between items-center text-xs">
+                      <div>
+                        <div className="text-[#555555] text-[10px]">Starting Price</div>
+                        <div className="text-[#C8A34D] font-extrabold text-base">{proj.formattedStartPrice}</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-[#555555] text-[10px]">Availability</div>
+                        <div className="text-[#0B1F3A] font-bold">{proj.availablePlots} Units</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 grid grid-cols-2 gap-3">
+                <div className="p-6 pt-0 grid grid-cols-3 gap-2 text-xs">
                   <button
                     onClick={() => { setSelectedProjectId(proj.id); setActivePage('project-details'); }}
-                    className="btn-primary py-3 text-xs"
+                    className="btn-primary py-2.5 px-2 text-[11px] text-center cursor-pointer"
                   >
                     View Details
                   </button>
 
+                  <button
+                    onClick={() => setActivePage('contact')}
+                    className="btn-primary bg-white text-[#0B1F3A] border border-[#0B1F3A]/20 hover:bg-[#F8F8F5] py-2.5 px-2 text-[11px] text-center font-bold cursor-pointer"
+                  >
+                    Book Visit
+                  </button>
+
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want to book a site visit for ${proj.title} in ${proj.location}.`)}`}
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want details on ${proj.title}.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-gold py-3 text-xs text-center flex items-center justify-center gap-1.5"
+                    className="btn-gold py-2.5 px-2 text-[11px] text-center flex items-center justify-center gap-1 cursor-pointer"
                   >
                     <MessageCircle className="w-3.5 h-3.5 fill-[#0B1F3A]" />
-                    Book Visit
+                    WhatsApp
                   </a>
                 </div>
               </div>
             ))}
           </div>
         )}
+      </div>
+
+      {/* Mandatory Disclaimer */}
+      <div className="bg-white p-6 rounded-2xl border border-[#0B1F3A]/10 text-center space-y-2">
+        <span className="text-[#C8A34D] text-xs font-bold uppercase tracking-wider font-heading">
+          Channel Partner Disclosure
+        </span>
+        <p className="text-xs text-[#555555] max-w-3xl mx-auto">
+          "We are an independent real estate consultancy working with multiple reputed developers as Channel Partners. We help buyers compare projects, arrange site visits and connect directly with developers."
+        </p>
       </div>
     </div>
   );

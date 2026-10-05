@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   Compass, MapPin, Phone, Menu, X, MessageCircle,
-  ShieldCheck, Sparkles, ChevronRight, Award, Globe, Building2, Layers, Home
+  ShieldCheck, Sparkles, ChevronRight, Award, Globe, Building2, Layers, Home, Paintbrush
 } from 'lucide-react';
 
 export default function Navbar({ activePage, setActivePage }) {
@@ -44,16 +44,11 @@ export default function Navbar({ activePage, setActivePage }) {
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    {
-      id: 'matchmaker',
-      label: 'Plot Matchmaker',
-      isSpecial: true
-    },
     { id: 'plots', label: 'Plots', icon: Layers },
     { id: 'villas', label: 'Villas', icon: Home },
     { id: 'apartments', label: 'Apartments', icon: Building2 },
-    { id: 'dubai', label: 'Dubai' },
-    { id: 'interior', label: 'Interiors' },
+    { id: 'dubai', label: 'Dubai Properties', icon: Globe },
+    { id: 'interior', label: 'Interior Design', icon: Paintbrush },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' }
   ];
@@ -68,7 +63,7 @@ export default function Navbar({ activePage, setActivePage }) {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'nav-glass shadow-2xl' : 'bg-[#0B1F3A]'
     }`}>
-      {/* 1. ULTRA-CLEAN LUXURY PRESTIGE TOP BAR */}
+      {/* 1. LUXURY PRESTIGE TOP BAR */}
       <div className="bg-[#071527] text-white/80 text-[11px] py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           
@@ -79,7 +74,7 @@ export default function Navbar({ activePage, setActivePage }) {
               <span>Verified Developer Channel Partner</span>
             </span>
             <span className="hidden md:inline text-white/30">•</span>
-            <span className="hidden md:inline text-white/60">
+            <span className="hidden md:inline text-white/65">
               Bengaluru & Dubai Luxury Real Estate Portfolio
             </span>
             <span className="hidden lg:inline text-white/30">•</span>
@@ -95,16 +90,16 @@ export default function Navbar({ activePage, setActivePage }) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-bold transition-colors"
+              className="inline-flex items-center gap-1.5 text-[#C8A34D] hover:text-white font-bold transition-colors"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#C8A34D] animate-pulse" />
               <span>{displayPhone}</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* 2. REFINED ARCHITECTURAL NAVIGATION BAR */}
+      {/* 2. ARCHITECTURAL NAVIGATION BAR */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         
         {/* Brand Logo */}
@@ -114,7 +109,7 @@ export default function Navbar({ activePage, setActivePage }) {
           aria-label="Premium Properties Home"
         >
           {/* Architectural Crest Symbol */}
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C8A34D] via-[#B8933D] to-[#8C6820] p-0.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DFC06E] via-[#C8A34D] to-[#A6832A] p-0.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center">
             <div className="w-full h-full bg-[#0B1F3A] rounded-[9px] flex items-center justify-center">
               <Compass className="w-5 h-5 text-[#C8A34D] group-hover:rotate-45 transition-transform duration-500" />
             </div>
@@ -135,28 +130,13 @@ export default function Navbar({ activePage, setActivePage }) {
           </div>
         </button>
 
-        {/* 3. DESKTOP NAVIGATION LINKS (Visible from lg: 1024px+) */}
-        <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+        {/* 3. DESKTOP NAVIGATION LINKS */}
+        <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
           {navItems.map((item) => {
-            const isActive = activePage === item.id;
-            const isSpecial = item.isSpecial;
-
-            if (isSpecial) {
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.id)}
-                  className={`relative px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
-                    isActive
-                      ? 'bg-[#C8A34D] text-[#0B1F3A] shadow-md font-extrabold'
-                      : 'text-[#C8A34D] bg-[#C8A34D]/15 border border-[#C8A34D]/40 hover:bg-[#C8A34D]/25 hover:border-[#C8A34D]'
-                  }`}
-                >
-                  <Sparkles className={`w-3.5 h-3.5 ${isActive ? 'text-[#0B1F3A]' : 'text-[#C8A34D]'}`} />
-                  <span>{item.label}</span>
-                </button>
-              );
-            }
+            const isActive = activePage === item.id || 
+              (item.id === 'plots' && activePage === 'plots') ||
+              (item.id === 'villas' && activePage === 'villas') ||
+              (item.id === 'apartments' && activePage === 'apartments');
 
             return (
               <button
@@ -164,7 +144,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 onClick={() => handleNavClick(item.id)}
                 className={`relative px-3 py-2 text-xs transition-all cursor-pointer rounded-lg font-medium flex flex-col items-center ${
                   isActive
-                    ? 'text-[#C8A34D] font-bold'
+                    ? 'text-[#C8A34D] font-bold bg-white/5'
                     : 'text-white/80 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -177,30 +157,24 @@ export default function Navbar({ activePage, setActivePage }) {
           })}
         </div>
 
-        {/* 4. DESKTOP CONTACT BUTTON (Single, sleek, never overflows) */}
+        {/* 4. DESKTOP CONTACT BUTTON */}
         <div className="hidden lg:flex items-center shrink-0">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C] hover:from-[#C8A34D] hover:to-[#B8933D] text-[#0B1F3A] font-extrabold text-xs tracking-wide shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer whitespace-nowrap border border-[#C8A34D]/50"
+          <button
+            onClick={() => handleNavClick('contact')}
+            className="btn-gold text-xs py-2.5 px-5 shadow-md cursor-pointer"
           >
-            <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-            <span>WhatsApp Advisory</span>
-          </a>
+            <span>Book Site Visit</span>
+          </button>
         </div>
 
         {/* 5. MOBILE ACTIONS & HAMBURGER */}
         <div className="flex lg:hidden items-center gap-2 shrink-0">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-xl bg-emerald-500 text-white shadow-md flex items-center justify-center cursor-pointer"
-            aria-label="WhatsApp Contact"
+          <button
+            onClick={() => handleNavClick('contact')}
+            className="py-2 px-3 rounded-lg bg-[#C8A34D] text-[#0B1F3A] text-xs font-bold cursor-pointer"
           >
-            <MessageCircle className="w-5 h-5 fill-white" />
-          </a>
+            Book Visit
+          </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -212,7 +186,7 @@ export default function Navbar({ activePage, setActivePage }) {
         </div>
       </nav>
 
-      {/* 6. LUXURY FULL-SCREEN OFF-CANVAS MOBILE DRAWER */}
+      {/* 6. FULL-SCREEN OFF-CANVAS MOBILE DRAWER */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden animate-fadeIn">
           {/* Backdrop Overlay */}
@@ -246,32 +220,13 @@ export default function Navbar({ activePage, setActivePage }) {
                 </button>
               </div>
 
-              {/* Matchmaker Spotlight Tile */}
-              <button
-                onClick={() => handleNavClick('matchmaker')}
-                className="w-full p-4 rounded-2xl bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C] text-[#0B1F3A] text-left space-y-1 shadow-lg hover:scale-[1.02] transition-transform cursor-pointer border border-[#C8A34D]/50"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-black uppercase tracking-wider bg-[#0B1F3A] text-[#C8A34D] px-2 py-0.5 rounded-full">
-                    60-Second Quiz
-                  </span>
-                  <Sparkles className="w-4 h-4 text-[#0B1F3A]" />
-                </div>
-                <h4 className="text-base font-black font-heading">
-                  ✨ Smart Plot Matchmaker
-                </h4>
-                <p className="text-xs font-bold text-[#0B1F3A]/90 leading-tight">
-                  Google Form-styled questionnaire & verified WhatsApp layouts.
-                </p>
-              </button>
-
               {/* Navigation Items List */}
               <div className="space-y-1">
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-white/40 block mb-2">
                   NAVIGATION
                 </span>
                 
-                {navItems.filter(i => i.id !== 'matchmaker').map((item) => {
+                {navItems.map((item) => {
                   const isActive = activePage === item.id;
                   const Icon = item.icon;
                   return (
@@ -295,17 +250,14 @@ export default function Navbar({ activePage, setActivePage }) {
               </div>
             </div>
 
-            {/* Drawer Bottom Actions: Direct Phone & WhatsApp */}
+            {/* Drawer Bottom Actions */}
             <div className="pt-6 border-t border-white/15 space-y-2.5">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs uppercase flex items-center justify-center gap-2 shadow-lg transition-all"
+              <button
+                onClick={() => handleNavClick('contact')}
+                className="w-full py-3.5 px-4 rounded-xl btn-gold text-xs uppercase font-extrabold flex items-center justify-center gap-2 shadow-lg cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>WhatsApp Senior Advisor</span>
-              </a>
+                <span>Book Site Visit</span>
+              </button>
 
               <a
                 href={`tel:+${whatsappNumber}`}
@@ -316,7 +268,7 @@ export default function Navbar({ activePage, setActivePage }) {
               </a>
 
               <div className="text-center pt-1 text-[10px] text-white/50 font-mono">
-                UB City & Indiranagar, Bengaluru • 0% Brokerage
+                Bengaluru & Dubai • 0% Brokerage
               </div>
             </div>
 

@@ -14,7 +14,7 @@ export default function WhyInvestPage() {
       {/* Title Banner */}
       <div className="text-center space-y-4 max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0f1d3d]/8 border border-[#0f1d3d]/15 text-[#0f1d3d] text-xs font-semibold">
-          <TrendingUp className="w-4 h-4 text-[#d4af37]" />
+          <TrendingUp className="w-4 h-4 text-[#FFC727]" />
           Bengaluru Real Estate Land Growth Intelligence 2026
         </div>
 
@@ -68,7 +68,7 @@ export default function WhyInvestPage() {
               <tr>
                 <td className="py-4 px-4 font-semibold text-[#0f1d3d]">Maintenance Costs</td>
                 <td className="py-4 px-4 font-bold text-[#1e3a6e] bg-[#0f1d3d]/3 border-x border-[#0f1d3d]/10">Minimal (~₹500/month HOA)</td>
-                <td className="py-4 px-4 text-[#d4af37]">Heavy (~₹6,000 - ₹12,000/month)</td>
+                <td className="py-4 px-4 text-[#FFC727]">Heavy (~₹6,000 - ₹12,000/month)</td>
               </tr>
             </tbody>
           </table>
@@ -84,7 +84,7 @@ export default function WhyInvestPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#0f1d3d] text-[#d4af37] flex items-center justify-center font-bold text-lg font-heading">
+            <div className="w-10 h-10 rounded-xl bg-[#0f1d3d] text-[#FFC727] flex items-center justify-center font-bold text-lg font-heading">
               01
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">STRR Expressway</h3>
@@ -94,7 +94,7 @@ export default function WhyInvestPage() {
           </div>
 
           <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#d4af37] text-white flex items-center justify-center font-bold text-lg font-heading">
+            <div className="w-10 h-10 rounded-xl bg-[#FFC727] text-white flex items-center justify-center font-bold text-lg font-heading">
               02
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">KIADB Industrial SEZ</h3>
@@ -104,7 +104,7 @@ export default function WhyInvestPage() {
           </div>
 
           <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#0f1d3d] text-[#d4af37] flex items-center justify-center font-bold text-lg font-heading">
+            <div className="w-10 h-10 rounded-xl bg-[#0f1d3d] text-[#FFC727] flex items-center justify-center font-bold text-lg font-heading">
               03
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">Namma Metro Expansion</h3>
@@ -114,7 +114,7 @@ export default function WhyInvestPage() {
           </div>
 
           <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#d4af37] text-white flex items-center justify-center font-bold text-lg font-heading">
+            <div className="w-10 h-10 rounded-xl bg-[#FFC727] text-white flex items-center justify-center font-bold text-lg font-heading">
               04
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">Clear Title Security</h3>

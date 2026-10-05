@@ -11,20 +11,12 @@ import ROICalculator from '../components/ROICalculator';
 import InteractiveMap from '../components/InteractiveMap';
 
 export default function HomePage({ setActivePage, setSelectedProjectId }) {
-  const { projects, reviews, blogs } = usePlots();
+  const { projects } = usePlots();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCorridor, setSelectedCorridor] = useState('all');
-  const [viewModes, setViewModes] = useState({});
 
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
-
-  const toggleViewMode = (projId) => {
-    setViewModes(prev => ({
-      ...prev,
-      [projId]: prev[projId] === 'blueprint' ? 'photo' : 'blueprint'
-    }));
-  };
 
   const filteredProjects = projects.filter((p) => {
     const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || p.location.toLowerCase().includes(searchQuery.toLowerCase());
@@ -68,7 +60,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               Find Premium Properties Across <span className="gold-gradient-text">Bengaluru & Dubai</span>
             </h1>
             <p className="text-lg sm:text-xl text-[#C8A34D] font-semibold tracking-wide font-heading">
-              Plots • Luxury Villa Layouts • High-Rise Apartments • Dubai Waterfront
+              Plots • Villas • Apartments • Interior Design • Dubai Investments
             </p>
           </div>
 
@@ -79,30 +71,19 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-2 justify-center sm:justify-start">
             <button
-              onClick={() => setActivePage('matchmaker')}
-              className="btn-gold py-4 px-8 shadow-2xl flex items-center gap-2 group cursor-pointer text-xs uppercase font-extrabold"
+              onClick={() => setActivePage('projects')}
+              className="btn-gold py-4 px-8 shadow-2xl flex items-center gap-2 cursor-pointer text-xs uppercase font-extrabold"
             >
-              <Sparkles className="w-4 h-4 text-[#0B1F3A] group-hover:rotate-12 transition-transform" />
-              <span>Smart Plot Matchmaker (60s)</span>
+              <span>Explore Projects</span>
               <ArrowRight className="w-4 h-4 text-[#0B1F3A]" />
             </button>
 
             <button
-              onClick={() => setActivePage('projects')}
+              onClick={() => setActivePage('contact')}
               className="btn-primary py-4 px-8 border border-white/20 hover:border-[#C8A34D] cursor-pointer text-xs uppercase font-bold"
             >
-              Browse All Projects
+              Book Site Visit
             </button>
-
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi Premium Properties Advisory! I am browsing your Bengaluru & Dubai properties. Please share verified masterplans and pricing details.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-4 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-black transition-all flex items-center gap-2 shadow-xl hover:scale-105"
-            >
-              <MessageCircle className="w-4 h-4 fill-white" />
-              <span>WhatsApp Hotline ({displayPhone})</span>
-            </a>
           </div>
 
           {/* Value Assurance Badges */}
@@ -124,7 +105,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
         </div>
       </section>
 
-      {/* 2. SEPARATE PROPERTY CATEGORY CARDS */}
+      {/* 2. PROPERTY CATEGORIES SEPARATE CARDS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {categoryCards.map((cat) => (
@@ -146,42 +127,13 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
         </div>
       </section>
 
-      {/* 2.5 INTERACTIVE SMART PLOT FINDER SPOTLIGHT BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-        <div className="bg-gradient-to-r from-[#0B1F3A] via-[#142E54] to-[#0B1F3A] rounded-3xl p-7 sm:p-10 border-2 border-[#C8A34D]/40 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-3 max-w-2xl text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-[11px] font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-[#C8A34D]" />
-              Interactive Property Matchmaker
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-black font-heading leading-snug">
-              Unsure which plot size or corridor fits your budget?
-            </h3>
-            <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light">
-              Take our 5-step interactive quiz. Visualize plot dimensions in real-time, pick your preferred Bengaluru corridor, and receive verified RERA layouts & direct developer pricing directly on WhatsApp.
-            </p>
-          </div>
-
-          <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-            <button
-              onClick={() => setActivePage('matchmaker')}
-              className="btn-gold w-full sm:w-auto py-4 px-8 text-xs uppercase font-extrabold flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
-            >
-              <Sparkles className="w-4 h-4 text-[#0B1F3A]" />
-              <span>Launch Plot Finder</span>
-              <ArrowRight className="w-4 h-4 text-[#0B1F3A]" />
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* 3. FEATURED PROJECTS PORTFOLIO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/8 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-bold uppercase tracking-wider mb-3">
               <Award className="w-3.5 h-3.5 text-[#C8A34D]" />
-              Verified Portfolio
+              Featured Projects
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] tracking-tight font-heading">
               Featured Verified Projects
@@ -191,16 +143,16 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
           <button
             onClick={() => setActivePage('projects')}
-            className="text-[#C8A34D] hover:text-[#0B1F3A] text-xs font-bold flex items-center gap-1 transition-colors"
+            className="text-[#C8A34D] hover:text-[#0B1F3A] text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
           >
-            <span>View All ({filteredProjects.length})</span>
+            <span>View All Projects ({projects.length})</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
         {/* Featured Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((proj) => (
+          {projects.map((proj) => (
             <div key={proj.id} className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
               <div>
                 <div className="relative h-60 overflow-hidden bg-[#0B1F3A]">
@@ -212,7 +164,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 right-3">
-                    <span className="text-[11px] text-[#C8A34D] font-bold block uppercase">📍 {proj.location}</span>
+                    <span className="text-[11px] text-[#C8A34D] font-bold block uppercase">{proj.location}</span>
                     <h3 className="text-xl font-bold text-white font-heading">{proj.title}</h3>
                   </div>
                 </div>
@@ -245,14 +197,14 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               <div className="p-6 pt-0 grid grid-cols-3 gap-2 text-xs">
                 <button
                   onClick={() => { setSelectedProjectId(proj.id); setActivePage('project-details'); }}
-                  className="btn-primary py-2.5 px-2 text-[11px] text-center"
+                  className="btn-primary py-2.5 px-2 text-[11px] text-center cursor-pointer"
                 >
                   View Details
                 </button>
 
                 <button
                   onClick={() => setActivePage('contact')}
-                  className="btn-primary bg-white text-[#0B1F3A] border border-[#0B1F3A]/20 hover:bg-[#F8F8F5] py-2.5 px-2 text-[11px] text-center font-bold"
+                  className="btn-primary bg-white text-[#0B1F3A] border border-[#0B1F3A]/20 hover:bg-[#F8F8F5] py-2.5 px-2 text-[11px] text-center font-bold cursor-pointer"
                 >
                   Book Visit
                 </button>
@@ -261,7 +213,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want details on ${proj.title}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-gold py-2.5 px-2 text-[11px] text-center flex items-center justify-center gap-1"
+                  className="btn-gold py-2.5 px-2 text-[11px] text-center flex items-center justify-center gap-1 cursor-pointer"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-[#0B1F3A]" />
                   WhatsApp
@@ -296,13 +248,13 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
         </div>
       </section>
 
-      {/* 5. DUBAI SECTION SUMMARY */}
+      {/* 5. DUBAI PROPERTIES SECTION SUMMARY */}
       <section className="bg-[#0B1F3A] text-white py-20 border-y border-[#C8A34D]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C8A34D]/20 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
               <Globe className="w-4 h-4 text-[#C8A34D]" />
-              Dubai Property Desk
+              Dubai Properties
             </div>
             <h2 className="text-3xl sm:text-5xl font-black font-heading leading-tight">
               Dubai Real Estate <span className="gold-gradient-text">Investment Benefits</span>
@@ -331,8 +283,8 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             </div>
 
             <div className="pt-2">
-              <button onClick={() => setActivePage('dubai')} className="btn-gold">
-                Explore Dubai Apartments
+              <button onClick={() => setActivePage('dubai')} className="btn-gold cursor-pointer">
+                Explore Dubai Properties
               </button>
             </div>
           </div>
@@ -382,7 +334,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
         </div>
 
         <div className="text-center pt-2">
-          <button onClick={() => setActivePage('interior')} className="btn-primary">
+          <button onClick={() => setActivePage('interior')} className="btn-primary cursor-pointer">
             Explore Interior Packages & 3D Plans
           </button>
         </div>

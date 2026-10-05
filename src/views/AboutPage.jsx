@@ -49,7 +49,7 @@ export default function AboutPage({ setActivePage }) {
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-[#C8A34D]" />
-            <span>Free Doorstep AC Cab Pickup</span>
+            <span>Complimentary VIP Guided Tours</span>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function AboutPage({ setActivePage }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {whyChooseUsPoints.map((point, index) => (
             <div key={index} className="glass-card p-6 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-[#0B1F3A] text-[#C8A34D] flex items-center justify-center font-bold text-sm shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#0B1F3A] text-[#C8A34D] flex items-center justify-center font-bold text-sm shrink-0 font-heading">
                 ✓
               </div>
               <span className="font-bold text-[#0B1F3A] text-sm font-heading">{point}</span>
@@ -84,7 +84,7 @@ export default function AboutPage({ setActivePage }) {
           href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I want to speak with a senior real estate advisor.')}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-gold py-3.5 px-8 inline-flex"
+          className="btn-gold py-3.5 px-8 inline-flex cursor-pointer"
         >
           <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
           Contact Hotline: {displayPhone}

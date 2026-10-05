@@ -49,7 +49,7 @@ export default function AdminPage() {
   if (!isAdminLoggedIn) {
     return (
       <div className="max-w-md mx-auto my-20 p-8 bg-white border border-[#e2e8f0] rounded-2xl shadow-lg space-y-6 text-center">
-        <div className="w-14 h-14 bg-[#d4af37]/15 text-[#d4af37] rounded-2xl flex items-center justify-center mx-auto border border-[#d4af37]/25">
+        <div className="w-14 h-14 bg-[#FFC727]/15 text-[#FFC727] rounded-2xl flex items-center justify-center mx-auto border border-[#FFC727]/25">
           <Lock className="w-7 h-7" />
         </div>
         <div>
@@ -64,7 +64,7 @@ export default function AdminPage() {
             <input
               type="password" placeholder="Enter passcode (admin123)" value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#f8f9fc] border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm text-[#1a202c] focus:outline-none focus:border-[#d4af37]/50 focus:ring-2 focus:ring-[#d4af37]/10"
+              className="w-full bg-[#f8f9fc] border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm text-[#1a202c] focus:outline-none focus:border-[#FFC727]/50 focus:ring-2 focus:ring-[#FFC727]/10"
               required
             />
           </div>
@@ -73,7 +73,7 @@ export default function AdminPage() {
           </button>
         </form>
         <p className="text-[11px] text-[#a0aec0]">
-          🔑 Default Passcode for testing: <code className="text-[#d4af37] font-mono bg-[#d4af37]/10 px-1.5 py-0.5 rounded">admin123</code>
+          🔑 Default Passcode for testing: <code className="text-[#FFC727] font-mono bg-[#FFC727]/10 px-1.5 py-0.5 rounded">admin123</code>
         </p>
       </div>
     );
@@ -84,7 +84,7 @@ export default function AdminPage() {
       {/* Header Bar */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-gradient-to-r from-[#0f1d3d] to-[#162550] p-6 rounded-2xl">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d4af37]/15 border border-[#d4af37]/30 text-[#d4af37] text-xs font-semibold mb-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC727]/15 border border-[#FFC727]/30 text-[#FFC727] text-xs font-semibold mb-1">
             <Lock className="w-3.5 h-3.5" />
             Admin Portal Active
           </div>
@@ -129,7 +129,7 @@ export default function AdminPage() {
           onClick={() => setActiveTab('leads')}
           className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
             activeTab === 'leads'
-              ? 'bg-[#d4af37] text-white shadow-lg'
+              ? 'bg-[#FFC727] text-white shadow-lg'
               : 'bg-[#f0f2f7] text-[#4a5568] border border-[#e2e8f0] hover:text-[#0f1d3d]'
           }`}
         >
@@ -294,11 +294,11 @@ export default function AdminPage() {
                     <td className="py-3.5 px-4 text-[#1e3a6e] font-semibold">{lead.projectTitle}</td>
                     <td className="py-3.5 px-4">
                       <div>{lead.visitDate}</div>
-                      <div className="text-[#d4af37] text-[10px]">{lead.visitTime}</div>
+                      <div className="text-[#FFC727] text-[10px]">{lead.visitTime}</div>
                     </td>
                     <td className="py-3.5 px-4">
                       {lead.cabPickup ? (
-                        <span className="text-[#d4af37] font-semibold">🚕 Yes ({lead.pickupLocation || 'Home'})</span>
+                        <span className="text-[#FFC727] font-semibold">🚕 Yes ({lead.pickupLocation || 'Home'})</span>
                       ) : (
                         <span className="text-[#a0aec0]">Self Drive</span>
                       )}

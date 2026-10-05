@@ -89,7 +89,7 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
     ? `${customLocation.trim()} (Bengaluru)`
     : location;
 
-  // Build clean WhatsApp message matching user's requested format
+  // Build clean WhatsApp message
   const buildWhatsAppMessage = () => {
     return `*NEW PROPERTY INQUIRY VIA SMART FINDER*
 ━━━━━━━━━━━━━━━━━━━━
@@ -153,13 +153,12 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
   };
 
   return (
-    <div className="min-h-screen bg-[#F0F2F5] py-8 sm:py-12 px-4 sm:px-6">
+    <div className="min-h-screen bg-[#F8F8F5] py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto space-y-4">
 
-        {/* 1. GOOGLE FORM TOP BANNER & HEADER CARD */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          {/* Top colored accent stripe (Signature Google Form bar in Luxury Architectural Gold) */}
-          <div className="h-3 bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C]" />
+        {/* 1. TOP BANNER & HEADER CARD */}
+        <div className="bg-white rounded-2xl shadow-sm border border-[#0B1F3A]/10 overflow-hidden">
+          <div className="h-3 bg-gradient-to-r from-[#DFC06E] via-[#C8A34D] to-[#A6832A]" />
 
           <div className="p-6 sm:p-8 space-y-4">
             <div className="flex items-center gap-2 text-xs font-bold text-[#C8A34D] uppercase tracking-wider">
@@ -189,7 +188,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
               </span>
             </div>
 
-            {/* BOOK NOW / START BUTTON (If not yet started) */}
+            {/* START BUTTON (If not yet started) */}
             {!isFormStarted && !isSubmitted && (
               <div className="pt-4">
                 <button
@@ -201,11 +200,11 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
                       if (firstInput) firstInput.focus();
                     }, 100);
                   }}
-                  className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#B8933D] via-[#C8A34D] to-[#A37B2C] hover:from-[#C8A34D] hover:to-[#B8933D] text-[#0B1F3A] font-black text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-[0_6px_25px_rgba(184,147,61,0.35)] hover:shadow-[0_8px_30px_rgba(184,147,61,0.5)] hover:scale-[1.01] transition-all cursor-pointer border border-[#C8A34D] group"
+                  className="btn-gold w-full py-4 text-xs font-black uppercase flex items-center justify-center gap-2 shadow-lg cursor-pointer"
                 >
-                  <Sparkles className="w-4 h-4 text-[#0B1F3A] group-hover:rotate-12 transition-transform" />
+                  <Sparkles className="w-4 h-4 text-[#0B1F3A]" />
                   <span>Book Consultation & Start Form</span>
-                  <ArrowRight className="w-4 h-4 text-[#0B1F3A] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#0B1F3A]" />
                 </button>
               </div>
             )}
@@ -214,7 +213,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
 
         {/* 2. SUBMITTED SUCCESS STATE */}
         {isSubmitted && (
-          <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center space-y-5 animate-fadeIn">
+          <div className="bg-white rounded-2xl p-8 border border-[#0B1F3A]/10 shadow-sm text-center space-y-5 animate-fadeIn">
             <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
               <Check className="w-8 h-8 stroke-[3]" />
             </div>
@@ -234,7 +233,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
                 href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(buildWhatsAppMessage())}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
+                className="w-full py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 fill-white" />
                 <span>Open WhatsApp ({displayPhone})</span>
@@ -268,7 +267,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
           </div>
         )}
 
-        {/* 3. GOOGLE FORM QUESTIONS CONTAINER (Shown after clicking Book Now) */}
+        {/* 3. QUESTIONS CONTAINER */}
         {isFormStarted && !isSubmitted && (
           <form onSubmit={handleSubmit} className="space-y-4 animate-fadeIn">
             
@@ -319,7 +318,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="84313 89153"
+                  placeholder="84319 09508"
                   className="flex-1 px-3 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-[#0B1F3A] focus:ring-1 focus:ring-[#0B1F3A] text-sm text-slate-800 font-medium"
                 />
               </div>
@@ -540,7 +539,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
             <div className="pt-2 space-y-3">
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all cursor-pointer border-2 border-emerald-400"
+                className="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all cursor-pointer border-2 border-emerald-400"
               >
                 <MessageCircle className="w-5 h-5 fill-white" />
                 <span>Submit & Send on WhatsApp ({displayPhone})</span>

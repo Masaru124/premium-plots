@@ -209,7 +209,7 @@ export const INITIAL_PROJECTS = [
       'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=1200&q=80'
     ],
-    overview: 'Invest in Dubai Marina Sunset Residences by Emaar — featuring 1, 2 & 3 BHK waterfront apartments with panoramic Arabian Gulf & Yacht Club views. Eligible for 10-Year UAE Golden Visa with tax-free rental returns.',
+    overview: 'Invest in Dubai Marina Sunset Residences by Emaar, featuring 1, 2 & 3 BHK waterfront apartments with panoramic Arabian Gulf & Yacht Club views. Eligible for 10-Year UAE Golden Visa with tax-free rental returns.',
     highlights: [
       '10-Year UAE Golden Visa Eligibility for Property Investors',
       '100% Tax-Free Income & High USD Capital Growth',

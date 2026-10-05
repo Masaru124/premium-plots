@@ -18,7 +18,7 @@ export default function BlogPage() {
       {/* Title */}
       <div className="space-y-3 border-b border-[#e2e8f0] pb-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0f1d3d]/8 border border-[#0f1d3d]/15 text-[#0f1d3d] text-xs font-semibold">
-          <BookOpen className="w-4 h-4 text-[#d4af37]" />
+          <BookOpen className="w-4 h-4 text-[#FFC727]" />
           Bengaluru Real Estate Knowledge Base & SEO Guides
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0f1d3d] tracking-tight font-heading">
@@ -35,7 +35,7 @@ export default function BlogPage() {
         <div className="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 space-y-6 max-w-4xl mx-auto shadow-sm">
           <button
             onClick={() => setSelectedBlog(null)}
-            className="text-xs text-[#1e3a6e] hover:text-[#d4af37] flex items-center gap-1 font-semibold transition-colors"
+            className="text-xs text-[#1e3a6e] hover:text-[#FFC727] flex items-center gap-1 font-semibold transition-colors"
           >
             ← Back to All Articles
           </button>
@@ -92,14 +92,14 @@ export default function BlogPage() {
                       <span className="text-[#1e3a6e] font-semibold uppercase">{blog.category}</span>
                       <span>{blog.readTime}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#0f1d3d] group-hover:text-[#d4af37] transition-colors line-clamp-2 font-heading">
+                    <h3 className="text-lg font-bold text-[#0f1d3d] group-hover:text-[#FFC727] transition-colors line-clamp-2 font-heading">
                       {blog.title}
                     </h3>
                     <p className="text-xs text-[#718096] line-clamp-3">{blog.summary}</p>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 flex justify-between items-center text-xs font-semibold text-[#d4af37] border-t border-[#e2e8f0] mt-4">
+                <div className="p-6 pt-0 flex justify-between items-center text-xs font-semibold text-[#FFC727] border-t border-[#e2e8f0] mt-4">
                   <span>Read Guide</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>

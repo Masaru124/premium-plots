@@ -20,7 +20,7 @@ function MatchmakerContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#C8A34D] selection:text-[#0B1F3A]">
+    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
       <div>
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
         <main className="animate-fadeIn">

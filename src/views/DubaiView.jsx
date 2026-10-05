@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Globe, Building2, ShieldCheck, Sparkles, TrendingUp, CheckCircle2, MessageCircle, ArrowRight, Download, Award } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 
@@ -13,7 +13,7 @@ export default function DubaiView({ setActivePage, setSelectedProjectId }) {
   return (
     <div className="space-y-16 py-10 bg-[#F8F8F5]">
       {/* Hero Banner */}
-      <section className="relative py-20 bg-[#0B1F3A] text-white border-b border-[#C8A34D]/30 overflow-hidden">
+      <section className="relative py-20 bg-[#0B1F3A] text-white border-b border-[#C8A34D]/30 overflow-hidden cad-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
             <Globe className="w-4 h-4" />
@@ -29,15 +29,12 @@ export default function DubaiView({ setActivePage, setSelectedProjectId }) {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I want a consultation for Dubai property investment & Golden Visa details.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold py-4 px-8"
+            <button
+              onClick={() => setActivePage('contact')}
+              className="btn-gold py-4 px-8 cursor-pointer text-xs uppercase font-extrabold"
             >
-              <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-              Book Dubai Consultation ({displayPhone})
-            </a>
+              Book Dubai Consultation
+            </button>
           </div>
         </div>
       </section>
@@ -116,14 +113,14 @@ export default function DubaiView({ setActivePage, setSelectedProjectId }) {
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 right-3">
-                    <span className="text-xs text-[#C8A34D] font-bold block uppercase">📍 {proj.location}</span>
+                    <span className="text-xs text-[#C8A34D] font-bold block uppercase">{proj.location}</span>
                     <h3 className="text-xl font-bold text-white font-heading">{proj.title}</h3>
                   </div>
                 </div>
 
                 <div className="p-6 space-y-4">
                   <p className="text-xs text-[#555555] leading-relaxed">{proj.overview}</p>
-                  <div className="bg-[#F8F8F5] p-3 rounded-xl border border-[#0B1F3A]/10 flex justify-between items-center text-xs">
+                  <div className="bg-[#F8F8F5] p-3.5 rounded-xl border border-[#0B1F3A]/10 flex justify-between items-center text-xs">
                     <div>
                       <div className="text-[10px] text-[#555555]">Starting Price</div>
                       <div className="text-[#C8A34D] font-black text-base">{proj.formattedStartPrice}</div>
@@ -139,7 +136,7 @@ export default function DubaiView({ setActivePage, setSelectedProjectId }) {
               <div className="p-6 pt-0 grid grid-cols-2 gap-3">
                 <button
                   onClick={() => { setSelectedProjectId(proj.id); setActivePage('project-details'); }}
-                  className="btn-primary text-xs py-3"
+                  className="btn-primary text-xs py-3 cursor-pointer"
                 >
                   View Details
                 </button>
@@ -147,13 +144,25 @@ export default function DubaiView({ setActivePage, setSelectedProjectId }) {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want details on ${proj.title} in Dubai.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-gold text-xs py-3 text-center"
+                  className="btn-gold text-xs py-3 text-center cursor-pointer"
                 >
-                  Book Visit
+                  WhatsApp
                 </a>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Mandatory Channel Partner Disclaimer */}
+      <section className="max-w-5xl mx-auto px-4 pb-12">
+        <div className="bg-[#0B1F3A] text-white p-8 rounded-3xl border border-[#C8A34D]/40 text-center space-y-3 shadow-xl">
+          <span className="text-[#C8A34D] text-xs font-bold uppercase tracking-wider font-heading">
+            Channel Partner Disclosure
+          </span>
+          <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-light max-w-3xl mx-auto">
+            "We are an independent real estate consultancy working with multiple reputed developers as Channel Partners. We help buyers compare projects, arrange site visits and connect directly with developers."
+          </p>
         </div>
       </section>
     </div>
