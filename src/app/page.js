@@ -20,7 +20,7 @@ import PropertyMatchmakerPage from '../views/PropertyMatchmakerPage';
 
 function AppContent() {
   const [activePage, setActivePage] = useState('home');
-  const [selectedProjectId, setSelectedProjectId] = useState('project-nisarga-boulevard');
+  const [selectedProjectId, setSelectedProjectId] = useState('project-oriaiyan-signature-plots');
   const [filterType, setFilterType] = useState('all');
   const { toastMessage } = usePlots();
 

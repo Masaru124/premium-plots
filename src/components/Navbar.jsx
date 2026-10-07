@@ -5,8 +5,10 @@ import {
   Compass, MapPin, Phone, Menu, X, MessageCircle,
   ShieldCheck, Sparkles, ChevronRight, Award, Globe, Building2, Layers, Home, Paintbrush
 } from 'lucide-react';
+import { usePlots } from '../context/PlotsContext';
 
 export default function Navbar({ activePage, setActivePage }) {
+  const { openSiteVisitModal } = usePlots();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -160,7 +162,7 @@ export default function Navbar({ activePage, setActivePage }) {
         {/* 4. DESKTOP CONTACT BUTTON */}
         <div className="hidden lg:flex items-center shrink-0">
           <button
-            onClick={() => handleNavClick('contact')}
+            onClick={() => openSiteVisitModal()}
             className="btn-gold text-xs py-2.5 px-5 shadow-md cursor-pointer"
           >
             <span>Book Site Visit</span>
@@ -170,7 +172,7 @@ export default function Navbar({ activePage, setActivePage }) {
         {/* 5. MOBILE ACTIONS & HAMBURGER */}
         <div className="flex lg:hidden items-center gap-2 shrink-0">
           <button
-            onClick={() => handleNavClick('contact')}
+            onClick={() => openSiteVisitModal()}
             className="py-2 px-3 rounded-lg bg-[#C8A34D] text-[#0B1F3A] text-xs font-bold cursor-pointer"
           >
             Book Visit
@@ -253,7 +255,10 @@ export default function Navbar({ activePage, setActivePage }) {
             {/* Drawer Bottom Actions */}
             <div className="pt-6 border-t border-white/15 space-y-2.5">
               <button
-                onClick={() => handleNavClick('contact')}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openSiteVisitModal();
+                }}
                 className="w-full py-3.5 px-4 rounded-xl btn-gold text-xs uppercase font-extrabold flex items-center justify-center gap-2 shadow-lg cursor-pointer"
               >
                 <span>Book Site Visit</span>

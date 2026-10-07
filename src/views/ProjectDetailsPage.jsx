@@ -264,16 +264,24 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
             {/* Links & CTAs */}
             <div className="space-y-3 pt-2">
+              <button
+                onClick={() => openSiteVisitModal(project)}
+                className="btn-gold w-full py-3.5 text-xs uppercase font-extrabold tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              >
+                <Calendar className="w-4 h-4 text-[#0B1F3A]" />
+                Book VIP Site Visit
+              </button>
+
               <a
                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                   `Hi! I want to book a site visit for ${project.title}.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold w-full py-3.5 text-xs uppercase font-extrabold tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="w-full py-3 rounded-xl bg-[#0B1F3A] hover:bg-[#142E54] text-[#C8A34D] border border-[#C8A34D]/40 text-xs font-bold flex items-center justify-center gap-2 cursor-pointer transition-all"
               >
-                <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-                Book Site Visit via WhatsApp
+                <MessageCircle className="w-4 h-4 text-[#C8A34D]" />
+                WhatsApp Direct Inquiry
               </a>
 
               <a

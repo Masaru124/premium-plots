@@ -1,184 +1,323 @@
 export const BENGALURU_CORRIDORS = [
-  { id: 'devanahalli', name: 'North Bengaluru (Airport & STRR Corridor)', distance: '12 mins from KIADB Industrial Hub', potential: '18.4% YoY Growth' },
-  { id: 'whitefield', name: 'East Bengaluru (Whitefield-Hoskote Corridor)', distance: '5 mins from STRR & 10 mins from Hope Farm', potential: '15.9% YoY Growth' },
-  { id: 'sarjapur', name: 'East Bengaluru (Sarjapur-Attibele Tech Belt)', distance: '15 mins from Wipro SEZ & Commercial Belts', potential: '16.2% YoY Growth' },
-  { id: 'dubai', name: 'Dubai Global Investment Belt (Downtown & Marina)', distance: 'Tax-Free 8-10% Rental Yields', potential: '22.0% YoY Growth' }
+  { id: 'all-corridors', name: 'All Bengaluru & Regional Corridors', distance: 'Prime High-Growth Belts', potential: '18.4% YoY Average' },
+  { id: 'chikkaballapura-nandi', name: 'Chikkaballapura & Nandi Hills Belt', distance: 'Scenic Living & STRR North Gateway', potential: '21.5% YoY Growth' },
+  { id: 'airport-chikkajala', name: 'Airport & Chikkajala Corridor', distance: '5-10 mins from Kempegowda International Airport', potential: '22.8% YoY Growth' },
+  { id: 'east-kothanur-hoskote', name: 'East Corridor (Kothanur & Hoskote)', distance: '10 mins from STRR & Hope Farm Junction', potential: '17.6% YoY Growth' },
+  { id: 'south-jigani-apc', name: 'South Industrial Belt (APC Circle, Jigani & Kanakapura Rd)', distance: 'Direct Electronic City & NICE Corridor Link', potential: '16.9% YoY Growth' },
+  { id: 'west-tumkur-kolar', name: 'West & Extended Hubs (Tumkur Rd & Kolar Belt)', distance: 'Industrial Corridor & Expressway Access', potential: '15.4% YoY Growth' },
+  { id: 'dubai', name: 'Dubai Global Investment Belt (Marina & Harbour)', distance: 'Tax-Free 8-10% USD Yields & Golden Visa', potential: '24.0% YoY Growth' }
 ];
 
-export const INTERIOR_PACKAGES = [
+export const FEATURED_GROUPS = [
   {
-    name: 'Silver Package',
-    dryAreaPrice: '₹1,000 / Sq.Ft',
-    wetAreaPrice: '₹1,350 / Sq.Ft',
-    coreDry: 'Engineered Wood / MDF Pre-Laminated',
-    coreWet: 'BWR Ply',
-    finish: 'Pre-Laminated Finish',
-    hardware: 'EBCO Regular or Equivalent',
-    accessories: 'EBCO Regular',
-    handles: 'NIKKY or Equivalent'
+    id: 'oriaiyan-group',
+    name: 'Oriaiyan Group',
+    tagline: 'Premier Plotted Development & Land Infrastructure Head',
+    badge: 'Project Head',
+    categories: ['Plots', 'Villa Plots'],
+    locations: ['Kolar', 'Chikkaballapura', 'APC Circle', 'Jigani', 'Tumkur Rd', 'Kanakapura Rd'],
+    priceRange: '₹50 Lakhs - ₹2.0 Crore',
+    maxSize: 'Up to 4,499 Sq.Ft',
+    icon: '🏛',
+    highlights: '6 Strategic Growth Corridors • Direct Clear Titles • 100% RERA/BMRDA Guidelines'
   },
   {
-    name: 'Gold Package',
-    dryAreaPrice: '₹1,300 / Sq.Ft',
-    wetAreaPrice: '₹1,500 / Sq.Ft',
-    coreDry: 'MR Ply (Century/Green/Apple) or MDF',
-    coreWet: 'BWP Ply (Exterior Grade Century/Green)',
-    finish: 'Merino / Century / Green HGL, SF & Matt Finish',
-    hardware: 'HETTICH / HAFELE Regular',
-    accessories: 'HETTICH / HAFELE Regular',
-    handles: 'EBCO or Equivalent'
+    id: 'tripon-groups',
+    name: 'Tripon Groups',
+    tagline: 'Luxury High-Rise Residences & Scenic Nandi Villa Enclaves',
+    badge: 'Luxury Developer',
+    categories: ['Apartments', 'Villas'],
+    locations: ['Airport Corridor (Devanahalli)', 'Chikkaballapura (Nandi Foothills)'],
+    priceRange: '₹52 Lakhs - ₹4.0 Crore',
+    maxSize: '2, 3, 4 & 5 BHK Estates',
+    icon: '✨',
+    highlights: 'Aero Gardens (5 Mins from Airport) & Nandi Hills 3/4/5 BHK Private Villas'
   },
   {
-    name: 'Platinum Package',
-    dryAreaPrice: '₹1,550 / Sq.Ft',
-    wetAreaPrice: '₹1,850 / Sq.Ft',
-    coreDry: 'MR Ply / MDF (Century/Green)',
-    coreWet: 'BWP Ply / Exterior Grade MDF',
-    finish: 'Merino / Century Acrylic, Textured & Veneer Finish',
-    hardware: 'HETTICH / HAFELE Soft Close',
-    accessories: 'HETTICH / HAFELE Soft Close',
-    handles: 'Custom Designer Option'
+    id: 'vinra-group',
+    name: 'Vinra Group / Vinra KBR',
+    tagline: 'Modern High-Connectivity Urban Living',
+    badge: 'Twin-Corridor Specialist',
+    categories: ['Apartments'],
+    locations: ['Chikkajala (North Bengaluru)', 'Kothanur near Hoskote (East Bengaluru)'],
+    priceRange: '₹59 Lakhs - ₹1.9 Crore',
+    maxSize: '1, 2, 3 & 4 BHK Units',
+    icon: '🏢',
+    highlights: 'Dual-location residences with clubhouse amenities in Chikkajala & Kothanur'
+  },
+  {
+    id: 'd1-projects',
+    name: 'D1 Projects / Sun Valley',
+    tagline: 'Scenic Plotted Community & Nandi Gateway Living',
+    badge: 'Value Plotted Enclave',
+    categories: ['Plots'],
+    locations: ['Chikkaballapura'],
+    priceRange: '₹35 Lakhs - ₹90 Lakhs',
+    maxSize: '1,200 - 2,400 Sq.Ft Plots',
+    icon: '🏞',
+    highlights: 'Sun Valley scenic township with wide blacktop roads, landscaped parks & water supply'
+  },
+  {
+    id: 'dubai-estates',
+    name: 'Dubai Global Estates',
+    tagline: 'Global Luxury Waterfront Residences & Golden Visa Assets',
+    badge: 'International Portfolio',
+    categories: ['Dubai Apartments'],
+    locations: ['Dubai Marina & Harbour, UAE'],
+    priceRange: 'AED 1.4M (₹3.10 Cr onwards)',
+    maxSize: '1, 2, 3 BHK Ocean Suites',
+    icon: '🌍',
+    highlights: 'Guaranteed 8-10% tax-free rental returns with 10-Year UAE Golden Visa eligibility'
   }
 ];
 
 export const INITIAL_LEADS = [
   {
     id: 'lead-101',
-    name: 'Anand Kumar',
+    name: 'Dr. Anand Kumar',
     phone: '+91 84319 09508',
-    email: 'anand.k@pgrbuildtech.com',
-    projectTitle: 'Nisarga Boulevard - Devanahalli',
-    visitDate: '2026-07-28',
+    email: 'anand.k@oriaiyaninvest.com',
+    projectTitle: 'Oriaiyan Signature Plotted & Villa Plot Developments',
+    visitDate: '2026-10-15',
     visitTime: '11:00 AM',
     cabPickup: true,
     pickupLocation: 'Kempegowda Airport Terminal 1',
     status: 'Confirmed',
-    createdAt: '2026-07-26 10:30 AM'
+    createdAt: '2026-10-06 10:30 AM'
+  },
+  {
+    id: 'lead-102',
+    name: 'Vikram & Radhika Seth',
+    phone: '+91 98450 12345',
+    email: 'vikram.seth@techcorp.com',
+    projectTitle: 'Tripon Nandi Luxury Villas (3, 4 & 5 BHK)',
+    visitDate: '2026-10-18',
+    visitTime: '03:30 PM',
+    cabPickup: false,
+    pickupLocation: 'Self Drive',
+    status: 'Confirmed',
+    createdAt: '2026-10-07 09:15 AM'
   }
 ];
 
 export const INITIAL_PROJECTS = [
   {
-    id: 'project-nisarga-boulevard',
-    title: 'Nisarga Boulevard - Devanahalli',
-    slug: 'nisarga-boulevard-devanahalli',
+    id: 'project-oriaiyan-signature-plots',
+    title: 'Oriaiyan Signature Plotted Developments & Villa Plots',
+    slug: 'oriaiyan-signature-plotted-villa-plots-bengaluru',
     propertyType: 'Open Plots',
-    tagline: 'Thoughtfully Planned Premium Residential Development by PGR Buildtech on STRR',
-    developer: 'PGR Buildtech Pvt Ltd',
-    location: 'Devanahalli, North Bengaluru (On STRR)',
-    corridorId: 'devanahalli',
+    groupName: 'Oriaiyan Group',
+    tagline: 'Flagship Plotted & Villa Plot Enclaves across 6 High-Growth Bengaluru Corridors by Oriaiyan Group',
+    developer: 'Oriaiyan Group (Project Head)',
+    location: 'Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur Rd, Kanakapura Rd',
+    corridorId: 'chikkaballapura-nandi',
+    corridorsCovered: ['Kolar', 'Chikkaballapura', 'APC Circle (Jigani/Anekal)', 'Jigani', 'Tumkur Road', 'Kanakapura Road'],
     constructionStatus: 'Ready for Construction',
-    coordinates: { lat: 13.2458, lng: 77.7121 },
-    googleMapsUrl: 'https://maps.app.goo.gl/nd1REcJDzUBVkFAg9',
+    coordinates: { lat: 13.4355, lng: 77.7289 },
+    googleMapsUrl: 'https://maps.google.com/?q=Oriaiyan+Plotted+Developments+Bengaluru',
     developerPhone: '+91 8431909508',
     whatsappPhone: '+91 8431909508',
-    priceRange: '₹3,500 - ₹4,200 per sq.ft (Pre-Launch Indicative)',
-    startPrice: 5250000,
-    formattedStartPrice: '₹52.5 Lakhs',
-    dimensions: ['1500 sq.ft (30x50)', '2400 sq.ft (40x60)', '2800 sq.ft (40x70)', 'ODD Sites'],
-    totalPlots: 254,
-    availablePlots: 68,
-    reraId: 'PRM/KA/RERA/1250/303/PR/240726/009988',
-    approvalType: 'BIAPPA & RERA Approved',
+    priceRange: '₹50 Lakhs - ₹2.0 Crore',
+    startPrice: 5000000,
+    formattedStartPrice: '₹50.0 Lakhs',
+    dimensions: ['1200 sq.ft (30x40)', '1500 sq.ft (30x50)', '2400 sq.ft (40x60)', '3000 sq.ft (50x60)', '4499 sq.ft (Grand Estate)'],
+    totalPlots: 320,
+    availablePlots: 94,
+    reraId: 'PRM/KA/RERA/1250/303/PR/250112/008890',
+    approvalType: 'RERA & Local Town Planning Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'Canara Bank'],
-    heroImage: '/images/nisarga-boulevard.jpg',
+    heroImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
-      '/images/nisarga-boulevard.jpg',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
     ],
-    overview: 'Nisarga Boulevard by PGR Buildtech Pvt Ltd is a thoughtfully planned 26-acre premium residential development in Devanahalli, North Bengaluru, strategically positioned on the Satellite Town Ring Road (STRR). Designed to offer modern lifestyle comforts along with strong long-term investment potential, featuring approx. 254 residential plots from 1500 Sq. Ft. onwards.',
+    overview: 'Oriaiyan Group presents its signature portfolio of residential plots and luxury villa plots spread across six premier growth corridors: Kolar, Chikkaballapura, APC Circle (Jigani/Anekal), Jigani Industrial Hub, Tumkur Road, and Kanakapura Road. Featuring plot dimensions up to 4,499 Sq.Ft with underground cabling, wide avenue trees, and 100% clear titles.',
     highlights: [
-      'Spread across 26 Acres with Phase Development Started',
-      'Approx. 254 Residential Plots (1500 sq.ft, 2400 sq.ft, 2800 sq.ft & ODD Sites)',
-      'Strategically located in Devanahalli directly on Satellite Town Ring Road (STRR)',
-      'Efficiently planned plots with optimal space utilization & signature PGR quality',
-      'Excellent connectivity to Kempegowda Airport & KIADB Aerospace Hub'
+      'Plots & Villa Plots spanning up to 4,499 Sq.Ft with grand setbacks',
+      'Available across 6 High-Growth Corridors: Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur Rd & Kanakapura Rd',
+      'Direct pricing starting from ₹50 Lakhs up to ₹2.0 Crore',
+      'Underground electrical cabling, dedicated water lines & grand entry archways',
+      'Pre-approved home and plot loans from SBI, HDFC and leading nationalized banks'
     ],
     landmarks: [
-      { name: 'Satellite Town Ring Road (STRR)', distance: 'Direct Entry (0 min)' },
-      { name: 'Kempegowda International Airport', distance: '12 mins' },
-      { name: 'KIADB Aerospace & Hardware Park', distance: '8 mins' }
+      { name: 'Chikkaballapura Town & STRR Interchange', distance: '8 mins' },
+      { name: 'APC Circle / Jigani Industrial Gateway', distance: '5 mins' },
+      { name: 'Kanakapura Expressway & Metro Corridor', distance: '12 mins' },
+      { name: 'Tumkur Road Industrial Corridor', distance: '10 mins' },
+      { name: 'Kolar Highway & Industrial SEZ', distance: '15 mins' }
     ]
   },
   {
-    id: 'project-vinra-alora',
-    title: 'Vinra Alora - Custom Luxury Villa Plots',
-    slug: 'vinra-alora-whitefield-custom-villas',
-    propertyType: 'Villas',
-    tagline: '5-Acre Gated Custom Villa & Plotted Community near Whitefield & STRR Highway',
-    developer: 'Vinra Group (Complete Living Solutions)',
-    location: 'Yettakodi Village, Whitefield Extension (Chikkatirupathi Rd)',
-    corridorId: 'whitefield',
-    constructionStatus: 'Under Construction',
-    coordinates: { lat: 12.9698, lng: 77.7500 },
-    googleMapsUrl: 'https://maps.google.com/?q=Vinra+Alora+Whitefield',
+    id: 'project-sun-valley-chikkaballapura',
+    title: 'Sun Valley Plotted Enclave - Chikkaballapura',
+    slug: 'sun-valley-plots-chikkaballapura-d1',
+    propertyType: 'Open Plots',
+    groupName: 'D1 Projects',
+    tagline: 'Scenic Plotted Community in Chikkaballapura with Unobstructed Views of Nandi Hills',
+    developer: 'D1 Projects / Sun Valley Developers',
+    location: 'Chikkaballapura (Near Nandi Hills Foothills)',
+    corridorId: 'chikkaballapura-nandi',
+    constructionStatus: 'Ready for Construction',
+    coordinates: { lat: 13.4320, lng: 77.7260 },
+    googleMapsUrl: 'https://maps.google.com/?q=Sun+Valley+Chikkaballapura',
     developerPhone: '+91 8431909508',
     whatsappPhone: '+91 8431909508',
-    priceRange: '₹4,500 - ₹5,800 per sq.ft (Plot + Villa Customization)',
-    startPrice: 8500000,
-    formattedStartPrice: '₹85.0 Lakhs',
-    dimensions: ['1700 sq.ft (Ebony 3BHK)', '2450 sq.ft (Ferns 4BHK)', '3000 sq.ft (Oak 4BHK+Gym)', 'Custom Villa Sites'],
-    totalPlots: 78,
-    availablePlots: 24,
-    reraId: 'PRM/KA/RERA/1250/304/PR/241014/004800',
-    approvalType: 'BMRDA & Local Authority Approved',
+    priceRange: '₹35 Lakhs - ₹90 Lakhs',
+    startPrice: 3500000,
+    formattedStartPrice: '₹35.0 Lakhs',
+    dimensions: ['1200 sq.ft (30x40)', '1500 sq.ft (30x50)', '2400 sq.ft (40x60)'],
+    totalPlots: 180,
+    availablePlots: 52,
+    reraId: 'PRM/KA/RERA/1250/303/PR/240918/007120',
+    approvalType: 'CUDDA & RERA Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank'],
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
     ],
-    overview: 'Vinra Alora is a premier 5-acre gated villa community in Whitefield New Extension by Vinra Group. Featuring 10+ pre-approved architectural villa elevation designs (Ebony 1700 sq.ft, Ferns 2450 sq.ft, Oak 3000 sq.ft) with turnkey interior design packages (Silver, Gold & Platinum by Vinra Interiors).',
+    overview: 'Sun Valley by D1 Projects is a serene, beautifully master-planned plotted development located in Chikkaballapura near the Nandi Hills belt. Offering residential plots priced attractively from ₹35 Lakhs to ₹90 Lakhs with blacktop roads, dedicated children play parks, and immediate registration.',
     highlights: [
-      '5-Acre Gated Villa Community in Whitefield New Extension',
-      '10+ Pre-Approved Custom Architectural Elevations (Ebony, Ferns & Oak)',
-      'Turnkey Interior Packages (Silver ₹1000/sqft, Gold ₹1300/sqft, Platinum ₹1550/sqft)',
-      'Direct 5 Mins Connectivity to Satellite Town Ring Road (STRR)'
+      'Prime location in Chikkaballapura with fresh air and scenic mountain backdrops',
+      'Attractive value pricing from ₹35 Lakhs to ₹90 Lakhs',
+      'Complete township infrastructure: overhead water tank, street lights & 24/7 security',
+      '10 Mins from the upcoming STRR North corridor and national highway'
     ],
     landmarks: [
-      { name: 'Satellite Town Ring Road (STRR)', distance: '5 mins' },
-      { name: 'Chikka Tirupati Temple', distance: '6 mins' },
-      { name: 'Whitefield Railway Station & Hope Farm', distance: '15 mins' }
+      { name: 'Nandi Hills Base Road', distance: '12 mins' },
+      { name: 'Chikkaballapura Medical College & DC Office', distance: '6 mins' },
+      { name: 'Kempegowda International Airport', distance: '25 mins' }
     ]
   },
   {
-    id: 'project-prestige-city-apartments',
-    title: 'Prestige City High-Rise Luxury Apartments',
-    slug: 'prestige-city-apartments-sarjapur',
+    id: 'project-vinra-kbr-residences',
+    title: 'Vinra KBR Residences - Chikkajala & Kothanur',
+    slug: 'vinra-kbr-apartments-chikkajala-kothanur-hoskote',
     propertyType: 'Apartments',
-    tagline: '180-Acre Master Township with 2, 3 & 4 BHK Luxury High-Rise Apartments',
-    developer: 'Prestige Group',
-    location: 'Sarjapur Main Road, East Bengaluru',
-    corridorId: 'sarjapur',
+    groupName: 'Vinra Group',
+    tagline: 'Modern High-Rise Apartments Across Two Strategic Hubs: Chikkajala (North) & Kothanur (East)',
+    developer: 'Vinra Group / Vinra KBR',
+    location: '1) Chikkajala (North Bengaluru) • 2) Kothanur near Hoskote (East Bengaluru)',
+    corridorId: 'airport-chikkajala',
     constructionStatus: 'Under Construction',
-    coordinates: { lat: 12.9250, lng: 77.6850 },
-    googleMapsUrl: 'https://maps.google.com/?q=Prestige+City+Sarjapur',
+    coordinates: { lat: 13.1789, lng: 77.6250 },
+    googleMapsUrl: 'https://maps.google.com/?q=Vinra+KBR+Chikkajala',
     developerPhone: '+91 8431909508',
     whatsappPhone: '+91 8431909508',
-    priceRange: '₹7,200 per sq.ft onwards',
-    startPrice: 9500000,
-    formattedStartPrice: '₹95.0 Lakhs',
-    dimensions: ['1175 sq.ft (2 BHK)', '1650 sq.ft (3 BHK)', '2200 sq.ft (4 BHK Luxury)'],
-    totalPlots: 450,
-    availablePlots: 85,
-    reraId: 'PRM/KA/RERA/1251/308/PR/210907/004315',
+    priceRange: '₹59 Lakhs - ₹1.9 Crore',
+    startPrice: 5900000,
+    formattedStartPrice: '₹59.0 Lakhs',
+    dimensions: ['750 sq.ft (1 BHK)', '1150 sq.ft (2 BHK)', '1550 sq.ft (3 BHK)', '2100 sq.ft (4 BHK Penthouse)'],
+    totalPlots: 260,
+    availablePlots: 74,
+    reraId: 'PRM/KA/RERA/1251/309/PR/241105/008122',
     approvalType: 'BDA & RERA Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank'],
     heroImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
     ],
-    overview: 'Prestige City Sarjapur is an iconic 180-acre integrated township offering 2, 3, and 4 BHK luxury high-rise apartments equipped with a 50,000 sq.ft clubhouse, infinity swimming pools, and direct tech corridor access.',
+    overview: 'Vinra KBR Residences by Vinra Group offers contemporary 1, 2, 3, and 4 BHK luxury residences across two of Bengaluru\'s most active real estate corridors: Chikkajala (on the Airport Expressway) and Kothanur near Hoskote (East Bengaluru). Equipped with modern clubhouses, rooftop swimming pools, and high-speed elevator access.',
     highlights: [
-      '180-Acre Integrated Smart Township on Sarjapur Road',
-      '50,000 Sq. Ft. Grand Clubhouse & 5 Star Amenities',
-      'Seamless Connectivity to Wipro SEZ, Electronic City & Outer Ring Road'
+      'Dual-Corridor Presence: Chikkajala (Airport Road) & Kothanur (Hoskote East Belt)',
+      '1, 2, 3 & 4 BHK apartments priced from ₹59 Lakhs to ₹1.9 Crore',
+      'Luxury amenities including rooftop lounge, fitness gym, children creche & multi-tier security',
+      'Superb rental demand from Airport professionals, IT parks & Hoskote Industrial Hub'
     ],
     landmarks: [
-      { name: 'Wipro SEZ Sarjapur', distance: '3 mins' },
-      { name: 'Outer Ring Road (ORR) Junction', distance: '10 mins' }
+      { name: 'Kempegowda International Airport (from Chikkajala)', distance: '8 mins' },
+      { name: 'Kothanur / Hoskote Industrial Belt', distance: '5 mins' },
+      { name: 'Whitefield ITPB & Hope Farm (from Kothanur)', distance: '15 mins' }
+    ]
+  },
+  {
+    id: 'project-tripon-aero-gardens',
+    title: 'Tripon Aero Gardens - Airport Corridor',
+    slug: 'tripon-aero-gardens-devanahalli-airport',
+    propertyType: 'Apartments',
+    groupName: 'Tripon Groups',
+    tagline: 'Premium High-Rise Residences Located Just 5 Minutes from Kempegowda International Airport',
+    developer: 'Tripon Groups',
+    location: 'Devanahalli (5 mins from Kempegowda International Airport)',
+    corridorId: 'airport-chikkajala',
+    constructionStatus: 'Under Construction',
+    coordinates: { lat: 13.2458, lng: 77.7121 },
+    googleMapsUrl: 'https://maps.google.com/?q=Tripon+Aero+Gardens+Airport',
+    developerPhone: '+91 8431909508',
+    whatsappPhone: '+91 8431909508',
+    priceRange: '₹52 Lakhs - ₹1.5 Crore',
+    startPrice: 5200000,
+    formattedStartPrice: '₹52.0 Lakhs',
+    dimensions: ['850 sq.ft (1.5 BHK)', '1200 sq.ft (2 BHK)', '1650 sq.ft (3 BHK Premium)', '2050 sq.ft (3 BHK + Maid)'],
+    totalPlots: 310,
+    availablePlots: 88,
+    reraId: 'PRM/KA/RERA/1250/303/PR/241201/009100',
+    approvalType: 'BIAPPA & RERA Approved',
+    bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'Bank of Baroda'],
+    heroImage: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+    ],
+    overview: 'Tripon Aero Gardens by Tripon Groups is an iconic luxury residential community situated just 5 minutes from Kempegowda International Airport. Tailored for aviation professionals, global executives, and astute investors seeking high rental yield assets in North Bengaluru\'s aerospace corridor.',
+    highlights: [
+      'Unmatched location: 5 minutes from Terminal 1 & 2 of Kempegowda Airport',
+      'Attractive pricing from ₹52 Lakhs to ₹1.5 Crore',
+      'Resort-style amenities: 25,000 sq.ft clubhouse, badminton courts & jogging track',
+      'Direct frontage on the 6-lane Airport Expressway and upcoming Airport Metro line'
+    ],
+    landmarks: [
+      { name: 'Kempegowda International Airport', distance: '5 mins' },
+      { name: 'KIADB Aerospace & Hardware SEZ', distance: '4 mins' },
+      { name: 'Devanahalli Business Park & STRR', distance: '6 mins' }
+    ]
+  },
+  {
+    id: 'project-tripon-nandi-villas',
+    title: 'Tripon Nandi Luxury Villas (3, 4 & 5 BHK)',
+    slug: 'tripon-nandi-villas-chikkaballapura-nandi-hills',
+    propertyType: 'Villas',
+    groupName: 'Tripon Groups',
+    tagline: 'Exclusive Gated Luxury Villa Community in Chikkaballapura with Scenic Views of Nandi Hills',
+    developer: 'Tripon Groups',
+    location: 'Chikkaballapura (Nandi Foothills)',
+    corridorId: 'chikkaballapura-nandi',
+    constructionStatus: 'Under Construction',
+    coordinates: { lat: 13.4180, lng: 77.7110 },
+    googleMapsUrl: 'https://maps.google.com/?q=Tripon+Nandi+Villas+Chikkaballapura',
+    developerPhone: '+91 8431909508',
+    whatsappPhone: '+91 8431909508',
+    priceRange: '₹2.4 Crore - ₹4.0 Crore',
+    startPrice: 24000000,
+    formattedStartPrice: '₹2.40 Crore',
+    dimensions: ['2400 sq.ft (3 BHK Villa)', '3200 sq.ft (4 BHK Grand Villa)', '4500 sq.ft (5 BHK Signature Mansion)'],
+    totalPlots: 65,
+    availablePlots: 18,
+    reraId: 'PRM/KA/RERA/1250/304/PR/250210/009855',
+    approvalType: 'CUDDA & RERA Approved',
+    bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank'],
+    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80'
+    ],
+    overview: 'Tripon Nandi Villas by Tripon Groups is a boutique 15-acre gated villa community nestled in the serene foothills of Nandi Hills, Chikkaballapura. Offering 3, 4, and 5 BHK custom architectural villas with private landscaped courtyards, plunge pools, and luxury finishes, priced from ₹2.4 Cr to ₹4.0 Cr.',
+    highlights: [
+      'Exclusive boutique enclave with 3, 4 & 5 BHK luxury villas (2,400 to 4,500 sq.ft)',
+      'Spectacular views of Nandi Hills with clean air and tranquil microclimate',
+      'Private clubhouse with heated pool, tennis court, organic farming zone & wellness spa',
+      'Fast 20-minute direct expressway drive to Kempegowda International Airport'
+    ],
+    landmarks: [
+      { name: 'Nandi Hills Scenic Viewpoint', distance: '10 mins' },
+      { name: 'Chikkaballapura City Centre & Hospital Hub', distance: '7 mins' },
+      { name: 'Kempegowda International Airport', distance: '20 mins' }
     ]
   },
   {
@@ -186,8 +325,9 @@ export const INITIAL_PROJECTS = [
     title: 'Dubai Marina Sunset Waterfront Apartments',
     slug: 'dubai-marina-sunset-residences',
     propertyType: 'Dubai Apartments',
-    tagline: 'Ultra-Luxury Waterfront Towers with Guaranteed 8-10% Tax-Free USD Rental Yields',
-    developer: 'Emaar Properties Dubai',
+    groupName: 'Dubai Global Estates',
+    tagline: 'Ultra-Luxury Waterfront Towers with Guaranteed 8-10% Tax-Free USD Rental Yields & 10-Yr Golden Visa',
+    developer: 'Emaar Properties Dubai / Dubai Global Estates',
     location: 'Dubai Marina & Harbour, Dubai UAE',
     corridorId: 'dubai',
     constructionStatus: 'Under Construction',
@@ -226,49 +366,99 @@ export const INITIAL_PROJECTS = [
 export const INITIAL_BLOGS = [
   {
     id: 'blog-1',
-    title: 'Why Nisarga Boulevard on Devanahalli STRR is North Bengaluru\'s #1 Land Investment',
-    slug: 'why-nisarga-boulevard-devanahalli-strr-plot-investment',
-    category: 'Project Spotlight',
-    date: 'July 26, 2026',
+    title: 'Why Oriaiyan Plotted Developments Across Kolar & Chikkaballapura Lead Bengaluru Land Investments',
+    slug: 'why-oriaiyan-plotted-developments-bengaluru-corridors',
+    category: 'Market Spotlight',
+    date: 'October 06, 2026',
     readTime: '5 min read',
-    author: 'PGR Buildtech Property Research Team',
-    image: '/images/nisarga-boulevard.jpg',
-    summary: 'Discover how Nisarga Boulevard by PGR Buildtech on the Satellite Town Ring Road (STRR) offers total legal clarity and high land appreciation.',
-    content: `Nisarga Boulevard is a 26-acre premium residential development by PGR Buildtech Pvt Ltd in Devanahalli.`
+    author: 'Lakshie Real Estate Research Cell',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80',
+    summary: 'Discover how Oriaiyan Group\'s plotted enclaves up to 4,499 sq.ft across Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur Rd & Kanakapura Rd offer unmatched capital appreciation.',
+    content: `Oriaiyan Group has set a new benchmark in verified plotted land and villa plot infrastructure in Bengaluru.`
   },
   {
     id: 'blog-2',
-    title: 'Dubai Real Estate Investment Guide 2026: Tax-Free Yields & UAE Golden Visa',
+    title: 'Tripon Aero Gardens & Nandi Luxury Villas: Dual-Asset Power in North Bengaluru',
+    slug: 'tripon-aero-gardens-nandi-villas-guide',
+    category: 'Developer Focus',
+    date: 'September 28, 2026',
+    readTime: '6 min read',
+    author: 'North Bengaluru Advisory Team',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    summary: 'Explore Tripon Groups\' high-growth apartments 5 minutes from Kempegowda Airport and bespoke 3, 4, 5 BHK luxury villas at Nandi Hills.',
+    content: `Tripon Groups provides exceptional real estate assets in Bengaluru\'s highest growth corridor.`
+  },
+  {
+    id: 'blog-3',
+    title: 'Dubai Real Estate Investment Guide: Tax-Free USD Yields & UAE Golden Visa',
     slug: 'dubai-real-estate-golden-visa-investment-guide',
     category: 'Dubai Property',
-    date: 'March 15, 2026',
+    date: 'August 15, 2026',
     readTime: '6 min read',
     author: 'Dubai International Advisory Team',
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
     summary: 'Learn why Indian investors are acquiring waterfront apartments in Dubai Marina & Downtown for 8-10% tax-free rental yields and 10-year Golden Visas.',
-    content: `Dubai continues to lead global real estate investments.`
+    content: `Dubai continues to lead global real estate investments with zero property taxes and high rental returns.`
   }
 ];
 
 export const CLIENT_REVIEWS = [
   {
     id: 'rev-1',
-    name: 'Vikram & Ananya Reddy',
-    location: 'Plot Owner at Nisarga Boulevard, Devanahalli',
+    name: 'Dr. Vikram & Ananya Reddy',
+    location: 'Villa Plot Owner at Oriaiyan Group (Chikkaballapura Corridor)',
     profession: 'Senior Software Director at Foxconn Tech',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    quote: 'We booked a 1500 sq.ft plot in Nisarga Boulevard on the STRR. Legal transparency and Channel Partner guidance was top notch!',
-    project: 'Nisarga Boulevard'
+    quote: 'We booked a 2400 sq.ft villa plot in Oriaiyan Signature development. The clear documentation and prompt channel partner guidance by Lakshie was outstanding!',
+    project: 'Oriaiyan Group'
   },
   {
     id: 'rev-2',
-    name: 'Dr. Suresh Natarajan',
-    location: 'Villa Buyer at Vinra Alora, Whitefield',
-    profession: 'Consultant Surgeon, Manipal Hospital',
+    name: 'Karthik & Sneha Iyer',
+    location: 'Homeowner at Tripon Aero Gardens (Airport Corridor)',
+    profession: 'Aviation Executive, Kempegowda International Airport',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-    quote: 'Vinra Alora gave us the Oak 3000 sq.ft villa customization option with Platinum interior package. Outstanding guidance!',
-    project: 'Vinra Alora'
+    quote: 'Being just 5 minutes from the airport, Tripon Aero Gardens was the perfect investment for us. Outstanding appreciation potential!',
+    project: 'Tripon Aero Gardens'
   }
 ];
+
+
+export const INTERIOR_PACKAGES = [
+  {
+    name: 'Silver Package',
+    dryAreaPrice: '₹1,250 / sq.ft',
+    wetAreaPrice: '₹1,550 / sq.ft',
+    coreDry: 'Action TESA HDHMR Grade Plywood',
+    coreWet: 'Greenply 710 BWP Boiling Water Proof Ply',
+    finish: '0.8mm High-Gloss Merino / Stylam Laminate',
+    hardware: 'Ebco Soft-Close Hinges & Heavy-Duty Channels',
+    accessories: 'Stainless Steel 202 4-Basket Modular Wire Organizers',
+    handles: 'Brushed Aluminium Edge Profile Handles'
+  },
+  {
+    name: 'Gold Package',
+    dryAreaPrice: '₹1,650 / sq.ft',
+    wetAreaPrice: '₹2,050 / sq.ft',
+    coreDry: 'Century MR Grade / Action TESA HDHMR',
+    coreWet: 'Century Club Prime 710 Marine Grade BWP Ply',
+    finish: '1.0mm Anti-Scratch Acrylic / High-Gloss Laminate',
+    hardware: 'HETTICH Sensys Soft-Close Concealed Hinges',
+    accessories: 'Stainless Steel 304 Grade 6-Basket Tandem Box Set',
+    handles: 'Concealed Gola Profile & Rose Gold Edge Handles'
+  },
+  {
+    name: 'Platinum Package',
+    dryAreaPrice: '₹2,250 / sq.ft',
+    wetAreaPrice: '₹2,850 / sq.ft',
+    coreDry: 'Century Pro / Green Gold Premium HDHMR',
+    coreWet: 'Century Architect Platinum 710 Waterproof Marine Ply',
+    finish: 'PU Lacquered Paint / Ceramic Finish & Glass Shutter Doors',
+    hardware: 'HAFELE Matrix Box Premium Soft-Close Drawers & Hinges',
+    accessories: 'Hafele Magic Corner, Tall Unit & Deep Pantry Pullouts',
+    handles: 'Handleless Integrated Magnetic Push-to-Open System'
+  }
+];
+

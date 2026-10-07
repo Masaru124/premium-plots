@@ -22,7 +22,7 @@ export default function BookSiteVisitModal() {
 
   if (!isSiteVisitModalOpen) return null;
 
-  const projectTitle = selectedProjectForModal ? selectedProjectForModal.title : 'Nisarga Boulevard - Devanahalli';
+  const projectTitle = selectedProjectForModal ? selectedProjectForModal.title : 'Oriaiyan Signature Plotted Developments & Villa Plots';
 
   const handleSubmit = (e) => {
     e.preventDefault();
