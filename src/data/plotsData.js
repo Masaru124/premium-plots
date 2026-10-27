@@ -3,12 +3,25 @@ export const BENGALURU_CORRIDORS = [
   { id: 'chikkaballapura-nandi', name: 'Chikkaballapura & Nandi Hills Belt', distance: 'Scenic Living & STRR North Gateway', potential: '21.5% YoY Growth' },
   { id: 'airport-chikkajala', name: 'Airport & Chikkajala Corridor', distance: '5-10 mins from Kempegowda International Airport', potential: '22.8% YoY Growth' },
   { id: 'east-kothanur-hoskote', name: 'East Corridor (Kothanur & Hoskote)', distance: '10 mins from STRR & Hope Farm Junction', potential: '17.6% YoY Growth' },
+  { id: 'south-bannerghatta', name: 'South Bengaluru (Bannerghatta Road & Kanakapura)', distance: '5 mins from Meenakshi Mall & NICE Road', potential: '18.9% YoY Growth' },
   { id: 'south-jigani-apc', name: 'South Industrial Belt (APC Circle, Jigani & Kanakapura Rd)', distance: 'Direct Electronic City & NICE Corridor Link', potential: '16.9% YoY Growth' },
   { id: 'west-tumkur-kolar', name: 'West & Extended Hubs (Tumkur Rd & Kolar Belt)', distance: 'Industrial Corridor & Expressway Access', potential: '15.4% YoY Growth' },
   { id: 'dubai', name: 'Dubai Global Investment Belt (Marina & Harbour)', distance: 'Tax-Free 8-10% USD Yields & Golden Visa', potential: '24.0% YoY Growth' }
 ];
 
 export const FEATURED_GROUPS = [
+  {
+    id: 'puravankara-limited',
+    name: 'Puravankara Limited',
+    tagline: 'Tier-1 Luxury Real Estate & Iconic Gated Communities',
+    badge: 'Tier-1 Developer',
+    categories: ['Villas', 'Luxury Villas'],
+    locations: ['Bannerghatta Road (South Bengaluru)'],
+    priceRange: '₹9.0 Cr (Negotiable)',
+    maxSize: '5,000 - 7,000 Sq.Ft Villas',
+    icon: '👑',
+    highlights: 'Purva Sounds of Water • A+ Type 5 BHK Luxury Villa • 2,200 Sq.Ft Garden • Zero Brokerage'
+  },
   {
     id: 'oriaiyan-group',
     name: 'Oriaiyan Group',
@@ -360,6 +373,75 @@ export const INITIAL_PROJECTS = [
       { name: 'Palm Jumeirah', distance: '8 mins' },
       { name: 'Downtown Dubai & Burj Khalifa', distance: '18 mins' }
     ]
+  },
+  {
+    id: 'project-purva-sounds-of-water-villa',
+    title: 'Purva Sounds of Water - Premium 5 BHK Luxury Villa',
+    slug: 'purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road',
+    propertyType: 'Villas',
+    groupName: 'Puravankara Limited',
+    tagline: 'A Luxury Villa for Those Who Value Space, Privacy & Premium Living | ₹9 Cr Negotiable | Zero Brokerage',
+    developer: 'Puravankara Limited (Tier-1 Developer)',
+    location: 'Purva Sounds of Water – Off Bannerghatta Main Road, South Bengaluru',
+    corridorId: 'south-bannerghatta',
+    constructionStatus: 'Ready to Move',
+    coordinates: { lat: 12.8710, lng: 77.5970 },
+    googleMapsUrl: 'https://maps.google.com/?q=Purva+Sounds+of+Water+Bannerghatta+Road+Bengaluru',
+    developerPhone: '+91 8431909508',
+    whatsappPhone: '+91 8431909508',
+    priceRange: '₹9.0 Cr (Negotiable) • Zero Brokerage',
+    startPrice: 90000000,
+    formattedStartPrice: '₹9.00 Crore',
+    dimensions: [
+      'Land Area: 5,000 sq. ft.',
+      'Built-up Area: 7,000 sq. ft.',
+      'Bedrooms: 5 | Bathrooms: 6',
+      'Private Garden: Approx. 2,200 sq. ft.',
+      '2 Spacious Living Halls',
+      'Dedicated Home Theatre / Gym Space',
+      'Independent Private Outhouse Included',
+      'Handcrafted Luxury Furniture & Island Kitchen',
+      'West-Facing Villa Orientation'
+    ],
+    totalPlots: 1,
+    availablePlots: 1,
+    reraId: 'PRM/KA/RERA/1251/310/PR/170915/000219',
+    approvalType: 'BBMP & RERA Approved • A-Khata Clear Title',
+    bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'Kotak Mahindra Bank'],
+    heroImage: '/images/purva-sounds-of-water/purva-villas-community.jpeg',
+    galleryImages: [
+      '/images/purva-sounds-of-water/purva-villas-community.jpeg',
+      '/images/purva-sounds-of-water/purva-villa-front-portico.jpeg',
+      '/images/purva-sounds-of-water/purva-villa-swimming-pool.jpeg',
+      '/images/purva-sounds-of-water/purva-villa-private-garden-outhouse.jpeg',
+      '/images/purva-sounds-of-water/purva-villa-balcony-terrace.jpeg',
+      '/images/purva-sounds-of-water/purva-villa-handcrafted-kitchen.jpeg',
+      '/images/purva-sounds-of-water/purva-villa-kitchen-island.jpeg'
+    ],
+    overview: 'Looking for a spacious luxury villa in a premium gated community? This A+ Type villa by Puravankara, a reputed Tier-1 developer, offers generous living spaces, a private garden, and a premium lifestyle. Built over a 5,000 sq. ft. land parcel with 7,000 sq. ft. of built-up area across multiple levels, this west-facing villa boasts 5 expansive bedrooms, 6 bathrooms, 2 spacious family halls, a home theatre / gym space, an outhouse cottage, and handcrafted furniture. Nestled inside Purva Sounds of Water on Bannerghatta Road, enjoy pristine water-themed luxury living with zero brokerage from our advisory.',
+    highlights: [
+      'Developed by Puravankara Limited — Tier-1 developer in Bengaluru',
+      'A+ Type Luxury Villa: 5,000 sq. ft. Land Area | 7,000 sq. ft. Built-up Area',
+      '5 Expansive Bedrooms | 6 Luxury Bathrooms | 2 Spacious Living Halls',
+      'Private Lush Landscaped Garden of approx. 2,200 sq. ft.',
+      'Private Swimming Pool surrounded by natural wood accents & greenery',
+      'Independent Private Outhouse included on premises',
+      'Dedicated Home Theatre / Private Gym space',
+      'Handcrafted Luxury Furniture & Designer Island Kitchen',
+      'West-facing villa layout aligned with Vaastu principles',
+      'Located in a premium water-inspired gated community with resort amenities',
+      'Approximately 5 minutes from Meenakshi Mall and Bannerghatta Main Road',
+      'Proposed Pink Line metro connectivity in the area (verify operational status & distance)',
+      'Price: ₹9.0 Cr (Negotiable for serious buyers)',
+      'Zero brokerage from our side — genuine enquiries only'
+    ],
+    landmarks: [
+      { name: 'Meenakshi Mall & Bannerghatta Main Road', distance: '5 mins' },
+      { name: 'Proposed Pink Line Metro (Kalena Agrahara / Gottigere)', distance: '5 mins' },
+      { name: 'NICE Ring Road Junction (Fast Electronic City Link)', distance: '8 mins' },
+      { name: 'Fortis & Apollo Hospitals (Bannerghatta Rd)', distance: '12 mins' },
+      { name: 'JP Nagar & Jayanagar Hubs', distance: '15 mins' }
+    ]
   }
 ];
 
@@ -399,6 +481,18 @@ export const INITIAL_BLOGS = [
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
     summary: 'Learn why Indian investors are acquiring waterfront apartments in Dubai Marina & Downtown for 8-10% tax-free rental yields and 10-year Golden Visas.',
     content: `Dubai continues to lead global real estate investments with zero property taxes and high rental returns.`
+  },
+  {
+    id: 'blog-4',
+    title: 'Purva Sounds of Water: Inside the 7,000 Sq.Ft A+ Luxury Villa on Bannerghatta Road',
+    slug: 'inside-purva-sounds-of-water-luxury-villa-bannerghatta-road',
+    category: 'Luxury Villa Spotlight',
+    date: 'October 27, 2026',
+    readTime: '4 min read',
+    author: 'South Bengaluru Luxury Advisory Cell',
+    image: '/images/purva-sounds-of-water/purva-villas-community.jpeg',
+    summary: 'A comprehensive walkthrough of the exclusive A+ Type 5 BHK villa at Purva Sounds of Water featuring 5,000 sq.ft land, 2,200 sq.ft garden, private pool, home theatre, and zero brokerage.',
+    content: 'Purva Sounds of Water by Puravankara Limited is among South Bengaluru’s most prestigious water-inspired villa developments. Offering 5 bedrooms, 6 bathrooms, a private outhouse, and handcrafted furniture just 5 minutes from Meenakshi Mall.'
   }
 ];
 

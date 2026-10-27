@@ -37,6 +37,7 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
 
   // Available options
   const locationOptions = [
+    'South Bengaluru (Bannerghatta Road & NICE Corridor)',
     'North Bengaluru (Airport & STRR Corridor)',
     'East Bengaluru (Budigere Cross & Hoskote)',
     'Sarjapur Road / Outer Ring Road',
@@ -47,6 +48,7 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
   ];
 
   const propertyTypeOptions = [
+    { label: 'Luxury Villa (5 BHK)', sub: 'Generous living, private garden & pool' },
     { label: 'Residential Plot', sub: 'Land only • Design your own home' },
     { label: 'Luxury Villa Plot', sub: 'Gated community with clubhouse' },
     { label: 'Ready to Move Plot', sub: 'Immediate A-Khata registration' },
@@ -66,8 +68,9 @@ export default function PropertyMatchmakerPage({ setActivePage }) {
     'Under ₹35 Lakhs',
     '₹35 Lakhs - ₹50 Lakhs',
     '₹50 Lakhs - ₹75 Lakhs',
-    '₹75 Lakhs - ₹1.2 Crore',
-    'Above ₹1.2 Crore'
+    '₹75 Lakhs - ₹1.5 Crore',
+    '₹1.5 Crore - ₹4.0 Crore',
+    '₹4.0 Crore - ₹10.0 Crore (Ultra Luxury)'
   ];
 
   const timelineOptions = [

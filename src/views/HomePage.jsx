@@ -23,7 +23,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   const categoryCards = [
     { id: 'plots', title: 'Open Plots', icon: '🏞', desc: 'Oriaiyan & Sun Valley Verified Plotted Communities', count: '500+ Plots' },
     { id: 'villa-plots', title: 'Villa Plots', icon: '📐', desc: 'Up to 4,499 sq.ft Grand Estates by Oriaiyan Group', count: '4499 Sq.Ft' },
-    { id: 'villas', title: 'Luxury Villas', icon: '🏡', desc: 'Tripon Nandi 3, 4 & 5 BHK Private Hillside Villas', count: 'Boutique' },
+    { id: 'villas', title: 'Luxury Villas', icon: '🏡', desc: 'Purva Sounds of Water (5 BHK) & Tripon Nandi Estates', count: 'Tier-1 Luxury' },
     { id: 'apartments', title: 'Apartments', icon: '🏢', desc: 'Vinra KBR & Tripon Aero Gardens Airport Towers', count: '570+ Units' },
     { id: 'dubai', title: 'Dubai Properties', icon: '🌍', desc: 'Tax-Free 8-10% USD Yields & UAE 10-Yr Golden Visa', count: 'Exclusive' }
   ];
@@ -41,7 +41,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   const whyChooseUsPoints = [
     'Direct Developer Allocation & Pricing',
     '100% Verified RERA, BDA, BIAPPA & CUDDA Clear Titles',
-    'Oriaiyan Group, Tripon, Vinra & D1 Authorized Channel Partner',
+    'Puravankara, Oriaiyan Group, Tripon, Vinra & D1 Authorized Channel Partner',
     'Complimentary VIP Site Visit with Guided Chauffeur',
     'Complete Legal Documentation & Title Verification Support',
     'End-to-End Home & Plot Bank Loan Approvals (SBI, HDFC, ICICI)'
@@ -65,12 +65,12 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               Verified Properties Across <span className="gold-gradient-text">Bengaluru & Dubai</span>
             </h1>
             <p className="text-lg sm:text-xl text-[#C8A34D] font-semibold tracking-wide font-heading">
-              Orian Plotted Enclaves • Pripon Villas & Apartments • Vinra KBR • Sun Valley • Dubai Luxury
+              Purva Sounds of Water • Oriaiyan Plotted Enclaves • Tripon Villas & Apartments • Vinra KBR • Dubai Luxury
             </p>
           </div>
 
           <p className="text-base sm:text-lg text-white/80 max-w-3xl font-light leading-relaxed">
-            Direct developer inventory with zero brokerage to buyers. Explore Orian Group signature plots up to 4,499 sq.ft across 6 growth corridors, Pripon Aero Gardens 5 mins from the Airport, Nandi luxury villas, Vinra KBR twin-corridor apartments, and tax-free Dubai waterfront investments.
+            Direct developer inventory with zero brokerage to buyers. Explore Purva Sounds of Water 5 BHK luxury villa on Bannerghatta Road, Oriaiyan Group signature plots up to 4,499 sq.ft across 6 growth corridors, Tripon Aero Gardens 5 mins from the Airport, Nandi luxury villas, Vinra KBR twin-corridor apartments, and tax-free Dubai waterfront investments.
           </p>
 
           {/* Action Buttons */}

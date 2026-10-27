@@ -12,7 +12,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
   const [selectedGroup, setSelectedGroup] = useState('all');
   const [selectedCorridor, setSelectedCorridor] = useState('all');
   const [selectedStatus, setSelectedStatus] = useState('all');
-  const [maxPrice, setMaxPrice] = useState(45000000);
+  const [maxPrice, setMaxPrice] = useState(100000000);
 
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
@@ -169,7 +169,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
             <input
               type="range"
               min="3000000"
-              max="45000000"
+              max="120000000"
               step="1000000"
               value={maxPrice}
               onChange={(e) => setMaxPrice(Number(e.target.value))}
@@ -182,7 +182,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
           <div className="flex items-center gap-3">
             <span>Showing <strong>{filteredProjects.length}</strong> of <strong>{projects.length}</strong> Verified Projects</span>
-            {(search || selectedGroup !== 'all' || selectedCorridor !== 'all' || selectedPropertyType !== 'all' || selectedStatus !== 'all') && (
+            {(search || selectedGroup !== 'all' || selectedCorridor !== 'all' || selectedPropertyType !== 'all' || selectedStatus !== 'all' || maxPrice < 100000000) && (
               <button
                 onClick={() => {
                   setSearch('');
@@ -190,7 +190,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                   setSelectedCorridor('all');
                   setSelectedPropertyType('all');
                   setSelectedStatus('all');
-                  setMaxPrice(45000000);
+                  setMaxPrice(100000000);
                 }}
                 className="text-rose-600 hover:underline font-bold text-xs cursor-pointer"
               >

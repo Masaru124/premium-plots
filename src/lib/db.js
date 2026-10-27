@@ -82,66 +82,67 @@ export async function initDatabase() {
       );
     `);
 
-    // 3. Seed Projects if empty or missing Oriaiyan projects
-    const checkProjects = await client.query('SELECT COUNT(*) FROM projects WHERE id = $1', ['project-oriaiyan-signature-plots']);
-    if (parseInt(checkProjects.rows[0].count, 10) === 0) {
-      // Clear legacy sample data to keep clean roster
-      await client.query('DELETE FROM projects');
-      
-      for (const proj of INITIAL_PROJECTS) {
-        await client.query(`
-          INSERT INTO projects (
-            id, title, slug, property_type, group_name, tagline, developer,
-            location, corridor_id, construction_status, developer_phone,
-            whatsapp_phone, price_range, start_price, formatted_start_price,
-            dimensions, total_plots, available_plots, rera_id, approval_type,
-            bank_approvals, hero_image, gallery_images, overview, highlights,
-            landmarks, layout_grid
-          ) VALUES (
-            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14,
-            $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27
-          ) ON CONFLICT (id) DO UPDATE SET
-            title = EXCLUDED.title,
-            developer = EXCLUDED.developer,
-            group_name = EXCLUDED.group_name,
-            location = EXCLUDED.location,
-            price_range = EXCLUDED.price_range,
-            start_price = EXCLUDED.start_price,
-            formatted_start_price = EXCLUDED.formatted_start_price,
-            dimensions = EXCLUDED.dimensions,
-            hero_image = EXCLUDED.hero_image,
-            overview = EXCLUDED.overview,
-            highlights = EXCLUDED.highlights;
-        `, [
-          proj.id,
-          proj.title,
-          proj.slug,
-          proj.propertyType,
-          proj.groupName || '',
-          proj.tagline || '',
-          proj.developer || '',
-          proj.location || '',
-          proj.corridorId || '',
-          proj.constructionStatus || 'Ready for Construction',
-          proj.developerPhone || '+91 8431909508',
-          proj.whatsappPhone || '+91 8431909508',
-          proj.priceRange || '',
-          proj.startPrice || 0,
-          proj.formattedStartPrice || '',
-          JSON.stringify(proj.dimensions || []),
-          proj.totalPlots || 100,
-          proj.availablePlots || 30,
-          proj.reraId || '',
-          proj.approvalType || '',
-          JSON.stringify(proj.bankApprovals || []),
-          proj.heroImage || '',
-          JSON.stringify(proj.galleryImages || []),
-          proj.overview || '',
-          JSON.stringify(proj.highlights || []),
-          JSON.stringify(proj.landmarks || []),
-          JSON.stringify(proj.layoutGrid || [])
-        ]);
-      }
+    // 3. Seed & Sync Projects from INITIAL_PROJECTS
+    for (const proj of INITIAL_PROJECTS) {
+      await client.query(`
+        INSERT INTO projects (
+          id, title, slug, property_type, group_name, tagline, developer,
+          location, corridor_id, construction_status, developer_phone,
+          whatsapp_phone, price_range, start_price, formatted_start_price,
+          dimensions, total_plots, available_plots, rera_id, approval_type,
+          bank_approvals, hero_image, gallery_images, overview, highlights,
+          landmarks, layout_grid
+        ) VALUES (
+          $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14,
+          $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27
+        ) ON CONFLICT (id) DO UPDATE SET
+          title = EXCLUDED.title,
+          slug = EXCLUDED.slug,
+          property_type = EXCLUDED.property_type,
+          group_name = EXCLUDED.group_name,
+          tagline = EXCLUDED.tagline,
+          developer = EXCLUDED.developer,
+          location = EXCLUDED.location,
+          corridor_id = EXCLUDED.corridor_id,
+          construction_status = EXCLUDED.construction_status,
+          price_range = EXCLUDED.price_range,
+          start_price = EXCLUDED.start_price,
+          formatted_start_price = EXCLUDED.formatted_start_price,
+          dimensions = EXCLUDED.dimensions,
+          hero_image = EXCLUDED.hero_image,
+          gallery_images = EXCLUDED.gallery_images,
+          overview = EXCLUDED.overview,
+          highlights = EXCLUDED.highlights,
+          landmarks = EXCLUDED.landmarks;
+      `, [
+        proj.id,
+        proj.title,
+        proj.slug,
+        proj.propertyType,
+        proj.groupName || '',
+        proj.tagline || '',
+        proj.developer || '',
+        proj.location || '',
+        proj.corridorId || '',
+        proj.constructionStatus || 'Ready for Construction',
+        proj.developerPhone || '+91 8431909508',
+        proj.whatsappPhone || '+91 8431909508',
+        proj.priceRange || '',
+        proj.startPrice || 0,
+        proj.formattedStartPrice || '',
+        JSON.stringify(proj.dimensions || []),
+        proj.totalPlots || 100,
+        proj.availablePlots || 30,
+        proj.reraId || '',
+        proj.approvalType || '',
+        JSON.stringify(proj.bankApprovals || []),
+        proj.heroImage || '',
+        JSON.stringify(proj.galleryImages || []),
+        proj.overview || '',
+        JSON.stringify(proj.highlights || []),
+        JSON.stringify(proj.landmarks || []),
+        JSON.stringify(proj.layoutGrid || [])
+      ]);
     }
 
     // 4. Seed sample leads if empty
