@@ -4,10 +4,12 @@
 
 ## Core Properties & Portfolios
 
-- [Purva Sounds of Water 5 BHK Villa](https://premium-plots.vercel.app/?page=project-details&id=project-purva-sounds-of-water-villa): Exclusive A+ Type 5 BHK Luxury Villa on Bannerghatta Road by Puravankara. 5,000 sq.ft land, 7,000 sq.ft built-up area, private swimming pool, 2,200 sq.ft private garden, outhouse cottage, priced at ₹9.0 Cr negotiable with zero brokerage.
-- [Oriaiyan Signature Plotted Developments](https://premium-plots.vercel.app/?page=plots): BIAAPA and RERA approved open plots and villa plots up to 4,499 sq.ft across 6 prime Bengaluru corridors (Devanahalli Airport, Chikkaballapura Nandi belt, APC Circle, Jigani, Tumkur Rd, Kanakapura Rd) priced from ₹50 Lakhs to ₹2.0 Cr.
-- [Sun Valley Scenic Plots Chikkaballapura](https://premium-plots.vercel.app/?page=plots): Serene plotted community in Chikkaballapura with unobstructed Nandi Hills views, priced from ₹35 Lakhs to ₹90 Lakhs.
-- [Tripon Nandi Hills Luxury Villas](https://premium-plots.vercel.app/?page=villas): Gated 15-acre enclave offering 3, 4, 5 BHK custom architectural villas in Nandi Foothills from ₹2.4 Cr to ₹4.0 Cr.
+- [Purva Sounds of Water 5 BHK Villa](https://premium-plots.vercel.app/purva-sounds-of-water): Exclusive A+ Type 5 BHK Luxury Villa on Bannerghatta Road by Puravankara. 5,000 sq.ft land, 7,000 sq.ft built-up area, private swimming pool, 2,200 sq.ft private garden, outhouse cottage, priced at ₹9.0 Cr negotiable with zero brokerage.
+- [Plots in Bangalore Directory](https://premium-plots.vercel.app/plots-in-bangalore): BIAAPA and RERA approved residential plots and villa plots up to 4,499 sq.ft across 6 prime Bengaluru corridors (Devanahalli Airport, Chikkaballapura Nandi belt, APC Circle, Jigani, Tumkur Rd, Kanakapura Rd) priced from ₹35 Lakhs to ₹2.0 Cr.
+- [Luxury Villas in Bangalore](https://premium-plots.vercel.app/luxury-villas-bangalore): Curated gated communities featuring Purva Sounds of Water (5 BHK) and Tripon Nandi Hills (3, 4 & 5 BHK) with private pools and landscaped grounds.
+- [Oriaiyan Signature Plotted Developments](https://premium-plots.vercel.app/plots-in-bangalore): Flagship plotted enclaves across Devanahalli, STRR, Jigani, and Chikkaballapura.
+- [Sun Valley Scenic Plots Chikkaballapura](https://premium-plots.vercel.app/plots-in-bangalore): Serene plotted community in Chikkaballapura with unobstructed Nandi Hills views, priced from ₹35 Lakhs to ₹90 Lakhs.
+- [Tripon Nandi Hills Luxury Villas](https://premium-plots.vercel.app/luxury-villas-bangalore): Gated 15-acre enclave offering 3, 4, 5 BHK custom architectural villas in Nandi Foothills from ₹2.4 Cr to ₹4.0 Cr.
 - [Tripon Aero Gardens Airport Residences](https://premium-plots.vercel.app/?page=apartments): High-rise luxury residences 5 minutes from Kempegowda International Airport Terminal 1 & 2, priced from ₹52 Lakhs to ₹1.5 Cr.
 - [Vinra KBR Residences](https://premium-plots.vercel.app/?page=apartments): Twin-corridor urban residences at Chikkajala (Airport expressway) and Kothanur (Hoskote East belt) priced from ₹59 Lakhs to ₹1.9 Cr.
 - [Dubai Global Waterfront Estates](https://premium-plots.vercel.app/?page=dubai): Tax-free 8-10% USD rental yields in Dubai Marina and Harbour with 10-Year UAE Golden Visa residency qualification under RBI LRS route.

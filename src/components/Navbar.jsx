@@ -45,14 +45,15 @@ export default function Navbar({ activePage, setActivePage }) {
   }, [mobileMenuOpen]);
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'plots', label: 'Plots', icon: Layers },
-    { id: 'villas', label: 'Villas', icon: Home },
-    { id: 'apartments', label: 'Apartments', icon: Building2 },
-    { id: 'dubai', label: 'Dubai Properties', icon: Globe },
-    { id: 'interior', label: 'Interior Design', icon: Paintbrush },
-    { id: 'about', label: 'About' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Home', href: '/' },
+    { id: 'purva-villa', label: 'Purva Sounds of Water (5 BHK)', href: '/purva-sounds-of-water', isSpecial: true, icon: Sparkles },
+    { id: 'plots', label: 'Plots in Bangalore', href: '/plots-in-bangalore', icon: Layers },
+    { id: 'villas', label: 'Luxury Villas', href: '/luxury-villas-bangalore', icon: Home },
+    { id: 'apartments', label: 'Apartments', href: '/?page=apartments', icon: Building2 },
+    { id: 'dubai', label: 'Dubai Properties', href: '/?page=dubai', icon: Globe },
+    { id: 'interior', label: 'Interior Design', href: '/?page=interior', icon: Paintbrush },
+    { id: 'about', label: 'About', href: '/?page=about' },
+    { id: 'contact', label: 'Contact', href: '/?page=contact' }
   ];
 
   const handleNavClick = (id) => {
@@ -141,21 +142,34 @@ export default function Navbar({ activePage, setActivePage }) {
               (item.id === 'villas' && activePage === 'villas') ||
               (item.id === 'apartments' && activePage === 'apartments');
 
+            const isSpecial = item.isSpecial;
+
             return (
-              <button
+              <a
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`relative px-3 py-2 text-xs transition-all cursor-pointer rounded-lg font-medium flex flex-col items-center ${
-                  isActive
+                href={item.href || `/?page=${item.id}`}
+                onClick={(e) => {
+                  if (item.href && (item.href.startsWith('/?') || item.href === '/')) {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      handleNavClick(item.id);
+                    }
+                  }
+                }}
+                className={`relative px-2.5 py-1.5 text-xs transition-all cursor-pointer rounded-lg font-medium flex items-center gap-1.5 ${
+                  isSpecial
+                    ? 'bg-[#C8A34D]/20 text-[#C8A34D] border border-[#C8A34D]/40 font-bold hover:bg-[#C8A34D]/30 shadow-sm'
+                    : isActive
                     ? 'text-[#C8A34D] font-bold bg-white/5'
                     : 'text-white/80 hover:text-white hover:bg-white/5'
                 }`}
               >
+                {isSpecial && <Sparkles className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" />}
                 <span>{item.label}</span>
-                {isActive && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D] mt-0.5" />
+                {isActive && !isSpecial && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D]" />
                 )}
-              </button>
+              </a>
             );
           })}
         </div>
@@ -232,22 +246,34 @@ export default function Navbar({ activePage, setActivePage }) {
                 {navItems.map((item) => {
                   const isActive = activePage === item.id;
                   const Icon = item.icon;
+                  const isSpecial = item.isSpecial;
+
                   return (
-                    <button
+                    <a
                       key={item.id}
-                      onClick={() => handleNavClick(item.id)}
+                      href={item.href || `/?page=${item.id}`}
+                      onClick={(e) => {
+                        if (item.href && (item.href.startsWith('/?') || item.href === '/')) {
+                          if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                            e.preventDefault();
+                            handleNavClick(item.id);
+                          }
+                        }
+                      }}
                       className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
-                        isActive
+                        isSpecial
+                          ? 'bg-[#C8A34D]/25 text-[#C8A34D] border border-[#C8A34D]/40 font-bold'
+                          : isActive
                           ? 'bg-[#C8A34D] text-[#0B1F3A] shadow-md'
                           : 'text-white/85 hover:bg-white/10 hover:text-white'
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        {Icon && <Icon className={`w-4 h-4 ${isActive ? 'text-[#0B1F3A]' : 'text-[#C8A34D]'}`} />}
+                        {Icon && <Icon className={`w-4 h-4 ${isActive && !isSpecial ? 'text-[#0B1F3A]' : 'text-[#C8A34D]'}`} />}
                         <span>{item.label}</span>
                       </div>
-                      <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#0B1F3A]' : 'text-white/40'}`} />
-                    </button>
+                      <ChevronRight className={`w-4 h-4 ${isActive && !isSpecial ? 'text-[#0B1F3A]' : 'text-white/40'}`} />
+                    </a>
                   );
                 })}
               </div>

@@ -53,18 +53,19 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   ];
 
   const categoryCards = [
-    { id: 'plots', title: 'Open Plots', icon: '🏞', desc: 'Oriaiyan & Sun Valley Verified Plotted Communities', count: '500+ Plots' },
-    { id: 'villa-plots', title: 'Villa Plots', icon: '📐', desc: 'Up to 4,499 sq.ft Grand Estates by Oriaiyan Group', count: '4499 Sq.Ft' },
-    { id: 'villas', title: 'Luxury Villas', icon: '🏡', desc: 'Purva Sounds of Water (5 BHK) & Tripon Nandi Estates', count: 'Tier-1 Luxury' },
-    { id: 'apartments', title: 'Apartments', icon: '🏢', desc: 'Vinra KBR & Tripon Aero Gardens Airport Towers', count: '570+ Units' },
-    { id: 'dubai', title: 'Dubai Properties', icon: '🌍', desc: 'Tax-Free 8-10% USD Yields & UAE 10-Yr Golden Visa', count: 'Exclusive' }
+    { id: 'plots', title: 'Open Plots', icon: '🏞', desc: 'Oriaiyan & Sun Valley Verified Plotted Communities', count: '500+ Plots', href: '/plots-in-bangalore' },
+    { id: 'villa-plots', title: 'Villa Plots', icon: '📐', desc: 'Up to 4,499 sq.ft Grand Estates by Oriaiyan Group', count: '4499 Sq.Ft', href: '/plots-in-bangalore' },
+    { id: 'villas', title: 'Luxury Villas', icon: '🏡', desc: 'Purva Sounds of Water (5 BHK) & Tripon Nandi Estates', count: 'Tier-1 Luxury', href: '/luxury-villas-bangalore' },
+    { id: 'apartments', title: 'Apartments', icon: '🏢', desc: 'Vinra KBR & Tripon Aero Gardens Airport Towers', count: '570+ Units', href: '/?page=apartments' },
+    { id: 'dubai', title: 'Dubai Properties', icon: '🌍', desc: 'Tax-Free 8-10% USD Yields & UAE 10-Yr Golden Visa', count: 'Exclusive', href: '/?page=dubai' }
   ];
 
   const filteredProjects = projects.filter((p) => {
     const matchesGroup = selectedGroupFilter === 'all' || p.groupName?.toLowerCase().includes(selectedGroupFilter.toLowerCase());
     const matchesCategory = selectedCategory === 'all' ||
-      (selectedCategory === 'plots' && p.propertyType === 'Open Plots') ||
-      (selectedCategory === 'villas' && p.propertyType === 'Villas') ||
+      (selectedCategory === 'plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots' || p.title?.toLowerCase().includes('plot'))) ||
+      (selectedCategory === 'villa-plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots' || p.title?.toLowerCase().includes('villa plot') || p.overview?.toLowerCase().includes('villa plot'))) ||
+      (selectedCategory === 'villas' && (p.propertyType === 'Villas' || p.title?.toLowerCase().includes('villa'))) ||
       (selectedCategory === 'apartments' && p.propertyType === 'Apartments') ||
       (selectedCategory === 'dubai' && p.propertyType === 'Dubai Apartments');
     return matchesGroup && matchesCategory;
@@ -157,22 +158,22 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
         <h2 className="sr-only">Property Categories & Verified Asset Portfolios</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {categoryCards.map((cat) => (
-            <button
+            <a
               key={cat.id}
-              onClick={() => {
-                if (cat.id === 'dubai') {
-                  setActivePage('dubai');
-                } else if (cat.id === 'plots' || cat.id === 'villa-plots') {
-                  setActivePage('projects', 'Open Plots');
-                } else if (cat.id === 'villas') {
-                  setActivePage('projects', 'Villas');
-                } else if (cat.id === 'apartments') {
-                  setActivePage('projects', 'Apartments');
-                } else {
-                  setActivePage('projects');
+              href={cat.href}
+              onClick={(e) => {
+                if (cat.href.startsWith('/?')) {
+                  e.preventDefault();
+                  if (cat.id === 'dubai') {
+                    setActivePage('dubai');
+                  } else if (cat.id === 'apartments') {
+                    setActivePage('apartments');
+                  } else {
+                    setActivePage('projects');
+                  }
                 }
               }}
-              className="glass-card tactile-card p-6 text-left space-y-3 group border border-slate-200 hover:border-[#C8A34D] cursor-pointer bg-white"
+              className="glass-card tactile-card p-6 text-left space-y-3 group border border-slate-200 hover:border-[#C8A34D] cursor-pointer bg-white block no-underline"
             >
               <div className="w-12 h-12 rounded-xl bg-[#0B1F3A]/5 group-hover:bg-[#0B1F3A] flex items-center justify-center text-2xl transition-colors">
                 {cat.icon}
@@ -182,7 +183,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                 <span className="text-[10px] text-[#7A5C10] font-black block mt-0.5">{cat.count}</span>
               </div>
               <p className="text-[11px] text-[#555555] leading-relaxed">{cat.desc}</p>
-            </button>
+            </a>
           ))}
         </div>
       </section>
@@ -204,9 +205,10 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
           <div className="flex flex-wrap items-center gap-2">
             {[
               { id: 'all', label: 'All Categories' },
-              { id: 'plots', label: '🏞 Plots & Villa Plots' },
-              { id: 'apartments', label: '🏢 Apartments' },
+              { id: 'plots', label: '🏞 Open Plots' },
+              { id: 'villa-plots', label: '📐 Villa Plots' },
               { id: 'villas', label: '🏡 Luxury Villas' },
+              { id: 'apartments', label: '🏢 Apartments' },
               { id: 'dubai', label: '🌍 Dubai' }
             ].map((tab) => (
               <button
@@ -295,15 +297,24 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               {/* Card Footer Actions */}
               <div className="p-6 pt-0 space-y-2">
                 <div className="grid grid-cols-2 gap-2">
-                  <button
-                    onClick={() => {
-                      setSelectedProjectId(proj.id);
-                      setActivePage('project-details');
-                    }}
-                    className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors cursor-pointer"
-                  >
-                    View Details
-                  </button>
+                  {proj.id === 'project-purva-sounds-of-water-villa' ? (
+                    <a
+                      href="/purva-sounds-of-water"
+                      className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors block"
+                    >
+                      View Villa Page
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => {
+                        setSelectedProjectId(proj.id);
+                        setActivePage('project-details');
+                      }}
+                      className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors cursor-pointer"
+                    >
+                      View Details
+                    </button>
+                  )}
 
                   <button
                     onClick={() => openSiteVisitModal(proj)}

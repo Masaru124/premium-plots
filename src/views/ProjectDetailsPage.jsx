@@ -56,6 +56,22 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4">
           <div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] tracking-tight font-heading">{project.title}</h1>
+            {project.id === 'project-purva-sounds-of-water-villa' && (
+              <div className="mt-3 p-3.5 rounded-xl bg-gradient-to-r from-[#0B1F3A] to-[#142E54] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border border-[#C8A34D]/40 shadow-sm">
+                <div className="flex items-center gap-2.5">
+                  <Sparkles className="w-4 h-4 text-[#C8A34D] shrink-0" />
+                  <span className="text-xs text-white/90">
+                    Looking for the full Purva 5 BHK Showcase with floorplans & garden tour?
+                  </span>
+                </div>
+                <a
+                  href="/purva-sounds-of-water"
+                  className="btn-gold py-1.5 px-3 text-[11px] font-black uppercase whitespace-nowrap shrink-0"
+                >
+                  Visit Dedicated Villa Page →
+                </a>
+              </div>
+            )}
             <div className="flex flex-wrap items-center gap-3 text-[#555555] text-sm mt-2">
               <a
                 href={googleMapsUrl}

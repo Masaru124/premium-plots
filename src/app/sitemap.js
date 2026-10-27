@@ -10,22 +10,28 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/?page=plots`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/?page=villas`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/?page=project-details&id=project-purva-sounds-of-water-villa`,
+      url: `${baseUrl}/purva-sounds-of-water`,
       lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/plots-in-bangalore`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/luxury-villas-bangalore`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/?page=projects`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/?page=apartments`,

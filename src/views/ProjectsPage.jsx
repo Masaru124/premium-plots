@@ -5,7 +5,7 @@ import { Search, Filter, ShieldCheck, MapPin, CheckCircle2, ChevronRight, Grid, 
 import { usePlots } from '../context/PlotsContext';
 import { BENGALURU_CORRIDORS, FEATURED_GROUPS } from '../data/plotsData';
 
-export default function ProjectsPage({ setActivePage, setSelectedProjectId, filterType = 'all' }) {
+export default function ProjectsPage({ setActivePage, setSelectedProjectId, filterType = 'all', isSubpage = false }) {
   const { projects, openSiteVisitModal } = usePlots();
   const [search, setSearch] = useState('');
   const [selectedPropertyType, setSelectedPropertyType] = useState(filterType);
@@ -31,7 +31,9 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
     const matchesType =
       selectedPropertyType === 'all' ||
       p.propertyType === selectedPropertyType ||
-      (selectedPropertyType === 'Open Plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots'));
+      (selectedPropertyType === 'Open Plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots' || p.title?.toLowerCase().includes('plot'))) ||
+      (selectedPropertyType === 'Villa Plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots' || p.title?.toLowerCase().includes('villa plot') || p.overview?.toLowerCase().includes('villa plot'))) ||
+      (selectedPropertyType === 'Villas' && (p.propertyType === 'Villas' || p.title?.toLowerCase().includes('villa')));
 
     const matchesGroup = selectedGroup === 'all' || (p.groupName && p.groupName.toLowerCase().includes(selectedGroup.toLowerCase()));
     const matchesCorridor = selectedCorridor === 'all' || p.corridorId === selectedCorridor;
@@ -49,9 +51,15 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
           <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
           Verified Channel Partner Portfolio
         </div>
-        <h1 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
-          {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
-        </h1>
+        {isSubpage ? (
+          <h2 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
+            {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
+          </h2>
+        ) : (
+          <h1 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
+            {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
+          </h1>
+        )}
         <p className="text-[#555555] text-sm sm:text-base max-w-3xl">
           Browse verified open plot townships, custom villa developments, high-rise apartments, and Dubai luxury investments across premier corridors.
         </p>
@@ -60,9 +68,10 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
         <div className="flex flex-wrap items-center gap-2 pt-2">
           {[
             { id: 'all', label: 'All Portfolios' },
-            { id: 'Open Plots', label: '🏞 Plots & Villa Plots' },
-            { id: 'Apartments', label: '🏢 Apartments' },
+            { id: 'Open Plots', label: '🏞 Open Plots' },
+            { id: 'Villa Plots', label: '📐 Villa Plots' },
             { id: 'Villas', label: '🏡 Luxury Villas' },
+            { id: 'Apartments', label: '🏢 Apartments' },
             { id: 'Dubai Apartments', label: '🌍 Dubai Properties' }
           ].map((tab) => (
             <button
@@ -294,15 +303,28 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
               {/* Card Actions */}
               <div className="p-6 pt-0 space-y-2">
                 <div className="grid grid-cols-2 gap-2">
-                  <button
-                    onClick={() => {
-                      setSelectedProjectId(proj.id);
-                      setActivePage('project-details');
-                    }}
-                    className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors cursor-pointer"
-                  >
-                    View Details
-                  </button>
+                  {proj.id === 'project-purva-sounds-of-water-villa' ? (
+                    <a
+                      href="/purva-sounds-of-water"
+                      className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors block"
+                    >
+                      View Villa Page
+                    </a>
+                  ) : (
+                    <a
+                      href={`/?page=project-details&id=${proj.id}`}
+                      onClick={(e) => {
+                        if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                          e.preventDefault();
+                          if (setSelectedProjectId) setSelectedProjectId(proj.id);
+                          if (setActivePage) setActivePage('project-details', 'all', proj.id);
+                        }
+                      }}
+                      className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors block"
+                    >
+                      View Details
+                    </a>
+                  )}
 
                   <button
                     onClick={() => openSiteVisitModal(proj)}

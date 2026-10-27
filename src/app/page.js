@@ -45,8 +45,24 @@ function AppContent() {
           const params = new URLSearchParams(window.location.search);
           const p = params.get('page');
           const id = params.get('id');
-          if (p) setActivePage(p);
-          if (id) setSelectedProjectId(id);
+          if (p) {
+            setActivePage(p);
+            if (p === 'plots' || p === 'villa-plots' || p === 'open-plots') {
+              setActivePage('plots');
+              setFilterType('Open Plots');
+            } else if (p === 'villas' || p === 'luxury-villas') {
+              setActivePage('villas');
+              setFilterType('Villas');
+            } else if (p === 'apartments') {
+              setFilterType('Apartments');
+            } else if (p === 'dubai') {
+              setActivePage('dubai');
+              setFilterType('Dubai Apartments');
+            }
+          }
+          if (id) {
+            setSelectedProjectId(id);
+          }
         }
       }
     };
@@ -60,25 +76,39 @@ function AppContent() {
     };
   }, []);
 
-  const handleNavClick = (pageId, typeFilter = 'all') => {
+  const handleNavClick = (pageId, typeFilter = 'all', projId = null) => {
     setActivePage(pageId);
+    const targetProjId = projId || selectedProjectId;
+    if (projId) {
+      setSelectedProjectId(projId);
+    }
+
     if (typeof window !== 'undefined') {
       if (pageId === 'matchmaker') {
         window.history.pushState(null, '', '/matchmaker');
       } else if (pageId === 'home') {
         window.history.pushState(null, '', '/');
+      } else if (pageId === 'plots') {
+        window.history.pushState(null, '', '/plots-in-bangalore');
+      } else if (pageId === 'villas') {
+        window.history.pushState(null, '', '/luxury-villas-bangalore');
+      } else if (pageId === 'purva-villa') {
+        window.history.pushState(null, '', '/purva-sounds-of-water');
       } else if (pageId === 'project-details') {
-        window.history.pushState(null, '', `/?page=project-details&id=${selectedProjectId}`);
+        window.history.pushState(null, '', `/?page=project-details&id=${targetProjId}`);
       } else {
         window.history.pushState(null, '', `/?page=${pageId}`);
       }
     }
-    if (pageId === 'plots') {
+
+    if (pageId === 'plots' || pageId === 'villa-plots') {
       setFilterType('Open Plots');
     } else if (pageId === 'villas') {
       setFilterType('Villas');
     } else if (pageId === 'apartments') {
       setFilterType('Apartments');
+    } else if (pageId === 'dubai') {
+      setFilterType('Dubai Apartments');
     } else {
       setFilterType(typeFilter);
     }
@@ -104,7 +134,7 @@ function AppContent() {
             <HomePage setActivePage={handleNavClick} setSelectedProjectId={setSelectedProjectId} />
           )}
 
-          {(activePage === 'projects' || activePage === 'plots' || activePage === 'villas' || activePage === 'apartments') && (
+          {(activePage === 'projects' || activePage === 'plots' || activePage === 'villa-plots' || activePage === 'villas' || activePage === 'apartments') && (
             <ProjectsPage setActivePage={handleNavClick} setSelectedProjectId={setSelectedProjectId} filterType={filterType} />
           )}
 

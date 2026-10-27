@@ -63,29 +63,66 @@ export default function Footer({ setActivePage }) {
             <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Property Portfolios</h3>
             <ul className="space-y-2 text-xs text-white/70">
               <li>
-                <button onClick={() => setActivePage('plots')} className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left">
-                  🏞 Open Plots (Devanahalli STRR)
-                </button>
+                <a href="/plots-in-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
+                  🏞 Open Plots (Devanahalli & STRR)
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('villas')} className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left">
-                  🏡 Purva Sounds of Water Villa (Bannerghatta)
-                </button>
+                <a href="/plots-in-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
+                  📐 Villa Plots (Oriaiyan 4,499 Sq.Ft)
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('apartments')} className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left">
-                  🏢 High-Rise Apartments (Prestige)
-                </button>
+                <a href="/purva-sounds-of-water" className="hover:text-[#C8A34D] transition-colors text-left block">
+                  🏡 Purva Sounds of Water 5 BHK Villa (Bannerghatta)
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('dubai')} className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left">
+                <a href="/luxury-villas-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
+                  ✨ Luxury Villas in Bangalore (Nandi & South)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/?page=apartments"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('apartments');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
+                >
+                  🏢 High-Rise Apartments (Airport Corridor)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/?page=dubai"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('dubai');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
+                >
                   🌍 Dubai Investments (Emaar Harbour)
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('interior')} className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left">
+                <a
+                  href="/?page=interior"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('interior');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
+                >
                   🎨 Turnkey Interior Design (Vinra)
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -95,39 +132,102 @@ export default function Footer({ setActivePage }) {
             <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Quick Links</h3>
             <ul className="space-y-2 text-xs text-white/70">
               <li>
-                <button onClick={() => setActivePage('projects')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=projects"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('projects');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   Projects
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('blog')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=blog"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('blog');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   Market Guides & Insights
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('about')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=about"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('about');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   About Us
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('contact')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=contact"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('contact');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   Contact Us
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('privacy')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=privacy"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('privacy');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   Privacy Policy
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('terms')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=terms"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('terms');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   Terms & Conditions
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => setActivePage('disclaimer')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                <a
+                  href="/?page=disclaimer"
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+                      e.preventDefault();
+                      setActivePage('disclaimer');
+                    }
+                  }}
+                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
+                >
                   Disclaimer
-                </button>
+                </a>
               </li>
             </ul>
           </div>
