@@ -31,7 +31,7 @@ export default function Footer({ setActivePage }) {
               </div>
             </div>
 
-            <p className="text-xs leading-relaxed text-white/60 pr-4">
+            <p className="text-xs leading-relaxed text-white/80 pr-4">
               Independent Real Estate Consultancy and Authorized Channel Partner for premier open plot townships, luxury villa developments, high-rise apartments, and Dubai waterfront investments.
             </p>
 
@@ -69,7 +69,7 @@ export default function Footer({ setActivePage }) {
               </li>
               <li>
                 <button onClick={() => setActivePage('villas')} className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left">
-                  🏡 Custom Luxury Villas (Vinra Alora)
+                  🏡 Purva Sounds of Water Villa (Bannerghatta)
                 </button>
               </li>
               <li>
@@ -97,6 +97,11 @@ export default function Footer({ setActivePage }) {
               <li>
                 <button onClick={() => setActivePage('projects')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
                   Projects
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActivePage('blog')} className="hover:text-[#C8A34D] transition-colors cursor-pointer">
+                  Market Guides & Insights
                 </button>
               </li>
               <li>
@@ -136,7 +141,7 @@ export default function Footer({ setActivePage }) {
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
                   <span>Authorized Channel Partner</span>
                 </div>
-                <p className="text-white/50 leading-relaxed">
+                <p className="text-white/70 leading-relaxed">
                   Working directly with reputed developers for plot & villa allocations.
                 </p>
               </div>
@@ -145,7 +150,7 @@ export default function Footer({ setActivePage }) {
                   <Award className="w-3.5 h-3.5 text-[#C8A34D]" />
                   <span>0% Brokerage to Buyers</span>
                 </div>
-                <p className="text-white/50 leading-relaxed">
+                <p className="text-white/70 leading-relaxed">
                   Direct developer price quotes with complimentary VIP site visits.
                 </p>
               </div>
@@ -154,22 +159,22 @@ export default function Footer({ setActivePage }) {
         </div>
 
         {/* Mandatory Channel Partner Disclaimer */}
-        <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-xs text-white/60 space-y-2 leading-relaxed">
+        <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-xs text-white/80 space-y-2 leading-relaxed">
           <div className="font-bold text-white text-[11px] uppercase tracking-wider text-[#C8A34D] font-heading">
             Disclaimer & Transparency Disclosure
           </div>
           <p>
             "We are an independent real estate consultancy working with multiple reputed developers as Channel Partners. We help buyers compare projects, arrange site visits and connect directly with developers."
           </p>
-          <p className="text-[11px] text-white/40 pt-1">
+          <p className="text-[11px] text-white/70 pt-1">
             All project images, architectural plans, layout blueprints, specifications, and prices shown on this platform are for representational and indicative purposes. Official booking agreements, allotment terms, and payments are executed directly between the buyer and the respective developer.
           </p>
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40 pt-2 border-t border-white/5">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70 pt-2 border-t border-white/5">
           <p>© {new Date().getFullYear()} Premium Properties Real Estate Advisory. All rights reserved.</p>
-          <p className="text-[11px] font-mono">Channel Partner Registration Verified • Bengaluru & Dubai</p>
+          <p className="text-[11px] font-mono text-white/70">Channel Partner Registration Verified • Bengaluru & Dubai</p>
         </div>
 
       </div>

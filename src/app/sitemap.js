@@ -22,6 +22,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/?page=project-details&id=project-purva-sounds-of-water-villa`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
       url: `${baseUrl}/?page=apartments`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
@@ -56,6 +62,12 @@ export default function sitemap() {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/?page=blog`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
   ];
 }

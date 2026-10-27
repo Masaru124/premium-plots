@@ -17,6 +17,7 @@ import ContactPage from '../views/ContactPage';
 import { PrivacyPolicyPage, TermsPage, DisclaimerPage } from '../views/LegalPagesView';
 import AdminPage from '../views/AdminPage';
 import PropertyMatchmakerPage from '../views/PropertyMatchmakerPage';
+import BlogPage from '../views/BlogPage';
 
 function AppContent() {
   const [activePage, setActivePage] = useState('home');
@@ -43,7 +44,9 @@ function AppContent() {
         } else if (search.includes('page=')) {
           const params = new URLSearchParams(window.location.search);
           const p = params.get('page');
+          const id = params.get('id');
           if (p) setActivePage(p);
+          if (id) setSelectedProjectId(id);
         }
       }
     };
@@ -64,6 +67,8 @@ function AppContent() {
         window.history.pushState(null, '', '/matchmaker');
       } else if (pageId === 'home') {
         window.history.pushState(null, '', '/');
+      } else if (pageId === 'project-details') {
+        window.history.pushState(null, '', `/?page=project-details&id=${selectedProjectId}`);
       } else {
         window.history.pushState(null, '', `/?page=${pageId}`);
       }
@@ -116,6 +121,8 @@ function AppContent() {
           )}
 
           {activePage === 'about' && <AboutPage setActivePage={handleNavClick} />}
+
+          {activePage === 'blog' && <BlogPage />}
 
           {(activePage === 'matchmaker' || activePage === 'finder') && (
             <PropertyMatchmakerPage setActivePage={handleNavClick} />

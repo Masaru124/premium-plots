@@ -10,11 +10,31 @@ export const metadata = {
   },
   description: "Discover verified open plots, villa plots & luxury villas in Bengaluru & Dubai. Direct Channel Partner for Puravankara, Oriaiyan & Tripon with 0% brokerage. Free VIP chauffeured site visits & RERA approved land investments.",
   keywords: [
+    "purva sounds of water",
+    "purva sounds of water villa",
+    "purva sounds of water 5 bhk villa",
+    "purva sounds of water price 9 cr",
+    "purva sounds of water bannerghatta road",
+    "purva sounds of water villa for sale bangalore",
+    "purva sounds of water a+ type villa",
+    "purva sounds of water floor plan 7000 sq ft",
+    "purva sounds of water resale price",
+    "purva sounds of water reviews",
+    "purva sounds of water rera number",
+    "purva sounds of water brochure pdf",
+    "puravankara sounds of water villa bangalore",
+    "5 bhk luxury villa bannerghatta road bangalore",
+    "luxury villa near meenakshi mall",
+    "ready to move luxury villa south bangalore",
+    "villa with 2200 sq ft private garden bangalore",
+    "villa with private swimming pool and outhouse bangalore",
+    "west facing vaastu luxury villa bangalore",
+    "5000 sq ft plot 7000 sq ft built up villa bangalore",
+    "zero brokerage purva sounds of water",
     "open plots bengaluru",
     "residential plots devanahalli",
     "villa plots bangalore",
     "luxury villas bannerghatta road",
-    "purva sounds of water villa",
     "oriaiyan signature plots",
     "tripon nandi villas",
     "vinra kbr apartments",
@@ -158,9 +178,71 @@ const jsonLdRealEstate = {
       ]
     },
     {
+      "@type": "SingleFamilyResidence",
+      "@id": `${SITE_URL}/#purva-sounds-of-water-villa`,
+      "name": "Purva Sounds of Water - Premium 5 BHK Luxury Villa",
+      "description": "Exclusive A+ Type 5 BHK Luxury Villa by Puravankara at Purva Sounds of Water, Off Bannerghatta Road, South Bengaluru. Features 5,000 sq.ft land area, 7,000 sq.ft built-up area, approx. 2,200 sq.ft private garden, private swimming pool, outhouse cottage, home theatre/gym, handcrafted furniture, and zero brokerage.",
+      "numberOfRooms": 15,
+      "numberOfBedrooms": 5,
+      "numberOfBathroomsTotal": 6,
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 7000,
+        "unitCode": "FTK"
+      },
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 5000,
+        "unitCode": "FTK"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Off Bannerghatta Main Road, Near Meenakshi Mall",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560076",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.8710,
+        "longitude": 77.5970
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "90000000",
+        "priceCurrency": "INR",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "90000000",
+          "priceCurrency": "INR",
+          "description": "₹9.0 Cr Negotiable • Zero Brokerage Channel Partner Direct Developer Allocation"
+        }
+      }
+    },
+    {
       "@type": "FAQPage",
       "@id": `${SITE_URL}/#faq`,
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the specifications, price, and dimensions of the 5 BHK luxury villa in Purva Sounds of Water?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The exclusive A+ Type villa at Purva Sounds of Water on Bannerghatta Road is priced at ₹9.0 Cr (negotiable with 0% brokerage). It is built on a 5,000 sq.ft land parcel with 7,000 sq.ft built-up area across multiple levels, featuring 5 bedrooms, 6 bathrooms, 2 spacious family halls, an approx. 2,200 sq.ft private garden, private swimming pool, home theatre/gym space, independent outhouse cottage, and handcrafted furniture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Purva Sounds of Water located and what is the nearest metro station?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Purva Sounds of Water is situated off Bannerghatta Main Road in South Bengaluru, approximately 5 minutes from Royal Meenakshi Mall and the proposed Pink Line Metro (Kalena Agrahara / Gottigere station), with rapid 8-minute connectivity to the NICE Ring Road."
+          }
+        },
         {
           "@type": "Question",
           "name": "What are the best locations to buy residential plots in Bengaluru in 2026?",
@@ -213,6 +295,10 @@ export default function RootLayout({ children }) {
         {/* Google Site Verification (Mandatory) */}
         <meta name="google-site-verification" content="dzgEAOMp4g_iBXbX1IvtwnOh9RdW7c1Ul0TvpVeoYPM" />
         
+        {/* Preconnect to external image origin for faster asset discovery & LCP */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
         {/* Geo Meta Tags for Local & Regional SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />

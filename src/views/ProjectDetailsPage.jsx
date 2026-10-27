@@ -218,6 +218,81 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               ))}
             </div>
           </div>
+
+          {/* Purva Sounds of Water Dedicated Luxury Specifications & Keyword Architecture */}
+          {project.id === 'project-purva-sounds-of-water-villa' && (
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#C8A34D]/30 shadow-md space-y-6">
+              <div className="border-b border-slate-200 pb-4">
+                <span className="text-xs font-black text-[#C8A34D] uppercase tracking-wider">
+                  Exclusive A+ Type Villa Architectural Deep-Dive
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A] font-heading mt-1">
+                  Purva Sounds of Water 5 BHK Luxury Villa Specifications & Floor Plan
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                  Comprehensive architectural floor breakdown, private amenities, and legal title verification for the premier 7,000 sq. ft. residence on Bannerghatta Road.
+                </p>
+              </div>
+
+              {/* Space Allocation Breakdown */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 rounded-xl bg-[#F8F8F5] border border-slate-200 space-y-2">
+                  <div className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
+                    Level 1 • Ground Floor
+                  </div>
+                  <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                    <li>Grand entry foyer & double-height living hall</li>
+                    <li>Gourmet Italian modular kitchen with island</li>
+                    <li>Lavish guest suite with attached luxury bath</li>
+                    <li>Direct walkout to 2,200 sq. ft. private garden</li>
+                    <li>Powder room & formal dining room</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl bg-[#F8F8F5] border border-slate-200 space-y-2">
+                  <div className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
+                    Level 2 • First Floor
+                  </div>
+                  <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                    <li>3 expansive en-suite bedrooms</li>
+                    <li>Private sit-out balconies overlooking greenery</li>
+                    <li>Secondary family lounge / TV entertainment zone</li>
+                    <li>Walk-in custom wardrobe alcoves</li>
+                    <li>Imported marble & wooden flooring finishes</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl bg-[#F8F8F5] border border-slate-200 space-y-2">
+                  <div className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
+                    Level 3 & Grounds
+                  </div>
+                  <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                    <li>Presidential master bedroom suite</li>
+                    <li>Dedicated home theatre / private fitness gym</li>
+                    <li>Private swimming pool with wooden deck</li>
+                    <li>Independent private outhouse cottage on plot</li>
+                    <li>3 covered multi-car parking pavilion</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Verified Legal & Investment Highlights */}
+              <div className="p-5 rounded-xl bg-[#0B1F3A] text-white space-y-3">
+                <div className="text-xs font-black text-[#C8A34D] uppercase tracking-wider flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
+                  Buyer Protection & Investment Assurance
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-white/90">
+                  <div>• <strong>Title:</strong> BBMP Clear Marketable Title, A-Khata Ready</div>
+                  <div>• <strong>RERA Registration:</strong> PRM/KA/RERA/1251/310/PR/170915/000219</div>
+                  <div>• <strong>Orientation:</strong> West-Facing Main Entry (Vaastu Compliant)</div>
+                  <div>• <strong>Brokerage:</strong> 0% Commission (Zero Brokerage Direct Allocation)</div>
+                  <div>• <strong>Pricing:</strong> ₹9.0 Crore (Negotiable for serious qualified buyers)</div>
+                  <div>• <strong>Site Tour:</strong> Free VIP Chauffeured Inspection with Blueprint Tour</div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Sidebar Summary & Links */}

@@ -128,7 +128,7 @@ export default function InteractiveMap({ onSelectCorridor }) {
         {/* Selected Corridor Info Card */}
         <div className="lg:col-span-5 space-y-5 bg-[#F8F8F5] p-6 rounded-2xl border border-[#0B1F3A]/10">
           <div>
-            <span className="text-xs text-[#C8A34D] font-bold tracking-wider uppercase font-heading">Corridor Spotlight</span>
+            <span className="text-xs text-[#7A5C10] font-bold tracking-wider uppercase font-heading">Corridor Spotlight</span>
             <h4 className="text-xl font-bold text-[#0B1F3A] mt-1 font-heading">{current.name}</h4>
             <p className="text-xs text-[#555555] mt-1">{current.subtitle}</p>
           </div>
@@ -140,7 +140,7 @@ export default function InteractiveMap({ onSelectCorridor }) {
             </div>
             <div className="bg-white p-3.5 rounded-xl border border-[#0B1F3A]/10">
               <div className="text-[11px] text-[#555555]">Est. YoY Appreciation</div>
-              <div className="text-sm font-bold text-[#C8A34D] mt-0.5">{current.growth}</div>
+              <div className="text-sm font-bold text-[#7A5C10] mt-0.5">{current.growth}</div>
             </div>
           </div>
 

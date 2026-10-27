@@ -23,6 +23,14 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
   const faqItems = [
     {
+      q: "What are the specifications, price, and dimensions of the 5 BHK luxury villa in Purva Sounds of Water?",
+      a: "The exclusive A+ Type villa at Purva Sounds of Water on Bannerghatta Road is priced at ₹9.0 Cr (negotiable with 0% brokerage). It is built on a 5,000 sq.ft land parcel with 7,000 sq.ft built-up area across multiple levels, featuring 5 bedrooms, 6 bathrooms, 2 spacious family halls, an approx. 2,200 sq.ft private garden, private swimming pool, home theatre/gym space, independent outhouse cottage, and handcrafted furniture."
+    },
+    {
+      q: "Where is Purva Sounds of Water located and what is the nearest metro station?",
+      a: "Purva Sounds of Water is situated off Bannerghatta Main Road in South Bengaluru, approximately 5 minutes from Royal Meenakshi Mall and the proposed Pink Line Metro (Kalena Agrahara / Gottigere station), with rapid 8-minute connectivity to the NICE Ring Road."
+    },
+    {
       q: "What are the best locations to buy residential plots in Bengaluru in 2026?",
       a: "The top high-appreciation corridors in Bengaluru are North Bengaluru (Devanahalli Airport Corridor & STRR Satellite Town Ring Road), Chikkaballapura Nandi Hills belt, and South Bengaluru (Bannerghatta Road & NICE Corridor), delivering 18% to 22% average YoY appreciation."
     },
@@ -146,6 +154,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
       {/* 2. PROPERTY CATEGORIES SEPARATE CARDS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+        <h2 className="sr-only">Property Categories & Verified Asset Portfolios</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {categoryCards.map((cat) => (
             <button
@@ -170,7 +179,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               </div>
               <div>
                 <h3 className="text-base font-extrabold text-[#0B1F3A] font-heading group-hover:text-[#C8A34D] transition-colors">{cat.title}</h3>
-                <span className="text-[10px] text-[#C8A34D] font-black block mt-0.5">{cat.count}</span>
+                <span className="text-[10px] text-[#7A5C10] font-black block mt-0.5">{cat.count}</span>
               </div>
               <p className="text-[11px] text-[#555555] leading-relaxed">{cat.desc}</p>
             </button>
@@ -221,7 +230,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             <div key={proj.id} className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-slate-200 hover:border-[#C8A34D] transition-all">
               <div>
                 <div className="relative h-60 overflow-hidden bg-[#0B1F3A]">
-                  <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={proj.heroImage} alt={proj.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-transparent to-transparent" />
                   
                   {/* Property Type Badge */}
@@ -266,7 +275,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
                   {/* Dimension Pills */}
                   <div className="space-y-1.5 pt-2 border-t border-slate-100">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase">Available Configurations:</span>
+                    <span className="text-[10px] font-bold text-slate-600 uppercase">Available Configurations:</span>
                     <div className="flex flex-wrap gap-1">
                       {proj.dimensions?.slice(0, 3).map((dim, idx) => (
                         <span key={idx} className="bg-slate-50 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-200">
@@ -308,6 +317,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                   href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(`Hello! I would like masterplan PDF and pricing details for ${proj.title}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`WhatsApp Brochure for ${proj.title}`}
                   className="w-full py-2 px-3 rounded-lg bg-[#0B1F3A] hover:bg-[#142E54] text-[#C8A34D] text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-[#C8A34D]" />
@@ -442,7 +452,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
           {/* Need more answers */}
           <div className="text-center pt-4">
-            <p className="text-sm text-slate-500 mb-3">
+            <p className="text-sm text-slate-700 mb-3">
               Have a specific legal, title, or project configuration query?
             </p>
             <a

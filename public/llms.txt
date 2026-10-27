@@ -1,0 +1,29 @@
+# Lakshie Real Estate Advisory
+
+> Authorized Developer Channel Partner for Verified Open Plots, Luxury Villas & Properties across Bengaluru & Dubai with 0% Brokerage.
+
+## Overview
+Lakshie Real Estate represents Tier-1 developers in Bengaluru, India and Dubai, UAE. We provide verified land investments, open plots with clear BIAAPA/RERA titles, luxury villas, and high-growth apartments with complimentary chauffeured site visits.
+
+## Core Portfolio & Developments
+- **Purva Sounds of Water**: Premium 5 BHK A+ Type luxury villa on Bannerghatta Road, South Bengaluru. 5,000 sq.ft land, 7,000 sq.ft built-up area, private swimming pool, 2,200 sq.ft private garden, outhouse cottage, priced at ₹9.0 Cr (negotiable, 0% brokerage).
+- **Oriaiyan Signature Plotted Layouts**: BIAAPA and RERA approved residential open plots across high-growth corridors (Devanahalli Airport Corridor, Chikkaballapura Nandi Hills belt, APC Circle, Jigani, Tumkur Road, Kanakapura Road). Plots range from 1,200 sq.ft up to 4,499 sq.ft with 100% bank loan approvals.
+- **Tripon Nandi Hills Villas & Aero Gardens**: Bespoke 3, 4, 5 BHK scenic villas in Nandi Foothills and modern apartments 5 minutes from Kempegowda International Airport.
+- **Vinra KBR Apartments**: Premium residential apartments situated at strategic corridor junctions.
+- **Dubai Global Waterfront Estates**: High-yield luxury waterfront real estate under the RBI Liberalised Remittance Scheme (LRS) offering 8-10% tax-free rental returns and 10-Year UAE Golden Visa qualification.
+
+## Key URLs
+- Homepage: https://premium-plots.vercel.app/
+- Open Plots: https://premium-plots.vercel.app/?page=plots
+- Luxury Villas: https://premium-plots.vercel.app/?page=villas
+- Purva Sounds of Water 5 BHK Villa: https://premium-plots.vercel.app/?page=project-details&id=project-purva-sounds-of-water-villa
+- Apartments: https://premium-plots.vercel.app/?page=apartments
+- Dubai Investments: https://premium-plots.vercel.app/?page=dubai
+- Smart Property Finder: https://premium-plots.vercel.app/matchmaker
+- Contact & Advisory: https://premium-plots.vercel.app/?page=contact
+
+## Contact & Site Visits
+- Phone: +91 84319 09508
+- WhatsApp: https://wa.me/918431909508
+- Office: Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar, Bengaluru, Karnataka 560001
+- Brokerage: 0% Direct Developer Allocation to Buyers

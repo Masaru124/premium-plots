@@ -47,11 +47,13 @@ export default function ROICalculator() {
           <div className="space-y-5 bg-[#F8F8F5] p-6 rounded-xl border border-[#0B1F3A]/10">
             {/* Slider 1: Plot Area */}
             <div>
-              <div className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2">
+              <label htmlFor="roi-plot-sqft" className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2 cursor-pointer">
                 <span>PLOT AREA (SQ.FT)</span>
                 <span className="text-[#0B1F3A] font-bold text-sm">{plotSqft} sq.ft</span>
-              </div>
+              </label>
               <input
+                id="roi-plot-sqft"
+                aria-label="Plot Area in Square Feet"
                 type="range" min="1200" max="4000" step="300" value={plotSqft}
                 onChange={(e) => setPlotSqft(Number(e.target.value))}
                 className="w-full h-2 bg-[#0B1F3A]/15 rounded-lg appearance-none cursor-pointer accent-[#C8A34D]"
@@ -66,11 +68,13 @@ export default function ROICalculator() {
 
             {/* Slider 2: Price per sqft */}
             <div>
-              <div className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2">
+              <label htmlFor="roi-price-per-sqft" className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2 cursor-pointer">
                 <span>PRICE PER SQ.FT</span>
-                <span className="text-[#C8A34D] font-bold text-sm">₹{pricePerSqft} / sq.ft</span>
-              </div>
+                <span className="text-[#7A5C10] font-bold text-sm">₹{pricePerSqft} / sq.ft</span>
+              </label>
               <input
+                id="roi-price-per-sqft"
+                aria-label="Price Per Square Foot"
                 type="range" min="3200" max="6500" step="100" value={pricePerSqft}
                 onChange={(e) => setPricePerSqft(Number(e.target.value))}
                 className="w-full h-2 bg-[#0B1F3A]/15 rounded-lg appearance-none cursor-pointer accent-[#C8A34D]"
@@ -79,11 +83,13 @@ export default function ROICalculator() {
 
             {/* Slider 3: Projected Annual Growth Rate */}
             <div>
-              <div className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2">
+              <label htmlFor="roi-appreciation-rate" className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2 cursor-pointer">
                 <span>ESTIMATED ANNUAL APPRECIATION</span>
                 <span className="text-[#0B1F3A] font-bold text-sm">{appreciationRate}% YoY</span>
-              </div>
+              </label>
               <input
+                id="roi-appreciation-rate"
+                aria-label="Estimated Annual Appreciation Rate"
                 type="range" min="10" max="24" step="0.5" value={appreciationRate}
                 onChange={(e) => setAppreciationRate(Number(e.target.value))}
                 className="w-full h-2 bg-[#0B1F3A]/15 rounded-lg appearance-none cursor-pointer accent-[#0B1F3A]"
