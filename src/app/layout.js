@@ -1,7 +1,9 @@
 import "./globals.css";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://premium-plots.vercel.app";
+
 export const metadata = {
-  metadataBase: new URL("https://lakshierealestate.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Lakshie Real Estate | Verified Plots, Luxury Villas & Properties in Bengaluru & Dubai",
     template: "%s | Lakshie Real Estate"
@@ -29,7 +31,7 @@ export const metadata = {
     "roi real estate calculator bangalore",
     "high appreciation land plots"
   ],
-  authors: [{ name: "Lakshie Real Estate Advisory", url: "https://lakshierealestate.com" }],
+  authors: [{ name: "Lakshie Real Estate Advisory", url: SITE_URL }],
   creator: "Lakshie Real Estate",
   publisher: "Lakshie Real Estate",
   formatDetection: {
@@ -38,12 +40,12 @@ export const metadata = {
     address: true
   },
   alternates: {
-    canonical: "https://lakshierealestate.com"
+    canonical: SITE_URL
   },
   openGraph: {
     title: "Lakshie Real Estate | Verified Plots & Luxury Villas Bengaluru & Dubai",
     description: "Verified residential plots, villa estates & luxury villas across Bengaluru's high-growth corridors & Dubai. 0% Brokerage. Book a free chauffeured site tour.",
-    url: "https://lakshierealestate.com",
+    url: SITE_URL,
     siteName: "Lakshie Real Estate",
     locale: "en_IN",
     type: "website",
@@ -83,11 +85,11 @@ const jsonLdRealEstate = {
   "@graph": [
     {
       "@type": "RealEstateAgent",
-      "@id": "https://lakshierealestate.com/#organization",
+      "@id": `${SITE_URL}/#organization`,
       "name": "Lakshie Real Estate Advisory",
       "alternateName": "Lakshie Realestate & Developer Channel Partner",
-      "url": "https://lakshierealestate.com",
-      "logo": "https://lakshierealestate.com/logo.png",
+      "url": SITE_URL,
+      "logo": `${SITE_URL}/logo.png`,
       "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=85",
       "telephone": "+918431909508",
       "email": "advisory@premiumpropertiesbengaluru.com",
@@ -157,7 +159,7 @@ const jsonLdRealEstate = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://lakshierealestate.com/#faq",
+      "@id": `${SITE_URL}/#faq`,
       "mainEntity": [
         {
           "@type": "Question",

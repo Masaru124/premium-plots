@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://lakshierealestate.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.vercel.app';
   const currentDate = new Date().toISOString();
 
   return [

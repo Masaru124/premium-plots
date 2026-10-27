@@ -19,4 +19,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://lakshierealestate.com/sitemap.xml
+Sitemap: https://premium-plots.vercel.app/sitemap.xml
