@@ -139,11 +139,11 @@ export const INITIAL_PROJECTS = [
     reraId: 'PRM/KA/RERA/1250/303/PR/250112/008890',
     approvalType: 'RERA & Local Town Planning Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'Canara Bank'],
-    heroImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=640&q=70',
+    heroImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=60',
     galleryImages: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=640&q=70'
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60'
     ],
     overview: 'Oriaiyan Group presents its signature portfolio of residential plots and luxury villa plots spread across six premier growth corridors: Kolar, Chikkaballapura, APC Circle (Jigani/Anekal), Jigani Industrial Hub, Tumkur Road, and Kanakapura Road. Featuring plot dimensions up to 4,499 Sq.Ft with underground cabling, wide avenue trees, and 100% clear titles.',
     highlights: [
@@ -185,11 +185,11 @@ export const INITIAL_PROJECTS = [
     reraId: 'PRM/KA/RERA/1250/303/PR/240918/007120',
     approvalType: 'CUDDA & RERA Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank'],
-    heroImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=640&q=70',
+    heroImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=500&q=60',
     galleryImages: [
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=640&q=70'
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60'
     ],
     overview: 'Sun Valley by D1 Projects is a serene, beautifully master-planned plotted development located in Chikkaballapura near the Nandi Hills belt. Offering residential plots priced attractively from ₹35 Lakhs to ₹90 Lakhs with blacktop roads, dedicated children play parks, and immediate registration.',
     highlights: [
@@ -228,11 +228,11 @@ export const INITIAL_PROJECTS = [
     reraId: 'PRM/KA/RERA/1251/309/PR/241105/008122',
     approvalType: 'BDA & RERA Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank'],
-    heroImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=640&q=70',
+    heroImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=60',
     galleryImages: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=640&q=70'
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60'
     ],
     overview: 'Vinra KBR Residences by Vinra Group offers contemporary 1, 2, 3, and 4 BHK luxury residences across two of Bengaluru\'s most active real estate corridors: Chikkajala (on the Airport Expressway) and Kothanur near Hoskote (East Bengaluru). Equipped with modern clubhouses, rooftop swimming pools, and high-speed elevator access.',
     highlights: [
@@ -271,11 +271,11 @@ export const INITIAL_PROJECTS = [
     reraId: 'PRM/KA/RERA/1250/303/PR/241201/009100',
     approvalType: 'BIAPPA & RERA Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'Bank of Baroda'],
-    heroImage: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=640&q=70',
+    heroImage: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=500&q=60',
     galleryImages: [
-      'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=640&q=70'
+      'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60'
     ],
     overview: 'Tripon Aero Gardens by Tripon Groups is an iconic luxury residential community situated just 5 minutes from Kempegowda International Airport. Tailored for aviation professionals, global executives, and astute investors seeking high rental yield assets in North Bengaluru\'s aerospace corridor.',
     highlights: [
@@ -314,11 +314,11 @@ export const INITIAL_PROJECTS = [
     reraId: 'PRM/KA/RERA/1250/304/PR/250210/009855',
     approvalType: 'CUDDA & RERA Approved',
     bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank'],
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=640&q=70',
+    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=60',
     galleryImages: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=640&q=70'
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=500&q=60'
     ],
     overview: 'Tripon Nandi Villas by Tripon Groups is a boutique 15-acre gated villa community nestled in the serene foothills of Nandi Hills, Chikkaballapura. Offering 3, 4, and 5 BHK custom architectural villas with private landscaped courtyards, plunge pools, and luxury finishes, priced from ₹2.4 Cr to ₹4.0 Cr.',
     highlights: [
@@ -357,10 +357,10 @@ export const INITIAL_PROJECTS = [
     reraId: 'RERA-DUBAI-PERMIT-884910',
     approvalType: 'Dubai Land Department (DLD) Approved',
     bankApprovals: ['Mashreq Bank Dubai', 'ENBD Emirates NBD', 'First Abu Dhabi Bank'],
-    heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=640&q=70',
+    heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=60',
     galleryImages: [
-      'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=640&q=70',
-      'https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=640&q=70'
+      'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=500&q=60'
     ],
     overview: 'Invest in Dubai Marina Sunset Residences by Emaar, featuring 1, 2 & 3 BHK waterfront apartments with panoramic Arabian Gulf & Yacht Club views. Eligible for 10-Year UAE Golden Visa with tax-free rental returns.',
     highlights: [
