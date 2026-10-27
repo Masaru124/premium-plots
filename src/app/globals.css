@@ -19,11 +19,18 @@
     --border-gold: rgba(200, 163, 77, 0.35);
   }
 
+  html {
+    max-width: 100vw;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    max-width: 100vw;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     caret-color: var(--accent-gold);

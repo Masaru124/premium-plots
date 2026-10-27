@@ -5,7 +5,14 @@ import { X, Calendar, Clock, MapPin, Phone, User, Mail, ShieldCheck, CheckCircle
 import { usePlots } from '../context/PlotsContext';
 
 export default function BookSiteVisitModal() {
-  const { isSiteVisitModalOpen, closeSiteVisitModal, selectedProjectForModal, addLead } = usePlots();
+  const {
+    isSiteVisitModalOpen,
+    siteVisitModal,
+    closeSiteVisitModal,
+    selectedProjectForModal,
+    addLead,
+    bookSiteVisit
+  } = usePlots();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -20,16 +27,21 @@ export default function BookSiteVisitModal() {
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
 
-  if (!isSiteVisitModalOpen) return null;
+  const isOpen = Boolean(isSiteVisitModalOpen || siteVisitModal?.isOpen);
+  const activeProject = selectedProjectForModal || siteVisitModal?.project;
+  const projectTitle = activeProject ? activeProject.title : 'Oriaiyan Signature Plotted Developments & Villa Plots';
 
-  const projectTitle = selectedProjectForModal ? selectedProjectForModal.title : 'Oriaiyan Signature Plotted Developments & Villa Plots';
+  if (!isOpen) return null;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addLead({
-      ...formData,
-      projectTitle
-    });
+    const saveLeadFn = addLead || bookSiteVisit;
+    if (saveLeadFn) {
+      saveLeadFn({
+        ...formData,
+        projectTitle
+      });
+    }
 
     const waText = `Hi Premium Properties! I have submitted a VIP Site Visit Request:\n\n` +
       `Name: ${formData.name}\n` +
@@ -57,7 +69,12 @@ export default function BookSiteVisitModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fadeIn">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget) handleClose();
+      }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md animate-fadeIn"
+    >
       <div className="relative w-full max-w-lg bg-white border border-[#0B1F3A]/15 rounded-2xl shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
         {/* Modal Header */}
         <div className="bg-[#0B1F3A] p-6 text-white flex justify-between items-start shrink-0 border-b border-[#C8A34D]/30">
@@ -69,8 +86,10 @@ export default function BookSiteVisitModal() {
             <p className="text-xs text-white/70 mt-0.5">{projectTitle}</p>
           </div>
           <button
+            id="close-site-visit-modal"
+            aria-label="Close Site Visit Modal"
             onClick={handleClose}
-            className="p-1 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C8A34D]"
           >
             <X className="w-5 h-5" />
           </button>

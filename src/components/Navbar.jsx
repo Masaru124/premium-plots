@@ -66,67 +66,68 @@ export default function Navbar({ activePage, setActivePage }) {
       isScrolled ? 'nav-glass shadow-2xl' : 'bg-[#0B1F3A]'
     }`}>
       {/* 1. LUXURY PRESTIGE TOP BAR */}
-      <div className="bg-[#071527] text-white/80 text-[11px] py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div className="bg-[#071527] text-white/80 text-[10px] sm:text-[11px] py-2 px-3 sm:px-6 lg:px-8 border-b border-white/10 overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Trust signals */}
-          <div className="flex items-center gap-3 text-[11px]">
-            <span className="inline-flex items-center gap-1.5 text-[#C8A34D] font-bold">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
-              <span>Verified Developer Channel Partner</span>
+          <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] min-w-0">
+            <span className="inline-flex items-center gap-1.5 text-[#C8A34D] font-bold truncate">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" />
+              <span className="hidden sm:inline">Verified Developer Channel Partner</span>
+              <span className="sm:hidden">Verified Channel Partner</span>
             </span>
             <span className="hidden md:inline text-white/30">•</span>
-            <span className="hidden md:inline text-white/65">
+            <span className="hidden md:inline text-white/65 truncate">
               Bengaluru & Dubai Luxury Real Estate Portfolio
             </span>
             <span className="hidden lg:inline text-white/30">•</span>
-            <span className="hidden lg:inline text-emerald-400 font-semibold">
+            <span className="hidden lg:inline text-emerald-400 font-semibold shrink-0">
               0% Brokerage to Buyers
             </span>
           </div>
 
           {/* Direct WhatsApp Advisory Hotline */}
-          <div className="flex items-center gap-2 text-[11px] shrink-0">
-            <span className="text-white/50 hidden sm:inline">Advisory Hotline:</span>
+          <div className="flex items-center gap-2 text-[10px] sm:text-[11px] shrink-0">
+            <span className="text-white/50 hidden md:inline">Hotline:</span>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#C8A34D] hover:text-white font-bold transition-colors"
+              className="inline-flex items-center gap-1 sm:gap-1.5 text-[#C8A34D] hover:text-white font-bold transition-colors"
             >
-              <span className="w-2 h-2 rounded-full bg-[#C8A34D] animate-pulse" />
-              <span>{displayPhone}</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D] animate-pulse shrink-0" />
+              <span className="whitespace-nowrap">{displayPhone}</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* 2. ARCHITECTURAL NAVIGATION BAR */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <nav className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-1.5 sm:gap-4">
         
         {/* Brand Logo */}
         <button
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-3 group text-left shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A34D] rounded-xl"
+          className="flex items-center gap-1.5 sm:gap-3 group text-left shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A34D] rounded-xl"
           aria-label="Premium Properties Home"
         >
           {/* Architectural Crest Symbol */}
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DFC06E] via-[#C8A34D] to-[#A6832A] p-0.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center">
+          <div className="w-8 h-8 min-[360px]:w-9 min-[360px]:h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#DFC06E] via-[#C8A34D] to-[#A6832A] p-0.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
             <div className="w-full h-full bg-[#0B1F3A] rounded-[9px] flex items-center justify-center">
-              <Compass className="w-5 h-5 text-[#C8A34D] group-hover:rotate-45 transition-transform duration-500" />
+              <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#C8A34D] group-hover:rotate-45 transition-transform duration-500" />
             </div>
           </div>
 
-          <div className="space-y-0.5">
-            <div className="flex items-center gap-1.5">
-              <span className="text-lg sm:text-xl font-black tracking-tight text-white font-heading">
+          <div className="space-y-0.5 min-w-0">
+            <div className="flex items-center gap-1 sm:gap-1.5 leading-none">
+              <span className="text-xs min-[360px]:text-sm sm:text-xl font-black tracking-tight text-white font-heading">
                 PREMIUM
               </span>
-              <span className="text-lg sm:text-xl font-black tracking-tight text-[#C8A34D] font-heading">
+              <span className="text-xs min-[360px]:text-sm sm:text-xl font-black tracking-tight text-[#C8A34D] font-heading">
                 PROPERTIES
               </span>
             </div>
-            <p className="text-[9px] uppercase tracking-[0.22em] text-[#C8A34D] font-bold font-mono">
+            <p className="text-[7.5px] min-[360px]:text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-[#C8A34D] font-bold font-mono">
               BENGALURU • DUBAI
             </p>
           </div>
@@ -170,20 +171,20 @@ export default function Navbar({ activePage, setActivePage }) {
         </div>
 
         {/* 5. MOBILE ACTIONS & HAMBURGER */}
-        <div className="flex lg:hidden items-center gap-2 shrink-0">
+        <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
           <button
             onClick={() => openSiteVisitModal()}
-            className="py-2 px-3 rounded-lg bg-[#C8A34D] text-[#0B1F3A] text-xs font-bold cursor-pointer"
+            className="hidden min-[360px]:inline-flex py-1.5 px-2.5 sm:py-2 sm:px-3 rounded-lg bg-[#C8A34D] hover:bg-[#DFC06E] text-[#0B1F3A] text-[11px] sm:text-xs font-bold cursor-pointer transition-colors shadow-sm whitespace-nowrap"
           >
             Book Visit
           </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl text-white hover:text-[#C8A34D] bg-white/10 border border-white/15 cursor-pointer transition-colors focus:outline-none"
+            className="p-1.5 min-[360px]:p-2 sm:p-2.5 rounded-xl text-white hover:text-[#C8A34D] bg-white/10 border border-white/15 cursor-pointer transition-colors focus:outline-none"
             aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Navigation Menu'}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-[#C8A34D]" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-[#C8A34D]" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
         </div>
       </nav>

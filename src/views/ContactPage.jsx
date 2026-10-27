@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Clock, ShieldCheck, MessageCircle, Send, CheckCirc
 import { usePlots } from '../context/PlotsContext';
 
 export default function ContactPage() {
-  const { showToast, addLead } = usePlots();
+  const { showToast, addLead, bookSiteVisit } = usePlots();
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -20,15 +20,18 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addLead({
-      name: form.name,
-      phone: form.phone,
-      email: form.email,
-      projectTitle: form.interest,
-      visitDate: 'Immediate Inquiry',
-      visitTime: 'Anytime',
-      status: 'New Lead'
-    });
+    const saveLead = addLead || bookSiteVisit;
+    if (saveLead) {
+      saveLead({
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        projectTitle: form.interest,
+        visitDate: 'Immediate Inquiry',
+        visitTime: 'Anytime',
+        status: 'New Lead'
+      });
+    }
 
     const text = `Hi Premium Properties! Inquiry from website:\n\n` +
       `Name: ${form.name}\n` +

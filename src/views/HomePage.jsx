@@ -5,7 +5,7 @@ import {
   Search, MapPin, ShieldCheck, TrendingUp, Calendar, ArrowRight, Star, Award,
   CheckCircle2, ChevronRight, PhoneCall, Sparkles, MessageCircle, Navigation,
   Building2, Globe, Layers, Eye, Grid, ExternalLink, Download, Phone, Home,
-  Building, Compass, Check
+  Building, Compass, Check, ChevronDown, HelpCircle
 } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 import ROICalculator from '../components/ROICalculator';
@@ -16,9 +16,33 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   const { projects, openSiteVisitModal } = usePlots();
   const [selectedGroupFilter, setSelectedGroupFilter] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
+
+  const faqItems = [
+    {
+      q: "What are the best locations to buy residential plots in Bengaluru in 2026?",
+      a: "The top high-appreciation corridors in Bengaluru are North Bengaluru (Devanahalli Airport Corridor & STRR Satellite Town Ring Road), Chikkaballapura Nandi Hills belt, and South Bengaluru (Bannerghatta Road & NICE Corridor), delivering 18% to 22% average YoY appreciation."
+    },
+    {
+      q: "Are the plots and villas verified with RERA and BIAAPA approvals?",
+      a: "Yes. 100% of plotted layouts and villa projects represented by Lakshie Real Estate are thoroughly legally vetted with RERA Karnataka registration, BIAAPA/BMRDA town planning approvals, clear marketable titles, and A-Khata ownership."
+    },
+    {
+      q: "Why is there zero brokerage on plot and villa purchases through Lakshie Real Estate?",
+      a: "As an authorized direct Channel Partner for premier developers including Puravankara Limited, Oriaiyan Group, and Tripon Groups, all client advisory, documentation support, and VIP site visit arrangements are completely free with 0% brokerage to buyers."
+    },
+    {
+      q: "How does the complimentary VIP site visit work?",
+      a: "You can schedule a private site inspection online or via WhatsApp (+91 84319 09508). We arrange complimentary chauffeured doorstep cab pickup, an on-site guided tour with masterplan blueprints, and direct developer pricing negotiation."
+    },
+    {
+      q: "Can Indian citizens invest in Dubai properties through Lakshie Real Estate?",
+      a: "Yes. Under the RBI Liberalised Remittance Scheme (LRS), Indian residents can legally invest up to $250,000 USD per financial year in Dubai waterfront real estate, enjoying 8-10% tax-free rental yields and 10-Year UAE Golden Visa residency eligibility."
+    }
+  ];
 
   const categoryCards = [
     { id: 'plots', title: 'Open Plots', icon: '🏞', desc: 'Oriaiyan & Sun Valley Verified Plotted Communities', count: '500+ Plots' },
@@ -362,6 +386,74 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                 Schedule Free Site Tour
               </button>
             </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 7. FREQUENTLY ASKED QUESTIONS (AEO & GEO VERIFIED) */}
+      <section className="bg-[#F8F8F5] py-20 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <div className="text-center space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/5 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-bold uppercase tracking-wider">
+              <HelpCircle className="w-4 h-4 text-[#C8A34D]" />
+              Property Advisory Knowledge Hub
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] font-heading">
+              Frequently Asked Questions & Advisory Insights
+            </h2>
+            <p className="text-sm sm:text-base text-[#555555] max-w-2xl mx-auto">
+              Direct, verified answers to common questions regarding RERA clearance, high-growth corridors, zero brokerage, and VIP site visits.
+            </p>
+            <div className="divider-gold mx-auto" />
+          </div>
+
+          <div className="space-y-4">
+            {faqItems.map((item, idx) => {
+              const isOpen = openFaqIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className="rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+                >
+                  <button
+                    onClick={() => setOpenFaqIndex(isOpen ? -1 : idx)}
+                    className="w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/60 transition-colors"
+                    aria-expanded={isOpen}
+                  >
+                    <h3 className="text-base sm:text-lg font-bold text-[#0B1F3A] font-heading pr-2">
+                      {item.q}
+                    </h3>
+                    <div className={`w-8 h-8 rounded-full bg-[#0B1F3A]/5 flex items-center justify-center shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#C8A34D]/20 text-[#0B1F3A]' : 'text-slate-500'}`}>
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                  </button>
+
+                  {isOpen && (
+                    <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/30">
+                      <p>{item.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Need more answers */}
+          <div className="text-center pt-4">
+            <p className="text-sm text-slate-500 mb-3">
+              Have a specific legal, title, or project configuration query?
+            </p>
+            <a
+              href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent('Hello Lakshie Real Estate! I have a question regarding plot approval and title verification.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0B1F3A] bg-[#C8A34D]/20 hover:bg-[#C8A34D]/30 border border-[#C8A34D]/60 px-5 py-2.5 rounded-xl transition-all"
+            >
+              <MessageCircle className="w-4 h-4 text-[#0B1F3A]" />
+              <span>Ask Our Advisory Team on WhatsApp</span>
+            </a>
           </div>
 
         </div>
