@@ -14,20 +14,20 @@ import {
 
 const VILLAS_FAQS = [
   {
-    q: 'What are the top luxury villa communities available through Lakshie Real Estate in Bangalore?',
-    a: 'We exclusively represent: 1) Purva Sounds of Water – Bannerghatta Road (A+ Type 5 BHK Luxury Villa, 5,000 sq.ft land, 7,000 sq.ft built-up area, private swimming pool, 2,200 sq.ft garden, ₹9.0 Cr negotiable with 0% brokerage); and 2) Tripon Nandi Luxury Villas – Chikkaballapura (3, 4 & 5 BHK boutique villas in Nandi Foothills, ₹2.4 Cr to ₹4.0 Cr).'
+    q: 'What luxury villa listings are available in Bengaluru?',
+    a: 'The portfolio includes Tripon Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as a five-bedroom villa and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and current availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
   },
   {
-    q: 'Do these luxury villas feature private swimming pools and private gardens?',
-    a: 'Yes. The flagship A+ Type villa at Purva Sounds of Water features an exclusive private swimming pool on premises and approx. 2,200 sq.ft private landscaped lawn. Tripon Nandi Villas also offers custom plunge pools, landscaped courtyards, and scenic mountain backdrops.'
+    q: 'Does the Purva Symphony resale unit include a private pool or garden?',
+    a: 'The seller advertises a private pool and garden for this specific resale unit. Confirm unit-specific features during inspection; amenities at other communities vary by listing.'
   },
   {
     q: 'Why should buyers purchase luxury villas through Lakshie Real Estate?',
     a: 'We are authorized direct Channel Partners for Tier-1 developers including Puravankara Limited and Tripon Groups. We offer 100% zero brokerage to buyers, pre-arranged chauffeured VIP site visits, transparent price negotiations, and complete legal due diligence at no cost.'
   },
   {
-    q: 'Are bank home loans available for luxury villas in Bangalore?',
-    a: 'Yes. Both Purva Sounds of Water and Tripon Nandi Villas have pre-approved home loan options with SBI Home Loans, HDFC Bank, ICICI Bank, Axis Bank, and Kotak Mahindra Bank.'
+    q: 'What should I verify before buying a resale villa?',
+    a: 'Request and independently verify the sanctioned plan, title and sale documents, khata, occupancy status, applicable RERA phase, and any lender-specific eligibility for the unit.'
   }
 ];
 
@@ -84,10 +84,10 @@ function VillasContent() {
                 Bengaluru Luxury Villa Enclaves
               </div>
               <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading">
-                Exclusive 3, 4 & 5 BHK Luxury Villas in Bangalore
+                Luxury Villas for Sale in Bengaluru
               </h1>
               <p className="text-sm sm:text-base text-white/70 max-w-3xl mx-auto leading-relaxed">
-                Featuring Purva Sounds of Water (A+ Type 5 BHK on Bannerghatta Road, ₹9 Cr) and Tripon Nandi Foothills Villas (3, 4 & 5 BHK, ₹2.4 Cr to ₹4 Cr). Experience private swimming pools, landscaped gardens, and zero buyer brokerage.
+                Explore Tripon Nandi Hills villas and a seller-listed resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. Confirm the resale unit’s configuration, details and availability.
               </p>
               <div className="pt-2 flex flex-wrap justify-center gap-3">
                 <button
@@ -117,10 +117,10 @@ function VillasContent() {
                   Featured Ultra-Luxury Spotlight
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
-                  Purva Sounds of Water – Premium 5 BHK Luxury Villa
+                  Purva Symphony at The Sound of Water — Seller-Listed Villa Resale
                 </h2>
                 <p className="text-xs sm:text-sm text-white/75 max-w-2xl leading-relaxed">
-                  A+ Type flagship residence on Bannerghatta Road: 5,000 sq.ft land, 7,000 sq.ft built-up area, private swimming pool, 2,200 sq.ft garden, and outhouse cottage. Priced at ₹9.0 Cr (negotiable).
+                  Seller advertises a five-bedroom resale unit and quotes ₹9.0 Cr. Puravankara describes the wider community as offering 3- and 4-BHK residences; confirm unit documents, features, price and availability.
                 </p>
               </div>
 
@@ -150,7 +150,7 @@ function VillasContent() {
               <div className="text-center space-y-3">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1F3A]/5 text-[#0B1F3A] text-xs font-bold uppercase">
                   <HelpCircle className="w-4 h-4 text-[#C8A34D]" />
-                  Luxury Villa Investment Advisory
+                  Bengaluru Villa Listings
                 </div>
                 <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
                   Frequently Asked Questions – Luxury Villas in Bangalore

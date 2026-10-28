@@ -24,7 +24,11 @@ function PropertyFinderContent() {
       <div>
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
         <main className="animate-fadeIn">
-          <PropertyMatchmakerPage setActivePage={handleNavClick} />
+          <PropertyMatchmakerPage
+            setActivePage={handleNavClick}
+            heading="Search Plots & Villas in Bangalore by Budget"
+            intro="Filter residential plots and villas across Bengaluru's growth corridors by budget, plot size and configuration, shortlist the matches and request current pricing and site-visit slots."
+          />
         </main>
       </div>
       <FloatingActions />

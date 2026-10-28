@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ShieldCheck, MapPin, Download, Calendar, CheckCircle2, Building, Phone, ArrowLeft, Share2, Sparkles, Navigation, MessageCircle, ExternalLink, Home, Layers, Sparkle } from 'lucide-react';
+import { ShieldCheck, MapPin, Download, Calendar, CheckCircle2, Building, Phone, ArrowLeft, Share2, Sparkles, Navigation, MessageCircle, ExternalLink, Home, Layers, Sparkle, ArrowRight } from 'lucide-react';
 import { usePlots, INTERIOR_PACKAGES } from '../context/PlotsContext';
 import PlotMasterplanViewer from '../components/PlotMasterplanViewer';
 
@@ -36,7 +36,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#C8A34D]/15 border border-[#C8A34D]/30 text-[#0B1F3A] hover:bg-[#C8A34D]/25 font-bold cursor-pointer transition-colors"
           >
             <Download className="w-4 h-4 text-[#C8A34D]" />
-            Request Digital Brochure Packet
+            {project.id === 'project-purva-sounds-of-water-villa' ? 'Request Unit Details' : 'Request Digital Brochure Packet'}
           </a>
         </div>
       </div>
@@ -49,7 +49,9 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
             {project.approvalType}
           </span>
           <span className="bg-[#C8A34D]/15 border border-[#C8A34D]/30 text-[#0B1F3A] text-xs px-3 py-1 rounded-full font-bold">
-            RERA ID: {project.reraId}
+            {project.id === 'project-purva-sounds-of-water-villa'
+              ? `Project RERA listed by developer: ${project.reraId} • verify applicable unit phase`
+              : `RERA ID: ${project.reraId}`}
           </span>
         </div>
 
@@ -61,7 +63,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                 <div className="flex items-center gap-2.5">
                   <Sparkles className="w-4 h-4 text-[#C8A34D] shrink-0" />
                   <span className="text-xs text-white/90">
-                    Looking for the full Purva 5 BHK Showcase with floorplans & garden tour?
+                    Seller advertises a five-bedroom resale unit; verify its sanctioned plan and details before purchase.
                   </span>
                 </div>
                 <a
@@ -89,7 +91,9 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
           <div className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-[#0B1F3A]/10 shadow-md shrink-0">
             <div>
-              <div className="text-xs text-[#555555]">Starting Price Quote</div>
+              <div className="text-xs text-[#555555]">
+                {project.id === 'project-purva-sounds-of-water-villa' ? 'Seller-Quoted Asking Price' : 'Starting Price Quote'}
+              </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-[#C8A34D] font-heading">{project.formattedStartPrice}</div>
               <div className="text-[11px] text-[#555555]">({project.priceRange})</div>
             </div>
@@ -235,76 +239,42 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
             </div>
           </div>
 
-          {/* Purva Sounds of Water Dedicated Luxury Specifications & Keyword Architecture */}
+          {/* Seller-listed Purva Symphony resale details */}
           {project.id === 'project-purva-sounds-of-water-villa' && (
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#C8A34D]/30 shadow-md space-y-6">
               <div className="border-b border-slate-200 pb-4">
                 <span className="text-xs font-black text-[#C8A34D] uppercase tracking-wider">
-                  Exclusive A+ Type Villa Architectural Deep-Dive
+                  Seller-Advertised Resale Unit Details
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A] font-heading mt-1">
-                  Purva Sounds of Water 5 BHK Luxury Villa Specifications & Floor Plan
+                  Purva Symphony Resale Villa off Bannerghatta Road
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Comprehensive architectural floor breakdown, private amenities, and legal title verification for the premier 7,000 sq. ft. residence on Bannerghatta Road.
+                  The seller advertises a five-bedroom unit. Its configuration, measurements, amenities and legal status require verification against original documents.
                 </p>
               </div>
 
-              {/* Space Allocation Breakdown */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 rounded-xl bg-[#F8F8F5] border border-slate-200 space-y-2">
-                  <div className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
-                    Level 1 • Ground Floor
-                  </div>
-                  <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                    <li>Grand entry foyer & double-height living hall</li>
-                    <li>Gourmet Italian modular kitchen with island</li>
-                    <li>Lavish guest suite with attached luxury bath</li>
-                    <li>Direct walkout to 2,200 sq. ft. private garden</li>
-                    <li>Powder room & formal dining room</li>
-                  </ul>
-                </div>
-
-                <div className="p-4 rounded-xl bg-[#F8F8F5] border border-slate-200 space-y-2">
-                  <div className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
-                    Level 2 • First Floor
-                  </div>
-                  <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                    <li>3 expansive en-suite bedrooms</li>
-                    <li>Private sit-out balconies overlooking greenery</li>
-                    <li>Secondary family lounge / TV entertainment zone</li>
-                    <li>Walk-in custom wardrobe alcoves</li>
-                    <li>Imported marble & wooden flooring finishes</li>
-                  </ul>
-                </div>
-
-                <div className="p-4 rounded-xl bg-[#F8F8F5] border border-slate-200 space-y-2">
-                  <div className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
-                    Level 3 & Grounds
-                  </div>
-                  <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                    <li>Presidential master bedroom suite</li>
-                    <li>Dedicated home theatre / private fitness gym</li>
-                    <li>Private swimming pool with wooden deck</li>
-                    <li>Independent private outhouse cottage on plot</li>
-                    <li>3 covered multi-car parking pavilion</li>
-                  </ul>
-                </div>
+              <div className="rounded-xl bg-[#F8F8F5] border border-slate-200 p-5 text-sm text-slate-700 space-y-3">
+                <p>Puravankara describes Purva Symphony at The Sound of Water as a community with 3- and 4-BHK residences, off Bannerghatta Road. This is separate from the seller’s advertised five-bedroom resale-unit claim.</p>
+                <a className="inline-flex items-center gap-2 font-semibold text-[#0B1F3A] underline" href="https://www.puravankara.com/residential/bengaluru/purva-symphony" target="_blank" rel="noopener noreferrer">
+                  View Puravankara’s official project information <ArrowRight className="w-4 h-4" />
+                </a>
+                <p>Before proceeding, request the unit’s sanctioned plan, sale/title documents, khata and occupancy records, and confirm the applicable RERA registration with the relevant authorities.</p>
               </div>
 
               {/* Verified Legal & Investment Highlights */}
               <div className="p-5 rounded-xl bg-[#0B1F3A] text-white space-y-3">
                 <div className="text-xs font-black text-[#C8A34D] uppercase tracking-wider flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
-                  Buyer Protection & Investment Assurance
+                  Details to Verify Before Purchase
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-white/90">
-                  <div>• <strong>Title:</strong> BBMP Clear Marketable Title, A-Khata Ready</div>
-                  <div>• <strong>RERA Registration:</strong> PRM/KA/RERA/1251/310/PR/170915/000219</div>
-                  <div>• <strong>Orientation:</strong> West-Facing Main Entry (Vaastu Compliant)</div>
-                  <div>• <strong>Brokerage:</strong> 0% Commission (Zero Brokerage Direct Allocation)</div>
-                  <div>• <strong>Pricing:</strong> ₹9.0 Crore (Negotiable for serious qualified buyers)</div>
-                  <div>• <strong>Site Tour:</strong> Free VIP Chauffeured Inspection with Blueprint Tour</div>
+                  <div>• <strong>Unit documents:</strong> Verify title, khata and occupancy records</div>
+                  <div>• <strong>Project RERA:</strong> PRM/KA/RERA/1251/310/PR/210907/004300 (confirm unit phase)</div>
+                  <div>• <strong>Configuration:</strong> Seller-advertised five-bedroom unit; check sanctioned plan</div>
+                  <div>• <strong>Buyer charges:</strong> Confirm with the listing advisor</div>
+                  <div>• <strong>Asking price:</strong> Seller-quoted ₹9.0 Cr; reconfirm before visit</div>
+                  <div>• <strong>Site visit:</strong> Contact advisor to confirm availability</div>
                 </div>
               </div>
             </div>
@@ -322,12 +292,16 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
             <div className="space-y-3 text-xs text-[#1A1A1A]">
               <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
-                <span className="text-[#555555]">Total Plots / Parcels:</span>
-                <span className="font-bold text-[#0B1F3A]">{project.totalPlots} Units</span>
+                <span className="text-[#555555]">
+                  {project.id === 'project-purva-sounds-of-water-villa' ? 'Listed Units:' : 'Total Plots / Parcels:'}
+                </span>
+                <span className="font-bold text-[#0B1F3A]">{project.id === 'project-purva-sounds-of-water-villa' ? '1 resale listing' : `${project.totalPlots} Units`}</span>
               </div>
               <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
-                <span className="text-[#555555]">Available Units:</span>
-                <span className="font-bold text-[#0B1F3A]">{project.availablePlots} Open</span>
+                <span className="text-[#555555]">{project.id === 'project-purva-sounds-of-water-villa' ? 'Availability:' : 'Available Units:'}</span>
+                <span className="font-bold text-[#0B1F3A]">
+                  {project.id === 'project-purva-sounds-of-water-villa' ? 'Confirm with listing advisor' : `${project.availablePlots} Open`}
+                </span>
               </div>
               <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
                 <span className="text-[#555555]">Approval Body:</span>

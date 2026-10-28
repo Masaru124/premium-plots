@@ -13,14 +13,14 @@ export const FEATURED_GROUPS = [
   {
     id: 'puravankara-limited',
     name: 'Puravankara Limited',
-    tagline: 'Tier-1 Luxury Real Estate & Iconic Gated Communities',
-    badge: 'Tier-1 Developer',
+    tagline: 'Purva Symphony at The Sound of Water • Seller-Listed Resale',
+    badge: 'Developer Project',
     categories: ['Villas', 'Luxury Villas'],
-    locations: ['Bannerghatta Road (South Bengaluru)'],
-    priceRange: '₹9.0 Cr (Negotiable)',
-    maxSize: '5,000 - 7,000 Sq.Ft Villas',
+    locations: ['Off Bannerghatta Road (South Bengaluru)'],
+    priceRange: 'Seller-quoted ₹9.0 Cr • verify current price',
+    maxSize: 'Seller-reported 5,000-7,000 sq.ft areas',
     icon: '👑',
-    highlights: 'Purva Sounds of Water • A+ Type 5 BHK Luxury Villa • 2,200 Sq.Ft Garden • Zero Brokerage'
+    highlights: 'Seller-advertised five-bedroom resale • verify unit configuration, areas and features'
   },
   {
     id: 'oriaiyan-group',
@@ -376,38 +376,33 @@ export const INITIAL_PROJECTS = [
   },
   {
     id: 'project-purva-sounds-of-water-villa',
-    title: 'Purva Sounds of Water - Premium 5 BHK Luxury Villa',
+    title: 'Purva Sounds of Water - Seller-Listed Five-Bedroom Villa',
     slug: 'purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road',
     propertyType: 'Villas',
     groupName: 'Puravankara Limited',
-    tagline: 'A Luxury Villa for Those Who Value Space, Privacy & Premium Living | ₹9 Cr Negotiable | Zero Brokerage',
+    tagline: 'Seller-Listed Resale Villa at Purva Symphony, The Sound of Water | Confirm Price & Details',
     developer: 'Puravankara Limited (Tier-1 Developer)',
     location: 'Purva Sounds of Water – Off Bannerghatta Main Road, South Bengaluru',
     corridorId: 'south-bannerghatta',
-    constructionStatus: 'Ready to Move',
+    constructionStatus: 'Resale listing — confirm unit possession status',
     coordinates: { lat: 12.8710, lng: 77.5970 },
     googleMapsUrl: 'https://maps.google.com/?q=Purva+Sounds+of+Water+Bannerghatta+Road+Bengaluru',
     developerPhone: '+91 8431909508',
     whatsappPhone: '+91 8431909508',
-    priceRange: '₹9.0 Cr (Negotiable) • Zero Brokerage',
+    priceRange: 'Seller-quoted ₹9.0 Cr • confirm current price and availability',
     startPrice: 90000000,
     formattedStartPrice: '₹9.00 Crore',
     dimensions: [
-      'Land Area: 5,000 sq. ft.',
-      'Built-up Area: 7,000 sq. ft.',
-      'Bedrooms: 5 | Bathrooms: 6',
-      'Private Garden: Approx. 2,200 sq. ft.',
-      '2 Spacious Living Halls',
-      'Dedicated Home Theatre / Gym Space',
-      'Independent Private Outhouse Included',
-      'Handcrafted Luxury Furniture & Island Kitchen',
-      'West-Facing Villa Orientation'
+      'Seller-reported land area: 5,000 sq. ft. (verify documents)',
+      'Seller-reported built-up area: 7,000 sq. ft. (verify area basis)',
+      'Seller-advertised five-bedroom configuration (verify sanctioned plan)',
+      'Other unit-specific features: confirm during inspection'
     ],
     totalPlots: 1,
     availablePlots: 1,
-    reraId: 'PRM/KA/RERA/1251/310/PR/170915/000219',
-    approvalType: 'BBMP & RERA Approved • A-Khata Clear Title',
-    bankApprovals: ['SBI Home Loans', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'Kotak Mahindra Bank'],
+    reraId: 'PRM/KA/RERA/1251/310/PR/210907/004300',
+    approvalType: 'Project RERA listed • verify unit documents',
+    bankApprovals: [],
     heroImage: '/images/purva-sounds-of-water/purva-villas-community.jpeg',
     galleryImages: [
       '/images/purva-sounds-of-water/purva-villas-community.jpeg',
@@ -418,29 +413,23 @@ export const INITIAL_PROJECTS = [
       '/images/purva-sounds-of-water/purva-villa-handcrafted-kitchen.jpeg',
       '/images/purva-sounds-of-water/purva-villa-kitchen-island.jpeg'
     ],
-    overview: 'Looking for a spacious luxury villa in a premium gated community? This A+ Type villa by Puravankara, a reputed Tier-1 developer, offers generous living spaces, a private garden, and a premium lifestyle. Built over a 5,000 sq. ft. land parcel with 7,000 sq. ft. of built-up area across multiple levels, this west-facing villa boasts 5 expansive bedrooms, 6 bathrooms, 2 spacious family halls, a home theatre / gym space, an outhouse cottage, and handcrafted furniture. Nestled inside Purva Sounds of Water on Bannerghatta Road, enjoy pristine water-themed luxury living with zero brokerage from our advisory.',
+    overview: 'This seller-advertised resale is located in Purva Symphony at The Sound of Water, off Bannerghatta Road, Bengaluru. The seller describes the individual villa as a five-bedroom home with 5,000 sq. ft. of land and 7,000 sq. ft. built-up area. Puravankara describes the wider community as offering 3- and 4-BHK residences, so buyers should confirm this unit’s sanctioned plan, measurements, price and availability before relying on the listing details.',
     highlights: [
       'Developed by Puravankara Limited — Tier-1 developer in Bengaluru',
-      'A+ Type Luxury Villa: 5,000 sq. ft. Land Area | 7,000 sq. ft. Built-up Area',
-      '5 Expansive Bedrooms | 6 Luxury Bathrooms | 2 Spacious Living Halls',
-      'Private Lush Landscaped Garden of approx. 2,200 sq. ft.',
-      'Private Swimming Pool surrounded by natural wood accents & greenery',
-      'Independent Private Outhouse included on premises',
-      'Dedicated Home Theatre / Private Gym space',
-      'Handcrafted Luxury Furniture & Designer Island Kitchen',
-      'West-facing villa layout aligned with Vaastu principles',
-      'Located in a premium water-inspired gated community with resort amenities',
-      'Approximately 5 minutes from Meenakshi Mall and Bannerghatta Main Road',
-      'Proposed Pink Line metro connectivity in the area (verify operational status & distance)',
-      'Price: ₹9.0 Cr (Negotiable for serious buyers)',
+      'Seller-reported area: 5,000 sq. ft. land | 7,000 sq. ft. built-up (verify documents)',
+      'Seller-advertised five-bedroom configuration (verify against sanctioned plan)',
+      'Seller-advertised private garden, pool and other unit features — verify during inspection',
+      'Puravankara describes Purva Symphony as its independent-mansion enclave at The Sound of Water',
+      'Puravankara describes the community as off Bannerghatta Road, Bengaluru',
+      'Pink Line status, route and distance should be checked with BMRCL and a current map',
+      'Seller-quoted asking price: ₹9.0 Cr; reconfirm current price and availability',
       'Zero brokerage from our side — genuine enquiries only'
     ],
     landmarks: [
-      { name: 'Meenakshi Mall & Bannerghatta Main Road', distance: '5 mins' },
-      { name: 'Proposed Pink Line Metro (Kalena Agrahara / Gottigere)', distance: '5 mins' },
-      { name: 'NICE Ring Road Junction (Fast Electronic City Link)', distance: '8 mins' },
-      { name: 'Fortis & Apollo Hospitals (Bannerghatta Rd)', distance: '12 mins' },
-      { name: 'JP Nagar & Jayanagar Hubs', distance: '15 mins' }
+      { name: 'Royal Meenakshi Mall', distance: 'Confirm route from unit' },
+      { name: 'Bannerghatta Road', distance: 'Community described as off this road' },
+      { name: 'NICE Junction', distance: 'Confirm route and travel time' },
+      { name: 'Pink Line / Kalena Agrahara', distance: 'Check current BMRCL status and route' }
     ]
   }
 ];
@@ -484,28 +473,21 @@ export const INITIAL_BLOGS = [
   },
   {
     id: 'blog-4',
-    title: 'Purva Sounds of Water: Inside the 7,000 Sq.Ft A+ Luxury Villa on Bannerghatta Road',
+    title: 'Purva Symphony Resale at The Sound of Water: Seller-Listed Villa Details',
     slug: 'inside-purva-sounds-of-water-luxury-villa-bannerghatta-road',
     category: 'Luxury Villa Spotlight',
     date: 'October 27, 2026',
     readTime: '6 min read',
     author: 'South Bengaluru Luxury Advisory Cell',
     image: '/images/purva-sounds-of-water/purva-villas-community.jpeg',
-    summary: 'A comprehensive walkthrough of the exclusive A+ Type 5 BHK villa at Purva Sounds of Water featuring 5,000 sq.ft land, 2,200 sq.ft garden, private pool, home theatre, and zero brokerage.',
-    content: `Purva Sounds of Water by Puravankara Limited stands as one of South Bengaluru's most celebrated water-themed gated villa enclaves. Nestled just off Bannerghatta Main Road and 5 minutes from Royal Meenakshi Mall, this premier community combines serene landscaped water features with rapid connectivity to JP Nagar, Jayanagar, and the Electronic City NICE Corridor.
+    summary: 'Seller-advertised resale villa details at Purva Symphony, The Sound of Water, off Bannerghatta Road. Verify configuration, measurements, price and legal documents for the specific unit.',
+    content: `Purva Symphony is Puravankara's independent-mansion enclave at The Sound of Water, off Bannerghatta Road, Bengaluru. The developer describes the wider community as offering 3- and 4-BHK residences and lists the project under RERA registration PRM/KA/RERA/1251/310/PR/210907/004300. See the developer's current project information at https://www.puravankara.com/residential/bengaluru/purva-symphony.
 
-The crown jewel of the development is the rare A+ Type luxury villa, offering a massive 5,000 sq. ft. private land parcel and over 7,000 sq. ft. of exquisitely planned multi-level built-up architecture. With a west-facing Vaastu-compliant layout, the residence incorporates 5 palatial en-suite bedrooms, 6 designer bathrooms, two double-height living halls, a dedicated private home theatre / gymnasium floor, and an independent detached outhouse cottage with dedicated amenities.
+This page describes a specific resale unit advertised by its seller as a five-bedroom villa with approximately 5,000 sq. ft. of land and 7,000 sq. ft. built-up area. Those unit details, including configuration, measurement basis, amenities, orientation, price and availability, are seller-provided and are not a statement of Puravankara's standard floor plans. Ask to review the sanctioned plan, title and occupancy documents, and confirm the applicable RERA phase before proceeding.
 
-Outside, the property boasts an expansive private landscaped garden of approximately 2,200 sq. ft. alongside a private swimming pool framed by natural hardwood accents and tropical foliage. Handcrafted Italian furniture and an expansive island show-kitchen complement the turn-key interior finishes.
+The seller currently quotes ₹9.0 Crore. This is an asking price, not a verified transaction or valuation, and should be reconfirmed with the listing advisor. Check current routes and Pink Line status with official transport sources rather than relying on estimated travel-time claims.
 
-Key Investment & Location Drivers:
-• Pricing: ₹9.0 Crore (Negotiable for serious qualified buyers)
-• Brokerage: 0% Direct Developer Allocation via Authorized Channel Partner
-• Legal Clearances: BBMP A-Khata, Clear Marketable Titles, RERA Registered (PRM/KA/RERA/1251/310/PR/170915/000219)
-• Metro Connectivity: 5 minutes from the proposed Pink Line Metro (Kalena Agrahara / Gottigere Station)
-• Pre-Approved Home Loans: SBI, HDFC Bank, ICICI Bank, Axis Bank, and Kotak Mahindra Bank
-
-Private chauffeured site visits and architectural blueprint reviews can be scheduled directly with our advisory team.`
+Contact the advisory team to check whether the unit remains available and arrange an inspection.`
   }
 ];
 

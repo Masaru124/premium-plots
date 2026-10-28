@@ -23,12 +23,12 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
   const faqItems = [
     {
-      q: "What are the specifications, price, and dimensions of the 5 BHK luxury villa in Purva Sounds of Water?",
-      a: "The exclusive A+ Type villa at Purva Sounds of Water on Bannerghatta Road is priced at ₹9.0 Cr (negotiable with 0% brokerage). It is built on a 5,000 sq.ft land parcel with 7,000 sq.ft built-up area across multiple levels, featuring 5 bedrooms, 6 bathrooms, 2 spacious family halls, an approx. 2,200 sq.ft private garden, private swimming pool, home theatre/gym space, independent outhouse cottage, and handcrafted furniture."
+      q: "What does the seller advertise for the Purva Symphony resale villa?",
+      a: "The seller advertises an individual five-bedroom resale unit at Purva Symphony, The Sound of Water, and currently quotes ₹9.0 Cr. The seller also reports 5,000 sq.ft of land and 7,000 sq.ft built-up area. Puravankara describes the wider community as offering 3- and 4-BHK residences; verify this unit’s sanctioned plan, measurements, features, price and availability against original documents."
     },
     {
-      q: "Where is Purva Sounds of Water located and what is the nearest metro station?",
-      a: "Purva Sounds of Water is situated off Bannerghatta Main Road in South Bengaluru, approximately 5 minutes from Royal Meenakshi Mall and the proposed Pink Line Metro (Kalena Agrahara / Gottigere station), with rapid 8-minute connectivity to the NICE Ring Road."
+      q: "Where is Purva Symphony at The Sound of Water located?",
+      a: "Puravankara describes the community as off Bannerghatta Road, Bengaluru. Confirm the exact unit location, current travel routes and BMRCL metro status before relying on distances or journey times."
     },
     {
       q: "What are the best locations to buy residential plots in Bengaluru in 2026?",
@@ -55,7 +55,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   const categoryCards = [
     { id: 'plots', title: 'Open Plots', icon: '🏞', desc: 'Oriaiyan & Sun Valley Verified Plotted Communities', count: '500+ Plots', href: '/plots-in-bangalore' },
     { id: 'villa-plots', title: 'Villa Plots', icon: '📐', desc: 'Up to 4,499 sq.ft Grand Estates by Oriaiyan Group', count: '4499 Sq.Ft', href: '/plots-in-bangalore' },
-    { id: 'villas', title: 'Luxury Villas', icon: '🏡', desc: 'Purva Sounds of Water (5 BHK) & Tripon Nandi Estates', count: 'Tier-1 Luxury', href: '/luxury-villas-bangalore' },
+    { id: 'villas', title: 'Luxury Villas', icon: '🏡', desc: 'Tripon Nandi Hills & a seller-listed Purva Symphony resale', count: 'Bengaluru Villas', href: '/luxury-villas-bangalore' },
     { id: 'apartments', title: 'Apartments', icon: '🏢', desc: 'Vinra KBR & Tripon Aero Gardens Airport Towers', count: '570+ Units', href: '/?page=apartments' },
     { id: 'dubai', title: 'Dubai Properties', icon: '🌍', desc: 'Tax-Free 8-10% USD Yields & UAE 10-Yr Golden Visa', count: 'Exclusive', href: '/?page=dubai' }
   ];
@@ -103,7 +103,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
           </div>
 
           <p className="text-base sm:text-lg text-white/80 max-w-3xl font-light leading-relaxed">
-            Direct developer inventory with zero brokerage to buyers. Explore Purva Sounds of Water 5 BHK luxury villa on Bannerghatta Road, Oriaiyan Group signature plots up to 4,499 sq.ft across 6 growth corridors, Tripon Aero Gardens 5 mins from the Airport, Nandi luxury villas, Vinra KBR twin-corridor apartments, and tax-free Dubai waterfront investments.
+            Explore Bengaluru and Dubai property listings, including plots, apartments, Tripon Nandi Hills villas and a seller-listed resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. Verify availability, unit details and current pricing with our advisors.
           </p>
 
           {/* Action Buttons */}

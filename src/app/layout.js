@@ -5,52 +5,13 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://premium-plots.verc
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lakshie Real Estate | Verified Plots, Luxury Villas & Properties in Bengaluru & Dubai",
-    template: "%s | Lakshie Real Estate"
+    default: "Lakshie Real Estate | Verified Plots & Villas in Bengaluru",
+    template: "%s | Lakshie"
   },
-  description: "Discover verified open plots, villa plots & luxury villas in Bengaluru & Dubai. Direct Channel Partner for Puravankara, Oriaiyan & Tripon with 0% brokerage. Free VIP chauffeured site visits & RERA approved land investments.",
-  keywords: [
-    "purva sounds of water",
-    "purva sounds of water villa",
-    "purva sounds of water 5 bhk villa",
-    "purva sounds of water price 9 cr",
-    "purva sounds of water bannerghatta road",
-    "purva sounds of water villa for sale bangalore",
-    "purva sounds of water a+ type villa",
-    "purva sounds of water floor plan 7000 sq ft",
-    "purva sounds of water resale price",
-    "purva sounds of water reviews",
-    "purva sounds of water rera number",
-    "purva sounds of water brochure pdf",
-    "puravankara sounds of water villa bangalore",
-    "5 bhk luxury villa bannerghatta road bangalore",
-    "luxury villa near meenakshi mall",
-    "ready to move luxury villa south bangalore",
-    "villa with 2200 sq ft private garden bangalore",
-    "villa with private swimming pool and outhouse bangalore",
-    "west facing vaastu luxury villa bangalore",
-    "5000 sq ft plot 7000 sq ft built up villa bangalore",
-    "zero brokerage purva sounds of water",
-    "open plots bengaluru",
-    "residential plots devanahalli",
-    "villa plots bangalore",
-    "luxury villas bannerghatta road",
-    "oriaiyan signature plots",
-    "tripon nandi villas",
-    "vinra kbr apartments",
-    "strr corridor plots",
-    "chikkaballapura nandi hills plots",
-    "biappa approved plots bangalore",
-    "rera registered plots bengaluru",
-    "a-khata residential land",
-    "dubai real estate investment bangalore",
-    "uae golden visa property",
-    "zero brokerage channel partner bangalore",
-    "luxury property advisory bengaluru",
-    "turnkey interior design vinra",
-    "roi real estate calculator bangalore",
-    "high appreciation land plots"
-  ],
+  description: "Property listings and advisory in Bengaluru and Dubai — residential plots, villa plots and luxury villas. Ask Lakshie for current availability and pricing.",
+  alternates: {
+    canonical: SITE_URL
+  },
   authors: [{ name: "Lakshie Real Estate Advisory", url: SITE_URL }],
   creator: "Lakshie Real Estate",
   publisher: "Lakshie Real Estate",
@@ -59,12 +20,9 @@ export const metadata = {
     email: true,
     address: true
   },
-  alternates: {
-    canonical: SITE_URL
-  },
   openGraph: {
     title: "Lakshie Real Estate | Verified Plots & Luxury Villas Bengaluru & Dubai",
-    description: "Verified residential plots, villa estates & luxury villas across Bengaluru's high-growth corridors & Dubai. 0% Brokerage. Book a free chauffeured site tour.",
+    description: "Explore residential plots, villas and property advisory in Bengaluru and Dubai. Ask Lakshie Real Estate for current listing details, availability and pricing.",
     url: SITE_URL,
     siteName: "Lakshie Real Estate",
     locale: "en_IN",
@@ -81,7 +39,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lakshie Real Estate | Verified Plots & Luxury Villas",
-    description: "Premium open plots, villa plots & luxury villas in Bengaluru & Dubai. BIAAPA/RERA verified. 0% Brokerage. VIP site visits.",
+    description: "Property listings and advisory for residential plots and villas in Bengaluru and Dubai. Contact Lakshie Real Estate for current details.",
     images: ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=85"]
   },
   robots: {
@@ -102,189 +60,28 @@ export const metadata = {
 
 const jsonLdRealEstate = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "RealEstateAgent",
-      "@id": `${SITE_URL}/#organization`,
-      "name": "Lakshie Real Estate Advisory",
-      "alternateName": "Lakshie Realestate & Developer Channel Partner",
-      "url": SITE_URL,
-      "logo": `${SITE_URL}/logo.png`,
-      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=85",
-      "telephone": "+918431909508",
-      "email": "advisory@premiumpropertiesbengaluru.com",
-      "priceRange": "₹₹₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560001",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 12.9719,
-        "longitude": 77.5937
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "09:00",
-          "closes": "20:00"
-        }
-      ],
-      "areaServed": [
-        { "@type": "City", "name": "Bengaluru" },
-        { "@type": "City", "name": "Devanahalli" },
-        { "@type": "City", "name": "Chikkaballapura" },
-        { "@type": "City", "name": "Bannerghatta Road" },
-        { "@type": "City", "name": "Dubai" }
-      ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Place",
-            "name": "Purva Sounds of Water 5 BHK Luxury Villa",
-            "description": "A+ Type 5 BHK Luxury Villa on Bannerghatta Road by Puravankara. 2,200 sq.ft private garden, 0% brokerage."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Place",
-            "name": "Oriaiyan Signature Plotted Layouts",
-            "description": "Verified residential plots up to 4,499 sq.ft across 6 prime Bengaluru corridors. BIAAPA/RERA cleared."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Place",
-            "name": "Tripon Nandi Hills Scenic Villas & Aero Gardens",
-            "description": "Luxury 3, 4 & 5 BHK private villas in Nandi Foothills & Airport towers."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SingleFamilyResidence",
-      "@id": `${SITE_URL}/#purva-sounds-of-water-villa`,
-      "name": "Purva Sounds of Water - Premium 5 BHK Luxury Villa",
-      "description": "Exclusive A+ Type 5 BHK Luxury Villa by Puravankara at Purva Sounds of Water, Off Bannerghatta Road, South Bengaluru. Features 5,000 sq.ft land area, 7,000 sq.ft built-up area, approx. 2,200 sq.ft private garden, private swimming pool, outhouse cottage, home theatre/gym, handcrafted furniture, and zero brokerage.",
-      "numberOfRooms": 15,
-      "numberOfBedrooms": 5,
-      "numberOfBathroomsTotal": 6,
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 7000,
-        "unitCode": "FTK"
-      },
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "value": 5000,
-        "unitCode": "FTK"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Off Bannerghatta Main Road, Near Meenakshi Mall",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560076",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 12.8710,
-        "longitude": 77.5970
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "90000000",
-        "priceCurrency": "INR",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2026-01-01",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "90000000",
-          "priceCurrency": "INR",
-          "description": "₹9.0 Cr Negotiable • Zero Brokerage Channel Partner Direct Developer Allocation"
-        }
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${SITE_URL}/#faq`,
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What are the specifications, price, and dimensions of the 5 BHK luxury villa in Purva Sounds of Water?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The exclusive A+ Type villa at Purva Sounds of Water on Bannerghatta Road is priced at ₹9.0 Cr (negotiable with 0% brokerage). It is built on a 5,000 sq.ft land parcel with 7,000 sq.ft built-up area across multiple levels, featuring 5 bedrooms, 6 bathrooms, 2 spacious family halls, an approx. 2,200 sq.ft private garden, private swimming pool, home theatre/gym space, independent outhouse cottage, and handcrafted furniture."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where is Purva Sounds of Water located and what is the nearest metro station?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Purva Sounds of Water is situated off Bannerghatta Main Road in South Bengaluru, approximately 5 minutes from Royal Meenakshi Mall and the proposed Pink Line Metro (Kalena Agrahara / Gottigere station), with rapid 8-minute connectivity to the NICE Ring Road."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the best locations to buy residential plots in Bengaluru in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The top high-appreciation corridors in Bengaluru are North Bengaluru (Devanahalli Airport Corridor & STRR Satellite Town Ring Road), Chikkaballapura Nandi Hills belt, and South Bengaluru (Bannerghatta Road & NICE Corridor), delivering 18% to 22% average YoY appreciation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are the plots and villas verified with RERA and BIAAPA approvals?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. 100% of plotted layouts and villa projects represented by Lakshie Real Estate are thoroughly legally vetted with RERA Karnataka registration, BIAAPA/BMRDA town planning approvals, clear marketable titles, and A-Khata ownership."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is there zero brokerage on plot and villa purchases through Lakshie Real Estate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "As an authorized direct Channel Partner for premier developers including Puravankara Limited, Oriaiyan Group, and Tripon Groups, all client advisory, documentation support, and VIP site visit arrangements are completely free with 0% brokerage to buyers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the complimentary VIP site visit work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can schedule a private site inspection online or via WhatsApp (+91 84319 09508). We arrange complimentary chauffeured doorstep cab pickup, an on-site guided tour with masterplan blueprints, and direct developer pricing negotiation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can Indian citizens invest in Dubai properties through Lakshie Real Estate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Under the RBI Liberalised Remittance Scheme (LRS), Indian residents can legally invest up to $250,000 USD per financial year in Dubai waterfront real estate, enjoying 8-10% tax-free rental yields and 10-Year UAE Golden Visa residency eligibility."
-          }
-        }
-      ]
-    }
+  "@type": "RealEstateAgent",
+  "@id": `${SITE_URL}/#organization`,
+  "name": "Lakshie Real Estate Advisory",
+  "alternateName": "Lakshie Realestate & Developer Channel Partner",
+  "url": SITE_URL,
+  "telephone": "+918431909508",
+  "email": "advisory@premiumpropertiesbengaluru.com",
+  "priceRange": "₹₹₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560001",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Bengaluru" },
+    { "@type": "City", "name": "Devanahalli" },
+    { "@type": "City", "name": "Chikkaballapura" },
+    { "@type": "Place", "name": "Bannerghatta Road" },
+    { "@type": "City", "name": "Dubai" }
   ]
 };
 
@@ -298,12 +95,6 @@ export default function RootLayout({ children }) {
         {/* Preconnect to external image origin for faster asset discovery & LCP */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-
-        {/* Geo Meta Tags for Local & Regional SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="geo.position" content="12.9719;77.5937" />
-        <meta name="ICBM" content="12.9719, 77.5937" />
 
         {/* JSON-LD Structured Data Schema for Search & AI Answer Engines */}
         <script

@@ -5,34 +5,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.verc
 const PAGE_URL = `${SITE_URL}/luxury-villas-bangalore`;
 
 export const metadata = {
-  title: 'Luxury Villas in Bangalore | 3, 4 & 5 BHK Gated Community Villas | ₹2.4 Cr to ₹9 Cr',
-  description: 'Explore premier luxury villas for sale in Bengaluru. Featuring Purva Sounds of Water (A+ Type 5 BHK on Bannerghatta Road, ₹9 Cr) and Tripon Nandi Foothills Villas (3, 4 & 5 BHK, ₹2.4 Cr - ₹4 Cr). Private swimming pools, lush gardens & zero brokerage.',
-  keywords: [
-    'luxury villas in bangalore',
-    'villas for sale in bangalore',
-    'gated community villas in bangalore',
-    '5 bhk villa bangalore',
-    '4 bhk villa bangalore',
-    '3 bhk villa bangalore',
-    'purva sounds of water',
-    'purva sounds of water villa',
-    'purva sounds of water 5 bhk villa',
-    'purva sounds of water price 9 cr',
-    'tripon nandi luxury villas',
-    'villas in bannerghatta road',
-    'villas in chikkaballapura',
-    'villas near nandi hills',
-    'villa with private swimming pool bangalore',
-    'villa with private garden bangalore',
-    'ready to move luxury villa bangalore',
-    'zero brokerage villas bangalore'
-  ],
+  title: 'Luxury Villas in Bangalore | Purva, Nandi Hills',
+  description: 'Luxury villas for sale in Bangalore, from Nandi Hills estates to a seller-listed Purva Symphony resale off Bannerghatta Road. Ask about availability.',
   alternates: {
     canonical: PAGE_URL,
   },
   openGraph: {
-    title: 'Luxury Villas in Bangalore | 3, 4 & 5 BHK Gated Enclaves | 0% Brokerage',
-    description: 'Exclusive luxury villas in South Bangalore (Purva Sounds of Water 5 BHK) and North Bangalore (Tripon Nandi Hills). Private pools, designer gardens, 0% brokerage.',
+    title: 'Luxury Villas for Sale in Bengaluru | Lakshie Real Estate',
+    description: 'Bengaluru villa listings, including Tripon Nandi Hills homes and a seller-listed Purva Symphony resale off Bannerghatta Road. Verify unit details and availability.',
     url: PAGE_URL,
     siteName: 'Lakshie Real Estate Advisory',
     locale: 'en_IN',
@@ -48,8 +28,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Luxury Villas in Bangalore | Purva Sounds of Water & Tripon Nandi Estates',
-    description: 'Exclusive 3, 4 & 5 BHK luxury villas with private pools and landscaped gardens. Direct developer allocations with zero brokerage.',
+    title: 'Luxury Villas in Bengaluru | Lakshie Real Estate',
+    description: 'Browse Bengaluru villa listings and verify current unit details, pricing and availability.',
     images: [`${SITE_URL}/images/purva-sounds-of-water/purva-villas-community.jpeg`]
   }
 };
@@ -61,7 +41,7 @@ const jsonLdVillas = {
       '@type': 'RealEstateListing',
       '@id': `${PAGE_URL}/#listing`,
       'name': 'Luxury Villas in Bengaluru Portfolio',
-      'description': 'Curated portfolio of exclusive luxury villas across South and North Bengaluru, featuring Purva Sounds of Water on Bannerghatta Road and Tripon Nandi Hills Villas.',
+      'description': 'Curated villa listings in Bengaluru, including Tripon Nandi Hills homes and a seller-advertised resale unit at Purva Symphony, The Sound of Water, off Bannerghatta Road.',
       'url': PAGE_URL
     },
     {
@@ -91,7 +71,7 @@ const jsonLdVillas = {
           'name': 'What are the top luxury villa projects available in Bangalore through Lakshie Real Estate?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Our featured luxury villa projects include: 1) Purva Sounds of Water on Bannerghatta Road (A+ Type 5 BHK Luxury Villa, 5,000 sq.ft plot, 7,000 sq.ft built-up, private swimming pool, 2,200 sq.ft garden, ₹9.0 Cr negotiable); and 2) Tripon Nandi Luxury Villas in Chikkaballapura (3, 4 & 5 BHK boutique villas in Nandi Foothills, ₹2.4 Cr to ₹4.0 Cr).'
+            'text': 'The portfolio includes Tripon Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as five-bedroom and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
           }
         },
         {
@@ -99,7 +79,7 @@ const jsonLdVillas = {
           'name': 'Do these luxury villas come with private swimming pools and gardens?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. Both Purva Sounds of Water (A+ Type) and Tripon Nandi Signature Mansions feature private swimming pools, landscaped private gardens, sun decks, and dedicated outhouse staff quarters.'
+            'text': 'The seller advertises a private pool and garden for the specific Purva Symphony resale unit. Confirm those unit-specific features during inspection; amenities at other communities vary by listing.'
           }
         },
         {
@@ -107,7 +87,7 @@ const jsonLdVillas = {
           'name': 'Why purchase luxury villas through Lakshie Real Estate rather than standard brokers?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'As an authorized Tier-1 channel partner, all client advisory, legal title vetting, private site inspections, and developer negotiations are completely free with 0% brokerage to buyers, saving you lakhs in standard brokerage commissions.'
+            'text': 'Lakshie Real Estate describes itself as an authorized channel partner. Ask the advisor to explain the specific services, any buyer charges, and the applicable agreement terms for each listing.'
           }
         }
       ]

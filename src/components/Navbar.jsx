@@ -46,7 +46,7 @@ export default function Navbar({ activePage, setActivePage }) {
 
   const navItems = [
     { id: 'home', label: 'Home', href: '/' },
-    { id: 'purva-villa', label: 'Purva Sounds of Water (5 BHK)', href: '/purva-sounds-of-water', isSpecial: true, icon: Sparkles },
+    { id: 'purva-villa', label: 'Purva Sounds of Water Resale', href: '/purva-sounds-of-water', isSpecial: true, icon: Sparkles },
     { id: 'plots', label: 'Plots in Bangalore', href: '/plots-in-bangalore', icon: Layers },
     { id: 'villas', label: 'Luxury Villas', href: '/luxury-villas-bangalore', icon: Home },
     { id: 'apartments', label: 'Apartments', href: '/?page=apartments', icon: Building2 },

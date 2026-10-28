@@ -3,20 +3,23 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-# AI Crawlers & Answer Engines
+# Search and answer-engine crawlers
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://premium-plots.vercel.app/sitemap.xml

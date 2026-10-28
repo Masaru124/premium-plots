@@ -24,7 +24,11 @@ function MatchmakerContent() {
       <div>
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
         <main className="animate-fadeIn">
-          <PropertyMatchmakerPage setActivePage={handleNavClick} />
+          <PropertyMatchmakerPage
+            setActivePage={handleNavClick}
+            heading="Property Matchmaker for Bangalore Plots & Villas"
+            intro="Answer a few questions about your budget, preferred Bengaluru corridor and timeline, and get matched to residential plots and villas that actually fit — then confirm current availability with an advisor."
+          />
         </main>
       </div>
       <FloatingActions />

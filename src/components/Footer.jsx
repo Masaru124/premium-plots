@@ -74,7 +74,7 @@ export default function Footer({ setActivePage }) {
               </li>
               <li>
                 <a href="/purva-sounds-of-water" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  🏡 Purva Sounds of Water 5 BHK Villa (Bannerghatta)
+                  🏡 Purva Sounds of Water Resale (Bannerghatta)
                 </a>
               </li>
               <li>

@@ -5,8 +5,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.verc
 const PAGE_URL = `${SITE_URL}/plots-in-bangalore`;
 
 export const metadata = {
-  title: 'Plots in Bangalore | BIAAPA & RERA Approved Residential Plots from ₹35L | 0% Brokerage',
-  description: 'Verified residential plots and villa plots across Bengaluru’s fastest-growing corridors (Devanahalli Airport, STRR, Chikkaballapura Nandi Hills, APC Circle, Jigani, Tumkur Rd, Kanakapura Rd). Clear A-Khata titles, 100% bank loan approvals, 0% brokerage. Free VIP chauffeured site visits.',
+  title: 'Plots in Bangalore | RERA Approved from ₹35L',
+  description: 'Verified residential and villa plots across six Bengaluru corridors from ₹35L, with clear A-Khata titles. Ask about current availability and site visits.',
   keywords: [
     'plots in bangalore',
     'residential plots in bangalore',

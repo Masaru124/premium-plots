@@ -24,7 +24,11 @@ function QnAContent() {
       <div>
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
         <main className="animate-fadeIn">
-          <PropertyMatchmakerPage setActivePage={handleNavClick} />
+          <PropertyMatchmakerPage
+            setActivePage={handleNavClick}
+            heading="Bengaluru Property Q&A: Plots, Villas & Prices"
+            intro="Get clear answers to the questions buyers actually ask about Bengaluru real estate — A-Khata and RERA verification, BIAAPA approvals, corridor pricing, loan eligibility and resale due diligence."
+          />
         </main>
       </div>
       <FloatingActions />

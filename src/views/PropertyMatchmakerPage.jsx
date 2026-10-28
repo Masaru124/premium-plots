@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 
-export default function PropertyMatchmakerPage({ setActivePage }) {
+export default function PropertyMatchmakerPage({ setActivePage, heading, intro }) {
   const { showToast } = usePlots();
 
   // State: whether form is opened or showing the welcome card
@@ -170,8 +170,12 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
             </div>
 
             <h1 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] font-heading tracking-tight leading-snug">
-              Find Your Ideal Plot or Property in Bengaluru
+              {heading || 'Find Your Ideal Plot or Property in Bengaluru'}
             </h1>
+
+            {intro && (
+              <p className="text-sm text-slate-600 leading-relaxed">{intro}</p>
+            )}
 
             {/* Value Trust Signals */}
             <div className="flex flex-wrap items-center gap-3 pt-2 text-[11px] font-semibold text-slate-600 border-t border-slate-100">

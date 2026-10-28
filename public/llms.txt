@@ -1,12 +1,13 @@
 # Lakshie Real Estate Advisory
 
-> Authorized Developer Channel Partner for Verified Open Plots, Luxury Villas & High-Growth Real Estate across Bengaluru and Dubai with 0% Brokerage to Buyers.
+> Real estate listings and advisory for residential plots, villas and other properties in Bengaluru and Dubai. Confirm listing details, availability, approvals, and charges with the advisor.
 
 ## Core Properties & Portfolios
 
-- [Purva Sounds of Water 5 BHK Villa](https://premium-plots.vercel.app/purva-sounds-of-water): Exclusive A+ Type 5 BHK Luxury Villa on Bannerghatta Road by Puravankara. 5,000 sq.ft land, 7,000 sq.ft built-up area, private swimming pool, 2,200 sq.ft private garden, outhouse cottage, priced at ₹9.0 Cr negotiable with zero brokerage.
+- Puravankara describes Purva Symphony as an enclave at The Sound of Water, off Bannerghatta Road, Bengaluru, offering 3- and 4-BHK villas. Developer-listed project RERA: PRM/KA/RERA/1251/310/PR/210907/004300. See the [official project page](https://www.puravankara.com/residential/bengaluru/purva-symphony) for current project information; confirm inventory and pricing directly.
+- [Seller-listed resale at Purva Symphony, The Sound of Water](https://premium-plots.vercel.app/purva-sounds-of-water): One seller advertises a five-bedroom unit and quotes ₹9.0 Cr, with reported land/built-up areas. These are unit-specific seller claims, not developer-verified facts; confirm configuration, area basis, features, price, legal documents and availability with the advisor.
 - [Plots in Bangalore Directory](https://premium-plots.vercel.app/plots-in-bangalore): BIAAPA and RERA approved residential plots and villa plots up to 4,499 sq.ft across 6 prime Bengaluru corridors (Devanahalli Airport, Chikkaballapura Nandi belt, APC Circle, Jigani, Tumkur Rd, Kanakapura Rd) priced from ₹35 Lakhs to ₹2.0 Cr.
-- [Luxury Villas in Bangalore](https://premium-plots.vercel.app/luxury-villas-bangalore): Curated gated communities featuring Purva Sounds of Water (5 BHK) and Tripon Nandi Hills (3, 4 & 5 BHK) with private pools and landscaped grounds.
+- [Luxury Villas in Bangalore](https://premium-plots.vercel.app/luxury-villas-bangalore): Curated villa listings including a seller-advertised resale at Purva Symphony, The Sound of Water, and Tripon Nandi Hills homes.
 - [Oriaiyan Signature Plotted Developments](https://premium-plots.vercel.app/plots-in-bangalore): Flagship plotted enclaves across Devanahalli, STRR, Jigani, and Chikkaballapura.
 - [Sun Valley Scenic Plots Chikkaballapura](https://premium-plots.vercel.app/plots-in-bangalore): Serene plotted community in Chikkaballapura with unobstructed Nandi Hills views, priced from ₹35 Lakhs to ₹90 Lakhs.
 - [Tripon Nandi Hills Luxury Villas](https://premium-plots.vercel.app/luxury-villas-bangalore): Gated 15-acre enclave offering 3, 4, 5 BHK custom architectural villas in Nandi Foothills from ₹2.4 Cr to ₹4.0 Cr.
@@ -20,7 +21,7 @@
 - [Bengaluru Real Estate ROI Calculator](https://premium-plots.vercel.app/#roi-calculator): Interactive investment calculator calculating 5-year capital appreciation and compound growth across Bengaluru corridors.
 - [Property Market Guides & Knowledge Hub](https://premium-plots.vercel.app/?page=blog): Advisory articles on STRR corridor growth, BIAAPA legal due diligence, title verification, and RERA compliance.
 - [About Lakshie Real Estate Advisory](https://premium-plots.vercel.app/?page=about): Independent consultancy credentials, authorized channel partner status, and advisory philosophy.
-- [Contact & VIP Chauffeured Site Tour Booking](https://premium-plots.vercel.app/?page=contact): Schedule complimentary chauffeured doorstep pickup, on-site masterplan inspection, and direct developer pricing negotiation.
+- [Contact Lakshie Real Estate Advisory](https://premium-plots.vercel.app/?page=contact): Contact the advisory team to ask about current listings, viewing arrangements, terms and charges.
 
 ## Optional
 
