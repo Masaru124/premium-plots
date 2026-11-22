@@ -7,10 +7,7 @@ import Footer from '../../components/Footer';
 import FloatingActions from '../../components/WhatsAppButton';
 import BookSiteVisitModal from '../../components/BookSiteVisitModal';
 import ProjectsPage from '../../views/ProjectsPage';
-import {
-  ShieldCheck, MapPin, CheckCircle2, Phone, MessageCircle, HelpCircle,
-  ChevronDown, Sparkles, Award, Home, ArrowRight, Trees, Bath, Bed
-} from 'lucide-react';
+import { ShieldCheck, MessageCircle, ChevronDown, ArrowRight } from 'lucide-react';
 
 const VILLAS_FAQS = [
   {
@@ -70,29 +67,25 @@ function VillasContent() {
                 <span className="text-[#C8A34D] font-bold">Luxury Villas in Bangalore</span>
               </nav>
 
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+              <span className="hidden sm:inline-flex items-center gap-1.5 text-[#C8A34D] font-semibold">
                 <ShieldCheck className="w-4 h-4" /> Tier-1 Developers • 0% Brokerage
               </span>
             </div>
           </div>
 
           {/* Dedicated Hero Banner */}
-          <section className="bg-gradient-to-b from-[#0B1F3A] to-[#0E2749] text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+          <section className="bg-[#0B1F3A] text-white py-14 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-bold text-[#C8A34D] uppercase tracking-wider">
-                <Home className="w-4 h-4" />
-                Bengaluru Luxury Villa Enclaves
-              </div>
               <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading">
                 Luxury Villas for Sale in Bengaluru
               </h1>
-              <p className="text-sm sm:text-base text-white/70 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Explore Tripon Nandi Hills villas and a seller-listed resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. Confirm the resale unit’s configuration, details and availability.
               </p>
               <div className="pt-2 flex flex-wrap justify-center gap-3">
                 <button
                   onClick={() => openSiteVisitModal()}
-                  className="btn-gold py-3 px-6 text-xs font-black uppercase tracking-wider cursor-pointer shadow-lg"
+                  className="btn-gold py-3 px-6 text-sm font-bold normal-case tracking-normal cursor-pointer"
                 >
                   Schedule Private Villa Tour
                 </button>
@@ -100,7 +93,7 @@ function VillasContent() {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Lakshie Real Estate! Please send me the brochure and price list for luxury villas in Bangalore.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-xs font-bold flex items-center gap-2 transition-colors"
+                  className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-sm font-semibold flex items-center gap-2 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4 text-[#C8A34D]" />
                   Request Villa Details on WhatsApp
@@ -110,27 +103,30 @@ function VillasContent() {
           </section>
 
           {/* Featured Highlight: Purva Sounds of Water Banner */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-            <div className="rounded-2xl bg-gradient-to-r from-[#0B1F3A] via-[#142E54] to-[#0B1F3A] text-white p-6 sm:p-8 border border-[#C8A34D]/40 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
-              <div className="space-y-2">
-                <span className="text-[10px] uppercase font-bold text-[#C8A34D] tracking-widest bg-white/10 px-2.5 py-1 rounded-full">
-                  Featured Ultra-Luxury Spotlight
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
-                  Purva Symphony at The Sound of Water — Seller-Listed Villa Resale
-                </h2>
-                <p className="text-xs sm:text-sm text-white/75 max-w-2xl leading-relaxed">
-                  Seller advertises a five-bedroom resale unit and quotes ₹9.0 Cr. Puravankara describes the wider community as offering 3- and 4-BHK residences; confirm unit documents, features, price and availability.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3 shrink-0">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div className="grid overflow-hidden bg-[#0B1F3A] text-white md:grid-cols-2">
+              <img
+                src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
+                alt="Villa residences and landscaped gardens at Purva Symphony"
+                className="h-64 w-full object-cover sm:h-80 md:h-full md:min-h-[380px]"
+                loading="eager"
+                fetchPriority="high"
+              />
+              <div className="flex flex-col justify-center gap-5 p-6 sm:p-10 lg:p-14">
+                <div>
+                  <h2 className="text-2xl font-extrabold leading-tight font-heading text-white sm:text-3xl">
+                    Purva Symphony villa resale
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-white/85">
+                    The seller quotes ₹9.0 Cr for an advertised five-bedroom resale. Puravankara describes the wider community as offering 3- and 4-BHK residences; verify this unit’s documents, features, price and availability.
+                  </p>
+                </div>
                 <a
                   href="/purva-sounds-of-water"
-                  className="btn-gold py-3 px-6 text-xs font-black uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-lg"
+                  className="btn-gold w-fit px-5 py-3 text-sm font-bold normal-case tracking-normal"
                 >
-                  <span>Explore Purva Villa Page</span>
-                  <ArrowRight className="w-4 h-4" />
+                  View resale details
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -145,17 +141,12 @@ function VillasContent() {
           />
 
           {/* Villas FAQ Section */}
-          <section className="bg-white py-16 border-t border-slate-200">
+          <section className="bg-white py-16">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
               <div className="text-center space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1F3A]/5 text-[#0B1F3A] text-xs font-bold uppercase">
-                  <HelpCircle className="w-4 h-4 text-[#C8A34D]" />
-                  Bengaluru Villa Listings
-                </div>
                 <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Frequently Asked Questions – Luxury Villas in Bangalore
+                  Buying a villa: common questions
                 </h2>
-                <div className="divider-gold mx-auto" />
               </div>
 
               <div className="space-y-4">
@@ -164,7 +155,7 @@ function VillasContent() {
                   return (
                     <div
                       key={idx}
-                      className="rounded-2xl border border-slate-200 overflow-hidden bg-[#F8F8F5] transition-all shadow-sm"
+                      className="rounded-2xl border border-slate-200 overflow-hidden bg-[#F8F8F5]"
                     >
                       <button
                         onClick={() => setOpenFaqIndex(isOpen ? -1 : idx)}

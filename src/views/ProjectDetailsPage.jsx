@@ -20,7 +20,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
       <div className="flex justify-between items-center text-xs">
         <button
           onClick={() => setActivePage('projects')}
-          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#0B1F3A]/15 text-[#1A1A1A] hover:bg-[#F8F8F5] transition-colors font-semibold cursor-pointer shadow-sm"
+          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#0B1F3A]/15 text-[#1A1A1A] hover:bg-[#F8F8F5] transition-colors font-semibold cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to All Projects
@@ -59,16 +59,16 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
           <div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] tracking-tight font-heading">{project.title}</h1>
             {project.id === 'project-purva-sounds-of-water-villa' && (
-              <div className="mt-3 p-3.5 rounded-xl bg-gradient-to-r from-[#0B1F3A] to-[#142E54] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border border-[#C8A34D]/40 shadow-sm">
+              <div className="mt-3 rounded-lg bg-[#0B1F3A] p-4 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-2.5">
                   <Sparkles className="w-4 h-4 text-[#C8A34D] shrink-0" />
-                  <span className="text-xs text-white/90">
+                  <span className="text-sm text-white/90">
                     Seller advertises a five-bedroom resale unit; verify its sanctioned plan and details before purchase.
                   </span>
                 </div>
                 <a
                   href="/purva-sounds-of-water"
-                  className="btn-gold py-1.5 px-3 text-[11px] font-black uppercase whitespace-nowrap shrink-0"
+                  className="btn-gold py-2 px-4 text-sm whitespace-nowrap shrink-0"
                 >
                   Visit Dedicated Villa Page →
                 </a>
@@ -89,13 +89,13 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-[#0B1F3A]/10 shadow-md shrink-0">
+          <div className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-[#0B1F3A]/10 shrink-0">
             <div>
               <div className="text-xs text-[#555555]">
                 {project.id === 'project-purva-sounds-of-water-villa' ? 'Seller-Quoted Asking Price' : 'Starting Price Quote'}
               </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-[#C8A34D] font-heading">{project.formattedStartPrice}</div>
-              <div className="text-[11px] text-[#555555]">({project.priceRange})</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#7A5C10] font-heading">{project.formattedStartPrice}</div>
+              <div className="text-sm text-[#555555]">({project.priceRange})</div>
             </div>
 
             <a
@@ -104,7 +104,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold py-3.5 px-6 text-xs uppercase font-extrabold tracking-wider flex items-center gap-2 cursor-pointer shadow-md"
+              className="btn-gold py-3.5 px-6 text-xs uppercase font-extrabold tracking-wider flex items-center gap-2 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
               Book Site Visit
@@ -115,24 +115,29 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
       {/* Gallery Showcase */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        <div className="lg:col-span-8 h-[420px] rounded-2xl overflow-hidden border border-[#0B1F3A]/10 shadow-lg relative bg-black">
+        <div className="lg:col-span-8 h-[420px] rounded-2xl overflow-hidden border border-[#0B1F3A]/10 relative bg-black">
           <img src={activeImage} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#0B1F3A]/10 text-xs text-[#0B1F3A] font-bold shadow-md">
+          <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#0B1F3A]/10 text-xs text-[#0B1F3A] font-bold">
             {project.title} Masterplan & Elevation View
           </div>
         </div>
 
         <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-4 max-h-[420px]">
           {(project.galleryImages || []).map((img, i) => (
-            <div
+            <button
               key={i}
+              type="button"
               onClick={() => setActiveImage(img)}
-              className={`h-24 lg:h-[95px] rounded-xl overflow-hidden border cursor-pointer transition-all ${
-                activeImage === img ? 'border-[#C8A34D] ring-2 ring-[#C8A34D]/50 scale-[1.02]' : 'border-[#0B1F3A]/10 opacity-70 hover:opacity-100'
+              aria-label={`Show image ${i + 1} of ${project.title}`}
+              aria-pressed={activeImage === img}
+              className={`h-24 lg:h-[95px] overflow-hidden rounded-lg border transition-opacity ${
+                activeImage === img
+                  ? 'border-[#C8A34D] opacity-100'
+                  : 'border-[#0B1F3A]/10 opacity-70 hover:opacity-100'
               }`}
             >
-              <img src={img} alt={`Gallery ${i}`} className="w-full h-full object-cover" />
-            </div>
+              <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
+            </button>
           ))}
         </div>
       </div>
@@ -141,7 +146,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         <div className="lg:col-span-8 space-y-8">
           {/* Overview */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 shadow-sm space-y-4">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 space-y-4">
             <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">Project Overview & Configurations</h3>
             <p className="text-[#555555] text-sm leading-relaxed">{project.overview}</p>
 
@@ -163,7 +168,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
           {/* TURNKEY INTERIOR DESIGN PACKAGES (If Vinra Alora or custom villa plots) */}
           {project.id === 'project-vinra-alora' && (
-            <div className="bg-[#0B1F3A] p-6 sm:p-8 rounded-3xl text-white shadow-xl space-y-6 border border-[#C8A34D]/30 cad-grid">
+            <div className="bg-[#0B1F3A] p-6 sm:p-8 rounded-3xl text-white space-y-6 border border-[#C8A34D]/30 cad-grid">
               <div className="flex items-center gap-2 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
                 <Sparkles className="w-4 h-4 text-[#C8A34D]" />
                 Vinra Interiors & Renovations Pvt Ltd • Package Add-ons
@@ -190,8 +195,8 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                   </ul>
                 </div>
 
-                <div className="bg-white/15 p-5 rounded-2xl border border-[#C8A34D]/60 backdrop-blur-md space-y-3 relative shadow-lg">
-                  <span className="absolute -top-2.5 right-4 bg-[#C8A34D] text-[#0B1F3A] text-[9px] font-black px-2 py-0.5 rounded-full uppercase">MOST POPULAR</span>
+                <div className="bg-white/15 p-5 rounded-2xl border border-[#C8A34D]/60 backdrop-blur-md space-y-3 relative">
+                  <span className="absolute -top-2.5 right-4 bg-[#C8A34D] text-[#0B1F3A] text-[10px] font-black px-2 py-0.5 rounded-full uppercase">MOST POPULAR</span>
                   <div className="flex justify-between items-center border-b border-white/10 pb-2">
                     <span className="text-sm font-bold text-[#C8A34D] font-heading">GOLD PACKAGE</span>
                     <span className="text-[11px] text-white/70">₹1,300 / sq.ft</span>
@@ -221,7 +226,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
           )}
 
           {/* Proximity & Distance Key */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 shadow-sm space-y-4">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 space-y-4">
             <h3 className="text-xl font-bold text-[#0B1F3A] flex items-center gap-2 font-heading">
               <Navigation className="w-5 h-5 text-[#C8A34D]" />
               Proximity & Connectivity Catalysts
@@ -241,10 +246,9 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
           {/* Seller-listed Purva Symphony resale details */}
           {project.id === 'project-purva-sounds-of-water-villa' && (
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#C8A34D]/30 shadow-md space-y-6">
-              <div className="border-b border-slate-200 pb-4">
-                <span className="text-xs font-black text-[#C8A34D] uppercase tracking-wider">
-                  Seller-Advertised Resale Unit Details
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#C8A34D]/30 space-y-6">
+              <div className="border-b border-slate-200 pb-4">                  <span className="text-sm font-semibold text-[#7A5C10]">
+                  Seller-advertised resale unit details
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A] font-heading mt-1">
                   Purva Symphony Resale Villa off Bannerghatta Road
@@ -283,9 +287,9 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
         {/* Sidebar Summary & Links */}
         <div className="lg:col-span-4 space-y-6">
-          <div className="bg-white p-6 rounded-2xl border border-[#0B1F3A]/10 shadow-sm space-y-6 sticky top-24">
+          <div className="bg-white p-6 rounded-2xl border border-[#0B1F3A]/10 space-y-6 sticky top-24">
             <div className="border-b border-[#0B1F3A]/10 pb-4">
-              <span className="text-xs text-[#C8A34D] font-bold uppercase tracking-wider font-heading">Quick Specs Summary</span>
+              <span className="text-xs text-[#7A5C10] font-bold uppercase tracking-wider font-heading">Quick Specs Summary</span>
               <h3 className="text-lg font-bold text-[#0B1F3A] mt-1 font-heading">{project.title}</h3>
               <p className="text-xs text-[#555555] mt-0.5">By {project.developer}</p>
             </div>
@@ -309,7 +313,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               </div>
               <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
                 <span className="text-[#555555]">Advisory Hotline:</span>
-                <a href={`tel:+918431909508`} className="font-bold text-[#C8A34D] hover:underline">
+                <a href={`tel:+918431909508`} className="font-bold text-[#7A5C10] hover:underline">
                   {displayPhone}
                 </a>
               </div>
@@ -320,8 +324,8 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               <div className="text-xs font-semibold text-[#555555] uppercase">Pre-Approved Bank Loans</div>
               <div className="flex flex-wrap gap-1.5">
                 {(project.bankApprovals || []).map((b, i) => (
-                  <span key={i} className="px-2.5 py-1 rounded bg-[#F8F8F5] border border-[#0B1F3A]/10 text-[11px] text-[#1A1A1A]">
-                    🏦 {b}
+                  <span key={i} className="rounded bg-[#F8F8F5] px-2.5 py-1 text-sm text-[#1A1A1A]">
+                    {b}
                   </span>
                 ))}
               </div>
@@ -331,7 +335,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
             <div className="space-y-3 pt-2">
               <button
                 onClick={() => openSiteVisitModal(project)}
-                className="btn-gold w-full py-3.5 text-xs uppercase font-extrabold tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="btn-gold w-full py-3.5 text-xs uppercase font-extrabold tracking-wider flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Calendar className="w-4 h-4 text-[#0B1F3A]" />
                 Book VIP Site Visit

@@ -1,11 +1,35 @@
 {
   "version": 1,
   "skills": {
+    "awwwards": {
+      "source": "juliobsz/skills",
+      "sourceType": "github",
+      "skillPath": "awwwards/SKILL.md",
+      "computedHash": "ac00f493e426dd45f6ed84aea42b0cd598849a70734c652aec046fc369107a37"
+    },
+    "design-taste-frontend": {
+      "source": "Leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "computedHash": "53590ee9325bee34d7888bf0d81bd3941a108b1e7850df46802d93104e3f2b90"
+    },
     "gravitas": {
       "source": "udaysharmadev/Gravitas",
       "sourceType": "github",
       "skillPath": "skills/gravitas/SKILL.md",
       "computedHash": "32b13f79b3aa3b8259ebc96192f7c16678ccec6c1db6cce170675c7fa33bc21d"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "11ccdc26fba1f9b424ba142e88102e7cad54625c315210a6b890b8d8192321af"
+    },
+    "no-ai-slop-ui": {
+      "source": "12valor/LLM-SKills",
+      "sourceType": "github",
+      "skillPath": "no-ai-slop-ui/SKILL.md",
+      "computedHash": "08aed69494de87289f5a889cd0f28aed12c24eb8d54df1eecf73f52e64c876c3"
     },
     "seo": {
       "source": "AgriciDaniel/claude-seo",

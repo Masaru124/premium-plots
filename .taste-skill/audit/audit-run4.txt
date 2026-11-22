@@ -1,0 +1,114 @@
+home      mobile  h=15062  sec=6   imgs=8   alt=0   low=1   sm=140 ovf=0 sw=ok h1=[Verified properties in Bengaluru and Dubai]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+home      tablet  h=10587  sec=6   imgs=8   alt=0   low=1   sm=139 ovf=0 sw=ok h1=[Verified properties in Bengaluru and Dubai]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+home      desktop h=8012   sec=6   imgs=8   alt=0   low=1   sm=148 ovf=0 sw=ok h1=[Verified properties in Bengaluru and Dubai]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+projects  mobile  h=9097   sec=0   imgs=7   alt=0   low=1   sm=89  ovf=0 sw=ok h1=[All Verified Properties]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+projects  tablet  h=5440   sec=0   imgs=7   alt=0   low=1   sm=89  ovf=0 sw=ok h1=[All Verified Properties]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+projects  desktop h=4197   sec=0   imgs=7   alt=0   low=1   sm=98  ovf=0 sw=ok h1=[All Verified Properties]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+dubai     mobile  h=5020   sec=4   imgs=2   alt=0   low=1   sm=14  ovf=0 sw=ok h1=[Dubai property, bought from Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+dubai     tablet  h=3738   sec=4   imgs=2   alt=0   low=1   sm=14  ovf=0 sw=ok h1=[Dubai property, bought from Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+dubai     desktop h=3154   sec=4   imgs=2   alt=0   low=1   sm=23  ovf=0 sw=ok h1=[Dubai property, bought from Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+interior  mobile  h=5431   sec=4   imgs=3   alt=0   low=1   sm=13  ovf=8 sw=ok h1=[Interiors, priced by the sq ft]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+   OVERFLOW: "GoldMost chosen" +147px | "Most chosen" +127px | "Platinum" +346px | "₹1,650 / sq.ft" +147px | "₹2,250 / sq.ft" +346px | "₹2,050 / sq.ft" +147px | "₹2,850 / sq.ft" +346px | "Century MR Grade / Action TESA HDHMR" +147px
+interior  tablet  h=4043   sec=4   imgs=3   alt=0   low=1   sm=13  ovf=0 sw=ok h1=[Interiors, priced by the sq ft]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+interior  desktop h=3391   sec=4   imgs=3   alt=0   low=1   sm=22  ovf=0 sw=ok h1=[Interiors, priced by the sq ft]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+about     mobile  h=4351   sec=4   imgs=1   alt=0   low=1   sm=9   ovf=0 sw=ok h1=[A Bengaluru advisory desk, not a listings site]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+about     tablet  h=3258   sec=4   imgs=1   alt=0   low=1   sm=9   ovf=0 sw=ok h1=[A Bengaluru advisory desk, not a listings site]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+about     desktop h=2547   sec=4   imgs=1   alt=0   low=1   sm=18  ovf=0 sw=ok h1=[A Bengaluru advisory desk, not a listings site]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+contact   mobile  h=4268   sec=1   imgs=1   alt=0   low=1   sm=21  ovf=0 sw=ok h1=[Talk to a property advisor]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+contact   tablet  h=3133   sec=1   imgs=1   alt=0   low=1   sm=21  ovf=0 sw=ok h1=[Talk to a property advisor]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+contact   desktop h=2189   sec=1   imgs=1   alt=0   low=1   sm=30  ovf=0 sw=ok h1=[Talk to a property advisor]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+blog      mobile  h=4516   sec=0   imgs=4   alt=0   low=1   sm=25  ovf=0 sw=ok h1=[Plot Investment & Legal Verification Guides]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+blog      tablet  h=2680   sec=0   imgs=4   alt=0   low=1   sm=25  ovf=0 sw=ok h1=[Plot Investment & Legal Verification Guides]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+blog      desktop h=2342   sec=0   imgs=4   alt=0   low=1   sm=34  ovf=0 sw=ok h1=[Plot Investment & Legal Verification Guides]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+matchmakermobile  h=2972   sec=0   imgs=0   alt=0   low=1   sm=13  ovf=0 sw=ok h1=[Property Matchmaker for Bangalore Plots & Villas]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+matchmakertablet  h=2382   sec=0   imgs=0   alt=0   low=1   sm=13  ovf=0 sw=ok h1=[Property Matchmaker for Bangalore Plots & Villas]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+matchmakerdesktop h=1896   sec=0   imgs=0   alt=0   low=1   sm=22  ovf=0 sw=ok h1=[Property Matchmaker for Bangalore Plots & Villas]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+plots     mobile  h=7451   sec=3   imgs=2   alt=0   low=1   sm=40  ovf=8 sw=ok h1=[Residential plots in Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+   OVERFLOW: "Historical YoY Growth" +26px | "Key Growth Drivers" +159px | "Approval Authorities" +306px | "22.8% YoY" +26px | "KIADB Aerospace SEZ, Airport Expressway " +159px | "BIAPPA & RERA" +306px | "21.5% YoY" +26px | "STRR Northern Arc, Tourism Infrastructur" +159px
+plots     tablet  h=4914   sec=3   imgs=2   alt=0   low=1   sm=41  ovf=0 sw=ok h1=[Residential plots in Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+plots     desktop h=4237   sec=3   imgs=2   alt=0   low=1   sm=50  ovf=0 sw=ok h1=[Residential plots in Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+villas    mobile  h=7132   sec=3   imgs=3   alt=0   low=1   sm=41  ovf=0 sw=ok h1=[Luxury Villas for Sale in Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+villas    tablet  h=4585   sec=3   imgs=3   alt=0   low=1   sm=42  ovf=0 sw=ok h1=[Luxury Villas for Sale in Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+villas    desktop h=4161   sec=3   imgs=3   alt=0   low=1   sm=51  ovf=0 sw=ok h1=[Luxury Villas for Sale in Bengaluru]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+purva     mobile  h=14871  sec=3   imgs=8   alt=7   low=1   sm=118 ovf=8 sw=ok h1=[Purva Sounds of Water - Seller-Listed Five-Bedroom Vill]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+   OVERFLOW: "Specification Details" +144px | "Buyer Benefit" +278px | "Purva Symphony at The Sound of Water" +144px | "Puravankara’s official project name and " +278px | "Seller-advertised five-bedroom resale" +144px | "Configuration and unit type are not conf" +278px | "Seller-reported 5,000 sq.ft" +144px | "Confirm the land measurement in the unit" +278px
+purva     tablet  h=10194  sec=3   imgs=8   alt=7   low=1   sm=118 ovf=0 sw=ok h1=[Purva Sounds of Water - Seller-Listed Five-Bedroom Vill]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+purva     desktop h=7763   sec=3   imgs=8   alt=7   low=1   sm=127 ovf=0 sw=ok h1=[Purva Sounds of Water - Seller-Listed Five-Bedroom Vill]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+qna       mobile  h=2972   sec=0   imgs=0   alt=0   low=1   sm=13  ovf=0 sw=ok h1=[Bengaluru Property Q&A: Plots, Villas & Prices]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Channel Partner" | 12px "+91 84319 09508" | 14px "LAKSHIE" | 14px "REAL ESTATE" | 10px "Bengaluru · Dubai" | 11px "Book Visit"
+qna       tablet  h=2382   sec=0   imgs=0   alt=0   low=1   sm=13  ovf=0 sw=ok h1=[Bengaluru Property Q&A: Plots, Villas & Prices]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai" | 12px "Book Visit"
+qna       desktop h=1896   sec=0   imgs=0   alt=0   low=1   sm=22  ovf=0 sw=ok h1=[Bengaluru Property Q&A: Plots, Villas & Prices]
+   LOW CONTRAST: [3.9 16px] Disclaimer and transparency
+   SMALL TEXT: 12px "Verified Developer Channel Partner" | 12px "Bengaluru & Dubai Luxury Real Estate Portfolio" | 12px "0% brokerage to buyers" | 12px "Hotline:" | 12px "+91 84319 09508" | 11px "Bengaluru · Dubai"
+
+--- ERRORS ---
+none

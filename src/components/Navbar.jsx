@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 
-export default function Navbar({ activePage, setActivePage }) {
+export default function Navbar({ activePage, setActivePage, scrollY = false }) {
   const { openSiteVisitModal } = usePlots();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,16 +37,16 @@ export default function Navbar({ activePage, setActivePage }) {
 
   // Prevent background scroll when mobile drawer is open
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
   }, [mobileMenuOpen]);
 
   const navItems = [
     { id: 'home', label: 'Home', href: '/' },
-    { id: 'purva-villa', label: 'Purva Sounds of Water Resale', href: '/purva-sounds-of-water', isSpecial: true, icon: Sparkles },
+    { id: 'purva-villa', label: 'Purva Resale', href: '/purva-sounds-of-water', isSpecial: true, icon: Sparkles },
     { id: 'plots', label: 'Plots in Bangalore', href: '/plots-in-bangalore', icon: Layers },
     { id: 'villas', label: 'Luxury Villas', href: '/luxury-villas-bangalore', icon: Home },
     { id: 'apartments', label: 'Apartments', href: '/?page=apartments', icon: Building2 },
@@ -63,15 +63,13 @@ export default function Navbar({ activePage, setActivePage }) {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'nav-glass shadow-2xl' : 'bg-[#0B1F3A]'
-    }`}>
+    <header className={`sticky top-0 z-50 transition-colors duration-300 ${isScrolled ? 'nav-glass' : 'bg-[#0B1F3A]'}`}>
       {/* 1. LUXURY PRESTIGE TOP BAR */}
-      <div className="bg-[#071527] text-white/80 text-[10px] sm:text-[11px] py-2 px-3 sm:px-6 lg:px-8 border-b border-white/10 overflow-hidden">
+      <div className="bg-[#071527] text-white/80 text-xs py-2 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Trust signals */}
-          <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] min-w-0">
+          <div className="flex items-center gap-2 sm:gap-3 text-xs min-w-0">
             <span className="inline-flex items-center gap-1.5 text-[#C8A34D] font-bold truncate">
               <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" />
               <span className="hidden sm:inline">Verified Developer Channel Partner</span>
@@ -82,13 +80,13 @@ export default function Navbar({ activePage, setActivePage }) {
               Bengaluru & Dubai Luxury Real Estate Portfolio
             </span>
             <span className="hidden lg:inline text-white/30">•</span>
-            <span className="hidden lg:inline text-emerald-400 font-semibold shrink-0">
-              0% Brokerage to Buyers
+            <span className="hidden lg:inline text-white/60 shrink-0">
+              0% brokerage to buyers
             </span>
           </div>
 
           {/* Direct WhatsApp Advisory Hotline */}
-          <div className="flex items-center gap-2 text-[10px] sm:text-[11px] shrink-0">
+          <div className="flex items-center gap-2 text-xs shrink-0">
             <span className="text-white/50 hidden md:inline">Hotline:</span>
             <a
               href={whatsappUrl}
@@ -103,17 +101,17 @@ export default function Navbar({ activePage, setActivePage }) {
         </div>
       </div>
 
-      {/* 2. ARCHITECTURAL NAVIGATION BAR */}
-      <nav className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-1.5 sm:gap-4">
+      {/* Main navigation */}
+      <nav aria-label="Main navigation" className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-20 flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Brand Logo */}
         <button
           onClick={() => handleNavClick('home')}
           className="flex items-center gap-1.5 sm:gap-3 group text-left shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A34D] rounded-xl"
-          aria-label="Premium Properties Home"
+          aria-label="Lakshie Real Estate home"
         >
           {/* Architectural Crest Symbol */}
-          <div className="w-8 h-8 min-[360px]:w-9 min-[360px]:h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#DFC06E] via-[#C8A34D] to-[#A6832A] p-0.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-[#C8A34D] group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
             <div className="w-full h-full bg-[#0B1F3A] rounded-[9px] flex items-center justify-center">
               <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#C8A34D] group-hover:rotate-45 transition-transform duration-500" />
             </div>
@@ -122,20 +120,20 @@ export default function Navbar({ activePage, setActivePage }) {
           <div className="space-y-0.5 min-w-0">
             <div className="flex items-center gap-1 sm:gap-1.5 leading-none">
               <span className="text-xs min-[360px]:text-sm sm:text-xl font-black tracking-tight text-white font-heading">
-                PREMIUM
+                LAKSHIE
               </span>
               <span className="text-xs min-[360px]:text-sm sm:text-xl font-black tracking-tight text-[#C8A34D] font-heading">
-                PROPERTIES
+                REAL ESTATE
               </span>
             </div>
-            <p className="text-[7.5px] min-[360px]:text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-[#C8A34D] font-bold font-mono">
-              BENGALURU • DUBAI
+            <p className="hidden min-[360px]:block text-[10px] sm:text-[11px] uppercase tracking-[0.12em] text-[#C8A34D] font-bold">
+              Bengaluru · Dubai
             </p>
           </div>
         </button>
 
         {/* 3. DESKTOP NAVIGATION LINKS */}
-        <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
+        <div className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           {navItems.map((item) => {
             const isActive = activePage === item.id || 
               (item.id === 'plots' && activePage === 'plots') ||
@@ -143,6 +141,9 @@ export default function Navbar({ activePage, setActivePage }) {
               (item.id === 'apartments' && activePage === 'apartments');
 
             const isSpecial = item.isSpecial;
+            // Secondary pages stay in the mobile drawer and footer until the bar is wide
+            // enough to hold them, so the primary action never gets pushed off the edge.
+            const isSecondary = ['interior', 'about', 'contact'].includes(item.id);
 
             return (
               <a
@@ -156,15 +157,15 @@ export default function Navbar({ activePage, setActivePage }) {
                     }
                   }
                 }}
-                className={`relative px-2.5 py-1.5 text-xs transition-all cursor-pointer rounded-lg font-medium flex items-center gap-1.5 ${
+                className={`relative whitespace-nowrap px-2.5 py-2 text-sm transition-colors cursor-pointer font-medium flex items-center gap-1.5 xl:px-3 ${isSecondary ? 'hidden 2xl:flex' : ''} ${
                   isSpecial
-                    ? 'bg-[#C8A34D]/20 text-[#C8A34D] border border-[#C8A34D]/40 font-bold hover:bg-[#C8A34D]/30 shadow-sm'
+                    ? 'text-[#C8A34D] font-semibold hover:text-[#DFC06E]'
                     : isActive
-                    ? 'text-[#C8A34D] font-bold bg-white/5'
-                    : 'text-white/80 hover:text-white hover:bg-white/5'
+                    ? 'text-[#C8A34D] font-semibold'
+                    : 'text-white/80 hover:text-white'
                 }`}
               >
-                {isSpecial && <Sparkles className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" />}
+                {isSpecial && <Sparkles className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" aria-hidden="true" />}
                 <span>{item.label}</span>
                 {isActive && !isSpecial && (
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D]" />
@@ -178,9 +179,9 @@ export default function Navbar({ activePage, setActivePage }) {
         <div className="hidden lg:flex items-center shrink-0">
           <button
             onClick={() => openSiteVisitModal()}
-            className="btn-gold text-xs py-2.5 px-5 shadow-md cursor-pointer"
+            className="btn-gold text-sm py-2.5 px-5 cursor-pointer"
           >
-            <span>Book Site Visit</span>
+            <span>Book a visit</span>
           </button>
         </div>
 
@@ -195,6 +196,8 @@ export default function Navbar({ activePage, setActivePage }) {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
             className="p-1.5 min-[360px]:p-2 sm:p-2.5 rounded-xl text-white hover:text-[#C8A34D] bg-white/10 border border-white/15 cursor-pointer transition-colors focus:outline-none"
             aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Navigation Menu'}
           >
@@ -213,7 +216,7 @@ export default function Navbar({ activePage, setActivePage }) {
           />
 
           {/* Slide-in Drawer */}
-          <div className="fixed inset-y-0 right-0 max-w-sm w-full bg-[#0B1F3A] border-l border-[#C8A34D]/30 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto text-white cad-grid">
+          <div id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Site navigation" className="fixed inset-y-0 right-0 max-w-sm w-full bg-[#0B1F3A] border-l border-[#C8A34D]/30 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto text-white">
             
             <div className="space-y-6">
               {/* Top Header */}
@@ -223,8 +226,8 @@ export default function Navbar({ activePage, setActivePage }) {
                     <Compass className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-extrabold text-sm text-white font-heading block">PREMIUM PROPERTIES</span>
-                    <span className="text-[10px] text-[#C8A34D] font-mono">BENGALURU • DUBAI</span>
+                    <span className="font-extrabold text-sm text-white font-heading block">LAKSHIE REAL ESTATE</span>
+                    <span className="text-xs text-[#C8A34D]">Bengaluru · Dubai</span>
                   </div>
                 </div>
 
@@ -239,8 +242,8 @@ export default function Navbar({ activePage, setActivePage }) {
 
               {/* Navigation Items List */}
               <div className="space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-white/40 block mb-2">
-                  NAVIGATION
+                <span className="text-sm font-semibold text-white/75 block mb-2">
+                  Explore properties and services
                 </span>
                 
                 {navItems.map((item) => {
@@ -299,7 +302,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 <span>Call Hotline: {displayPhone}</span>
               </a>
 
-              <div className="text-center pt-1 text-[10px] text-white/50 font-mono">
+              <div className="text-center pt-1 text-xs text-white/70">
                 Bengaluru & Dubai • 0% Brokerage
               </div>
             </div>

@@ -1,0 +1,1630 @@
+{
+ "url": "http://localhost:3211/plots-in-bangalore/",
+ "at": "2026-10-29T07:48:36.148Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.28,
+    0.23,
+    0.23,
+    0.24,
+    0.22
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 4073,
+     "screens": 4.5,
+     "words": 867,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Residential plots in Bengaluru",
+     "words": 4,
+     "chars": 30,
+     "lines": 1,
+     "size": 32,
+     "vw": 2.2,
+     "font": "Times New Roman",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.99,
+     "top": 293,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Residential plots in Bengaluru",
+     "words": 4,
+     "lines": 1,
+     "size": 32,
+     "font": "Times New Roman"
+    },
+    "headings": [
+     {
+      "text": "Residential plots in Bengaluru",
+      "words": 4,
+      "chars": 30,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.99,
+      "top": 293,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      19,
+      24,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.2,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 178,
+     "max": {
+      "size": 32,
+      "vw": 2.2,
+      "font": "Times New Roman",
+      "text": "Residential plots in Bengaluru"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "BIAAPA & RERA Approved • 0% Brokerage",
+      "above": "Residential plots in Bengaluru",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 254
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.88
+      },
+      {
+       "color": "#0000ee",
+       "share": 0.12
+      }
+     ],
+     "button": {
+      "bg": "#f0f0f0",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.94
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 0,
+     "radius": 0,
+     "height": 82,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 218,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 4073,
+    "margins": {
+     "left": 8,
+     "right": 230
+    },
+    "sections": [
+     {
+      "sel": "header.sticky.top-0",
+      "tag": "header",
+      "top": 8,
+      "height": 218,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 8,
+      "right": 536,
+      "textLeft": 8,
+      "textRight": 536,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#0B1F3A].text-white",
+      "tag": "section",
+      "top": 293,
+      "height": 140,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Residential plots in Bengaluru",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 8,
+      "right": 50,
+      "textLeft": 8,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.max-w-7xl.mx-auto",
+      "tag": "div",
+      "top": 453,
+      "height": 1823,
+      "words": 275,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Open Plots Portfolio",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 48,
+      "textLeft": 8,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 2297,
+      "height": 193,
+      "words": 113,
+      "media": 0,
+      "middle": 4,
+      "heading": {
+       "text": "Plot prices by Bengaluru corridor",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 307,
+      "textLeft": 8,
+      "textRight": 307,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#F8F8F5].py-16",
+      "tag": "section",
+      "top": 2509,
+      "height": 526,
+      "words": 119,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Buying a plot in Bengaluru",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 773,
+      "textLeft": 8,
+      "textRight": 13,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 3063,
+      "height": 993,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 19,
+       "tag": "h3"
+      },
+      "left": 8,
+      "right": 137,
+      "textLeft": 8,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Residential plots in Bengaluru",
+      "size": 32,
+      "top": 293,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Hotline:",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Residential plots in Bengaluru",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Discover pre-cleared, high-appreciation residentia",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Open Plots Portfolio",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Browse verified open plot townships, custom villa ",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Search Keywords",
+      "side": "left",
+      "px": 8
+     }
+    ],
+    "edges": [
+     {
+      "x": 8,
+      "n": 14
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.25,
+    "voidBox": {
+     "x": 540,
+     "y": 540,
+     "w": 900,
+     "h": 360
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.39,
+    0.44,
+    0.51,
+    0.35,
+    0.32
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4379,
+     "screens": 4.3,
+     "words": 867,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Residential plots in Bengaluru",
+     "words": 4,
+     "chars": 30,
+     "lines": 1,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Times New Roman",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.98,
+     "top": 329,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Residential plots in Bengaluru",
+     "words": 4,
+     "lines": 1,
+     "size": 32,
+     "font": "Times New Roman"
+    },
+    "headings": [
+     {
+      "text": "Residential plots in Bengaluru",
+      "words": 4,
+      "chars": 30,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.98,
+      "top": 329,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      19,
+      24,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.2,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 94,
+     "max": {
+      "size": 32,
+      "vw": 4.2,
+      "font": "Times New Roman",
+      "text": "Residential plots in Bengaluru"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "BIAAPA & RERA Approved • 0% Brokerage",
+      "above": "Residential plots in Bengaluru",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 290
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.88
+      },
+      {
+       "color": "#0000ee",
+       "share": 0.12
+      }
+     ],
+     "button": {
+      "bg": "#f0f0f0",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.94
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 0,
+     "radius": 0,
+     "height": 82,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 254,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4379,
+    "margins": {
+     "left": 8,
+     "right": 27
+    },
+    "sections": [
+     {
+      "sel": "header.sticky.top-0",
+      "tag": "header",
+      "top": 8,
+      "height": 254,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 8,
+      "right": 66,
+      "textLeft": 8,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#0B1F3A].text-white",
+      "tag": "section",
+      "top": 329,
+      "height": 158,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Residential plots in Bengaluru",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 8,
+      "right": 25,
+      "textLeft": 8,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.max-w-7xl.mx-auto",
+      "tag": "div",
+      "top": 507,
+      "height": 1895,
+      "words": 275,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Open Plots Portfolio",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 29,
+      "textLeft": 8,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 2423,
+      "height": 283,
+      "words": 113,
+      "media": 0,
+      "middle": 22,
+      "heading": {
+       "text": "Plot prices by Bengaluru corridor",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 27,
+      "textLeft": 8,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#F8F8F5].py-16",
+      "tag": "section",
+      "top": 2725,
+      "height": 562,
+      "words": 119,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Buying a plot in Bengaluru",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 27,
+      "textLeft": 8,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 3315,
+      "height": 1047,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 19,
+       "tag": "h3"
+      },
+      "left": 8,
+      "right": 19,
+      "textLeft": 8,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Residential plots in Bengaluru",
+      "size": 32,
+      "top": 329,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Bengaluru & Dubai Luxury Real Estate Portfolio",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Hotline:",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Interior Design",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Residential plots in Bengaluru",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Discover pre-cleared, high-appreciation residentia",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Open Plots Portfolio",
+      "side": "left",
+      "px": 8
+     }
+    ],
+    "edges": [
+     {
+      "x": 8,
+      "n": 14
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.48,
+    0.67,
+    0.5,
+    0.54,
+    0.53,
+    0.46,
+    0.49
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 509,
+     "h": 1100
+    },
+    "page": {
+     "height": 5396,
+     "screens": 4.9,
+     "words": 867,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Residential plots in Bengaluru",
+     "words": 4,
+     "chars": 30,
+     "lines": 2,
+     "size": 32,
+     "vw": 6.3,
+     "font": "Times New Roman",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.73,
+     "top": 365,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Residential plots in Bengaluru",
+     "words": 4,
+     "lines": 2,
+     "size": 32,
+     "font": "Times New Roman"
+    },
+    "headings": [
+     {
+      "text": "Residential plots in Bengaluru",
+      "words": 4,
+      "chars": 30,
+      "lines": 2,
+      "size": 32,
+      "vw": 6.3,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 365,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Open Plots Portfolio",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 24,
+      "vw": 4.7,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 634,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plot prices by Bengaluru corridor",
+      "words": 5,
+      "chars": 33,
+      "lines": 1,
+      "size": 24,
+      "vw": 4.7,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 2792,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Buying a plot in Bengaluru",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 24,
+      "vw": 4.7,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 3400,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      19,
+      24,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.2,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 47,
+     "max": {
+      "size": 32,
+      "vw": 6.3,
+      "font": "Times New Roman",
+      "text": "Residential plots in Bengaluru"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "BIAAPA & RERA Approved • 0% Brokerage",
+      "above": "Residential plots in Bengaluru",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 326
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.88
+      },
+      {
+       "color": "#0000ee",
+       "share": 0.12
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.15
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 290,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 509,
+     "h": 1100
+    },
+    "pageH": 5396,
+    "margins": {
+     "left": 8,
+     "right": 97
+    },
+    "sections": [
+     {
+      "sel": "header.sticky.top-0",
+      "tag": "header",
+      "top": 8,
+      "height": 290,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 8,
+      "right": 138,
+      "textLeft": 8,
+      "textRight": 138,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#0B1F3A].text-white",
+      "tag": "section",
+      "top": 365,
+      "height": 249,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Residential plots in Bengaluru",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 8,
+      "right": 144,
+      "textLeft": 8,
+      "textRight": 144,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.max-w-7xl.mx-auto",
+      "tag": "div",
+      "top": 634,
+      "height": 2137,
+      "words": 275,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Open Plots Portfolio",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 131,
+      "textLeft": 8,
+      "textRight": 131,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 2792,
+      "height": 589,
+      "words": 113,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Plot prices by Bengaluru corridor",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 92,
+      "textLeft": 8,
+      "textRight": 92,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#F8F8F5].py-16",
+      "tag": "section",
+      "top": 3400,
+      "height": 706,
+      "words": 119,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Buying a plot in Bengaluru",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 127,
+      "textLeft": 8,
+      "textRight": 137,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 4134,
+      "height": 1245,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 19,
+       "tag": "h3"
+      },
+      "left": 8,
+      "right": 130,
+      "textLeft": 8,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Residential plots in Bengaluru",
+      "size": 32,
+      "top": 365,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Verified Channel Partner",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Bengaluru & Dubai Luxury Real Estate Portfolio",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Hotline:",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Plots in Bangalore",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Dubai Properties",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Residential plots in Bengaluru",
+      "side": "left",
+      "px": 8
+     }
+    ],
+    "edges": [
+     {
+      "x": 8,
+      "n": 14
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"BIAAPA & RERA Approved • 0% Brokerage\" above \"Residential plots in Bengaluru\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: 🏞 📐 🏡 ✨ 🏢 🌍 🎨",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "default-link",
+   "width": 1440,
+   "message": "Browser-default blue/purple link colour is showing.",
+   "fix": "Style every link: inherit the text colour and mark it with weight, underline offset, or the accent.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 1440,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 2 picture(s) on the page (2 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 178 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 32px (2.2vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 8px from the left edge but only to 230px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure).",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 1440,
+   "message": "A section keeps its content on one side and leaves 773px of the width empty: \"Buying a plot in Bengaluru\".",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence."
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 1440,
+   "message": "8 text block(s) sit within 16px of the screen edge: \"Hotline:\" (8px from the left); \"Home\" (8px from the left); \"Home\" (8px from the left); \"Residential plots in Bengaluru\" (8px from the left)",
+   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 0 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 768,
+   "message": "The margins differ: 8px on the left, 27px on the right, at 768px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\plots-before\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

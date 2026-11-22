@@ -1,143 +1,201 @@
 'use client';
 
 import React from 'react';
-import { Sparkles, CheckCircle2, MessageCircle, ShieldCheck, Download, Award, Home } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { INTERIOR_PACKAGES } from '../data/plotsData';
+
+const WORK_PHOTOS = [
+  {
+    src: '/images/purva-sounds-of-water/purva-villa-handcrafted-kitchen.jpeg',
+    alt: 'Modular kitchen with island, dark cabinetry and stone worktop'
+  },
+  {
+    src: '/images/purva-sounds-of-water/purva-villa-balcony-terrace.jpeg',
+    alt: 'Covered balcony terrace with seating and timber ceiling'
+  },
+  {
+    src: '/images/purva-sounds-of-water/purva-villa-swimming-pool.jpeg',
+    alt: 'Private pool bordered by paving and planting'
+  }
+];
+
+const SCOPE = [
+  {
+    title: 'Modular kitchen and dining',
+    copy: 'Granite or quartz worktops, soft-close drawers, tandem boxes, chimney cut-outs and dado tiles.'
+  },
+  {
+    title: 'Bedrooms and living areas',
+    copy: 'Floor-to-ceiling wardrobes, laminate flooring, television units and accent panelling.'
+  },
+  {
+    title: 'Civil, electrical and lighting',
+    copy: 'RCC frame masonry, UPVC windows, cove lighting, CCTV wiring and car charging points.'
+  }
+];
 
 export default function InteriorDesignView({ setActivePage }) {
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
 
   return (
-    <div className="space-y-16 py-10 bg-[#F8F8F5]">
-      {/* Hero Banner */}
-      <section className="relative py-20 bg-[#0B1F3A] text-white border-b border-[#C8A34D]/30 overflow-hidden cad-grid">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#C8A34D]" />
-            Vinra Interiors & Renovations Pvt Ltd
-          </div>
+    <div className="bg-[#F8F8F5]">
+      {/* Hero */}
+      <section className="bg-[#0B1F3A] text-white">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-16">
+            <div className="space-y-6">
+              <h1 className="font-heading text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+                Interiors, <span className="text-[#C8A34D]">priced by the sq ft</span>
+              </h1>
+              <p className="max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
+                Modular interiors, elevation planning and material execution for plot owners and villa buyers across Bengaluru, delivered by Vinra Interiors and Renovations.
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi Vinra Interiors! I want to request an interior design quote and 3D consultation.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold cursor-pointer px-7 py-4 text-sm"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#0B1F3A]" aria-hidden="true" />
+                  Book a consultation
+                </a>
+                <a
+                  href={`tel:+${whatsappNumber}`}
+                  className="text-sm font-semibold text-[#C8A34D] transition-colors hover:text-white"
+                >
+                  or call {displayPhone}
+                </a>
+              </div>
+            </div>
 
-          <h1 className="text-4xl sm:text-6xl font-black font-heading leading-tight max-w-4xl">
-            Turnkey <span className="gold-gradient-text">Interior Design & Villa Construction</span>
-          </h1>
-
-          <p className="text-base sm:text-lg text-white/80 max-w-2xl font-light leading-relaxed">
-            Custom modular interiors, 3D elevation planning, and premium material execution for plot owners and luxury villa buyers across Bengaluru.
-          </p>
-
-          <div className="flex flex-wrap gap-4 pt-2">
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi Vinra Interiors! I want to request an interior design quote & 3D consultation.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold py-4 px-8 cursor-pointer"
-            >
-              <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-              Book Interior Consultation ({displayPhone})
-            </a>
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src={WORK_PHOTOS[0].src}
+                alt={WORK_PHOTOS[0].alt}
+                width={1000}
+                height={760}
+                className="h-[300px] w-full object-cover sm:h-[400px] lg:h-[460px]"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Interior Packages Grid (Silver, Gold, Platinum) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-            Turnkey Interior Design Packages
-          </h2>
-          <div className="divider-gold mx-auto" />
-          <p className="text-[#555555] text-xs sm:text-sm">
-            Transparent sq.ft pricing with factory-finish modular woodworking, Century/Greenply materials, and HETTICH/HAFELE hardware.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {INTERIOR_PACKAGES.map((pkg, i) => (
-            <div
-              key={i}
-              className={`glass-card p-8 space-y-6 flex flex-col justify-between relative ${
-                pkg.name === 'Gold Package' ? 'ring-2 ring-[#C8A34D] shadow-2xl scale-105 bg-white' : ''
-              }`}
-            >
-              {pkg.name === 'Gold Package' && (
-                <span className="absolute -top-3 right-6 bg-[#C8A34D] text-[#0B1F3A] text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                  MOST POPULAR VILLA CHOICE
-                </span>
-              )}
-
-              <div className="space-y-4">
-                <div className="border-b border-[#0B1F3A]/10 pb-4">
-                  <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">{pkg.name}</h3>
-                  <div className="text-2xl font-black text-[#C8A34D] mt-1">{pkg.dryAreaPrice}</div>
-                  <div className="text-[11px] text-[#555555]">Dry Area Costing (Wet Area: {pkg.wetAreaPrice})</div>
-                </div>
-
-                <ul className="space-y-2.5 text-xs text-[#555555]">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#0B1F3A] shrink-0 mt-0.5" />
-                    <span><strong>Core Material (Dry):</strong> {pkg.coreDry}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#0B1F3A] shrink-0 mt-0.5" />
-                    <span><strong>Core Material (Wet):</strong> {pkg.coreWet}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#0B1F3A] shrink-0 mt-0.5" />
-                    <span><strong>Finish Type:</strong> {pkg.finish}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#0B1F3A] shrink-0 mt-0.5" />
-                    <span><strong>Hardware & Hinges:</strong> {pkg.hardware}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#0B1F3A] shrink-0 mt-0.5" />
-                    <span><strong>Kitchen Accessories:</strong> {pkg.accessories}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#0B1F3A] shrink-0 mt-0.5" />
-                    <span><strong>Handles:</strong> {pkg.handles}</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-4 border-t border-[#0B1F3A]/10">
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Vinra Interiors! I want details on the ${pkg.name}.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-gold w-full text-center text-xs py-3.5 cursor-pointer"
-                >
-                  Select {pkg.name}
-                </a>
-              </div>
-            </div>
+      {/* Work photographs */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-6 sm:grid-cols-2">
+          {WORK_PHOTOS.slice(1).map((photo) => (
+            <figure key={photo.src} className="overflow-hidden rounded-lg">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className="h-72 w-full object-cover sm:h-80"
+              />
+            </figure>
           ))}
         </div>
       </section>
 
-      {/* Services Breakdown */}
-      <section className="bg-white py-16 border-y border-[#0B1F3A]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="text-2xl font-extrabold text-[#0B1F3A] font-heading">Complete Scope of Work</h2>
-            <p className="text-xs text-[#555555]">Modular Kitchens • Master Wardrobes • False Ceiling • Civil Masonry • Electrical & Lighting</p>
+      {/* Packages */}
+      <section className="border-t border-[#0B1F3A]/10 bg-white py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-[#0B1F3A]">
+            Three turnkey packages
+          </h2>
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#555555]">
+            Transparent per-square-foot pricing with factory-finish modular woodwork, Century and Greenply boards, and Hettich or Hafele hardware.
+          </p>
+
+          {/* A comparison table is the honest shape for three packages priced line by line. */}
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full min-w-[720px] border-collapse text-left">
+              <caption className="sr-only">Interior package comparison: Silver, Gold and Platinum</caption>
+              <thead>
+                <tr className="bg-[#0B1F3A] text-white">
+                  <th scope="col" className="rounded-tl-lg px-5 py-4 text-base font-semibold">
+                    Included
+                  </th>
+                  {INTERIOR_PACKAGES.map((pkg, i) => (
+                    <th
+                      key={pkg.name}
+                      scope="col"
+                      className={`px-5 py-4 text-base font-semibold ${i === INTERIOR_PACKAGES.length - 1 ? 'rounded-tr-lg' : ''}`}
+                    >
+                      {pkg.name.replace(' Package', '')}
+                      {pkg.name === 'Gold Package' && (
+                        <span className="mt-1 block text-sm font-normal text-[#C8A34D]">Most chosen</span>
+                      )}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-[#F8F8F5]">
+                  <th scope="row" className="px-5 py-4 text-base font-semibold text-[#0B1F3A]">Dry area rate</th>
+                  {INTERIOR_PACKAGES.map((pkg) => (
+                    <td key={pkg.name} className="px-5 py-4 text-base font-bold tabular-nums text-[#0B1F3A]">
+                      {pkg.dryAreaPrice}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="bg-white">
+                  <th scope="row" className="px-5 py-4 text-base font-semibold text-[#0B1F3A]">Wet area rate</th>
+                  {INTERIOR_PACKAGES.map((pkg) => (
+                    <td key={pkg.name} className="px-5 py-4 text-base tabular-nums text-[#555555]">
+                      {pkg.wetAreaPrice}
+                    </td>
+                  ))}
+                </tr>
+                {[
+                  ['Core material, dry', 'coreDry'],
+                  ['Core material, wet', 'coreWet'],
+                  ['Finish', 'finish'],
+                  ['Hardware and hinges', 'hardware'],
+                  ['Kitchen accessories', 'accessories'],
+                  ['Handles', 'handles']
+                ].map(([label, key], rowIndex) => (
+                  <tr key={label} className={rowIndex % 2 === 0 ? 'bg-[#F8F8F5]' : 'bg-white'}>
+                    <th scope="row" className="px-5 py-4 text-base font-semibold text-[#0B1F3A]">{label}</th>
+                    {INTERIOR_PACKAGES.map((pkg) => (
+                      <td key={pkg.name} className="px-5 py-4 text-base leading-relaxed text-[#555555]">
+                        {pkg[key]}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-[#555555]">
-            <div className="p-5 rounded-2xl bg-[#F8F8F5] border border-[#0B1F3A]/10 space-y-2">
-              <h4 className="font-bold text-[#0B1F3A] text-sm font-heading">Modular Kitchen & Dining</h4>
-              <p>Granite/Quartz countertops, soft-close drawers, tandem boxes, chimney cutouts & dado tiles.</p>
-            </div>
-            <div className="p-5 rounded-2xl bg-[#F8F8F5] border border-[#0B1F3A]/10 space-y-2">
-              <h4 className="font-bold text-[#0B1F3A] text-sm font-heading">Bedrooms & Living Units</h4>
-              <p>Floor-to-ceiling wardrobes, wooden laminate flooring, TV entertainment units & accent panelling.</p>
-            </div>
-            <div className="p-5 rounded-2xl bg-[#F8F8F5] border border-[#0B1F3A]/10 space-y-2">
-              <h4 className="font-bold text-[#0B1F3A] text-sm font-heading">Civil, Electrical & Lighting</h4>
-              <p>M25 RCC frame masonry, UPVC windows, cove lighting, CCTV wiring, and car charging points.</p>
-            </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {INTERIOR_PACKAGES.map((pkg) => (
+              <a
+                key={pkg.name}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Vinra Interiors! I want details on the ${pkg.name}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-[#0B1F3A]/20 px-5 py-3 text-sm font-bold text-[#0B1F3A] transition-colors hover:border-[#0B1F3A]"
+              >
+                Ask about {pkg.name.replace(' Package', '')}
+              </a>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* Scope */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 className="font-heading text-3xl font-bold text-[#0B1F3A]">What the work covers</h2>
+        <div className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-3">
+          {SCOPE.map((item) => (
+            <div key={item.title} className="space-y-2">
+              <h3 className="font-heading text-lg font-bold text-[#0B1F3A]">{item.title}</h3>
+              <p className="text-base leading-relaxed text-[#555555]">{item.copy}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

@@ -11,23 +11,19 @@ export default function FloatingActions() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultText)}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      {/* Floating WhatsApp CTA Only */}
+    <div className="fixed bottom-4 right-4 z-40 sm:bottom-6 sm:right-6">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 border border-white/20 cursor-pointer"
+        className="group relative flex min-h-12 min-w-12 items-center justify-center rounded-full border border-[#C8A34D] bg-[#0B1F3A] text-[#C8A34D] transition-transform duration-300 hover:-translate-y-1 hover:bg-[#17365E] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C8A34D] active:translate-y-0 sm:min-h-0 sm:min-w-0 sm:gap-3 sm:px-4 sm:py-3"
         aria-label={`Chat on WhatsApp ${displayPhone}`}
       >
-        <div className="relative flex items-center justify-center">
-          <MessageCircle className="w-6 h-6 fill-white text-[#25D366]" />
-        </div>
-        
-        <div className="text-left leading-tight hidden sm:block">
-          <div className="text-[10px] uppercase font-bold tracking-wider text-emerald-100">Property Advisory</div>
-          <div className="text-xs font-black tracking-wide">WhatsApp: {displayPhone}</div>
-        </div>
+        <MessageCircle className="h-6 w-6 text-[#C8A34D]" aria-hidden="true" />
+        <span className="hidden text-left leading-tight lg:block">
+          <span className="block text-sm font-bold text-[#C8A34D]">WhatsApp us</span>
+          <span className="block text-xs font-medium text-white/70">{displayPhone}</span>
+        </span>
       </a>
     </div>
   );

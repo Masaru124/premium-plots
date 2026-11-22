@@ -1,0 +1,1390 @@
+{
+ "url": "http://127.0.0.1:3222/?page=about",
+ "at": "2026-10-29T09:09:53.257Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    1,
+    0.99,
+    0.97
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 7,
+    "transitions": 3,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2463,
+     "screens": 2.7,
+     "words": 470,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 21,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villa-front-portico.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A Bengaluru advisory desk, not a listings site",
+     "words": 8,
+     "chars": 46,
+     "lines": 2,
+     "size": 60,
+     "vw": 4.2,
+     "font": "Playfair Display",
+     "weight": 900,
+     "tracking": -0.025,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 268,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "A Bengaluru advisory desk, not a listings site",
+     "words": 8,
+     "lines": 2,
+     "size": 60,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "A Bengaluru advisory desk, not a listings site",
+      "words": 8,
+      "chars": 46,
+      "lines": 2,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 268,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "How we work",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.32,
+      "top": 828,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Speak to an advisor",
+      "words": 4,
+      "chars": 19,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 1529,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      30,
+      60
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 14,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 96,
+     "max": {
+      "size": 60,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "text": "A Bengaluru advisory desk,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.01,
+     "smallText": 10
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 112,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.74
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.1
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.09
+      },
+      {
+       "color": "#555555",
+       "share": 0.05
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 10,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 2,
+     "heroLabels": [
+      "BOOK A VISIT",
+      "WhatsApp us +91 84319 09508"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "section.border-t.border-[#0B1F3A]/10 1440px",
+      "footer.bg-[#0B1F3A].text-white/70 1440px",
+      "div.grid.grid-cols-1 1216px"
+     ],
+     "outlinedBoxes": 2,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.18
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2463,
+    "margins": {
+     "left": 112,
+     "right": 112
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 1663,
+      "words": 269,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "A Bengaluru advisory desk,",
+       "size": 60,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 80,
+      "textLeft": 100,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 1663,
+      "height": 800,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property portfolios",
+       "size": 14,
+       "tag": "h3"
+      },
+      "left": 112,
+      "right": 112,
+      "textLeft": 112,
+      "textRight": 112,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A Bengaluru advisory desk, not a listings site",
+      "size": 60,
+      "top": 268,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 112,
+      "n": 7
+     },
+     {
+      "x": 152,
+      "n": 2
+     },
+     {
+      "x": 250,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 780,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    1,
+    1,
+    0.89,
+    0.91
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 7,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3199,
+     "screens": 3.1,
+     "words": 448,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 21,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villa-front-portico.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A Bengaluru advisory desk, not a listings site",
+     "words": 8,
+     "chars": 46,
+     "lines": 2,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Playfair Display",
+     "weight": 900,
+     "tracking": -0.025,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 192,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "A Bengaluru advisory desk, not a listings site",
+     "words": 8,
+     "lines": 2,
+     "size": 48,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "A Bengaluru advisory desk, not a listings site",
+      "words": 8,
+      "chars": 46,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 192,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "How we work",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1131,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Speak to an advisor",
+      "words": 4,
+      "chars": 19,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.75,
+      "top": 1920,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      30,
+      48
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 14,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 80,
+     "max": {
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "text": "A Bengaluru advisory desk,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.01,
+     "smallText": 8
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 112,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.74
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.11
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.09
+      },
+      {
+       "color": "#555555",
+       "share": 0.05
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 8,
+     "height": 32,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 1,
+     "heroLabels": [
+      "Book Visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "section.border-t.border-[#0B1F3A]/10 768px",
+      "footer.bg-[#0B1F3A].text-white/70 768px",
+      "div.grid.grid-cols-1 720px"
+     ],
+     "outlinedBoxes": 2,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3199,
+    "margins": {
+     "left": 24,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 2126,
+      "words": 253,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "A Bengaluru advisory desk,",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 2126,
+      "height": 1074,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property portfolios",
+       "size": 14,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A Bengaluru advisory desk, not a listings site",
+      "size": 48,
+      "top": 192,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 7
+     },
+     {
+      "x": 64,
+      "n": 2
+     },
+     {
+      "x": 134,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    1,
+    1,
+    1,
+    0.88,
+    1
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 7,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4104,
+     "screens": 4.9,
+     "words": 438,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 21,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villa-front-portico.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A Bengaluru advisory desk, not a listings site",
+     "words": 8,
+     "chars": 46,
+     "lines": 2,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Playfair Display",
+     "weight": 900,
+     "tracking": -0.025,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 168,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "A Bengaluru advisory desk, not a listings site",
+     "words": 8,
+     "lines": 2,
+     "size": 36,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "A Bengaluru advisory desk, not a listings site",
+      "words": 8,
+      "chars": 46,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 168,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "How we work",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1026,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Speak to an advisor",
+      "words": 4,
+      "chars": 19,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2107,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      9,
+      11,
+      12,
+      13,
+      14,
+      16,
+      20,
+      24,
+      30,
+      36
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 14,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Playfair Display",
+      "text": "A Bengaluru advisory desk,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.01,
+     "smallText": 7
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 112,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2042,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.74
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.11
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.08
+      },
+      {
+       "color": "#555555",
+       "share": 0.05
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 8,
+     "height": 29,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 1,
+     "heroLabels": [
+      "Book Visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "section.border-t.border-[#0B1F3A]/10 390px",
+      "footer.bg-[#0B1F3A].text-white/70 390px",
+      "div.grid.grid-cols-1 358px"
+     ],
+     "outlinedBoxes": 2,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4104,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 2335,
+      "words": 244,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "A Bengaluru advisory desk,",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 12,
+      "right": 12,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 2335,
+      "height": 1770,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property portfolios",
+       "size": 14,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 28,
+      "textLeft": 16,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A Bengaluru advisory desk, not a listings site",
+      "size": 36,
+      "top": 168,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 7
+     },
+     {
+      "x": 40,
+      "n": 2
+     },
+     {
+      "x": 99,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "3 thin rule(s)/divider line(s): section.border-t.border-[#0B1F3A]/10 1440px | footer.bg-[#0B1F3A].text-white/70 1440px | div.grid.grid-cols-1 1216px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "2 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #f8f8f5).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 14px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 1 picture(s) on the page (1 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 96 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "10 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 60px (4.2vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 10 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 390,
+   "message": "10 different font sizes (9, 11, 12, 13, 14, 16, 20, 24, 30, 36).",
+   "fix": "A page needs about five: display, heading, lead, body, small."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\audit2-pageabout\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\audit2-pageabout\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\audit2-pageabout\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\audit2-pageabout\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\audit2-pageabout\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\audit2-pageabout\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

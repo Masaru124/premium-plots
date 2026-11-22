@@ -27,7 +27,7 @@ export default function PlotMasterplanViewer({ project }) {
 
   if (layoutGrid.length === 0) {
     return (
-      <div className="bg-white border border-[#0B1F3A]/10 rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 text-center">
+      <div className="bg-white border border-[#0B1F3A]/10 rounded-2xl p-6 sm:p-8 space-y-4 text-center">
         <div className="w-12 h-12 rounded-xl bg-[#0B1F3A] text-[#C8A34D] flex items-center justify-center font-bold mx-auto">
           <Grid className="w-6 h-6" />
         </div>
@@ -49,7 +49,7 @@ export default function PlotMasterplanViewer({ project }) {
   }
 
   return (
-    <div className="bg-white border border-[#0B1F3A]/10 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6 relative overflow-hidden">
+    <div className="bg-white border border-[#0B1F3A]/10 rounded-2xl p-6 sm:p-8 space-y-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-80 h-80 bg-[#C8A34D]/5 rounded-full blur-3xl -z-0 pointer-events-none" />
 
       {/* Header Bar */}
@@ -125,7 +125,7 @@ export default function PlotMasterplanViewer({ project }) {
                   key={pt.plotNo}
                   onClick={() => setSelectedPlot(pt)}
                   className={`p-2.5 rounded-xl border flex flex-col items-center justify-center transition-all duration-200 relative group cursor-pointer ${styleClasses} ${
-                    isSelected ? 'ring-2 ring-[#C8A34D] bg-[#C8A34D] text-[#0B1F3A] font-extrabold scale-105 shadow-md z-20' : ''
+                    isSelected ? 'ring-2 ring-[#C8A34D] bg-[#C8A34D] text-[#0B1F3A] font-extrabold scale-105 z-20' : ''
                   }`}
                 >
                   <span className="text-xs font-bold tracking-tight">{pt.plotNo}</span>
@@ -143,7 +143,7 @@ export default function PlotMasterplanViewer({ project }) {
         </div>
 
         {/* Selected Plot Specifications Card */}
-        <div className="lg:col-span-5 bg-[#0B1F3A] text-white p-5 sm:p-6 rounded-2xl shadow-xl space-y-4 border border-[#C8A34D]/30 flex flex-col justify-between">
+        <div className="lg:col-span-5 bg-[#0B1F3A] text-white p-5 sm:p-6 rounded-2xl space-y-4 border border-[#C8A34D]/30 flex flex-col justify-between">
           {selectedPlot ? (
             <div className="space-y-4 flex flex-col justify-between h-full">
               <div className="space-y-4">
@@ -239,7 +239,7 @@ export default function PlotMasterplanViewer({ project }) {
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want to book a site visit for Unit #${selectedPlot.plotNo} (${selectedPlot.dimension}) in ${project?.title}.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-gold w-full py-3.5 px-4 text-xs font-extrabold flex items-center justify-center gap-2 cursor-pointer shadow-lg rounded-xl"
+                    className="btn-gold w-full py-3.5 px-4 text-xs font-extrabold flex items-center justify-center gap-2 cursor-pointer rounded-xl"
                   >
                     <MessageCircle className="w-4 h-4 fill-[#0B1F3A] shrink-0" />
                     <span className="truncate">Reserve Unit #{selectedPlot.plotNo}</span>

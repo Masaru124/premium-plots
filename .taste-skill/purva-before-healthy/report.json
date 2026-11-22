@@ -1,0 +1,2126 @@
+{
+ "url": "http://localhost:3212/purva-sounds-of-water/",
+ "at": "2026-10-29T07:55:35.105Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.97,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.95
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 2,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7186,
+     "screens": 8,
+     "words": 1672,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 52,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-swimming-pool.jpeg",
+      "purva-villa-private-garden-outhouse.jpeg",
+      "purva-villa-balcony-terrace.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-kitchen-island.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏦",
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "chars": 56,
+     "lines": 2,
+     "size": 48,
+     "vw": 3.3,
+     "font": "Playfair Display",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 319,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "lines": 2,
+     "size": 48,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "words": 8,
+      "chars": 56,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 319,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "₹9.00 Crore",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 492,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony Resale Villa off Bannerghatta Road",
+      "words": 7,
+      "chars": 49,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 2355,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony at The Sound of Water: Seller-Listed Villa in South Bengaluru",
+      "words": 12,
+      "chars": 76,
+      "lines": 2,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": 2976,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony at The Sound of Water, Bengaluru",
+      "words": 8,
+      "chars": 47,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.47,
+      "top": 4201,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions About This Purva Symphony Resale Listing",
+      "words": 7,
+      "chars": 50,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.58,
+      "top": 5126,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 3,
+     "medianWords": 7,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.12,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      30,
+      36,
+      48
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 12,
+      "leading": 1.33,
+      "weight": 700,
+      "tracking": 0,
+      "contrast": 15.5
+     },
+     "measureChars": 104,
+     "max": {
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "text": "Purva Sounds of Water - Seller-Listed Fi"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "BENGALURU • DUBAI",
+      "Channel Partner Registration Verified • "
+     ],
+     "microLabels": 12,
+     "microLabelShare": 0.024,
+     "microSamples": [
+      "Key Infrastructure & Location Advantages",
+      "Seller-Advertised Resale Unit Details",
+      "Details to Verify Before Purchase",
+      "Quick Specs Summary",
+      "Parameter",
+      "Specification Details"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.11,
+     "smallText": 156
+    },
+    "eyebrows": [
+     {
+      "text": "Seller-Quoted Asking Price",
+      "above": "₹9.00 Crore",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 476
+     },
+     {
+      "text": "Seller-Advertised Resale Unit Details",
+      "above": "Purva Symphony Resale Villa off Bannergh",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2331
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1081,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 6504,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0b1f3a",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.2
+      },
+      {
+       "color": "#45556c",
+       "share": 0.19
+      },
+      {
+       "color": "#314158",
+       "share": 0.15
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": [
+      {
+       "text": "₹9.00 Crore",
+       "ratio": 2.4,
+       "need": 3,
+       "size": 30,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Seller-Advertised Resale Unit Details",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "+91 84319 09508",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Schools, Healthcare & Retail",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Metro, IT & Airport Connectivity",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Developer-Listed Project Amenities",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 13,
+     "inHero": 7,
+     "radius": 10,
+     "height": 47,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 6,
+     "heroLabels": [
+      "Purva Sounds of Water Resale",
+      "BOOK SITE VISIT",
+      "Back to All Projects",
+      "Request Unit Details",
+      "VISIT DEDICATED VILLA PAGE →"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 11,
+     "shadowOverlay": 3,
+     "shadowSamples": [
+      "button.inline-flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.mt-3.p-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "a.btn-gold.py-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.mt-3.p-3.5 → linear-gradient(to right in oklab, rgb(11, 31, 58) 0%, rgb(20, 46, 84) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 25,
+     "hairlineSamples": [
+      "div.bg-[#071527].text-white/80 1440px",
+      "div.bg-[#0B1F3A].text-white/80 1440px",
+      "div.pt-4.border-t 731px",
+      "div.border-b.border-slate-200 731px",
+      "div.border-b.border-[#0B1F3A]/10 329px"
+     ],
+     "outlinedBoxes": 36,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 38,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1081
+      },
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 3209
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4666
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.18
+     }
+    ],
+    "nav": {
+     "links": 10,
+     "fixed": true,
+     "height": 114,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7186,
+    "margins": {
+     "left": 113,
+     "right": 113
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 6504,
+      "words": 1541,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 80,
+      "textLeft": 100,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 6504,
+      "height": 682,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 112,
+      "right": 112,
+      "textLeft": 112,
+      "textRight": 112,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "size": 48,
+      "top": 319,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 329,
+      "n": 12
+     },
+     {
+      "x": 137,
+      "n": 6
+     },
+     {
+      "x": 166,
+      "n": 3
+     },
+     {
+      "x": 112,
+      "n": 1
+     },
+     {
+      "x": 447,
+      "n": 1
+     },
+     {
+      "x": 757,
+      "n": 1
+     },
+     {
+      "x": 974,
+      "n": 1
+     },
+     {
+      "x": 1067,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 960,
+     "y": 300,
+     "w": 480,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.96,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.94,
+    0.94
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 2,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9642,
+     "screens": 9.4,
+     "words": 1648,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 52,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-swimming-pool.jpeg",
+      "purva-villa-private-garden-outhouse.jpeg",
+      "purva-villa-balcony-terrace.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-kitchen-island.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏦",
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "chars": 56,
+     "lines": 2,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Playfair Display",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 353,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "lines": 2,
+     "size": 48,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "words": 8,
+      "chars": 56,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 353,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "₹9.00 Crore",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 652,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony Resale Villa off Bannerghatta Road",
+      "words": 7,
+      "chars": 49,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 3005,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony at The Sound of Water: Seller-Listed Villa in South Bengaluru",
+      "words": 12,
+      "chars": 76,
+      "lines": 2,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 4356,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony at The Sound of Water, Bengaluru",
+      "words": 8,
+      "chars": 47,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 6019,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions About This Purva Symphony Resale Listing",
+      "words": 7,
+      "chars": 50,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 7224,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 3,
+     "medianWords": 7,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.12,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      30,
+      36,
+      48
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 12,
+      "leading": 1.33,
+      "weight": 700,
+      "tracking": 0,
+      "contrast": 15.5
+     },
+     "measureChars": 93,
+     "max": {
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "text": "Purva Sounds of Water - Seller-Listed Fi"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "BENGALURU • DUBAI",
+      "Channel Partner Registration Verified • "
+     ],
+     "microLabels": 12,
+     "microLabelShare": 0.024,
+     "microSamples": [
+      "Key Infrastructure & Location Advantages",
+      "Seller-Advertised Resale Unit Details",
+      "Details to Verify Before Purchase",
+      "Quick Specs Summary",
+      "Parameter",
+      "Specification Details"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.11,
+     "smallText": 150
+    },
+    "eyebrows": [
+     {
+      "text": "BBMP & RERA Approved • A-Khata Clear Title",
+      "above": "Purva Sounds of Water - Seller-Listed Fi",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 12,
+      "top": 277
+     },
+     {
+      "text": "Seller-Quoted Asking Price",
+      "above": "₹9.00 Crore",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 636
+     },
+     {
+      "text": "Seller-Advertised Resale Unit Details",
+      "above": "Purva Symphony Resale Villa off Bannergh",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2981
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 774,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1678,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 8665,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0b1f3a",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#45556c",
+       "share": 0.19
+      },
+      {
+       "color": "#314158",
+       "share": 0.15
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.08
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": [
+      {
+       "text": "₹9.00 Crore",
+       "ratio": 2.4,
+       "need": 3,
+       "size": 30,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Seller-Advertised Resale Unit Details",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Quick Specs Summary",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "+91 84319 09508",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 12,
+     "inHero": 6,
+     "radius": 12,
+     "height": 47,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 5,
+     "heroLabels": [
+      "Book Visit",
+      "Back to All Projects",
+      "Request Unit Details",
+      "VISIT DEDICATED VILLA PAGE →",
+      "BOOK SITE VISIT"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 11,
+     "shadowOverlay": 3,
+     "shadowSamples": [
+      "button.inline-flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.mt-3.p-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "a.btn-gold.py-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.mt-3.p-3.5 → linear-gradient(to right in oklab, rgb(11, 31, 58) 0%, rgb(20, 46, 84) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 25,
+     "hairlineSamples": [
+      "div.bg-[#071527].text-white/80 768px",
+      "div.bg-[#0B1F3A].text-white/80 768px",
+      "div.pt-4.border-t 654px",
+      "div.border-b.border-slate-200 654px",
+      "div.border-b.border-[#0B1F3A]/10 670px"
+     ],
+     "outlinedBoxes": 36,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 38,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 4589
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6607
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.23
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 114,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9642,
+    "margins": {
+     "left": 24,
+     "right": 25
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 8665,
+      "words": 1518,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 22,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 8665,
+      "height": 978,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 57,
+      "textLeft": 24,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "size": 48,
+      "top": 353,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 49,
+      "n": 20
+     },
+     {
+      "x": 78,
+      "n": 3
+     },
+     {
+      "x": 421,
+      "n": 2
+     },
+     {
+      "x": 24,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.9,
+    0.99,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 2,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 13616,
+     "screens": 16.1,
+     "words": 1626,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 52,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "🏦",
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "chars": 56,
+     "lines": 3,
+     "size": 30,
+     "vw": 7.7,
+     "font": "Playfair Display",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 383,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "lines": 3,
+     "size": 30,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "words": 8,
+      "chars": 56,
+      "lines": 3,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 383,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "₹9.00 Crore",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 811,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony Resale Villa off Bannerghatta Road",
+      "words": 7,
+      "chars": 49,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 3825,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony at The Sound of Water: Seller-Listed Villa in South Bengaluru",
+      "words": 12,
+      "chars": 76,
+      "lines": 4,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5534,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony at The Sound of Water, Bengaluru",
+      "words": 8,
+      "chars": 47,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 8303,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions About This Purva Symphony Resale Listing",
+      "words": 7,
+      "chars": 50,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10254,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 4,
+     "over2Lines": 2,
+     "statements": 0,
+     "centered": 3,
+     "medianWords": 7,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.12,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 12,
+      "leading": 1.33,
+      "weight": 700,
+      "tracking": 0,
+      "contrast": 15.5
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "text": "Purva Sounds of Water - Seller-Listed Fi"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "BENGALURU • DUBAI",
+      "Channel Partner Registration Verified • "
+     ],
+     "microLabels": 12,
+     "microLabelShare": 0.024,
+     "microSamples": [
+      "Key Infrastructure & Location Advantages",
+      "Seller-Advertised Resale Unit Details",
+      "Details to Verify Before Purchase",
+      "Quick Specs Summary",
+      "Parameter",
+      "Specification Details"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.11,
+     "smallText": 148
+    },
+    "eyebrows": [
+     {
+      "text": "Seller-Quoted Asking Price",
+      "above": "₹9.00 Crore",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 795
+     },
+     {
+      "text": "Seller-Advertised Resale Unit Details",
+      "above": "Purva Symphony Resale Villa off Bannergh",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 3777
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 946,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1850,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 11742,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0b1f3a",
+       "share": 0.22
+      },
+      {
+       "color": "#45556c",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#314158",
+       "share": 0.16
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.08
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": [
+      {
+       "text": "₹9.00 Crore",
+       "ratio": 2.4,
+       "need": 3,
+       "size": 24,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Seller-Advertised Resale Unit Details",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "Quick Specs Summary",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      },
+      {
+       "text": "+91 84319 09508",
+       "ratio": 2.4,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#c8a34d",
+       "bg": "#ffffff"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 5,
+     "radius": 12,
+     "height": 34,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 5,
+     "heroLabels": [
+      "Book Visit",
+      "Back to All Projects",
+      "Request Unit Details",
+      "VISIT DEDICATED VILLA PAGE →",
+      "BOOK SITE VISIT"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 11,
+     "shadowOverlay": 3,
+     "shadowSamples": [
+      "button.inline-flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.mt-3.p-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "a.btn-gold.py-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.mt-3.p-3.5 → linear-gradient(to right in oklab, rgb(11, 31, 58) 0%, rgb(20, 46, 84) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 25,
+     "hairlineSamples": [
+      "div.bg-[#071527].text-white/80 390px",
+      "div.bg-[#0B1F3A].text-white/80 390px",
+      "div.pt-4.border-t 308px",
+      "div.border-b.border-slate-200 308px",
+      "div.border-b.border-[#0B1F3A]/10 308px"
+     ],
+     "outlinedBoxes": 36,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 38,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 13616,
+    "margins": {
+     "left": 16,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 12105,
+      "words": 1396,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+       "size": 30,
+       "tag": "h1"
+      },
+      "left": 10,
+      "right": 10,
+      "textLeft": 16,
+      "textRight": 12,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 12105,
+      "height": 1511,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 23,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "size": 30,
+      "top": 383,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "+91 84319 09508",
+      "side": "right",
+      "px": 12
+     }
+    ],
+    "edges": [
+     {
+      "x": 41,
+      "n": 21
+     },
+     {
+      "x": 62,
+      "n": 3
+     },
+     {
+      "x": 16,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 25,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "2 eyebrow/kicker label(s) above headings: \"Seller-Quoted Asking Price\" above \"₹9.00 Crore\"; \"Seller-Advertised Resale Unit Details\" above \"Purva Symphony Resale Villa off Bannergh\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: ui-monospace — e.g. \"BENGALURU • DUBAI\", \"Channel Partner Registration Verified • \"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "12 tiny uppercase letter-spaced labels (e.g. \"Key Infrastructure & Location Advantages\", \"Seller-Advertised Resale Unit Details\", \"Details to Verify Before Purchase\", \"Quick Specs Summary\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: 🏦 🏞 📐 🏡 ✨ 🏢 🌍 🎨",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "1 gradient fill(s): div.mt-3.p-3.5 → linear-gradient(to right in oklab, rgb(11, 31, 58) 0%, rgb(20, 46, 84) 100%)",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "11 box-shadow(s) on elements at rest: button.inline-flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0 | div.mt-3.p-3.5 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0 | div.flex.items-center → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "25 thin rule(s)/divider line(s): div.bg-[#071527].text-white/80 1440px | div.bg-[#0B1F3A].text-white/80 1440px | div.pt-4.border-t 731px | div.border-b.border-slate-200 731px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "36 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "2 row(s) of identical cards each topped with a small icon (4, 4 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #f8f8f5).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Unreadable text: \"₹9.00 Crore\" 2.4:1 (#c8a34d on #ffffff); \"Seller-Advertised Resale Unit Details\" 2.4:1 (#c8a34d on #ffffff); \"+91 84319 09508\" 2.4:1 (#c8a34d on #ffffff); \"Schools, Healthcare & Retail\" 2.4:1 (#c8a34d on #ffffff)",
+   "fix": "Raise contrast to at least 4.5:1 for text, 3:1 for large display.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (9, 10, 11, 12, 13, 14, 16, 18, 20, 30, 36, 48).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 12px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 104 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "156 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 48px (3.3vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 3 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "2 headline(s) wrap past two lines at 390px: \"Purva Sounds of Water - Seller-Listed Five-Bedro\" → 3 lines (8 words, 30px); \"Purva Symphony at The Sound of Water: Seller-Lis\" → 4 lines (12 words, 30px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  },
+  {
+   "level": "WARN",
+   "id": "edge-text",
+   "width": 390,
+   "message": "1 text block(s) sit 12–15px from the phone's edge: \"+91 84319 09508\" (12px)",
+   "fix": "The page margin is 16–20px on a phone; the header and the corner labels sit on it too."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\tablet-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before-healthy\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -7,10 +7,7 @@ import Footer from '../../components/Footer';
 import FloatingActions from '../../components/WhatsAppButton';
 import BookSiteVisitModal from '../../components/BookSiteVisitModal';
 import ProjectsPage from '../../views/ProjectsPage';
-import {
-  ShieldCheck, MapPin, CheckCircle2, Phone, MessageCircle, HelpCircle,
-  ChevronDown, Sparkles, TrendingUp, Compass, Award, Layers
-} from 'lucide-react';
+import { ShieldCheck, MessageCircle, ChevronDown } from 'lucide-react';
 
 const PLOTS_FAQS = [
   {
@@ -74,29 +71,25 @@ function PlotsContent() {
                 <span className="text-[#C8A34D] font-bold">Plots in Bangalore</span>
               </nav>
 
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+              <span className="hidden sm:inline-flex items-center gap-1.5 text-[#C8A34D] font-semibold">
                 <ShieldCheck className="w-4 h-4" /> BIAAPA & RERA Approved • 0% Brokerage
               </span>
             </div>
           </div>
 
           {/* Dedicated Hero Banner */}
-          <section className="bg-gradient-to-b from-[#0B1F3A] to-[#0E2749] text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+          <section className="bg-[#0B1F3A] text-white py-14 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-bold text-[#C8A34D] uppercase tracking-wider">
-                <Layers className="w-4 h-4" />
-                Bengaluru Plotted Development Directory 2026
-              </div>
               <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading">
-                Verified Residential Plots & Villa Plots in Bangalore
+                Residential plots in Bengaluru
               </h1>
-              <p className="text-sm sm:text-base text-white/70 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg text-white/85 max-w-3xl mx-auto leading-relaxed">
                 Discover pre-cleared, high-appreciation residential land across Devanahalli Airport Corridor, STRR, Chikkaballapura, Nandi Hills, APC Circle, Jigani & Kanakapura Road. Clear A-Khata titles with zero brokerage to buyers.
               </p>
               <div className="pt-2 flex flex-wrap justify-center gap-3">
                 <button
                   onClick={() => openSiteVisitModal()}
-                  className="btn-gold py-3 px-6 text-xs font-black uppercase tracking-wider cursor-pointer shadow-lg"
+                  className="btn-gold py-3 px-6 text-sm font-bold normal-case tracking-normal cursor-pointer"
                 >
                   Book Free Chauffeured Site Tour
                 </button>
@@ -104,7 +97,7 @@ function PlotsContent() {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Lakshie Real Estate! Please share masterplan blueprints and pricing for verified plots in Bangalore.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-xs font-bold flex items-center gap-2 transition-colors"
+                  className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-sm font-semibold flex items-center gap-2 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4 text-[#C8A34D]" />
                   Request Plots PDF on WhatsApp
@@ -125,13 +118,10 @@ function PlotsContent() {
           <section className="bg-white py-16 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
               <div className="text-center space-y-3 max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A5C10] uppercase tracking-wider">
-                  <TrendingUp className="w-4 h-4" /> Capital Growth Benchmarks
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Bangalore Plotted Corridor Appreciation & Price Analysis (2026)
+                  Plot prices by Bengaluru corridor
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600">
+                <p className="text-base text-slate-600">
                   Data-backed appreciation trends across prime infrastructure growth corridors.
                 </p>
               </div>
@@ -151,28 +141,28 @@ function PlotsContent() {
                     <tr>
                       <td className="py-3 px-4 font-bold text-[#0B1F3A]">Airport & Chikkajala Corridor</td>
                       <td className="py-3 px-4 text-[#7A5C10] font-bold">₹4,200 - ₹5,800</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">22.8% YoY</td>
+                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">22.8% YoY</td>
                       <td className="py-3 px-4">KIADB Aerospace SEZ, Airport Expressway & Upcoming Metro</td>
                       <td className="py-3 px-4">BIAPPA & RERA</td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 font-bold text-[#0B1F3A]">Chikkaballapura & Nandi Hills</td>
                       <td className="py-3 px-4 text-[#7A5C10] font-bold">₹2,800 - ₹3,900</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">21.5% YoY</td>
+                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">21.5% YoY</td>
                       <td className="py-3 px-4">STRR Northern Arc, Tourism Infrastructure & Medical Hub</td>
                       <td className="py-3 px-4">CUDDA & RERA</td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 font-bold text-[#0B1F3A]">South Industrial Belt (APC Circle/Jigani)</td>
                       <td className="py-3 px-4 text-[#7A5C10] font-bold">₹3,200 - ₹4,400</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">16.9% YoY</td>
+                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">16.9% YoY</td>
                       <td className="py-3 px-4">Electronic City Link, NICE Expressway & Manufacturing SEZs</td>
                       <td className="py-3 px-4">BMRDA & RERA</td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 font-bold text-[#0B1F3A]">East Corridor (Kothanur & Hoskote)</td>
                       <td className="py-3 px-4 text-[#7A5C10] font-bold">₹3,400 - ₹4,600</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">17.6% YoY</td>
+                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">17.6% YoY</td>
                       <td className="py-3 px-4">Hoskote Auto Hub, STRR Interchanges & Whitefield Access</td>
                       <td className="py-3 px-4">BMRDA & RERA</td>
                     </tr>
@@ -186,12 +176,8 @@ function PlotsContent() {
           <section className="bg-[#F8F8F5] py-16 border-t border-slate-200">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
               <div className="text-center space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1F3A]/5 text-[#0B1F3A] text-xs font-bold uppercase">
-                  <HelpCircle className="w-4 h-4 text-[#C8A34D]" />
-                  Bangalore Land Advisory Insights
-                </div>
                 <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Frequently Asked Questions – Buying Plots in Bangalore
+                  Buying a plot in Bengaluru
                 </h2>
                 <div className="divider-gold mx-auto" />
               </div>
@@ -202,7 +188,7 @@ function PlotsContent() {
                   return (
                     <div
                       key={idx}
-                      className="rounded-2xl border border-slate-200 overflow-hidden bg-white transition-all shadow-sm"
+                      className="rounded-2xl border border-slate-200 overflow-hidden bg-white"
                     >
                       <button
                         onClick={() => setOpenFaqIndex(isOpen ? -1 : idx)}

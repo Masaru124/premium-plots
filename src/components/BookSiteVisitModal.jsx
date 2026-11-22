@@ -99,8 +99,8 @@ export default function BookSiteVisitModal() {
         <div className="p-6 overflow-y-auto space-y-4">
           {submitted ? (
             <div className="text-center py-8 space-y-4">
-              <div className="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mx-auto border border-emerald-200 shadow-sm">
-                <CheckCircle2 className="w-10 h-10 text-emerald-500" />
+              <div className="w-16 h-16 bg-[#C8A34D]/10 text-[#0B1F3A] rounded-full flex items-center justify-center mx-auto border border-[#C8A34D]/30 shadow-sm">
+                <CheckCircle2 className="w-10 h-10 text-[#0B1F3A]" />
               </div>
               <h4 className="text-xl font-bold text-[#0B1F3A] font-heading">Site Visit Requested</h4>
               <p className="text-xs text-[#555555] max-w-xs mx-auto leading-relaxed">

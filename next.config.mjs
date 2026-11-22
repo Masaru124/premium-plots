@@ -2,6 +2,9 @@ import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Lets a verification build run without replacing the `.next` folder that any
+  // locally running server is already serving.
+  distDir: process.env.NEXT_BUILD_DIR || '.next',
   images: {
     remotePatterns: [
       {

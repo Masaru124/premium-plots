@@ -1,0 +1,1759 @@
+{
+ "url": "http://127.0.0.1:3210/luxury-villas-bangalore",
+ "at": "2026-10-29T07:14:18.936Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    1,
+    1,
+    1,
+    0.98,
+    0.95
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 2,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 4013,
+     "screens": 4.5,
+     "words": 964,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 25,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Luxury Villas for Sale in Bengaluru",
+     "words": 6,
+     "chars": 35,
+     "lines": 1,
+     "size": 48,
+     "vw": 3.3,
+     "font": "Playfair Display",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.89,
+     "top": 211,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Luxury Villas for Sale in Bengaluru",
+     "words": 6,
+     "lines": 1,
+     "size": 48,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Luxury Villas for Sale in Bengaluru",
+      "words": 6,
+      "chars": 35,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 211,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony villa resale",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.34,
+      "top": 622,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Villas Portfolio",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1057,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Buying a villa: common questions",
+      "words": 5,
+      "chars": 32,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.58,
+      "top": 2695,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.13,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      48
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 42,
+     "max": {
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "text": "Luxury Villas for Sale in Bengaluru"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0.02,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "BENGALURU • DUBAI",
+      "BENGALURU • DUBAI",
+      "Channel Partner Registration Verified • "
+     ],
+     "microLabels": 5,
+     "microLabelShare": 0.017,
+     "microSamples": [
+      "BENGALURU • DUBAI",
+      "Property Portfolios",
+      "Quick Links",
+      "Consultancy Assurance",
+      "Disclaimer & Transparency Disclosure"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.09,
+     "smallText": 47
+    },
+    "eyebrows": [
+     {
+      "text": "Tier-1 Developers • 0% Brokerage",
+      "above": "Luxury Villas for Sale in Bengaluru",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 126
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 155,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2631,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.41
+      },
+      {
+       "color": "#555555",
+       "share": 0.26
+      },
+      {
+       "color": "#314158",
+       "share": 0.13
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.12
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#dfc06e",
+      "hsl": {
+       "h": 44,
+       "s": 0.64,
+       "l": 0.65
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 22,
+     "inHero": 6,
+     "radius": 8,
+     "height": 47,
+     "withShadow": 7,
+     "withGradient": 7,
+     "mono": 0,
+     "upper": 7,
+     "heroLabels": [
+      "Purva Sounds of Water Resale",
+      "BOOK SITE VISIT",
+      "SCHEDULE PRIVATE VILLA TOUR",
+      "Request Villa Details on WhatsApp",
+      "VIEW RESALE DETAILS"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 6,
+     "shadowOverlay": 3,
+     "shadowSamples": [
+      "button.btn-gold.py-3 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "a.btn-gold.w-fit → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 7,
+     "hairlineSamples": [
+      "div.bg-[#071527].text-white/80 1440px",
+      "div.bg-[#0B1F3A].text-white/80 1440px",
+      "div.pt-2.flex 1166px",
+      "div.px-6.pb-6 830px",
+      "footer.bg-[#0B1F3A].text-white/70 1440px"
+     ],
+     "outlinedBoxes": 11,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 12,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1503
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.18
+     }
+    ],
+    "nav": {
+     "links": 10,
+     "fixed": true,
+     "height": 114,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 4013,
+    "margins": {
+     "left": 112,
+     "right": 112
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 3331,
+      "words": 693,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Luxury Villas for Sale in Bengaluru",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 80,
+      "textLeft": 100,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 3331,
+      "height": 682,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 112,
+      "right": 112,
+      "textLeft": 112,
+      "textRight": 112,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Luxury Villas for Sale in Bengaluru",
+      "size": 48,
+      "top": 211,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 329,
+      "n": 5
+     },
+     {
+      "x": 137,
+      "n": 4
+     },
+     {
+      "x": 965,
+      "n": 3
+     },
+     {
+      "x": 112,
+      "n": 2
+     },
+     {
+      "x": 553,
+      "n": 2
+     },
+     {
+      "x": 776,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.11,
+    "voidBox": {
+     "x": 1140,
+     "y": 180,
+     "w": 300,
+     "h": 480
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    0.94,
+    0.94
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 2,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5427,
+     "screens": 5.3,
+     "words": 940,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 25,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Luxury Villas for Sale in Bengaluru",
+     "words": 6,
+     "chars": 35,
+     "lines": 1,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Playfair Display",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 211,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Luxury Villas for Sale in Bengaluru",
+     "words": 6,
+     "lines": 1,
+     "size": 48,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Luxury Villas for Sale in Bengaluru",
+      "words": 6,
+      "chars": 35,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 211,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony villa resale",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 594,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Villas Portfolio",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1087,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Buying a villa: common questions",
+      "words": 5,
+      "chars": 32,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 3814,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.14,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      48
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 37,
+     "max": {
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "text": "Luxury Villas for Sale in Bengaluru"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0.02,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "BENGALURU • DUBAI",
+      "BENGALURU • DUBAI",
+      "Channel Partner Registration Verified • "
+     ],
+     "microLabels": 5,
+     "microLabelShare": 0.018,
+     "microSamples": [
+      "BENGALURU • DUBAI",
+      "Property Portfolios",
+      "Quick Links",
+      "Consultancy Assurance",
+      "Disclaimer & Transparency Disclosure"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.09,
+     "smallText": 41
+    },
+    "eyebrows": [
+     {
+      "text": "Tier-1 Developers • 0% Brokerage",
+      "above": "Luxury Villas for Sale in Bengaluru",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 126
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 155,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1374,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.41
+      },
+      {
+       "color": "#555555",
+       "share": 0.26
+      },
+      {
+       "color": "#314158",
+       "share": 0.14
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.12
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#dfc06e",
+      "hsl": {
+       "h": 44,
+       "s": 0.64,
+       "l": 0.65
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 21,
+     "inHero": 5,
+     "radius": 8,
+     "height": 38,
+     "withShadow": 6,
+     "withGradient": 6,
+     "mono": 0,
+     "upper": 6,
+     "heroLabels": [
+      "Book Visit",
+      "SCHEDULE PRIVATE VILLA TOUR",
+      "Request Villa Details on WhatsApp",
+      "VIEW RESALE DETAILS",
+      "PROPERTY ADVISORY WhatsApp: +91 84319 09"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 6,
+     "shadowOverlay": 2,
+     "shadowSamples": [
+      "button.btn-gold.py-3 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "a.btn-gold.w-fit → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 7,
+     "hairlineSamples": [
+      "div.bg-[#071527].text-white/80 768px",
+      "div.bg-[#0B1F3A].text-white/80 768px",
+      "div.pt-2.flex 670px",
+      "div.px-6.pb-6 718px",
+      "footer.bg-[#0B1F3A].text-white/70 768px"
+     ],
+     "outlinedBoxes": 11,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 12,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1759
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.19
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 114,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5427,
+    "margins": {
+     "left": 24,
+     "right": 25
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 4450,
+      "words": 670,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Luxury Villas for Sale in Bengaluru",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 4450,
+      "height": 978,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 57,
+      "textLeft": 24,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Luxury Villas for Sale in Bengaluru",
+      "size": 48,
+      "top": 211,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 45,
+      "n": 10
+     },
+     {
+      "x": 424,
+      "n": 4
+     },
+     {
+      "x": 24,
+      "n": 2
+     },
+     {
+      "x": 56,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.84,
+    0.95
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 2,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 7505,
+     "screens": 8.9,
+     "words": 919,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 25,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Luxury Villas for Sale in Bengaluru",
+     "words": 6,
+     "chars": 35,
+     "lines": 2,
+     "size": 30,
+     "vw": 7.7,
+     "font": "Playfair Display",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 209,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Luxury Villas for Sale in Bengaluru",
+     "words": 6,
+     "lines": 2,
+     "size": 30,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Luxury Villas for Sale in Bengaluru",
+      "words": 6,
+      "chars": 35,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 209,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony villa resale",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 915,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Villas Portfolio",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1279,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Need Expert Advice on Plot Legalities or Villa Customization?",
+      "words": 9,
+      "chars": 61,
+      "lines": 3,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.015,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 4753,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Buying a villa: common questions",
+      "words": 5,
+      "chars": 32,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.015,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5144,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 3,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.84,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.14,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "text": "Luxury Villas for Sale in Bengaluru"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0.02,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "BENGALURU • DUBAI",
+      "BENGALURU • DUBAI",
+      "Channel Partner Registration Verified • "
+     ],
+     "microLabels": 5,
+     "microLabelShare": 0.018,
+     "microSamples": [
+      "BENGALURU • DUBAI",
+      "Property Portfolios",
+      "Quick Links",
+      "Consultancy Assurance",
+      "Disclaimer & Transparency Disclosure"
+     ],
+     "upperShare": 0.04,
+     "centerShare": 0.12,
+     "smallText": 37
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 153,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1619,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.41
+      },
+      {
+       "color": "#555555",
+       "share": 0.27
+      },
+      {
+       "color": "#314158",
+       "share": 0.14
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.12
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#dfc06e",
+      "hsl": {
+       "h": 44,
+       "s": 0.64,
+       "l": 0.65
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 21,
+     "inHero": 4,
+     "radius": 8,
+     "height": 47,
+     "withShadow": 6,
+     "withGradient": 6,
+     "mono": 0,
+     "upper": 6,
+     "heroLabels": [
+      "Book Visit",
+      "SCHEDULE PRIVATE VILLA TOUR",
+      "Request Villa Details on WhatsApp"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 6,
+     "shadowOverlay": 2,
+     "shadowSamples": [
+      "button.btn-gold.py-3 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "a.btn-gold.w-fit → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+      "button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px"
+     ],
+     "gradients": 6,
+     "scrims": 0,
+     "gradientSamples": [
+      "button.btn-gold.py-3 → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%)",
+      "a.btn-gold.w-fit → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%)",
+      "button.btn-gold.py-2.5 → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%)",
+      "button.btn-gold.py-2.5 → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 7,
+     "hairlineSamples": [
+      "div.bg-[#071527].text-white/80 390px",
+      "div.bg-[#0B1F3A].text-white/80 390px",
+      "div.pt-2.flex 308px",
+      "div.px-6.pb-6 356px",
+      "footer.bg-[#0B1F3A].text-white/70 390px"
+     ],
+     "outlinedBoxes": 9,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.23
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 7505,
+    "margins": {
+     "left": 16,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 5994,
+      "words": 656,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Luxury Villas for Sale in Bengaluru",
+       "size": 30,
+       "tag": "h1"
+      },
+      "left": 10,
+      "right": 10,
+      "textLeft": 16,
+      "textRight": 12,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 5994,
+      "height": 1511,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 12,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 23,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Luxury Villas for Sale in Bengaluru",
+      "size": 30,
+      "top": 209,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "+91 84319 09508",
+      "side": "right",
+      "px": 12
+     }
+    ],
+    "edges": [
+     {
+      "x": 33,
+      "n": 14
+     },
+     {
+      "x": 16,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 16,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"Tier-1 Developers • 0% Brokerage\" above \"Luxury Villas for Sale in Bengaluru\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: ui-monospace — e.g. \"BENGALURU • DUBAI\", \"BENGALURU • DUBAI\", \"Channel Partner Registration Verified • \"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "5 tiny uppercase letter-spaced labels (e.g. \"BENGALURU • DUBAI\", \"Property Portfolios\", \"Quick Links\", \"Consultancy Assurance\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: 🏞 📐 🏡 ✨ 🏢 🌍 🎨",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "6 box-shadow(s) on elements at rest: button.btn-gold.py-3 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px | a.btn-gold.w-fit → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px | button.btn-gold.py-2.5 → rgba(200, 163, 77, 0.32) 0px 4px 18px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with gradient fill and shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "7 thin rule(s)/divider line(s): div.bg-[#071527].text-white/80 1440px | div.bg-[#0B1F3A].text-white/80 1440px | div.pt-2.flex 1166px | div.px-6.pb-6 830px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "11 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #f8f8f5).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Poppins, Playfair Display, ui-monospace).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (9, 10, 11, 12, 13, 14, 16, 18, 20, 24, 30, 48).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "47 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 48px (3.3vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 3 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Need Expert Advice on Plot Legalities or Villa C\" → 3 lines (9 words, 24px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 390,
+   "message": "6 gradient fill(s): button.btn-gold.py-3 → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%) | a.btn-gold.w-fit → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%) | button.btn-gold.py-2.5 → linear-gradient(135deg, rgb(223, 192, 110) 0%, rgb(200, 163, 77) 60%, rgb(184, 146, 55) 100%)",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility."
+  },
+  {
+   "level": "WARN",
+   "id": "edge-text",
+   "width": 390,
+   "message": "1 text block(s) sit 12–15px from the phone's edge: \"+91 84319 09508\" (12px)",
+   "fix": "The page margin is 16–20px on a phone; the header and the corner labels sit on it too."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\after-villas\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

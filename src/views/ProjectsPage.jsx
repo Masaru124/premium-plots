@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, ShieldCheck, MapPin, CheckCircle2, ChevronRight, Grid, List, MessageCircle, ExternalLink, Download, Home, Building2, Globe, Sparkles } from 'lucide-react';
+import { Search, MapPin, MessageCircle } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 import { BENGALURU_CORRIDORS, FEATURED_GROUPS } from '../data/plotsData';
 
@@ -15,7 +15,6 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
   const [maxPrice, setMaxPrice] = useState(100000000);
 
   const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
 
   useEffect(() => {
     setSelectedPropertyType(filterType);
@@ -33,7 +32,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
       p.propertyType === selectedPropertyType ||
       (selectedPropertyType === 'Open Plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots' || p.title?.toLowerCase().includes('plot'))) ||
       (selectedPropertyType === 'Villa Plots' && (p.propertyType === 'Open Plots' || p.propertyType === 'Villa Plots' || p.title?.toLowerCase().includes('villa plot') || p.overview?.toLowerCase().includes('villa plot'))) ||
-      (selectedPropertyType === 'Villas' && (p.propertyType === 'Villas' || p.title?.toLowerCase().includes('villa')));
+      (selectedPropertyType === 'Villas' && p.propertyType === 'Villas');
 
     const matchesGroup = selectedGroup === 'all' || (p.groupName && p.groupName.toLowerCase().includes(selectedGroup.toLowerCase()));
     const matchesCorridor = selectedCorridor === 'all' || p.corridorId === selectedCorridor;
@@ -46,11 +45,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
       {/* Page Title Header */}
-      <div className="space-y-3 border-b border-[#0B1F3A]/10 pb-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/8 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-bold uppercase tracking-wider">
-          <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
-          Verified Channel Partner Portfolio
-        </div>
+      <div className="space-y-5 pb-2">
         {isSubpage ? (
           <h2 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
             {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
@@ -60,43 +55,45 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
             {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
           </h1>
         )}
-        <p className="text-[#555555] text-sm sm:text-base max-w-3xl">
-          Browse verified open plot townships, custom villa developments, high-rise apartments, and Dubai luxury investments across premier corridors.
+        <p className="text-[#555555] text-base sm:text-lg max-w-3xl leading-relaxed">
+          {selectedPropertyType === 'Villas'
+            ? 'Browse Tripon’s Nandi Hills collection and the seller-listed Purva Symphony resale. Confirm unit details, price and availability with the advisor.'
+            : 'Browse verified open plot townships, custom villa developments, high-rise apartments, and Dubai luxury investments across premier corridors.'}
         </p>
 
-        {/* Quick Segmented Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2 pt-2">
+        {/* Quick category filters are redundant on dedicated category routes; the filter form below remains available. */}
+        {!isSubpage && <div className="flex flex-wrap items-center gap-2 pt-2">
           {[
             { id: 'all', label: 'All Portfolios' },
-            { id: 'Open Plots', label: '🏞 Open Plots' },
-            { id: 'Villa Plots', label: '📐 Villa Plots' },
-            { id: 'Villas', label: '🏡 Luxury Villas' },
-            { id: 'Apartments', label: '🏢 Apartments' },
-            { id: 'Dubai Apartments', label: '🌍 Dubai Properties' }
+            { id: 'Open Plots', label: 'Open Plots' },
+            { id: 'Villa Plots', label: 'Villa Plots' },
+            { id: 'Villas', label: 'Luxury Villas' },
+            { id: 'Apartments', label: 'Apartments' },
+            { id: 'Dubai Apartments', label: 'Dubai Properties' }
           ].map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setSelectedPropertyType(tab.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-sm font-semibold transition-colors cursor-pointer ${
                 selectedPropertyType === tab.id
-                  ? 'bg-[#0B1F3A] text-[#C8A34D] shadow-md border border-[#C8A34D]/50'
+                  ? 'bg-[#0B1F3A] text-[#C8A34D] border border-[#C8A34D]/50'
                   : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-300'
               }`}
             >
               {tab.label}
             </button>
           ))}
-        </div>
+        </div>}
       </div>
 
       {/* Comprehensive Search & Filter Controls */}
-      <div className="glass-card p-6 space-y-4 bg-white border border-slate-200 rounded-2xl shadow-sm">
+      <div className="p-6 space-y-5 bg-white border border-slate-200 rounded-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           
           {/* Keyword Search */}
           <div>
-            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Search Keywords</label>
+            <label className="block text-sm font-semibold text-[#555555] mb-2">Search Keywords</label>
             <div className="relative">
               <Search className="w-4 h-4 text-[#a0aec0] absolute left-3 top-3" />
               <input
@@ -104,18 +101,18 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                 placeholder="Oriaiyan, Tripon, Vinra, Kolar..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg pl-9 pr-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
+                className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg pl-9 pr-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
               />
             </div>
           </div>
 
           {/* Group / Company Filter */}
           <div>
-            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Developer Group / Company</label>
+            <label className="block text-sm font-semibold text-[#555555] mb-2">Developer Group / Company</label>
             <select
               value={selectedGroup}
               onChange={(e) => setSelectedGroup(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
             >
               <option value="all">All Groups & Companies</option>
               {FEATURED_GROUPS.map((g) => (
@@ -126,11 +123,11 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
           {/* Corridor Filter */}
           <div>
-            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Corridor / Belt</label>
+            <label className="block text-sm font-semibold text-[#555555] mb-2">Corridor / Belt</label>
             <select
               value={selectedCorridor}
               onChange={(e) => setSelectedCorridor(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
             >
               <option value="all">All Corridors</option>
               {BENGALURU_CORRIDORS.filter(c => c.id !== 'all-corridors').map((c) => (
@@ -141,11 +138,11 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
           {/* Property Category */}
           <div>
-            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Property Category</label>
+            <label className="block text-sm font-semibold text-[#555555] mb-2">Property Category</label>
             <select
               value={selectedPropertyType}
               onChange={(e) => setSelectedPropertyType(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
             >
               <option value="all">All Property Categories</option>
               <option value="Open Plots">Open Plots & Villa Plots</option>
@@ -157,11 +154,11 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
           {/* Construction Status */}
           <div>
-            <label className="block text-[10px] font-bold text-[#555555] uppercase mb-1">Status</label>
+            <label className="block text-sm font-semibold text-[#555555] mb-2">Status</label>
             <select
               value={selectedStatus}
               onChange={(e) => setSelectedStatus(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
+              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
             >
               <option value="all">All Stages</option>
               <option value="Ready for Construction">Ready for Construction</option>
@@ -172,7 +169,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
         </div>
 
         {/* Price Slider and Count */}
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 text-xs text-[#555555]">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 text-sm text-[#555555]">
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <span className="font-bold shrink-0">Max Budget:</span>
             <input
@@ -212,10 +209,8 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
       {/* Projects Grid Display */}
       {filteredProjects.length === 0 ? (
-        <div className="glass-card p-12 text-center space-y-4 bg-white rounded-2xl border border-slate-200">
-          <div className="w-16 h-16 rounded-full bg-slate-100 text-slate-400 mx-auto flex items-center justify-center text-2xl">
-            🔍
-          </div>
+        <div className="p-12 text-center space-y-4 bg-white rounded-2xl border border-slate-200">
+          <Search className="w-8 h-8 text-[#7A5C10] mx-auto" aria-hidden="true" />
           <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">No Matching Projects Found</h3>
           <p className="text-sm text-[#555555] max-w-md mx-auto">
             Try adjusting your search keywords, budget slider, or corridor filters to explore available developer inventory.
@@ -235,67 +230,46 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((proj) => (
-            <div key={proj.id} className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-slate-200 hover:border-[#C8A34D] transition-all shadow-sm">
+            <div key={proj.id} className="rounded-xl overflow-hidden flex flex-col justify-between group bg-white border border-slate-200 transition-colors hover:border-[#C8A34D]">
               <div>
                 <div className="relative h-60 overflow-hidden bg-[#0B1F3A]">
                   <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-transparent to-transparent" />
-                  
-                  {/* Category Badge */}
-                  <span className="absolute top-4 left-4 bg-[#0B1F3A]/90 backdrop-blur-md text-[#C8A34D] border border-[#C8A34D]/40 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
-                    {proj.propertyType}
-                  </span>
-
-                  {/* Group Badge */}
-                  {proj.groupName && (
-                    <span className="absolute top-4 right-4 bg-white/95 backdrop-blur-md text-[#0B1F3A] px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-sm">
-                      {proj.groupName}
-                    </span>
-                  )}
-
-                  {/* Price Banner */}
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
-                    <div>
-                      <div className="text-[10px] uppercase font-bold text-[#C8A34D]">Price Range</div>
-                      <div className="text-lg font-black text-white font-heading">{proj.priceRange}</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-[10px] uppercase font-bold text-slate-300">Plots / Units</div>
-                      <div className="text-xs font-bold text-[#C8A34D]">{proj.availablePlots} Available</div>
-                    </div>
+                  <div className="absolute inset-x-0 bottom-0 bg-[#0B1F3A]/90 p-4 text-white sm:p-5">
+                    <p className="text-sm font-semibold text-[#C8A34D]">{proj.propertyType} · {proj.groupName}</p>
+                    <p className="mt-1 text-lg font-bold font-heading">{proj.priceRange}</p>
                   </div>
                 </div>
 
                 <div className="p-6 space-y-4">
                   <div>
-                    <h3 className="text-lg font-black text-[#0B1F3A] font-heading group-hover:text-[#C8A34D] transition-colors leading-snug">
+                    <h3 className="text-xl font-bold text-[#0B1F3A] font-heading leading-snug">
                       {proj.title}
                     </h3>
-                    <div className="flex items-center gap-1.5 text-xs text-[#555555] mt-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" />
-                      <span className="line-clamp-1">{proj.location}</span>
+                    <div className="flex items-center gap-2 text-sm text-[#555555] mt-2">
+                      <MapPin className="w-4 h-4 text-[#7A5C10] shrink-0" aria-hidden="true" />
+                      <span className="line-clamp-2">{proj.location}</span>
                     </div>
                   </div>
 
-                  <p className="text-xs text-[#555555] line-clamp-2 leading-relaxed">
+                  <p className="text-base text-[#555555] line-clamp-3 leading-relaxed">
                     {proj.overview}
                   </p>
 
-                  {/* Configurations */}
-                  <div className="space-y-1.5 pt-2 border-t border-slate-100">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase">Available Configurations:</span>
-                    <div className="flex flex-wrap gap-1">
+                  <div className="space-y-2 pt-2">
+                    <span className="text-base font-semibold text-[#0B1F3A]">Configurations</span>
+                    <ul className="flex flex-wrap gap-2">
                       {proj.dimensions?.slice(0, 3).map((dim, idx) => (
-                        <span key={idx} className="bg-slate-50 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-200">
+                        <li key={idx} className="bg-[#F8F8F5] text-slate-700 text-sm px-3 py-1.5 rounded">
                           {dim}
-                        </span>
+                        </li>
                       ))}
                       {(proj.dimensions?.length || 0) > 3 && (
-                        <span className="bg-[#0B1F3A]/5 text-[#0B1F3A] text-[10px] font-bold px-1.5 py-0.5 rounded">
+                        <li className="bg-[#0B1F3A]/5 text-[#0B1F3A] text-sm font-semibold px-3 py-1.5 rounded">
                           +{proj.dimensions.length - 3} more
-                        </span>
+                        </li>
                       )}
-                    </div>
+                    </ul>
+                    <p className="text-sm font-semibold text-[#0B1F3A]">{proj.availablePlots} available</p>
                   </div>
                 </div>
               </div>
@@ -306,7 +280,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                   {proj.id === 'project-purva-sounds-of-water-villa' ? (
                     <a
                       href="/purva-sounds-of-water"
-                      className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors block"
+                      className="py-3 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-sm font-bold text-center transition-colors block"
                     >
                       View Villa Page
                     </a>
@@ -320,7 +294,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                           if (setActivePage) setActivePage('project-details', 'all', proj.id);
                         }
                       }}
-                      className="py-2.5 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-xs font-bold text-center transition-colors block"
+                      className="py-3 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-sm font-bold text-center transition-colors block"
                     >
                       View Details
                     </a>
@@ -328,7 +302,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
                   <button
                     onClick={() => openSiteVisitModal(proj)}
-                    className="btn-gold py-2.5 px-3 text-xs font-black text-center cursor-pointer"
+                    className="btn-gold py-3 px-3 text-sm font-black text-center cursor-pointer"
                   >
                     Book Visit
                   </button>
@@ -350,16 +324,12 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
       )}
 
       {/* Trust Guarantee Section */}
-      <div className="p-8 rounded-3xl bg-[#0B1F3A] text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-[#C8A34D]/30 shadow-xl">
+      <div className="p-8 rounded-2xl bg-[#0B1F3A] text-white flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-xs font-bold text-[#C8A34D] uppercase">
-            <Sparkles className="w-4 h-4 text-[#C8A34D]" />
-            Direct Developer Allotment Desk
-          </div>
-          <h3 className="text-2xl font-black font-heading">
+          <h3 className="text-2xl font-black font-heading leading-tight">
             Need Expert Advice on Plot Legalities or Villa Customization?
           </h3>
-          <p className="text-xs text-white/80 max-w-2xl">
+          <p className="text-base text-white/85 max-w-2xl leading-relaxed">
             Our land advisors verify title clearance, RERA certification, and bank approvals for every project in our portfolio.
           </p>
         </div>

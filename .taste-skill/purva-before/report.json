@@ -1,0 +1,1496 @@
+{
+ "url": "http://localhost:3211/purva-sounds-of-water/",
+ "at": "2026-10-29T07:48:59.692Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.46,
+    0.61,
+    0.98,
+    0.82,
+    0.78,
+    1,
+    1,
+    0.75,
+    0.63,
+    0.98,
+    0.65,
+    0.26
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 14538,
+     "screens": 16.2,
+     "words": 1614,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 52,
+     "sections": 3,
+     "horizontalOverflow": 168,
+     "overflowCulprits": [
+      "img.w-full.h-full (+16px)",
+      "img.w-full.h-full (+16px)",
+      "img.w-full.h-full (+16px)"
+     ],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-swimming-pool.jpeg",
+      "purva-villa-private-garden-outhouse.jpeg",
+      "purva-villa-balcony-terrace.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-kitchen-island.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "chars": 56,
+     "lines": 1,
+     "size": 32,
+     "vw": 2.2,
+     "font": "Times New Roman",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.99,
+     "top": 382,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "lines": 1,
+     "size": 32,
+     "font": "Times New Roman"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "words": 8,
+      "chars": 56,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.99,
+      "top": 382,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      19,
+      24,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.2,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 178,
+     "max": {
+      "size": 32,
+      "vw": 2.2,
+      "font": "Times New Roman",
+      "text": "Purva Sounds of Water - Seller-Listed Fi"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.91
+      },
+      {
+       "color": "#0000ee",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#f0f0f0",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.94
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 1,
+     "radius": 0,
+     "height": 82,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Back to All Projects"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.21
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 218,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 14538,
+    "margins": {
+     "left": 8,
+     "right": 171
+    },
+    "sections": [
+     {
+      "sel": "header.sticky.top-0",
+      "tag": "header",
+      "top": 8,
+      "height": 218,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 8,
+      "right": 536,
+      "textLeft": 8,
+      "textRight": 536,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.max-w-7xl.mx-auto",
+      "tag": "div",
+      "top": 272,
+      "height": 10440,
+      "words": 587,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 8,
+      "right": 77,
+      "textLeft": 8,
+      "textRight": 13,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 10732,
+      "height": 894,
+      "words": 352,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Symphony at The Sound of Water: Seller-Liste",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 60,
+      "textLeft": 8,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#F8F8F5].py-16",
+      "tag": "section",
+      "top": 11646,
+      "height": 825,
+      "words": 314,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Symphony at The Sound of Water, Bengaluru",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 898,
+      "textLeft": 8,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 12490,
+      "height": 1010,
+      "words": 211,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions About This Purva Symphony Resale Listing",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 56,
+      "textLeft": 8,
+      "textRight": 56,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 13528,
+      "height": 993,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 19,
+       "tag": "h3"
+      },
+      "left": 8,
+      "right": 137,
+      "textLeft": 8,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "size": 32,
+      "top": 382,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Hotline:",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Visit Dedicated Villa Page →",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Seller-Quoted Asking Price",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "₹9.00 Crore",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Seller-quoted ₹9.0 Cr • confirm current price and ",
+      "side": "left",
+      "px": 13
+     }
+    ],
+    "edges": [
+     {
+      "x": 8,
+      "n": 29
+     },
+     {
+      "x": 32,
+      "n": 1
+     },
+     {
+      "x": 471,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.14,
+    "voidBox": {
+     "x": 1200,
+     "y": 120,
+     "w": 240,
+     "h": 780
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.63,
+    0.98,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.65,
+    0.54,
+    0.58
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 15196,
+     "screens": 14.8,
+     "words": 1614,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 52,
+     "sections": 3,
+     "horizontalOverflow": 840,
+     "overflowCulprits": [
+      "img.w-full.h-full (+140px)",
+      "img.w-full.h-full (+140px)",
+      "img.w-full.h-full (+688px)"
+     ],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-swimming-pool.jpeg",
+      "purva-villa-private-garden-outhouse.jpeg",
+      "purva-villa-balcony-terrace.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-kitchen-island.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "chars": 56,
+     "lines": 2,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Times New Roman",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.98,
+     "top": 436,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "lines": 2,
+     "size": 32,
+     "font": "Times New Roman"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "words": 8,
+      "chars": 56,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.98,
+      "top": 436,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      19,
+      24,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.2,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 94,
+     "max": {
+      "size": 32,
+      "vw": 4.2,
+      "font": "Times New Roman",
+      "text": "Purva Sounds of Water - Seller-Listed Fi"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.91
+      },
+      {
+       "color": "#0000ee",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#f0f0f0",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.94
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 1,
+     "radius": 0,
+     "height": 82,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Back to All Projects"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.31
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 254,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 15196,
+    "margins": {
+     "left": 8,
+     "right": 21
+    },
+    "sections": [
+     {
+      "sel": "header.sticky.top-0",
+      "tag": "header",
+      "top": 8,
+      "height": 254,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 8,
+      "right": 66,
+      "textLeft": 8,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.max-w-7xl.mx-auto",
+      "tag": "div",
+      "top": 308,
+      "height": 10603,
+      "words": 587,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 8,
+      "right": 24,
+      "textLeft": 8,
+      "textRight": 14,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 10931,
+      "height": 1227,
+      "words": 352,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Symphony at The Sound of Water: Seller-Liste",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 12,
+      "textLeft": 8,
+      "textRight": 10,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-[#F8F8F5].py-16",
+      "tag": "section",
+      "top": 12178,
+      "height": 861,
+      "words": 314,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Symphony at The Sound of Water, Bengaluru",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 28,
+      "textLeft": 8,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.bg-white.py-16",
+      "tag": "section",
+      "top": 13058,
+      "height": 1046,
+      "words": 211,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions About This Purva Symphony Resale Listing",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 8,
+      "right": 25,
+      "textLeft": 8,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 14132,
+      "height": 1047,
+      "words": 249,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property Portfolios",
+       "size": 19,
+       "tag": "h3"
+      },
+      "left": 8,
+      "right": 19,
+      "textLeft": 8,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "size": 32,
+      "top": 436,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Bengaluru & Dubai Luxury Real Estate Portfolio",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Hotline:",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Interior Design",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Project RERA listed by developer: PRM/KA/RERA/1251",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Visit Dedicated Villa Page →",
+      "side": "left",
+      "px": 8
+     }
+    ],
+    "edges": [
+     {
+      "x": 8,
+      "n": 29
+     },
+     {
+      "x": 32,
+      "n": 1
+     },
+     {
+      "x": 471,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.52,
+    0.73,
+    0.79,
+    0.82,
+    0.83,
+    0.82,
+    0.76,
+    0.76,
+    0.7,
+    0.54,
+    0.46,
+    0.25
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1560,
+     "h": 3376
+    },
+    "page": {
+     "height": 17729,
+     "screens": 5.3,
+     "words": 1614,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 52,
+     "sections": 3,
+     "horizontalOverflow": 48,
+     "overflowCulprits": [
+      "img.w-full.h-full (+48px)"
+     ],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-swimming-pool.jpeg",
+      "purva-villa-private-garden-outhouse.jpeg",
+      "purva-villa-balcony-terrace.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-kitchen-island.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "🏞",
+      "📐",
+      "🏡",
+      "✨",
+      "🏢",
+      "🌍",
+      "🎨"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "chars": 56,
+     "lines": 3,
+     "size": 32,
+     "vw": 2.1,
+     "font": "Times New Roman",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.24,
+     "top": 508,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+     "words": 8,
+     "lines": 3,
+     "size": 32,
+     "font": "Times New Roman"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "words": 8,
+      "chars": 56,
+      "lines": 3,
+      "size": 32,
+      "vw": 2.1,
+      "font": "Times New Roman",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 508,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      16,
+      19,
+      24,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.2,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 47,
+     "max": {
+      "size": 32,
+      "vw": 2.1,
+      "font": "Times New Roman",
+      "text": "Purva Sounds of Water - Seller-Listed Fi"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.91
+      },
+      {
+       "color": "#0000ee",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#f0f0f0",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.94
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 33,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Back to All Projects"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.3
+     },
+     {
+      "type": "img",
+      "ratio": 0.11
+     },
+     {
+      "type": "img",
+      "ratio": 0.11
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 290,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1560,
+     "h": 3376
+    },
+    "pageH": 17729,
+    "margins": {
+     "left": 8,
+     "right": 652
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water - Seller-Listed Five-Bedroom Villa",
+      "size": 32,
+      "top": 508,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Verified Channel Partner",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Bengaluru & Dubai Luxury Real Estate Portfolio",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Hotline:",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Plots in Bangalore",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Dubai Properties",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Home",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Project RERA listed by developer: PRM/KA/RERA/1251",
+      "side": "left",
+      "px": 8
+     }
+    ],
+    "edges": [
+     {
+      "x": 8,
+      "n": 29
+     },
+     {
+      "x": 32,
+      "n": 1
+     },
+     {
+      "x": 124,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.22,
+    "voidBox": {
+     "x": 910,
+     "y": 225,
+     "w": 650,
+     "h": 1801
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: 🏞 📐 🏡 ✨ 🏢 🌍 🎨",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "default-link",
+   "width": 1440,
+   "message": "Browser-default blue/purple link colour is showing.",
+   "fix": "Style every link: inherit the text colour and mark it with weight, underline offset, or the accent.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 178 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "overflow",
+   "width": 1440,
+   "message": "Page scrolls sideways by 168px at 1440px. Widest offenders: img.w-full.h-full (+16px), img.w-full.h-full (+16px), img.w-full.h-full (+16px).",
+   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 32px (2.2vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 8px from the left edge but only to 171px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure).",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 1440,
+   "message": "A section keeps its content on one side and leaves 898px of the width empty: \"Purva Symphony at The Sound of Water, Bengaluru\".",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence."
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 1440,
+   "message": "8 text block(s) sit within 16px of the screen edge: \"Hotline:\" (8px from the left); \"Home\" (8px from the left); \"Home\" (8px from the left); \"Purva Sounds of Water - Seller\" (8px from the left)",
+   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 0 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "overflow",
+   "width": 768,
+   "message": "Page scrolls sideways by 840px at 768px. Widest offenders: img.w-full.h-full (+140px), img.w-full.h-full (+140px), img.w-full.h-full (+688px).",
+   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Purva Sounds of Water - Seller-Listed Five-Bedro\" → 3 lines (8 words, 32px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "overflow",
+   "width": 390,
+   "message": "Page scrolls sideways by 48px at 390px. Widest offenders: img.w-full.h-full (+48px).",
+   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\desktop-page-02.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\tablet-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\purva-before\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

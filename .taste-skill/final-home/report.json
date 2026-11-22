@@ -1,0 +1,1851 @@
+{
+ "url": "http://127.0.0.1:3222/",
+ "at": "2026-10-29T08:51:09.990Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.96
+   ],
+   "motion": {
+    "elements": 9,
+    "css": 8,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7928,
+     "screens": 8.8,
+     "words": 1540,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 55,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1512453979798-5ea266f8880c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Verified properties in Bengaluru and Dubai",
+     "words": 6,
+     "chars": 42,
+     "lines": 2,
+     "size": 72,
+     "vw": 5,
+     "font": "Playfair Display",
+     "weight": 900,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 298,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Verified properties in Bengaluru and Dubai",
+     "words": 6,
+     "lines": 2,
+     "size": 72,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Verified properties in Bengaluru and Dubai",
+      "words": 6,
+      "chars": 42,
+      "lines": 2,
+      "size": 72,
+      "vw": 5,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 298,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Featured Available Developments",
+      "words": 3,
+      "chars": 31,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 1134,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What a plot could be worth",
+      "words": 6,
+      "chars": 26,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": 3894,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Forecast land appreciation",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.45,
+      "top": 4090,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "₹99.61 Lakhs",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.11,
+      "top": 4229,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Why buyers work with us",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 5339,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Looking for a specific plot size or villa layout?",
+      "words": 9,
+      "chars": 49,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 5650,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions & Advisory Insights",
+      "words": 6,
+      "chars": 46,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 5948,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      36,
+      72
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 42,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Playfair Display",
+      "text": "Verified properties in"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.001,
+     "microSamples": [
+      "Quick Links"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.09,
+     "smallText": 17
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 112,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 3830,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#555555",
+       "share": 0.35
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.3
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.17
+      },
+      {
+       "color": "#314158",
+       "share": 0.07
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 42,
+     "inHero": 4,
+     "radius": 8,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 12,
+     "heroLabels": [
+      "BOOK A VISIT",
+      "BROWSE ALL PROPERTIES",
+      "Book a site visit",
+      "WhatsApp us +91 84319 09508"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.px-6.pb-6 958px",
+      "footer.bg-[#0B1F3A].text-white/70 1440px",
+      "div.grid.grid-cols-1 1216px"
+     ],
+     "outlinedBoxes": 19,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 25,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 8,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1229
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.22
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7928,
+    "margins": {
+     "left": 112,
+     "right": 113
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 7128,
+      "words": 1407,
+      "media": 9,
+      "middle": 0,
+      "heading": {
+       "text": "Verified properties in",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 80,
+      "textLeft": 100,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 7128,
+      "height": 800,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property portfolios",
+       "size": 14,
+       "tag": "h3"
+      },
+      "left": 112,
+      "right": 112,
+      "textLeft": 112,
+      "textRight": 112,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Verified properties in Bengaluru and Dubai",
+      "size": 72,
+      "top": 298,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 265,
+      "n": 8
+     },
+     {
+      "x": 133,
+      "n": 7
+     },
+     {
+      "x": 112,
+      "n": 6
+     },
+     {
+      "x": 145,
+      "n": 5
+     },
+     {
+      "x": 553,
+      "n": 4
+     },
+     {
+      "x": 969,
+      "n": 4
+     },
+     {
+      "x": 809,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 35,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 780,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.96,
+    0.91
+   ],
+   "motion": {
+    "elements": 9,
+    "css": 8,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 10617,
+     "screens": 10.4,
+     "words": 1518,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 55,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1512453979798-5ea266f8880c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Verified properties in Bengaluru and Dubai",
+     "words": 6,
+     "chars": 42,
+     "lines": 2,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Playfair Display",
+     "weight": 900,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 192,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Verified properties in Bengaluru and Dubai",
+     "words": 6,
+     "lines": 2,
+     "size": 48,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Verified properties in Bengaluru and Dubai",
+      "words": 6,
+      "chars": 42,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 192,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Featured Available Developments",
+      "words": 3,
+      "chars": 31,
+      "lines": 2,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 1612,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What a plot could be worth",
+      "words": 6,
+      "chars": 26,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 5291,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Forecast land appreciation",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 5487,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "₹99.61 Lakhs",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 6085,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Why buyers work with us",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 7490,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Looking for a specific plot size or villa layout?",
+      "words": 9,
+      "chars": 49,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 7941,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions & Advisory Insights",
+      "words": 6,
+      "chars": 46,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 8313,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 3,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      10,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      36,
+      48
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 37,
+     "max": {
+      "size": 48,
+      "vw": 6.3,
+      "font": "Playfair Display",
+      "text": "Verified properties in"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.001,
+     "microSamples": [
+      "Quick Links"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.12,
+     "smallText": 15
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 112,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1156,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#555555",
+       "share": 0.36
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.29
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.17
+      },
+      {
+       "color": "#314158",
+       "share": 0.07
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 41,
+     "inHero": 3,
+     "radius": 8,
+     "height": 67,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 11,
+     "heroLabels": [
+      "Book Visit",
+      "BROWSE ALL PROPERTIES",
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.px-6.pb-6 718px",
+      "footer.bg-[#0B1F3A].text-white/70 768px",
+      "div.grid.grid-cols-1 720px"
+     ],
+     "outlinedBoxes": 19,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 25,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 8,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1747
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 10617,
+    "margins": {
+     "left": 24,
+     "right": 25
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 9543,
+      "words": 1391,
+      "media": 9,
+      "middle": 0,
+      "heading": {
+       "text": "Verified properties in",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 9543,
+      "height": 1074,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property portfolios",
+       "size": 14,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Verified properties in Bengaluru and Dubai",
+      "size": 48,
+      "top": 192,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 45,
+      "n": 17
+     },
+     {
+      "x": 425,
+      "n": 6
+     },
+     {
+      "x": 57,
+      "n": 5
+     },
+     {
+      "x": 24,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 32,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 9,
+    "css": 8,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 14739,
+     "screens": 17.5,
+     "words": 1508,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 55,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1512453979798-5ea266f8880c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Verified properties in Bengaluru and Dubai",
+     "words": 6,
+     "chars": 42,
+     "lines": 2,
+     "size": 33.6,
+     "vw": 8.6,
+     "font": "Playfair Display",
+     "weight": 900,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 168,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Verified properties in Bengaluru and Dubai",
+     "words": 6,
+     "lines": 2,
+     "size": 33.6,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Verified properties in Bengaluru and Dubai",
+      "words": 6,
+      "chars": 42,
+      "lines": 2,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 168,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Featured Available Developments",
+      "words": 3,
+      "chars": 31,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1872,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What a plot could be worth",
+      "words": 6,
+      "chars": 26,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 7977,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Forecast land appreciation",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 8173,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "₹63.00 Lakhs",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.33,
+      "top": 8797,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "₹99.61 Lakhs",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.42,
+      "top": 8853,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Explore the corridors",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 9250,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Why buyers work with us",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10361,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Looking for a specific plot size or villa layout?",
+      "words": 9,
+      "chars": 49,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 900,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 11016,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions & Advisory Insights",
+      "words": 6,
+      "chars": 46,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 800,
+      "tracking": -0.02,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 11489,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 3,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.84,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.16,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      9,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      34
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.5
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Playfair Display",
+      "text": "Verified properties in"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.001,
+     "microSamples": [
+      "Quick Links"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.12,
+     "smallText": 14
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07090e",
+     "bodyBgHsl": {
+      "h": 223,
+      "s": 0.33,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 112,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1151,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#142e54",
+       "top": 10983,
+       "hsl": {
+        "h": 216,
+        "s": 0.62,
+        "l": 0.2
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#555555",
+       "share": 0.36
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.29
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.17
+      },
+      {
+       "color": "#314158",
+       "share": 0.07
+      },
+      {
+       "color": "#c8a34d",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 41,
+     "inHero": 3,
+     "radius": 8,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 11,
+     "heroLabels": [
+      "Book Visit",
+      "BROWSE ALL PROPERTIES",
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 7,
+     "hairlineSamples": [
+      "li.sm:border-r.sm:border-[#0B1F3A]/10 358px",
+      "li.sm:border-r.sm:border-[#0B1F3A]/10 358px",
+      "li.sm:border-r.sm:border-[#0B1F3A]/10 358px",
+      "li.sm:border-r.sm:border-[#0B1F3A]/10 358px",
+      "div.px-6.pb-6 356px"
+     ],
+     "outlinedBoxes": 19,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 25,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 8,
+     "mediaRadius": 16,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.13
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 14739,
+    "margins": {
+     "left": 16,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 12973,
+      "words": 1382,
+      "media": 9,
+      "middle": 0,
+      "heading": {
+       "text": "Verified properties in",
+       "size": 34,
+       "tag": "h1"
+      },
+      "left": 12,
+      "right": 12,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white/70",
+      "tag": "footer",
+      "top": 12973,
+      "height": 1766,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Property portfolios",
+       "size": 14,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 28,
+      "textLeft": 16,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Verified properties in Bengaluru and Dubai",
+      "size": 34,
+      "top": 168,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 37,
+      "n": 28
+     },
+     {
+      "x": 16,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 32,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "1 tiny uppercase letter-spaced label(s): \"Quick Links\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "3 thin rule(s)/divider line(s): div.px-6.pb-6 958px | footer.bg-[#0B1F3A].text-white/70 1440px | div.grid.grid-cols-1 1216px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "19 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #f8f8f5).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (10, 12, 13, 14, 16, 18, 20, 24, 30, 36, 72).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "17 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 9 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\desktop-page-02.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\tablet-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Lakshie Realestate\\.taste-skill\\final-home\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

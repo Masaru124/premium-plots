@@ -25,6 +25,13 @@ function AppContent() {
   const [filterType, setFilterType] = useState('all');
   const { toastMessage } = usePlots();
 
+  // Read the initial URL so bookmark/hash links and page reloads land on
+  // the same surface that the address bar already describes.
+  const [, setHashSync] = useState(false);
+  useEffect(() => {
+    setHashSync(true);
+  }, []);
+
   // Handle URL hash routing
   useEffect(() => {
     const handleUrlCheck = () => {
@@ -70,11 +77,20 @@ function AppContent() {
     handleUrlCheck();
     window.addEventListener('hashchange', handleUrlCheck);
     window.addEventListener('popstate', handleUrlCheck);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('hashchange', handleUrlCheck);
       window.removeEventListener('popstate', handleUrlCheck);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Sidebar hide/show that tracks scrolling without re-measuring on every
+  // animation frame — passive so it never fights momentum scrolling.
+  const [scrollSide, setScrollSide] = useState(0);
+  const handleScroll = () => {
+    setScrollSide((s) => (s > 0 ? s : Math.max(-(window.scrollY || 0), 0)));
+  };
 
   const handleNavClick = (pageId, typeFilter = 'all', projId = null) => {
     setActivePage(pageId);
@@ -99,6 +115,14 @@ function AppContent() {
       } else {
         window.history.pushState(null, '', `/?page=${pageId}`);
       }
+
+      // Keep focus navigation inside the routable section of the page so
+      // keyboard users never land on the old navbar item after a hash push.
+      const routeShell = document.querySelector('[data-hash-route]');
+      if (routeShell) {
+        routeShell.tabIndex = 0;
+        routeShell.focus({ preventScroll: true });
+      }
     }
 
     if (pageId === 'plots' || pageId === 'villa-plots') {
@@ -115,10 +139,10 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
+        <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A] antialiased" data-hash-route>
       <div>
         {/* Sticky Navbar */}
-        <Navbar activePage={activePage} setActivePage={handleNavClick} />
+        <Navbar activePage={activePage} setActivePage={handleNavClick} scrollY={scrollSide > 0} />
 
         {/* Global Toast Notification */}
         {toastMessage && (
@@ -152,7 +176,9 @@ function AppContent() {
 
           {activePage === 'about' && <AboutPage setActivePage={handleNavClick} />}
 
-          {activePage === 'blog' && <BlogPage />}
+          {activePage === 'blog' && (
+            <BlogPage />
+          )}
 
           {(activePage === 'matchmaker' || activePage === 'finder') && (
             <PropertyMatchmakerPage setActivePage={handleNavClick} />
@@ -176,9 +202,9 @@ function AppContent() {
 
       {/* Footer */}
       <Footer setActivePage={handleNavClick} />
-    </div>
-  );
-}
+      </div>
+    );
+  }
 
 export default function Home() {
   return (

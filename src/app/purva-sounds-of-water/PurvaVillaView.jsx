@@ -9,7 +9,7 @@ import BookSiteVisitModal from '../../components/BookSiteVisitModal';
 import ProjectDetailsPage from '../../views/ProjectDetailsPage';
 import {
   ShieldCheck, MapPin, Download, CheckCircle2, Phone, MessageCircle,
-  HelpCircle, ChevronDown, Award, Sparkles, Building2, Trees, Bath, Bed,
+  ChevronDown, Award, Building2, Trees, Bath, Bed,
   Maximize2, ArrowRight
 } from 'lucide-react';
 
@@ -90,7 +90,7 @@ function PurvaVillaContent() {
                 <span>/</span>
                 <span className="text-[#C8A34D] font-bold">Purva Symphony Resale Listing</span>
               </nav>
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+              <span className="hidden sm:inline-flex items-center gap-1.5 text-[#C8A34D] font-semibold">
                 <ShieldCheck className="w-4 h-4" /> Resale listing • verify unit details
               </span>
             </div>
@@ -104,10 +104,6 @@ function PurvaVillaContent() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
               
               <div className="text-center space-y-3 max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/5 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-bold uppercase tracking-wider">
-                  <Sparkles className="w-4 h-4 text-[#C8A34D]" />
-                  Seller-Listed Resale • Unit Details Require Verification
-                </div>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] font-heading">
                   Purva Symphony at The Sound of Water: Seller-Listed Villa in South Bengaluru
                 </h2>
@@ -242,9 +238,6 @@ function PurvaVillaContent() {
           <section className="bg-[#F8F8F5] py-16 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
               <div className="text-center space-y-3 max-w-2xl mx-auto">
-                <span className="text-xs font-bold text-[#7A5C10] uppercase tracking-wider">
-                  South Bengaluru • Off Bannerghatta Road
-                </span>
                 <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
                   Purva Symphony at The Sound of Water, Bengaluru
                 </h2>
@@ -255,7 +248,7 @@ function PurvaVillaContent() {
 
               {/* Verified Developer-Published Project Facts */}
               <div className="rounded-2xl border border-[#C8A34D]/30 bg-white p-6 sm:p-8 space-y-4">
-                <div className="flex items-center gap-2 text-xs font-black text-[#7A5C10] uppercase tracking-wider">
+                <div className="flex items-center gap-2 text-sm font-semibold text-[#7A5C10]">
                   <Award className="w-4 h-4 text-[#C8A34D]" />
                   Official Project Facts — Puravankara’s Published Information
                 </div>
@@ -284,9 +277,9 @@ function PurvaVillaContent() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                  <div className="text-[#C8A34D] font-bold text-sm">Schools, Healthcare & Retail</div>
-                  <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                  <div className="text-[#7A5C10] font-bold text-sm">Schools, Healthcare & Retail</div>
+                  <ul className="text-sm text-slate-600 space-y-2 pt-1 leading-relaxed">
                     <li>• IIM Bangalore: 5 minutes</li>
                     <li>• Royal Meenakshi Mall & Decathlon Bannerghatta: 5 minutes</li>
                     <li>• Ryan International & BGS National Public School: 10 minutes</li>
@@ -296,9 +289,9 @@ function PurvaVillaContent() {
                   </ul>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                  <div className="text-[#C8A34D] font-bold text-sm">Metro, IT & Airport Connectivity</div>
-                  <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                  <div className="text-[#7A5C10] font-bold text-sm">Metro, IT & Airport Connectivity</div>
+                  <ul className="text-sm text-slate-600 space-y-2 pt-1 leading-relaxed">
                     <li>• Kalyani Magnum IT Tech Park: 10 minutes</li>
                     <li>• Jayadeva Hospital Metro Station: 15 minutes</li>
                     <li>• HSBC Software Development India: 15 minutes</li>
@@ -308,9 +301,9 @@ function PurvaVillaContent() {
                   </ul>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                  <div className="text-[#C8A34D] font-bold text-sm">Developer-Listed Project Amenities</div>
-                  <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                  <div className="text-[#7A5C10] font-bold text-sm">Developer-Listed Project Amenities</div>
+                  <ul className="text-sm text-slate-600 space-y-2 pt-1 leading-relaxed">
                     <li>• Man-made waterfall and Aqua Clubhouse</li>
                     <li>• Infinity pool, yoga space and jogging track</li>
                     <li>• Temple of Body & Mind with gym, steam and sauna</li>
@@ -328,10 +321,6 @@ function PurvaVillaContent() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
               
               <div className="text-center space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1F3A]/5 text-[#0B1F3A] text-xs font-bold uppercase">
-                  <HelpCircle className="w-4 h-4 text-[#C8A34D]" />
-                  Resale Listing Information
-                </div>
                 <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
                   Questions About This Purva Symphony Resale Listing
                 </h2>
@@ -373,12 +362,12 @@ function PurvaVillaContent() {
               </div>
 
               {/* Sticky Action Banner */}
-              <div className="p-8 rounded-2xl bg-[#0B1F3A] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+              <div className="p-8 rounded-2xl bg-[#0B1F3A] text-white flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
                   <h3 className="text-xl font-bold font-heading text-white">
                     Interested in This Seller-Listed Villa Resale?
                   </h3>
-                  <p className="text-xs text-white/70 mt-1">
+                  <p className="text-sm text-white/80 mt-2">
                     Contact the advisor to confirm availability, viewing arrangements and any buyer charges.
                   </p>
                 </div>
@@ -388,7 +377,7 @@ function PurvaVillaContent() {
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Lakshie Real Estate! I would like to enquire about the seller-listed resale villa at Purva Symphony, The Sound of Water.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-gold py-3 px-6 text-xs font-black uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-md"
+                    className="btn-gold py-3 px-6 text-sm font-bold normal-case tracking-normal flex items-center gap-2 cursor-pointer"
                   >
                     <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
                     Book VIP Site Visit
@@ -396,7 +385,7 @@ function PurvaVillaContent() {
 
                   <a
                     href={`tel:${displayPhone}`}
-                    className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-xs font-bold flex items-center gap-2 transition-colors"
+                    className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-sm font-semibold flex items-center gap-2 transition-colors"
                   >
                     <Phone className="w-4 h-4 text-[#C8A34D]" />
                     {displayPhone}

@@ -24,31 +24,24 @@ export default function ROICalculator() {
   };
 
   return (
-    <div className="bg-white border border-[#0B1F3A]/10 rounded-2xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C8A34D]/5 rounded-full blur-3xl -z-0 pointer-events-none" />
-
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div className="relative overflow-hidden rounded-lg border border-[#0B1F3A]/10 bg-white p-6 sm:p-10">
+      <div className="relative z-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
         {/* Left Controls */}
-        <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/8 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-semibold">
-            <Calculator className="w-3.5 h-3.5 text-[#C8A34D]" />
-            Bengaluru Open Plot ROI Forecaster
-          </div>
-
+        <div className="space-y-6 lg:col-span-7">
           <div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#0B1F3A] tracking-tight font-heading">
-              Calculate Your Land Appreciation & Profit Forecast
+            <h3 className="font-heading text-2xl font-bold tracking-tight text-[#0B1F3A] sm:text-3xl">
+              Forecast land appreciation
             </h3>
-            <p className="text-[#555555] text-sm mt-2">
-              Historically, Bengaluru open plot corridors (Devanahalli STRR, Whitefield Extension) deliver 15% - 20% annual land appreciation driven by highway connectivity and airport corridors.
+            <p className="mt-2 text-base leading-relaxed text-[#555555]">
+              Bengaluru plot corridors have historically returned 15% to 20% a year, driven by highway connectivity and the airport corridor. Set your plot size, rate and holding period.
             </p>
           </div>
 
-          <div className="space-y-5 bg-[#F8F8F5] p-6 rounded-xl border border-[#0B1F3A]/10">
+          <div className="space-y-5 rounded-lg bg-[#F8F8F5] p-6">
             {/* Slider 1: Plot Area */}
             <div>
-              <label htmlFor="roi-plot-sqft" className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2 cursor-pointer">
-                <span>PLOT AREA (SQ.FT)</span>
+              <label htmlFor="roi-plot-sqft" className="mb-2 flex cursor-pointer items-center justify-between text-sm font-semibold text-[#1A1A1A]">
+                <span>Plot area in sq ft</span>
                 <span className="text-[#0B1F3A] font-bold text-sm">{plotSqft} sq.ft</span>
               </label>
               <input
@@ -58,7 +51,7 @@ export default function ROICalculator() {
                 onChange={(e) => setPlotSqft(Number(e.target.value))}
                 className="w-full h-2 bg-[#0B1F3A]/15 rounded-lg appearance-none cursor-pointer accent-[#C8A34D]"
               />
-              <div className="flex justify-between text-[11px] text-[#555555] mt-1 font-medium">
+              <div className="mt-1 flex justify-between text-xs font-medium text-[#555555]">
                 <span>30x40 (1200 sqft)</span>
                 <span>30x50 (1500 sqft)</span>
                 <span>40x60 (2400 sqft)</span>
@@ -68,8 +61,8 @@ export default function ROICalculator() {
 
             {/* Slider 2: Price per sqft */}
             <div>
-              <label htmlFor="roi-price-per-sqft" className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2 cursor-pointer">
-                <span>PRICE PER SQ.FT</span>
+              <label htmlFor="roi-price-per-sqft" className="mb-2 flex cursor-pointer items-center justify-between text-sm font-semibold text-[#1A1A1A]">
+                <span>Price per sq ft</span>
                 <span className="text-[#7A5C10] font-bold text-sm">₹{pricePerSqft} / sq.ft</span>
               </label>
               <input
@@ -83,8 +76,8 @@ export default function ROICalculator() {
 
             {/* Slider 3: Projected Annual Growth Rate */}
             <div>
-              <label htmlFor="roi-appreciation-rate" className="flex justify-between items-center text-xs font-semibold text-[#1A1A1A] mb-2 cursor-pointer">
-                <span>ESTIMATED ANNUAL APPRECIATION</span>
+              <label htmlFor="roi-appreciation-rate" className="mb-2 flex cursor-pointer items-center justify-between text-sm font-semibold text-[#1A1A1A]">
+                <span>Annual appreciation</span>
                 <span className="text-[#0B1F3A] font-bold text-sm">{appreciationRate}% YoY</span>
               </label>
               <input
@@ -98,19 +91,19 @@ export default function ROICalculator() {
 
             {/* Holding Period Tabs */}
             <div>
-              <div className="text-xs font-semibold text-[#1A1A1A] mb-2 font-heading">INVESTMENT HORIZON</div>
+              <div className="mb-2 font-heading text-base font-semibold text-[#1A1A1A]">Holding period</div>
               <div className="grid grid-cols-3 gap-2">
                 {[3, 5, 7].map((yrs) => (
                   <button
                     key={yrs}
                     onClick={() => setHoldingYears(yrs)}
-                    className={`py-2.5 rounded-xl text-xs font-bold transition-all border cursor-pointer ${
+                    className={`rounded-lg border py-2.5 text-sm font-semibold transition-colors cursor-pointer ${
                       holdingYears === yrs
-                        ? 'bg-[#0B1F3A] text-[#C8A34D] border-[#C8A34D]/50 shadow-md'
-                        : 'bg-white text-[#1A1A1A] border-[#0B1F3A]/10 hover:bg-[#F8F8F5]'
+                        ? 'border-[#C8A34D] bg-[#0B1F3A] text-[#C8A34D]'
+                        : 'border-[#0B1F3A]/10 bg-white text-[#1A1A1A] hover:bg-[#F8F8F5]'
                     }`}
                   >
-                    {yrs} Years Holding
+                    {yrs} years
                   </button>
                 ))}
               </div>
@@ -119,43 +112,42 @@ export default function ROICalculator() {
         </div>
 
         {/* Right Output Box */}
-        <div className="lg:col-span-5 bg-[#0B1F3A] text-white p-6 sm:p-8 rounded-2xl shadow-2xl space-y-6 border border-[#C8A34D]/30">
-          <div className="border-b border-white/15 pb-4">
-            <div className="text-xs font-semibold uppercase tracking-wider text-white/50">Total Purchase Cost</div>
-            <div className="text-3xl font-extrabold text-white mt-1 font-heading">{formatLakhs(initialInvestment)}</div>
-            <div className="text-xs text-white/50 mt-1">({plotSqft} sq.ft @ ₹{pricePerSqft}/sq.ft)</div>
+        <div className="space-y-6 rounded-lg bg-[#0B1F3A] p-6 text-white sm:p-8 lg:col-span-5">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <span className="text-sm text-white/60">Purchase cost</span>
+            <span className="font-heading text-2xl font-bold tabular-nums text-white">{formatLakhs(initialInvestment)}</span>
           </div>
 
-          <div className="space-y-4">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#C8A34D]">
-                Projected Value in {holdingYears} Years
-              </div>
-              <div className="text-4xl font-extrabold text-[#C8A34D] mt-1 font-heading">
-                {formatLakhs(futureValue)}
-              </div>
-            </div>
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <span className="text-sm text-white/60">After {holdingYears} years</span>
+            <span className="font-heading text-3xl font-bold tabular-nums text-[#DFC06E]">
+              {formatLakhs(futureValue)}
+            </span>
+          </div>
 
-            <div className="bg-[#C8A34D]/15 border border-[#C8A34D]/30 p-4 rounded-xl space-y-1">
-              <div className="flex justify-between text-xs font-semibold text-white/90">
-                <span>Estimated Net Profit</span>
-                <span className="text-[#C8A34D] font-bold text-sm">+{formatLakhs(totalProfit)}</span>
-              </div>
-              <div className="flex justify-between text-xs text-white/60">
-                <span>Compound Value Growth</span>
-                <span className="text-[#C8A34D] font-bold">+{percentageGain}% Return</span>
-              </div>
+          <div className="space-y-2 rounded-lg bg-white/5 p-4">
+            <div className="flex justify-between text-sm font-semibold text-white/90">
+              <span>Net profit</span>
+              <span className="font-bold tabular-nums text-[#DFC06E]">+{formatLakhs(totalProfit)}</span>
+            </div>
+            <div className="flex justify-between text-sm text-white/70">
+              <span>Total return</span>
+              <span className="font-bold tabular-nums text-[#DFC06E]">+{percentageGain}%</span>
             </div>
           </div>
+
+          <p className="text-sm tabular-nums text-white/60">
+            Based on {plotSqft} sq ft at ₹{pricePerSqft} per sq ft.
+          </p>
 
           <a
             href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I used the ROI calculator on your site and I am interested in high appreciation plots in Bengaluru.`)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold w-full py-3.5 text-xs uppercase font-bold tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+            className="btn-gold flex w-full cursor-pointer items-center justify-center gap-2 py-3.5 text-sm"
           >
-            <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-            Book Site Visit for High Growth Plots
+            <MessageCircle className="h-4 w-4 text-[#0B1F3A]" aria-hidden="true" />
+            Book a visit for these plots
           </a>
         </div>
       </div>

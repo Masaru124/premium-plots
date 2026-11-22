@@ -15,7 +15,12 @@
 
 # next.js
 /.next/
+/.next-verify/
 /out/
+
+# local verification logs
+/.build.log
+/.verify-server.log
 
 # production
 /build
@@ -40,3 +45,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 scratch/
+
+.agent/
+.agent/skills

@@ -54,7 +54,10 @@ export const metadata = {
     }
   },
   verification: {
-    google: "dzgEAOMp4g_iBXbX1IvtwnOh9RdW7c1Ul0TvpVeoYPM"
+    google: [
+      "dzgEAOMp4g_iBXbX1IvtwnOh9RdW7c1Ul0TvpVeoYPM",
+      "FtkGZfsvTwj7MirAnYIX5rMtF5yM7UfX3pxZDXCaAl0"
+    ]
   }
 };
 
@@ -91,6 +94,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Google Site Verification (Mandatory) */}
         <meta name="google-site-verification" content="dzgEAOMp4g_iBXbX1IvtwnOh9RdW7c1Ul0TvpVeoYPM" />
+        <meta name="google-site-verification" content="FtkGZfsvTwj7MirAnYIX5rMtF5yM7UfX3pxZDXCaAl0" />
         
         {/* Preconnect to external image origin for faster asset discovery & LCP */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />

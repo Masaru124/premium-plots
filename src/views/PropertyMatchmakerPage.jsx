@@ -164,7 +164,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
           <div className="h-3 bg-gradient-to-r from-[#DFC06E] via-[#C8A34D] to-[#A6832A]" />
 
           <div className="p-6 sm:p-8 space-y-4">
-            <div className="flex items-center gap-2 text-xs font-bold text-[#C8A34D] uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-xs font-bold text-[#8a6a1f] uppercase tracking-wider">
               <Sparkles className="w-4 h-4 text-[#C8A34D]" />
               <span>Smart Property Finder & Consultation</span>
             </div>
@@ -179,18 +179,18 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
 
             {/* Value Trust Signals */}
             <div className="flex flex-wrap items-center gap-3 pt-2 text-[11px] font-semibold text-slate-600 border-t border-slate-100">
-              <span className="flex items-center gap-1 text-emerald-700">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <span className="flex items-center gap-1 text-[#0B1F3A]">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#0B1F3A]" />
                 100% RERA & BIAAPA Verified
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1 text-emerald-700">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <span className="flex items-center gap-1 text-[#0B1F3A]">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#0B1F3A]" />
                 0% Brokerage
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1 text-emerald-700">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <span className="flex items-center gap-1 text-[#0B1F3A]">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#0B1F3A]" />
                 Direct Developer Allocation
               </span>
             </div>
@@ -221,7 +221,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
         {/* 2. SUBMITTED SUCCESS STATE */}
         {isSubmitted && (
           <div className="bg-white rounded-2xl p-8 border border-[#0B1F3A]/10 shadow-sm text-center space-y-5 animate-fadeIn">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-[#C8A34D]/20 text-[#0B1F3A] mx-auto flex items-center justify-center">
               <Check className="w-8 h-8 stroke-[3]" />
             </div>
 
@@ -240,7 +240,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
                 href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(buildWhatsAppMessage())}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
+                className="w-full py-3.5 px-6 rounded-xl bg-[#0B1F3A] hover:bg-[#0B1F3A] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 fill-white" />
                 <span>Open WhatsApp ({displayPhone})</span>
@@ -546,7 +546,7 @@ ${notes.trim() ? `• Notes: ${notes.trim()}\n` : ''}━━━━━━━━━
             <div className="pt-2 space-y-3">
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all cursor-pointer border-2 border-emerald-400"
+                className="w-full py-4 px-6 rounded-xl bg-[#0B1F3A] hover:bg-[#0B1F3A] text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all cursor-pointer border-2 border-[#C8A34D]"
               >
                 <MessageCircle className="w-5 h-5 fill-white" />
                 <span>Submit & Send on WhatsApp ({displayPhone})</span>

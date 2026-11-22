@@ -15,27 +15,27 @@ export default function Footer({ setActivePage }) {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DFC06E] via-[#C8A34D] to-[#A6832A] p-0.5 shadow-lg flex items-center justify-center">
-                <div className="w-full h-full bg-[#0B1F3A] rounded-[10px] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg border border-[#C8A34D] p-0.5 flex items-center justify-center">
+                <div className="w-full h-full bg-[#0B1F3A] rounded-[6px] flex items-center justify-center">
                   <Compass className="w-5 h-5 text-[#C8A34D]" />
                 </div>
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xl font-bold tracking-tight text-white font-heading">PREMIUM</span>
-                  <span className="text-xl font-bold tracking-tight text-[#C8A34D] font-heading">PROPERTIES</span>
+                  <span className="text-xl font-bold tracking-tight text-white font-heading">LAKSHIE</span>
+                  <span className="text-xl font-bold tracking-tight text-[#C8A34D] font-heading">REAL ESTATE</span>
                 </div>
-                <p className="text-[9px] uppercase tracking-widest text-[#C8A34D] font-mono font-bold">
-                  BENGALURU • DUBAI
+                <p className="text-sm text-[#C8A34D] font-semibold">
+                  Bengaluru and Dubai
                 </p>
               </div>
             </div>
 
-            <p className="text-xs leading-relaxed text-white/80 pr-4">
+            <p className="max-w-md text-base leading-relaxed text-white/80">
               Independent Real Estate Consultancy and Authorized Channel Partner for premier open plot townships, luxury villa developments, high-rise apartments, and Dubai waterfront investments.
             </p>
 
-            <div className="space-y-2.5 pt-2 text-xs">
+            <div className="space-y-3 pt-2 text-base">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#C8A34D] shrink-0 mt-0.5" />
                 <span>Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar, Bengaluru, Karnataka 560001</span>
@@ -60,26 +60,26 @@ export default function Footer({ setActivePage }) {
 
           {/* Property Portfolios */}
           <div className="space-y-4">
-            <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Property Portfolios</h3>
-            <ul className="space-y-2 text-xs text-white/70">
+            <h3 className="text-base font-semibold text-[#C8A34D] font-heading">Property portfolios</h3>
+            <ul className="space-y-2.5 text-base text-white/70">
               <li>
                 <a href="/plots-in-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  🏞 Open Plots (Devanahalli & STRR)
+                  Open plots, Devanahalli and STRR
                 </a>
               </li>
               <li>
                 <a href="/plots-in-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  📐 Villa Plots (Oriaiyan 4,499 Sq.Ft)
+                  Villa plots by Oriaiyan Group
                 </a>
               </li>
               <li>
                 <a href="/purva-sounds-of-water" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  🏡 Purva Sounds of Water Resale (Bannerghatta)
+                  Purva Symphony resale, Bannerghatta
                 </a>
               </li>
               <li>
                 <a href="/luxury-villas-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  ✨ Luxury Villas in Bangalore (Nandi & South)
+                  Luxury villas in Bangalore
                 </a>
               </li>
               <li>
@@ -93,7 +93,7 @@ export default function Footer({ setActivePage }) {
                   }}
                   className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
                 >
-                  🏢 High-Rise Apartments (Airport Corridor)
+                  High-rise apartments, airport corridor
                 </a>
               </li>
               <li>
@@ -107,7 +107,7 @@ export default function Footer({ setActivePage }) {
                   }}
                   className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
                 >
-                  🌍 Dubai Investments (Emaar Harbour)
+                  Dubai waterfront investments
                 </a>
               </li>
               <li>
@@ -121,7 +121,7 @@ export default function Footer({ setActivePage }) {
                   }}
                   className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
                 >
-                  🎨 Turnkey Interior Design (Vinra)
+                  Turnkey interior design
                 </a>
               </li>
             </ul>
@@ -129,8 +129,8 @@ export default function Footer({ setActivePage }) {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Quick Links</h3>
-            <ul className="space-y-2 text-xs text-white/70">
+            <h3 className="font-heading text-base font-semibold text-[#C8A34D]">Quick links</h3>
+            <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a
                   href="/?page=projects"
@@ -234,8 +234,8 @@ export default function Footer({ setActivePage }) {
 
           {/* Channel Partner Trust */}
           <div className="space-y-4">
-            <h3 className="text-xs font-bold text-[#C8A34D] uppercase tracking-wider font-heading">Consultancy Assurance</h3>
-            <div className="space-y-2.5 text-[11px]">
+            <h3 className="text-base font-semibold text-[#C8A34D] font-heading">Consultancy assurance</h3>
+            <div className="space-y-3 text-base">
               <div className="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
                 <div className="font-bold text-white flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
@@ -259,22 +259,22 @@ export default function Footer({ setActivePage }) {
         </div>
 
         {/* Mandatory Channel Partner Disclaimer */}
-        <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-xs text-white/80 space-y-2 leading-relaxed">
-          <div className="font-bold text-white text-[11px] uppercase tracking-wider text-[#C8A34D] font-heading">
-            Disclaimer & Transparency Disclosure
+        <div className="rounded-lg bg-white/5 p-6 text-base text-white/80 space-y-3 leading-relaxed">
+          <div className="font-heading text-base font-semibold text-[#C8A34D]">
+            Disclaimer and transparency
           </div>
           <p>
             "We are an independent real estate consultancy working with multiple reputed developers as Channel Partners. We help buyers compare projects, arrange site visits and connect directly with developers."
           </p>
-          <p className="text-[11px] text-white/70 pt-1">
+          <p className="text-base text-white/70">
             All project images, architectural plans, layout blueprints, specifications, and prices shown on this platform are for representational and indicative purposes. Official booking agreements, allotment terms, and payments are executed directly between the buyer and the respective developer.
           </p>
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70 pt-2 border-t border-white/5">
-          <p>© {new Date().getFullYear()} Premium Properties Real Estate Advisory. All rights reserved.</p>
-          <p className="text-[11px] font-mono text-white/70">Channel Partner Registration Verified • Bengaluru & Dubai</p>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 text-base text-white/70">
+          <p>© {new Date().getFullYear()} Lakshie Real Estate. All rights reserved.</p>
+          <p>Channel partner registration verified · Bengaluru and Dubai</p>
         </div>
 
       </div>
