@@ -442,7 +442,7 @@ export const INITIAL_BLOGS = [
     category: 'Market Spotlight',
     date: 'October 06, 2026',
     readTime: '5 min read',
-    author: 'Lakshie Real Estate Research Cell',
+    author: 'Setty Relators Research Cell',
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80',
     summary: 'Discover how Oriaiyan Group\'s plotted enclaves up to 4,499 sq.ft across Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur Rd & Kanakapura Rd offer unmatched capital appreciation.',
     content: `Oriaiyan Group has set a new benchmark in verified plotted land and villa plot infrastructure in Bengaluru.`
@@ -499,7 +499,7 @@ export const CLIENT_REVIEWS = [
     profession: 'Senior Software Director at Foxconn Tech',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    quote: 'We booked a 2400 sq.ft villa plot in Oriaiyan Signature development. The clear documentation and prompt channel partner guidance by Lakshie was outstanding!',
+    quote: 'We booked a 2400 sq.ft villa plot in Oriaiyan Signature development. The clear documentation and prompt channel partner guidance by Setty Relators was outstanding!',
     project: 'Oriaiyan Group'
   },
   {

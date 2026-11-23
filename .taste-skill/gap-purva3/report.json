@@ -1,0 +1,2026 @@
+{
+ "url": "http://localhost:54987/purva-sounds-of-water",
+ "at": "2026-11-23T17:34:52.952Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.51,
+    0.4,
+    0.44,
+    0.6,
+    0.41,
+    0.64,
+    0.54,
+    0.38,
+    0.71,
+    0.43,
+    0.76
+   ],
+   "motion": {
+    "elements": 13,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 9495,
+     "screens": 10.6,
+     "words": 1391,
+     "img": 10,
+     "video": 0,
+     "canvas": 0,
+     "svg": 13,
+     "sections": 10,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 13,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-swimming-pool.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water villa resale",
+     "words": 6,
+     "chars": 34,
+     "lines": 1,
+     "size": 52,
+     "vw": 3.6,
+     "font": "Playfair Display",
+     "weight": 400,
+     "tracking": -0.02,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.52,
+     "top": 380,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water villa resale",
+     "words": 6,
+     "lines": 1,
+     "size": 52,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "₹9.00 Crore",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.27,
+      "top": 266,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Purva Sounds of Water villa resale",
+      "words": 6,
+      "chars": 34,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.52,
+      "top": 380,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The project",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 1765,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What is nearby",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 2681,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony, off Bannerghatta Road",
+      "words": 5,
+      "chars": 37,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 3043,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "One seller-listed villa, read closely.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 4426,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Seller-advertised details, and what to check.",
+      "words": 6,
+      "chars": 45,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 5075,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The developer’s own record.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 6256,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "On Bannerghatta Road.",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 7193,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions on this listing.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 7897,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 8966,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      35,
+      40,
+      52
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.1
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "text": "Purva Sounds of Water villa resale"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f8f8f5",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#efeee8",
+       "top": 3007,
+       "hsl": {
+        "h": 51,
+        "s": 0.18,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 7024,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#4c4c4c",
+       "share": 0.51
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.18
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.07
+      },
+      {
+       "color": "#dfc06e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 2,
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a visit",
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 4581
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "poppins",
+     "poppins fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 9495,
+    "margins": {
+     "left": 100,
+     "right": 100
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 8886,
+      "words": 1707,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water villa resale",
+       "size": 52,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white",
+      "tag": "footer",
+      "top": 8886,
+      "height": 609,
+      "words": 97,
+      "media": 0,
+      "middle": 124,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 52,
+       "tag": "p"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water villa resale",
+      "size": 52,
+      "top": 380,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 100,
+      "n": 16
+     },
+     {
+      "x": 527,
+      "n": 10
+     },
+     {
+      "x": 136,
+      "n": 4
+     },
+     {
+      "x": 837,
+      "n": 2
+     },
+     {
+      "x": 948,
+      "n": 2
+     },
+     {
+      "x": 124,
+      "n": 1
+     },
+     {
+      "x": 291,
+      "n": 1
+     },
+     {
+      "x": 452,
+      "n": 1
+     },
+     {
+      "x": 599,
+      "n": 1
+     },
+     {
+      "x": 993,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 39,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.11,
+    "voidBox": {
+     "x": 300,
+     "y": 120,
+     "w": 1140,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.55,
+    0.5,
+    0.43,
+    0.82,
+    0.71,
+    0.57,
+    0.33,
+    0.35,
+    0.79,
+    0.61,
+    0.75,
+    1
+   ],
+   "motion": {
+    "elements": 13,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 12274,
+     "screens": 12,
+     "words": 1379,
+     "img": 10,
+     "video": 0,
+     "canvas": 0,
+     "svg": 13,
+     "sections": 10,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 13,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-swimming-pool.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "₹9.00 Crore",
+     "words": 2,
+     "chars": 11,
+     "lines": 1,
+     "size": 40,
+     "vw": 5.2,
+     "font": "Poppins",
+     "weight": 400,
+     "tracking": 0,
+     "leading": 1.25,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 455,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water villa resale",
+     "words": 6,
+     "lines": 1,
+     "size": 32,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Purva Sounds of Water villa resale",
+      "words": 6,
+      "chars": 34,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.6,
+      "top": 307,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "₹9.00 Crore",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 455,
+      "tag": "p",
+      "kind": "heading"
+     },
+     {
+      "text": "One seller-listed villa, read closely.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.55,
+      "top": 5198,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The developer’s own record.",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7645,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "On Bannerghatta Road.",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.5,
+      "top": 8756,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions on this listing.",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9704,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 10932,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      26,
+      32,
+      40
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.1
+     },
+     "measureChars": 72,
+     "max": {
+      "size": 40,
+      "vw": 5.2,
+      "font": "Poppins",
+      "text": "₹9.00 Crore"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "By",
+      "above": "₹9.00 Crore",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 17,
+      "top": 395
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f8f8f5",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#efeee8",
+       "top": 3245,
+       "hsl": {
+        "h": 51,
+        "s": 0.18,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 8636,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#4c4c4c",
+       "share": 0.52
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.18
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.07
+      },
+      {
+       "color": "#dfc06e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#c8a34d",
+      "hsl": {
+       "h": 42,
+       "s": 0.53,
+       "l": 0.54
+      },
+      "fg": "#0b1f3a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 2,
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 5446
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.27
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "poppins",
+     "poppins fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 12274,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 10852,
+      "words": 1695,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "₹9.00 Crore",
+       "size": 40,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 30,
+      "textLeft": 40,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white",
+      "tag": "footer",
+      "top": 10852,
+      "height": 1421,
+      "words": 97,
+      "media": 0,
+      "middle": 40,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water villa resale",
+      "size": 32,
+      "top": 307,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 29
+     },
+     {
+      "x": 76,
+      "n": 4
+     },
+     {
+      "x": 64,
+      "n": 2
+     },
+     {
+      "x": 116,
+      "n": 1
+     },
+     {
+      "x": 283,
+      "n": 1
+     },
+     {
+      "x": 525,
+      "n": 1
+     },
+     {
+      "x": 539,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 39,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.35,
+    0.69,
+    0.52,
+    0.68,
+    0.62,
+    0.91,
+    0.82,
+    0.62,
+    0.83,
+    0.64,
+    0.43,
+    0.41
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 0,
+    "transitions": 9,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 402,
+     "h": 870
+    },
+    "page": {
+     "height": 14790,
+     "screens": 17,
+     "words": 1379,
+     "img": 10,
+     "video": 0,
+     "canvas": 0,
+     "svg": 13,
+     "sections": 10,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 13,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villas-community.jpeg",
+      "purva-villa-swimming-pool.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Purva Sounds of Water villa resale",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 32,
+     "vw": 8,
+     "font": "Playfair Display",
+     "weight": 400,
+     "tracking": -0.02,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.87,
+     "top": 330,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Purva Sounds of Water villa resale",
+     "words": 6,
+     "lines": 2,
+     "size": 32,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 19,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Sounds of Water villa resale",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 330,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "₹9.00 Crore",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 32,
+      "vw": 8,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 593,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The project",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2086,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What is nearby",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 3517,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Purva Symphony, off Bannerghatta Road",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 25.6,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 4073,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "One seller-listed villa, read closely.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 6509,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Seller-advertised details, and what to check.",
+      "words": 6,
+      "chars": 45,
+      "lines": 2,
+      "size": 25.6,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 7753,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The developer’s own record.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 9285,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "On Bannerghatta Road.",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 10685,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions on this listing.",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 12112,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 13333,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The portfolio",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 13734,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Information",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 14071,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Next step",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6,
+      "font": "Playfair Display",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 14370,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 15,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      24,
+      26,
+      32
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.1
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 32,
+      "vw": 8,
+      "font": "Playfair Display",
+      "text": "Purva Sounds of Water villa resale"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f8f8f5",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.18,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f8f8f5",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.18,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#efeee8",
+       "top": 4037,
+       "hsl": {
+        "h": 51,
+        "s": 0.18,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#0b1f3a",
+       "top": 10597,
+       "hsl": {
+        "h": 214,
+        "s": 0.68,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#4c4c4c",
+       "share": 0.52
+      },
+      {
+       "color": "#1a1a1a",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.18
+      },
+      {
+       "color": "#0b1f3a",
+       "share": 0.07
+      },
+      {
+       "color": "#dfc06e",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#efeee8",
+      "hsl": {
+       "h": 51,
+       "s": 0.18,
+       "l": 0.92
+      },
+      "fg": "#1a1a1a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 1,
+     "radius": 0,
+     "height": 80,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 6784
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "poppins",
+     "poppins fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 402,
+     "h": 870
+    },
+    "pageH": 14790,
+    "margins": {
+     "left": 20,
+     "right": 6
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 13253,
+      "words": 996,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Purva Sounds of Water villa resale",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 3,
+      "textLeft": 20,
+      "textRight": 3,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#0B1F3A].text-white",
+      "tag": "footer",
+      "top": 13253,
+      "height": 1538,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 38,
+      "textLeft": 20,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Purva Sounds of Water villa resale",
+      "size": 32,
+      "top": 330,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "This seller-advertised resale is located in Purva ",
+      "side": "right",
+      "px": 6
+     },
+     {
+      "text": "Developed by Puravankara Limited — Tier-1 develope",
+      "side": "right",
+      "px": 4
+     },
+     {
+      "text": "Seller-advertised private garden, pool and other u",
+      "side": "right",
+      "px": 3
+     },
+     {
+      "text": "Puravankara describes the community as off Bannerg",
+      "side": "right",
+      "px": 9
+     },
+     {
+      "text": "Pink Line status, route and distance should be che",
+      "side": "right",
+      "px": 4
+     },
+     {
+      "text": "Distances are as published by the developer for th",
+      "side": "right",
+      "px": 4
+     }
+    ],
+    "edges": [
+     {
+      "x": 20,
+      "n": 18
+     },
+     {
+      "x": 44,
+      "n": 6
+     },
+     {
+      "x": 246,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 25,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (page background #f8f8f5, section #f8f8f5, section #efeee8).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (13, 14, 15, 16, 17, 18, 19, 20, 24, 35, 40, 52).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 13 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 768,
+   "message": "1 eyebrow/kicker label(s) above headings: \"By\" above \"₹9.00 Crore\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 768,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 20px on the left, 6px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 390,
+   "message": "6 text block(s) sit within 12px of the screen edge: \"This seller-advertised resale \" (6px from the right); \"Developed by Puravankara Limit\" (4px from the right); \"Seller-advertised private gard\" (3px from the right); \"Puravankara describes the comm\" (9px from the right)",
+   "fix": "Keep text inside the page margin (16–20px). Only display type deliberately bled past the edge may touch it."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\desktop-page-02.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\tablet-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\gap-purva3\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

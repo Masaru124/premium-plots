@@ -1,9 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Search, MapPin, MessageCircle } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { MapPin, MessageCircle, Search, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 import { BENGALURU_CORRIDORS, FEATURED_GROUPS } from '../data/plotsData';
+
+const FIELD = 'min-h-12 w-full bg-[#EFEEE8] px-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]';
+const LABEL = 'mb-2 block text-[14px] text-[#4C4C4C]';
 
 export default function ProjectsPage({ setActivePage, setSelectedProjectId, filterType = 'all', isSubpage = false }) {
   const { projects, openSiteVisitModal } = usePlots();
@@ -16,15 +19,19 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
   const whatsappNumber = '918431909508';
 
-  useEffect(() => {
+  // Navigation can hand this surface a different portfolio while it stays
+  // mounted, so adopt the incoming filter during render rather than in an effect.
+  const [appliedFilterType, setAppliedFilterType] = useState(filterType);
+  if (appliedFilterType !== filterType) {
+    setAppliedFilterType(filterType);
     setSelectedPropertyType(filterType);
-  }, [filterType]);
+  }
 
   const filteredProjects = projects.filter((p) => {
     const matchesSearch =
-      p.title.toLowerCase().includes(search.toLowerCase()) ||
-      p.location.toLowerCase().includes(search.toLowerCase()) ||
-      p.developer.toLowerCase().includes(search.toLowerCase()) ||
+      p.title?.toLowerCase().includes(search.toLowerCase()) ||
+      p.location?.toLowerCase().includes(search.toLowerCase()) ||
+      p.developer?.toLowerCase().includes(search.toLowerCase()) ||
       (p.groupName && p.groupName.toLowerCase().includes(search.toLowerCase()));
 
     const matchesType =
@@ -42,307 +49,392 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
     return matchesSearch && matchesType && matchesGroup && matchesCorridor && matchesStatus && matchesPrice;
   });
 
+  // Entrances for the register rows; content is never hidden without script.
+  useEffect(() => {
+    const root = document.documentElement;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    root.classList.add('js-reveal');
+    const items = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('is-revealed'));
+      return () => root.classList.remove('js-reveal');
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.04 }
+    );
+    items.forEach((el) => observer.observe(el));
+    return () => {
+      observer.disconnect();
+      root.classList.remove('js-reveal');
+    };
+  }, [filteredProjects.length]);
+
+  const isFiltered =
+    Boolean(search) ||
+    selectedGroup !== 'all' ||
+    selectedCorridor !== 'all' ||
+    selectedPropertyType !== 'all' ||
+    selectedStatus !== 'all' ||
+    maxPrice < 100000000;
+
+  const resetFilters = () => {
+    setSearch('');
+    setSelectedGroup('all');
+    setSelectedCorridor('all');
+    setSelectedPropertyType('all');
+    setSelectedStatus('all');
+    setMaxPrice(100000000);
+  };
+
+  const title = selectedPropertyType === 'all' ? 'The property register' : `${selectedPropertyType} portfolio`;
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
-      {/* Page Title Header */}
-      <div className="space-y-5 pb-2">
-        {isSubpage ? (
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
-            {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
-          </h2>
-        ) : (
-          <h1 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] tracking-tight font-heading">
-            {selectedPropertyType === 'all' ? 'All Verified Properties' : `${selectedPropertyType} Portfolio`}
-          </h1>
-        )}
-        <p className="text-[#555555] text-base sm:text-lg max-w-3xl leading-relaxed">
-          {selectedPropertyType === 'Villas'
-            ? 'Browse Tripon’s Nandi Hills collection and the seller-listed Purva Symphony resale. Confirm unit details, price and availability with the advisor.'
-            : 'Browse verified open plot townships, custom villa developments, high-rise apartments, and Dubai luxury investments across premier corridors.'}
-        </p>
+    <div>
+      {/* Header */}
+      <section className="bg-white">
+        <div className="shell pb-9 pt-12 lg:pt-16">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-7">
+              {isSubpage ? (
+                <h2 data-reveal className="display-lg text-[#0B1F3A]">{title}</h2>
+              ) : (
+                <h1 data-reveal className="display-xl text-[#0B1F3A]">{title}</h1>
+              )}
+              <p className="mt-5 max-w-[52ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
+                {selectedPropertyType === 'Villas'
+                  ? 'Tripon’s Nandi Hills collection and the seller-listed Purva Symphony resale. Unit details, price and availability are confirmed with the advisor.'
+                  : 'Seven verified plots, villas and apartments across Bengaluru and Dubai, each at the seller’s or developer’s current quote.'}
+              </p>
+              <p className="mt-6 text-[17px] leading-relaxed text-[var(--text-soft)]">
+                <span className="font-heading text-[1.5rem] text-[#0B1F3A] figures">{filteredProjects.length}</span>
+                {' '}of{' '}
+                <span className="font-heading text-[1.5rem] text-[#0B1F3A] figures">{projects.length}</span> match now
+              </p>
+            </div>
 
-        {/* Quick category filters are redundant on dedicated category routes; the filter form below remains available. */}
-        {!isSubpage && <div className="flex flex-wrap items-center gap-2 pt-2">
-          {[
-            { id: 'all', label: 'All Portfolios' },
-            { id: 'Open Plots', label: 'Open Plots' },
-            { id: 'Villa Plots', label: 'Villa Plots' },
-            { id: 'Villas', label: 'Luxury Villas' },
-            { id: 'Apartments', label: 'Apartments' },
-            { id: 'Dubai Apartments', label: 'Dubai Properties' }
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              type="button"
-              onClick={() => setSelectedPropertyType(tab.id)}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold transition-colors cursor-pointer ${
-                selectedPropertyType === tab.id
-                  ? 'bg-[#0B1F3A] text-[#C8A34D] border border-[#C8A34D]/50'
-                  : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-300'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>}
-      </div>
-
-      {/* Comprehensive Search & Filter Controls */}
-      <div className="p-6 space-y-5 bg-white border border-slate-200 rounded-2xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-          
-          {/* Keyword Search */}
-          <div>
-            <label className="block text-sm font-semibold text-[#555555] mb-2">Search Keywords</label>
-            <div className="relative">
-              <Search className="w-4 h-4 text-[#a0aec0] absolute left-3 top-3" />
-              <input
-                type="text"
-                placeholder="Oriaiyan, Tripon, Vinra, Kolar..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg pl-9 pr-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
+            <div className="lg:col-span-5">
+              <img
+                src={(projects[0]?.heroImage || '').replace(/w=\d+/, 'w=1400')}
+                alt={projects[0] ? `${projects[0].title}, ${projects[0].location}` : 'Property in the register'}
+                width={1400}
+                height={900}
+                fetchPriority="high"
+                className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[300px]"
               />
             </div>
           </div>
 
-          {/* Group / Company Filter */}
-          <div>
-            <label className="block text-sm font-semibold text-[#555555] mb-2">Developer Group / Company</label>
-            <select
-              value={selectedGroup}
-              onChange={(e) => setSelectedGroup(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
-            >
-              <option value="all">All Groups & Companies</option>
-              {FEATURED_GROUPS.map((g) => (
-                <option key={g.id} value={g.name}>{g.name}</option>
+          {!isSubpage && (
+            <div className="mt-8 flex flex-wrap items-center gap-1" role="group" aria-label="Filter by portfolio">
+              {[
+                { id: 'all', label: 'All portfolios' },
+                { id: 'Open Plots', label: 'Open plots' },
+                { id: 'Villa Plots', label: 'Villa plots' },
+                { id: 'Villas', label: 'Luxury villas' },
+                { id: 'Apartments', label: 'Apartments' },
+                { id: 'Dubai Apartments', label: 'Dubai' }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setSelectedPropertyType(tab.id)}
+                  aria-pressed={selectedPropertyType === tab.id}
+                  className={`min-h-11 px-4 text-[14px] transition-colors ${
+                    selectedPropertyType === tab.id
+                      ? 'bg-white text-[#0B1F3A]'
+                      : 'text-[#555555] hover:text-[#0B1F3A]'
+                  }`}
+                >
+                  {tab.label}
+                </button>
               ))}
-            </select>
-          </div>
-
-          {/* Corridor Filter */}
-          <div>
-            <label className="block text-sm font-semibold text-[#555555] mb-2">Corridor / Belt</label>
-            <select
-              value={selectedCorridor}
-              onChange={(e) => setSelectedCorridor(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
-            >
-              <option value="all">All Corridors</option>
-              {BENGALURU_CORRIDORS.filter(c => c.id !== 'all-corridors').map((c) => (
-                <option key={c.id} value={c.id}>{c.name}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Property Category */}
-          <div>
-            <label className="block text-sm font-semibold text-[#555555] mb-2">Property Category</label>
-            <select
-              value={selectedPropertyType}
-              onChange={(e) => setSelectedPropertyType(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
-            >
-              <option value="all">All Property Categories</option>
-              <option value="Open Plots">Open Plots & Villa Plots</option>
-              <option value="Apartments">Apartments</option>
-              <option value="Villas">Luxury Villas</option>
-              <option value="Dubai Apartments">Dubai Properties</option>
-            </select>
-          </div>
-
-          {/* Construction Status */}
-          <div>
-            <label className="block text-sm font-semibold text-[#555555] mb-2">Status</label>
-            <select
-              value={selectedStatus}
-              onChange={(e) => setSelectedStatus(e.target.value)}
-              className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/10 rounded-lg px-3 py-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer font-medium"
-            >
-              <option value="all">All Stages</option>
-              <option value="Ready for Construction">Ready for Construction</option>
-              <option value="Under Construction">Under Construction</option>
-            </select>
-          </div>
-
+            </div>
+          )}
         </div>
+      </section>
 
-        {/* Price Slider and Count */}
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 text-sm text-[#555555]">
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            <span className="font-bold shrink-0">Max Budget:</span>
-            <input
-              type="range"
-              min="3000000"
-              max="120000000"
-              step="1000000"
-              value={maxPrice}
-              onChange={(e) => setMaxPrice(Number(e.target.value))}
-              className="w-48 accent-[#0B1F3A] cursor-pointer"
-            />
-            <span className="font-black text-[#0B1F3A]">
-              Up to ₹{(maxPrice / 10000000).toFixed(2)} Cr
-            </span>
-          </div>
+      {/* Filters */}
+      <section aria-labelledby="filters-heading" className="bg-[#F8F8F5]">
+        <div className="shell py-8">
+          <h2 id="filters-heading" className="sr-only">Search and filter properties</h2>
 
-          <div className="flex items-center gap-3">
-            <span>Showing <strong>{filteredProjects.length}</strong> of <strong>{projects.length}</strong> Verified Projects</span>
-            {(search || selectedGroup !== 'all' || selectedCorridor !== 'all' || selectedPropertyType !== 'all' || selectedStatus !== 'all' || maxPrice < 100000000) && (
-              <button
-                onClick={() => {
-                  setSearch('');
-                  setSelectedGroup('all');
-                  setSelectedCorridor('all');
-                  setSelectedPropertyType('all');
-                  setSelectedStatus('all');
-                  setMaxPrice(100000000);
-                }}
-                className="text-rose-600 hover:underline font-bold text-xs cursor-pointer"
-              >
-                Reset Filters
-              </button>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Projects Grid Display */}
-      {filteredProjects.length === 0 ? (
-        <div className="p-12 text-center space-y-4 bg-white rounded-2xl border border-slate-200">
-          <Search className="w-8 h-8 text-[#7A5C10] mx-auto" aria-hidden="true" />
-          <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">No Matching Projects Found</h3>
-          <p className="text-sm text-[#555555] max-w-md mx-auto">
-            Try adjusting your search keywords, budget slider, or corridor filters to explore available developer inventory.
-          </p>
-          <button
-            onClick={() => {
-              setSearch('');
-              setSelectedGroup('all');
-              setSelectedCorridor('all');
-              setSelectedPropertyType('all');
-            }}
-            className="btn-primary py-2 px-6 text-xs uppercase"
-          >
-            Clear All Filters
-          </button>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((proj) => (
-            <div key={proj.id} className="rounded-xl overflow-hidden flex flex-col justify-between group bg-white border border-slate-200 transition-colors hover:border-[#C8A34D]">
-              <div>
-                <div className="relative h-60 overflow-hidden bg-[#0B1F3A]">
-                  <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-x-0 bottom-0 bg-[#0B1F3A]/90 p-4 text-white sm:p-5">
-                    <p className="text-sm font-semibold text-[#C8A34D]">{proj.propertyType} · {proj.groupName}</p>
-                    <p className="mt-1 text-lg font-bold font-heading">{proj.priceRange}</p>
-                  </div>
-                </div>
-
-                <div className="p-6 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0B1F3A] font-heading leading-snug">
-                      {proj.title}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-[#555555] mt-2">
-                      <MapPin className="w-4 h-4 text-[#7A5C10] shrink-0" aria-hidden="true" />
-                      <span className="line-clamp-2">{proj.location}</span>
-                    </div>
-                  </div>
-
-                  <p className="text-base text-[#555555] line-clamp-3 leading-relaxed">
-                    {proj.overview}
-                  </p>
-
-                  <div className="space-y-2 pt-2">
-                    <span className="text-base font-semibold text-[#0B1F3A]">Configurations</span>
-                    <ul className="flex flex-wrap gap-2">
-                      {proj.dimensions?.slice(0, 3).map((dim, idx) => (
-                        <li key={idx} className="bg-[#F8F8F5] text-slate-700 text-sm px-3 py-1.5 rounded">
-                          {dim}
-                        </li>
-                      ))}
-                      {(proj.dimensions?.length || 0) > 3 && (
-                        <li className="bg-[#0B1F3A]/5 text-[#0B1F3A] text-sm font-semibold px-3 py-1.5 rounded">
-                          +{proj.dimensions.length - 3} more
-                        </li>
-                      )}
-                    </ul>
-                    <p className="text-sm font-semibold text-[#0B1F3A]">{proj.availablePlots} available</p>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <label htmlFor="filter-search" className={LABEL}>Keyword</label>
+              <div className="relative">
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5F5F5F]" aria-hidden="true" />
+                <input
+                  id="filter-search"
+                  type="text"
+                  placeholder="Oriaiyan, Tripon, Kolar…"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className={`${FIELD} pl-9`}
+                />
               </div>
+            </div>
 
-              {/* Card Actions */}
-              <div className="p-6 pt-0 space-y-2">
-                <div className="grid grid-cols-2 gap-2">
-                  {proj.id === 'project-purva-sounds-of-water-villa' ? (
-                    <a
-                      href="/purva-sounds-of-water"
-                      className="py-3 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-sm font-bold text-center transition-colors block"
-                    >
-                      View Villa Page
-                    </a>
-                  ) : (
-                    <a
-                      href={`/?page=project-details&id=${proj.id}`}
-                      onClick={(e) => {
-                        if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                          e.preventDefault();
-                          if (setSelectedProjectId) setSelectedProjectId(proj.id);
-                          if (setActivePage) setActivePage('project-details', 'all', proj.id);
-                        }
-                      }}
-                      className="py-3 px-3 rounded-lg border border-[#0B1F3A]/20 hover:border-[#0B1F3A] text-[#0B1F3A] text-sm font-bold text-center transition-colors block"
-                    >
-                      View Details
-                    </a>
-                  )}
+            <div>
+              <label htmlFor="filter-group" className={LABEL}>Developer</label>
+              <select
+                id="filter-group"
+                value={selectedGroup}
+                onChange={(e) => setSelectedGroup(e.target.value)}
+                className={`${FIELD} cursor-pointer`}
+              >
+                <option value="all">All developers</option>
+                {FEATURED_GROUPS.map((g) => (
+                  <option key={g.id} value={g.name}>{g.name}</option>
+                ))}
+              </select>
+            </div>
 
-                  <button
-                    onClick={() => openSiteVisitModal(proj)}
-                    className="btn-gold py-3 px-3 text-sm font-black text-center cursor-pointer"
-                  >
-                    Book Visit
-                  </button>
-                </div>
+            <div>
+              <label htmlFor="filter-corridor" className={LABEL}>Corridor</label>
+              <select
+                id="filter-corridor"
+                value={selectedCorridor}
+                onChange={(e) => setSelectedCorridor(e.target.value)}
+                className={`${FIELD} cursor-pointer`}
+              >
+                <option value="all">All corridors</option>
+                {BENGALURU_CORRIDORS.filter((c) => c.id !== 'all-corridors').map((c) => (
+                  <option key={c.id} value={c.id}>{c.name}</option>
+                ))}
+              </select>
+            </div>
 
+            <div>
+              <label htmlFor="filter-category" className={LABEL}>Category</label>
+              <select
+                id="filter-category"
+                value={selectedPropertyType}
+                onChange={(e) => setSelectedPropertyType(e.target.value)}
+                className={`${FIELD} cursor-pointer`}
+              >
+                <option value="all">All categories</option>
+                <option value="Open Plots">Open plots &amp; villa plots</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Villas">Luxury villas</option>
+                <option value="Dubai Apartments">Dubai properties</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="filter-status" className={LABEL}>Stage</label>
+              <select
+                id="filter-status"
+                value={selectedStatus}
+                onChange={(e) => setSelectedStatus(e.target.value)}
+                className={`${FIELD} cursor-pointer`}
+              >
+                <option value="all">All stages</option>
+                <option value="Ready for Construction">Ready for construction</option>
+                <option value="Under Construction">Under construction</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="mt-7 flex flex-col gap-4 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <label htmlFor="filter-budget" className="shrink-0 text-[14px] text-[#4C4C4C]">
+                Max budget
+              </label>
+              <input
+                id="filter-budget"
+                type="range"
+                min="3000000"
+                max="120000000"
+                step="1000000"
+                value={maxPrice}
+                onChange={(e) => setMaxPrice(Number(e.target.value))}
+                className="h-1 w-48 cursor-pointer accent-[#0B1F3A]"
+              />
+              <output htmlFor="filter-budget" className="font-heading text-base text-[#0B1F3A] figures">
+                ₹{(maxPrice / 10000000).toFixed(2)} Cr
+              </output>
+            </div>
+
+            <div className="flex items-center gap-5">
+              <p className="text-[13px] text-[#555555] figures" aria-live="polite">
+                Showing {filteredProjects.length} of {projects.length}
+              </p>
+              {isFiltered && (
+                <button
+                  onClick={resetFilters}
+                  className="min-h-11 text-[14px] text-[#0B1F3A] underline decoration-2 underline-offset-4"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results */}
+      <section aria-labelledby="results-heading" className="page-section pt-12">
+        <div className="shell">
+          <h2 id="results-heading" className="sr-only">Properties</h2>
+
+          {filteredProjects.length === 0 ? (
+            <div className="py-20 text-center">
+              <p className="label label-gold">No match</p>
+              <h3 className="mt-4 display-md text-[#0B1F3A]">Nothing in the register matches those filters</h3>
+              <p className="mx-auto mt-3 max-w-[46ch] text-[15px] leading-relaxed text-[#555555]">
+                Widen the budget or corridor, or ask the desk — some allotments are released before
+                they are published here.
+              </p>
+              <div className="mt-7 flex flex-wrap justify-center gap-3">
+                <button onClick={resetFilters} className="btn-primary">Clear all filters</button>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(`Hello! I would like masterplan PDF and pricing details for ${proj.title}.`)}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Setty Relators. Please share availability outside the published register.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-2 px-3 rounded-lg bg-[#0B1F3A] hover:bg-[#142E54] text-[#C8A34D] text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                  className="btn-quiet"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#C8A34D]" />
-                  <span>WhatsApp Brochure</span>
+                  Ask the desk
                 </a>
               </div>
             </div>
-          ))}
-        </div>
-      )}
+          ) : (
+            <ul className="space-y-8">
+              {filteredProjects.map((proj) => (
+                <li key={proj.id} data-reveal className="bg-white">
+                  <article className="grid gap-6 py-8 lg:grid-cols-12 lg:gap-8">
+                    <div className="lg:col-span-4">
+                      <button
+                        onClick={() => {
+                          if (proj.id === 'project-purva-sounds-of-water-villa') {
+                            setActivePage('purva-villa');
+                            return;
+                          }
+                          if (setSelectedProjectId) setSelectedProjectId(proj.id);
+                          if (setActivePage) setActivePage('project-details', 'all', proj.id);
+                        }}
+                        className="frame block w-full text-left"
+                        aria-label={`View ${proj.title}`}
+                      >
+                        <img
+                          src={proj.heroImage}
+                          alt={proj.title}
+                          width={800}
+                          height={520}
+                          loading="lazy"
+                          decoding="async"
+                          className="h-56 w-full object-cover sm:h-64 lg:h-52"
+                        />
+                      </button>
+                    </div>
 
-      {/* Trust Guarantee Section */}
-      <div className="p-8 rounded-2xl bg-[#0B1F3A] text-white flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="space-y-2 text-center md:text-left">
-          <h3 className="text-2xl font-black font-heading leading-tight">
-            Need Expert Advice on Plot Legalities or Villa Customization?
-          </h3>
-          <p className="text-base text-white/85 max-w-2xl leading-relaxed">
-            Our land advisors verify title clearance, RERA certification, and bank approvals for every project in our portfolio.
-          </p>
-        </div>
+                    <div className="lg:col-span-5">
+                      <p className="label label-gold">
+                        {proj.propertyType}{proj.groupName ? ` · ${proj.groupName}` : ''}
+                      </p>
+                      <h3 className="mt-2 font-heading text-xl leading-snug text-[#0B1F3A] sm:text-2xl">
+                        {proj.title}
+                      </h3>
+                      <p className="mt-2 flex items-start gap-2 text-[16px] leading-relaxed text-[#555555]">
+                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#7A5C10]" aria-hidden="true" />
+                        {proj.location}
+                      </p>
+                      <p className="measure mt-4 text-[17px] leading-relaxed text-[#444444] line-clamp-3">
+                        {proj.overview}
+                      </p>
 
-        <div className="flex flex-wrap items-center gap-3 shrink-0">
-          <button
-            onClick={() => setActivePage('contact')}
-            className="btn-gold py-3.5 px-6 text-xs uppercase font-extrabold cursor-pointer"
-          >
-            Speak to Advisor
-          </button>
+                      <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-3 text-[13px]">
+                        <div>
+                          <dt className="label">Configurations</dt>
+                          <dd className="mt-1 text-[#444444]">
+                            {(proj.dimensions || []).slice(0, 3).join(' · ') || 'On request'}
+                          </dd>
+                        </div>
+                        <div>
+                          <dt className="label">Listed</dt>
+                          <dd className="mt-1 text-[#444444] figures">{proj.availablePlots} plots</dd>
+                        </div>
+                        <div>
+                          <dt className="label">Stage</dt>
+                          <dd className="mt-1 text-[#444444]">{proj.constructionStatus || 'On request'}</dd>
+                        </div>
+                      </dl>
+                    </div>
+
+                    <div className="flex flex-col justify-between gap-5 pt-5 lg:col-span-3 lg:pl-8 lg:pt-0">
+                      <div>
+                        <p className="label">Price</p>
+                        <p className="mt-1 font-heading text-lg leading-snug text-[#0B1F3A] figures">
+                          {proj.priceRange}
+                        </p>
+                        <p className="mt-2 text-[13px] leading-relaxed text-[#5F5F5F]">
+                          Developer or seller quote. Confirm before booking.
+                        </p>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+                        <button onClick={() => openSiteVisitModal(proj)} className="btn-gold flex-1 px-4 py-3">
+                          Book visit
+                        </button>
+                        <a
+                          href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(`Hello Setty Relators. Please send the masterplan and current pricing for ${proj.title}.`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Message the desk about ${proj.title}`}
+                          className="flex h-12 w-12 shrink-0 items-center justify-center bg-[#EFEEE8] text-[#0B1F3A] transition-colors hover:bg-[#0B1F3A] hover:text-[#DFC06E]"
+                        >
+                          <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                        </a>
+                      </div>
+
+                      <button
+                        onClick={() => {
+                          if (proj.id === 'project-purva-sounds-of-water-villa') {
+                            setActivePage('purva-villa');
+                            return;
+                          }
+                          if (setSelectedProjectId) setSelectedProjectId(proj.id);
+                          if (setActivePage) setActivePage('project-details', 'all', proj.id);
+                        }}
+                        className="flex min-h-11 items-center gap-2 text-left text-[14px] text-[#0B1F3A] underline decoration-2 underline-offset-4"
+                      >
+                        Full details
+                        <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                      </button>
+                    </div>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-      </div>
+      </section>
+
+      {/* Advisory close */}
+      <section className="section-navy on-ink">
+        <div className="shell grid items-center gap-8 py-14 lg:grid-cols-12">
+          <div className="lg:col-span-8">
+            <h2 className="display-lg text-white">Need the paperwork checked?</h2>
+            <p className="mt-3 max-w-[54ch] text-[17px] leading-relaxed text-white/70">
+              The desk verifies title clearance, the approval record and bank approvals for every
+              project in the register, and will send the documents for the plots you are considering.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end">
+            <button onClick={() => setActivePage('contact')} className="btn-gold">
+              Speak to an advisor
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

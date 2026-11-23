@@ -1,371 +1,420 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ShieldCheck, MapPin, Download, Calendar, CheckCircle2, Building, Phone, ArrowLeft, Share2, Sparkles, Navigation, MessageCircle, ExternalLink, Home, Layers, Sparkle, ArrowRight } from 'lucide-react';
-import { usePlots, INTERIOR_PACKAGES } from '../context/PlotsContext';
+import React, { useEffect, useState } from 'react';
+import { MapPin, Calendar, MessageCircle, ArrowLeft, ArrowRight, Download } from 'lucide-react';
+import { usePlots } from '../context/PlotsContext';
 import PlotMasterplanViewer from '../components/PlotMasterplanViewer';
 
+const WHATSAPP = '918431909508';
+const PHONE_DISPLAY = '+91 84319 09508';
+
+/* The catalogue stores 500px thumbnails; the same photograph is requested at
+   display size rather than shipping a new asset. */
+function hire(url, width = 1600) {
+  if (!url) return url;
+  return url.replace(/([?&])w=\d+/, `$1w=${width}`).replace(/([?&])q=\d+/, '$1q=80');
+}
+
 export default function ProjectDetailsPage({ projectId, setActivePage }) {
-  const { projects, openSiteVisitModal, showToast } = usePlots();
+  const { projects, openSiteVisitModal } = usePlots();
   const project = projects.find((p) => p.id === projectId) || projects[0] || {};
 
   const [activeImage, setActiveImage] = useState(project.heroImage || '/images/nisarga-boulevard.jpg');
-  const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    root.classList.add('js-reveal');
+    const items = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || !items.length) {
+      items.forEach((el) => el.classList.add('is-revealed'));
+      return () => root.classList.remove('js-reveal');
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+    );
+    items.forEach((el) => observer.observe(el));
+    return () => {
+      observer.disconnect();
+      root.classList.remove('js-reveal');
+    };
+  }, [project.id]);
+
   const googleMapsUrl = project.googleMapsUrl || 'https://maps.app.goo.gl/nd1REcJDzUBVkFAg9';
+  const isResale = project.id === 'project-purva-sounds-of-water-villa';
+  const gallery = project.galleryImages || [];
+  /* The catalogue title carries the full seller claim; the page headline stays
+     short enough to set as a headline, with the claim in the copy below. */
+  const displayTitle = isResale ? 'Purva Sounds of Water villa resale' : project.title;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-      {/* Back Button & Top Navigation */}
-      <div className="flex justify-between items-center text-xs">
-        <button
-          onClick={() => setActivePage('projects')}
-          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#0B1F3A]/15 text-[#1A1A1A] hover:bg-[#F8F8F5] transition-colors font-semibold cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to All Projects
-        </button>
-
-        <div className="flex items-center gap-3">
-          <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-              `Hi! Please send me the brochure packet and price list for ${project.title}.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#C8A34D]/15 border border-[#C8A34D]/30 text-[#0B1F3A] hover:bg-[#C8A34D]/25 font-bold cursor-pointer transition-colors"
+    <div>
+      {/* ------------------------------------------------------------ header */}
+      <section className="shell pt-10 lg:pt-14">
+        <div className="flex flex-wrap items-center gap-4 text-[14px]">
+          <button
+            type="button"
+            onClick={() => setActivePage('projects')}
+            className="inline-flex min-h-11 items-center gap-2 text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
           >
-            <Download className="w-4 h-4 text-[#C8A34D]" />
-            {project.id === 'project-purva-sounds-of-water-villa' ? 'Request Unit Details' : 'Request Digital Brochure Packet'}
-          </a>
-        </div>
-      </div>
-
-      {/* Main Header Banner */}
-      <div className="space-y-4">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 bg-[#0B1F3A]/8 border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-bold px-3 py-1 rounded-full">
-            <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
-            {project.approvalType}
-          </span>
-          <span className="bg-[#C8A34D]/15 border border-[#C8A34D]/30 text-[#0B1F3A] text-xs px-3 py-1 rounded-full font-bold">
-            {project.id === 'project-purva-sounds-of-water-villa'
-              ? `Project RERA listed by developer: ${project.reraId} • verify applicable unit phase`
-              : `RERA ID: ${project.reraId}`}
-          </span>
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            Back to the register
+          </button>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4">
-          <div>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] tracking-tight font-heading">{project.title}</h1>
-            {project.id === 'project-purva-sounds-of-water-villa' && (
-              <div className="mt-3 rounded-lg bg-[#0B1F3A] p-4 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <div className="flex items-center gap-2.5">
-                  <Sparkles className="w-4 h-4 text-[#C8A34D] shrink-0" />
-                  <span className="text-sm text-white/90">
-                    Seller advertises a five-bedroom resale unit; verify its sanctioned plan and details before purchase.
-                  </span>
-                </div>
-                <a
-                  href="/purva-sounds-of-water"
-                  className="btn-gold py-2 px-4 text-sm whitespace-nowrap shrink-0"
-                >
-                  Visit Dedicated Villa Page →
-                </a>
-              </div>
-            )}
-            <div className="flex flex-wrap items-center gap-3 text-[#555555] text-sm mt-2">
+        <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <p className="text-[14px] text-[#7A5C10]">
+              {project.propertyType}
+              {project.groupName ? ` · ${project.groupName}` : ''}
+              {project.corridorId ? ` · ${project.location}` : ''}
+            </p>
+            <h1 className="mt-3 display-lg max-w-[24ch] text-[#0B1F3A]">{displayTitle}</h1>
+            <p className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[17px] leading-relaxed text-[var(--text-soft)]">
               <a
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-[#0B1F3A] hover:text-[#C8A34D] font-bold underline"
+                className="inline-flex items-start gap-2 underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
               >
-                <MapPin className="w-4 h-4 text-[#C8A34D] shrink-0" />
-                <span>{project.location} (Google Maps Pin)</span>
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#7A5C10]" aria-hidden="true" />
+                {project.location}
               </a>
-              <span>•</span>
-              <span>Developer: <strong className="text-[#0B1F3A]">{project.developer}</strong> (Advisory: {displayPhone})</span>
-            </div>
+              <span>
+                By <span className="text-[#1A1A1A]">{project.developer}</span>
+              </span>
+            </p>
           </div>
 
-          <div className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-[#0B1F3A]/10 shrink-0">
-            <div>
-              <div className="text-xs text-[#555555]">
-                {project.id === 'project-purva-sounds-of-water-villa' ? 'Seller-Quoted Asking Price' : 'Starting Price Quote'}
-              </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-[#7A5C10] font-heading">{project.formattedStartPrice}</div>
-              <div className="text-sm text-[#555555]">({project.priceRange})</div>
-            </div>
-
+          <div className="lg:col-span-4">
+            <p className="font-heading text-[2rem] leading-tight text-[#0B1F3A] figures sm:text-[2.5rem]">
+              {project.formattedStartPrice}
+            </p>
+            <p className="mt-1 text-[15px] text-[var(--text-soft)] figures">{project.priceRange}</p>
+            <p className="mt-1 text-[14px] text-[var(--text-soft)]">
+              {isResale ? 'Seller-quoted asking price' : 'Developer quote, confirmed before booking'}
+            </p>
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
                 `Hi! I want to book a site visit for ${project.title} (${project.location}).`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold py-3.5 px-6 text-xs uppercase font-extrabold tracking-wider flex items-center gap-2 cursor-pointer"
+              className="btn-gold mt-5 w-full"
             >
-              <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-              Book Site Visit
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              Book a site visit
+            </a>
+            <a
+              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+                `Hi! Please send me the brochure packet and price list for ${project.title}.`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex min-h-11 w-full items-center gap-2 text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+            >
+              <Download className="h-4 w-4" aria-hidden="true" />
+              {isResale ? 'Request unit details' : 'Request the brochure packet'}
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Gallery Showcase */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        <div className="lg:col-span-8 h-[420px] rounded-2xl overflow-hidden border border-[#0B1F3A]/10 relative bg-black">
-          <img src={activeImage} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#0B1F3A]/10 text-xs text-[#0B1F3A] font-bold">
-            {project.title} Masterplan & Elevation View
-          </div>
-        </div>
+      {/* ------------------------------------------------------------- plate */}
+      <section aria-label={`Photographs of ${project.title}`} className="shell mt-10 lg:mt-12">
+        <figure>
+          <img
+            src={hire(activeImage, 1800)}
+            alt={`${project.title}, ${project.location}`}
+            width={1800}
+            height={1100}
+            fetchPriority="high"
+            className="h-[300px] w-full object-cover sm:h-[440px] lg:h-[560px]"
+          />
+          <figcaption className="plate-line">
+            <span>
+              {project.title} · {project.location}
+            </span>
+            <span className="plate-price figures">{project.formattedStartPrice}</span>
+          </figcaption>
+        </figure>
 
-        <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-4 max-h-[420px]">
-          {(project.galleryImages || []).map((img, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setActiveImage(img)}
-              aria-label={`Show image ${i + 1} of ${project.title}`}
-              aria-pressed={activeImage === img}
-              className={`h-24 lg:h-[95px] overflow-hidden rounded-lg border transition-opacity ${
-                activeImage === img
-                  ? 'border-[#C8A34D] opacity-100'
-                  : 'border-[#0B1F3A]/10 opacity-70 hover:opacity-100'
-              }`}
-            >
-              <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Project Specifications & Overview */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        <div className="lg:col-span-8 space-y-8">
-          {/* Overview */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 space-y-4">
-            <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">Project Overview & Configurations</h3>
-            <p className="text-[#555555] text-sm leading-relaxed">{project.overview}</p>
-
-            <div className="pt-4 border-t border-[#0B1F3A]/10">
-              <h4 className="text-xs font-semibold text-[#0B1F3A] uppercase tracking-wider mb-3 font-heading">Key Infrastructure & Location Advantages</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#1A1A1A]">
-                {(project.highlights || []).map((h, i) => (
-                  <div key={i} className="flex items-start gap-2 bg-[#F8F8F5] p-3 rounded-xl border border-[#0B1F3A]/10">
-                    <CheckCircle2 className="w-4 h-4 text-[#C8A34D] shrink-0 mt-0.5" />
-                    <span>{h}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* INTERACTIVE MASTERPLAN LAYOUT GRID */}
-          <PlotMasterplanViewer project={project} />
-
-          {/* TURNKEY INTERIOR DESIGN PACKAGES (If Vinra Alora or custom villa plots) */}
-          {project.id === 'project-vinra-alora' && (
-            <div className="bg-[#0B1F3A] p-6 sm:p-8 rounded-3xl text-white space-y-6 border border-[#C8A34D]/30 cad-grid">
-              <div className="flex items-center gap-2 text-[#C8A34D] text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-4 h-4 text-[#C8A34D]" />
-                Vinra Interiors & Renovations Pvt Ltd • Package Add-ons
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-black text-white font-heading">Turnkey Villa Construction & Interior Packages</h3>
-                <p className="text-xs text-white/70 mt-1">
-                  Choose from Silver, Gold, and Platinum interior design packages tailored for Vinra Alora plot owners.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white/10 p-5 rounded-2xl border border-white/15 backdrop-blur-md space-y-3">
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-sm font-bold text-[#C8A34D] font-heading">SILVER PACKAGE</span>
-                    <span className="text-[11px] text-white/70">₹1,000 / sq.ft</span>
-                  </div>
-                  <ul className="text-xs text-white/80 space-y-2">
-                    <li>• Dry Area: ₹1,000 / Sq.Ft</li>
-                    <li>• Wet Area: ₹1,350 / Sq.Ft</li>
-                    <li>• Core Material: MDF Pre-Laminated & BWR Ply</li>
-                    <li>• Hardware: EBCO Regular or Equivalent</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/15 p-5 rounded-2xl border border-[#C8A34D]/60 backdrop-blur-md space-y-3 relative">
-                  <span className="absolute -top-2.5 right-4 bg-[#C8A34D] text-[#0B1F3A] text-[10px] font-black px-2 py-0.5 rounded-full uppercase">MOST POPULAR</span>
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-sm font-bold text-[#C8A34D] font-heading">GOLD PACKAGE</span>
-                    <span className="text-[11px] text-white/70">₹1,300 / sq.ft</span>
-                  </div>
-                  <ul className="text-xs text-white/90 space-y-2">
-                    <li>• Dry Area: ₹1,300 / Sq.Ft</li>
-                    <li>• Wet Area: ₹1,500 / Sq.Ft</li>
-                    <li>• Core Material: MR Ply (Century/Green) & BWP Ply</li>
-                    <li>• Hardware: HETTICH / HAFELE Regular</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/10 p-5 rounded-2xl border border-white/15 backdrop-blur-md space-y-3">
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-sm font-bold text-[#C8A34D] font-heading">PLATINUM PACKAGE</span>
-                    <span className="text-[11px] text-white/70">₹1,550 / sq.ft</span>
-                  </div>
-                  <ul className="text-xs text-white/80 space-y-2">
-                    <li>• Dry Area: ₹1,550 / Sq.Ft</li>
-                    <li>• Wet Area: ₹1,850 / Sq.Ft</li>
-                    <li>• Core Material: MR Ply / MDF Century & BWP Ply</li>
-                    <li>• Hardware: HETTICH / HAFELE Soft Close</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Proximity & Distance Key */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 space-y-4">
-            <h3 className="text-xl font-bold text-[#0B1F3A] flex items-center gap-2 font-heading">
-              <Navigation className="w-5 h-5 text-[#C8A34D]" />
-              Proximity & Connectivity Catalysts
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              {(project.landmarks || []).map((lm, i) => (
-                <div key={i} className="flex justify-between items-center bg-[#F8F8F5] p-3.5 rounded-xl border border-[#0B1F3A]/10">
-                  <span className="text-[#1A1A1A] font-medium">{lm.name}</span>
-                  <span className="text-[#0B1F3A] font-bold px-2 py-0.5 rounded bg-[#C8A34D]/20 border border-[#C8A34D]/30">
-                    {lm.distance}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Seller-listed Purva Symphony resale details */}
-          {project.id === 'project-purva-sounds-of-water-villa' && (
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#C8A34D]/30 space-y-6">
-              <div className="border-b border-slate-200 pb-4">                  <span className="text-sm font-semibold text-[#7A5C10]">
-                  Seller-advertised resale unit details
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A] font-heading mt-1">
-                  Purva Symphony Resale Villa off Bannerghatta Road
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  The seller advertises a five-bedroom unit. Its configuration, measurements, amenities and legal status require verification against original documents.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-[#F8F8F5] border border-slate-200 p-5 text-sm text-slate-700 space-y-3">
-                <p>Puravankara describes Purva Symphony at The Sound of Water as a community with 3- and 4-BHK residences, off Bannerghatta Road. This is separate from the seller’s advertised five-bedroom resale-unit claim.</p>
-                <a className="inline-flex items-center gap-2 font-semibold text-[#0B1F3A] underline" href="https://www.puravankara.com/residential/bengaluru/purva-symphony" target="_blank" rel="noopener noreferrer">
-                  View Puravankara’s official project information <ArrowRight className="w-4 h-4" />
-                </a>
-                <p>Before proceeding, request the unit’s sanctioned plan, sale/title documents, khata and occupancy records, and confirm the applicable RERA registration with the relevant authorities.</p>
-              </div>
-
-              {/* Verified Legal & Investment Highlights */}
-              <div className="p-5 rounded-xl bg-[#0B1F3A] text-white space-y-3">
-                <div className="text-xs font-black text-[#C8A34D] uppercase tracking-wider flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#C8A34D]" />
-                  Details to Verify Before Purchase
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-white/90">
-                  <div>• <strong>Unit documents:</strong> Verify title, khata and occupancy records</div>
-                  <div>• <strong>Project RERA:</strong> PRM/KA/RERA/1251/310/PR/210907/004300 (confirm unit phase)</div>
-                  <div>• <strong>Configuration:</strong> Seller-advertised five-bedroom unit; check sanctioned plan</div>
-                  <div>• <strong>Buyer charges:</strong> Confirm with the listing advisor</div>
-                  <div>• <strong>Asking price:</strong> Seller-quoted ₹9.0 Cr; reconfirm before visit</div>
-                  <div>• <strong>Site visit:</strong> Contact advisor to confirm availability</div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Sidebar Summary & Links */}
-        <div className="lg:col-span-4 space-y-6">
-          <div className="bg-white p-6 rounded-2xl border border-[#0B1F3A]/10 space-y-6 sticky top-24">
-            <div className="border-b border-[#0B1F3A]/10 pb-4">
-              <span className="text-xs text-[#7A5C10] font-bold uppercase tracking-wider font-heading">Quick Specs Summary</span>
-              <h3 className="text-lg font-bold text-[#0B1F3A] mt-1 font-heading">{project.title}</h3>
-              <p className="text-xs text-[#555555] mt-0.5">By {project.developer}</p>
-            </div>
-
-            <div className="space-y-3 text-xs text-[#1A1A1A]">
-              <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
-                <span className="text-[#555555]">
-                  {project.id === 'project-purva-sounds-of-water-villa' ? 'Listed Units:' : 'Total Plots / Parcels:'}
-                </span>
-                <span className="font-bold text-[#0B1F3A]">{project.id === 'project-purva-sounds-of-water-villa' ? '1 resale listing' : `${project.totalPlots} Units`}</span>
-              </div>
-              <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
-                <span className="text-[#555555]">{project.id === 'project-purva-sounds-of-water-villa' ? 'Availability:' : 'Available Units:'}</span>
-                <span className="font-bold text-[#0B1F3A]">
-                  {project.id === 'project-purva-sounds-of-water-villa' ? 'Confirm with listing advisor' : `${project.availablePlots} Open`}
-                </span>
-              </div>
-              <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
-                <span className="text-[#555555]">Approval Body:</span>
-                <span className="font-bold text-[#0B1F3A]">{project.approvalType}</span>
-              </div>
-              <div className="flex justify-between py-2 border-b border-[#0B1F3A]/10">
-                <span className="text-[#555555]">Advisory Hotline:</span>
-                <a href={`tel:+918431909508`} className="font-bold text-[#7A5C10] hover:underline">
-                  {displayPhone}
-                </a>
-              </div>
-            </div>
-
-            {/* Approved Banks */}
-            <div className="space-y-2 pt-2">
-              <div className="text-xs font-semibold text-[#555555] uppercase">Pre-Approved Bank Loans</div>
-              <div className="flex flex-wrap gap-1.5">
-                {(project.bankApprovals || []).map((b, i) => (
-                  <span key={i} className="rounded bg-[#F8F8F5] px-2.5 py-1 text-sm text-[#1A1A1A]">
-                    {b}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Links & CTAs */}
-            <div className="space-y-3 pt-2">
+        {gallery.length > 0 && (
+          <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+            {gallery.map((img, i) => (
               <button
-                onClick={() => openSiteVisitModal(project)}
-                className="btn-gold w-full py-3.5 text-xs uppercase font-extrabold tracking-wider flex items-center justify-center gap-2 cursor-pointer"
+                key={img + i}
+                type="button"
+                onClick={() => setActiveImage(img)}
+                aria-label={`Show photograph ${i + 1} of ${project.title}`}
+                aria-pressed={activeImage === img}
+                className={`frame block w-full text-left ${activeImage === img ? 'opacity-100' : 'opacity-60 hover:opacity-100'}`}
               >
-                <Calendar className="w-4 h-4 text-[#0B1F3A]" />
-                Book VIP Site Visit
+                <img
+                  src={hire(img, 500)}
+                  alt=""
+                  width={500}
+                  height={340}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-20 w-full object-cover sm:h-24"
+                />
               </button>
-
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                  `Hi! I want to book a site visit for ${project.title}.`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 rounded-xl bg-[#0B1F3A] hover:bg-[#142E54] text-[#C8A34D] border border-[#C8A34D]/40 text-xs font-bold flex items-center justify-center gap-2 cursor-pointer transition-all"
-              >
-                <MessageCircle className="w-4 h-4 text-[#C8A34D]" />
-                WhatsApp Direct Inquiry
-              </a>
-
-              <a
-                href={googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 rounded-xl bg-[#F8F8F5] border border-[#0B1F3A]/15 text-[#0B1F3A] text-xs font-semibold hover:bg-[#0B1F3A] hover:text-white transition-colors flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ExternalLink className="w-4 h-4 text-[#C8A34D]" />
-                Google Maps Location Pin
-              </a>
-            </div>
+            ))}
           </div>
+        )}
+      </section>
+
+      {/* ----------------------------------------------------------- record */}
+      <section className="shell mt-12 lg:mt-16">
+        <dl className="grid gap-x-10 gap-y-6 pt-2 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ['Approval', project.approvalType],
+            ['RERA', project.reraId],
+            [
+              isResale ? 'Listed units' : 'Plots listed',
+              isResale ? 'One resale listing' : String(project.totalPlots ?? '—')
+            ],
+            [
+              isResale ? 'Availability' : 'Open now',
+              isResale ? 'Confirm with the desk' : String(project.availablePlots ?? '—')
+            ]
+          ].map(([term, value]) => (
+            <div key={term}>
+              <dt className="label">{term}</dt>
+              <dd className="mt-1 text-[16px] leading-relaxed text-[#1A1A1A] figures">{value}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-6 max-w-[70ch] text-[14px] leading-relaxed text-[var(--text-soft)]">
+          {isResale
+            ? 'Project RERA listed by the developer. Confirm which phase and approvals apply to this specific unit.'
+            : 'Approval and registration references are supplied at listing. Verify them against the original documents for the plot or unit you choose.'}
+        </p>
+      </section>
+
+      {/* ------------------------------------------------------------ detail */}
+      <section className="page-section">
+        <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="space-y-14 lg:col-span-8">
+            <div data-reveal>
+              <h2 className="display-md text-[#0B1F3A]">The project</h2>
+              <p className="measure mt-4 text-[17px] leading-relaxed text-[var(--text-soft)] sm:text-[19px]">
+                {project.overview}
+              </p>
+
+              {(project.highlights || []).length > 0 && (
+                <ul className="mt-8 grid gap-x-10 gap-y-3 text-[17px] leading-relaxed text-[#1A1A1A] sm:grid-cols-2">
+                  {project.highlights.map((h) => (
+                    <li key={h} className="flex gap-3">
+                      <span aria-hidden="true" className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#C8A34D]" />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            <div data-reveal>
+              <PlotMasterplanViewer project={project} />
+            </div>
+
+            {project.id === 'project-vinra-alora' && (
+              <div data-reveal className="section-navy on-ink px-6 py-10 sm:px-10">
+                <p className="label text-[#DFC06E]">Vinra Interiors &amp; Renovations · package add-ons</p>
+                <h2 className="mt-3 display-md text-white">Turnkey construction and interiors</h2>
+                <p className="mt-3 max-w-[58ch] text-[17px] leading-relaxed text-white/70">
+                  Three packages for Vinra Alora plot owners, priced by the square foot and itemised
+                  line by line before any work begins.
+                </p>
+
+                <dl className="mt-10 space-y-8">
+                  {[
+                    {
+                      name: 'Silver',
+                      rate: '₹1,000 / sq ft',
+                      rows: [
+                        ['Wet area', '₹1,350 / sq ft'],
+                        ['Core material', 'MDF pre-laminated and BWR ply'],
+                        ['Hardware', 'EBCO or equivalent']
+                      ]
+                    },
+                    {
+                      name: 'Gold',
+                      rate: '₹1,300 / sq ft',
+                      rows: [
+                        ['Wet area', '₹1,500 / sq ft'],
+                        ['Core material', 'MR ply (Century or Green) and BWP ply'],
+                        ['Hardware', 'Hettich or Hafele, standard range']
+                      ]
+                    },
+                    {
+                      name: 'Platinum',
+                      rate: '₹1,550 / sq ft',
+                      rows: [
+                        ['Wet area', '₹1,850 / sq ft'],
+                        ['Core material', 'MR ply or MDF Century and BWP ply'],
+                        ['Hardware', 'Hettich or Hafele, soft close']
+                      ]
+                    }
+                  ].map((pkg) => (
+                    <div key={pkg.name}>
+                      <div className="flex flex-wrap items-baseline justify-between gap-3">
+                        <dt className="font-heading text-[1.5rem] text-white">{pkg.name}</dt>
+                        <dd className="font-heading text-[1.25rem] text-[#DFC06E] figures">{pkg.rate}</dd>
+                      </div>
+                      <dd className="mt-3 grid gap-x-8 gap-y-2 text-[15px] leading-relaxed text-white/75 sm:grid-cols-3">
+                        {pkg.rows.map(([term, value]) => (
+                          <div key={term}>
+                            <span className="block text-white/50">{term}</span>
+                            <span className="text-white/90">{value}</span>
+                          </div>
+                        ))}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
+
+            <div data-reveal>
+              <h2 className="display-md text-[#0B1F3A]">What is nearby</h2>
+              <p className="mt-3 max-w-[58ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                Distances are as published by the developer for the wider project. Confirm the exact
+                pin and the route from the unit you are considering.
+              </p>
+              <dl className="mt-8 grid gap-x-12 gap-y-4 sm:grid-cols-2">
+                {(project.landmarks || []).map((lm) => (
+                  <div key={lm.name} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 text-[17px]">
+                    <dt className="text-[#1A1A1A]">{lm.name}</dt>
+                    <dd className="text-[var(--text-soft)] figures">{lm.distance}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            {isResale && (
+              <div data-reveal className="bg-[var(--stone)] px-6 py-9 sm:px-9">
+                <h2 className="display-md text-[#0B1F3A]">
+                  Purva Symphony, off Bannerghatta Road
+                </h2>
+                <p className="mt-3 max-w-[62ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                  The seller advertises a five-bedroom unit. Its configuration, measurements,
+                  amenities and legal status require verification against original documents.
+                </p>
+
+                <p className="mt-5 max-w-[62ch] text-[16px] leading-relaxed text-[var(--text-soft)]">
+                  Puravankara describes Purva Symphony at The Sound of Water as a community of 3- and
+                  4-BHK residences off Bannerghatta Road, which is separate from the seller’s
+                  five-bedroom resale claim.{' '}
+                  <a
+                    className="text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4"
+                    href="https://www.puravankara.com/residential/bengaluru/purva-symphony"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Puravankara’s project page
+                  </a>
+                  .
+                </p>
+
+                <h3 className="mt-8 font-heading text-[1.25rem] text-[#0B1F3A]">
+                  Details to verify before purchase
+                </h3>
+                <ul className="mt-3 grid gap-x-10 gap-y-2 text-[16px] leading-relaxed text-[#1A1A1A] sm:grid-cols-2">
+                  <li>Title, khata and occupancy records for the unit</li>
+                  <li>Project RERA PRM/KA/RERA/1251/310/PR/210907/004300, phase confirmed</li>
+                  <li>Seller-advertised five bedrooms against the sanctioned plan</li>
+                  <li>Buyer charges, confirmed with the listing advisor</li>
+                  <li>Seller-quoted ₹9.0 Cr asking price, reconfirmed before a visit</li>
+                  <li>Current availability, confirmed by the desk</li>
+                </ul>
+
+                <a
+                  href="/purva-sounds-of-water"
+                  className="mt-7 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                >
+                  The dedicated villa page
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* ---------------------------------------------------------- aside */}
+          <aside className="lg:col-span-4">
+            <div className="sticky top-24 bg-[var(--stone)] px-6 py-7">
+              <p className="font-heading text-[1.25rem] leading-snug text-[#0B1F3A]">{project.title}</p>
+              <p className="mt-1 text-[14px] text-[var(--text-soft)]">By {project.developer}</p>
+
+              <dl className="mt-6 space-y-3 text-[15px]">
+                {[
+                  [
+                    isResale ? 'Listed units' : 'Plots / parcels',
+                    isResale ? 'One resale listing' : `${project.totalPlots} units`
+                  ],
+                  [
+                    isResale ? 'Availability' : 'Open now',
+                    isResale ? 'Confirm with the desk' : `${project.availablePlots} open`
+                  ],
+                  ['Approval', project.approvalType],
+                  ['Advisory desk', PHONE_DISPLAY]
+                ].map(([term, value]) => (
+                  <div key={term} className="flex items-baseline justify-between gap-5">
+                    <dt className="text-[var(--text-soft)]">{term}</dt>
+                    <dd className="text-right text-[#1A1A1A] figures">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              {(project.bankApprovals || []).length > 0 && (
+                <div className="mt-6">
+                  <p className="text-[14px] text-[var(--text-soft)]">Pre-approved lenders</p>
+                  <p className="mt-1 text-[15px] leading-relaxed text-[#1A1A1A]">
+                    {(project.bankApprovals || []).join(' · ')}
+                  </p>
+                </div>
+              )}
+
+              <div className="mt-7 space-y-3">
+                <button type="button" onClick={() => openSiteVisitModal(project)} className="btn-gold w-full">
+                  <Calendar className="h-4 w-4" aria-hidden="true" />
+                  Book a site visit
+                </button>
+
+                <a
+                  href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+                    `Hi! I want to book a site visit for ${project.title}.`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-quiet w-full"
+                >
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  Message the desk
+                </a>
+
+                <a
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-11 items-center justify-center text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                >
+                  Open the location pin
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

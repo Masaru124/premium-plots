@@ -1,17 +1,19 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import Link from 'next/link';
 import { PlotsProvider, usePlots } from '../../context/PlotsContext';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import FloatingActions from '../../components/WhatsAppButton';
 import BookSiteVisitModal from '../../components/BookSiteVisitModal';
 import ProjectDetailsPage from '../../views/ProjectDetailsPage';
-import {
-  ShieldCheck, MapPin, Download, CheckCircle2, Phone, MessageCircle,
-  ChevronDown, Award, Building2, Trees, Bath, Bed,
-  Maximize2, ArrowRight
-} from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
+import { MessageCircle, ArrowRight } from 'lucide-react';
+
+const WHATSAPP = '918431909508';
+const PHONE_DISPLAY = '+91 84319 09508';
+const RERA = 'PRM/KA/RERA/1251/310/PR/210907/004300';
 
 const PURVA_FAQS = [
   {
@@ -52,13 +54,90 @@ const PURVA_FAQS = [
   }
 ];
 
-function PurvaVillaContent() {
-  const [activePage, setActivePage] = useState('project-details');
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
-  const { openSiteVisitModal } = usePlots();
+const SPECS = [
+  {
+    term: 'Seller-reported area',
+    body: '5,000 sq ft of land and 7,000 sq ft built-up, as reported by the seller. Verify measurements and area basis in the unit documents.'
+  },
+  {
+    term: 'Garden and pool',
+    body: 'The seller reports a private garden and swimming pool. Confirm these features during inspection.'
+  },
+  {
+    term: 'Bedrooms',
+    body: 'The seller describes five bedrooms. Puravankara lists 3- and 4-BHK residences for the wider community; check this unit’s sanctioned plan.'
+  },
+  {
+    term: 'Official project',
+    body: 'Puravankara describes Purva Symphony at The Sound of Water as 3- and 4-BHK residences across about 20 acres.'
+  }
+];
 
-  const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
+const UNIT_ROWS = [
+  ['Project name', 'Purva Symphony at The Sound of Water', 'Puravankara’s official name and community description'],
+  ['Villa type', 'Seller-advertised five-bedroom resale', 'Configuration is not developer-confirmed; verify the sanctioned plan'],
+  ['Land parcel', 'Seller-reported 5,000 sq ft', 'Confirm the land measurement in the unit documents'],
+  ['Built-up area', 'Seller-reported 7,000 sq ft', 'Confirm the area basis and approved plan'],
+  ['Configuration', 'Seller advertises five bedrooms', 'Verify the bedroom count and additional rooms against the sanctioned plan'],
+  ['Private garden', 'Seller-advertised garden', 'Confirm size, boundaries and ownership during inspection'],
+  ['Private pool', 'Seller advertises a private pool', 'Confirm this unit-specific feature during inspection'],
+  ['Outhouse', 'Seller advertises an outhouse', 'Confirm approvals and details in the unit documents'],
+  ['Facing', 'Seller describes the unit as west-facing', 'Confirm orientation from the site plan'],
+  ['Price', 'Seller-quoted ₹9.0 Cr asking price', 'Reconfirm price, availability and buyer charges with the desk'],
+  ['Approvals', `Project RERA ${RERA}`, 'Confirm the applicable phase, unit approvals, title, khata and occupancy independently']
+];
+
+const PROJECT_FACTS = [
+  ['Official project name', 'Purva Symphony at The Sound of Water'],
+  ['Developer', 'Puravankara Limited'],
+  ['Location', 'Off Bannerghatta Road, South Bengaluru'],
+  ['Development size', 'About 20 acres'],
+  ['Official configurations', '3 and 4 BHK villas'],
+  ['Developer price', '₹4.80 Cr onwards*'],
+  ['Project RERA', RERA],
+  ['Project status', 'Ongoing · possession 30-06-2026'],
+  ['Project financing', 'ICICI HFC and SBM Bank']
+];
+
+const PLACES = [
+  {
+    title: 'Schools, healthcare and retail',
+    items: [
+      'IIM Bangalore — 5 minutes',
+      'Royal Meenakshi Mall and Decathlon Bannerghatta — 5 minutes',
+      'Ryan International and BGS National Public School — 10 minutes',
+      'Fortis and Apollo Hospitals Bannerghatta — 10 minutes',
+      'Vega City Mall — 10 minutes',
+      'Narayana Health City — 20 minutes'
+    ]
+  },
+  {
+    title: 'Metro, IT and airport',
+    items: [
+      'Kalyani Magnum IT Tech Park — 10 minutes',
+      'Jayadeva Hospital Metro — 15 minutes',
+      'HSBC Software Development India — 15 minutes',
+      'Electronic City — 25 minutes',
+      'MG Road Metro and City Railway Station — 30 minutes',
+      'Kempegowda International Airport — 60 minutes'
+    ]
+  },
+  {
+    title: 'Developer-listed amenities',
+    items: [
+      'Man-made waterfall and Aqua Clubhouse',
+      'Infinity pool, yoga space and jogging track',
+      'Temple of Body and Mind with gym, steam and sauna',
+      'Tennis and multipurpose courts, cricket practice pitch',
+      'Garden of Five Senses and children’s play area',
+      'Confirm current availability with the developer'
+    ]
+  }
+];
+
+function PurvaVillaContent() {
+  const { openSiteVisitModal } = usePlots();
+  useReveal();
 
   const handleNavClick = (pageId) => {
     if (pageId === 'home') {
@@ -75,327 +154,226 @@ function PurvaVillaContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
+    <div className="min-h-svh bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between">
       <div>
         <Navbar activePage="villas" setActivePage={handleNavClick} />
 
-        <main className="animate-fadeIn">
-          {/* Breadcrumb Bar */}
-          <div className="bg-[#0B1F3A] text-white/80 py-3 border-b border-white/10 text-xs">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2">
-                <a href="/" className="hover:text-[#C8A34D] transition-colors">Home</a>
-                <span>/</span>
-                <a href="/luxury-villas-bangalore" className="hover:text-[#C8A34D] transition-colors">Luxury Villas</a>
-                <span>/</span>
-                <span className="text-[#C8A34D] font-bold">Purva Symphony Resale Listing</span>
-              </nav>
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-[#C8A34D] font-semibold">
-                <ShieldCheck className="w-4 h-4" /> Resale listing • verify unit details
-              </span>
-            </div>
-          </div>
+        <main>
+          <nav
+            aria-label="Breadcrumb"
+            className="shell flex flex-wrap items-center gap-2 py-4 text-[14px] text-[var(--text-soft)]"
+          >
+            <Link href="/" className="hover:text-[#0B1F3A]">Home</Link>
+            <span aria-hidden="true">/</span>
+            <a href="/luxury-villas-bangalore" className="hover:text-[#0B1F3A]">Luxury villas</a>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#0B1F3A]">Purva Symphony resale</span>
+          </nav>
 
-          {/* Interactive Project Details View */}
           <ProjectDetailsPage projectId="project-purva-sounds-of-water-villa" setActivePage={handleNavClick} />
 
-          {/* Architectural Deep-Dive & Entity-Rich SEO Section */}
-          <section className="bg-white py-16 border-t border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-              
-              <div className="text-center space-y-3 max-w-3xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] font-heading">
-                  Purva Symphony at The Sound of Water: Seller-Listed Villa in South Bengaluru
-                </h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  Purva Symphony is Puravankara’s independent-mansion enclave at The Sound of Water, off Bannerghatta Road, Bengaluru. This page describes one seller-advertised resale unit; confirm its configuration, measurements, price, availability and unit-specific features against original documents.
-                </p>
-                <div className="divider-gold mx-auto" />
-              </div>
-
-              {/* Specification Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-[#F8F8F5] p-6 rounded-2xl border border-[#0B1F3A]/10 space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B1F3A]/10 flex items-center justify-center text-[#C8A34D]">
-                    <Maximize2 className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-bold text-[#0B1F3A] text-sm">Seller-Reported Areas</h3>
-                  <p className="text-xs text-slate-600">
-                    5,000 sq.ft land and 7,000 sq.ft built-up area, as reported by the seller; verify measurements and area basis in the unit documents.
-                  </p>
-                </div>
-
-                <div className="bg-[#F8F8F5] p-6 rounded-2xl border border-[#0B1F3A]/10 space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B1F3A]/10 flex items-center justify-center text-[#C8A34D]">
-                    <Trees className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-bold text-[#0B1F3A] text-sm">Seller-Advertised Unit Features</h3>
-                  <p className="text-xs text-slate-600">
-                    The seller reports a private garden and swimming pool; confirm these features during inspection.
-                  </p>
-                </div>
-
-                <div className="bg-[#F8F8F5] p-6 rounded-2xl border border-[#0B1F3A]/10 space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B1F3A]/10 flex items-center justify-center text-[#C8A34D]">
-                    <Bed className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-bold text-[#0B1F3A] text-sm">Seller-Advertised Five Bedrooms</h3>
-                  <p className="text-xs text-slate-600">
-                    The seller describes this resale as five-bedroom. Puravankara lists 3- and 4-BHK residences for the wider community; verify this unit’s sanctioned plan.
-                  </p>
-                </div>
-
-                <div className="bg-[#F8F8F5] p-6 rounded-2xl border border-[#0B1F3A]/10 space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B1F3A]/10 flex items-center justify-center text-[#C8A34D]">
-                    <Award className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-bold text-[#0B1F3A] text-sm">Official Project Information</h3>
-                  <p className="text-xs text-slate-600">
-                    Puravankara describes Purva Symphony at The Sound of Water as offering 3- and 4-BHK residences. <a className="underline font-semibold" href="https://www.puravankara.com/residential/bengaluru/purva-symphony" target="_blank" rel="noopener noreferrer">View the developer’s project page.</a>
-                  </p>
-                </div>
-              </div>
-
-              {/* Comprehensive Comparison Table */}
-              <div className="bg-[#F8F8F5] p-6 sm:p-8 rounded-2xl border border-[#0B1F3A]/10 space-y-6">
-                <h3 className="text-xl font-bold text-[#0B1F3A] font-heading">
-                  Seller-Advertised Unit Details — Verify Before Purchase
-                </h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-xs border-collapse">
-                    <thead>
-                      <tr className="border-b border-[#0B1F3A]/15 text-[#0B1F3A] uppercase font-bold tracking-wider">
-                        <th className="py-3 px-4">Parameter</th>
-                        <th className="py-3 px-4">Specification Details</th>
-                        <th className="py-3 px-4">Buyer Benefit</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-200 text-slate-700">
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Project Name</td>
-                        <td className="py-3 px-4">Purva Symphony at The Sound of Water</td>
-                        <td className="py-3 px-4">Puravankara’s official project name and community description</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Villa Type & Model</td>
-                        <td className="py-3 px-4">Seller-advertised five-bedroom resale</td>
-                        <td className="py-3 px-4">Configuration and unit type are not confirmed by the developer; verify the sanctioned plan</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Land Parcel Area</td>
-                        <td className="py-3 px-4">Seller-reported 5,000 sq.ft</td>
-                        <td className="py-3 px-4">Confirm the land measurement in the unit documents</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Seller-Reported Built-Up Area</td>
-                        <td className="py-3 px-4">Seller-reported 7,000 sq.ft</td>
-                        <td className="py-3 px-4">Confirm the area basis and approved plan</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Configuration</td>
-                        <td className="py-3 px-4">Seller advertises five bedrooms</td>
-                        <td className="py-3 px-4">Verify bedroom count and any additional rooms against the sanctioned plan</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Private Garden</td>
-                        <td className="py-3 px-4">Seller-advertised garden</td>
-                        <td className="py-3 px-4">Confirm size, boundaries and ownership during inspection</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Private Swimming Pool</td>
-                        <td className="py-3 px-4">Seller advertises a private pool</td>
-                        <td className="py-3 px-4">Confirm this unit-specific feature during inspection</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Outhouse Cottage</td>
-                        <td className="py-3 px-4">Seller advertises an outhouse</td>
-                        <td className="py-3 px-4">Confirm approvals and details in the unit documents</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Facing & Vaastu</td>
-                        <td className="py-3 px-4">Seller describes the unit as west-facing</td>
-                        <td className="py-3 px-4">Confirm orientation from the site plan</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Price & Brokerage</td>
-                        <td className="py-3 px-4">Seller-quoted ₹9.0 Cr asking price</td>
-                        <td className="py-3 px-4">Reconfirm price, availability and any buyer charges with the advisor</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 font-bold text-[#0B1F3A]">Approvals & Approving Authority</td>
-                        <td className="py-3 px-4">Puravankara lists project RERA PRM/KA/RERA/1251/310/PR/210907/004300</td>
-                        <td className="py-3 px-4">Confirm the applicable phase, unit approvals, title, khata and occupancy documents independently</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
+          {/* ---------------------------------------------- community photos */}
+          <section aria-label="Photographs of the community" className="shell mt-12 lg:mt-16">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <figure>
+                <img
+                  src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
+                  alt="Villa residences and landscaped gardens at Purva Symphony"
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-[240px] w-full object-cover sm:h-[320px]"
+                />
+                <figcaption className="plate-line">
+                  <span>Community, Purva Symphony at The Sound of Water</span>
+                </figcaption>
+              </figure>
+              <figure className="sm:mt-10">
+                <img
+                  src="/images/purva-sounds-of-water/purva-villa-swimming-pool.jpeg"
+                  alt="Pool and paving at the Purva Symphony community"
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-[240px] w-full object-cover sm:h-[320px]"
+                />
+                <figcaption className="plate-line">
+                  <span>Photographs from the project listing set; unit fit-out and pool to be confirmed on inspection</span>
+                </figcaption>
+              </figure>
             </div>
           </section>
 
-          {/* Location & Micro-Market Advantage */}
-          <section className="bg-[#F8F8F5] py-16 border-t border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-              <div className="text-center space-y-3 max-w-2xl mx-auto">
-                <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Purva Symphony at The Sound of Water, Bengaluru
+          {/* ------------------------------------------------------- the unit */}
+          <section className="page-section">
+            <div className="shell">
+              <div data-reveal className="grid gap-6 lg:grid-cols-12 lg:items-end">
+                <h2 className="display-lg lg:col-span-7 max-w-[22ch] text-[#0B1F3A]">
+                  One seller-listed villa, read closely.
                 </h2>
-                <p className="text-sm text-slate-600">
-                  The distances below are published by Puravankara for the wider Purva Symphony project. Actual travel time from this specific resale unit varies with route and traffic, so confirm the exact pin before planning a commute.
+                <p className="lg:col-span-5 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                  This page describes one seller-advertised resale unit. Configuration, measurements,
+                  price, availability and unit-specific features need confirming against original
+                  documents.
                 </p>
               </div>
 
-              {/* Verified Developer-Published Project Facts */}
-              <div className="rounded-2xl border border-[#C8A34D]/30 bg-white p-6 sm:p-8 space-y-4">
-                <div className="flex items-center gap-2 text-sm font-semibold text-[#7A5C10]">
-                  <Award className="w-4 h-4 text-[#C8A34D]" />
-                  Official Project Facts — Puravankara’s Published Information
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3 text-xs text-slate-700">
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Official project name</span><span className="font-bold text-[#0B1F3A] text-right">Purva Symphony at The Sound of Water</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Developer</span><span className="font-bold text-[#0B1F3A] text-right">Puravankara Limited</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Location</span><span className="font-bold text-[#0B1F3A] text-right">Off Bannerghatta Road, South Bengaluru</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Development size</span><span className="font-bold text-[#0B1F3A] text-right">20 acres approx.</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Official configurations</span><span className="font-bold text-[#0B1F3A] text-right">3 & 4 BHK villas</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Developer price</span><span className="font-bold text-[#0B1F3A] text-right">₹4.80 Cr onwards*</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Project RERA</span><span className="font-bold text-[#0B1F3A] text-right">PRM/KA/RERA/1251/310/PR/210907/004300</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Project status</span><span className="font-bold text-[#0B1F3A] text-right">Ongoing • possession 30-06-2026</span></div>
-                  <div className="flex justify-between gap-3 border-b border-slate-100 pb-2"><span className="text-slate-500">Project financing</span><span className="font-bold text-[#0B1F3A] text-right">ICICI HFC & SBM Bank</span></div>
-                </div>
-                <p className="text-[11px] text-slate-500 leading-relaxed">
-                  *Developer-published project information for Purva Symphony, current as of our last review; prices, inventory, configuration and possession dates change. Confirm all details directly with Puravankara. The five-bedroom villa described on this page is a separate seller-advertised resale unit and is not a developer-confirmed configuration.
+              <dl data-reveal className="mt-12 grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+                {SPECS.map((s) => (
+                  <div key={s.term} className="bg-white px-5 py-5">
+                    <dt className="font-heading text-[1.125rem] text-[#0B1F3A]">{s.term}</dt>
+                    <dd className="mt-2 text-[16px] leading-relaxed text-[var(--text-soft)]">{s.body}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {/* ---------------------------------------------------- unit record */}
+          <section className="section-stone">
+            <div className="shell page-section">
+              <h2 className="display-md text-[#0B1F3A]">Seller-advertised details, and what to check.</h2>
+              <p className="mt-3 max-w-[58ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                Every line below is what the seller states, with the verification a buyer should
+                complete before committing.
+              </p>
+
+              <div data-reveal className="mt-10 overflow-x-auto">
+                <table data-ui className="w-full min-w-[760px] border-collapse text-left">
+                  <caption className="sr-only">Seller-advertised unit details and verification</caption>
+                  <thead>
+                    <tr data-ui className="border-b border-[#0B1F3A]">
+                      <th scope="col" className="py-3 pr-8 font-normal text-[14px] text-[var(--text-soft)]">Parameter</th>
+                      <th scope="col" className="py-3 pr-8 font-normal text-[14px] text-[var(--text-soft)]">Seller states</th>
+                      <th scope="col" className="py-3 font-normal text-[14px] text-[var(--text-soft)]">Verify</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {UNIT_ROWS.map(([param, stated, verify]) => (
+                      <tr key={param} data-ui className="border-b border-[var(--rule-strong)] align-top">
+                        <th scope="row" className="py-4 pr-8 text-[16px] font-normal text-[#0B1F3A]">{param}</th>
+                        <td className="py-4 pr-8 text-[16px] leading-relaxed text-[#1A1A1A]">{stated}</td>
+                        <td className="py-4 text-[16px] leading-relaxed text-[var(--text-soft)]">{verify}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* --------------------------------------------------------- facts */}
+          <section className="page-section">
+            <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div data-reveal className="lg:col-span-4">
+                <h2 className="display-lg text-[#0B1F3A]">The developer’s own record.</h2>
+                <p className="mt-4 max-w-[36ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                  Published by Puravankara for the wider project. It is not a description of this
+                  resale unit.
                 </p>
                 <a
                   href="https://www.puravankara.com/residential/bengaluru/purva-symphony"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#0B1F3A] underline"
+                  className="mt-6 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
                 >
-                  See Puravankara’s official project page <ArrowRight className="w-4 h-4 text-[#C8A34D]" />
+                  Puravankara’s project page
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
-                  <div className="text-[#7A5C10] font-bold text-sm">Schools, Healthcare & Retail</div>
-                  <ul className="text-sm text-slate-600 space-y-2 pt-1 leading-relaxed">
-                    <li>• IIM Bangalore: 5 minutes</li>
-                    <li>• Royal Meenakshi Mall & Decathlon Bannerghatta: 5 minutes</li>
-                    <li>• Ryan International & BGS National Public School: 10 minutes</li>
-                    <li>• Fortis Hospital & Apollo Hospitals Bannerghatta: 10 minutes</li>
-                    <li>• Vega City Mall: 10 minutes</li>
-                    <li>• Narayana Health City: 20 minutes</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
-                  <div className="text-[#7A5C10] font-bold text-sm">Metro, IT & Airport Connectivity</div>
-                  <ul className="text-sm text-slate-600 space-y-2 pt-1 leading-relaxed">
-                    <li>• Kalyani Magnum IT Tech Park: 10 minutes</li>
-                    <li>• Jayadeva Hospital Metro Station: 15 minutes</li>
-                    <li>• HSBC Software Development India: 15 minutes</li>
-                    <li>• Electronic City: 25 minutes</li>
-                    <li>• MG Road Metro & Bangalore City Railway Station: 30 minutes</li>
-                    <li>• Kempegowda International Airport: 60 minutes</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
-                  <div className="text-[#7A5C10] font-bold text-sm">Developer-Listed Project Amenities</div>
-                  <ul className="text-sm text-slate-600 space-y-2 pt-1 leading-relaxed">
-                    <li>• Man-made waterfall and Aqua Clubhouse</li>
-                    <li>• Infinity pool, yoga space and jogging track</li>
-                    <li>• Temple of Body & Mind with gym, steam and sauna</li>
-                    <li>• Tennis and multipurpose courts, cricket practice pitch</li>
-                    <li>• Garden of Five Senses and children’s play area</li>
-                    <li>• Confirm current availability with the developer</li>
-                  </ul>
-                </div>
-              </div>
+              <dl data-reveal className="lg:col-span-8">
+                {PROJECT_FACTS.map(([term, value]) => (
+                  <div
+                    key={term}
+                    className="grid gap-1 py-3.5 sm:grid-cols-[14rem_1fr] sm:gap-6"
+                  >
+                    <dt className="text-[15px] text-[var(--text-soft)]">{term}</dt>
+                    <dd className="text-[16px] leading-relaxed text-[#1A1A1A] figures">{value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
+
+            <p className="shell mt-6 max-w-[70ch] text-[14px] leading-relaxed text-[var(--text-soft)]">
+              *Developer-published project information for Purva Symphony, current as of our last
+              review; prices, inventory, configuration and possession dates change. Confirm all
+              details directly with Puravankara. The five-bedroom villa described on this page is a
+              separate seller-advertised resale unit and is not a developer-confirmed configuration.
+            </p>
           </section>
 
-          {/* Purva Sounds of Water FAQ Section */}
-          <section className="bg-white py-16 border-t border-slate-200">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-              
-              <div className="text-center space-y-3">
-                <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Questions About This Purva Symphony Resale Listing
+          {/* ------------------------------------------------------ location */}
+          <section className="section-navy on-ink">
+            <div className="shell page-section">
+              <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+                <h2 className="display-lg lg:col-span-7 max-w-[20ch] text-white">
+                  On Bannerghatta Road.
                 </h2>
-                <p className="text-sm text-slate-600">
-                  Seller-provided unit details are not developer-verified. Puravankara’s official project information is linked above; reconfirm price, availability and original unit documents before making a decision.
+                <p className="lg:col-span-5 max-w-[44ch] text-[16px] leading-relaxed text-white/65">
+                  Distances are published by Puravankara for the wider project. Travel time from this
+                  specific unit varies with route and traffic.
                 </p>
-                <div className="divider-gold mx-auto" />
               </div>
 
-              <div className="space-y-4">
-                {PURVA_FAQS.map((faq, idx) => {
-                  const isOpen = openFaqIndex === idx;
-                  return (
-                    <div
-                      key={idx}
-                      className="rounded-2xl border border-slate-200 overflow-hidden bg-[#F8F8F5] transition-all"
-                    >
-                      <button
-                        onClick={() => setOpenFaqIndex(isOpen ? -1 : idx)}
-                        className="w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-100/60 transition-colors"
-                        aria-expanded={isOpen}
-                      >
-                        <h3 className="text-base font-bold text-[#0B1F3A] font-heading pr-2">
-                          {faq.q}
-                        </h3>
-                        <div className={`w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#C8A34D]' : 'text-slate-500'}`}>
-                          <ChevronDown className="w-4 h-4" />
-                        </div>
-                      </button>
-
-                      {isOpen && (
-                        <div className="px-6 pb-6 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-200 bg-white">
-                          <p>{faq.a}</p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div data-reveal className="mt-12 grid gap-10 md:grid-cols-3">
+                {PLACES.map((group) => (
+                  <div key={group.title}>
+                    <h3 className="font-heading text-[1.125rem] text-[#DFC06E]">{group.title}</h3>
+                    <ul className="mt-3 space-y-2 text-[16px] leading-relaxed text-white/70">
+                      {group.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-
-              {/* Sticky Action Banner */}
-              <div className="p-8 rounded-2xl bg-[#0B1F3A] text-white flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                  <h3 className="text-xl font-bold font-heading text-white">
-                    Interested in This Seller-Listed Villa Resale?
-                  </h3>
-                  <p className="text-sm text-white/80 mt-2">
-                    Contact the advisor to confirm availability, viewing arrangements and any buyer charges.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-3 shrink-0">
-                  <a
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Lakshie Real Estate! I would like to enquire about the seller-listed resale villa at Purva Symphony, The Sound of Water.')}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-gold py-3 px-6 text-sm font-bold normal-case tracking-normal flex items-center gap-2 cursor-pointer"
-                  >
-                    <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-                    Book VIP Site Visit
-                  </a>
-
-                  <a
-                    href={`tel:${displayPhone}`}
-                    className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-sm font-semibold flex items-center gap-2 transition-colors"
-                  >
-                    <Phone className="w-4 h-4 text-[#C8A34D]" />
-                    {displayPhone}
-                  </a>
-                </div>
-              </div>
-
             </div>
           </section>
 
+          {/* ----------------------------------------------------------- faq */}
+          <section className="page-section">
+            <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div data-reveal className="lg:col-span-4">
+                <h2 className="display-lg text-[#0B1F3A]">Questions on this listing.</h2>
+                <p className="mt-4 max-w-[34ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                  Seller-provided details are not developer-verified. Puravankara’s record is linked
+                  above.
+                </p>
+              </div>
+
+              <div data-reveal className="lg:col-span-8">
+                {PURVA_FAQS.map((faq) => (
+                  <details key={faq.q} className="group py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#1A1A1A] transition-colors hover:text-[#7A5C10]">
+                      <span>{faq.q}</span>
+                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#A6832A] transition-transform group-open:rotate-45">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-3 max-w-[62ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
+
+                <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3">
+                  <button type="button" onClick={() => openSiteVisitModal()} className="btn-gold">
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    Book a viewing
+                  </button>
+                  <a
+                    href={`tel:+${WHATSAPP}`}
+                    className="inline-flex min-h-11 items-center text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10] figures"
+                  >
+                    {PHONE_DISPLAY}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
 

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getPool, initDatabase } from '../../../lib/db.js';
 import { INITIAL_PROJECTS } from '../../../data/plotsData.js';
+import { isAdminRequest, unauthorized } from '../../../lib/session.js';
 
 // GET all projects from Neon DB
 export async function GET() {
@@ -47,8 +48,10 @@ export async function GET() {
   }
 }
 
-// POST new or updated project into Neon DB
+// POST new or updated project into Neon DB (admin only)
 export async function POST(request) {
+  if (!isAdminRequest(request)) return unauthorized();
+
   try {
     await initDatabase();
     const body = await request.json();
@@ -120,8 +123,10 @@ export async function POST(request) {
   }
 }
 
-// DELETE project from Neon DB
+// DELETE project from Neon DB (admin only)
 export async function DELETE(request) {
+  if (!isAdminRequest(request)) return unauthorized();
+
   try {
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
@@ -140,8 +145,10 @@ export async function DELETE(request) {
   }
 }
 
-// PATCH update plot status in layout grid
+// PATCH update plot status in layout grid (admin only)
 export async function PATCH(request) {
+  if (!isAdminRequest(request)) return unauthorized();
+
   try {
     const body = await request.json();
     const { projectId, layoutGrid, availablePlots } = body;

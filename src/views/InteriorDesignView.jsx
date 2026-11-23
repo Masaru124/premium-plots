@@ -4,6 +4,9 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { INTERIOR_PACKAGES } from '../data/plotsData';
 
+const WHATSAPP = '918431909508';
+const PHONE_DISPLAY = '+91 84319 09508';
+
 const WORK_PHOTOS = [
   {
     src: '/images/purva-sounds-of-water/purva-villa-handcrafted-kitchen.jpeg',
@@ -34,133 +37,131 @@ const SCOPE = [
   }
 ];
 
-export default function InteriorDesignView({ setActivePage }) {
-  const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
+const ROWS = [
+  ['Dry area rate', 'dryAreaPrice', true],
+  ['Wet area rate', 'wetAreaPrice', false],
+  ['Core material, dry', 'coreDry', false],
+  ['Core material, wet', 'coreWet', false],
+  ['Finish', 'finish', false],
+  ['Hardware and hinges', 'hardware', false],
+  ['Kitchen accessories', 'accessories', false],
+  ['Handles', 'handles', false]
+];
 
+export default function InteriorDesignView() {
   return (
-    <div className="bg-[#F8F8F5]">
-      {/* Hero */}
-      <section className="bg-[#0B1F3A] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-16">
-            <div className="space-y-6">
-              <h1 className="font-heading text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-                Interiors, <span className="text-[#C8A34D]">priced by the sq ft</span>
-              </h1>
-              <p className="max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-                Modular interiors, elevation planning and material execution for plot owners and villa buyers across Bengaluru, delivered by Vinra Interiors and Renovations.
-              </p>
-              <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi Vinra Interiors! I want to request an interior design quote and 3D consultation.')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-gold cursor-pointer px-7 py-4 text-sm"
-                >
-                  <MessageCircle className="h-4 w-4 text-[#0B1F3A]" aria-hidden="true" />
-                  Book a consultation
-                </a>
-                <a
-                  href={`tel:+${whatsappNumber}`}
-                  className="text-sm font-semibold text-[#C8A34D] transition-colors hover:text-white"
-                >
-                  or call {displayPhone}
-                </a>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-lg">
-              <img
-                src={WORK_PHOTOS[0].src}
-                alt={WORK_PHOTOS[0].alt}
-                width={1000}
-                height={760}
-                className="h-[300px] w-full object-cover sm:h-[400px] lg:h-[460px]"
-              />
+    <div>
+      {/* ------------------------------------------------------------- hero */}
+      <section className="shell pt-10 lg:pt-14">
+        <p className="text-[14px] text-[#7A5C10]">Interiors · executed with Vinra</p>
+        <div className="mt-4 grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <div className="lg:col-span-7">
+            <h1 className="display-xl max-w-[15ch] text-[#0B1F3A]">
+              Interiors, priced by the square foot.
+            </h1>
+            <p className="mt-6 max-w-[50ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
+              Modular interiors, elevation planning and material execution for plot owners and villa
+              buyers across Bengaluru, delivered by Vinra Interiors and Renovations.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hi Vinra Interiors! I want to request an interior design quote and 3D consultation.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                Book a consultation
+              </a>
+              <a
+                href={`tel:+${WHATSAPP}`}
+                className="inline-flex min-h-11 items-center text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10] figures"
+              >
+                or call {PHONE_DISPLAY}
+              </a>
             </div>
           </div>
+
+          <figure className="lg:col-span-5">
+            <img
+              src={WORK_PHOTOS[0].src}
+              alt={WORK_PHOTOS[0].alt}
+              width={1000}
+              height={760}
+              className="h-[280px] w-full object-cover sm:h-[360px] lg:h-[420px]"
+            />
+            <figcaption className="plate-line">
+              <span>A kitchen delivered under the Gold package</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
-      {/* Work photographs */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {WORK_PHOTOS.slice(1).map((photo) => (
-            <figure key={photo.src} className="overflow-hidden rounded-lg">
+      {/* -------------------------------------------------------------- work */}
+      <section className="shell mt-12 lg:mt-16">
+        <div className="grid gap-4 sm:grid-cols-2">
+          {WORK_PHOTOS.slice(1).map((photo, i) => (
+            <figure key={photo.src} className={i === 1 ? 'sm:mt-10' : ''}>
               <img
                 src={photo.src}
                 alt={photo.alt}
+                width={1000}
+                height={700}
                 loading="lazy"
-                className="h-72 w-full object-cover sm:h-80"
+                decoding="async"
+                className="h-[240px] w-full object-cover sm:h-[320px]"
               />
             </figure>
           ))}
         </div>
       </section>
 
-      {/* Packages */}
-      <section className="border-t border-[#0B1F3A]/10 bg-white py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-3xl font-bold text-[#0B1F3A]">
-            Three turnkey packages
-          </h2>
-          <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#555555]">
-            Transparent per-square-foot pricing with factory-finish modular woodwork, Century and Greenply boards, and Hettich or Hafele hardware.
-          </p>
+      {/* ---------------------------------------------------------- packages */}
+      <section className="page-section">
+        <div className="shell">
+          <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+            <h2 className="display-lg lg:col-span-7 text-[#0B1F3A]">Three turnkey packages.</h2>
+            <p className="lg:col-span-5 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+              Transparent per-square-foot pricing with factory-finish modular woodwork, Century and
+              Greenply boards, and Hettich or Hafele hardware.
+            </p>
+          </div>
 
-          {/* A comparison table is the honest shape for three packages priced line by line. */}
           <div className="mt-10 overflow-x-auto">
-            <table className="w-full min-w-[720px] border-collapse text-left">
-              <caption className="sr-only">Interior package comparison: Silver, Gold and Platinum</caption>
+            <table data-ui className="w-full min-w-[720px] border-collapse text-left">
+              <caption className="sr-only">
+                Interior package comparison: Silver, Gold and Platinum
+              </caption>
               <thead>
-                <tr className="bg-[#0B1F3A] text-white">
-                  <th scope="col" className="rounded-tl-lg px-5 py-4 text-base font-semibold">
+                <tr data-ui className="border-b border-[#0B1F3A]">
+                  <th scope="col" className="py-4 pr-6 text-[14px] font-normal text-[var(--text-soft)]">
                     Included
                   </th>
-                  {INTERIOR_PACKAGES.map((pkg, i) => (
-                    <th
-                      key={pkg.name}
-                      scope="col"
-                      className={`px-5 py-4 text-base font-semibold ${i === INTERIOR_PACKAGES.length - 1 ? 'rounded-tr-lg' : ''}`}
-                    >
-                      {pkg.name.replace(' Package', '')}
+                  {INTERIOR_PACKAGES.map((pkg) => (
+                    <th key={pkg.name} scope="col" className="px-6 py-4 align-bottom">
+                      <span className="block font-heading text-[1.25rem] text-[#0B1F3A]">
+                        {pkg.name.replace(' Package', '')}
+                      </span>
                       {pkg.name === 'Gold Package' && (
-                        <span className="mt-1 block text-sm font-normal text-[#C8A34D]">Most chosen</span>
+                        <span className="mt-1 block text-[14px] text-[#7A5C10]">Most chosen</span>
                       )}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-[#F8F8F5]">
-                  <th scope="row" className="px-5 py-4 text-base font-semibold text-[#0B1F3A]">Dry area rate</th>
-                  {INTERIOR_PACKAGES.map((pkg) => (
-                    <td key={pkg.name} className="px-5 py-4 text-base font-bold tabular-nums text-[#0B1F3A]">
-                      {pkg.dryAreaPrice}
-                    </td>
-                  ))}
-                </tr>
-                <tr className="bg-white">
-                  <th scope="row" className="px-5 py-4 text-base font-semibold text-[#0B1F3A]">Wet area rate</th>
-                  {INTERIOR_PACKAGES.map((pkg) => (
-                    <td key={pkg.name} className="px-5 py-4 text-base tabular-nums text-[#555555]">
-                      {pkg.wetAreaPrice}
-                    </td>
-                  ))}
-                </tr>
-                {[
-                  ['Core material, dry', 'coreDry'],
-                  ['Core material, wet', 'coreWet'],
-                  ['Finish', 'finish'],
-                  ['Hardware and hinges', 'hardware'],
-                  ['Kitchen accessories', 'accessories'],
-                  ['Handles', 'handles']
-                ].map(([label, key], rowIndex) => (
-                  <tr key={label} className={rowIndex % 2 === 0 ? 'bg-[#F8F8F5]' : 'bg-white'}>
-                    <th scope="row" className="px-5 py-4 text-base font-semibold text-[#0B1F3A]">{label}</th>
+                {ROWS.map(([label, key, strong]) => (
+                  <tr key={label} data-ui className="border-b border-[var(--rule)]">
+                    <th scope="row" className="py-4 pr-6 text-[16px] font-normal text-[var(--text-soft)]">
+                      {label}
+                    </th>
                     {INTERIOR_PACKAGES.map((pkg) => (
-                      <td key={pkg.name} className="px-5 py-4 text-base leading-relaxed text-[#555555]">
+                      <td
+                        key={pkg.name}
+                        className={`px-6 py-4 text-[16px] leading-relaxed ${
+                          strong ? 'text-[#0B1F3A] figures' : 'text-[#1A1A1A]'
+                        }`}
+                      >
                         {pkg[key]}
                       </td>
                     ))}
@@ -170,14 +171,14 @@ export default function InteriorDesignView({ setActivePage }) {
             </table>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
             {INTERIOR_PACKAGES.map((pkg) => (
               <a
                 key={pkg.name}
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Vinra Interiors! I want details on the ${pkg.name}.`)}`}
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hi Vinra Interiors! I want details on the ${pkg.name}.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg border border-[#0B1F3A]/20 px-5 py-3 text-sm font-bold text-[#0B1F3A] transition-colors hover:border-[#0B1F3A]"
+                className="inline-flex min-h-11 items-center text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
               >
                 Ask about {pkg.name.replace(' Package', '')}
               </a>
@@ -186,16 +187,19 @@ export default function InteriorDesignView({ setActivePage }) {
         </div>
       </section>
 
-      {/* Scope */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl font-bold text-[#0B1F3A]">What the work covers</h2>
-        <div className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-3">
-          {SCOPE.map((item) => (
-            <div key={item.title} className="space-y-2">
-              <h3 className="font-heading text-lg font-bold text-[#0B1F3A]">{item.title}</h3>
-              <p className="text-base leading-relaxed text-[#555555]">{item.copy}</p>
-            </div>
-          ))}
+      {/* ------------------------------------------------------------- scope */}
+      <section className="section-navy on-ink">
+        <div className="shell page-section">
+          <h2 className="display-lg max-w-[18ch] text-white">What the work covers.</h2>
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
+            {SCOPE.map((item, i) => (
+              <div key={item.title}>
+                <p className="font-heading text-[1.25rem] text-[#DFC06E] figures">{i + 1}</p>
+                <h3 className="mt-2 font-heading text-[1.25rem] text-white">{item.title}</h3>
+                <p className="mt-2 text-[16px] leading-relaxed text-white/70">{item.copy}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

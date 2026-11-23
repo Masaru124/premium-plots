@@ -1,13 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { PlotsProvider, usePlots } from '../../context/PlotsContext';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import FloatingActions from '../../components/WhatsAppButton';
 import BookSiteVisitModal from '../../components/BookSiteVisitModal';
 import ProjectsPage from '../../views/ProjectsPage';
-import { ShieldCheck, MessageCircle, ChevronDown, ArrowRight } from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
+import { MessageCircle, ArrowRight } from 'lucide-react';
+
+const WHATSAPP = '918431909508';
 
 const VILLAS_FAQS = [
   {
@@ -19,7 +23,7 @@ const VILLAS_FAQS = [
     a: 'The seller advertises a private pool and garden for this specific resale unit. Confirm unit-specific features during inspection; amenities at other communities vary by listing.'
   },
   {
-    q: 'Why should buyers purchase luxury villas through Lakshie Real Estate?',
+    q: 'Why should buyers purchase luxury villas through Setty Relators?',
     a: 'We are authorized direct Channel Partners for Tier-1 developers including Puravankara Limited and Tripon Groups. We offer 100% zero brokerage to buyers, pre-arranged chauffeured VIP site visits, transparent price negotiations, and complete legal due diligence at no cost.'
   },
   {
@@ -29,12 +33,8 @@ const VILLAS_FAQS = [
 ];
 
 function VillasContent() {
-  const [activePage, setActivePage] = useState('villas');
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const { openSiteVisitModal } = usePlots();
-
-  const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
+  useReveal();
 
   const handleNavClick = (pageId, filterType = 'all', projId = null) => {
     if (pageId === 'home') {
@@ -53,86 +53,97 @@ function VillasContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
+    <div className="min-h-svh bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between">
       <div>
         <Navbar activePage="villas" setActivePage={handleNavClick} />
 
-        <main className="animate-fadeIn">
-          {/* Breadcrumb Bar */}
-          <div className="bg-[#0B1F3A] text-white/80 py-3 border-b border-white/10 text-xs">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2">
-                <a href="/" className="hover:text-[#C8A34D] transition-colors">Home</a>
-                <span>/</span>
-                <span className="text-[#C8A34D] font-bold">Luxury Villas in Bangalore</span>
-              </nav>
+        <main>
+          {/* breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="shell flex flex-wrap items-center gap-2 py-4 text-[14px] text-[var(--text-soft)]"
+          >
+            <Link href="/" className="hover:text-[#0B1F3A]">Home</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#0B1F3A]">Luxury villas in Bangalore</span>
+          </nav>
 
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-[#C8A34D] font-semibold">
-                <ShieldCheck className="w-4 h-4" /> Tier-1 Developers • 0% Brokerage
-              </span>
-            </div>
-          </div>
-
-          {/* Dedicated Hero Banner */}
-          <section className="bg-[#0B1F3A] text-white py-14 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto text-center space-y-4">
-              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading">
-                Luxury Villas for Sale in Bengaluru
-              </h1>
-              <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
-                Explore Tripon Nandi Hills villas and a seller-listed resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. Confirm the resale unit’s configuration, details and availability.
-              </p>
-              <div className="pt-2 flex flex-wrap justify-center gap-3">
-                <button
-                  onClick={() => openSiteVisitModal()}
-                  className="btn-gold py-3 px-6 text-sm font-bold normal-case tracking-normal cursor-pointer"
-                >
-                  Schedule Private Villa Tour
-                </button>
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Lakshie Real Estate! Please send me the brochure and price list for luxury villas in Bangalore.')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-sm font-semibold flex items-center gap-2 transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#C8A34D]" />
-                  Request Villa Details on WhatsApp
-                </a>
+          {/* hero */}
+          <section className="shell pt-12 lg:pt-16">
+            <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+              <div data-reveal className="lg:col-span-7">
+                <h1 className="display-xl max-w-[16ch] text-[#0B1F3A]">
+                  Villas, with the unit read before the visit.
+                </h1>
+                <p className="mt-6 max-w-[52ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
+                  Tripon Nandi Hills villas and one seller-listed resale at Purva Symphony, The Sound
+                  of Water, off Bannerghatta Road. Configuration, details and availability confirmed
+                  with the desk.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
+                  <button type="button" onClick={() => openSiteVisitModal()} className="btn-gold">
+                    Schedule a private villa tour
+                  </button>
+                  <a
+                    href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello Setty Relators! Please send me the brochure and price list for luxury villas in Bangalore.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center gap-2 text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] hover:text-[#7A5C10]"
+                  >
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    Ask for villa details
+                  </a>
+                </div>
               </div>
+
+              <figure data-reveal className="lg:col-span-5">
+                <img
+                  src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
+                  alt="Villa residences and landscaped gardens at Purva Symphony"
+                  width={1600}
+                  height={1000}
+                  fetchPriority="high"
+                  className="h-[260px] w-full object-cover sm:h-[340px] lg:h-[380px]"
+                />
+                <figcaption className="plate-line">
+                  <span>Purva Symphony, off Bannerghatta Road</span>
+                  <span className="plate-price">from ₹4.80 Cr</span>
+                </figcaption>
+              </figure>
             </div>
           </section>
 
-          {/* Featured Highlight: Purva Sounds of Water Banner */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <div className="grid overflow-hidden bg-[#0B1F3A] text-white md:grid-cols-2">
+          {/* resale feature */}
+          <section className="shell mt-14 lg:mt-20">
+            <div data-reveal className="grid items-stretch gap-0 bg-[#0B1F3A] text-white lg:grid-cols-2">
               <img
-                src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
-                alt="Villa residences and landscaped gardens at Purva Symphony"
-                className="h-64 w-full object-cover sm:h-80 md:h-full md:min-h-[380px]"
-                loading="eager"
-                fetchPriority="high"
+                src="/images/purva-sounds-of-water/purva-villa-front-portico.jpeg"
+                alt="Villa entrance portico at Purva Symphony"
+                width={1400}
+                height={950}
+                loading="lazy"
+                className="h-64 w-full object-cover sm:h-80 lg:h-full lg:min-h-[380px]"
               />
-              <div className="flex flex-col justify-center gap-5 p-6 sm:p-10 lg:p-14">
+              <div className="flex flex-col justify-between gap-6 px-7 py-9 sm:px-10 lg:py-12">
                 <div>
-                  <h2 className="text-2xl font-extrabold leading-tight font-heading text-white sm:text-3xl">
-                    Purva Symphony villa resale
-                  </h2>
-                  <p className="mt-4 text-base leading-relaxed text-white/85">
-                    The seller quotes ₹9.0 Cr for an advertised five-bedroom resale. Puravankara describes the wider community as offering 3- and 4-BHK residences; verify this unit’s documents, features, price and availability.
+                  <h2 className="display-md text-white">Purva Symphony villa resale</h2>
+                  <p className="mt-4 max-w-[46ch] text-[17px] leading-relaxed text-white/75">
+                    The seller quotes ₹9.0 Cr for an advertised five-bedroom resale. Puravankara
+                    describes the wider community as 3- and 4-BHK residences; verify this unit’s
+                    documents, features, price and availability.
                   </p>
                 </div>
                 <a
                   href="/purva-sounds-of-water"
-                  className="btn-gold w-fit px-5 py-3 text-sm font-bold normal-case tracking-normal"
+                  className="inline-flex min-h-11 w-fit items-center gap-2 text-[17px] text-white underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] hover:text-[#DFC06E]"
                 >
-                  View resale details
+                  The resale details
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
             </div>
           </section>
 
-          {/* Villa Projects Listing View */}
           <ProjectsPage
             filterType="Villas"
             isSubpage={true}
@@ -140,48 +151,34 @@ function VillasContent() {
             setSelectedProjectId={() => {}}
           />
 
-          {/* Villas FAQ Section */}
-          <section className="bg-white py-16">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-              <div className="text-center space-y-3">
-                <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Buying a villa: common questions
-                </h2>
+          {/* faq */}
+          <section className="page-section">
+            <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div data-reveal className="lg:col-span-4">
+                <h2 className="display-lg text-[#0B1F3A]">Questions on villas.</h2>
+                <p className="mt-4 max-w-[34ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                  What is on the market, what the seller advertises, and what to verify before an
+                  offer.
+                </p>
               </div>
 
-              <div className="space-y-4">
-                {VILLAS_FAQS.map((faq, idx) => {
-                  const isOpen = openFaqIndex === idx;
-                  return (
-                    <div
-                      key={idx}
-                      className="rounded-2xl border border-slate-200 overflow-hidden bg-[#F8F8F5]"
-                    >
-                      <button
-                        onClick={() => setOpenFaqIndex(isOpen ? -1 : idx)}
-                        className="w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-100 transition-colors"
-                        aria-expanded={isOpen}
-                      >
-                        <h3 className="text-base font-bold text-[#0B1F3A] font-heading pr-2">
-                          {faq.q}
-                        </h3>
-                        <div className={`w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#C8A34D]' : 'text-slate-500'}`}>
-                          <ChevronDown className="w-4 h-4" />
-                        </div>
-                      </button>
-
-                      {isOpen && (
-                        <div className="px-6 pb-6 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-200 bg-white">
-                          <p>{faq.a}</p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div data-reveal className="lg:col-span-8">
+                {VILLAS_FAQS.map((faq) => (
+                  <details key={faq.q} className="group py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#1A1A1A] transition-colors hover:text-[#7A5C10]">
+                      <span>{faq.q}</span>
+                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#A6832A] transition-transform group-open:rotate-45">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-3 max-w-[62ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
               </div>
             </div>
           </section>
-
         </main>
       </div>
 

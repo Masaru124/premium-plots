@@ -6,7 +6,7 @@ import { MessageCircle } from 'lucide-react';
 export default function FloatingActions() {
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
-  const defaultText = 'Hi Premium Properties! I want to inquire about plots, villas, apartments & Dubai investments.';
+  const defaultText = 'Hi Setty Relators! I want to inquire about plots, villas, apartments & Dubai investments.';
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultText)}`;
 
@@ -20,9 +20,9 @@ export default function FloatingActions() {
         aria-label={`Chat on WhatsApp ${displayPhone}`}
       >
         <MessageCircle className="h-6 w-6 text-[#C8A34D]" aria-hidden="true" />
-        <span className="hidden text-left leading-tight lg:block">
+        <span className="hidden text-left leading-tight 2xl:block">
           <span className="block text-sm font-bold text-[#C8A34D]">WhatsApp us</span>
-          <span className="block text-xs font-medium text-white/70">{displayPhone}</span>
+          <span className="block text-[14px] font-medium text-white/70">{displayPhone}</span>
         </span>
       </a>
     </div>

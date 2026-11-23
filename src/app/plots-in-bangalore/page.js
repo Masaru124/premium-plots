@@ -38,7 +38,7 @@ export const metadata = {
     title: 'Plots in Bangalore | Verified Residential & Villa Plots | 0% Brokerage',
     description: 'Explore verified residential plots & villa plots in Devanahalli, STRR, Chikkaballapura, Jigani & Kanakapura Rd. BIAAPA/RERA approved. Free chauffeured cab tour.',
     url: PAGE_URL,
-    siteName: 'Lakshie Real Estate Advisory',
+    siteName: 'Setty Relators Advisory',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -65,7 +65,7 @@ const jsonLdPlots = {
       '@type': 'RealEstateListing',
       '@id': `${PAGE_URL}/#listing`,
       'name': 'Verified Residential & Villa Plots in Bengaluru',
-      'description': 'Comprehensive directory of legally cleared residential plots and luxury villa plots across North, South, East, and West Bengaluru corridors by authorized developer channel partner Lakshie Real Estate.',
+      'description': 'Comprehensive directory of legally cleared residential plots and luxury villa plots across North, South, East, and West Bengaluru corridors by authorized developer channel partner Setty Relators.',
       'url': PAGE_URL
     },
     {
@@ -100,7 +100,7 @@ const jsonLdPlots = {
         },
         {
           '@type': 'Question',
-          'name': 'What is the starting price of residential plots in Bangalore through Lakshie Real Estate?',
+          'name': 'What is the starting price of residential plots in Bangalore through Setty Relators?',
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Verified plotted layouts start from ₹35 Lakhs in Chikkaballapura (Sun Valley by D1 Projects) up to ₹2.0 Crore for premium 4,499 sq.ft villa estates in flagship Oriaiyan Group corridors, with zero buyer brokerage.'

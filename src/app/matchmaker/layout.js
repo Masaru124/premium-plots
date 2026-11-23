@@ -8,10 +8,10 @@ export const metadata = {
     canonical: `${SITE_URL}/matchmaker`,
   },
   openGraph: {
-    title: 'Property Matchmaker | Lakshie Real Estate Bangalore',
+    title: 'Property Matchmaker | Setty Relators Bangalore',
     description: 'Get matched to verified Bengaluru plots and villas by corridor, budget and timeline.',
     url: `${SITE_URL}/matchmaker`,
-    siteName: 'Lakshie Real Estate Advisory',
+    siteName: 'Setty Relators Advisory',
     locale: 'en_IN',
     type: 'website',
   },

@@ -1,0 +1,18 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/page": "/admin",
+  "/api/admin/login/route": "/api/admin/login",
+  "/api/admin/session/route": "/api/admin/session",
+  "/api/leads/route": "/api/leads",
+  "/api/projects/route": "/api/projects",
+  "/favicon.ico/route": "/favicon.ico",
+  "/luxury-villas-bangalore/page": "/luxury-villas-bangalore",
+  "/matchmaker/page": "/matchmaker",
+  "/page": "/",
+  "/plots-in-bangalore/page": "/plots-in-bangalore",
+  "/property-finder/page": "/property-finder",
+  "/purva-sounds-of-water/page": "/purva-sounds-of-water",
+  "/qna/page": "/qna",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

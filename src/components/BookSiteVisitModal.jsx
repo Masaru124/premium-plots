@@ -1,8 +1,22 @@
 'use client';
 
-import React, { useState } from 'react';
-import { X, Calendar, Clock, MapPin, Phone, User, Mail, ShieldCheck, CheckCircle2, MessageCircle } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { X, Calendar, Clock, MapPin, Phone, User, Mail, CheckCircle2, MessageCircle } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
+
+const INPUT =
+  'min-h-11 w-full border border-[#0B1F3A]/20 bg-[#F8F8F5] px-3.5 py-3 text-[14px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:border-[#0B1F3A] focus:outline-none';
+const LABEL = 'mb-1.5 block text-[13px] font-semibold uppercase tracking-[0.13em] text-[#555555]';
+
+const EMPTY_FORM = {
+  name: '',
+  phone: '',
+  email: '',
+  visitDate: '',
+  visitTime: '10:30 AM',
+  cabPickup: true,
+  pickupLocation: ''
+};
 
 export default function BookSiteVisitModal() {
   const {
@@ -13,16 +27,14 @@ export default function BookSiteVisitModal() {
     addLead,
     bookSiteVisit
   } = usePlots();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    visitDate: '',
-    visitTime: '10:30 AM',
-    cabPickup: true,
-    pickupLocation: ''
-  });
+
+  const [formData, setFormData] = useState(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  const dialogRef = useRef(null);
+  const firstFieldRef = useRef(null);
+  const restoreFocusRef = useRef(null);
 
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
@@ -31,10 +43,76 @@ export default function BookSiteVisitModal() {
   const activeProject = selectedProjectForModal || siteVisitModal?.project;
   const projectTitle = activeProject ? activeProject.title : 'Oriaiyan Signature Plotted Developments & Villa Plots';
 
+  // Dialog behaviour: move focus in, trap tab, close on Escape, keep the page
+  // from scrolling underneath, and hand focus back on close.
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    restoreFocusRef.current = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const focusTimer = window.setTimeout(() => firstFieldRef.current?.focus(), 40);
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.stopPropagation();
+        close();
+        return;
+      }
+
+      if (event.key !== 'Tab' || !dialogRef.current) return;
+
+      const focusable = dialogRef.current.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      if (restoreFocusRef.current instanceof HTMLElement) {
+        restoreFocusRef.current.focus({ preventScroll: true });
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // Declared as a function so the dialog effect above can call it safely.
+  function close() {
+    setSubmitted(false);
+    setError('');
+    setFormData(EMPTY_FORM);
+    closeSiteVisitModal();
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setError('');
+
+    const digits = formData.phone.replace(/\D/g, '');
+    if (digits.length < 8) {
+      setError('Enter a phone number the advisor can reach you on.');
+      return;
+    }
+
     const saveLeadFn = addLead || bookSiteVisit;
     if (saveLeadFn) {
       saveLeadFn({
@@ -43,177 +121,201 @@ export default function BookSiteVisitModal() {
       });
     }
 
-    const waText = `Hi Premium Properties! I have submitted a VIP Site Visit Request:\n\n` +
+    const waText =
+      `Hello Setty Relators. I have submitted a site visit request.\n\n` +
       `Name: ${formData.name}\n` +
       `Phone: ${formData.phone}\n` +
       `Project: ${projectTitle}\n` +
       `Date: ${formData.visitDate} at ${formData.visitTime}\n` +
-      `Guided Tour / Cab: ${formData.cabPickup ? `Yes (${formData.pickupLocation || 'Home'})` : 'No (Self Drive)'}`;
+      `Guided tour / cab: ${formData.cabPickup ? `Yes (${formData.pickupLocation || 'Home'})` : 'No (self drive)'}`;
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
-  };
-
-  const handleClose = () => {
-    setSubmitted(false);
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      visitDate: '',
-      visitTime: '10:30 AM',
-      cabPickup: true,
-      pickupLocation: ''
-    });
-    closeSiteVisitModal();
   };
 
   return (
     <div
-      onClick={(e) => {
-        if (e.target === e.currentTarget) handleClose();
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#071527]/80 p-4 animate-fadeIn"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) close();
       }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md animate-fadeIn"
     >
-      <div className="relative w-full max-w-lg bg-white border border-[#0B1F3A]/15 rounded-2xl shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
-        {/* Modal Header */}
-        <div className="bg-[#0B1F3A] p-6 text-white flex justify-between items-start shrink-0 border-b border-[#C8A34D]/30">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="site-visit-title"
+        aria-describedby="site-visit-description"
+        className="relative my-8 flex max-h-[90vh] w-full max-w-lg flex-col overflow-hidden border border-[#C8A34D]/40 bg-white"
+      >
+        <div className="flex shrink-0 items-start justify-between gap-4 border-b border-[#C8A34D]/30 bg-[#0B1F3A] p-6 text-white">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C8A34D]/20 border border-[#C8A34D]/40 text-[#C8A34D] text-[10px] font-extrabold uppercase tracking-wider mb-1">
-              VIP Site Inspection & Advisory
-            </div>
-            <h3 className="text-xl font-extrabold font-heading">Book Private Site Visit</h3>
-            <p className="text-xs text-white/70 mt-0.5">{projectTitle}</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-[#DFC06E]">
+              Private inspection
+            </p>
+            <h2 id="site-visit-title" className="mt-2 font-heading text-2xl text-white">
+              Book a site visit
+            </h2>
+            <p id="site-visit-description" className="mt-1 text-[13px] leading-relaxed text-white/65">
+              {projectTitle}
+            </p>
           </div>
           <button
-            id="close-site-visit-modal"
-            aria-label="Close Site Visit Modal"
-            onClick={handleClose}
-            className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C8A34D]"
+            type="button"
+            onClick={close}
+            aria-label="Close site visit form"
+            className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/25 text-white/80 transition-colors hover:border-[#C8A34D] hover:text-[#C8A34D]"
           >
-            <X className="w-5 h-5" />
+            <X className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
 
-        {/* Modal Body */}
-        <div className="p-6 overflow-y-auto space-y-4">
+        <div className="overflow-y-auto p-6">
           {submitted ? (
-            <div className="text-center py-8 space-y-4">
-              <div className="w-16 h-16 bg-[#C8A34D]/10 text-[#0B1F3A] rounded-full flex items-center justify-center mx-auto border border-[#C8A34D]/30 shadow-sm">
-                <CheckCircle2 className="w-10 h-10 text-[#0B1F3A]" />
-              </div>
-              <h4 className="text-xl font-bold text-[#0B1F3A] font-heading">Site Visit Requested</h4>
-              <p className="text-xs text-[#555555] max-w-xs mx-auto leading-relaxed">
-                Thank you <span className="font-semibold text-[#0B1F3A]">{formData.name}</span>. We opened a WhatsApp conversation with <span className="font-bold text-[#C8A34D]">{displayPhone}</span> with your site visit details.
+            <div className="space-y-4 py-8 text-center">
+              <CheckCircle2 className="mx-auto h-10 w-10 text-[#7A5C10]" aria-hidden="true" />
+              <h3 className="font-heading text-xl text-[#0B1F3A]">Request received</h3>
+              <p className="mx-auto max-w-[38ch] text-[14px] leading-relaxed text-[#555555]">
+                Thank you, {formData.name || 'and welcome'}. A WhatsApp conversation with{' '}
+                <strong className="text-[#0B1F3A]">{displayPhone}</strong> has opened with your visit
+                details; the advisor will confirm the slot there.
               </p>
-              <div className="pt-2">
-                <button
-                  onClick={handleClose}
-                  className="btn-gold px-8 py-3 text-xs uppercase font-extrabold shadow-lg cursor-pointer"
-                >
-                  Done
-                </button>
-              </div>
+              <button type="button" onClick={close} className="btn-gold mt-2 px-8">
+                Close
+              </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4 text-xs text-[#1A1A1A]">
+            <form onSubmit={handleSubmit} noValidate className="space-y-5">
               <div>
-                <label className="block font-semibold uppercase text-[10px] text-[#555555] mb-1">Your Full Name *</label>
-                <div className="relative">
-                  <User className="w-4 h-4 text-[#555555] absolute left-3.5 top-3" />
+                <label htmlFor="visit-name" className={LABEL}>Full name <span aria-hidden="true">*</span></label>
+                <input
+                  ref={firstFieldRef}
+                  id="visit-name"
+                  name="name"
+                  type="text"
+                  required
+                  autoComplete="name"
+                  placeholder="e.g. Rajesh Kumar"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className={INPUT}
+                />
+              </div>
+
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="visit-phone" className={LABEL}>Phone / WhatsApp <span aria-hidden="true">*</span></label>
                   <input
-                    type="text" required placeholder="e.g. Rajesh Kumar" value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/15 rounded-xl pl-10 pr-4 py-2.5 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
+                    id="visit-phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    placeholder={displayPhone}
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    aria-describedby={error ? 'visit-error' : undefined}
+                    className={INPUT}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="visit-email" className={LABEL}>Email <span className="normal-case tracking-normal text-[#5F5F5F]">(optional)</span></label>
+                  <input
+                    id="visit-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="name@domain.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className={INPUT}
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="block font-semibold uppercase text-[10px] text-[#555555] mb-1">Phone / WhatsApp Number *</label>
-                  <div className="relative">
-                    <Phone className="w-4 h-4 text-[#555555] absolute left-3.5 top-3" />
-                    <input
-                      type="tel" required placeholder={displayPhone} value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/15 rounded-xl pl-10 pr-4 py-2.5 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block font-semibold uppercase text-[10px] text-[#555555] mb-1">Email Address</label>
-                  <div className="relative">
-                    <Mail className="w-4 h-4 text-[#555555] absolute left-3.5 top-3" />
-                    <input
-                      type="email" placeholder="name@domain.com" value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/15 rounded-xl pl-10 pr-4 py-2.5 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label className="block font-semibold uppercase text-[10px] text-[#555555] mb-1">Preferred Visit Date *</label>
-                  <div className="relative">
-                    <Calendar className="w-4 h-4 text-[#555555] absolute left-3.5 top-3" />
-                    <input
-                      type="date" required value={formData.visitDate}
-                      onChange={(e) => setFormData({ ...formData, visitDate: e.target.value })}
-                      className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/15 rounded-xl pl-10 pr-4 py-2.5 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block font-semibold uppercase text-[10px] text-[#555555] mb-1">Preferred Time Slot</label>
-                  <div className="relative">
-                    <Clock className="w-4 h-4 text-[#555555] absolute left-3.5 top-3" />
-                    <select
-                      value={formData.visitTime}
-                      onChange={(e) => setFormData({ ...formData, visitTime: e.target.value })}
-                      className="w-full bg-[#F8F8F5] border border-[#0B1F3A]/15 rounded-xl pl-10 pr-4 py-2.5 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D] cursor-pointer"
-                    >
-                      <option value="09:30 AM">09:30 AM (Morning Slot)</option>
-                      <option value="11:30 AM">11:30 AM (Mid-Day Slot)</option>
-                      <option value="02:30 PM">02:30 PM (Afternoon Slot)</option>
-                      <option value="04:30 PM">04:30 PM (Evening Sunset Slot)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-4 bg-[#F8F8F5] rounded-xl border border-[#0B1F3A]/10 space-y-2">
-                <label className="flex items-center gap-2 text-xs font-bold text-[#0B1F3A] cursor-pointer">
+                  <label htmlFor="visit-date" className={LABEL}>Visit date <span aria-hidden="true">*</span></label>
                   <input
+                    id="visit-date"
+                    name="visitDate"
+                    type="date"
+                    required
+                    value={formData.visitDate}
+                    onChange={(e) => setFormData({ ...formData, visitDate: e.target.value })}
+                    className={INPUT}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="visit-time" className={LABEL}>Time slot</label>
+                  <select
+                    id="visit-time"
+                    name="visitTime"
+                    value={formData.visitTime}
+                    onChange={(e) => setFormData({ ...formData, visitTime: e.target.value })}
+                    className={`${INPUT} cursor-pointer`}
+                  >
+                    <option value="09:30 AM">09:30 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="02:30 PM">02:30 PM</option>
+                    <option value="04:30 PM">04:30 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <fieldset className="border border-[#0B1F3A]/15 p-4">
+                <legend className="px-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[#555555]">
+                  Travel
+                </legend>
+
+                <label htmlFor="visit-cab" className="flex cursor-pointer items-center gap-3 text-[14px] font-medium text-[#0B1F3A]">
+                  <input
+                    id="visit-cab"
+                    name="cabPickup"
                     type="checkbox"
                     checked={formData.cabPickup}
                     onChange={(e) => setFormData({ ...formData, cabPickup: e.target.checked })}
-                    className="w-4 h-4 accent-[#C8A34D] rounded"
+                    className="h-4 w-4 accent-[#0B1F3A]"
                   />
-                  <span>Complimentary VIP Guided Site Tour Pickup</span>
+                  Complimentary chauffeured pickup
                 </label>
-                {formData.cabPickup && (
-                  <input
-                    type="text"
-                    placeholder="Enter pickup address / landmark (e.g. Hebbal, Whitefield, Airport)"
-                    value={formData.pickupLocation}
-                    onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
-                    className="w-full bg-white border border-[#0B1F3A]/15 rounded-lg px-3 py-2 text-xs text-[#1A1A1A] focus:outline-none focus:border-[#C8A34D]"
-                  />
-                )}
-              </div>
 
-              <button
-                type="submit"
-                className="btn-gold w-full py-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer"
-              >
-                <MessageCircle className="w-4 h-4 fill-[#0B1F3A]" />
-                <span>Confirm VIP Site Visit via WhatsApp</span>
+                {formData.cabPickup && (
+                  <div className="mt-3">
+                    <label htmlFor="visit-pickup" className={LABEL}>Pickup address or landmark</label>
+                    <div className="relative">
+                      <MapPin className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5F5F5F]" aria-hidden="true" />
+                      <input
+                        id="visit-pickup"
+                        name="pickupLocation"
+                        type="text"
+                        placeholder="Hebbal, Whitefield, Airport…"
+                        value={formData.pickupLocation}
+                        onChange={(e) => setFormData({ ...formData, pickupLocation: e.target.value })}
+                        className={`${INPUT} pl-9`}
+                      />
+                    </div>
+                  </div>
+                )}
+              </fieldset>
+
+              {error && (
+                <p id="visit-error" role="alert" className="border-l-2 border-[#A6832A] bg-[#C8A34D]/10 px-3 py-2 text-[13px] text-[#7A5C10]">
+                  {error}
+                </p>
+              )}
+
+              <button type="submit" className="btn-gold w-full py-4">
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                Confirm on WhatsApp
               </button>
+
+              <p className="flex items-center justify-center gap-2 text-[13px] uppercase tracking-[0.1em] text-[#5F5F5F]">
+                <Phone className="h-3 w-3" aria-hidden="true" />
+                Or call {displayPhone}
+              </p>
             </form>
           )}
         </div>

@@ -1,13 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { PlotsProvider, usePlots } from '../../context/PlotsContext';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import FloatingActions from '../../components/WhatsAppButton';
 import BookSiteVisitModal from '../../components/BookSiteVisitModal';
 import ProjectsPage from '../../views/ProjectsPage';
-import { ShieldCheck, MessageCircle, ChevronDown } from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
+import { MessageCircle } from 'lucide-react';
+
+const WHATSAPP = '918431909508';
 
 const PLOTS_FAQS = [
   {
@@ -20,10 +24,10 @@ const PLOTS_FAQS = [
   },
   {
     q: 'Are all listed plots approved by BIAAPA, CUDDA, or BMRDA with RERA registration?',
-    a: 'Yes. Every project represented by Lakshie Real Estate is legally cleared with RERA Karnataka registration, BIAAPA / CUDDA / BDA / BMRDA sanctions, clear marketable titles, and A-Khata ownership.'
+    a: 'Yes. Every project represented by Setty Relators is legally cleared with RERA Karnataka registration, BIAAPA / CUDDA / BDA / BMRDA sanctions, clear marketable titles, and A-Khata ownership.'
   },
   {
-    q: 'Why is there zero brokerage for buyers purchasing plots through Lakshie Real Estate?',
+    q: 'Why is there zero brokerage for buyers purchasing plots through Setty Relators?',
     a: 'As an authorized developer channel partner for Oriaiyan Group, D1 Projects, and Tripon Groups, our consultancy is compensated directly by developers. All buyer services—including legal vetting, masterplan reviews, price negotiation, and chauffeured VIP site visits—are 100% free with 0% brokerage.'
   },
   {
@@ -32,13 +36,40 @@ const PLOTS_FAQS = [
   }
 ];
 
-function PlotsContent() {
-  const [activePage, setActivePage] = useState('plots');
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
-  const { openSiteVisitModal } = usePlots();
+const CORRIDORS = [
+  {
+    name: 'Airport & Chikkajala',
+    rate: '₹4,200 – ₹5,800',
+    growth: '22.8%',
+    drivers: 'KIADB Aerospace SEZ, Airport Expressway, upcoming Metro',
+    authority: 'BIAPPA & RERA'
+  },
+  {
+    name: 'Chikkaballapura & Nandi Hills',
+    rate: '₹2,800 – ₹3,900',
+    growth: '21.5%',
+    drivers: 'STRR northern arc, tourism infrastructure, medical hub',
+    authority: 'CUDDA & RERA'
+  },
+  {
+    name: 'South industrial belt (APC Circle, Jigani)',
+    rate: '₹3,200 – ₹4,400',
+    growth: '16.9%',
+    drivers: 'Electronic City link, NICE Expressway, manufacturing SEZs',
+    authority: 'BMRDA & RERA'
+  },
+  {
+    name: 'East (Kothanur & Hoskote)',
+    rate: '₹3,400 – ₹4,600',
+    growth: '17.6%',
+    drivers: 'Hoskote auto hub, STRR interchanges, Whitefield access',
+    authority: 'BMRDA & RERA'
+  }
+];
 
-  const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
+function PlotsContent() {
+  const { openSiteVisitModal } = usePlots();
+  useReveal();
 
   const handleNavClick = (pageId, filterType = 'all', projId = null) => {
     if (pageId === 'home') {
@@ -57,56 +88,56 @@ function PlotsContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
+    <div className="min-h-svh bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between">
       <div>
         <Navbar activePage="plots" setActivePage={handleNavClick} />
 
-        <main className="animate-fadeIn">
-          {/* Breadcrumb Bar */}
-          <div className="bg-[#0B1F3A] text-white/80 py-3 border-b border-white/10 text-xs">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2">
-                <a href="/" className="hover:text-[#C8A34D] transition-colors">Home</a>
-                <span>/</span>
-                <span className="text-[#C8A34D] font-bold">Plots in Bangalore</span>
-              </nav>
+        <main>
+          {/* breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="shell flex flex-wrap items-center gap-2 py-4 text-[14px] text-[var(--text-soft)]"
+          >
+            <Link href="/" className="hover:text-[#0B1F3A]">Home</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#0B1F3A]">Plots in Bangalore</span>
+          </nav>
 
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-[#C8A34D] font-semibold">
-                <ShieldCheck className="w-4 h-4" /> BIAAPA & RERA Approved • 0% Brokerage
-              </span>
-            </div>
-          </div>
-
-          {/* Dedicated Hero Banner */}
-          <section className="bg-[#0B1F3A] text-white py-14 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto text-center space-y-4">
-              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading">
-                Residential plots in Bengaluru
-              </h1>
-              <p className="text-base sm:text-lg text-white/85 max-w-3xl mx-auto leading-relaxed">
-                Discover pre-cleared, high-appreciation residential land across Devanahalli Airport Corridor, STRR, Chikkaballapura, Nandi Hills, APC Circle, Jigani & Kanakapura Road. Clear A-Khata titles with zero brokerage to buyers.
-              </p>
-              <div className="pt-2 flex flex-wrap justify-center gap-3">
-                <button
-                  onClick={() => openSiteVisitModal()}
-                  className="btn-gold py-3 px-6 text-sm font-bold normal-case tracking-normal cursor-pointer"
-                >
-                  Book Free Chauffeured Site Tour
-                </button>
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Lakshie Real Estate! Please share masterplan blueprints and pricing for verified plots in Bangalore.')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3 px-5 rounded-xl border border-white/20 hover:border-white text-white text-sm font-semibold flex items-center gap-2 transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#C8A34D]" />
-                  Request Plots PDF on WhatsApp
-                </a>
+          {/* hero */}
+          <section className="shell pb-4 pt-12 lg:pt-16">
+            <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+              <div data-reveal className="lg:col-span-8">
+                <h1 className="display-xl max-w-[18ch] text-[#0B1F3A]">
+                  Plots, corridor by corridor.
+                </h1>
+                <p className="mt-6 max-w-[54ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
+                  Pre-cleared land across Devanahalli, STRR, Chikkaballapura, Nandi Hills, APC
+                  Circle, Jigani and Kanakapura Road. A-Khata titles, approvals read before listing,
+                  and zero brokerage to buyers.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
+                  <button type="button" onClick={() => openSiteVisitModal()} className="btn-gold">
+                    Book a chauffeured site tour
+                  </button>
+                  <a
+                    href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello Setty Relators! Please share masterplan blueprints and pricing for verified plots in Bangalore.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center gap-2 text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] hover:text-[#7A5C10]"
+                  >
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    Ask for the plots file
+                  </a>
+                </div>
               </div>
+
+              <p data-reveal className="lg:col-span-4 text-[15px] leading-relaxed text-[var(--text-soft)]">
+                Growth figures shown here are corridor-level commentary published by the desk, not
+                audited returns. Confirm current pricing with the developer.
+              </p>
             </div>
           </section>
 
-          {/* Plotted Projects Listing View */}
           <ProjectsPage
             filterType="Open Plots"
             isSubpage={true}
@@ -114,107 +145,77 @@ function PlotsContent() {
             setSelectedProjectId={() => {}}
           />
 
-          {/* Corridor Appreciation Metrics Table */}
-          <section className="bg-white py-16 border-t border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-              <div className="text-center space-y-3 max-w-3xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Plot prices by Bengaluru corridor
-                </h2>
-                <p className="text-base text-slate-600">
-                  Data-backed appreciation trends across prime infrastructure growth corridors.
+          {/* corridor prices */}
+          <section className="page-section">
+            <div className="shell">
+              <div data-reveal className="grid gap-6 lg:grid-cols-12 lg:items-end">
+                <h2 className="display-lg lg:col-span-7 text-[#0B1F3A]">Prices by corridor.</h2>
+                <p className="lg:col-span-5 max-w-[44ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                  Indicative per-square-foot rates and the infrastructure each corridor is priced
+                  against.
                 </p>
               </div>
 
-              <div className="bg-[#F8F8F5] p-6 rounded-2xl border border-[#0B1F3A]/10 overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
+              <div data-reveal className="mt-10 overflow-x-auto">
+                <table data-ui className="w-full min-w-[760px] border-collapse text-left">
+                  <caption className="sr-only">Plot prices by Bengaluru corridor</caption>
                   <thead>
-                    <tr className="border-b border-[#0B1F3A]/15 text-[#0B1F3A] uppercase font-bold tracking-wider">
-                      <th className="py-3 px-4">Corridor Name</th>
-                      <th className="py-3 px-4">Avg. Price / Sq.Ft</th>
-                      <th className="py-3 px-4">Historical YoY Growth</th>
-                      <th className="py-3 px-4">Key Growth Drivers</th>
-                      <th className="py-3 px-4">Approval Authorities</th>
+                    <tr data-ui className="border-b border-[#0B1F3A]">
+                      {['Corridor', 'Per sq ft', 'Growth', 'Drivers', 'Authority'].map((h) => (
+                        <th key={h} scope="col" className="py-3 pr-6 font-normal text-[14px] text-[var(--text-soft)]">
+                          {h}
+                        </th>
+                      ))}
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-200 text-slate-700">
-                    <tr>
-                      <td className="py-3 px-4 font-bold text-[#0B1F3A]">Airport & Chikkajala Corridor</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold">₹4,200 - ₹5,800</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">22.8% YoY</td>
-                      <td className="py-3 px-4">KIADB Aerospace SEZ, Airport Expressway & Upcoming Metro</td>
-                      <td className="py-3 px-4">BIAPPA & RERA</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 font-bold text-[#0B1F3A]">Chikkaballapura & Nandi Hills</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold">₹2,800 - ₹3,900</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">21.5% YoY</td>
-                      <td className="py-3 px-4">STRR Northern Arc, Tourism Infrastructure & Medical Hub</td>
-                      <td className="py-3 px-4">CUDDA & RERA</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 font-bold text-[#0B1F3A]">South Industrial Belt (APC Circle/Jigani)</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold">₹3,200 - ₹4,400</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">16.9% YoY</td>
-                      <td className="py-3 px-4">Electronic City Link, NICE Expressway & Manufacturing SEZs</td>
-                      <td className="py-3 px-4">BMRDA & RERA</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 font-bold text-[#0B1F3A]">East Corridor (Kothanur & Hoskote)</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold">₹3,400 - ₹4,600</td>
-                      <td className="py-3 px-4 text-[#7A5C10] font-bold tabular-nums">17.6% YoY</td>
-                      <td className="py-3 px-4">Hoskote Auto Hub, STRR Interchanges & Whitefield Access</td>
-                      <td className="py-3 px-4">BMRDA & RERA</td>
-                    </tr>
+                  <tbody>
+                    {CORRIDORS.map((c) => (
+                      <tr key={c.name} data-ui className="border-b border-[var(--rule)]">
+                        <th scope="row" className="py-4 pr-6 text-[16px] font-normal text-[#0B1F3A]">
+                          {c.name}
+                        </th>
+                        <td className="py-4 pr-6 text-[16px] text-[#1A1A1A] figures">{c.rate}</td>
+                        <td className="py-4 pr-6 text-[16px] text-[#1A1A1A] figures">{c.growth}</td>
+                        <td className="py-4 pr-6 text-[16px] leading-relaxed text-[var(--text-soft)]">
+                          {c.drivers}
+                        </td>
+                        <td className="py-4 pr-6 text-[16px] text-[var(--text-soft)]">{c.authority}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
             </div>
           </section>
 
-          {/* Plots FAQ Section */}
-          <section className="bg-[#F8F8F5] py-16 border-t border-slate-200">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-              <div className="text-center space-y-3">
-                <h2 className="text-3xl font-extrabold text-[#0B1F3A] font-heading">
-                  Buying a plot in Bengaluru
-                </h2>
-                <div className="divider-gold mx-auto" />
+          {/* faq */}
+          <section className="section-navy on-ink">
+            <div className="shell page-section grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div data-reveal className="lg:col-span-4">
+                <h2 className="display-lg text-white">Buying a plot here.</h2>
+                <p className="mt-4 max-w-[34ch] text-[17px] leading-relaxed text-white/65">
+                  Approvals, sizes, brokerage and corridor data. Ask the desk for anything not
+                  covered.
+                </p>
               </div>
 
-              <div className="space-y-4">
-                {PLOTS_FAQS.map((faq, idx) => {
-                  const isOpen = openFaqIndex === idx;
-                  return (
-                    <div
-                      key={idx}
-                      className="rounded-2xl border border-slate-200 overflow-hidden bg-white"
-                    >
-                      <button
-                        onClick={() => setOpenFaqIndex(isOpen ? -1 : idx)}
-                        className="w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50 transition-colors"
-                        aria-expanded={isOpen}
-                      >
-                        <h3 className="text-base font-bold text-[#0B1F3A] font-heading pr-2">
-                          {faq.q}
-                        </h3>
-                        <div className={`w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#C8A34D]' : 'text-slate-500'}`}>
-                          <ChevronDown className="w-4 h-4" />
-                        </div>
-                      </button>
-
-                      {isOpen && (
-                        <div className="px-6 pb-6 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
-                          <p>{faq.a}</p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div data-reveal className="lg:col-span-8">
+                {PLOTS_FAQS.map((faq) => (
+                  <details key={faq.q} className="group py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-white transition-colors hover:text-[#DFC06E]">
+                      <span>{faq.q}</span>
+                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#DFC06E] transition-transform group-open:rotate-45">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-3 max-w-[62ch] text-[17px] leading-relaxed text-white/70">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
               </div>
             </div>
           </section>
-
         </main>
       </div>
 

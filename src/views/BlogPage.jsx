@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BookOpen, Calendar, Clock, User, ArrowRight, ShieldCheck, Search } from 'lucide-react';
+import { Search, ArrowRight, ArrowLeft } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 
 export default function BlogPage() {
@@ -10,103 +10,133 @@ export default function BlogPage() {
   const [blogSearch, setBlogSearch] = useState('');
 
   const filteredBlogs = blogs.filter(
-    (b) => b.title.toLowerCase().includes(blogSearch.toLowerCase()) || b.category.toLowerCase().includes(blogSearch.toLowerCase())
+    (b) =>
+      b.title.toLowerCase().includes(blogSearch.toLowerCase()) ||
+      b.category.toLowerCase().includes(blogSearch.toLowerCase())
   );
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-      {/* Title */}
-      <div className="space-y-3 border-b border-[#e2e8f0] pb-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0f1d3d]/8 border border-[#0f1d3d]/15 text-[#0f1d3d] text-xs font-semibold">
-          <BookOpen className="w-4 h-4 text-[#FFC727]" />
-          Bengaluru Real Estate Knowledge Base & SEO Guides
+  if (selectedBlog) {
+    return (
+      <article className="shell page-section pt-12 lg:pt-16">
+        <button
+          type="button"
+          onClick={() => setSelectedBlog(null)}
+          className="inline-flex min-h-11 items-center gap-2 text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+        >
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          All guides
+        </button>
+
+        <header className="mt-8">
+          <p className="text-[14px] text-[#7A5C10]">{selectedBlog.category}</p>
+          <h1 className="mt-3 display-lg max-w-[26ch] text-[#0B1F3A]">{selectedBlog.title}</h1>
+          <p className="mt-4 text-[15px] text-[var(--text-soft)]">
+            {selectedBlog.author} · {selectedBlog.date} · {selectedBlog.readTime}
+          </p>
+        </header>
+
+        <img
+          src={selectedBlog.image}
+          alt={selectedBlog.title}
+          width={1600}
+          height={900}
+          className="mt-8 h-[260px] w-full object-cover sm:h-[380px] lg:h-[460px]"
+        />
+
+        <div className="measure mt-10 whitespace-pre-line text-[19px] leading-[1.75] text-[#1A1A1A]">
+          {selectedBlog.content}
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0f1d3d] tracking-tight font-heading">
-          Plot Investment & Legal Verification Guides
-        </h1>
-        <div className="divider-gold mt-3" />
-        <p className="text-[#4a5568] text-sm max-w-3xl mt-2">
-          Everything you need to know about BDA, BMRDA, BIAPPA plot approvals, A-Katha conversion, and high-growth land corridors in Bengaluru.
+      </article>
+    );
+  }
+
+  return (
+    <div className="shell page-section pt-12 lg:pt-16">
+      <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+        <div className="lg:col-span-7">
+          <p className="text-[14px] text-[#7A5C10]">Guides</p>
+          <h1 className="mt-3 display-xl max-w-[20ch] text-[#0B1F3A]">
+            Notes on land, approval and title.
+          </h1>
+        </div>
+        <p className="lg:col-span-5 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+          BDA, BMRDA and BIAPPA approvals, A-Khata conversion, and the growth corridors the desk
+          follows — written to be read before a site visit.
         </p>
       </div>
 
-      {selectedBlog ? (
-        /* Blog Detail View */
-        <div className="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 space-y-6 max-w-4xl mx-auto shadow-sm">
-          <button
-            onClick={() => setSelectedBlog(null)}
-            className="text-xs text-[#1e3a6e] hover:text-[#FFC727] flex items-center gap-1 font-semibold transition-colors"
-          >
-            ← Back to All Articles
-          </button>
-
-          <div className="space-y-3">
-            <span className="px-3 py-1 rounded-full bg-[#0f1d3d]/8 border border-[#0f1d3d]/15 text-[#0f1d3d] text-xs font-bold">
-              {selectedBlog.category}
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0f1d3d] font-heading">{selectedBlog.title}</h2>
-            <div className="flex items-center gap-4 text-xs text-[#a0aec0] pt-1">
-              <span>By {selectedBlog.author}</span>
-              <span>•</span>
-              <span>{selectedBlog.date}</span>
-              <span>•</span>
-              <span>{selectedBlog.readTime}</span>
-            </div>
-          </div>
-
-          <div className="h-72 rounded-2xl overflow-hidden border border-[#e2e8f0]">
-            <img src={selectedBlog.image} alt={selectedBlog.title} className="w-full h-full object-cover" />
-          </div>
-
-          <div className="prose max-w-none text-[#4a5568] text-sm sm:text-base leading-relaxed space-y-4 whitespace-pre-line">
-            {selectedBlog.content}
-          </div>
+      <div className="mt-12 flex flex-wrap items-center justify-between gap-4 pt-2">
+        <p className="text-[14px] text-[var(--text-soft)] figures">
+          {filteredBlogs.length} of {blogs.length} guides
+        </p>
+        <div className="relative w-full max-w-sm">
+          <label htmlFor="blog-search" className="sr-only">
+            Search guides
+          </label>
+          <Search
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5F5F5F]"
+            aria-hidden="true"
+          />
+          <input
+            id="blog-search"
+            type="search"
+            placeholder="BDA, khata, airport…"
+            value={blogSearch}
+            onChange={(e) => setBlogSearch(e.target.value)}
+            className="min-h-12 w-full bg-[#EFEEE8] pl-9 pr-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]"
+          />
         </div>
+      </div>
+
+      {filteredBlogs.length === 0 ? (
+        <p className="mt-14 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+          Nothing matches that search yet. Try a corridor, an approval authority, or ask the desk.
+        </p>
       ) : (
-        /* Blog Grid List */
-        <div className="space-y-8">
-          <div className="relative max-w-md">
-            <Search className="w-4 h-4 text-[#a0aec0] absolute left-3.5 top-3" />
-            <input
-              type="text"
-              placeholder="Search articles (e.g. BDA, Khata, Airport)..."
-              value={blogSearch}
-              onChange={(e) => setBlogSearch(e.target.value)}
-              className="w-full bg-white border border-[#e2e8f0] rounded-xl pl-10 pr-4 py-2.5 text-sm text-[#1a202c] focus:outline-none focus:border-[#0f1d3d]/40 focus:ring-2 focus:ring-[#0f1d3d]/10 shadow-sm"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {filteredBlogs.map((blog) => (
-              <div
-                key={blog.id}
+        <ul className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+          {filteredBlogs.map((blog) => (
+            <li key={blog.id}>
+              <button
+                type="button"
                 onClick={() => setSelectedBlog(blog)}
-                className="glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col justify-between"
+                className="frame block w-full text-left"
+                aria-label={`Read ${blog.title}`}
               >
-                <div>
-                  <div className="h-48 overflow-hidden">
-                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <div className="p-6 space-y-3">
-                    <div className="flex justify-between items-center text-xs text-[#4a5568]">
-                      <span className="text-[#1e3a6e] font-semibold uppercase">{blog.category}</span>
-                      <span>{blog.readTime}</span>
-                    </div>
-                    <h3 className="text-lg font-bold text-[#0f1d3d] group-hover:text-[#b45309] transition-colors line-clamp-2 font-heading">
-                      {blog.title}
-                    </h3>
-                    <p className="text-sm text-[#4a5568] line-clamp-3">{blog.summary}</p>
-                  </div>
-                </div>
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  width={900}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-52 w-full object-cover"
+                />
+              </button>
 
-                <div className="p-6 pt-0 flex justify-between items-center text-sm font-semibold text-[#b45309] border-t border-[#e2e8f0] mt-4">
-                  <span>Read Guide</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+              <div className="plate-line">
+                <span>{blog.category}</span>
+                <span>{blog.readTime}</span>
               </div>
-            ))}
-          </div>
-        </div>
+
+              <h2 className="mt-3 font-heading text-[1.25rem] leading-snug text-[#0B1F3A]">
+                <button type="button" onClick={() => setSelectedBlog(blog)} className="text-left hover:text-[#7A5C10]">
+                  {blog.title}
+                </button>
+              </h2>
+              <p className="mt-2 line-clamp-3 text-[16px] leading-relaxed text-[var(--text-soft)]">
+                {blog.summary}
+              </p>
+              <button
+                type="button"
+                onClick={() => setSelectedBlog(blog)}
+                className="mt-4 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+              >
+                Read the guide
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </button>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

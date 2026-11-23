@@ -1,256 +1,338 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 @import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Setty Relators — the open register
+   The photograph is the argument; type sets it like a wall label. Ivory paper,
+   ink navy as the structural field, gold only where the desk acts.
+   Values below are the brand's own colours, unchanged.
+--------------------------------------------------------------------------- */
 
 @layer base {
   :root {
-    /* Royal Navy & Royal Gold Palette */
-    --primary-navy: #0B1F3A;
-    --primary-navy-dark: #071527;
-    --primary-navy-light: #142E54;
-    --accent-gold: #C8A34D;
-    --accent-gold-light: #DFC06E;
-    --accent-gold-dark: #A6832A;
-    --bg-white: #FFFFFF;
-    --bg-secondary: #F8F8F5;
-    --text-primary: #1A1A1A;
-    --text-muted: #555555;
-    
-    --border-light: rgba(11, 31, 58, 0.1);
-    --border-gold: rgba(200, 163, 77, 0.35);
+    --ink: #0B1F3A;
+    --ink-deep: #071527;
+    --ink-soft: #142E54;
+    --gold: #C8A34D;
+    --gold-light: #DFC06E;
+    --gold-deep: #A6832A;
+    /* Gold as text on paper, 5.7:1, instead of #C8A34D's 2.2:1. */
+    --gold-ink: #7A5C10;
+
+    --paper: #F8F8F5;
+    --stone: #EFEEE8;
+    --white: #FFFFFF;
+    --text: #1A1A1A;
+    --text-soft: #4C4C4C;
+
+    --rule: rgba(11, 31, 58, 0.08);
+    --rule-strong: rgba(11, 31, 58, 0.16);
+
+    --display: var(--font-display), 'Playfair Display', Georgia, serif;
+    --body-face: var(--font-body), 'Poppins', system-ui, sans-serif;
+
+    --shell: 1320px;
+    --gutter: 20px;
+  }
+
+  @media (min-width: 768px) {
+    :root { --gutter: 40px; }
   }
 
   html {
-    max-width: 100%;
-    overflow-x: clip;
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    font-family: 'Poppins', sans-serif;
-    max-width: 100%;
-    overflow-x: clip;
+    background: var(--paper);
+    color: var(--text);
+    font-family: var(--body-face);
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    caret-color: var(--accent-gold);
-    font-size: 16px;
+    text-rendering: optimizeLegibility;
   }
 
-  /* Body-facing microcopy stays one step above chrome-pills. */
-  p, li, td, th, figcaption, blockquote {
-    font-size: 1rem;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.015em;
   }
 
-  .text-muted-soft {
-    color: var(--text-muted);
-  }
-
-  .text-heading-gold {
-    color: var(--text-heading);
-  }
+  p { text-wrap: pretty; }
+  h1, h2, h3 { text-wrap: balance; }
 
   ::selection {
-    background: #C8A34D;
-    color: #0B1F3A;
+    background: var(--gold);
+    color: var(--ink);
   }
 
-  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-    outline: 2px solid #C8A34D;
+  :focus-visible {
+    outline: 2px solid var(--gold-deep);
     outline-offset: 3px;
+    border-radius: 1px;
   }
 
-  ::-webkit-scrollbar { width: 8px; height: 8px; }
-  ::-webkit-scrollbar-track { background: #F8F8F5; }
-  ::-webkit-scrollbar-thumb { background: #C8A34D; border-radius: 6px; border: 2px solid #F8F8F5; }
-  ::-webkit-scrollbar-thumb:hover { background: #A6832A; }
+  .on-ink :focus-visible,
+  .section-navy :focus-visible {
+    outline-color: var(--gold-light);
+  }
 
-  h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: 'Playfair Display', serif;
+  img { display: block; }
+}
+
+@layer components {
+  /* ------------------------------------------------------------- frame --- */
+
+  .shell {
+    width: 100%;
+    max-width: var(--shell);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .page-section { padding-block: 88px; }
+  @media (min-width: 768px) { .page-section { padding-block: 120px; } }
+  @media (min-width: 1280px) { .page-section { padding-block: 144px; } }
+
+  /* -------------------------------------------------------------- type --- */
+
+  .display-xl {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 6.4vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+  }
+
+  .display-lg {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2rem, 3.8vw, 3.25rem);
+    line-height: 1.02;
     letter-spacing: -0.02em;
-    text-wrap: balance;
   }
 
-  h1, h2 {
-    line-height: 1.08;
+  .display-md {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
   }
 
-  p {
-    text-wrap: pretty;
+  .lede {
+    font-size: clamp(1.0625rem, 1.15vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--text-soft);
   }
 
-  /* Prices, areas and dates line up down a column. */
-  .tabular-nums, table td, table th {
-    font-variant-numeric: tabular-nums;
+  .measure { max-width: 62ch; }
+
+  .label {
+    font-size: 13px;
+    line-height: 1.45;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--text-soft);
   }
 
-  img {
-    background-color: rgba(11, 31, 58, 0.06);
+  .label-gold { color: var(--gold-ink); }
+
+  .figures { font-variant-numeric: tabular-nums; }
+
+  /* ---------------------------------------------------------- surfaces --- */
+
+  .section-navy {
+    background: var(--ink);
+    color: var(--white);
   }
+
+  .section-navy h1,
+  .section-navy h2,
+  .section-navy h3,
+  .section-navy h4 { color: var(--white); }
+
+  .section-stone { background: var(--stone); }
+
+  .on-ink { color: var(--white); }
+
+  /* ---------------------------------------------------------- buttons --- */
+
+  .btn-gold,
+  .btn-primary,
+  .btn-quiet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0.85rem 1.6rem;
+    border-radius: 2px;
+    font-family: var(--body-face);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    text-align: center;
+    white-space: nowrap;
+    max-width: 100%;
+    cursor: pointer;
+    transition: background-color 220ms ease, color 220ms ease;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .btn-gold:hover {
+    background: var(--gold-light);
+    color: var(--ink);
+  }
+
+  .btn-gold:active { background: var(--gold-deep); }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--white);
+  }
+
+  .btn-primary:hover { background: var(--ink-soft); color: var(--white); }
+
+  .btn-quiet {
+    background: rgba(11, 31, 58, 0.07);
+    color: var(--ink);
+  }
+
+  .btn-quiet:hover {
+    background: var(--ink);
+    color: var(--white);
+  }
+
+  .on-ink .btn-quiet,
+  .btn-quiet--on-ink {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white);
+  }
+
+  .on-ink .btn-quiet:hover,
+  .btn-quiet--on-ink:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  /* ----------------------------------------------------------- plates --- */
+
+  .frame {
+    position: relative;
+    overflow: hidden;
+    background: var(--stone);
+  }
+
+  .frame img {
+    transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .frame:hover img { transform: scale(1.02); }
+
+  /* ----------------------------------------------------------- motion --- */
+
+  /* One authored entrance: the hero settles once, never loops. */
+  @keyframes heroSettle {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-settle { animation: heroSettle 900ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .hero-settle-delay { animation-delay: 140ms; }
+
+  /* The one moving picture: the hero plate drifts to rest, once. */
+  @keyframes plateDrift {
+    from { transform: scale(1.06); }
+    to   { transform: scale(1); }
+  }
+
+  .hero-plate { animation: plateDrift 26s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  /* Section entrances. The page never hides content without script: the
+     .js-reveal class is added by the page only when motion is allowed. */
+  .js-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  .js-reveal [data-reveal].is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes riseIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn { animation: riseIn 320ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  /* Retired decorative loops keep their class names so older surfaces hold. */
+  .animate-float { animation: none; }
+  .cad-grid { background-image: none; }
+
+  /* The plate line: a caption set under a photograph, the way a wall label
+     sits under a work. Used by every property plate on the site. */
+  .plate-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 24px;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-soft);
+  }
+
+  .plate-line .plate-price {
+    font-family: var(--display);
+    font-size: 1.25rem;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .section-navy .plate-line { color: rgba(255, 255, 255, 0.62); }
+  .section-navy .plate-line .plate-price { color: var(--white); }
 }
 
-/* Restrained property surfaces in the existing navy, gold and ivory system. */
-.page-section {
-  padding-block: clamp(3.5rem, 7vw, 6rem);
-}
-.glass-card {
-  background: #FFFFFF;
-  border: 1px solid rgba(11, 31, 58, 0.08);
-  border-radius: 1rem;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
-}
-
-.glass-card:hover {
-  border-color: rgba(200, 163, 77, 0.5);
-  transform: translateY(-3px);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* Royal Gold Button with Royal Navy Text */
-.btn-gold {
-  background: #C8A34D;
-  color: #0B1F3A;
-  font-weight: 800;
-  padding: 0.85rem 1.6rem;
-  border-radius: 0.625rem;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
-  border: 1px solid rgba(200, 163, 77, 0.5);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 0.825rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  max-width: 100%;
-  text-align: center;
-}
-
-.btn-gold:hover {
-  background: #DFC06E;
-  transform: translateY(-2px);
-}
-
-.btn-gold:active {
-  transform: scale(0.98);
-}
-
-/* Primary Navy Button with Crisp White Text */
-.btn-primary {
-  background: #0B1F3A;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0.85rem 1.6rem;
-  border-radius: 0.625rem;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 0.825rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  max-width: 100%;
-  text-align: center;
-}
-
-.btn-primary:hover {
-  background: #142E54;
-  transform: translateY(-2px);
-}
-
-.btn-primary:active {
-  transform: scale(0.98);
-}
-
-.divider-gold {
-  height: 3px;
-  width: 56px;
-  background: #C8A34D;
-  border-radius: 2px;
-}
-
-.section-navy {
-  background: #0B1F3A;
-  color: #FFFFFF;
-}
-
-/* When a user exposes the footer temporarily, the site should still look
-   like a single authored roadmap, not a page that lost its closing frame. */
-.show-footer-temporarily .footer-addr,
-.show-footer-temporarily .footer-actions,
-.show-footer-temporarily .footer-top-links,
-.show-footer-temporarily .footer-legal {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.nav-glass {
-  background: #0B1F3A;
-  border-bottom: 1px solid rgba(200, 163, 77, 0.25);
-}
-
-/* Hash routes change the URL without redrawing the page, so focus can
-   land on an inactive button that still points to the old surface. */
-:where([data-hash-route]) :focus-visible {
-  outline-offset: 4px;
-}
-
-/* Subtle Tactile Card Elevation */
-.tactile-card {
-  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s ease;
-}
-
-/* `.glass-card.tactile-card` is the common pairing — .glass-card:hover owns that
-   case so elevation is declared once rather than fought over by two rules. */
-.tactile-card:not(.glass-card):hover {
-  transform: translateY(-3px);
-  border-color: rgba(200, 163, 77, 0.5);
-}
-
-/* One authored motion moment: the hero settles in once, never repeating. */
-@keyframes heroSettle {
-  from { opacity: 0; transform: translateY(14px); filter: blur(6px); }
-  to   { opacity: 1; transform: translateY(0);   filter: blur(0); }
-}
-
-.hero-settle {
-  animation: heroSettle 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.hero-settle-delay {
-  animation-delay: 0.12s;
-}
-
-/* The draft-grid texture was retired: a grid drawn for its own sake reads as
-   costume. Surfaces are separated by tone and space instead. */
-.cad-grid {
-  background-image: none;
-}
-
+/* Reduced motion keeps state feedback, drops movement. */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    transition-duration: 120ms !important;
   }
+
+  .frame:hover img { transform: none; }
+
+  .js-reveal [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* --------------------------------------------------------------- utility --- */
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

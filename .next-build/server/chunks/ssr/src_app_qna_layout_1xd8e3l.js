@@ -1,0 +1,3 @@
+module.exports=[48733,a=>{"use strict";let b=process.env.NEXT_PUBLIC_SITE_URL||"https://premium-plots.vercel.app",c={title:"Bengaluru Property Q&A | Plots, Villas & Prices",description:"Ask practical questions about buying residential plots and villas in Bengaluru, from A-Khata and RERA checks to corridor pricing. Get clear, source-backed answers.",alternates:{canonical:`${b}/qna`},openGraph:{title:"Bengaluru Property Q&A | Setty Relators",description:"Clear answers to common questions about buying plots and villas in Bengaluru.",url:`${b}/qna`,siteName:"Setty Relators Advisory",locale:"en_IN",type:"website"}};a.s(["default",0,function({children:a}){return a},"metadata",0,c])},84274,a=>{a.n(a.i(48733))}];
+
+//# sourceMappingURL=src_app_qna_layout_1xd8e3l.js.map

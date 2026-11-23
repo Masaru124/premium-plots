@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { PlotsProvider, usePlots } from '../context/PlotsContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -9,15 +10,38 @@ import BookSiteVisitModal from '../components/BookSiteVisitModal';
 
 import HomePage from '../views/HomePage';
 import ProjectsPage from '../views/ProjectsPage';
-import ProjectDetailsPage from '../views/ProjectDetailsPage';
-import DubaiView from '../views/DubaiView';
-import InteriorDesignView from '../views/InteriorDesignView';
-import AboutPage from '../views/AboutPage';
-import ContactPage from '../views/ContactPage';
-import { PrivacyPolicyPage, TermsPage, DisclaimerPage } from '../views/LegalPagesView';
-import AdminPage from '../views/AdminPage';
-import PropertyMatchmakerPage from '../views/PropertyMatchmakerPage';
-import BlogPage from '../views/BlogPage';
+
+// Secondary surfaces are split out so a buyer landing on the homepage does not
+// download the admin console, the matchmaker or the legal copy.
+const ProjectDetailsPage = dynamic(() => import('../views/ProjectDetailsPage'), { ssr: false });
+const DubaiView = dynamic(() => import('../views/DubaiView'), { ssr: false });
+const InteriorDesignView = dynamic(() => import('../views/InteriorDesignView'), { ssr: false });
+const AboutPage = dynamic(() => import('../views/AboutPage'), { ssr: false });
+const ContactPage = dynamic(() => import('../views/ContactPage'), { ssr: false });
+const AdminPage = dynamic(() => import('../views/AdminPage'), { ssr: false });
+const PropertyMatchmakerPage = dynamic(() => import('../views/PropertyMatchmakerPage'), { ssr: false });
+const BlogPage = dynamic(() => import('../views/BlogPage'), { ssr: false });
+const PrivacyPolicyPage = dynamic(
+  () => import('../views/LegalPagesView').then((m) => m.PrivacyPolicyPage),
+  { ssr: false }
+);
+const TermsPage = dynamic(
+  () => import('../views/LegalPagesView').then((m) => m.TermsPage),
+  { ssr: false }
+);
+const DisclaimerPage = dynamic(
+  () => import('../views/LegalPagesView').then((m) => m.DisclaimerPage),
+  { ssr: false }
+);
+
+function LoadingSurface() {
+  return (
+    <div className="shell page-section" aria-busy="true" aria-live="polite">
+      <p className="label">Loading</p>
+      <div className="mt-6 h-px w-full bg-[var(--rule)]" />
+    </div>
+  );
+}
 
 function AppContent() {
   const [activePage, setActivePage] = useState('home');
@@ -25,56 +49,58 @@ function AppContent() {
   const [filterType, setFilterType] = useState('all');
   const { toastMessage } = usePlots();
 
-  // Read the initial URL so bookmark/hash links and page reloads land on
-  // the same surface that the address bar already describes.
-  const [, setHashSync] = useState(false);
-  useEffect(() => {
-    setHashSync(true);
-  }, []);
+  // The masthead only needs to know whether the page has left the top. Track a
+  // boolean so scrolling does not re-render the tree on every event.
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle URL hash routing
   useEffect(() => {
+    const handleScroll = () => {
+      const next = window.scrollY > 24;
+      setIsScrolled((current) => (current === next ? current : next));
+    };
+
     const handleUrlCheck = () => {
-      if (typeof window !== 'undefined') {
-        const hash = window.location.hash.toLowerCase();
-        const search = window.location.search.toLowerCase();
-        const pathname = window.location.pathname.toLowerCase();
+      if (typeof window === 'undefined') return;
+      const hash = window.location.hash.toLowerCase();
+      const search = window.location.search.toLowerCase();
+      const pathname = window.location.pathname.toLowerCase();
 
-        if (hash === '#admin' || search.includes('page=admin') || pathname === '/admin') {
-          setActivePage('admin');
-        } else if (
-          hash === '#matchmaker' || hash === '#finder' || hash === '#qna' ||
-          search.includes('page=matchmaker') || search.includes('page=finder') || search.includes('page=qna') ||
-          pathname === '/matchmaker' || pathname === '/qna' || pathname === '/property-finder'
-        ) {
-          setActivePage('matchmaker');
-        } else if (search.includes('page=')) {
-          const params = new URLSearchParams(window.location.search);
-          const p = params.get('page');
-          const id = params.get('id');
-          if (p) {
-            setActivePage(p);
-            if (p === 'plots' || p === 'villa-plots' || p === 'open-plots') {
-              setActivePage('plots');
-              setFilterType('Open Plots');
-            } else if (p === 'villas' || p === 'luxury-villas') {
-              setActivePage('villas');
-              setFilterType('Villas');
-            } else if (p === 'apartments') {
-              setFilterType('Apartments');
-            } else if (p === 'dubai') {
-              setActivePage('dubai');
-              setFilterType('Dubai Apartments');
-            }
+      if (hash === '#admin' || search.includes('page=admin') || pathname === '/admin') {
+        setActivePage('admin');
+      } else if (
+        hash === '#matchmaker' || hash === '#finder' || hash === '#qna' ||
+        search.includes('page=matchmaker') || search.includes('page=finder') || search.includes('page=qna') ||
+        pathname === '/matchmaker' || pathname === '/qna' || pathname === '/property-finder'
+      ) {
+        setActivePage('matchmaker');
+      } else if (search.includes('page=')) {
+        const params = new URLSearchParams(window.location.search);
+        const p = params.get('page');
+        const id = params.get('id');
+        if (p) {
+          setActivePage(p);
+          if (p === 'plots' || p === 'villa-plots' || p === 'open-plots') {
+            setActivePage('plots');
+            setFilterType('Open Plots');
+          } else if (p === 'villas' || p === 'luxury-villas') {
+            setActivePage('villas');
+            setFilterType('Villas');
+          } else if (p === 'apartments') {
+            setFilterType('Apartments');
+          } else if (p === 'dubai') {
+            setActivePage('dubai');
+            setFilterType('Dubai Apartments');
           }
-          if (id) {
-            setSelectedProjectId(id);
-          }
+        }
+        if (id) {
+          setSelectedProjectId(id);
         }
       }
     };
 
     handleUrlCheck();
+    handleScroll();
+
     window.addEventListener('hashchange', handleUrlCheck);
     window.addEventListener('popstate', handleUrlCheck);
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -84,13 +110,6 @@ function AppContent() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  // Sidebar hide/show that tracks scrolling without re-measuring on every
-  // animation frame — passive so it never fights momentum scrolling.
-  const [scrollSide, setScrollSide] = useState(0);
-  const handleScroll = () => {
-    setScrollSide((s) => (s > 0 ? s : Math.max(-(window.scrollY || 0), 0)));
-  };
 
   const handleNavClick = (pageId, typeFilter = 'all', projId = null) => {
     setActivePage(pageId);
@@ -139,21 +158,33 @@ function AppContent() {
   };
 
   return (
-        <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A] antialiased" data-hash-route>
-      <div>
-        {/* Sticky Navbar */}
-        <Navbar activePage={activePage} setActivePage={handleNavClick} scrollY={scrollSide > 0} />
+    <div
+      className="min-h-screen flex flex-col justify-between selection:bg-[#C8A34D] selection:text-[#0B1F3A] antialiased"
+      data-hash-route
+    >
+      <a
+        href="#main-content"
+        className="sr-only-focusable fixed left-4 top-4 z-[60] bg-[#0B1F3A] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#DFC06E]"
+      >
+        Skip to content
+      </a>
 
-        {/* Global Toast Notification */}
+      <div>
+        <Navbar activePage={activePage} setActivePage={handleNavClick} scrollY={isScrolled} />
+
+        {/* Toast */} 
         {toastMessage && (
-          <div className="fixed top-24 right-6 z-50 bg-[#0B1F3A] border border-[#F2B705] text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 animate-fadeIn">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#F2B705] animate-ping" />
-            <span>{toastMessage}</span>
+          <div
+            role="status"
+            aria-live="polite"
+            className="fixed right-4 top-24 z-50 max-w-xs border border-[#C8A34D] bg-[#0B1F3A] px-4 py-3 text-sm text-white animate-fadeIn"
+          >
+            <span className="mr-2 inline-block h-1.5 w-1.5 translate-y-[-2px] bg-[#C8A34D]" />
+            {toastMessage}
           </div>
         )}
 
-        {/* Main View Router */}
-        <main className="animate-fadeIn">
+        <main id="main-content" tabIndex={-1} className="animate-fadeIn focus:outline-none">
           {activePage === 'home' && (
             <HomePage setActivePage={handleNavClick} setSelectedProjectId={setSelectedProjectId} />
           )}
@@ -166,9 +197,7 @@ function AppContent() {
             <DubaiView setActivePage={handleNavClick} setSelectedProjectId={setSelectedProjectId} />
           )}
 
-          {activePage === 'interior' && (
-            <InteriorDesignView setActivePage={handleNavClick} />
-          )}
+          {activePage === 'interior' && <InteriorDesignView setActivePage={handleNavClick} />}
 
           {activePage === 'project-details' && (
             <ProjectDetailsPage projectId={selectedProjectId} setActivePage={handleNavClick} />
@@ -176,9 +205,7 @@ function AppContent() {
 
           {activePage === 'about' && <AboutPage setActivePage={handleNavClick} />}
 
-          {activePage === 'blog' && (
-            <BlogPage />
-          )}
+          {activePage === 'blog' && <BlogPage />}
 
           {(activePage === 'matchmaker' || activePage === 'finder') && (
             <PropertyMatchmakerPage setActivePage={handleNavClick} />
@@ -187,24 +214,23 @@ function AppContent() {
           {activePage === 'contact' && <ContactPage />}
 
           {activePage === 'privacy' && <PrivacyPolicyPage setActivePage={handleNavClick} />}
-
           {activePage === 'terms' && <TermsPage setActivePage={handleNavClick} />}
-
           {activePage === 'disclaimer' && <DisclaimerPage setActivePage={handleNavClick} />}
 
           {activePage === 'admin' && <AdminPage />}
+
+          {!['home', 'projects', 'plots', 'villa-plots', 'villas', 'apartments', 'dubai', 'interior',
+            'project-details', 'about', 'blog', 'matchmaker', 'finder', 'contact', 'privacy',
+            'terms', 'disclaimer', 'admin'].includes(activePage) && <LoadingSurface />}
         </main>
       </div>
 
-      {/* Floating Buttons */}
       <FloatingActions />
       <BookSiteVisitModal />
-
-      {/* Footer */}
       <Footer setActivePage={handleNavClick} />
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default function Home() {
   return (

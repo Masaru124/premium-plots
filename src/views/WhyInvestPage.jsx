@@ -29,7 +29,7 @@ export default function WhyInvestPage() {
       </div>
 
       {/* Comparison Table: Plot vs Apartment */}
-      <div className="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 shadow-lg space-y-6">
+      <div className="bg-white border border-[#e2e8f0] rounded-none p-6 sm:p-10 space-y-6">
         <div className="border-b border-[#e2e8f0] pb-4">
           <h3 className="text-xl font-bold text-[#0f1d3d] font-heading">Land Plot vs Built Apartment Investment Comparison</h3>
           <p className="text-xs text-[#718096] mt-1">Based on 10-year historical land registry data across Devanahalli, Whitefield, and Sarjapur.</p>
@@ -37,7 +37,7 @@ export default function WhyInvestPage() {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs sm:text-sm text-[#4a5568]">
-            <thead className="bg-[#f8f9fc] text-[#718096] uppercase tracking-wider text-[11px] border-b border-[#e2e8f0]">
+            <thead className="bg-[#f8f9fc] text-[#718096] uppercase tracking-wider text-[13px] border-b border-[#e2e8f0]">
               <tr>
                 <th className="py-3.5 px-4 font-semibold">Feature / Metric</th>
                 <th className="py-3.5 px-4 font-bold text-[#0f1d3d] bg-[#0f1d3d]/5 border-x border-[#0f1d3d]/10">Open Plots (Bengaluru)</th>
@@ -83,8 +83,8 @@ export default function WhyInvestPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#0f1d3d] text-[#FFC727] flex items-center justify-center font-bold text-lg font-heading">
+          <div className="glass-card p-6 rounded-none space-y-3">
+            <div className="w-10 h-10 rounded-none bg-[#0f1d3d] text-[#FFC727] flex items-center justify-center font-bold text-lg font-heading">
               01
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">STRR Expressway</h3>
@@ -93,8 +93,8 @@ export default function WhyInvestPage() {
             </p>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#FFC727] text-white flex items-center justify-center font-bold text-lg font-heading">
+          <div className="glass-card p-6 rounded-none space-y-3">
+            <div className="w-10 h-10 rounded-none bg-[#FFC727] text-white flex items-center justify-center font-bold text-lg font-heading">
               02
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">KIADB Industrial SEZ</h3>
@@ -103,8 +103,8 @@ export default function WhyInvestPage() {
             </p>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#0f1d3d] text-[#FFC727] flex items-center justify-center font-bold text-lg font-heading">
+          <div className="glass-card p-6 rounded-none space-y-3">
+            <div className="w-10 h-10 rounded-none bg-[#0f1d3d] text-[#FFC727] flex items-center justify-center font-bold text-lg font-heading">
               03
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">Namma Metro Expansion</h3>
@@ -113,8 +113,8 @@ export default function WhyInvestPage() {
             </p>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#FFC727] text-white flex items-center justify-center font-bold text-lg font-heading">
+          <div className="glass-card p-6 rounded-none space-y-3">
+            <div className="w-10 h-10 rounded-none bg-[#FFC727] text-white flex items-center justify-center font-bold text-lg font-heading">
               04
             </div>
             <h3 className="text-lg font-bold text-[#0f1d3d] font-heading">Clear Title Security</h3>
@@ -129,7 +129,7 @@ export default function WhyInvestPage() {
       <ROICalculator />
 
       {/* CTA Box */}
-      <div className="bg-gradient-to-r from-[#0f1d3d] to-[#162550] border border-[#1e3a6e]/30 p-8 sm:p-12 rounded-2xl text-center space-y-5">
+      <div className="border border-[#C8A34D]/40 bg-[#0B1F3A] p-8 sm:p-12 rounded-none text-center space-y-5">
         <h3 className="text-2xl sm:text-3xl font-bold text-white font-heading">Want Personal Land Investment Guidance?</h3>
         <p className="text-xs text-white/50 max-w-xl mx-auto">
           Our senior real estate advisors will provide customized corridor appreciation analysis based on your budget and holding period.

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/property-finder/layout,_N_T_/property-finder/page,_N_T_/property-finder"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/property-finder/__PAGE__",
+    "/property-finder",
+    "/_index",
+    "/_head"
+  ]
+}

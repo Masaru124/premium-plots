@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server';
 import { getPool, initDatabase } from '../../../lib/db.js';
-import { INITIAL_LEADS } from '../../../data/plotsData.js';
+import { isAdminRequest, unauthorized } from '../../../lib/session.js';
 
-// GET all leads from Neon DB
-export async function GET() {
+// GET all leads. Enquiries hold personal data, so this is admin-only.
+export async function GET(request) {
+  if (!isAdminRequest(request)) return unauthorized();
+
   try {
     await initDatabase();
     const pool = getPool();
@@ -26,7 +28,7 @@ export async function GET() {
     return NextResponse.json({ success: true, leads: mappedLeads });
   } catch (error) {
     console.error('Error in GET /api/leads:', error);
-    return NextResponse.json({ success: false, fallback: true, leads: INITIAL_LEADS, error: error.message });
+    return NextResponse.json({ success: false, leads: [] }, { status: 503 });
   }
 }
 
@@ -70,8 +72,10 @@ export async function POST(request) {
   }
 }
 
-// PATCH update lead status
+// PATCH update lead status (admin only)
 export async function PATCH(request) {
+  if (!isAdminRequest(request)) return unauthorized();
+
   try {
     const body = await request.json();
     const { leadId, status } = body;

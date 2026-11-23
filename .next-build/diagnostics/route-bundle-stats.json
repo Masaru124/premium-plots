@@ -1,0 +1,135 @@
+[
+  {
+    "route": "/",
+    "firstLoadUncompressedJsBytes": 615040,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\1fl_d3ibub0ir.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/purva-sounds-of-water",
+    "firstLoadUncompressedJsBytes": 609964,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\1-2q9x7ea9wb5.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/plots-in-bangalore",
+    "firstLoadUncompressedJsBytes": 597801,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\11l6et9k5mwc2.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/luxury-villas-bangalore",
+    "firstLoadUncompressedJsBytes": 596758,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\18d3tkrte1k7z.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/matchmaker",
+    "firstLoadUncompressedJsBytes": 584723,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\13_42299qokeb.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/qna",
+    "firstLoadUncompressedJsBytes": 584712,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\0yu2ev4hli7i_.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/property-finder",
+    "firstLoadUncompressedJsBytes": 584697,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\1vdl80k5794jl.js",
+      ".next-build\\static\\chunks\\1b_k_07yv3b2f.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/admin",
+    "firstLoadUncompressedJsBytes": 579571,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\04501c03rp4k6.js",
+      ".next-build\\static\\chunks\\1i62vcmrtxbfb.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/_not-found",
+    "firstLoadUncompressedJsBytes": 514787,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  }
+]

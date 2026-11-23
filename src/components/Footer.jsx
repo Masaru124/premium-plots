@@ -1,282 +1,173 @@
 'use client';
 
 import React from 'react';
-import { Compass, MapPin, Phone, Mail, ShieldCheck, ArrowUpRight, Award, MessageCircle } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer({ setActivePage }) {
   const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
 
-  return (
-    <footer className="bg-[#0B1F3A] text-white/70 pt-16 pb-12 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
-          {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg border border-[#C8A34D] p-0.5 flex items-center justify-center">
-                <div className="w-full h-full bg-[#0B1F3A] rounded-[6px] flex items-center justify-center">
-                  <Compass className="w-5 h-5 text-[#C8A34D]" />
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-xl font-bold tracking-tight text-white font-heading">LAKSHIE</span>
-                  <span className="text-xl font-bold tracking-tight text-[#C8A34D] font-heading">REAL ESTATE</span>
-                </div>
-                <p className="text-sm text-[#C8A34D] font-semibold">
-                  Bengaluru and Dubai
-                </p>
-              </div>
-            </div>
+  const portfolio = [
+    { label: 'Open plots and villa plots', href: '/plots-in-bangalore' },
+    { label: 'Purva Symphony resale', href: '/purva-sounds-of-water' },
+    { label: 'Luxury villas', href: '/luxury-villas-bangalore' },
+    { label: 'Apartments', href: '/?page=apartments', page: 'apartments' },
+    { label: 'Dubai investments', href: '/?page=dubai', page: 'dubai' },
+    { label: 'Turnkey interiors', href: '/?page=interior', page: 'interior' }
+  ];
 
-            <p className="max-w-md text-base leading-relaxed text-white/80">
-              Independent Real Estate Consultancy and Authorized Channel Partner for premier open plot townships, luxury villa developments, high-rise apartments, and Dubai waterfront investments.
+  const information = [
+    { label: 'The full register', href: '/?page=projects', page: 'projects' },
+    { label: 'Property finder', href: '/?page=matchmaker', page: 'matchmaker' },
+    { label: 'Market guides', href: '/?page=blog', page: 'blog' },
+    { label: 'The desk', href: '/?page=about', page: 'about' },
+    { label: 'Contact', href: '/?page=contact', page: 'contact' }
+  ];
+
+  const legal = [
+    { label: 'Privacy', href: '/?page=privacy', page: 'privacy' },
+    { label: 'Terms', href: '/?page=terms', page: 'terms' },
+    { label: 'Disclaimer', href: '/?page=disclaimer', page: 'disclaimer' }
+  ];
+
+  const handle = (e, page) => {
+    if (!page) return;
+    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
+      e.preventDefault();
+      setActivePage(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="bg-[#0B1F3A] text-white">
+      <div className="shell pb-12 pt-20">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-5">
+            <p className="display-lg text-white">
+              Setty Relators
+            </p>
+            <p className="mt-4 max-w-[40ch] text-[17px] leading-relaxed text-white/70">
+              A private register of verified plots, villas and apartments across Bengaluru and
+              Dubai, kept by an independent channel-partner desk.
             </p>
 
-            <div className="space-y-3 pt-2 text-base">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#C8A34D] shrink-0 mt-0.5" />
-                <span>Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar, Bengaluru, Karnataka 560001</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MessageCircle className="w-4 h-4 text-[#C8A34D] shrink-0" />
+            <div className="mt-8 space-y-2 text-[17px] leading-relaxed text-white/80">
+              <p>
+                Level 5, Concorde Towers, UB City,
+                <br />
+                Vittal Mallya Road &amp; Indiranagar, Bengaluru 560001
+              </p>
+              <p>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent('Hi Premium Properties Advisory! I want property details & consultation.')}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Setty Relators. I would like property details and a consultation.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#C8A34D] font-bold hover:underline"
+                  className="underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#DFC06E]"
                 >
-                  Contact Hotline: {displayPhone}
+                  {displayPhone}
                 </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#C8A34D] shrink-0" />
-                <span>advisory@premiumpropertiesbengaluru.com</span>
-              </div>
+              </p>
+              <p>
+                <a
+                  href="mailto:advisory@settyrelators.com"
+                  className="underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#DFC06E]"
+                >
+                  advisory@settyrelators.com
+                </a>
+              </p>
             </div>
           </div>
 
-          {/* Property Portfolios */}
-          <div className="space-y-4">
-            <h3 className="text-base font-semibold text-[#C8A34D] font-heading">Property portfolios</h3>
-            <ul className="space-y-2.5 text-base text-white/70">
-              <li>
-                <a href="/plots-in-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  Open plots, Devanahalli and STRR
-                </a>
-              </li>
-              <li>
-                <a href="/plots-in-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  Villa plots by Oriaiyan Group
-                </a>
-              </li>
-              <li>
-                <a href="/purva-sounds-of-water" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  Purva Symphony resale, Bannerghatta
-                </a>
-              </li>
-              <li>
-                <a href="/luxury-villas-bangalore" className="hover:text-[#C8A34D] transition-colors text-left block">
-                  Luxury villas in Bangalore
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=apartments"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('apartments');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
-                >
-                  High-rise apartments, airport corridor
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=dubai"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('dubai');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
-                >
-                  Dubai waterfront investments
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=interior"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('interior');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer text-left block"
-                >
-                  Turnkey interior design
-                </a>
-              </li>
+          <nav aria-label="Property portfolios" className="lg:col-span-3 lg:pl-6">
+            <h2 className="font-heading text-[1.5rem] text-[#DFC06E]">The portfolio</h2>
+            <ul className="mt-5 space-y-3 text-[17px]">
+              {portfolio.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => handle(e, item.page)}
+                    className="inline-flex items-center gap-1.5 text-white/75 transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="font-heading text-base font-semibold text-[#C8A34D]">Quick links</h3>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li>
-                <a
-                  href="/?page=projects"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('projects');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=blog"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('blog');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  Market Guides & Insights
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=about"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('about');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=contact"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('contact');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=privacy"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('privacy');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=terms"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('terms');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/?page=disclaimer"
-                  onClick={(e) => {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      setActivePage('disclaimer');
-                    }
-                  }}
-                  className="hover:text-[#C8A34D] transition-colors cursor-pointer block"
-                >
-                  Disclaimer
-                </a>
-              </li>
+          <nav aria-label="Site information" className="lg:col-span-2">
+            <h2 className="font-heading text-[1.5rem] text-[#DFC06E]">Information</h2>
+            <ul className="mt-5 space-y-3 text-[17px]">
+              {information.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => handle(e, item.page)}
+                    className="text-white/75 transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Channel Partner Trust */}
-          <div className="space-y-4">
-            <h3 className="text-base font-semibold text-[#C8A34D] font-heading">Consultancy assurance</h3>
-            <div className="space-y-3 text-base">
-              <div className="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
-                <div className="font-bold text-white flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D]" />
-                  <span>Authorized Channel Partner</span>
-                </div>
-                <p className="text-white/70 leading-relaxed">
-                  Working directly with reputed developers for plot & villa allocations.
-                </p>
-              </div>
-              <div className="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
-                <div className="font-bold text-white flex items-center gap-1.5">
-                  <Award className="w-3.5 h-3.5 text-[#C8A34D]" />
-                  <span>0% Brokerage to Buyers</span>
-                </div>
-                <p className="text-white/70 leading-relaxed">
-                  Direct developer price quotes with complimentary VIP site visits.
-                </p>
-              </div>
-            </div>
+          <div className="lg:col-span-2">
+            <h2 className="font-heading text-[1.5rem] text-[#DFC06E]">Next step</h2>
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Setty Relators. Please share verified masterplans and current pricing.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex min-h-11 items-center gap-2 text-[17px] text-white underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#DFC06E]"
+            >
+              Message the desk
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <p className="mt-4 text-[16px] leading-relaxed text-white/60">
+              Site visits by appointment. Zero brokerage to buyers.
+            </p>
           </div>
         </div>
 
-        {/* Mandatory Channel Partner Disclaimer */}
-        <div className="rounded-lg bg-white/5 p-6 text-base text-white/80 space-y-3 leading-relaxed">
-          <div className="font-heading text-base font-semibold text-[#C8A34D]">
-            Disclaimer and transparency
+        <details className="group mt-16 max-w-[64ch] text-[16px] leading-relaxed text-white/60">
+          <summary className="flex min-h-11 cursor-pointer list-none items-center gap-2 text-[16px] text-white/70 transition-colors hover:text-white">
+            <span aria-hidden="true" className="inline-block transition-transform group-open:rotate-90">
+              ›
+            </span>
+            Disclosure and image rights
+          </summary>
+          <div className="mt-3 space-y-3 pb-2">
+            <p>
+              Setty Relators is an independent real estate consultancy and authorised channel
+              partner. We help buyers compare projects, arrange site visits and connect directly
+              with developers; booking agreements, allotment terms and payments are executed
+              between the buyer and the respective developer.
+            </p>
+            <p>
+              Project images, plans, specifications and prices are representational or supplied by
+              the developer or seller, and are indicative until confirmed in writing. Where a
+              photograph is illustrative rather than of the specific unit, the listing says so.
+            </p>
           </div>
-          <p>
-            "We are an independent real estate consultancy working with multiple reputed developers as Channel Partners. We help buyers compare projects, arrange site visits and connect directly with developers."
-          </p>
-          <p className="text-base text-white/70">
-            All project images, architectural plans, layout blueprints, specifications, and prices shown on this platform are for representational and indicative purposes. Official booking agreements, allotment terms, and payments are executed directly between the buyer and the respective developer.
-          </p>
-        </div>
+        </details>
 
-        {/* Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 text-base text-white/70">
-          <p>© {new Date().getFullYear()} Lakshie Real Estate. All rights reserved.</p>
-          <p>Channel partner registration verified · Bengaluru and Dubai</p>
+        <div className="mt-10 flex flex-col gap-4 text-[16px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Setty Relators. All rights reserved.</p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {legal.map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  onClick={(e) => handle(e, item.page)}
+                  className="transition-colors hover:text-white/80"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-
       </div>
     </footer>
   );

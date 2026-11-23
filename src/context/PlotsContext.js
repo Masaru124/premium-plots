@@ -17,67 +17,84 @@ export function PlotsProvider({ children }) {
   const [isDbConnected, setIsDbConnected] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetch from Neon DB API on mount
+  // Load the published catalogue. Enquiries are personal data and are only
+  // requested once this browser holds a valid admin session.
   useEffect(() => {
-    async function fetchFromDatabase() {
+    async function loadCatalogue() {
       try {
         setIsLoading(true);
-        // 1. Fetch Projects
         const projRes = await fetch('/api/projects');
         const projData = await projRes.json();
         if (projData.success && Array.isArray(projData.projects) && projData.projects.length > 0) {
           setProjects(projData.projects);
           setIsDbConnected(true);
         }
-
-        // 2. Fetch Leads
-        const leadsRes = await fetch('/api/leads');
-        const leadsData = await leadsRes.json();
-        if (leadsData.success && Array.isArray(leadsData.leads)) {
-          setLeads(leadsData.leads);
-        }
       } catch (err) {
-        console.error('Error syncing with Neon DB API, using local fallback:', err);
+        console.error('Error syncing with the properties API, using local fallback:', err);
       } finally {
         setIsLoading(false);
       }
     }
 
-    fetchFromDatabase();
-
-    // Check saved admin login
-    try {
-      const savedAdmin = localStorage.getItem('premium_plots_admin');
-      if (savedAdmin === 'true') setIsAdminLoggedIn(true);
-    } catch (e) {
-      console.error('Error reading admin state', e);
+    async function restoreAdminSession() {
+      try {
+        const res = await fetch('/api/admin/session');
+        const data = await res.json();
+        setIsAdminLoggedIn(Boolean(data?.authenticated));
+        if (data?.authenticated) await loadLeads();
+      } catch (err) {
+        // No session endpoint reached: stay signed out rather than assuming access.
+        setIsAdminLoggedIn(false);
+      }
     }
+
+    loadCatalogue();
+    restoreAdminSession();
   }, []);
+
+  async function loadLeads() {
+    try {
+      const res = await fetch('/api/leads');
+      const data = await res.json();
+      if (data.success && Array.isArray(data.leads)) setLeads(data.leads);
+    } catch (err) {
+      console.error('Could not load enquiries:', err);
+    }
+  }
 
   const showToast = (message) => {
     setToastMessage(message);
     setTimeout(() => setToastMessage(null), 4000);
   };
 
-  // Admin Login Handler
-  const loginAdmin = (password) => {
-    if (password === 'admin123') {
+  // Admin authentication is decided by the server session, never by client state.
+  const loginAdmin = async (password) => {
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.success) {
+        return { ok: false, error: data.error || 'That passcode is not valid.' };
+      }
       setIsAdminLoggedIn(true);
-      try {
-        localStorage.setItem('premium_plots_admin', 'true');
-      } catch (_) {}
-      showToast('Welcome Admin! Connected to Neon Cloud Database for project & lead management.');
-      return true;
+      await loadLeads();
+      showToast('Signed in to the portfolio console.');
+      return { ok: true };
+    } catch (err) {
+      return { ok: false, error: 'Could not reach the server. Try again.' };
     }
-    return false;
   };
 
-  const logoutAdmin = () => {
-    setIsAdminLoggedIn(false);
+  const logoutAdmin = async () => {
     try {
-      localStorage.removeItem('premium_plots_admin');
+      await fetch('/api/admin/session', { method: 'DELETE' });
     } catch (_) {}
-    showToast('Logged out of Admin section.');
+    setIsAdminLoggedIn(false);
+    setLeads([]);
+    showToast('Signed out of the portfolio console.');
   };
 
   // Add new Plot / Project (Admin only) -> Sync with Neon DB
@@ -186,16 +203,21 @@ export function PlotsProvider({ children }) {
     };
 
     setLeads((prev) => [newLead, ...prev]);
-    showToast('Site Visit Booked Successfully! Saved to cloud database.');
 
     try {
-      await fetch('/api/leads', {
+      const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newLead)
       });
+      showToast(
+        res.ok
+          ? 'Request saved. Send the WhatsApp message to confirm your slot.'
+          : 'Request ready — send the WhatsApp message to confirm your slot.'
+      );
     } catch (err) {
-      console.error('Failed to save lead in Neon DB:', err);
+      console.error('Failed to save lead:', err);
+      showToast('Request ready — send the WhatsApp message to confirm your slot.');
     }
 
     return newLead;

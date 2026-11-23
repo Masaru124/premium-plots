@@ -1,41 +1,35 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import {
-  Compass, MapPin, Phone, Menu, X, MessageCircle,
-  ShieldCheck, Sparkles, ChevronRight, Award, Globe, Building2, Layers, Home, Paintbrush
-} from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Compass, Menu, X, Phone, ChevronRight } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 
-export default function Navbar({ activePage, setActivePage, scrollY = false }) {
+const NAV_ITEMS = [
+  { id: 'plots', label: 'Plots', href: '/plots-in-bangalore' },
+  { id: 'villas', label: 'Villas', href: '/luxury-villas-bangalore' },
+  { id: 'apartments', label: 'Apartments', href: '/?page=apartments' },
+  { id: 'dubai', label: 'Dubai', href: '/?page=dubai' },
+  { id: 'about', label: 'The desk', href: '/?page=about' }
+];
+
+export default function Navbar({ activePage, setActivePage }) {
   const { openSiteVisitModal } = usePlots();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const triggerRef = useRef(null);
 
-  const whatsappNumber = '918431909508';
   const displayPhone = '+91 84319 09508';
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
-    'Hello Premium Properties Advisory! I am browsing your Bengaluru & Dubai properties. Please share verified masterplans and pricing details.'
-  )}`;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 15);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close on Escape
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setMobileMenuOpen(false);
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+        triggerRef.current?.focus();
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [mobileMenuOpen]);
 
-  // Prevent background scroll when mobile drawer is open
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
@@ -44,269 +38,168 @@ export default function Navbar({ activePage, setActivePage, scrollY = false }) {
     };
   }, [mobileMenuOpen]);
 
-  const navItems = [
-    { id: 'home', label: 'Home', href: '/' },
-    { id: 'purva-villa', label: 'Purva Resale', href: '/purva-sounds-of-water', isSpecial: true, icon: Sparkles },
-    { id: 'plots', label: 'Plots in Bangalore', href: '/plots-in-bangalore', icon: Layers },
-    { id: 'villas', label: 'Luxury Villas', href: '/luxury-villas-bangalore', icon: Home },
-    { id: 'apartments', label: 'Apartments', href: '/?page=apartments', icon: Building2 },
-    { id: 'dubai', label: 'Dubai Properties', href: '/?page=dubai', icon: Globe },
-    { id: 'interior', label: 'Interior Design', href: '/?page=interior', icon: Paintbrush },
-    { id: 'about', label: 'About', href: '/?page=about' },
-    { id: 'contact', label: 'Contact', href: '/?page=contact' }
-  ];
-
-  const handleNavClick = (id) => {
-    setActivePage(id);
+  const go = (item) => {
     setMobileMenuOpen(false);
+    setActivePage(item.id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-colors duration-300 ${isScrolled ? 'nav-glass' : 'bg-[#0B1F3A]'}`}>
-      {/* 1. LUXURY PRESTIGE TOP BAR */}
-      <div className="bg-[#071527] text-white/80 text-xs py-2 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
-          
-          {/* Trust signals */}
-          <div className="flex items-center gap-2 sm:gap-3 text-xs min-w-0">
-            <span className="inline-flex items-center gap-1.5 text-[#C8A34D] font-bold truncate">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" />
-              <span className="hidden sm:inline">Verified Developer Channel Partner</span>
-              <span className="sm:hidden">Verified Channel Partner</span>
-            </span>
-            <span className="hidden md:inline text-white/30">•</span>
-            <span className="hidden md:inline text-white/65 truncate">
-              Bengaluru & Dubai Luxury Real Estate Portfolio
-            </span>
-            <span className="hidden lg:inline text-white/30">•</span>
-            <span className="hidden lg:inline text-white/60 shrink-0">
-              0% brokerage to buyers
-            </span>
-          </div>
-
-          {/* Direct WhatsApp Advisory Hotline */}
-          <div className="flex items-center gap-2 text-xs shrink-0">
-            <span className="text-white/50 hidden md:inline">Hotline:</span>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 sm:gap-1.5 text-[#C8A34D] hover:text-white font-bold transition-colors"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D] animate-pulse shrink-0" />
-              <span className="whitespace-nowrap">{displayPhone}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Main navigation */}
-      <nav aria-label="Main navigation" className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-20 flex items-center justify-between gap-2 sm:gap-4">
-        
-        {/* Brand Logo */}
-        <button
-          onClick={() => handleNavClick('home')}
-          className="flex items-center gap-1.5 sm:gap-3 group text-left shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A34D] rounded-xl"
-          aria-label="Lakshie Real Estate home"
+    <header className="sticky top-0 z-50 bg-[#0B1F3A]">
+      <nav aria-label="Main navigation" className="shell flex min-h-[80px] items-center justify-between gap-6 py-3">
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            setActivePage('home');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="group flex shrink-0 items-center gap-3"
+          aria-label="Setty Relators — home"
         >
-          {/* Architectural Crest Symbol */}
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-[#C8A34D] group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
-            <div className="w-full h-full bg-[#0B1F3A] rounded-[9px] flex items-center justify-center">
-              <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#C8A34D] group-hover:rotate-45 transition-transform duration-500" />
-            </div>
-          </div>
-
-          <div className="space-y-0.5 min-w-0">
-            <div className="flex items-center gap-1 sm:gap-1.5 leading-none">
-              <span className="text-xs min-[360px]:text-sm sm:text-xl font-black tracking-tight text-white font-heading">
-                LAKSHIE
-              </span>
-              <span className="text-xs min-[360px]:text-sm sm:text-xl font-black tracking-tight text-[#C8A34D] font-heading">
-                REAL ESTATE
-              </span>
-            </div>
-            <p className="hidden min-[360px]:block text-[10px] sm:text-[11px] uppercase tracking-[0.12em] text-[#C8A34D] font-bold">
+          <span className="flex h-10 w-10 items-center justify-center bg-[#C8A34D]">
+            <Compass className="h-5 w-5 text-[#0B1F3A]" aria-hidden="true" />
+          </span>
+          <span className="min-w-0">
+            <span className="block font-heading text-[1.5rem] leading-none tracking-[-0.01em] text-white">
+              Setty Relators
+            </span>
+            <span className="mt-1 block text-[14px] leading-none text-[#DFC06E]">
               Bengaluru · Dubai
-            </p>
-          </div>
-        </button>
+            </span>
+          </span>
+        </a>
 
-        {/* 3. DESKTOP NAVIGATION LINKS */}
-        <div className="hidden items-center gap-0.5 lg:flex xl:gap-1">
-          {navItems.map((item) => {
-            const isActive = activePage === item.id || 
-              (item.id === 'plots' && activePage === 'plots') ||
-              (item.id === 'villas' && activePage === 'villas') ||
-              (item.id === 'apartments' && activePage === 'apartments');
-
-            const isSpecial = item.isSpecial;
-            // Secondary pages stay in the mobile drawer and footer until the bar is wide
-            // enough to hold them, so the primary action never gets pushed off the edge.
-            const isSecondary = ['interior', 'about', 'contact'].includes(item.id);
-
+        <ul className="hidden items-center gap-7 lg:flex">
+          {NAV_ITEMS.map((item) => {
+            const isActive = activePage === item.id;
             return (
-              <a
-                key={item.id}
-                href={item.href || `/?page=${item.id}`}
-                onClick={(e) => {
-                  if (item.href && (item.href.startsWith('/?') || item.href === '/')) {
-                    if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                      e.preventDefault();
-                      handleNavClick(item.id);
-                    }
-                  }
-                }}
-                className={`relative whitespace-nowrap px-2.5 py-2 text-sm transition-colors cursor-pointer font-medium flex items-center gap-1.5 xl:px-3 ${isSecondary ? 'hidden 2xl:flex' : ''} ${
-                  isSpecial
-                    ? 'text-[#C8A34D] font-semibold hover:text-[#DFC06E]'
-                    : isActive
-                    ? 'text-[#C8A34D] font-semibold'
-                    : 'text-white/80 hover:text-white'
-                }`}
-              >
-                {isSpecial && <Sparkles className="w-3.5 h-3.5 text-[#C8A34D] shrink-0" aria-hidden="true" />}
-                <span>{item.label}</span>
-                {isActive && !isSpecial && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D]" />
-                )}
-              </a>
+              <li key={item.id}>
+                <a
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    go(item);
+                  }}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={`inline-flex min-h-11 items-center text-[14px] transition-colors ${
+                    isActive
+                      ? 'text-white underline decoration-[#C8A34D] decoration-2 underline-offset-[10px]'
+                      : 'text-white/70 hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                </a>
+              </li>
             );
           })}
-        </div>
+        </ul>
 
-        {/* 4. DESKTOP CONTACT BUTTON */}
-        <div className="hidden lg:flex items-center shrink-0">
-          <button
-            onClick={() => openSiteVisitModal()}
-            className="btn-gold text-sm py-2.5 px-5 cursor-pointer"
+        <div className="flex shrink-0 items-center gap-3">
+          <a
+            href={`tel:+${displayPhone.replace(/\D/g, '')}`}
+            className="hidden min-h-11 items-center text-[14px] text-white/65 transition-colors hover:text-white xl:inline-flex"
           >
-            <span>Book a visit</span>
-          </button>
-        </div>
-
-        {/* 5. MOBILE ACTIONS & HAMBURGER */}
-        <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
+            {displayPhone}
+          </a>
           <button
+            type="button"
             onClick={() => openSiteVisitModal()}
-            className="hidden min-[360px]:inline-flex py-1.5 px-2.5 sm:py-2 sm:px-3 rounded-lg bg-[#C8A34D] hover:bg-[#DFC06E] text-[#0B1F3A] text-[11px] sm:text-xs font-bold cursor-pointer transition-colors shadow-sm whitespace-nowrap"
+            className="btn-gold hidden min-h-11 px-6 lg:inline-flex"
           >
-            Book Visit
+            Book a visit
           </button>
-
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            ref={triggerRef}
+            type="button"
+            onClick={() => setMobileMenuOpen((open) => !open)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
-            className="p-1.5 min-[360px]:p-2 sm:p-2.5 rounded-xl text-white hover:text-[#C8A34D] bg-white/10 border border-white/15 cursor-pointer transition-colors focus:outline-none"
-            aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Navigation Menu'}
+            className="flex h-11 w-11 items-center justify-center text-white lg:hidden"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open navigation menu'}
           >
-            {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-[#C8A34D]" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </nav>
 
-      {/* 6. FULL-SCREEN OFF-CANVAS MOBILE DRAWER */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden animate-fadeIn">
-          {/* Backdrop Overlay */}
+        <div className="fixed inset-0 top-0 z-50 lg:hidden">
           <div
-            className="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity"
+            className="fixed inset-0 bg-[#071527]/85"
             onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
           />
 
-          {/* Slide-in Drawer */}
-          <div id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Site navigation" className="fixed inset-y-0 right-0 max-w-sm w-full bg-[#0B1F3A] border-l border-[#C8A34D]/30 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto text-white">
-            
-            <div className="space-y-6">
-              {/* Top Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-white/10">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-lg bg-[#C8A34D] flex items-center justify-center text-[#0B1F3A]">
-                    <Compass className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="font-extrabold text-sm text-white font-heading block">LAKSHIE REAL ESTATE</span>
-                    <span className="text-xs text-[#C8A34D]">Bengaluru · Dubai</span>
-                  </div>
-                </div>
-
+          <div
+            id="mobile-navigation"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
+            className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col justify-between overflow-y-auto bg-[#0B1F3A] px-6 py-6 text-white"
+          >
+            <div>
+              <div className="flex items-center justify-between pb-8">
+                <span className="font-heading text-xl">Setty Relators</span>
                 <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white cursor-pointer"
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    triggerRef.current?.focus();
+                  }}
+                  className="flex h-11 w-11 items-center justify-center text-white/80 hover:text-white"
                   aria-label="Close navigation"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="h-6 w-6" />
                 </button>
               </div>
 
-              {/* Navigation Items List */}
-              <div className="space-y-1">
-                <span className="text-sm font-semibold text-white/75 block mb-2">
-                  Explore properties and services
-                </span>
-                
-                {navItems.map((item) => {
+              <ul>
+                {NAV_ITEMS.concat([{ id: 'contact', label: 'Contact', href: '/?page=contact' }]).map((item) => {
                   const isActive = activePage === item.id;
-                  const Icon = item.icon;
-                  const isSpecial = item.isSpecial;
-
                   return (
-                    <a
-                      key={item.id}
-                      href={item.href || `/?page=${item.id}`}
-                      onClick={(e) => {
-                        if (item.href && (item.href.startsWith('/?') || item.href === '/')) {
-                          if (typeof window !== 'undefined' && (window.location.pathname === '/' || window.location.pathname === '')) {
-                            e.preventDefault();
-                            handleNavClick(item.id);
-                          }
-                        }
-                      }}
-                      className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
-                        isSpecial
-                          ? 'bg-[#C8A34D]/25 text-[#C8A34D] border border-[#C8A34D]/40 font-bold'
-                          : isActive
-                          ? 'bg-[#C8A34D] text-[#0B1F3A] shadow-md'
-                          : 'text-white/85 hover:bg-white/10 hover:text-white'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        {Icon && <Icon className={`w-4 h-4 ${isActive && !isSpecial ? 'text-[#0B1F3A]' : 'text-[#C8A34D]'}`} />}
-                        <span>{item.label}</span>
-                      </div>
-                      <ChevronRight className={`w-4 h-4 ${isActive && !isSpecial ? 'text-[#0B1F3A]' : 'text-white/40'}`} />
-                    </a>
+                    <li key={item.id}>
+                      <a
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          go(item);
+                        }}
+                        aria-current={isActive ? 'page' : undefined}
+                        className={`flex min-h-14 items-center justify-between py-3 font-heading text-[1.5rem] transition-colors ${
+                          isActive ? 'text-[#DFC06E]' : 'text-white hover:text-[#DFC06E]'
+                        }`}
+                      >
+                        {item.label}
+                        <ChevronRight className="h-5 w-5 text-white/30" aria-hidden="true" />
+                      </a>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </div>
 
-            {/* Drawer Bottom Actions */}
-            <div className="pt-6 border-t border-white/15 space-y-2.5">
+            <div className="mt-8 space-y-4 pt-6">
               <button
+                type="button"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   openSiteVisitModal();
                 }}
-                className="w-full py-3.5 px-4 rounded-xl btn-gold text-xs uppercase font-extrabold flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+                className="btn-gold w-full"
               >
-                <span>Book Site Visit</span>
+                Book a site visit
               </button>
 
-              <a
-                href={`tel:+${whatsappNumber}`}
-                className="w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/15"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#C8A34D]" />
-                <span>Call Hotline: {displayPhone}</span>
+              <a href={`tel:+${displayPhone.replace(/\D/g, '')}`} className="btn-quiet btn-quiet--on-ink w-full">
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {displayPhone}
               </a>
 
-              <div className="text-center pt-1 text-xs text-white/70">
-                Bengaluru & Dubai • 0% Brokerage
-              </div>
+              <p className="text-center text-[14px] text-white/50">
+                Independent advisory · Zero brokerage to buyers
+              </p>
             </div>
-
           </div>
         </div>
       )}

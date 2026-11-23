@@ -1,156 +1,170 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Navigation, Compass, ExternalLink, Sparkles, TrendingUp, Building } from 'lucide-react';
-import { BENGALURU_CORRIDORS } from '../data/plotsData';
+import { MapPin } from 'lucide-react';
 
-export default function InteractiveMap({ onSelectCorridor }) {
+export default function InteractiveMap() {
   const [selectedHotspot, setSelectedHotspot] = useState('devanahalli');
 
   const hotspots = [
     {
       id: 'devanahalli',
       name: 'Devanahalli Airport Corridor',
-      subtitle: 'North Bengaluru #1 Appreciation Zone',
+      short: 'Devanahalli',
+      subtitle: 'North Bengaluru airport corridor',
       coordinates: { x: '68%', y: '22%' },
-      priceSqft: '₹4,800 - ₹5,400 / sq.ft',
-      growth: '18.4% YoY',
-      highlights: ['12 mins to KIADB Aerospace Park', 'Satellite Town Ring Road (STRR)', 'Foxconn iPhone Assembly Plant']
+      priceSqft: '₹4,800 – ₹5,400 / sq.ft',
+      growth: '18.4%',
+      highlights: ['KIADB Aerospace Park', 'Satellite Town Ring Road', 'Foxconn assembly plant']
     },
     {
       id: 'yelahanka',
-      name: 'Yelahanka - Bagalur Belt',
-      subtitle: 'Premium Institutional & Aerospace Hub',
+      name: 'Yelahanka–Bagalur Belt',
+      short: 'Yelahanka',
+      subtitle: 'Institutional and aerospace hub',
       coordinates: { x: '52%', y: '35%' },
-      priceSqft: '₹5,900 - ₹6,500 / sq.ft',
-      growth: '14.8% YoY',
-      highlights: ['Adjacent to Boeing Tech Center', 'Galleria Mall & Metro Station', 'Top International Schools']
+      priceSqft: '₹5,900 – ₹6,500 / sq.ft',
+      growth: '14.8%',
+      highlights: ['Boeing technology centre', 'Galleria and metro station', 'International schools']
     },
     {
       id: 'whitefield',
-      name: 'Whitefield - Hoskote Corridor',
-      subtitle: 'East Bengaluru Industrial Hub',
+      name: 'Whitefield–Hoskote Corridor',
+      short: 'Whitefield',
+      subtitle: 'East Bengaluru industrial hub',
       coordinates: { x: '82%', y: '50%' },
-      priceSqft: '₹3,450 - ₹3,900 / sq.ft',
-      growth: '15.9% YoY',
-      highlights: ['Chennai Expressway Interchange', '200+ Auto & Tech Industries', 'Metro Purple Line Terminal']
+      priceSqft: '₹3,450 – ₹3,900 / sq.ft',
+      growth: '15.9%',
+      highlights: ['Chennai expressway interchange', 'Auto and tech industries', 'Metro Purple Line']
     },
     {
       id: 'sarjapur',
-      name: 'Sarjapur - Attibele Tech Belt',
-      subtitle: 'East Bengaluru IT Corridor',
+      name: 'Sarjapur–Attibele Tech Belt',
+      short: 'Sarjapur',
+      subtitle: 'East Bengaluru IT corridor',
       coordinates: { x: '75%', y: '78%' },
-      priceSqft: '₹3,950 - ₹4,400 / sq.ft',
-      growth: '16.2% YoY',
-      highlights: ['15 mins to Wipro Campus & ORR', 'Upcoming Sarjapur Metro Line', 'High Rental Villa Demand']
+      priceSqft: '₹3,950 – ₹4,400 / sq.ft',
+      growth: '16.2%',
+      highlights: ['Wipro campus and ORR', 'Upcoming Sarjapur metro', 'Rental villa demand']
     }
   ];
 
   const current = hotspots.find((h) => h.id === selectedHotspot) || hotspots[0];
 
   return (
-    <div className="space-y-6 rounded-lg border border-[#0B1F3A]/10 bg-white p-6 sm:p-8">
-      <div className="flex flex-col items-start justify-between gap-4 pb-2 sm:flex-row sm:items-center">
-        <div className="space-y-1">
-          <h3 className="font-heading text-2xl font-bold tracking-tight text-[#0B1F3A]">
-            Explore the corridors
+    <div className="border border-[var(--rule-strong)] bg-white">
+      <div className="flex flex-col justify-between gap-5 border-b border-[var(--rule)] p-6 sm:flex-row sm:items-end sm:p-8">
+        <div>
+          <h3 className="font-heading text-2xl leading-tight text-[#0B1F3A]">
+            The belts we follow
           </h3>
-          <p className="text-base text-[#555555]">Select an area to see its price trend and growth drivers.</p>
+          <p className="mt-2 max-w-[52ch] text-[14px] leading-relaxed text-[#555555]">
+            Price bands and growth figures are corridor-level commentary gathered for this desk.
+            Treat them as indicative, not as a valuation of any specific plot.
+          </p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-0 border border-[#0B1F3A]/20" role="group" aria-label="Choose a corridor">
           {hotspots.map((spot) => (
             <button
               key={spot.id}
+              type="button"
               onClick={() => setSelectedHotspot(spot.id)}
-              className={`rounded-lg border px-3.5 py-2 text-sm font-semibold transition-colors cursor-pointer ${
+              aria-pressed={selectedHotspot === spot.id}
+              className={`min-h-11 border-r border-[#0B1F3A]/15 px-3.5 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors last:border-r-0 ${
                 selectedHotspot === spot.id
-                  ? 'bg-[#0B1F3A] text-[#C8A34D] border-[#C8A34D]/50 font-bold'
-                  : 'bg-[#F8F8F5] text-[#555555] border-[#0B1F3A]/10 hover:bg-white'
+                  ? 'bg-[#0B1F3A] text-[#DFC06E]'
+                  : 'bg-white text-[#555555] hover:bg-[#F8F8F5]'
               }`}
             >
-              {spot.name.split(' ')[0]}
+              {spot.short}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        {/* Visual Map Canvas */}
-        <div className="relative flex min-h-[380px] items-center justify-center overflow-hidden rounded-lg bg-[#0B1F3A] p-6 lg:col-span-7 cad-grid">
-          {/* Key Highways SVG */}
-          <svg className="absolute inset-0 w-full h-full stroke-[#C8A34D]/20" strokeWidth="2">
-            <path d="M 100 280 Q 250 200 380 260 T 480 320" fill="none" strokeDasharray="4,4" />
-            <path d="M 250 350 L 320 80" fill="none" className="stroke-[#C8A34D]/40" strokeWidth="3" />
+      <div className="grid lg:grid-cols-12">
+        {/* Map plate */}
+        <div className="relative min-h-[360px] overflow-hidden border-b border-[var(--rule)] bg-[#0B1F3A] lg:col-span-7 lg:border-b-0 lg:border-r">
+          <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
+            <path d="M 60 300 Q 240 210 380 268 T 520 330" fill="none" stroke="rgba(200,163,77,0.22)" strokeWidth="2" strokeDasharray="5 6" />
+            <path d="M 250 360 L 330 70" fill="none" stroke="rgba(200,163,77,0.35)" strokeWidth="2" />
           </svg>
 
-          {/* Interactive Pins */}
-          {hotspots.map((spot) => (
-            <button
-              key={spot.id}
-              onClick={() => setSelectedHotspot(spot.id)}
-              style={{ left: spot.coordinates.x, top: spot.coordinates.y }}
-              className={`absolute transform -translate-x-1/2 -translate-y-1/2 group transition-all z-20 cursor-pointer ${
-                selectedHotspot === spot.id ? 'scale-125 z-30' : 'hover:scale-110'
-              }`}
-            >
-              <div className="relative flex items-center justify-center">
-                <span
-                  className={`absolute w-8 h-8 rounded-full animate-ping ${
-                    selectedHotspot === spot.id ? 'bg-[#C8A34D]/40' : 'bg-white/15'
-                  }`}
-                />
-                <div
-                  className={`w-9 h-9 rounded-full flex items-center justify-center border ${
-                    selectedHotspot === spot.id
-                      ? 'bg-[#C8A34D] text-[#0B1F3A] border-[#C8A34D] font-bold'
-                      : 'bg-white/20 text-white border-white/30'
-                  }`}
-                >
-                  <MapPin className="w-5 h-5" />
-                </div>
-              </div>
-              <div className="absolute left-1/2 top-10 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2.5 py-1 text-[13px] font-semibold text-[#0B1F3A]">
-                {spot.name.split(' ')[0]}
-              </div>
-            </button>
-          ))}
-
-          {/* Airport Marker */}
-          <div className="absolute right-[25%] top-[12%] rounded bg-[#C8A34D] px-2.5 py-1 text-xs font-semibold text-[#0B1F3A]">
+          <div className="absolute right-[20%] top-[10%] border border-[#C8A34D]/60 px-2 py-1 text-[13px] uppercase tracking-[0.12em] text-[#DFC06E]">
             Kempegowda Airport
           </div>
+
+          {hotspots.map((spot) => {
+            const selected = selectedHotspot === spot.id;
+            return (
+              <button
+                key={spot.id}
+                type="button"
+                onClick={() => setSelectedHotspot(spot.id)}
+                aria-pressed={selected}
+                aria-label={`${spot.name} — ${spot.priceSqft}, ${spot.growth} indicative annual growth`}
+                style={{ left: spot.coordinates.x, top: spot.coordinates.y }}
+                className="absolute z-20 flex min-h-11 min-w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center p-1"
+              >
+                <span
+                  className={`flex h-8 w-8 items-center justify-center border transition-colors ${
+                    selected
+                      ? 'border-[#C8A34D] bg-[#C8A34D] text-[#0B1F3A]'
+                      : 'border-white/40 bg-[#0B1F3A] text-white/80 hover:border-[#C8A34D] hover:text-[#DFC06E]'
+                  }`}
+                >
+                  <MapPin className="h-4 w-4" aria-hidden="true" />
+                </span>
+                <span
+                  className={`absolute top-11 whitespace-nowrap border px-2 py-0.5 text-[13px] font-semibold uppercase tracking-[0.1em] ${
+                    selected
+                      ? 'border-[#C8A34D] bg-[#C8A34D] text-[#0B1F3A]'
+                      : 'border-white/25 bg-[#0B1F3A] text-white/75'
+                  }`}
+                >
+                  {spot.short}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
-        {/* Selected Corridor Info Card */}
-        <div className="space-y-5 rounded-lg bg-[#F8F8F5] p-6 lg:col-span-5">
-          <div>
-            <h4 className="font-heading text-xl font-bold text-[#0B1F3A]">{current.name}</h4>
-            <p className="mt-1 text-sm text-[#555555]">{current.subtitle}</p>
-          </div>
+        {/* Selected corridor */}
+        <div className="p-6 sm:p-8 lg:col-span-5">
+          <h4 className="font-heading text-xl leading-snug text-[#0B1F3A]">{current.name}</h4>
+          <p className="mt-1 text-[13px] text-[#555555]">{current.subtitle}</p>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm text-[#555555]">Price trend</div>
-              <div className="mt-0.5 text-base font-bold tabular-nums text-[#0B1F3A]">{current.priceSqft}</div>
+          <dl className="mt-6 space-y-4 border-t border-[var(--rule)] pt-5">
+            <div className="flex items-baseline justify-between gap-4">
+              <dt className="label">Price band</dt>
+              <dd className="text-right text-[14px] font-semibold text-[#0B1F3A] figures">{current.priceSqft}</dd>
             </div>
-            <div>
-              <div className="text-sm text-[#555555]">Appreciation</div>
-              <div className="mt-0.5 text-base font-bold tabular-nums text-[#7A5C10]">{current.growth}</div>
+            <div className="flex items-baseline justify-between gap-4">
+              <dt className="label">Growth quoted</dt>
+              <dd className="text-right text-[14px] font-semibold text-[#7A5C10] figures">
+                {current.growth}
+                <span className="ml-1 text-[13px] uppercase tracking-[0.1em] text-[#5F5F5F]">indicative</span>
+              </dd>
             </div>
-          </div>
+          </dl>
 
-          <div className="space-y-2">
-            <div className="font-heading text-base font-semibold text-[#0B1F3A]">Growth catalysts</div>
-            <ul className="space-y-1.5 text-sm text-[#555555]">
-              {current.highlights.map((h, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8A34D] shrink-0" />
-                  <span>{h}</span>
+          <div className="mt-6 border-t border-[var(--rule)] pt-5">
+            <p className="label">Growth drivers</p>
+            <ul className="mt-3 space-y-2">
+              {current.highlights.map((h) => (
+                <li key={h} className="flex items-start gap-2.5 text-[14px] leading-relaxed text-[#444444]">
+                  <span className="mt-2 h-1 w-1 shrink-0 bg-[#A6832A]" aria-hidden="true" />
+                  {h}
                 </li>
               ))}
             </ul>
           </div>
+
+          <p className="mt-6 border-t border-[var(--rule)] pt-4 text-[13px] leading-relaxed text-[#5F5F5F]">
+            Ask the desk for the current price sheet and the approval record for any corridor you
+            are considering.
+          </p>
         </div>
       </div>
     </div>

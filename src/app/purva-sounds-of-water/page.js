@@ -6,7 +6,7 @@ const PAGE_URL = `${SITE_URL}/purva-sounds-of-water`;
 
 export const metadata = {
   title: {
-    absolute: 'Purva Sounds of Water 5 BHK Villa, Bannerghatta | Lakshie'
+    absolute: 'Purva Sounds of Water 5 BHK Villa, Bannerghatta | Setty Relators'
   },
   description: 'Seller-listed 5 BHK villa resale at Purva Sounds of Water, off Bannerghatta Road, Bengaluru. Confirm this unit’s areas, ₹9 Cr asking price and availability.',
   alternates: {
@@ -16,7 +16,7 @@ export const metadata = {
     title: 'Purva Sounds of Water 5 BHK Villa Resale | Bannerghatta Road',
     description: 'Seller-listed 5 BHK villa at Purva Sounds of Water, off Bannerghatta Road, Bengaluru. Check reported unit details, ₹9 Cr asking price and availability.',
     url: PAGE_URL,
-    siteName: 'Lakshie Real Estate Advisory',
+    siteName: 'Setty Relators Advisory',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -98,7 +98,7 @@ const jsonLdPurvaVilla = {
         '@type': 'WebSite',
         '@id': `${SITE_URL}/#website`,
         'url': SITE_URL,
-        'name': 'Lakshie Real Estate Advisory'
+        'name': 'Setty Relators Advisory'
       }
     },
     {

@@ -11,10 +11,10 @@ export const metadata = {
     canonical: PAGE_URL,
   },
   openGraph: {
-    title: 'Luxury Villas for Sale in Bengaluru | Lakshie Real Estate',
+    title: 'Luxury Villas for Sale in Bengaluru | Setty Relators',
     description: 'Bengaluru villa listings, including Tripon Nandi Hills homes and a seller-listed Purva Symphony resale off Bannerghatta Road. Verify unit details and availability.',
     url: PAGE_URL,
-    siteName: 'Lakshie Real Estate Advisory',
+    siteName: 'Setty Relators Advisory',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -28,7 +28,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Luxury Villas in Bengaluru | Lakshie Real Estate',
+    title: 'Luxury Villas in Bengaluru | Setty Relators',
     description: 'Browse Bengaluru villa listings and verify current unit details, pricing and availability.',
     images: [`${SITE_URL}/images/purva-sounds-of-water/purva-villas-community.jpeg`]
   }
@@ -68,7 +68,7 @@ const jsonLdVillas = {
       'mainEntity': [
         {
           '@type': 'Question',
-          'name': 'What are the top luxury villa projects available in Bangalore through Lakshie Real Estate?',
+          'name': 'What are the top luxury villa projects available in Bangalore through Setty Relators?',
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'The portfolio includes Tripon Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as five-bedroom and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
@@ -84,10 +84,10 @@ const jsonLdVillas = {
         },
         {
           '@type': 'Question',
-          'name': 'Why purchase luxury villas through Lakshie Real Estate rather than standard brokers?',
+          'name': 'Why purchase luxury villas through Setty Relators rather than standard brokers?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Lakshie Real Estate describes itself as an authorized channel partner. Ask the advisor to explain the specific services, any buyer charges, and the applicable agreement terms for each listing.'
+            'text': 'Setty Relators describes itself as an authorized channel partner. Ask the advisor to explain the specific services, any buyer charges, and the applicable agreement terms for each listing.'
           }
         }
       ]

@@ -8,10 +8,10 @@ export const metadata = {
     canonical: `${SITE_URL}/qna`,
   },
   openGraph: {
-    title: 'Bengaluru Property Q&A | Lakshie Real Estate',
+    title: 'Bengaluru Property Q&A | Setty Relators',
     description: 'Clear answers to common questions about buying plots and villas in Bengaluru.',
     url: `${SITE_URL}/qna`,
-    siteName: 'Lakshie Real Estate Advisory',
+    siteName: 'Setty Relators Advisory',
     locale: 'en_IN',
     type: 'website',
   },

@@ -1,4 +1,4 @@
-# Lakshie Real Estate Advisory
+# Setty Relators Advisory
 
 > Real estate listings and advisory for residential plots, villas and other properties in Bengaluru and Dubai. Confirm listing details, availability, approvals, and charges with the advisor.
 
@@ -20,8 +20,8 @@
 - [Smart Property Matchmaker](https://premium-plots.vercel.app/matchmaker): AI-driven matching algorithm finding pre-cleared plots and villas based on corridor and budget.
 - [Bengaluru Real Estate ROI Calculator](https://premium-plots.vercel.app/#roi-calculator): Interactive investment calculator calculating 5-year capital appreciation and compound growth across Bengaluru corridors.
 - [Property Market Guides & Knowledge Hub](https://premium-plots.vercel.app/?page=blog): Advisory articles on STRR corridor growth, BIAAPA legal due diligence, title verification, and RERA compliance.
-- [About Lakshie Real Estate Advisory](https://premium-plots.vercel.app/?page=about): Independent consultancy credentials, authorized channel partner status, and advisory philosophy.
-- [Contact Lakshie Real Estate Advisory](https://premium-plots.vercel.app/?page=contact): Contact the advisory team to ask about current listings, viewing arrangements, terms and charges.
+- [About Setty Relators Advisory](https://premium-plots.vercel.app/?page=about): Independent consultancy credentials, authorized channel partner status, and advisory philosophy.
+- [Contact Setty Relators Advisory](https://premium-plots.vercel.app/?page=contact): Contact the advisory team to ask about current listings, viewing arrangements, terms and charges.
 
 ## Optional
 

@@ -1,13 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
 
-const FIELD_CLASS =
-  'w-full rounded-lg border border-[#0B1F3A]/15 bg-[#F8F8F5] px-4 py-3 text-base text-[#1A1A1A] placeholder:text-[#7A7A7A] focus:border-[#C8A34D] focus:outline-none';
+const WHATSAPP = '918431909508';
+const PHONE_DISPLAY = '+91 84319 09508';
 
-const LABEL_CLASS = 'mb-2 block text-sm font-semibold text-[#1A1A1A]';
+const FIELD =
+  'min-h-12 w-full bg-[#EFEEE8] px-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]';
+const LABEL = 'mb-2 block text-[14px] text-[#4C4C4C]';
 
 export default function ContactPage() {
   const { showToast, addLead, bookSiteVisit } = usePlots();
@@ -19,9 +21,6 @@ export default function ContactPage() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
-
-  const whatsappNumber = '918431909508';
-  const displayPhone = '+91 84319 09508';
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,206 +37,218 @@ export default function ContactPage() {
       });
     }
 
-    const text = `Hi Lakshie Real Estate! Inquiry from website:\n\n` +
+    const text = `Hi Setty Relators! Inquiry from website:\n\n` +
       `Name: ${form.name}\n` +
       `Phone: ${form.phone}\n` +
       `Interested Project: ${form.interest}\n` +
       `Message: ${form.message || 'I want a price quote and site visit'}`;
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
-    showToast(`Inquiry sent. Opening WhatsApp chat with ${displayPhone}.`);
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+    showToast(`Inquiry sent. Opening WhatsApp chat with ${PHONE_DISPLAY}.`);
     setSubmitted(true);
   };
 
   const details = [
     {
       icon: MapPin,
-      title: 'UB City experience centre',
+      title: 'Desk',
       body: 'Level 5, Concorde Towers, UB City, Vittal Mallya Road and Indiranagar 100ft Road, Bengaluru 560001'
     },
-    { icon: Phone, title: 'Advisory hotline', href: `tel:+${whatsappNumber}`, body: displayPhone },
-    { icon: Mail, title: 'Email', body: 'advisory@premiumpropertiesbengaluru.com' },
-    { icon: Clock, title: 'Site visit hours', body: 'Monday to Sunday, 9:00 am to 6:30 pm. Guided tours by appointment.' }
+    { icon: Phone, title: 'Advisory line', href: `tel:+${WHATSAPP}`, body: PHONE_DISPLAY },
+    { icon: Mail, title: 'Email', href: 'mailto:advisory@settyrelators.com', body: 'advisory@settyrelators.com' },
+    { icon: Clock, title: 'Site visits', body: 'Monday to Sunday, 9:00 am to 6:30 pm. Guided tours by appointment.' }
   ];
 
   return (
-    <div className="bg-[#F8F8F5]">
-      {/* Header */}
-      <section className="bg-[#0B1F3A] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
-          <h1 className="max-w-3xl font-heading text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
-            Talk to a property advisor
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-            Price lists, layout maps and site visit coordination, directly on WhatsApp with the advisory team.
-          </p>
+    <div>
+      {/* ------------------------------------------------------------- head */}
+      <section className="shell pt-10 lg:pt-14">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <div className="lg:col-span-7">
+            <p className="text-[14px] text-[#7A5C10]">Contact</p>
+            <h1 className="mt-3 display-xl max-w-[16ch] text-[#0B1F3A]">
+              Talk to a property advisor.
+            </h1>
+            <p className="mt-6 max-w-[52ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
+              Price lists, layout maps and site visit coordination, directly with the advisory team.
+            </p>
+          </div>
+
+          <figure className="lg:col-span-5">
+            <img
+              src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
+              alt="Villa residences and landscaped gardens at a Bengaluru community we represent"
+              width={1000}
+              height={700}
+              className="h-[240px] w-full object-cover sm:h-[320px]"
+            />
+            <figcaption className="plate-line">
+              <span>Site visits are arranged and driven from the Bengaluru desk</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
-        {/* Details */}
-        <div className="min-w-0 space-y-8 lg:col-span-5">
-          <div className="rounded-lg bg-[#0B1F3A] p-8 text-white">
-            <h2 className="font-heading text-2xl font-bold">Advisory offices</h2>
-            <dl className="mt-6 space-y-6">
+      {/* ------------------------------------------------------------ body */}
+      <section className="page-section pt-12 lg:pt-16">
+        <div className="shell grid gap-14 lg:grid-cols-12 lg:gap-16">
+          {/* details */}
+          <div className="lg:col-span-4">
+            <h2 className="display-md text-[#0B1F3A]">The desk</h2>
+            <dl className="mt-8 space-y-7">
               {details.map((item) => (
-                <div key={item.title} className="flex items-start gap-4">
-                  <dt className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10">
-                    <item.icon className="h-4 w-4 text-[#C8A34D]" aria-hidden="true" />
-                    <span className="sr-only">{item.title}</span>
-                  </dt>
-                  <dd className="min-w-0">
-                    <span className="block text-sm text-white/60">{item.title}</span>
-                    {item.href ? (
-                      <a href={item.href} className="mt-0.5 block text-base font-semibold text-[#C8A34D] hover:underline">
-                        {item.body}
-                      </a>
-                    ) : (
-                      <span className="mt-0.5 block text-base leading-relaxed text-white/90 break-words">{item.body}</span>
-                    )}
-                  </dd>
+                <div key={item.title} className="flex gap-4">
+                  <item.icon className="mt-1 h-4 w-4 shrink-0 text-[#7A5C10]" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <dt className="text-[14px] text-[var(--text-soft)]">{item.title}</dt>
+                    <dd className="mt-1 text-[17px] leading-relaxed text-[#1A1A1A] break-words">
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                        >
+                          {item.body}
+                        </a>
+                      ) : (
+                        item.body
+                      )}
+                    </dd>
+                  </div>
                 </div>
               ))}
             </dl>
 
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi! I want to chat with a property advisor about Bengaluru and Dubai listings.')}`}
+              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hi! I want to chat with a property advisor about Bengaluru and Dubai listings.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold mt-8 flex w-full cursor-pointer items-center justify-center gap-2 py-3.5 text-sm"
+              className="btn-gold mt-9 w-full sm:w-auto"
             >
-              <MessageCircle className="h-4 w-4 text-[#0B1F3A]" aria-hidden="true" />
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Chat on WhatsApp
             </a>
+
+            <p className="mt-8 max-w-[38ch] text-[15px] leading-relaxed text-[var(--text-soft)]">
+              Zero brokerage to buyers. Booking agreements and payments are executed directly
+              between you and the developer.
+            </p>
           </div>
 
-          <figure className="overflow-hidden rounded-lg">
-            <img
-              src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
-              alt="Villa residences and landscaped gardens at a Bengaluru community we represent"
-              loading="lazy"
-              className="h-56 w-full object-cover"
-            />
-            <figcaption className="mt-2 text-sm text-[#555555]">
-              Site visits are arranged and driven from our Bengaluru desk.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* Form */}
-        <div className="min-w-0 lg:col-span-7">
-          <div className="rounded-lg border min-w-0 overflow-hidden border-[#0B1F3A]/10 bg-white p-6 sm:p-8">
-            {submitted ? (
-              <div className="space-y-5 py-10 text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#0B1F3A]">
-                  <CheckCircle2 className="h-7 w-7 text-[#C8A34D]" aria-hidden="true" />
-                </div>
-                <h2 className="font-heading text-2xl font-bold text-[#0B1F3A]">Inquiry sent</h2>
-                <p className="mx-auto max-w-sm text-base leading-relaxed text-[#555555]">
-                  A WhatsApp conversation with <strong className="text-[#0B1F3A]">{displayPhone}</strong> is open. The advisory team will reply there.
-                </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="btn-gold cursor-pointer px-7 py-3 text-sm"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <h2 className="font-heading text-2xl font-bold text-[#0B1F3A]">Send an inquiry</h2>
-                  <p className="mt-2 text-base leading-relaxed text-[#555555]">
-                    Your details open a direct WhatsApp chat. No account needed.
+          {/* form */}
+          <div className="lg:col-span-8">
+            <div className="bg-white px-6 py-8 sm:px-10 sm:py-10">
+              {submitted ? (
+                <div className="py-10">
+                  <CheckCircle2 className="h-7 w-7 text-[#7A5C10]" aria-hidden="true" />
+                  <h2 className="mt-5 display-md text-[#0B1F3A]">Inquiry sent</h2>
+                  <p className="mt-3 max-w-[48ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                    A WhatsApp conversation with {PHONE_DISPLAY} is open. The advisory team will
+                    reply there.
                   </p>
+                  <button
+                    type="button"
+                    onClick={() => setSubmitted(false)}
+                    className="btn-quiet mt-7"
+                  >
+                    Send another message
+                  </button>
                 </div>
-
-                <div>
-                  <label htmlFor="contact-name" className={LABEL_CLASS}>Full name</label>
-                  <input
-                    id="contact-name"
-                    type="text"
-                    required
-                    placeholder="Anand Kumar"
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className={FIELD_CLASS}
-                  />
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-7">
                   <div>
-                    <label htmlFor="contact-phone" className={LABEL_CLASS}>WhatsApp or phone</label>
-                    <input
-                      id="contact-phone"
-                      type="tel"
-                      required
-                      placeholder="98765 43210"
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className={FIELD_CLASS}
-                    />
+                    <h2 className="display-md text-[#0B1F3A]">Send an inquiry</h2>
+                    <p className="mt-3 max-w-[52ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+                      Your details open a direct WhatsApp chat. No account needed.
+                    </p>
                   </div>
+
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="contact-name" className={LABEL}>Full name</label>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        required
+                        autoComplete="name"
+                        placeholder="Anand Kumar"
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        className={FIELD}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="contact-phone" className={LABEL}>WhatsApp or phone</label>
+                      <input
+                        id="contact-phone"
+                        type="tel"
+                        required
+                        autoComplete="tel"
+                        placeholder="98765 43210"
+                        value={form.phone}
+                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        className={FIELD}
+                      />
+                    </div>
+                  </div>
+
                   <div>
-                    <label htmlFor="contact-email" className={LABEL_CLASS}>
-                      Email <span className="font-normal text-[#555555]">(optional)</span>
+                    <label htmlFor="contact-email" className={LABEL}>
+                      Email <span className="text-[var(--text-soft)]">(optional)</span>
                     </label>
                     <input
                       id="contact-email"
                       type="email"
+                      autoComplete="email"
                       placeholder="anand@example.com"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className={FIELD_CLASS}
+                      className={FIELD}
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="contact-interest" className={LABEL_CLASS}>Project of interest</label>
-                  <select
-                    id="contact-interest"
-                    value={form.interest}
-                    onChange={(e) => setForm({ ...form, interest: e.target.value })}
-                    className={`${FIELD_CLASS} cursor-pointer`}
-                  >
-                    <option value="Nisarga Boulevard - Devanahalli">Nisarga Boulevard, Devanahalli (open plots)</option>
-                    <option value="Vinra Alora - Whitefield">Vinra Alora, Whitefield Extension (custom villas)</option>
-                    <option value="Prestige City - Sarjapur">Prestige City, Sarjapur (apartments)</option>
-                    <option value="Dubai Marina Waterfront">Dubai Marina Sunset Residences (Dubai)</option>
-                    <option value="Vinra Interior Design Package">Vinra turnkey interiors</option>
-                  </select>
-                </div>
+                  <div>
+                    <label htmlFor="contact-interest" className={LABEL}>Project of interest</label>
+                    <select
+                      id="contact-interest"
+                      value={form.interest}
+                      onChange={(e) => setForm({ ...form, interest: e.target.value })}
+                      className={`${FIELD} cursor-pointer`}
+                    >
+                      <option value="Nisarga Boulevard - Devanahalli">Nisarga Boulevard, Devanahalli (open plots)</option>
+                      <option value="Vinra Alora - Whitefield">Vinra Alora, Whitefield Extension (custom villas)</option>
+                      <option value="Prestige City - Sarjapur">Prestige City, Sarjapur (apartments)</option>
+                      <option value="Dubai Marina Waterfront">Dubai Marina Sunset Residences (Dubai)</option>
+                      <option value="Vinra Interior Design Package">Vinra turnkey interiors</option>
+                    </select>
+                  </div>
 
-                <div>
-                  <label htmlFor="contact-message" className={LABEL_CLASS}>Anything specific?</label>
-                  <textarea
-                    id="contact-message"
-                    rows="3"
-                    placeholder="Budget, preferred configuration or timeline"
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className={FIELD_CLASS}
-                  />
-                </div>
+                  <div>
+                    <label htmlFor="contact-message" className={LABEL}>Anything specific?</label>
+                    <textarea
+                      id="contact-message"
+                      rows="3"
+                      placeholder="Budget, preferred configuration or timeline"
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                      className={FIELD}
+                    />
+                  </div>
 
-                <button
-                  type="submit"
-                  className="btn-gold flex w-full cursor-pointer items-center justify-center gap-2 py-4 text-sm"
-                >
-                  <Send className="h-4 w-4 text-[#0B1F3A]" aria-hidden="true" />
-                  Send and open WhatsApp
-                </button>
-
-                <p className="flex items-center justify-center gap-2 text-sm text-[#555555]">
-                  <ShieldCheck className="h-4 w-4 text-[#7A5C10]" aria-hidden="true" />
-                  No spam calls. Channel partner advisory only.
-                </p>
-              </form>
-            )}
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <button type="submit" className="btn-gold">
+                      <Send className="h-4 w-4" aria-hidden="true" />
+                      Send and open WhatsApp
+                    </button>
+                    <p className="text-[14px] text-[var(--text-soft)]">
+                      No spam calls. Channel partner advisory only.
+                    </p>
+                  </div>
+                </form>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

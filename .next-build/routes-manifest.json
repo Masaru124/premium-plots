@@ -1,0 +1,207 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "hybrid",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/purva-sounds-of-water-villa",
+      "destination": "/purva-sounds-of-water",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/purva-sounds-of-water-villa(?:/)?$"
+    },
+    {
+      "source": "/purva-sounds-of-water-5bhk-luxury-villa",
+      "destination": "/purva-sounds-of-water",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/purva-sounds-of-water-5bhk-luxury-villa(?:/)?$"
+    },
+    {
+      "source": "/purva-villa",
+      "destination": "/purva-sounds-of-water",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/purva-villa(?:/)?$"
+    },
+    {
+      "source": "/purva",
+      "destination": "/purva-sounds-of-water",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/purva(?:/)?$"
+    },
+    {
+      "source": "/villa-plots",
+      "destination": "/plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/villa-plots(?:/)?$"
+    },
+    {
+      "source": "/villa-plots-bangalore",
+      "destination": "/plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/villa-plots-bangalore(?:/)?$"
+    },
+    {
+      "source": "/villa-plots-in-bangalore",
+      "destination": "/plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/villa-plots-in-bangalore(?:/)?$"
+    },
+    {
+      "source": "/plots",
+      "destination": "/plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/plots(?:/)?$"
+    },
+    {
+      "source": "/residential-plots",
+      "destination": "/plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/residential-plots(?:/)?$"
+    },
+    {
+      "source": "/villas",
+      "destination": "/luxury-villas-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/villas(?:/)?$"
+    },
+    {
+      "source": "/luxury-villas",
+      "destination": "/luxury-villas-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/luxury-villas(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/api/admin/login",
+      "regex": "^/api/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/login(?:/)?$"
+    },
+    {
+      "page": "/api/admin/session",
+      "regex": "^/api/admin/session(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/session(?:/)?$"
+    },
+    {
+      "page": "/api/leads",
+      "regex": "^/api/leads(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/leads(?:/)?$"
+    },
+    {
+      "page": "/api/projects",
+      "regex": "^/api/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/projects(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/luxury-villas-bangalore",
+      "regex": "^/luxury\\-villas\\-bangalore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/luxury\\-villas\\-bangalore(?:/)?$"
+    },
+    {
+      "page": "/matchmaker",
+      "regex": "^/matchmaker(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/matchmaker(?:/)?$"
+    },
+    {
+      "page": "/plots-in-bangalore",
+      "regex": "^/plots\\-in\\-bangalore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/plots\\-in\\-bangalore(?:/)?$"
+    },
+    {
+      "page": "/property-finder",
+      "regex": "^/property\\-finder(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/property\\-finder(?:/)?$"
+    },
+    {
+      "page": "/purva-sounds-of-water",
+      "regex": "^/purva\\-sounds\\-of\\-water(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/purva\\-sounds\\-of\\-water(?:/)?$"
+    },
+    {
+      "page": "/qna",
+      "regex": "^/qna(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/qna(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
