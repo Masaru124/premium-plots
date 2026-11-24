@@ -5,18 +5,18 @@ import { ArrowLeft } from 'lucide-react';
 
 function LegalShell({ title, updated, onBack, children }) {
   return (
-    <div className="shell page-section max-w-[860px] pt-12 lg:pt-16">
+    <div className="shell page-section hero-settle max-w-[860px] pt-12 lg:pt-16">
       <button
         type="button"
         onClick={onBack}
-        className="inline-flex min-h-11 items-center gap-2 text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+        className="inline-flex min-h-11 items-center gap-2 text-[14px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
       >
         <ArrowLeft className="h-4 w-4" aria-hidden="true" />
         Home
       </button>
 
       <header className="mt-8">
-        <h1 className="display-lg max-w-[24ch] text-[#0B1F3A]">{title}</h1>
+        <h1 className="display-xl max-w-[24ch] text-[#FBFBFD]">{title}</h1>
         <p className="mt-3 text-[15px] text-[var(--text-soft)]">{updated}</p>
       </header>
 
@@ -26,11 +26,11 @@ function LegalShell({ title, updated, onBack, children }) {
 }
 
 function Heading({ children }) {
-  return <h2 className="mt-10 font-heading text-[1.5rem] text-[#0B1F3A] first:mt-0">{children}</h2>;
+  return <h2 className="mt-10 font-heading text-[1.5rem] text-[#FBFBFD] first:mt-0">{children}</h2>;
 }
 
 function Body({ children }) {
-  return <p className="max-w-[68ch] text-[19px] leading-[1.75] text-[#1A1A1A]">{children}</p>;
+  return <p className="max-w-[68ch] text-[19px] leading-[1.75] text-[#FBFBFD]">{children}</p>;
 }
 
 export function PrivacyPolicyPage({ setActivePage }) {
@@ -94,7 +94,7 @@ export function DisclaimerPage({ setActivePage }) {
       onBack={() => setActivePage('home')}
     >
       <div className="section-navy on-ink px-6 py-8 sm:px-9">
-        <h2 className="font-heading text-[1.25rem] text-[#DFC06E]">
+        <h2 className="font-heading text-[1.25rem] text-[#E9C349]">
           Independent consultancy &amp; channel partner disclosure
         </h2>
         <p className="mt-3 max-w-[62ch] text-[19px] leading-relaxed text-white/85">

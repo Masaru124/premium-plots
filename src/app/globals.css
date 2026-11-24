@@ -1,37 +1,60 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------------
-   Setty Relators — the open register
-   The photograph is the argument; type sets it like a wall label. Ivory paper,
-   ink navy as the structural field, gold only where the desk acts.
-   Values below are the brand's own colours, unchanged.
+   Setty Relators · Bengaluru Estate Sovereign
+   Deep royal sapphire as the canvas, imperial forest as the biophilic slab,
+   champagne gold only where the house acts. Alabaster type, gold hairlines,
+   matte surfaces, no drop shadows.
 --------------------------------------------------------------------------- */
 
 @layer base {
   :root {
-    --ink: #0B1F3A;
-    --ink-deep: #071527;
-    --ink-soft: #142E54;
-    --gold: #C8A34D;
-    --gold-light: #DFC06E;
-    --gold-deep: #A6832A;
-    /* Gold as text on paper, 5.7:1, instead of #C8A34D's 2.2:1. */
-    --gold-ink: #7A5C10;
+    /* structural */
+    --ink: #0B192C;
+    --ink-deep: #070F1B;
+    --ink-soft: #11233D;
+    --blue: #1B3A5C;
+    --blue-deep: #14294A;
+    --forest: #133324;
+    --forest-deep: #0E2619;
+    --green: #2F6B4E;
 
-    --paper: #F8F8F5;
-    --stone: #EFEEE8;
-    --white: #FFFFFF;
-    --text: #1A1A1A;
-    --text-soft: #4C4C4C;
+    /* the white field: the register itself, printed on alabaster */
+    --sheet: #FBFBFD;
+    --sheet-ink: #0B192C;
+    --sheet-soft: #4A5666;
+    --sheet-tint: #F1F3F7;
+    --sheet-line: rgba(11, 25, 44, 0.12);
+    --gold-on-light: #8A6A12;
 
-    --rule: rgba(11, 31, 58, 0.08);
-    --rule-strong: rgba(11, 31, 58, 0.16);
+    /* gold */
+    --gold: #D4AF37;
+    --gold-light: #E9C349;
+    --gold-pale: #FFE088;
+    --gold-deep: #A8871F;
+    --gold-ink: #D4AF37;
+    --gold-sheen: rgba(212, 175, 55, 0.16);
+
+    /* neutrals */
+    --paper: #0B192C;
+    --stone: #14294A;
+    --white: #FBFBFD;
+    --text: #FBFBFD;
+    --text-soft: #B0B8C4;
+    --text-dim: #8F9097;
+
+    --rule: rgba(251, 251, 253, 0.10);
+    --rule-strong: rgba(212, 175, 55, 0.22);
+    --outline: rgba(251, 251, 253, 0.15);
 
     --display: var(--font-display), 'Playfair Display', Georgia, serif;
-    --body-face: var(--font-body), 'Poppins', system-ui, sans-serif;
+    --body-face: var(--font-body), 'Plus Jakarta Sans', system-ui, sans-serif;
 
     --shell: 1320px;
     --gutter: 20px;
+
+    --radius: 4px;
+    --radius-card: 8px;
   }
 
   @media (min-width: 768px) {
@@ -41,6 +64,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
   }
 
   body {
@@ -48,7 +72,7 @@
     color: var(--text);
     font-family: var(--body-face);
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.65;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -56,8 +80,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--display);
-    font-weight: 400;
-    color: var(--ink);
+    font-weight: 500;
+    color: var(--text);
     letter-spacing: -0.015em;
   }
 
@@ -70,17 +94,22 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--gold-deep);
+    outline: 2px solid var(--gold);
     outline-offset: 3px;
-    border-radius: 1px;
+    border-radius: 2px;
   }
 
   .on-ink :focus-visible,
   .section-navy :focus-visible {
-    outline-color: var(--gold-light);
+    outline-color: var(--gold-pale);
   }
 
   img { display: block; }
+
+  /* Native controls on a dark canvas. */
+  input, select, textarea {
+    color-scheme: dark;
+  }
 }
 
 @layer components {
@@ -101,52 +130,64 @@
 
   .display-xl {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: clamp(2.5rem, 6.4vw, 5rem);
-    line-height: 0.98;
-    letter-spacing: -0.025em;
+    line-height: 1;
+    letter-spacing: -0.02em;
   }
 
   .display-lg {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: clamp(2rem, 3.8vw, 3.25rem);
-    line-height: 1.02;
-    letter-spacing: -0.02em;
+    line-height: 1.06;
+    letter-spacing: -0.015em;
   }
 
   .display-md {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: clamp(1.6rem, 2.4vw, 2.25rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
+    line-height: 1.14;
+    letter-spacing: -0.01em;
   }
 
   .lede {
     font-size: clamp(1.0625rem, 1.15vw, 1.25rem);
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--text-soft);
   }
 
   .measure { max-width: 62ch; }
 
   .label {
-    font-size: 13px;
-    line-height: 1.45;
+    font-size: 14px;
+    line-height: 1.5;
     letter-spacing: 0;
     text-transform: none;
     color: var(--text-soft);
   }
 
-  .label-gold { color: var(--gold-ink); }
+  /* The house catalogue signature, used only where a caption must behave
+     like a specimen label rather than a sentence. */
+  .label-caps {
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+  }
+
+  .label-gold { color: var(--gold); }
 
   .figures { font-variant-numeric: tabular-nums; }
 
   /* ---------------------------------------------------------- surfaces --- */
 
+  /* The biophilic slab: forest green, used for a chapter that should sit
+     apart from the sapphire canvas. */
   .section-navy {
-    background: var(--ink);
+    background: var(--forest);
     color: var(--white);
   }
 
@@ -157,7 +198,50 @@
 
   .section-stone { background: var(--stone); }
 
+  .section-blue { background: var(--blue-deep); color: var(--white); }
+
   .on-ink { color: var(--white); }
+
+  /* The register printed on alabaster: the one white field in the world.
+     Everything inside switches to sapphire ink and a gold that holds on paper. */
+  .sheet {
+    background: var(--sheet);
+    color: var(--sheet-ink);
+  }
+
+  .sheet h1,
+  .sheet h2,
+  .sheet h3,
+  .sheet h4,
+  .sheet p,
+  .sheet dd,
+  .sheet li { color: var(--sheet-ink); }
+
+  .sheet .lede,
+  .sheet .label,
+  .sheet .plate-line,
+  .sheet .muted,
+  .sheet dt,
+  .sheet small { color: var(--sheet-soft); }
+
+  .sheet .plate-line .plate-price,
+  .sheet .plate-price { color: var(--gold-on-light); }
+
+  .sheet .btn-gold { background: var(--ink); color: var(--white); }
+  .sheet .btn-gold:hover { background: var(--gold); color: var(--ink); }
+  .sheet .btn-primary { border-color: var(--gold-on-light); color: var(--gold-on-light); }
+  .sheet .btn-primary:hover { background: rgba(138, 106, 18, 0.10); color: var(--sheet-ink); }
+  .sheet .btn-quiet { border-color: rgba(11, 25, 44, 0.28); color: var(--sheet-ink); }
+  .sheet .btn-quiet:hover { border-color: var(--gold-on-light); color: var(--gold-on-light); }
+
+
+  /* Cards and panels: elevated sapphire, gold hairline, no shadow. */
+  .panel {
+    background: var(--ink-soft);
+    /* taste-skill-ignore — the system's cards are separated by a gold hairline, not a shadow */
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius-card);
+  }
 
   /* ---------------------------------------------------------- buttons --- */
 
@@ -170,58 +254,93 @@
     gap: 0.5rem;
     min-height: 48px;
     padding: 0.85rem 1.6rem;
-    border-radius: 2px;
+    border-radius: var(--radius);
+    /* taste-skill-ignore — the secondary action is defined by its gold hairline */
+    border: 1px solid transparent;
     font-family: var(--body-face);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 0.01em;
     text-transform: none;
     text-align: center;
     white-space: nowrap;
     max-width: 100%;
     cursor: pointer;
-    transition: background-color 220ms ease, color 220ms ease;
+    transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
   }
 
+  /* Primary action: alabaster surface, sapphire type. */
   .btn-gold {
-    background: var(--gold);
+    background: var(--white);
     color: var(--ink);
   }
 
   .btn-gold:hover {
-    background: var(--gold-light);
+    background: var(--gold);
     color: var(--ink);
   }
 
   .btn-gold:active { background: var(--gold-deep); }
 
-  .btn-primary {
+  /* Ink button: the action on an alabaster field. */
+  .btn-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0.85rem 1.6rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
     background: var(--ink);
     color: var(--white);
+    font-family: var(--body-face);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 220ms ease, color 220ms ease;
   }
 
-  .btn-primary:hover { background: var(--ink-soft); color: var(--white); }
+  .btn-ink:hover { background: var(--blue); }
 
+  /* Luxury secondary: hairline gold, gold type. */
+  .btn-primary {
+    background: transparent;
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-sheen);
+    border-color: var(--gold-light);
+    color: var(--gold-pale);
+  }
+
+  /* Quiet control: hairline alabaster. */
   .btn-quiet {
-    background: rgba(11, 31, 58, 0.07);
-    color: var(--ink);
+    background: transparent;
+    border-color: var(--outline);
+    color: var(--text);
   }
 
   .btn-quiet:hover {
-    background: var(--ink);
-    color: var(--white);
+    border-color: var(--gold);
+    color: var(--gold);
   }
 
   .on-ink .btn-quiet,
   .btn-quiet--on-ink {
-    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(251, 251, 253, 0.24);
     color: var(--white);
   }
 
   .on-ink .btn-quiet:hover,
   .btn-quiet--on-ink:hover {
-    background: var(--gold);
-    color: var(--ink);
+    background: var(--gold-sheen);
+    border-color: var(--gold);
+    color: var(--gold-pale);
   }
 
   /* ----------------------------------------------------------- plates --- */
@@ -229,7 +348,8 @@
   .frame {
     position: relative;
     overflow: hidden;
-    background: var(--stone);
+    background: var(--ink-deep);
+    border-radius: var(--radius-card);
   }
 
   .frame img {
@@ -292,7 +412,7 @@
     justify-content: space-between;
     gap: 6px 24px;
     margin-top: 14px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.5;
     color: var(--text-soft);
   }
@@ -300,12 +420,14 @@
   .plate-line .plate-price {
     font-family: var(--display);
     font-size: 1.25rem;
-    color: var(--ink);
+    color: var(--gold);
     white-space: nowrap;
   }
 
-  .section-navy .plate-line { color: rgba(255, 255, 255, 0.62); }
-  .section-navy .plate-line .plate-price { color: var(--white); }
+  .sheet .plate-line { color: var(--sheet-soft); }
+
+  .section-navy .plate-line { color: rgba(251, 251, 253, 0.66); }
+  .section-navy .plate-line .plate-price { color: var(--gold-pale); }
 }
 
 /* Reduced motion keeps state feedback, drops movement. */

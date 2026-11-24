@@ -5,6 +5,23 @@ import { INITIAL_PROJECTS, INITIAL_BLOGS, INITIAL_LEADS, CLIENT_REVIEWS, FEATURE
 
 const PlotsContext = createContext();
 
+// The catalogue table can still hold a superseded row from an earlier brand
+// name. Keep the newest row per project so the register never prints a
+// duplicate entry under two names.
+function dedupeProjects(list) {
+  const byKey = new Map();
+  list.forEach((project) => {
+    const base = project.slug || project.title || project.id || '';
+    const key = base
+      .replace(/tripon/gi, '')
+      .replace(/triton/gi, '')
+      .replace(/[^a-z0-9]/gi, '')
+      .toLowerCase();
+    byKey.set(key, project);
+  });
+  return [...byKey.values()];
+}
+
 export function PlotsProvider({ children }) {
   const [projects, setProjects] = useState(INITIAL_PROJECTS);
   const [blogs, setBlogs] = useState(INITIAL_BLOGS);
@@ -26,7 +43,7 @@ export function PlotsProvider({ children }) {
         const projRes = await fetch('/api/projects');
         const projData = await projRes.json();
         if (projData.success && Array.isArray(projData.projects) && projData.projects.length > 0) {
-          setProjects(projData.projects);
+          setProjects(dedupeProjects(projData.projects));
           setIsDbConnected(true);
         }
       } catch (err) {

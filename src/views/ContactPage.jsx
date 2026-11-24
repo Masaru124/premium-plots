@@ -3,16 +3,18 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
+import useReveal from '../hooks/useReveal';
 
 const WHATSAPP = '918431909508';
 const PHONE_DISPLAY = '+91 84319 09508';
 
 const FIELD =
-  'min-h-12 w-full bg-[#EFEEE8] px-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]';
-const LABEL = 'mb-2 block text-[14px] text-[#4C4C4C]';
+  'min-h-12 w-full rounded-[4px] border border-[rgba(251,251,253,0.16)] bg-[#0B192C] px-4 text-[17px] text-[#FBFBFD] placeholder:text-[#9AA6B6] transition-colors focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30';
+const LABEL = 'mb-2 block text-[14px] text-[#B0B8C4]';
 
 export default function ContactPage() {
-  const { showToast, addLead, bookSiteVisit } = usePlots();
+  const { showToast, addLead, bookSiteVisit, openSiteVisitModal } = usePlots();
+  useReveal();
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -64,17 +66,22 @@ export default function ContactPage() {
       {/* ------------------------------------------------------------- head */}
       <section className="shell pt-10 lg:pt-14">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
-          <div className="lg:col-span-7">
-            <p className="text-[14px] text-[#7A5C10]">Contact</p>
-            <h1 className="mt-3 display-xl max-w-[16ch] text-[#0B1F3A]">
+          <div data-reveal className="lg:col-span-7">
+            <h1 className="display-xl max-w-[16ch] text-[#FBFBFD]">
               Talk to a property advisor.
             </h1>
             <p className="mt-6 max-w-[52ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
               Price lists, layout maps and site visit coordination, directly with the advisory team.
             </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
+              <button type="button" onClick={() => openSiteVisitModal()} className="btn-gold">
+                Book a site visit
+              </button>
+            </div>
           </div>
 
-          <figure className="lg:col-span-5">
+          <figure data-reveal className="lg:col-span-5">
             <img
               src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
               alt="Villa residences and landscaped gardens at a Bengaluru community we represent"
@@ -93,19 +100,19 @@ export default function ContactPage() {
       <section className="page-section pt-12 lg:pt-16">
         <div className="shell grid gap-14 lg:grid-cols-12 lg:gap-16">
           {/* details */}
-          <div className="lg:col-span-4">
-            <h2 className="display-md text-[#0B1F3A]">The desk</h2>
+          <div data-reveal className="lg:col-span-4">
+            <h2 className="display-md text-[#FBFBFD]">The desk</h2>
             <dl className="mt-8 space-y-7">
               {details.map((item) => (
                 <div key={item.title} className="flex gap-4">
-                  <item.icon className="mt-1 h-4 w-4 shrink-0 text-[#7A5C10]" aria-hidden="true" />
+                  <item.icon className="mt-1 h-4 w-4 shrink-0 text-[#D4AF37]" aria-hidden="true" />
                   <div className="min-w-0">
                     <dt className="text-[14px] text-[var(--text-soft)]">{item.title}</dt>
-                    <dd className="mt-1 text-[17px] leading-relaxed text-[#1A1A1A] break-words">
+                    <dd className="mt-1 text-[17px] leading-relaxed text-[#FBFBFD] break-words">
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                          className="underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
                         >
                           {item.body}
                         </a>
@@ -135,12 +142,12 @@ export default function ContactPage() {
           </div>
 
           {/* form */}
-          <div className="lg:col-span-8">
-            <div className="bg-white px-6 py-8 sm:px-10 sm:py-10">
+          <div data-reveal className="lg:col-span-8">
+            <div className="bg-[#11233D] px-6 py-8 sm:px-10 sm:py-10">
               {submitted ? (
                 <div className="py-10">
-                  <CheckCircle2 className="h-7 w-7 text-[#7A5C10]" aria-hidden="true" />
-                  <h2 className="mt-5 display-md text-[#0B1F3A]">Inquiry sent</h2>
+                  <CheckCircle2 className="h-7 w-7 text-[#D4AF37]" aria-hidden="true" />
+                  <h2 className="mt-5 display-md text-[#FBFBFD]">Inquiry sent</h2>
                   <p className="mt-3 max-w-[48ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                     A WhatsApp conversation with {PHONE_DISPLAY} is open. The advisory team will
                     reply there.
@@ -156,7 +163,7 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-7">
                   <div>
-                    <h2 className="display-md text-[#0B1F3A]">Send an inquiry</h2>
+                    <h2 className="display-md text-[#FBFBFD]">Send an inquiry</h2>
                     <p className="mt-3 max-w-[52ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                       Your details open a direct WhatsApp chat. No account needed.
                     </p>
@@ -247,6 +254,44 @@ export default function ContactPage() {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* recent visits */}
+      <section aria-label="Recent site visits" className="shell pb-20 lg:pb-28">
+        <div data-reveal className="grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              src: '/images/purva-sounds-of-water/purva-villa-front-portico.jpeg',
+              alt: 'Villa entrance portico at Purva Symphony, off Bannerghatta Road',
+              caption: 'Purva Symphony, Bannerghatta Road'
+            },
+            {
+              src: '/images/purva-sounds-of-water/purva-villa-handcrafted-kitchen.jpeg',
+              alt: 'Modular kitchen with island, dark cabinetry and stone worktop',
+              caption: 'Interiors delivered under the Gold package'
+            },
+            {
+              src: '/images/purva-sounds-of-water/purva-villa-swimming-pool.jpeg',
+              alt: 'Private pool bordered by paving and planting',
+              caption: 'Pool and paving, Nandi Hills foothills'
+            }
+          ].map((photo) => (
+            <figure key={photo.src}>
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={1000}
+                height={700}
+                loading="lazy"
+                decoding="async"
+                className="h-[200px] w-full object-cover sm:h-[240px]"
+              />
+              <figcaption className="plate-line">
+                <span>{photo.caption}</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
     </div>

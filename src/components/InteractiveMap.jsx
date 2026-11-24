@@ -52,29 +52,29 @@ export default function InteractiveMap() {
   const current = hotspots.find((h) => h.id === selectedHotspot) || hotspots[0];
 
   return (
-    <div className="border border-[var(--rule-strong)] bg-white">
-      <div className="flex flex-col justify-between gap-5 border-b border-[var(--rule)] p-6 sm:flex-row sm:items-end sm:p-8">
+    <div className="bg-[#11233D]">
+      <div className="flex flex-col justify-between gap-5 p-6 sm:flex-row sm:items-end sm:p-8">
         <div>
-          <h3 className="font-heading text-2xl leading-tight text-[#0B1F3A]">
+          <h3 className="font-heading text-2xl leading-tight text-[#FBFBFD]">
             The belts we follow
           </h3>
-          <p className="mt-2 max-w-[52ch] text-[14px] leading-relaxed text-[#555555]">
+          <p className="mt-2 max-w-[52ch] text-[14px] leading-relaxed text-[#B0B8C4]">
             Price bands and growth figures are corridor-level commentary gathered for this desk.
             Treat them as indicative, not as a valuation of any specific plot.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-0 border border-[#0B1F3A]/20" role="group" aria-label="Choose a corridor">
+        <div className="flex flex-wrap gap-0 bg-[#0B192C]" role="group" aria-label="Choose a corridor">
           {hotspots.map((spot) => (
             <button
               key={spot.id}
               type="button"
               onClick={() => setSelectedHotspot(spot.id)}
               aria-pressed={selectedHotspot === spot.id}
-              className={`min-h-11 border-r border-[#0B1F3A]/15 px-3.5 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors last:border-r-0 ${
+              className={`min-h-11 px-3.5 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors ${
                 selectedHotspot === spot.id
-                  ? 'bg-[#0B1F3A] text-[#DFC06E]'
-                  : 'bg-white text-[#555555] hover:bg-[#F8F8F5]'
+                  ? 'bg-[#D4AF37] text-[#0B192C]'
+                  : 'bg-[#0B192C] text-[#B0B8C4] hover:text-[#FBFBFD]'
               }`}
             >
               {spot.short}
@@ -85,13 +85,13 @@ export default function InteractiveMap() {
 
       <div className="grid lg:grid-cols-12">
         {/* Map plate */}
-        <div className="relative min-h-[360px] overflow-hidden border-b border-[var(--rule)] bg-[#0B1F3A] lg:col-span-7 lg:border-b-0 lg:border-r">
+        <div className="relative min-h-[360px] overflow-hidden bg-[#0B192C] lg:col-span-7">
           <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
             <path d="M 60 300 Q 240 210 380 268 T 520 330" fill="none" stroke="rgba(200,163,77,0.22)" strokeWidth="2" strokeDasharray="5 6" />
             <path d="M 250 360 L 330 70" fill="none" stroke="rgba(200,163,77,0.35)" strokeWidth="2" />
           </svg>
 
-          <div className="absolute right-[20%] top-[10%] border border-[#C8A34D]/60 px-2 py-1 text-[13px] uppercase tracking-[0.12em] text-[#DFC06E]">
+          <div className="absolute right-[20%] top-[10%] border border-[#D4AF37]/60 px-2 py-1 text-[13px] uppercase tracking-[0.12em] text-[#E9C349]">
             Kempegowda Airport
           </div>
 
@@ -110,8 +110,8 @@ export default function InteractiveMap() {
                 <span
                   className={`flex h-8 w-8 items-center justify-center border transition-colors ${
                     selected
-                      ? 'border-[#C8A34D] bg-[#C8A34D] text-[#0B1F3A]'
-                      : 'border-white/40 bg-[#0B1F3A] text-white/80 hover:border-[#C8A34D] hover:text-[#DFC06E]'
+                      ? 'border-[#D4AF37] bg-[#D4AF37] text-[#0B192C]'
+                      : 'border-white/40 bg-[#0B192C] text-white/80 hover:border-[#D4AF37] hover:text-[#E9C349]'
                   }`}
                 >
                   <MapPin className="h-4 w-4" aria-hidden="true" />
@@ -119,8 +119,8 @@ export default function InteractiveMap() {
                 <span
                   className={`absolute top-11 whitespace-nowrap border px-2 py-0.5 text-[13px] font-semibold uppercase tracking-[0.1em] ${
                     selected
-                      ? 'border-[#C8A34D] bg-[#C8A34D] text-[#0B1F3A]'
-                      : 'border-white/25 bg-[#0B1F3A] text-white/75'
+                      ? 'border-[#D4AF37] bg-[#D4AF37] text-[#0B192C]'
+                      : 'border-white/25 bg-[#0B192C] text-white/75'
                   }`}
                 >
                   {spot.short}
@@ -132,36 +132,36 @@ export default function InteractiveMap() {
 
         {/* Selected corridor */}
         <div className="p-6 sm:p-8 lg:col-span-5">
-          <h4 className="font-heading text-xl leading-snug text-[#0B1F3A]">{current.name}</h4>
-          <p className="mt-1 text-[13px] text-[#555555]">{current.subtitle}</p>
+          <h4 className="font-heading text-xl leading-snug text-[#FBFBFD]">{current.name}</h4>
+          <p className="mt-1 text-[13px] text-[#B0B8C4]">{current.subtitle}</p>
 
-          <dl className="mt-6 space-y-4 border-t border-[var(--rule)] pt-5">
+          <dl className="mt-6 space-y-4">
             <div className="flex items-baseline justify-between gap-4">
               <dt className="label">Price band</dt>
-              <dd className="text-right text-[14px] font-semibold text-[#0B1F3A] figures">{current.priceSqft}</dd>
+              <dd className="text-right text-[14px] font-semibold text-[#FBFBFD] figures">{current.priceSqft}</dd>
             </div>
             <div className="flex items-baseline justify-between gap-4">
               <dt className="label">Growth quoted</dt>
-              <dd className="text-right text-[14px] font-semibold text-[#7A5C10] figures">
+              <dd className="text-right text-[14px] font-semibold text-[#D4AF37] figures">
                 {current.growth}
-                <span className="ml-1 text-[13px] uppercase tracking-[0.1em] text-[#5F5F5F]">indicative</span>
+                <span className="ml-1 text-[13px] uppercase tracking-[0.1em] text-[#B0B8C4]">indicative</span>
               </dd>
             </div>
           </dl>
 
-          <div className="mt-6 border-t border-[var(--rule)] pt-5">
+          <div className="mt-6">
             <p className="label">Growth drivers</p>
             <ul className="mt-3 space-y-2">
               {current.highlights.map((h) => (
-                <li key={h} className="flex items-start gap-2.5 text-[14px] leading-relaxed text-[#444444]">
-                  <span className="mt-2 h-1 w-1 shrink-0 bg-[#A6832A]" aria-hidden="true" />
+                <li key={h} className="flex items-start gap-2.5 text-[14px] leading-relaxed text-[#C5C6CD]">
+                  <span className="mt-2 h-1 w-1 shrink-0 bg-[#A8871F]" aria-hidden="true" />
                   {h}
                 </li>
               ))}
             </ul>
           </div>
 
-          <p className="mt-6 border-t border-[var(--rule)] pt-4 text-[13px] leading-relaxed text-[#5F5F5F]">
+          <p className="mt-6 text-[15px] leading-relaxed text-[#B0B8C4]">
             Ask the desk for the current price sheet and the approval record for any corridor you
             are considering.
           </p>

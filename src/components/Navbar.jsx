@@ -45,7 +45,7 @@ export default function Navbar({ activePage, setActivePage }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0B1F3A]">
+    <header className="sticky top-0 z-50 bg-[#0B192C]">
       <nav aria-label="Main navigation" className="shell flex min-h-[80px] items-center justify-between gap-6 py-3">
         <a
           href="/"
@@ -57,14 +57,14 @@ export default function Navbar({ activePage, setActivePage }) {
           className="group flex shrink-0 items-center gap-3"
           aria-label="Setty Relators — home"
         >
-          <span className="flex h-10 w-10 items-center justify-center bg-[#C8A34D]">
-            <Compass className="h-5 w-5 text-[#0B1F3A]" aria-hidden="true" />
+          <span className="flex h-10 w-10 items-center justify-center bg-[#D4AF37]">
+            <Compass className="h-5 w-5 text-[#FBFBFD]" aria-hidden="true" />
           </span>
           <span className="min-w-0">
             <span className="block font-heading text-[1.5rem] leading-none tracking-[-0.01em] text-white">
               Setty Relators
             </span>
-            <span className="mt-1 block text-[14px] leading-none text-[#DFC06E]">
+            <span className="mt-1 block text-[14px] leading-none text-[#E9C349]">
               Bengaluru · Dubai
             </span>
           </span>
@@ -84,7 +84,7 @@ export default function Navbar({ activePage, setActivePage }) {
                   aria-current={isActive ? 'page' : undefined}
                   className={`inline-flex min-h-11 items-center text-[14px] transition-colors ${
                     isActive
-                      ? 'text-white underline decoration-[#C8A34D] decoration-2 underline-offset-[10px]'
+                      ? 'text-white underline decoration-[#D4AF37] decoration-2 underline-offset-[10px]'
                       : 'text-white/70 hover:text-white'
                   }`}
                 >
@@ -126,7 +126,7 @@ export default function Navbar({ activePage, setActivePage }) {
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-0 z-50 lg:hidden">
           <div
-            className="fixed inset-0 bg-[#071527]/85"
+            className="fixed inset-0 bg-[#070F1B]/85"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
@@ -136,7 +136,7 @@ export default function Navbar({ activePage, setActivePage }) {
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
-            className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col justify-between overflow-y-auto bg-[#0B1F3A] px-6 py-6 text-white"
+            className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col justify-between overflow-y-auto bg-[#0B192C] px-6 py-6 text-white"
           >
             <div>
               <div className="flex items-center justify-between pb-8">
@@ -167,7 +167,7 @@ export default function Navbar({ activePage, setActivePage }) {
                         }}
                         aria-current={isActive ? 'page' : undefined}
                         className={`flex min-h-14 items-center justify-between py-3 font-heading text-[1.5rem] transition-colors ${
-                          isActive ? 'text-[#DFC06E]' : 'text-white hover:text-[#DFC06E]'
+                          isActive ? 'text-[#E9C349]' : 'text-white hover:text-[#E9C349]'
                         }`}
                       >
                         {item.label}

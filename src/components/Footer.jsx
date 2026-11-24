@@ -40,7 +40,7 @@ export default function Footer({ setActivePage }) {
   };
 
   return (
-    <footer className="bg-[#0B1F3A] text-white">
+    <footer className="bg-[#0B192C] text-white">
       <div className="shell pb-12 pt-20">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
@@ -63,7 +63,7 @@ export default function Footer({ setActivePage }) {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Setty Relators. I would like property details and a consultation.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#DFC06E]"
+                  className="underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#E9C349]"
                 >
                   {displayPhone}
                 </a>
@@ -71,7 +71,7 @@ export default function Footer({ setActivePage }) {
               <p>
                 <a
                   href="mailto:advisory@settyrelators.com"
-                  className="underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#DFC06E]"
+                  className="underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#E9C349]"
                 >
                   advisory@settyrelators.com
                 </a>
@@ -80,7 +80,7 @@ export default function Footer({ setActivePage }) {
           </div>
 
           <nav aria-label="Property portfolios" className="lg:col-span-3 lg:pl-6">
-            <h2 className="font-heading text-[1.5rem] text-[#DFC06E]">The portfolio</h2>
+            <h2 className="font-heading text-[1.5rem] text-[#E9C349]">The portfolio</h2>
             <ul className="mt-5 space-y-3 text-[17px]">
               {portfolio.map((item) => (
                 <li key={item.label}>
@@ -97,7 +97,7 @@ export default function Footer({ setActivePage }) {
           </nav>
 
           <nav aria-label="Site information" className="lg:col-span-2">
-            <h2 className="font-heading text-[1.5rem] text-[#DFC06E]">Information</h2>
+            <h2 className="font-heading text-[1.5rem] text-[#E9C349]">Information</h2>
             <ul className="mt-5 space-y-3 text-[17px]">
               {information.map((item) => (
                 <li key={item.label}>
@@ -114,12 +114,12 @@ export default function Footer({ setActivePage }) {
           </nav>
 
           <div className="lg:col-span-2">
-            <h2 className="font-heading text-[1.5rem] text-[#DFC06E]">Next step</h2>
+            <h2 className="font-heading text-[1.5rem] text-[#E9C349]">Next step</h2>
             <a
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello Setty Relators. Please share verified masterplans and current pricing.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex min-h-11 items-center gap-2 text-[17px] text-white underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#DFC06E]"
+              className="mt-5 inline-flex min-h-11 items-center gap-2 text-[17px] text-white underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#E9C349]"
             >
               Message the desk
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MessageCircle, MapPin } from 'lucide-react';
+import useReveal from '../hooks/useReveal';
 
 const WHATSAPP = '918431909508';
 const PHONE_DISPLAY = '+91 84319 09508';
@@ -17,14 +18,16 @@ const POINTS = [
 ];
 
 export default function AboutPage() {
+  useReveal();
+
   return (
     <div>
       {/* ------------------------------------------------------------- hero */}
       <section className="shell pt-10 lg:pt-14">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
-          <div className="lg:col-span-7">
-            <h1 className="display-xl max-w-[26ch] text-[#0B1F3A]">
-              A Bengaluru advisory desk, not a listings site.
+          <div data-reveal className="lg:col-span-7">
+            <h1 className="display-xl max-w-[20ch] text-[#FBFBFD]">
+              A desk, not a listings site.
             </h1>
             <p className="mt-6 max-w-[54ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
               Setty Relators is an independent consultancy and authorised channel partner for
@@ -35,9 +38,27 @@ export default function AboutPage() {
               That means the price you see is the allocation price, our fee comes from the developer
               rather than from you, and nobody is paid to steer you toward a particular project.
             </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello Setty Relators. I would like to speak with the advisory desk.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                Talk to the desk
+              </a>
+              <a
+                href={`tel:+${WHATSAPP}`}
+                className="inline-flex min-h-11 items-center text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D9BC55]"
+              >
+                {PHONE_DISPLAY}
+              </a>
+            </div>
           </div>
 
-          <figure className="lg:col-span-5">
+          <figure data-reveal className="lg:col-span-5">
             <img
               src="/images/purva-sounds-of-water/purva-villa-front-portico.jpeg"
               alt="Villa entrance portico at Purva Symphony, off Bannerghatta Road"
@@ -54,7 +75,7 @@ export default function AboutPage() {
 
       {/* ------------------------------------------------------------ photos */}
       <section aria-label="Developments the desk represents" className="shell mt-12 lg:mt-16">
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-3">
           <figure>
             <img
               src="/images/purva-sounds-of-water/purva-villas-community.jpeg"
@@ -83,6 +104,20 @@ export default function AboutPage() {
               <span>Photographs of the developments, not of a specific unit</span>
             </figcaption>
           </figure>
+          <figure>
+            <img
+              src="/images/purva-sounds-of-water/purva-villa-balcony-terrace.jpeg"
+              alt="Covered balcony terrace with seating and a timber ceiling"
+              width={1400}
+              height={900}
+              loading="lazy"
+              decoding="async"
+              className="h-[240px] w-full object-cover sm:h-[300px]"
+            />
+            <figcaption className="plate-line">
+              <span>Interiors at a development the desk represents</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -90,19 +125,19 @@ export default function AboutPage() {
       <section className="page-section">
         <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <h2 className="display-lg text-[#0B1F3A]">How we work</h2>
+            <h2 className="display-lg text-[#FBFBFD]">How we work</h2>
             <p className="mt-4 max-w-[34ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
               Seven things you can expect from the first call to the registration date.
             </p>
           </div>
 
-          <ol className="lg:col-span-8">
+          <ol data-reveal className="lg:col-span-8">
             {POINTS.map((point, i) => (
               <li
                 key={point}
-                className="flex gap-5 py-5 text-[17px] leading-relaxed text-[#1A1A1A] first:pt-0 last:pb-0 sm:gap-8"
+                className="flex gap-5 py-5 text-[17px] leading-relaxed text-[#FBFBFD] first:pt-0 last:pb-0 sm:gap-8"
               >
-                <span className="w-8 shrink-0 font-heading text-[1.25rem] text-[#A6832A] figures">
+                <span className="w-8 shrink-0 font-heading text-[1.25rem] text-[#A8871F] figures">
                   {i + 1}
                 </span>
                 <span>{point}</span>
@@ -115,7 +150,7 @@ export default function AboutPage() {
       {/* --------------------------------------------------------- disclosure */}
       <section className="section-navy on-ink">
         <div className="shell page-section">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div data-reveal className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
               <h2 className="display-md text-white">Channel partner disclosure</h2>
             </div>
@@ -134,7 +169,7 @@ export default function AboutPage() {
                 <div>
                   <dt className="text-white/50">Desk</dt>
                   <dd className="mt-1 flex items-center gap-2 text-white">
-                    <MapPin className="h-4 w-4 text-[#C8A34D]" aria-hidden="true" />
+                    <MapPin className="h-4 w-4 text-[#D4AF37]" aria-hidden="true" />
                     UB City and Indiranagar, Bengaluru
                   </dd>
                 </div>
@@ -146,9 +181,9 @@ export default function AboutPage() {
 
       {/* ------------------------------------------------------------ contact */}
       <section className="page-section">
-        <div className="shell flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div data-reveal className="shell flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <h2 className="display-lg text-[#0B1F3A]">Speak to an advisor</h2>
+            <h2 className="display-lg text-[#FBFBFD]">Speak to an advisor</h2>
             <p className="mt-4 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
               Price sheets, RERA documents and layout masterplans, sent to your WhatsApp.
             </p>
@@ -166,7 +201,7 @@ export default function AboutPage() {
             </a>
             <a
               href={`tel:+${WHATSAPP}`}
-              className="inline-flex min-h-11 items-center text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10] figures"
+              className="inline-flex min-h-11 items-center text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37] figures"
             >
               {PHONE_DISPLAY}
             </a>

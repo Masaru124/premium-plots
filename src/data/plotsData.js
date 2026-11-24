@@ -35,8 +35,8 @@ export const FEATURED_GROUPS = [
     highlights: '6 Strategic Growth Corridors • Direct Clear Titles • 100% RERA/BMRDA Guidelines'
   },
   {
-    id: 'tripon-groups',
-    name: 'Tripon Groups',
+    id: 'triton-groups',
+    name: 'Triton Groups',
     tagline: 'Luxury High-Rise Residences & Scenic Nandi Villa Enclaves',
     badge: 'Luxury Developer',
     categories: ['Apartments', 'Villas'],
@@ -103,7 +103,7 @@ export const INITIAL_LEADS = [
     name: 'Vikram & Radhika Seth',
     phone: '+91 98450 12345',
     email: 'vikram.seth@techcorp.com',
-    projectTitle: 'Tripon Nandi Luxury Villas (3, 4 & 5 BHK)',
+    projectTitle: 'Triton Nandi Luxury Villas (3, 4 & 5 BHK)',
     visitDate: '2026-10-18',
     visitTime: '03:30 PM',
     cabPickup: false,
@@ -248,18 +248,18 @@ export const INITIAL_PROJECTS = [
     ]
   },
   {
-    id: 'project-tripon-aero-gardens',
-    title: 'Tripon Aero Gardens - Airport Corridor',
-    slug: 'tripon-aero-gardens-devanahalli-airport',
+    id: 'project-triton-aero-gardens',
+    title: 'Triton Aero Gardens - Airport Corridor',
+    slug: 'triton-aero-gardens-devanahalli-airport',
     propertyType: 'Apartments',
-    groupName: 'Tripon Groups',
+    groupName: 'Triton Groups',
     tagline: 'Premium High-Rise Residences Located Just 5 Minutes from Kempegowda International Airport',
-    developer: 'Tripon Groups',
+    developer: 'Triton Groups',
     location: 'Devanahalli (5 mins from Kempegowda International Airport)',
     corridorId: 'airport-chikkajala',
     constructionStatus: 'Under Construction',
     coordinates: { lat: 13.2458, lng: 77.7121 },
-    googleMapsUrl: 'https://maps.google.com/?q=Tripon+Aero+Gardens+Airport',
+    googleMapsUrl: 'https://maps.google.com/?q=Triton+Aero+Gardens+Airport',
     developerPhone: '+91 8431909508',
     whatsappPhone: '+91 8431909508',
     priceRange: '₹52 Lakhs - ₹1.5 Crore',
@@ -277,7 +277,7 @@ export const INITIAL_PROJECTS = [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=60',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60'
     ],
-    overview: 'Tripon Aero Gardens by Tripon Groups is an iconic luxury residential community situated just 5 minutes from Kempegowda International Airport. Tailored for aviation professionals, global executives, and astute investors seeking high rental yield assets in North Bengaluru\'s aerospace corridor.',
+    overview: 'Triton Aero Gardens by Triton Groups is an iconic luxury residential community situated just 5 minutes from Kempegowda International Airport. Tailored for aviation professionals, global executives, and astute investors seeking high rental yield assets in North Bengaluru\'s aerospace corridor.',
     highlights: [
       'Unmatched location: 5 minutes from Terminal 1 & 2 of Kempegowda Airport',
       'Attractive pricing from ₹52 Lakhs to ₹1.5 Crore',
@@ -291,18 +291,18 @@ export const INITIAL_PROJECTS = [
     ]
   },
   {
-    id: 'project-tripon-nandi-villas',
-    title: 'Tripon Nandi Luxury Villas (3, 4 & 5 BHK)',
-    slug: 'tripon-nandi-villas-chikkaballapura-nandi-hills',
+    id: 'project-triton-nandi-villas',
+    title: 'Triton Nandi Luxury Villas (3, 4 & 5 BHK)',
+    slug: 'triton-nandi-villas-chikkaballapura-nandi-hills',
     propertyType: 'Villas',
-    groupName: 'Tripon Groups',
+    groupName: 'Triton Groups',
     tagline: 'Exclusive Gated Luxury Villa Community in Chikkaballapura with Scenic Views of Nandi Hills',
-    developer: 'Tripon Groups',
+    developer: 'Triton Groups',
     location: 'Chikkaballapura (Nandi Foothills)',
     corridorId: 'chikkaballapura-nandi',
     constructionStatus: 'Under Construction',
     coordinates: { lat: 13.4180, lng: 77.7110 },
-    googleMapsUrl: 'https://maps.google.com/?q=Tripon+Nandi+Villas+Chikkaballapura',
+    googleMapsUrl: 'https://maps.google.com/?q=Triton+Nandi+Villas+Chikkaballapura',
     developerPhone: '+91 8431909508',
     whatsappPhone: '+91 8431909508',
     priceRange: '₹2.4 Crore - ₹4.0 Crore',
@@ -320,7 +320,7 @@ export const INITIAL_PROJECTS = [
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=60',
       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=500&q=60'
     ],
-    overview: 'Tripon Nandi Villas by Tripon Groups is a boutique 15-acre gated villa community nestled in the serene foothills of Nandi Hills, Chikkaballapura. Offering 3, 4, and 5 BHK custom architectural villas with private landscaped courtyards, plunge pools, and luxury finishes, priced from ₹2.4 Cr to ₹4.0 Cr.',
+    overview: 'Triton Nandi Villas by Triton Groups is a boutique 15-acre gated villa community nestled in the serene foothills of Nandi Hills, Chikkaballapura. Offering 3, 4, and 5 BHK custom architectural villas with private landscaped courtyards, plunge pools, and luxury finishes, priced from ₹2.4 Cr to ₹4.0 Cr.',
     highlights: [
       'Exclusive boutique enclave with 3, 4 & 5 BHK luxury villas (2,400 to 4,500 sq.ft)',
       'Spectacular views of Nandi Hills with clean air and tranquil microclimate',
@@ -449,15 +449,15 @@ export const INITIAL_BLOGS = [
   },
   {
     id: 'blog-2',
-    title: 'Tripon Aero Gardens & Nandi Luxury Villas: Dual-Asset Power in North Bengaluru',
-    slug: 'tripon-aero-gardens-nandi-villas-guide',
+    title: 'Triton Aero Gardens & Nandi Luxury Villas: Dual-Asset Power in North Bengaluru',
+    slug: 'triton-aero-gardens-nandi-villas-guide',
     category: 'Developer Focus',
     date: 'September 28, 2026',
     readTime: '6 min read',
     author: 'North Bengaluru Advisory Team',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-    summary: 'Explore Tripon Groups\' high-growth apartments 5 minutes from Kempegowda Airport and bespoke 3, 4, 5 BHK luxury villas at Nandi Hills.',
-    content: `Tripon Groups provides exceptional real estate assets in Bengaluru\'s highest growth corridor.`
+    summary: 'Explore Triton Groups\' high-growth apartments 5 minutes from Kempegowda Airport and bespoke 3, 4, 5 BHK luxury villas at Nandi Hills.',
+    content: `Triton Groups provides exceptional real estate assets in Bengaluru\'s highest growth corridor.`
   },
   {
     id: 'blog-3',
@@ -505,12 +505,12 @@ export const CLIENT_REVIEWS = [
   {
     id: 'rev-2',
     name: 'Karthik & Sneha Iyer',
-    location: 'Homeowner at Tripon Aero Gardens (Airport Corridor)',
+    location: 'Homeowner at Triton Aero Gardens (Airport Corridor)',
     profession: 'Aviation Executive, Kempegowda International Airport',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-    quote: 'Being just 5 minutes from the airport, Tripon Aero Gardens was the perfect investment for us. Outstanding appreciation potential!',
-    project: 'Tripon Aero Gardens'
+    quote: 'Being just 5 minutes from the airport, Triton Aero Gardens was the perfect investment for us. Outstanding appreciation potential!',
+    project: 'Triton Aero Gardens'
   }
 ];
 

@@ -5,8 +5,8 @@ import { MapPin, MessageCircle, Search, ArrowRight, ArrowUpRight } from 'lucide-
 import { usePlots } from '../context/PlotsContext';
 import { BENGALURU_CORRIDORS, FEATURED_GROUPS } from '../data/plotsData';
 
-const FIELD = 'min-h-12 w-full bg-[#EFEEE8] px-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]';
-const LABEL = 'mb-2 block text-[14px] text-[#4C4C4C]';
+const FIELD = 'min-h-12 w-full bg-[#11233D] px-4 text-[17px] text-[#FBFBFD] placeholder:text-[#B0B8C4] focus:outline-none focus:ring-2 focus:ring-[#0B192C]';
+const LABEL = 'mb-2 block text-[14px] text-[#B0B8C4]';
 
 export default function ProjectsPage({ setActivePage, setSelectedProjectId, filterType = 'all', isSubpage = false }) {
   const { projects, openSiteVisitModal } = usePlots();
@@ -99,24 +99,24 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
   return (
     <div>
       {/* Header */}
-      <section className="bg-white">
+      <section className="bg-[#11233D]">
         <div className="shell pb-9 pt-12 lg:pt-16">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
               {isSubpage ? (
-                <h2 data-reveal className="display-lg text-[#0B1F3A]">{title}</h2>
+                <h2 data-reveal className="display-lg text-[#FBFBFD]">{title}</h2>
               ) : (
-                <h1 data-reveal className="display-xl text-[#0B1F3A]">{title}</h1>
+                <h1 data-reveal className="display-xl text-[#FBFBFD]">{title}</h1>
               )}
               <p className="mt-5 max-w-[52ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
                 {selectedPropertyType === 'Villas'
-                  ? 'Tripon’s Nandi Hills collection and the seller-listed Purva Symphony resale. Unit details, price and availability are confirmed with the advisor.'
+                  ? 'Triton’s Nandi Hills collection and the seller-listed Purva Symphony resale. Unit details, price and availability are confirmed with the advisor.'
                   : 'Seven verified plots, villas and apartments across Bengaluru and Dubai, each at the seller’s or developer’s current quote.'}
               </p>
               <p className="mt-6 text-[17px] leading-relaxed text-[var(--text-soft)]">
-                <span className="font-heading text-[1.5rem] text-[#0B1F3A] figures">{filteredProjects.length}</span>
+                <span className="font-heading text-[1.5rem] text-[#FBFBFD] figures">{filteredProjects.length}</span>
                 {' '}of{' '}
-                <span className="font-heading text-[1.5rem] text-[#0B1F3A] figures">{projects.length}</span> match now
+                <span className="font-heading text-[1.5rem] text-[#FBFBFD] figures">{projects.length}</span> match now
               </p>
             </div>
 
@@ -149,8 +149,8 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                   aria-pressed={selectedPropertyType === tab.id}
                   className={`min-h-11 px-4 text-[14px] transition-colors ${
                     selectedPropertyType === tab.id
-                      ? 'bg-white text-[#0B1F3A]'
-                      : 'text-[#555555] hover:text-[#0B1F3A]'
+                      ? 'bg-[#11233D] text-[#FBFBFD]'
+                      : 'text-[#B0B8C4] hover:text-[#FBFBFD]'
                   }`}
                 >
                   {tab.label}
@@ -162,7 +162,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
       </section>
 
       {/* Filters */}
-      <section aria-labelledby="filters-heading" className="bg-[#F8F8F5]">
+      <section aria-labelledby="filters-heading" className="bg-[#070F1B]">
         <div className="shell py-8">
           <h2 id="filters-heading" className="sr-only">Search and filter properties</h2>
 
@@ -170,11 +170,11 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
             <div>
               <label htmlFor="filter-search" className={LABEL}>Keyword</label>
               <div className="relative">
-                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5F5F5F]" aria-hidden="true" />
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#B0B8C4]" aria-hidden="true" />
                 <input
                   id="filter-search"
                   type="text"
-                  placeholder="Oriaiyan, Tripon, Kolar…"
+                  placeholder="Oriaiyan, Triton, Kolar…"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className={`${FIELD} pl-9`}
@@ -245,7 +245,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
 
           <div className="mt-7 flex flex-col gap-4 pt-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
-              <label htmlFor="filter-budget" className="shrink-0 text-[14px] text-[#4C4C4C]">
+              <label htmlFor="filter-budget" className="shrink-0 text-[14px] text-[#B0B8C4]">
                 Max budget
               </label>
               <input
@@ -256,21 +256,21 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                 step="1000000"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="h-1 w-48 cursor-pointer accent-[#0B1F3A]"
+                className="h-1 w-48 cursor-pointer accent-[#0B192C]"
               />
-              <output htmlFor="filter-budget" className="font-heading text-base text-[#0B1F3A] figures">
+              <output htmlFor="filter-budget" className="font-heading text-base text-[#FBFBFD] figures">
                 ₹{(maxPrice / 10000000).toFixed(2)} Cr
               </output>
             </div>
 
             <div className="flex items-center gap-5">
-              <p className="text-[13px] text-[#555555] figures" aria-live="polite">
+              <p className="text-[13px] text-[#B0B8C4] figures" aria-live="polite">
                 Showing {filteredProjects.length} of {projects.length}
               </p>
               {isFiltered && (
                 <button
                   onClick={resetFilters}
-                  className="min-h-11 text-[14px] text-[#0B1F3A] underline decoration-2 underline-offset-4"
+                  className="min-h-11 text-[14px] text-[#FBFBFD] underline decoration-2 underline-offset-4"
                 >
                   Clear filters
                 </button>
@@ -288,8 +288,8 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
           {filteredProjects.length === 0 ? (
             <div className="py-20 text-center">
               <p className="label label-gold">No match</p>
-              <h3 className="mt-4 display-md text-[#0B1F3A]">Nothing in the register matches those filters</h3>
-              <p className="mx-auto mt-3 max-w-[46ch] text-[15px] leading-relaxed text-[#555555]">
+              <h3 className="mt-4 display-md text-[#FBFBFD]">Nothing in the register matches those filters</h3>
+              <p className="mx-auto mt-3 max-w-[46ch] text-[15px] leading-relaxed text-[#B0B8C4]">
                 Widen the budget or corridor, or ask the desk — some allotments are released before
                 they are published here.
               </p>
@@ -308,7 +308,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
           ) : (
             <ul className="space-y-8">
               {filteredProjects.map((proj) => (
-                <li key={proj.id} data-reveal className="bg-white">
+                <li key={proj.id} data-reveal className="bg-[#11233D]">
                   <article className="grid gap-6 py-8 lg:grid-cols-12 lg:gap-8">
                     <div className="lg:col-span-4">
                       <button
@@ -339,31 +339,31 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                       <p className="label label-gold">
                         {proj.propertyType}{proj.groupName ? ` · ${proj.groupName}` : ''}
                       </p>
-                      <h3 className="mt-2 font-heading text-xl leading-snug text-[#0B1F3A] sm:text-2xl">
+                      <h3 className="mt-2 font-heading text-xl leading-snug text-[#FBFBFD] sm:text-2xl">
                         {proj.title}
                       </h3>
-                      <p className="mt-2 flex items-start gap-2 text-[16px] leading-relaxed text-[#555555]">
-                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#7A5C10]" aria-hidden="true" />
+                      <p className="mt-2 flex items-start gap-2 text-[16px] leading-relaxed text-[#B0B8C4]">
+                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#D4AF37]" aria-hidden="true" />
                         {proj.location}
                       </p>
-                      <p className="measure mt-4 text-[17px] leading-relaxed text-[#444444] line-clamp-3">
+                      <p className="measure mt-4 text-[17px] leading-relaxed text-[#C5C6CD] line-clamp-3">
                         {proj.overview}
                       </p>
 
                       <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-3 text-[13px]">
                         <div>
                           <dt className="label">Configurations</dt>
-                          <dd className="mt-1 text-[#444444]">
+                          <dd className="mt-1 text-[#C5C6CD]">
                             {(proj.dimensions || []).slice(0, 3).join(' · ') || 'On request'}
                           </dd>
                         </div>
                         <div>
                           <dt className="label">Listed</dt>
-                          <dd className="mt-1 text-[#444444] figures">{proj.availablePlots} plots</dd>
+                          <dd className="mt-1 text-[#C5C6CD] figures">{proj.availablePlots} plots</dd>
                         </div>
                         <div>
                           <dt className="label">Stage</dt>
-                          <dd className="mt-1 text-[#444444]">{proj.constructionStatus || 'On request'}</dd>
+                          <dd className="mt-1 text-[#C5C6CD]">{proj.constructionStatus || 'On request'}</dd>
                         </div>
                       </dl>
                     </div>
@@ -371,10 +371,10 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                     <div className="flex flex-col justify-between gap-5 pt-5 lg:col-span-3 lg:pl-8 lg:pt-0">
                       <div>
                         <p className="label">Price</p>
-                        <p className="mt-1 font-heading text-lg leading-snug text-[#0B1F3A] figures">
+                        <p className="mt-1 font-heading text-lg leading-snug text-[#FBFBFD] figures">
                           {proj.priceRange}
                         </p>
-                        <p className="mt-2 text-[13px] leading-relaxed text-[#5F5F5F]">
+                        <p className="mt-2 text-[13px] leading-relaxed text-[#B0B8C4]">
                           Developer or seller quote. Confirm before booking.
                         </p>
                       </div>
@@ -388,7 +388,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`Message the desk about ${proj.title}`}
-                          className="flex h-12 w-12 shrink-0 items-center justify-center bg-[#EFEEE8] text-[#0B1F3A] transition-colors hover:bg-[#0B1F3A] hover:text-[#DFC06E]"
+                          className="flex h-12 w-12 shrink-0 items-center justify-center bg-[#11233D] text-[#FBFBFD] transition-colors hover:bg-[#D4AF37] hover:text-[#0B192C]"
                         >
                           <MessageCircle className="h-4 w-4" aria-hidden="true" />
                         </a>
@@ -403,7 +403,7 @@ export default function ProjectsPage({ setActivePage, setSelectedProjectId, filt
                           if (setSelectedProjectId) setSelectedProjectId(proj.id);
                           if (setActivePage) setActivePage('project-details', 'all', proj.id);
                         }}
-                        className="flex min-h-11 items-center gap-2 text-left text-[14px] text-[#0B1F3A] underline decoration-2 underline-offset-4"
+                        className="flex min-h-11 items-center gap-2 text-left text-[14px] text-[#FBFBFD] underline decoration-2 underline-offset-4"
                       >
                         Full details
                         <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />

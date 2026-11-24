@@ -3,12 +3,13 @@
 import React, { useState } from 'react';
 import { MessageCircle, Copy, RotateCcw, ArrowRight, Check } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
+import useReveal from '../hooks/useReveal';
 
 const WHATSAPP = '918431909508';
 const PHONE_DISPLAY = '+91 84319 09508';
 
 const FIELD =
-  'min-h-12 w-full bg-[#EFEEE8] px-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]';
+  'min-h-12 w-full bg-[#11233D] px-4 text-[17px] text-[#FBFBFD] placeholder:text-[#B0B8C4] focus:outline-none focus:ring-2 focus:ring-[#0B192C]';
 
 /* A radio row: the whole line is the target, the marker is a square rule. */
 function Choice({ checked, onChange, name, label, sub, tone = 'light' }) {
@@ -21,8 +22,8 @@ function Choice({ checked, onChange, name, label, sub, tone = 'light' }) {
             ? 'text-white'
             : 'text-white/70 hover:text-white'
           : checked
-          ? 'text-[#0B1F3A]'
-          : 'text-[#1A1A1A] hover:text-[#0B1F3A]'
+          ? 'text-[#FBFBFD]'
+          : 'text-[#FBFBFD] hover:text-[#FBFBFD]'
       }`}
     >
       <input
@@ -35,7 +36,7 @@ function Choice({ checked, onChange, name, label, sub, tone = 'light' }) {
       <span
         aria-hidden="true"
         className={`mt-[9px] h-2.5 w-2.5 shrink-0 ${
-          checked ? 'bg-[#C8A34D]' : onInk ? 'bg-white/25' : 'bg-[#0B1F3A]/20'
+          checked ? 'bg-[#D4AF37]' : onInk ? 'bg-white/25' : 'bg-[#FBFBFD]/14'
         }`}
       />
       <span>
@@ -52,6 +53,7 @@ function Choice({ checked, onChange, name, label, sub, tone = 'light' }) {
 
 export default function PropertyMatchmakerPage({ heading, intro }) {
   const { showToast } = usePlots();
+  useReveal();
 
   const [isFormStarted, setIsFormStarted] = useState(false);
 
@@ -189,21 +191,22 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
 
   return (
     <div className="shell page-section max-w-[860px] pt-12 lg:pt-16">
-      <p className="text-[14px] text-[#7A5C10]">The desk&apos;s form</p>
-      <h1 className="mt-3 display-lg max-w-[22ch] text-[#0B1F3A]">
-        {heading || 'Tell us what you are looking for.'}
-      </h1>
-      {intro && (
-        <p className="mt-4 max-w-[54ch] text-[19px] leading-relaxed text-[var(--text-soft)]">{intro}</p>
-      )}
+      <div data-reveal>
+        <h1 className="display-xl max-w-[20ch] text-[#FBFBFD]">
+          {heading || 'Tell us what you are looking for.'}
+        </h1>
+        {intro && (
+          <p className="mt-5 max-w-[54ch] text-[19px] leading-relaxed text-[var(--text-soft)]">{intro}</p>
+        )}
 
-      <p className="mt-6 max-w-[58ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
-        Eight questions, then the desk sends masterplans and direct developer pricing on WhatsApp.
-        Zero brokerage to buyers.
-      </p>
+        <p className="mt-5 max-w-[58ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
+          Eight questions, then the desk sends masterplans and direct developer pricing on WhatsApp.
+          Zero brokerage to buyers.
+        </p>
+      </div>
 
       {!isFormStarted && !isSubmitted && (
-        <div className="mt-9">
+        <div data-reveal className="mt-9">
           <button
             type="button"
             onClick={() => {
@@ -224,10 +227,10 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
       {/* ------------------------------------------------------------ sent */}
       {isSubmitted && (
         <div className="mt-10">
-          <span className="inline-flex h-11 w-11 items-center justify-center bg-[#0B1F3A]">
-            <Check className="h-5 w-5 text-[#DFC06E]" aria-hidden="true" />
+          <span className="inline-flex h-11 w-11 items-center justify-center bg-[#133324]">
+            <Check className="h-5 w-5 text-[#E9C349]" aria-hidden="true" />
           </span>
-          <h2 className="mt-5 display-md text-[#0B1F3A]">Query prepared and sent.</h2>
+          <h2 className="mt-5 display-md text-[#FBFBFD]">Query prepared and sent.</h2>
           <p className="mt-3 max-w-[52ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
             WhatsApp has opened with your inquiry for {fullName}. If it did not open, send it again
             or copy the message.
@@ -250,7 +253,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4"
+              className="inline-flex min-h-11 items-center gap-2 text-[16px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4"
             >
               <RotateCcw className="h-4 w-4" aria-hidden="true" />
               Start again
@@ -267,13 +270,13 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
       {isFormStarted && !isSubmitted && (
         <form onSubmit={handleSubmit} className="mt-10 space-y-4">
           {errorMsg && (
-            <p role="alert" className="bg-[#C8A34D]/15 px-4 py-3 text-[16px] text-[#7A5C10]">
+            <p role="alert" className="bg-[#D4AF37]/15 px-4 py-3 text-[16px] text-[#D4AF37]">
               {errorMsg}
             </p>
           )}
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-4 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-4 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               1. Your name
             </legend>
             <label htmlFor="fullNameInput" className="sr-only">Full name</label>
@@ -289,8 +292,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             />
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-4 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-4 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               2. Contact number
             </legend>
             <div className="flex gap-3">
@@ -299,7 +302,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
                 id="countryCode"
                 value={countryCode}
                 onChange={(e) => setCountryCode(e.target.value)}
-                className="min-h-12 bg-[#EFEEE8] px-3 text-[16px] text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]"
+                className="min-h-12 bg-[#11233D] px-3 text-[16px] text-[#FBFBFD] focus:outline-none focus:ring-2 focus:ring-[#0B192C]"
               >
                 <option value="+91">+91 India</option>
                 <option value="+971">+971 UAE</option>
@@ -322,8 +325,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             </div>
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               3. Where in Bengaluru
             </legend>
             <p className="mb-3 clear-both text-[15px] text-[var(--text-soft)]">
@@ -343,7 +346,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
 
             {location === 'Other / Custom Locality' && (
               <div className="mt-4">
-                <label htmlFor="customLocality" className="mb-2 block text-[14px] text-[#4C4C4C]">
+                <label htmlFor="customLocality" className="mb-2 block text-[14px] text-[#B0B8C4]">
                   Locality
                 </label>
                 <input
@@ -358,8 +361,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             )}
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               4. What you are buying
             </legend>
             <div className="clear-both grid gap-x-10 sm:grid-cols-2">
@@ -376,8 +379,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             </div>
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               5. Plot size
             </legend>
             <div className="clear-both grid gap-x-10 sm:grid-cols-2">
@@ -396,7 +399,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             {plotSize === 'custom' && (
               <div className="mt-5 grid grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="customWidth" className="mb-2 block text-[14px] text-[#4C4C4C]">
+                  <label htmlFor="customWidth" className="mb-2 block text-[14px] text-[#B0B8C4]">
                     Frontage, feet
                   </label>
                   <input
@@ -409,7 +412,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
                   />
                 </div>
                 <div>
-                  <label htmlFor="customLength" className="mb-2 block text-[14px] text-[#4C4C4C]">
+                  <label htmlFor="customLength" className="mb-2 block text-[14px] text-[#B0B8C4]">
                     Depth, feet
                   </label>
                   <input
@@ -425,8 +428,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             )}
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               6. Budget
             </legend>
             <div className="clear-both grid gap-x-10 sm:grid-cols-2">
@@ -442,8 +445,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             </div>
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-2 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               7. When you are ready
             </legend>
             <div className="clear-both flex flex-wrap gap-x-8">
@@ -451,7 +454,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
                 <label
                   key={t}
                   className={`flex min-h-11 cursor-pointer items-center gap-3 text-[17px] ${
-                    timeline === t ? 'text-[#0B1F3A]' : 'text-[#1A1A1A] hover:text-[#0B1F3A]'
+                    timeline === t ? 'text-[#FBFBFD]' : 'text-[#FBFBFD] hover:text-[#FBFBFD]'
                   }`}
                 >
                   <input
@@ -463,7 +466,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
                   />
                   <span
                     aria-hidden="true"
-                    className={`h-2.5 w-2.5 shrink-0 ${timeline === t ? 'bg-[#C8A34D]' : 'bg-[#0B1F3A]/20'}`}
+                    className={`h-2.5 w-2.5 shrink-0 ${timeline === t ? 'bg-[#D4AF37]' : 'bg-[#FBFBFD]/14'}`}
                   />
                   {t}
                 </label>
@@ -471,8 +474,8 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             </div>
           </fieldset>
 
-          <fieldset className="bg-white px-5 py-7 sm:px-7">
-            <legend className="float-left mb-4 w-full font-heading text-[1.25rem] text-[#0B1F3A]">
+          <fieldset className="bg-[#11233D] px-5 py-7 sm:px-7">
+            <legend className="float-left mb-4 w-full font-heading text-[1.25rem] text-[#FBFBFD]">
               8. Anything else
             </legend>
             <label htmlFor="notesInput" className="sr-only">Notes</label>
@@ -486,7 +489,7 @@ export default function PropertyMatchmakerPage({ heading, intro }) {
             />
           </fieldset>
 
-          <div className="bg-white px-5 py-7 sm:px-7">
+          <div className="bg-[#11233D] px-5 py-7 sm:px-7">
             <button type="submit" className="btn-gold">
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Send on WhatsApp

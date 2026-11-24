@@ -3,9 +3,11 @@
 import React, { useState } from 'react';
 import { Search, ArrowRight, ArrowLeft } from 'lucide-react';
 import { usePlots } from '../context/PlotsContext';
+import useReveal from '../hooks/useReveal';
 
 export default function BlogPage() {
   const { blogs } = usePlots();
+  useReveal();
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [blogSearch, setBlogSearch] = useState('');
 
@@ -21,15 +23,15 @@ export default function BlogPage() {
         <button
           type="button"
           onClick={() => setSelectedBlog(null)}
-          className="inline-flex min-h-11 items-center gap-2 text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+          className="inline-flex min-h-11 items-center gap-2 text-[14px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           All guides
         </button>
 
         <header className="mt-8">
-          <p className="text-[14px] text-[#7A5C10]">{selectedBlog.category}</p>
-          <h1 className="mt-3 display-lg max-w-[26ch] text-[#0B1F3A]">{selectedBlog.title}</h1>
+          <p className="text-[14px] text-[#D4AF37]">{selectedBlog.category}</p>
+          <h1 className="mt-3 display-lg max-w-[26ch] text-[#FBFBFD]">{selectedBlog.title}</h1>
           <p className="mt-4 text-[15px] text-[var(--text-soft)]">
             {selectedBlog.author} · {selectedBlog.date} · {selectedBlog.readTime}
           </p>
@@ -43,7 +45,7 @@ export default function BlogPage() {
           className="mt-8 h-[260px] w-full object-cover sm:h-[380px] lg:h-[460px]"
         />
 
-        <div className="measure mt-10 whitespace-pre-line text-[19px] leading-[1.75] text-[#1A1A1A]">
+        <div className="measure mt-10 whitespace-pre-line text-[19px] leading-[1.75] text-[#FBFBFD]">
           {selectedBlog.content}
         </div>
       </article>
@@ -53,9 +55,8 @@ export default function BlogPage() {
   return (
     <div className="shell page-section pt-12 lg:pt-16">
       <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
-        <div className="lg:col-span-7">
-          <p className="text-[14px] text-[#7A5C10]">Guides</p>
-          <h1 className="mt-3 display-xl max-w-[20ch] text-[#0B1F3A]">
+        <div data-reveal className="lg:col-span-7">
+          <h1 className="display-xl max-w-[20ch] text-[#FBFBFD]">
             Notes on land, approval and title.
           </h1>
         </div>
@@ -65,7 +66,7 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <div className="mt-12 flex flex-wrap items-center justify-between gap-4 pt-2">
+      <div data-reveal className="mt-12 flex flex-wrap items-center justify-between gap-4 pt-2">
         <p className="text-[14px] text-[var(--text-soft)] figures">
           {filteredBlogs.length} of {blogs.length} guides
         </p>
@@ -74,7 +75,7 @@ export default function BlogPage() {
             Search guides
           </label>
           <Search
-            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5F5F5F]"
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#B0B8C4]"
             aria-hidden="true"
           />
           <input
@@ -83,7 +84,7 @@ export default function BlogPage() {
             placeholder="BDA, khata, airport…"
             value={blogSearch}
             onChange={(e) => setBlogSearch(e.target.value)}
-            className="min-h-12 w-full bg-[#EFEEE8] pl-9 pr-4 text-[17px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:outline-none focus:ring-2 focus:ring-[#0B1F3A]"
+            className="min-h-12 w-full bg-[#11233D] pl-9 pr-4 text-[17px] text-[#FBFBFD] placeholder:text-[#B0B8C4] focus:outline-none focus:ring-2 focus:ring-[#0B192C]"
           />
         </div>
       </div>
@@ -95,7 +96,7 @@ export default function BlogPage() {
       ) : (
         <ul className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
           {filteredBlogs.map((blog) => (
-            <li key={blog.id}>
+            <li key={blog.id} data-reveal>
               <button
                 type="button"
                 onClick={() => setSelectedBlog(blog)}
@@ -118,8 +119,8 @@ export default function BlogPage() {
                 <span>{blog.readTime}</span>
               </div>
 
-              <h2 className="mt-3 font-heading text-[1.25rem] leading-snug text-[#0B1F3A]">
-                <button type="button" onClick={() => setSelectedBlog(blog)} className="text-left hover:text-[#7A5C10]">
+              <h2 className="mt-3 font-heading text-[1.25rem] leading-snug text-[#FBFBFD]">
+                <button type="button" onClick={() => setSelectedBlog(blog)} className="text-left hover:text-[#D4AF37]">
                   {blog.title}
                 </button>
               </h2>
@@ -129,7 +130,7 @@ export default function BlogPage() {
               <button
                 type="button"
                 onClick={() => setSelectedBlog(blog)}
-                className="mt-4 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                className="mt-4 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
               >
                 Read the guide
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />

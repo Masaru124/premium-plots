@@ -3,6 +3,7 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { INTERIOR_PACKAGES } from '../data/plotsData';
+import useReveal from '../hooks/useReveal';
 
 const WHATSAPP = '918431909508';
 const PHONE_DISPLAY = '+91 84319 09508';
@@ -49,14 +50,15 @@ const ROWS = [
 ];
 
 export default function InteriorDesignView() {
+  useReveal();
+
   return (
     <div>
       {/* ------------------------------------------------------------- hero */}
       <section className="shell pt-10 lg:pt-14">
-        <p className="text-[14px] text-[#7A5C10]">Interiors · executed with Vinra</p>
-        <div className="mt-4 grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
-          <div className="lg:col-span-7">
-            <h1 className="display-xl max-w-[15ch] text-[#0B1F3A]">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <div data-reveal className="lg:col-span-7">
+            <h1 className="display-xl max-w-[15ch] text-[#FBFBFD]">
               Interiors, priced by the square foot.
             </h1>
             <p className="mt-6 max-w-[50ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
@@ -75,14 +77,14 @@ export default function InteriorDesignView() {
               </a>
               <a
                 href={`tel:+${WHATSAPP}`}
-                className="inline-flex min-h-11 items-center text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10] figures"
+                className="inline-flex min-h-11 items-center text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37] figures"
               >
                 or call {PHONE_DISPLAY}
               </a>
             </div>
           </div>
 
-          <figure className="lg:col-span-5">
+          <figure data-reveal className="lg:col-span-5">
             <img
               src={WORK_PHOTOS[0].src}
               alt={WORK_PHOTOS[0].alt}
@@ -99,7 +101,7 @@ export default function InteriorDesignView() {
 
       {/* -------------------------------------------------------------- work */}
       <section className="shell mt-12 lg:mt-16">
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div data-reveal className="grid gap-4 sm:grid-cols-2">
           {WORK_PHOTOS.slice(1).map((photo, i) => (
             <figure key={photo.src} className={i === 1 ? 'sm:mt-10' : ''}>
               <img
@@ -119,31 +121,31 @@ export default function InteriorDesignView() {
       {/* ---------------------------------------------------------- packages */}
       <section className="page-section">
         <div className="shell">
-          <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
-            <h2 className="display-lg lg:col-span-7 text-[#0B1F3A]">Three turnkey packages.</h2>
+          <div data-reveal className="grid gap-6 lg:grid-cols-12 lg:items-end">
+            <h2 className="display-lg lg:col-span-7 text-[#FBFBFD]">Three turnkey packages.</h2>
             <p className="lg:col-span-5 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
               Transparent per-square-foot pricing with factory-finish modular woodwork, Century and
               Greenply boards, and Hettich or Hafele hardware.
             </p>
           </div>
 
-          <div className="mt-10 overflow-x-auto">
+          <div data-reveal className="mt-10 overflow-x-auto">
             <table data-ui className="w-full min-w-[720px] border-collapse text-left">
               <caption className="sr-only">
                 Interior package comparison: Silver, Gold and Platinum
               </caption>
               <thead>
-                <tr data-ui className="border-b border-[#0B1F3A]">
+                <tr data-ui className="border-b border-[#0B192C]">
                   <th scope="col" className="py-4 pr-6 text-[14px] font-normal text-[var(--text-soft)]">
                     Included
                   </th>
                   {INTERIOR_PACKAGES.map((pkg) => (
                     <th key={pkg.name} scope="col" className="px-6 py-4 align-bottom">
-                      <span className="block font-heading text-[1.25rem] text-[#0B1F3A]">
+                      <span className="block font-heading text-[1.25rem] text-[#FBFBFD]">
                         {pkg.name.replace(' Package', '')}
                       </span>
                       {pkg.name === 'Gold Package' && (
-                        <span className="mt-1 block text-[14px] text-[#7A5C10]">Most chosen</span>
+                        <span className="mt-1 block text-[14px] text-[#D4AF37]">Most chosen</span>
                       )}
                     </th>
                   ))}
@@ -159,7 +161,7 @@ export default function InteriorDesignView() {
                       <td
                         key={pkg.name}
                         className={`px-6 py-4 text-[16px] leading-relaxed ${
-                          strong ? 'text-[#0B1F3A] figures' : 'text-[#1A1A1A]'
+                          strong ? 'text-[#FBFBFD] figures' : 'text-[#FBFBFD]'
                         }`}
                       >
                         {pkg[key]}
@@ -178,7 +180,7 @@ export default function InteriorDesignView() {
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hi Vinra Interiors! I want details on the ${pkg.name}.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                className="inline-flex min-h-11 items-center text-[16px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
               >
                 Ask about {pkg.name.replace(' Package', '')}
               </a>
@@ -189,12 +191,12 @@ export default function InteriorDesignView() {
 
       {/* ------------------------------------------------------------- scope */}
       <section className="section-navy on-ink">
-        <div className="shell page-section">
+        <div data-reveal className="shell page-section">
           <h2 className="display-lg max-w-[18ch] text-white">What the work covers.</h2>
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {SCOPE.map((item, i) => (
               <div key={item.title}>
-                <p className="font-heading text-[1.25rem] text-[#DFC06E] figures">{i + 1}</p>
+                <p className="font-heading text-[1.25rem] text-[#E9C349] figures">{i + 1}</p>
                 <h3 className="mt-2 font-heading text-[1.25rem] text-white">{item.title}</h3>
                 <p className="mt-2 text-[16px] leading-relaxed text-white/70">{item.copy}</p>
               </div>

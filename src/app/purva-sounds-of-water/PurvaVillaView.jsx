@@ -154,7 +154,7 @@ function PurvaVillaContent() {
   };
 
   return (
-    <div className="min-h-svh bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between">
+    <div className="min-h-svh bg-[#0B192C] text-[#FBFBFD] flex flex-col justify-between">
       <div>
         <Navbar activePage="villas" setActivePage={handleNavClick} />
 
@@ -163,11 +163,11 @@ function PurvaVillaContent() {
             aria-label="Breadcrumb"
             className="shell flex flex-wrap items-center gap-2 py-4 text-[14px] text-[var(--text-soft)]"
           >
-            <Link href="/" className="hover:text-[#0B1F3A]">Home</Link>
+            <Link href="/" className="hover:text-[#FBFBFD]">Home</Link>
             <span aria-hidden="true">/</span>
-            <a href="/luxury-villas-bangalore" className="hover:text-[#0B1F3A]">Luxury villas</a>
+            <a href="/luxury-villas-bangalore" className="hover:text-[#FBFBFD]">Luxury villas</a>
             <span aria-hidden="true">/</span>
-            <span className="text-[#0B1F3A]">Purva Symphony resale</span>
+            <span className="text-[#FBFBFD]">Purva Symphony resale</span>
           </nav>
 
           <ProjectDetailsPage projectId="project-purva-sounds-of-water-villa" setActivePage={handleNavClick} />
@@ -210,7 +210,7 @@ function PurvaVillaContent() {
           <section className="page-section">
             <div className="shell">
               <div data-reveal className="grid gap-6 lg:grid-cols-12 lg:items-end">
-                <h2 className="display-lg lg:col-span-7 max-w-[22ch] text-[#0B1F3A]">
+                <h2 className="display-lg lg:col-span-7 max-w-[22ch] text-[#FBFBFD]">
                   One seller-listed villa, read closely.
                 </h2>
                 <p className="lg:col-span-5 max-w-[46ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
@@ -222,8 +222,8 @@ function PurvaVillaContent() {
 
               <dl data-reveal className="mt-12 grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
                 {SPECS.map((s) => (
-                  <div key={s.term} className="bg-white px-5 py-5">
-                    <dt className="font-heading text-[1.125rem] text-[#0B1F3A]">{s.term}</dt>
+                  <div key={s.term} className="bg-[#11233D] px-5 py-5">
+                    <dt className="font-heading text-[1.125rem] text-[#FBFBFD]">{s.term}</dt>
                     <dd className="mt-2 text-[16px] leading-relaxed text-[var(--text-soft)]">{s.body}</dd>
                   </div>
                 ))}
@@ -234,27 +234,27 @@ function PurvaVillaContent() {
           {/* ---------------------------------------------------- unit record */}
           <section className="section-stone">
             <div className="shell page-section">
-              <h2 className="display-md text-[#0B1F3A]">Seller-advertised details, and what to check.</h2>
+              <h2 className="display-md text-[#FBFBFD]">Seller-advertised details, and what to check.</h2>
               <p className="mt-3 max-w-[58ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                 Every line below is what the seller states, with the verification a buyer should
                 complete before committing.
               </p>
 
               <div data-reveal className="mt-10 overflow-x-auto">
-                <table data-ui className="w-full min-w-[760px] border-collapse text-left">
+                <table data-ui className="w-full min-w-[560px] table-fixed border-collapse text-left">
                   <caption className="sr-only">Seller-advertised unit details and verification</caption>
                   <thead>
-                    <tr data-ui className="border-b border-[#0B1F3A]">
-                      <th scope="col" className="py-3 pr-8 font-normal text-[14px] text-[var(--text-soft)]">Parameter</th>
-                      <th scope="col" className="py-3 pr-8 font-normal text-[14px] text-[var(--text-soft)]">Seller states</th>
-                      <th scope="col" className="py-3 font-normal text-[14px] text-[var(--text-soft)]">Verify</th>
+                    <tr data-ui className="border-b border-[#0B192C]">
+                      <th scope="col" className="w-[22%] py-3 pr-6 font-normal text-[14px] text-[var(--text-soft)]">Parameter</th>
+                      <th scope="col" className="w-[39%] py-3 pr-6 font-normal text-[14px] text-[var(--text-soft)]">Seller states</th>
+                      <th scope="col" className="w-[39%] py-3 font-normal text-[14px] text-[var(--text-soft)]">Verify</th>
                     </tr>
                   </thead>
                   <tbody>
                     {UNIT_ROWS.map(([param, stated, verify]) => (
                       <tr key={param} data-ui className="border-b border-[var(--rule-strong)] align-top">
-                        <th scope="row" className="py-4 pr-8 text-[16px] font-normal text-[#0B1F3A]">{param}</th>
-                        <td className="py-4 pr-8 text-[16px] leading-relaxed text-[#1A1A1A]">{stated}</td>
+                        <th scope="row" className="py-4 pr-6 text-[16px] font-normal text-[#FBFBFD]">{param}</th>
+                        <td className="py-4 pr-8 text-[16px] leading-relaxed text-[#FBFBFD] [overflow-wrap:anywhere]">{stated}</td>
                         <td className="py-4 text-[16px] leading-relaxed text-[var(--text-soft)]">{verify}</td>
                       </tr>
                     ))}
@@ -268,7 +268,7 @@ function PurvaVillaContent() {
           <section className="page-section">
             <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div data-reveal className="lg:col-span-4">
-                <h2 className="display-lg text-[#0B1F3A]">The developer’s own record.</h2>
+                <h2 className="display-lg text-[#FBFBFD]">The developer’s own record.</h2>
                 <p className="mt-4 max-w-[36ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                   Published by Puravankara for the wider project. It is not a description of this
                   resale unit.
@@ -277,7 +277,7 @@ function PurvaVillaContent() {
                   href="https://www.puravankara.com/residential/bengaluru/purva-symphony"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                  className="mt-6 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
                 >
                   Puravankara’s project page
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -291,7 +291,7 @@ function PurvaVillaContent() {
                     className="grid gap-1 py-3.5 sm:grid-cols-[14rem_1fr] sm:gap-6"
                   >
                     <dt className="text-[15px] text-[var(--text-soft)]">{term}</dt>
-                    <dd className="text-[16px] leading-relaxed text-[#1A1A1A] figures">{value}</dd>
+                    <dd className="min-w-0 text-[16px] leading-relaxed text-[#FBFBFD] figures [overflow-wrap:anywhere]">{value}</dd>
                   </div>
                 ))}
               </dl>
@@ -321,7 +321,7 @@ function PurvaVillaContent() {
               <div data-reveal className="mt-12 grid gap-10 md:grid-cols-3">
                 {PLACES.map((group) => (
                   <div key={group.title}>
-                    <h3 className="font-heading text-[1.125rem] text-[#DFC06E]">{group.title}</h3>
+                    <h3 className="font-heading text-[1.125rem] text-[#E9C349]">{group.title}</h3>
                     <ul className="mt-3 space-y-2 text-[16px] leading-relaxed text-white/70">
                       {group.items.map((item) => (
                         <li key={item}>{item}</li>
@@ -337,7 +337,7 @@ function PurvaVillaContent() {
           <section className="page-section">
             <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div data-reveal className="lg:col-span-4">
-                <h2 className="display-lg text-[#0B1F3A]">Questions on this listing.</h2>
+                <h2 className="display-lg text-[#FBFBFD]">Questions on this listing.</h2>
                 <p className="mt-4 max-w-[34ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                   Seller-provided details are not developer-verified. Puravankara’s record is linked
                   above.
@@ -347,9 +347,9 @@ function PurvaVillaContent() {
               <div data-reveal className="lg:col-span-8">
                 {PURVA_FAQS.map((faq) => (
                   <details key={faq.q} className="group py-5">
-                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#1A1A1A] transition-colors hover:text-[#7A5C10]">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#FBFBFD] transition-colors hover:text-[#D4AF37]">
                       <span>{faq.q}</span>
-                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#A6832A] transition-transform group-open:rotate-45">
+                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#A8871F] transition-transform group-open:rotate-45">
                         +
                       </span>
                     </summary>
@@ -366,7 +366,7 @@ function PurvaVillaContent() {
                   </button>
                   <a
                     href={`tel:+${WHATSAPP}`}
-                    className="inline-flex min-h-11 items-center text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10] figures"
+                    className="inline-flex min-h-11 items-center text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37] figures"
                   >
                     {PHONE_DISPLAY}
                   </a>

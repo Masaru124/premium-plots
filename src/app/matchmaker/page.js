@@ -20,13 +20,13 @@ function MatchmakerContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
+    <div className="min-h-screen bg-[#0B192C] text-[#FBFBFD] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#FBFBFD]">
       <div>
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
         <main className="animate-fadeIn">
           <PropertyMatchmakerPage
             setActivePage={handleNavClick}
-            heading="Property Matchmaker for Bangalore Plots & Villas"
+            heading="Find your plot in Bengaluru."
             intro="Answer a few questions about your budget, preferred Bengaluru corridor and timeline, and get matched to residential plots and villas that actually fit — then confirm current availability with an advisor."
           />
         </main>

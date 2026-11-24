@@ -20,13 +20,13 @@ function PropertyFinderContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#0B1F3A]">
+    <div className="min-h-screen bg-[#0B192C] text-[#FBFBFD] flex flex-col justify-between selection:bg-[#F2B705] selection:text-[#FBFBFD]">
       <div>
         <Navbar activePage={activePage} setActivePage={handleNavClick} />
         <main className="animate-fadeIn">
           <PropertyMatchmakerPage
             setActivePage={handleNavClick}
-            heading="Search Plots & Villas in Bangalore by Budget"
+            heading="Search plots by budget."
             intro="Filter residential plots and villas across Bengaluru's growth corridors by budget, plot size and configuration, shortlist the matches and request current pricing and site-visit slots."
           />
         </main>

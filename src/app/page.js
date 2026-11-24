@@ -159,12 +159,12 @@ function AppContent() {
 
   return (
     <div
-      className="min-h-screen flex flex-col justify-between selection:bg-[#C8A34D] selection:text-[#0B1F3A] antialiased"
+      className="min-h-screen flex flex-col justify-between selection:bg-[#D4AF37] selection:text-[#0B192C] antialiased"
       data-hash-route
     >
       <a
         href="#main-content"
-        className="sr-only-focusable fixed left-4 top-4 z-[60] bg-[#0B1F3A] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#DFC06E]"
+        className="sr-only-focusable fixed left-4 top-4 z-[60] bg-[#0B192C] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#E9C349]"
       >
         Skip to content
       </a>
@@ -177,9 +177,9 @@ function AppContent() {
           <div
             role="status"
             aria-live="polite"
-            className="fixed right-4 top-24 z-50 max-w-xs border border-[#C8A34D] bg-[#0B1F3A] px-4 py-3 text-sm text-white animate-fadeIn"
+            className="fixed right-4 top-24 z-50 max-w-xs border border-[#D4AF37] bg-[#0B192C] px-4 py-3 text-sm text-white animate-fadeIn"
           >
-            <span className="mr-2 inline-block h-1.5 w-1.5 translate-y-[-2px] bg-[#C8A34D]" />
+            <span className="mr-2 inline-block h-1.5 w-1.5 translate-y-[-2px] bg-[#D4AF37]" />
             {toastMessage}
           </div>
         )}

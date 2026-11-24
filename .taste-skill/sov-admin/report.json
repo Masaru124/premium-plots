@@ -1,0 +1,1408 @@
+{
+ "url": "http://localhost:54987/admin",
+ "at": "2026-11-24T11:48:42.443Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.78,
+    0.5
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1268,
+     "screens": 1.4,
+     "words": 135,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 5,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Setty Relators",
+     "words": 2,
+     "chars": 14,
+     "lines": 1,
+     "size": 52,
+     "vw": 3.6,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.015,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.34,
+     "top": 733,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Portfolio console",
+     "words": 2,
+     "lines": 1,
+     "size": 34.6,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Portfolio console",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.26,
+      "top": 180,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 733,
+      "tag": "p",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      24,
+      35,
+      52
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.7
+     },
+     "measureChars": 94,
+     "max": {
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "text": "Setty Relators"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#faf9f6",
+       "top": 0,
+       "hsl": {
+        "h": 45,
+        "s": 0.29,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 653,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.85
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.09
+      },
+      {
+       "color": "#e9c349",
+       "share": 0.04
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.01
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": [
+      {
+       "text": "Portfolio console",
+       "ratio": 1,
+       "need": 3,
+       "size": 34.6,
+       "fg": "#fbfbfd",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Project inventory and buyer enquiries. A",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 17,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Team passcode",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Neon Postgres · session held server-side",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a visit",
+      "Sign in"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1268,
+    "margins": {
+     "left": 100,
+     "right": 100
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 653,
+      "words": 42,
+      "media": 0,
+      "middle": 209,
+      "heading": {
+       "text": "Portfolio console",
+       "size": 35,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 100,
+      "textLeft": 152,
+      "textRight": 125,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 653,
+      "height": 615,
+      "words": 145,
+      "media": 0,
+      "middle": 94,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 52,
+       "tag": "p"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Portfolio console",
+      "size": 35,
+      "top": 180,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 530,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.22,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 480,
+     "h": 600
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.63,
+    0.16,
+    0.22
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2062,
+     "screens": 2,
+     "words": 123,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 5,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Setty Relators",
+     "words": 2,
+     "chars": 14,
+     "lines": 1,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.015,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 699,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Portfolio console",
+     "words": 2,
+     "lines": 1,
+     "size": 25.6,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 699,
+      "tag": "p",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      24,
+      26,
+      32
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "text": "Setty Relators"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#faf9f6",
+       "top": 0,
+       "hsl": {
+        "h": 45,
+        "s": 0.29,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 619,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.85
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.1
+      },
+      {
+       "color": "#e9c349",
+       "share": 0.04
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.01
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": [
+      {
+       "text": "Portfolio console",
+       "ratio": 1,
+       "need": 3,
+       "size": 25.6,
+       "fg": "#fbfbfd",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Project inventory and buyer enquiries. A",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 17,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Team passcode",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Neon Postgres · session held server-side",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Sign in"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2062,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 619,
+      "words": 30,
+      "media": 0,
+      "middle": 110,
+      "heading": {
+       "text": "Portfolio console",
+       "size": 26,
+       "tag": "h1"
+      },
+      "left": 92,
+      "right": 40,
+      "textLeft": 92,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 619,
+      "height": 1443,
+      "words": 145,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Portfolio console",
+      "size": 26,
+      "top": 180,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 194,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.74,
+    0.27,
+    0.36
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2153,
+     "screens": 2.6,
+     "words": 123,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 5,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Setty Relators",
+     "words": 2,
+     "chars": 14,
+     "lines": 1,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.015,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 667,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Portfolio console",
+     "words": 2,
+     "lines": 1,
+     "size": 25.6,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 19,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Portfolio console",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 180,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 667,
+      "tag": "p",
+      "kind": "heading"
+     },
+     {
+      "text": "The portfolio",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1069,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Information",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1413,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Next step",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1717,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      24,
+      26,
+      32
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.7
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "text": "Setty Relators"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#faf9f6",
+       "top": 0,
+       "hsl": {
+        "h": 45,
+        "s": 0.29,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 587,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.85
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.1
+      },
+      {
+       "color": "#e9c349",
+       "share": 0.04
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.01
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": [
+      {
+       "text": "Portfolio console",
+       "ratio": 1,
+       "need": 3,
+       "size": 25.6,
+       "fg": "#fbfbfd",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Project inventory and buyer enquiries. A",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 17,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Team passcode",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      },
+      {
+       "text": "Neon Postgres · session held server-side",
+       "ratio": 1.9,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#b0b8c4",
+       "bg": "#faf9f6"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Sign in"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2153,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 587,
+      "words": 30,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Portfolio console",
+       "size": 26,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 587,
+      "height": 1567,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 49,
+      "textLeft": 20,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Portfolio console",
+      "size": 26,
+      "top": 180,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 2,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #faf9f6).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Unreadable text: \"Portfolio console\" 1:1 (#fbfbfd on #faf9f6); \"Project inventory and buyer enquiries. A\" 1.9:1 (#b0b8c4 on #faf9f6); \"Team passcode\" 1.9:1 (#b0b8c4 on #faf9f6); \"Neon Postgres · session held server-side\" 1.9:1 (#b0b8c4 on #faf9f6)",
+   "fix": "Raise contrast to at least 4.5:1 for text, 3:1 for large display.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 94 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 52px (3.6vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"Portfolio console\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 2 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "small-title",
+   "width": 768,
+   "message": "The h1 is 26px (\"Portfolio console\").",
+   "fix": "Set the title at display size, or make the large text of the first screen the h1."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\sov-admin\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\sov-admin\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\sov-admin\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\sov-admin\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\sov-admin\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\sov-admin\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

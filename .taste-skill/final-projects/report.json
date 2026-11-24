@@ -1,32 +1,26 @@
 {
- "url": "http://localhost:3100/?page=projects",
- "at": "2026-11-23T16:52:51.247Z",
+ "url": "http://localhost:54987/?page=projects",
+ "at": "2026-11-24T12:45:58.639Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 12,
+   "screens": 6,
    "filled": [
-    0.81,
-    0.87,
-    0.78,
-    1,
-    0.9,
-    0.83,
-    0.78,
-    0.96,
-    0.39,
-    0.61,
-    0.97,
-    0.87
+    0.89,
+    0.7,
+    0.71,
+    0.82,
+    0.6,
+    0.5
    ],
    "motion": {
-    "elements": 0,
-    "css": 0,
-    "transitions": 0,
-    "scripted": 0,
+    "elements": 11,
+    "css": 2,
+    "transitions": 8,
+    "scripted": 1,
     "videos": 0,
     "playingVideos": 0
    },
@@ -36,843 +30,30 @@
      "h": 900
     },
     "page": {
-     "height": 17620,
-     "screens": 19.6,
-     "words": 812,
-     "img": 10,
+     "height": 4925,
+     "screens": 5.5,
+     "words": 1043,
+     "img": 8,
      "video": 0,
      "canvas": 0,
-     "svg": 9,
-     "sections": 8,
-     "horizontalOverflow": 968,
-     "overflowCulprits": [
-      "img.absolute.inset-0 (+968px)",
-      "img.absolute.inset-0 (+968px)",
-      "img.h-[240px].w-full (+216px)"
-     ],
+     "svg": 27,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 9,
+     "realPictures": 8,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
       "photo-1500382017468-9049fed747ef?auto=format&fit",
-      "photo-1574362848149-11496d93a7c7?auto=format&fit",
       "photo-1500382017468-9049fed747ef?auto=format&fit",
       "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
       "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1600585154340-be6161a56a0c?auto=format&fit"
-     ],
-     "blendText": 0,
-     "sideScrollers": 0,
-     "brokenImages": [],
-     "emoji": [],
-     "videosNoPoster": 0
-    },
-    "hero": null,
-    "h1": {
-     "text": "A verified property register.",
-     "words": 4,
-     "lines": 1,
-     "size": 32,
-     "font": "Times New Roman"
-    },
-    "headings": [
-     {
-      "text": "A verified property register.",
-      "words": 4,
-      "chars": 29,
-      "lines": 1,
-      "size": 32,
-      "vw": 2.2,
-      "font": "Times New Roman",
-      "weight": 700,
-      "tracking": 0,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.99,
-      "top": 1802,
-      "tag": "h1",
-      "kind": "heading"
-     }
-    ],
-    "headingSummary": {
-     "count": 1,
-     "maxLines": 1,
-     "over2Lines": 0,
-     "statements": 0,
-     "centered": 0,
-     "medianWords": 4,
-     "mixedFontHeadings": 0
-    },
-    "type": {
-     "families": [
-      {
-       "family": "Times New Roman",
-       "share": 0.88,
-       "mono": false
-      },
-      {
-       "family": "Arial",
-       "share": 0.12,
-       "mono": false
-      }
-     ],
-     "familyCount": 2,
-     "sizes": [
-      13,
-      16,
-      19,
-      24,
-      32
-     ],
-     "sizeCount": 5,
-     "notLoaded": [],
-     "body": {
-      "font": "Times New Roman",
-      "size": 16,
-      "leading": 1.2,
-      "weight": 400,
-      "tracking": 0,
-      "contrast": 21
-     },
-     "measureChars": 178,
-     "max": {
-      "size": 32,
-      "vw": 2.2,
-      "font": "Times New Roman",
-      "text": "A verified property register."
-     },
-     "monoShare": 0,
-     "monoProseShare": 0,
-     "monoFamilies": [],
-     "monoSamples": [],
-     "microLabels": 0,
-     "microLabelShare": 0,
-     "microSamples": [],
-     "upperShare": 0,
-     "centerShare": 0.12,
-     "smallText": 0
-    },
-    "eyebrows": [
-     {
-      "text": "UB City, Bengaluru",
-      "above": "A verified property register.",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 16,
-      "top": 1763
-     }
-    ],
-    "numbered": [],
-    "color": {
-     "bodyBg": "#ffffff",
-     "bodyBgHsl": {
-      "h": 0,
-      "s": 0,
-      "l": 1
-     },
-     "dark": false,
-     "sectionBgs": [
-      {
-       "color": "#f0f0f0",
-       "top": 3948,
-       "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 0.94
-       }
-      }
-     ],
-     "textColors": [
-      {
-       "color": "#000000",
-       "share": 0.93
-      },
-      {
-       "color": "#0000ee",
-       "share": 0.07
-      }
-     ],
-     "button": {
-      "bg": "#f0f0f0",
-      "hsl": {
-       "h": 0,
-       "s": 0,
-       "l": 0.94
-      },
-      "fg": "#000000"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 2,
-     "inHero": 0,
-     "radius": 0,
-     "height": 33,
-     "withShadow": 0,
-     "withGradient": 0,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": []
-    },
-    "surfaces": {
-     "shadowStatic": 0,
-     "shadowOverlay": 0,
-     "shadowSamples": [],
-     "gradients": 0,
-     "scrims": 0,
-     "gradientSamples": [],
-     "gradientText": 0,
-     "hairlines": 0,
-     "hairlineSamples": [],
-     "outlinedBoxes": 0,
-     "dashed": 0,
-     "blurred": 0,
-     "roundedBoxes": 0,
-     "boxRadius": 0,
-     "squareMedia": 9,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
-     "textShadow": 0,
-     "cardRows": []
-    },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.76
-     }
-    ],
-    "nav": {
-     "links": 5,
-     "fixed": false,
-     "height": 183,
-     "floatingPill": false,
-     "blur": false
-    },
-    "fontsLoaded": []
-   },
-   "layout": {
-    "viewport": {
-     "w": 1440,
-     "h": 900
-    },
-    "pageH": 17620,
-    "margins": {
-     "left": 8,
-     "right": 218
-    },
-    "sections": [
-     {
-      "sel": "header.sticky.top-0",
-      "tag": "header",
-      "top": 26,
-      "height": 183,
-      "words": 17,
-      "media": 0,
-      "middle": 0,
-      "heading": null,
-      "left": 8,
-      "right": 1195,
-      "textLeft": 8,
-      "textRight": 1199,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": false
-     },
-     {
-      "sel": "main#main-content.animate-fadeIn.focus:outline-none",
-      "tag": "main",
-      "top": 209,
-      "height": 16581,
-      "words": 921,
-      "media": 10,
-      "middle": 0,
-      "heading": {
-       "text": "A verified property register.",
-       "size": 32,
-       "tag": "h1"
-      },
-      "left": 8,
-      "right": 41,
-      "textLeft": 8,
-      "textRight": 20,
-      "fullBleed": true,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": false
-     },
-     {
-      "sel": "footer.bg-[#0B1F3A].text-white",
-      "tag": "footer",
-      "top": 16834,
-      "height": 770,
-      "words": 185,
-      "media": 0,
-      "middle": 0,
-      "heading": {
-       "text": "The portfolio",
-       "size": 24,
-       "tag": "h2"
-      },
-      "left": 8,
-      "right": 587,
-      "textLeft": 8,
-      "textRight": 18,
-      "fullBleed": false,
-      "footer": true,
-      "hero": false,
-      "continues": false,
-      "pinned": false
-     }
-    ],
-    "gaps": [],
-    "h1s": [
-     {
-      "text": "A verified property register.",
-      "size": 32,
-      "top": 1802,
-      "firstScreen": false
-     }
-    ],
-    "edgeText": [
-     {
-      "text": "Skip to content",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "+91 84319 09508",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Independent advisory · Zero brokerage to buyers",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "UB City, Bengaluru",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "A verified property register.",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Plots, villas and apartments across Bengaluru and ",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Oriaiyan Signature Plotted Developments & Villa Pl",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur",
-      "side": "left",
-      "px": 8
-     }
-    ],
-    "edges": [
-     {
-      "x": 8,
-      "n": 29
-     }
-    ],
-    "leftBlocks": 29,
-    "bodySize": 16,
-    "stage": false,
-    "explains": false,
-    "slivers": [],
-    "voidShare": 0.05,
-    "voidBox": {
-     "x": 300,
-     "y": 120,
-     "w": 1140,
-     "h": 60
-    }
-   },
-   "app": null,
-   "consoleErrors": []
-  },
-  {
-   "width": 768,
-   "height": 1024,
-   "load": "load",
-   "screens": 12,
-   "filled": [
-    0.83,
-    0.84,
-    1,
-    0.93,
-    0.87,
-    0.96,
-    0.87,
-    0.49,
-    0.66,
-    1,
-    0.73,
-    0.84
-   ],
-   "motion": {
-    "elements": 0,
-    "css": 0,
-    "transitions": 0,
-    "scripted": 0,
-    "videos": 0,
-    "playingVideos": 0
-   },
-   "metrics": {
-    "viewport": {
-     "w": 768,
-     "h": 1024
-    },
-    "page": {
-     "height": 17980,
-     "screens": 17.6,
-     "words": 812,
-     "img": 10,
-     "video": 0,
-     "canvas": 0,
-     "svg": 9,
-     "sections": 8,
-     "horizontalOverflow": 1640,
-     "overflowCulprits": [
-      "img.absolute.inset-0 (+1640px)",
-      "img.absolute.inset-0 (+1640px)",
-      "img.h-[240px].w-full (+888px)"
-     ],
-     "uiFragments": 0,
-     "uiAbuse": false,
-     "realPictures": 10,
-     "videoCount": 0,
-     "uiPictures": 0,
-     "pictureSamples": [
-      "photo-1500382017468-9049fed747ef?auto=format&fit",
       "photo-1574362848149-11496d93a7c7?auto=format&fit",
-      "photo-1500382017468-9049fed747ef?auto=format&fit",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1600585154340-be6161a56a0c?auto=format&fit"
-     ],
-     "blendText": 0,
-     "sideScrollers": 0,
-     "brokenImages": [],
-     "emoji": [],
-     "videosNoPoster": 0
-    },
-    "hero": null,
-    "h1": {
-     "text": "A verified property register.",
-     "words": 4,
-     "lines": 1,
-     "size": 32,
-     "font": "Times New Roman"
-    },
-    "headings": [
-     {
-      "text": "A verified property register.",
-      "words": 4,
-      "chars": 29,
-      "lines": 1,
-      "size": 32,
-      "vw": 4.2,
-      "font": "Times New Roman",
-      "weight": 700,
-      "tracking": 0,
-      "leading": 1.2,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.98,
-      "top": 1802,
-      "tag": "h1",
-      "kind": "heading"
-     }
-    ],
-    "headingSummary": {
-     "count": 1,
-     "maxLines": 1,
-     "over2Lines": 0,
-     "statements": 0,
-     "centered": 0,
-     "medianWords": 4,
-     "mixedFontHeadings": 0
-    },
-    "type": {
-     "families": [
-      {
-       "family": "Times New Roman",
-       "share": 0.88,
-       "mono": false
-      },
-      {
-       "family": "Arial",
-       "share": 0.12,
-       "mono": false
-      }
-     ],
-     "familyCount": 2,
-     "sizes": [
-      13,
-      16,
-      19,
-      24,
-      32
-     ],
-     "sizeCount": 5,
-     "notLoaded": [],
-     "body": {
-      "font": "Times New Roman",
-      "size": 16,
-      "leading": 1.2,
-      "weight": 400,
-      "tracking": 0,
-      "contrast": 21
-     },
-     "measureChars": 94,
-     "max": {
-      "size": 32,
-      "vw": 4.2,
-      "font": "Times New Roman",
-      "text": "A verified property register."
-     },
-     "monoShare": 0,
-     "monoProseShare": 0,
-     "monoFamilies": [],
-     "monoSamples": [],
-     "microLabels": 0,
-     "microLabelShare": 0,
-     "microSamples": [],
-     "upperShare": 0,
-     "centerShare": 0.12,
-     "smallText": 0
-    },
-    "eyebrows": [
-     {
-      "text": "UB City, Bengaluru",
-      "above": "A verified property register.",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 16,
-      "top": 1763
-     }
-    ],
-    "numbered": [],
-    "color": {
-     "bodyBg": "#ffffff",
-     "bodyBgHsl": {
-      "h": 0,
-      "s": 0,
-      "l": 1
-     },
-     "dark": false,
-     "sectionBgs": [
-      {
-       "color": "#f0f0f0",
-       "top": 3966,
-       "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 0.94
-       }
-      }
-     ],
-     "textColors": [
-      {
-       "color": "#000000",
-       "share": 0.93
-      },
-      {
-       "color": "#0000ee",
-       "share": 0.07
-      }
-     ],
-     "button": {
-      "bg": "#f0f0f0",
-      "hsl": {
-       "h": 0,
-       "s": 0,
-       "l": 0.94
-      },
-      "fg": "#000000"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 5,
-     "inHero": 0,
-     "radius": 0,
-     "height": 36,
-     "withShadow": 0,
-     "withGradient": 0,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": []
-    },
-    "surfaces": {
-     "shadowStatic": 0,
-     "shadowOverlay": 0,
-     "shadowSamples": [],
-     "gradients": 0,
-     "scrims": 0,
-     "gradientSamples": [],
-     "gradientText": 0,
-     "hairlines": 0,
-     "hairlineSamples": [],
-     "outlinedBoxes": 0,
-     "dashed": 0,
-     "blurred": 0,
-     "roundedBoxes": 0,
-     "boxRadius": 0,
-     "squareMedia": 10,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
-     "textShadow": 0,
-     "cardRows": []
-    },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.79
-     }
-    ],
-    "nav": {
-     "links": 5,
-     "fixed": false,
-     "height": 183,
-     "floatingPill": false,
-     "blur": false
-    },
-    "fontsLoaded": []
-   },
-   "layout": {
-    "viewport": {
-     "w": 768,
-     "h": 1024
-    },
-    "pageH": 17980,
-    "margins": {
-     "left": 8,
-     "right": 14
-    },
-    "sections": [
-     {
-      "sel": "header.sticky.top-0",
-      "tag": "header",
-      "top": 26,
-      "height": 183,
-      "words": 17,
-      "media": 0,
-      "middle": 0,
-      "heading": null,
-      "left": 8,
-      "right": 523,
-      "textLeft": 8,
-      "textRight": 527,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": false
-     },
-     {
-      "sel": "main#main-content.animate-fadeIn.focus:outline-none",
-      "tag": "main",
-      "top": 209,
-      "height": 16923,
-      "words": 921,
-      "media": 11,
-      "middle": 0,
-      "heading": {
-       "text": "A verified property register.",
-       "size": 32,
-       "tag": "h1"
-      },
-      "left": 8,
-      "right": 8,
-      "textLeft": 8,
-      "textRight": 14,
-      "fullBleed": true,
-      "footer": false,
-      "hero": true,
-      "continues": true,
-      "pinned": false
-     },
-     {
-      "sel": "footer.bg-[#0B1F3A].text-white",
-      "tag": "footer",
-      "top": 17176,
-      "height": 788,
-      "words": 145,
-      "media": 0,
-      "middle": 0,
-      "heading": {
-       "text": "The portfolio",
-       "size": 24,
-       "tag": "h2"
-      },
-      "left": 8,
-      "right": 57,
-      "textLeft": 8,
-      "textRight": 12,
-      "fullBleed": false,
-      "footer": true,
-      "hero": false,
-      "continues": false,
-      "pinned": false
-     }
-    ],
-    "gaps": [],
-    "h1s": [
-     {
-      "text": "A verified property register.",
-      "size": 32,
-      "top": 1802,
-      "firstScreen": false
-     }
-    ],
-    "edgeText": [
-     {
-      "text": "Skip to content",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "+91 84319 09508",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Independent advisory · Zero brokerage to buyers",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "UB City, Bengaluru",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "A verified property register.",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Plots, villas and apartments across Bengaluru and ",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Oriaiyan Signature Plotted Developments & Villa Pl",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur",
-      "side": "left",
-      "px": 8
-     }
-    ],
-    "edges": [
-     {
-      "x": 8,
-      "n": 29
-     }
-    ],
-    "leftBlocks": 29,
-    "bodySize": 16,
-    "stage": false,
-    "explains": false,
-    "slivers": [],
-    "voidShare": 0,
-    "voidBox": null
-   },
-   "app": null,
-   "consoleErrors": []
-  },
-  {
-   "width": 390,
-   "height": 844,
-   "load": "load",
-   "screens": 12,
-   "filled": [
-    0.83,
-    0.88,
-    0.81,
-    0.85,
-    0.84,
-    0.79,
-    0.62,
-    0.53,
-    0.55,
-    0.44,
-    0.54,
-    0.63
-   ],
-   "motion": {
-    "elements": 0,
-    "css": 0,
-    "transitions": 0,
-    "scripted": 0,
-    "videos": 0,
-    "playingVideos": 0
-   },
-   "metrics": {
-    "viewport": {
-     "w": 1560,
-     "h": 3376
-    },
-    "page": {
-     "height": 18336,
-     "screens": 5.4,
-     "words": 812,
-     "img": 10,
-     "video": 0,
-     "canvas": 0,
-     "svg": 9,
-     "sections": 8,
-     "horizontalOverflow": 848,
-     "overflowCulprits": [
-      "img.absolute.inset-0 (+848px)",
-      "img.absolute.inset-0 (+848px)",
-      "img.h-[240px].w-full (+96px)"
-     ],
-     "uiFragments": 0,
-     "uiAbuse": false,
-     "realPictures": 10,
-     "videoCount": 0,
-     "uiPictures": 0,
-     "pictureSamples": [
-      "photo-1500382017468-9049fed747ef?auto=format&fit",
-      "photo-1574362848149-11496d93a7c7?auto=format&fit",
-      "photo-1500382017468-9049fed747ef?auto=format&fit",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
-      "photo-1600585154340-be6161a56a0c?auto=format&fit"
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1512453979798-5ea266f8880c?auto=format&fit",
+      "purva-villas-community.jpeg"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -881,102 +62,149 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "A verified property register.",
-     "words": 4,
-     "chars": 29,
+     "text": "The property register",
+     "words": 3,
+     "chars": 21,
      "lines": 2,
-     "size": 32,
-     "vw": 2.1,
-     "font": "Times New Roman",
-     "weight": 700,
-     "tracking": 0,
-     "leading": 1.2,
+     "size": 80,
+     "vw": 5.6,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.24,
-     "top": 1802,
+     "widthRatio": 0.49,
+     "top": 144,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "A verified property register.",
-     "words": 4,
+     "text": "The property register",
+     "words": 3,
      "lines": 2,
-     "size": 32,
-     "font": "Times New Roman"
+     "size": 80,
+     "font": "Playfair Display"
     },
     "headings": [
      {
-      "text": "A verified property register.",
-      "words": 4,
-      "chars": 29,
+      "text": "The property register",
+      "words": 3,
+      "chars": 21,
       "lines": 2,
-      "size": 32,
-      "vw": 2.1,
-      "font": "Times New Roman",
-      "weight": 700,
-      "tracking": 0,
-      "leading": 1.2,
+      "size": 80,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.24,
-      "top": 1802,
+      "widthRatio": 0.49,
+      "top": 144,
       "tag": "h1",
       "kind": "heading"
+     },
+     {
+      "text": "Need the paperwork checked?",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.57,
+      "top": 4132,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 4390,
+      "tag": "p",
+      "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 1,
+     "count": 3,
      "maxLines": 2,
      "over2Lines": 0,
-     "statements": 0,
+     "statements": 1,
      "centered": 0,
-     "medianWords": null,
+     "medianWords": 4,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Times New Roman",
-       "share": 0.88,
+       "family": "Plus Jakarta Sans",
+       "share": 0.94,
        "mono": false
       },
       {
-       "family": "Arial",
-       "share": 0.12,
+       "family": "Playfair Display",
+       "share": 0.06,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
       13,
+      14,
+      15,
       16,
+      17,
+      18,
       19,
       24,
-      32
+      52,
+      80
      ],
-     "sizeCount": 5,
+     "sizeCount": 10,
      "notLoaded": [],
      "body": {
-      "font": "Times New Roman",
-      "size": 16,
-      "leading": 1.2,
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
       "weight": 400,
       "tracking": 0,
-      "contrast": 21
+      "contrast": 9.3
      },
-     "measureChars": 47,
+     "measureChars": 59,
      "max": {
-      "size": 32,
-      "vw": 2.1,
-      "font": "Times New Roman",
-      "text": "A verified property register."
+      "size": 80,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "text": "The property register"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -986,73 +214,84 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0,
-     "centerShare": 0.12,
+     "centerShare": 0.02,
      "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "UB City, Bengaluru",
-      "above": "A verified property register.",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 16,
-      "top": 1763
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#ffffff",
+     "bodyBg": "#0b192c",
      "bodyBgHsl": {
-      "h": 0,
-      "s": 0,
-      "l": 1
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
      },
-     "dark": false,
+     "dark": true,
      "sectionBgs": [
       {
-       "color": "#f0f0f0",
-       "top": 4078,
+       "color": "#11233d",
+       "top": 80,
        "hsl": {
-        "h": 0,
-        "s": 0,
-        "l": 0.94
+        "h": 215,
+        "s": 0.56,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 4310,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
        }
       }
      ],
      "textColors": [
       {
-       "color": "#000000",
-       "share": 0.93
+       "color": "#c5c6cd",
+       "share": 0.46
       },
       {
-       "color": "#0000ee",
-       "share": 0.07
+       "color": "#ffffff",
+       "share": 0.21
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.18
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.1
+      },
+      {
+       "color": "#d4af37",
+       "share": 0.03
       }
      ],
      "button": {
-      "bg": "#f0f0f0",
+      "bg": "#fbfbfd",
       "hsl": {
-       "h": 0,
-       "s": 0,
-       "l": 0.94
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
       },
-      "fg": "#000000"
+      "fg": "#0b192c"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 9,
-     "inHero": 1,
-     "radius": 0,
+     "count": 10,
+     "inHero": 2,
+     "radius": 4,
      "height": 51,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Browse the register"
+      "Book a visit",
+      "All portfolios"
      ]
     },
     "surfaces": {
@@ -1068,113 +307,1136 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 0,
-     "boxRadius": 0,
-     "squareMedia": 10,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "roundedBoxes": 7,
+     "boxRadius": 8,
+     "squareMedia": 1,
+     "roundedMedia": 7,
+     "mediaRadius": 8,
      "textShadow": 0,
-     "cardRows": []
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 824
+      }
+     ]
     },
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.44
-     },
-     {
-      "type": "img",
-      "ratio": 0.36
+      "ratio": 0.11
      }
     ],
     "nav": {
-     "links": 5,
-     "fixed": false,
-     "height": 183,
+     "links": 7,
+     "fixed": true,
+     "height": 80,
      "floatingPill": false,
      "blur": false
     },
-    "fontsLoaded": []
+    "fontsLoaded": [
+     "playfair display",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
    },
    "layout": {
     "viewport": {
-     "w": 1560,
-     "h": 3376
+     "w": 1440,
+     "h": 900
     },
-    "pageH": 18336,
+    "pageH": 4925,
     "margins": {
-     "left": 8,
-     "right": 1178
+     "left": 100,
+     "right": 100
     },
-    "sections": [],
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 4310,
+      "words": 914,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "The property register",
+       "size": 80,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 108,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 4310,
+      "height": 615,
+      "words": 145,
+      "media": 0,
+      "middle": 94,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 52,
+       "tag": "p"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
     "gaps": [],
     "h1s": [
      {
-      "text": "A verified property register.",
-      "size": 32,
-      "top": 1802,
+      "text": "The property register",
+      "size": 80,
+      "top": 144,
       "firstScreen": true
      }
     ],
-    "edgeText": [
-     {
-      "text": "Skip to content",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "+91 84319 09508",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Independent advisory · Zero brokerage to buyers",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "UB City, Bengaluru",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "A verified property register.",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Plots, villas and apartments across Bengaluru and ",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Oriaiyan Signature Plotted Developments & Villa Pl",
-      "side": "left",
-      "px": 8
-     },
-     {
-      "text": "Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur",
-      "side": "left",
-      "px": 8
-     }
-    ],
+    "edgeText": [],
     "edges": [
      {
-      "x": 8,
-      "n": 29
+      "x": 100,
+      "n": 4
      }
     ],
-    "leftBlocks": 29,
-    "bodySize": 16,
+    "leftBlocks": 4,
+    "bodySize": 17,
     "stage": false,
-    "explains": false,
+    "explains": true,
     "slivers": [],
-    "voidShare": 0.05,
+    "voidShare": 0.07,
     "voidBox": {
-     "x": 390,
-     "y": 1801,
-     "w": 1170,
-     "h": 225
+     "x": 0,
+     "y": 780,
+     "w": 1440,
+     "h": 60
     }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.94,
+    0.88,
+    0.81,
+    0.8,
+    0.8,
+    0.81,
+    0.81,
+    0.82,
+    0.13,
+    0.22
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 2,
+    "transitions": 8,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9547,
+     "screens": 9.3,
+     "words": 1031,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 27,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1512453979798-5ea266f8880c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The property register",
+     "words": 3,
+     "chars": 21,
+     "lines": 1,
+     "size": 49.2,
+     "vw": 6.4,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The property register",
+     "words": 3,
+     "lines": 1,
+     "size": 49.2,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "The property register",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 49.2,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Need the paperwork checked?",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7861,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8184,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      32,
+      49
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.3
+     },
+     "measureChars": 81,
+     "max": {
+      "size": 49.2,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "text": "The property register"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#11233d",
+       "top": 80,
+       "hsl": {
+        "h": 215,
+        "s": 0.56,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#070f1b",
+       "top": 794,
+       "hsl": {
+        "h": 216,
+        "s": 0.59,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 8104,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c5c6cd",
+       "share": 0.47
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.2
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.18
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.1
+      },
+      {
+       "color": "#d4af37",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 1,
+     "radius": 4,
+     "height": 51,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "All portfolios"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 7,
+     "boxRadius": 8,
+     "squareMedia": 1,
+     "roundedMedia": 7,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1255
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.28
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9547,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 8104,
+      "words": 902,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "The property register",
+       "size": 49,
+       "tag": "h1"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 8104,
+      "height": 1443,
+      "words": 145,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The property register",
+      "size": 49,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.96,
+    0.88,
+    0.88,
+    0.88,
+    0.82,
+    0.83,
+    0.84,
+    0.91,
+    0.88,
+    0.89,
+    0.73,
+    0.26
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 2,
+    "transitions": 8,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 10549,
+     "screens": 12.5,
+     "words": 1031,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 27,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1512453979798-5ea266f8880c?auto=format&fit",
+      "purva-villas-community.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The property register",
+     "words": 3,
+     "chars": 21,
+     "lines": 2,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The property register",
+     "words": 3,
+     "lines": 2,
+     "size": 40,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 19,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "The property register",
+      "words": 3,
+      "chars": 21,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.63,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 380,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.63,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 380,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Need the paperwork checked?",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8622,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9062,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The portfolio",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9465,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Information",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9809,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Next step",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 10112,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      32,
+      40
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.3
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "text": "The property register"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#11233d",
+       "top": 80,
+       "hsl": {
+        "h": 215,
+        "s": 0.56,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#070f1b",
+       "top": 855,
+       "hsl": {
+        "h": 216,
+        "s": 0.59,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 8566,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 8982,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c5c6cd",
+       "share": 0.47
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.2
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.18
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.1
+      },
+      {
+       "color": "#d4af37",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 1,
+     "radius": 4,
+     "height": 51,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "All portfolios"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 7,
+     "boxRadius": 8,
+     "squareMedia": 1,
+     "roundedMedia": 7,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1575
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.26
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 10549,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 8982,
+      "words": 902,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "The property register",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 8982,
+      "height": 1567,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 49,
+      "textLeft": 20,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The property register",
+      "size": 40,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
    },
    "app": null,
    "consoleErrors": []
@@ -1182,35 +1444,14 @@
  ],
  "findings": [
   {
-   "level": "FAIL",
-   "id": "eyebrow",
+   "level": "WARN",
+   "id": "size-count",
    "width": 1440,
-   "message": "1 eyebrow/kicker label(s) above headings: \"UB City, Bengaluru\" above \"A verified property register.\"",
-   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "message": "10 different font sizes (13, 14, 15, 16, 17, 18, 19, 24, 52, 80).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
    "alsoAt": [
     768,
     390
-   ]
-  },
-  {
-   "level": "WARN",
-   "id": "default-link",
-   "width": 1440,
-   "message": "Browser-default blue/purple link colour is showing.",
-   "fix": "Style every link: inherit the text colour and mark it with weight, underline offset, or the accent.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "WARN",
-   "id": "first-action",
-   "width": 1440,
-   "message": "No visible button in the first screen.",
-   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
-   "alsoAt": [
-    768
    ]
   },
   {
@@ -1222,82 +1463,10 @@
   },
   {
    "level": "WARN",
-   "id": "measure",
-   "width": 1440,
-   "message": "Longest paragraph runs about 178 characters per line.",
-   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
-   "alsoAt": [
-    768
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "overflow",
-   "width": 1440,
-   "message": "Page scrolls sideways by 968px at 1440px. Widest offenders: img.absolute.inset-0 (+968px), img.absolute.inset-0 (+968px), img.h-[240px].w-full (+216px).",
-   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
-  },
-  {
-   "level": "WARN",
-   "id": "no-hero",
-   "width": 1440,
-   "message": "No headline found in the first viewport.",
-   "fix": "The first screen needs a clear focal statement or image.",
-   "alsoAt": [
-    768
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "off-centre",
-   "width": 1440,
-   "message": "The page sits off-centre: its content comes to 8px from the left edge but only to 218px from the right, at 1440px.",
-   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure).",
-   "alsoAt": [
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "no-title",
-   "width": 1440,
-   "message": "The h1 (\"A verified property register.\") is not on the first screen (it starts 1802px down).",
-   "fix": "The title belongs on the first screen, where a visitor decides whether to stay.",
-   "alsoAt": [
-    768
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "edge-text",
-   "width": 1440,
-   "message": "8 text block(s) sit within 16px of the screen edge: \"Skip to content\" (8px from the left); \"+91 84319 09508\" (8px from the left); \"Independent advisory · Zero br\" (8px from the left); \"UB City, Bengaluru\" (8px from the left)",
-   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
    "id": "still-page",
    "width": 1440,
-   "message": "Only 0 element(s) moved while the page loaded and scrolled.",
-   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
-  },
-  {
-   "level": "FAIL",
-   "id": "overflow",
-   "width": 768,
-   "message": "Page scrolls sideways by 1640px at 768px. Widest offenders: img.absolute.inset-0 (+1640px), img.absolute.inset-0 (+1640px), img.h-[240px].w-full (+888px).",
-   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
-  },
-  {
-   "level": "FAIL",
-   "id": "overflow",
-   "width": 390,
-   "message": "Page scrolls sideways by 848px at 390px. Widest offenders: img.absolute.inset-0 (+848px), img.absolute.inset-0 (+848px), img.h-[240px].w-full (+96px).",
-   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
+   "message": "Little motion: 11 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
   }
  ],
  "images": [
@@ -1307,8 +1476,7 @@
    "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\final-projects\\desktop-fold.jpg",
    "pages": [
     "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\final-projects\\desktop-page-01.jpg",
-    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\final-projects\\desktop-page-02.jpg",
-    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\final-projects\\desktop-page-03.jpg"
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\final-projects\\desktop-page-02.jpg"
    ],
    "film": []
   },

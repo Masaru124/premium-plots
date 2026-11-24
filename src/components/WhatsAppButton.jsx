@@ -16,12 +16,12 @@ export default function FloatingActions() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex min-h-12 min-w-12 items-center justify-center rounded-full border border-[#C8A34D] bg-[#0B1F3A] text-[#C8A34D] transition-transform duration-300 hover:-translate-y-1 hover:bg-[#17365E] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C8A34D] active:translate-y-0 sm:min-h-0 sm:min-w-0 sm:gap-3 sm:px-4 sm:py-3"
+        className="group relative flex min-h-12 min-w-12 items-center justify-center rounded-full border border-[#D4AF37] bg-[#0B192C] text-[#D4AF37] transition-transform duration-300 hover:-translate-y-1 hover:bg-[#11233D] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4AF37] active:translate-y-0 sm:min-h-0 sm:min-w-0 sm:gap-3 sm:px-4 sm:py-3"
         aria-label={`Chat on WhatsApp ${displayPhone}`}
       >
-        <MessageCircle className="h-6 w-6 text-[#C8A34D]" aria-hidden="true" />
+        <MessageCircle className="h-6 w-6 text-[#D4AF37]" aria-hidden="true" />
         <span className="hidden text-left leading-tight 2xl:block">
-          <span className="block text-sm font-bold text-[#C8A34D]">WhatsApp us</span>
+          <span className="block text-sm font-bold text-[#D4AF37]">WhatsApp us</span>
           <span className="block text-[14px] font-medium text-white/70">{displayPhone}</span>
         </span>
       </a>

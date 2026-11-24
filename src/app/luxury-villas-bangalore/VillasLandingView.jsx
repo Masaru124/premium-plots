@@ -16,7 +16,7 @@ const WHATSAPP = '918431909508';
 const VILLAS_FAQS = [
   {
     q: 'What luxury villa listings are available in Bengaluru?',
-    a: 'The portfolio includes Tripon Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as a five-bedroom villa and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and current availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
+    a: 'The portfolio includes Triton Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as a five-bedroom villa and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and current availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
   },
   {
     q: 'Does the Purva Symphony resale unit include a private pool or garden?',
@@ -24,7 +24,7 @@ const VILLAS_FAQS = [
   },
   {
     q: 'Why should buyers purchase luxury villas through Setty Relators?',
-    a: 'We are authorized direct Channel Partners for Tier-1 developers including Puravankara Limited and Tripon Groups. We offer 100% zero brokerage to buyers, pre-arranged chauffeured VIP site visits, transparent price negotiations, and complete legal due diligence at no cost.'
+    a: 'We are authorized direct Channel Partners for Tier-1 developers including Puravankara Limited and Triton Groups. We offer 100% zero brokerage to buyers, pre-arranged chauffeured VIP site visits, transparent price negotiations, and complete legal due diligence at no cost.'
   },
   {
     q: 'What should I verify before buying a resale villa?',
@@ -53,7 +53,7 @@ function VillasContent() {
   };
 
   return (
-    <div className="min-h-svh bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between">
+    <div className="min-h-svh bg-[#0B192C] text-[#FBFBFD] flex flex-col justify-between">
       <div>
         <Navbar activePage="villas" setActivePage={handleNavClick} />
 
@@ -63,20 +63,20 @@ function VillasContent() {
             aria-label="Breadcrumb"
             className="shell flex flex-wrap items-center gap-2 py-4 text-[14px] text-[var(--text-soft)]"
           >
-            <Link href="/" className="hover:text-[#0B1F3A]">Home</Link>
+            <Link href="/" className="hover:text-[#FBFBFD]">Home</Link>
             <span aria-hidden="true">/</span>
-            <span className="text-[#0B1F3A]">Luxury villas in Bangalore</span>
+            <span className="text-[#FBFBFD]">Luxury villas in Bangalore</span>
           </nav>
 
           {/* hero */}
           <section className="shell pt-12 lg:pt-16">
             <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
               <div data-reveal className="lg:col-span-7">
-                <h1 className="display-xl max-w-[16ch] text-[#0B1F3A]">
-                  Villas, with the unit read before the visit.
+                <h1 className="display-xl max-w-[18ch] text-[#FBFBFD]">
+                  Villas, read before the visit.
                 </h1>
                 <p className="mt-6 max-w-[52ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
-                  Tripon Nandi Hills villas and one seller-listed resale at Purva Symphony, The Sound
+                  Triton Nandi Hills villas and one seller-listed resale at Purva Symphony, The Sound
                   of Water, off Bannerghatta Road. Configuration, details and availability confirmed
                   with the desk.
                 </p>
@@ -88,7 +88,7 @@ function VillasContent() {
                     href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello Setty Relators! Please send me the brochure and price list for luxury villas in Bangalore.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-11 items-center gap-2 text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] hover:text-[#7A5C10]"
+                    className="inline-flex min-h-11 items-center gap-2 text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-[6px] hover:text-[#D4AF37]"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     Ask for villa details
@@ -115,7 +115,7 @@ function VillasContent() {
 
           {/* resale feature */}
           <section className="shell mt-14 lg:mt-20">
-            <div data-reveal className="grid items-stretch gap-0 bg-[#0B1F3A] text-white lg:grid-cols-2">
+            <div data-reveal className="grid items-stretch gap-0 bg-[#133324] text-white lg:grid-cols-2">
               <img
                 src="/images/purva-sounds-of-water/purva-villa-front-portico.jpeg"
                 alt="Villa entrance portico at Purva Symphony"
@@ -135,7 +135,7 @@ function VillasContent() {
                 </div>
                 <a
                   href="/purva-sounds-of-water"
-                  className="inline-flex min-h-11 w-fit items-center gap-2 text-[17px] text-white underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] hover:text-[#DFC06E]"
+                  className="inline-flex min-h-11 w-fit items-center gap-2 text-[17px] text-white underline decoration-[#D4AF37] decoration-2 underline-offset-[6px] hover:text-[#E9C349]"
                 >
                   The resale details
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -155,7 +155,7 @@ function VillasContent() {
           <section className="page-section">
             <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div data-reveal className="lg:col-span-4">
-                <h2 className="display-lg text-[#0B1F3A]">Questions on villas.</h2>
+                <h2 className="display-lg text-[#FBFBFD]">Questions on villas.</h2>
                 <p className="mt-4 max-w-[34ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                   What is on the market, what the seller advertises, and what to verify before an
                   offer.
@@ -165,9 +165,9 @@ function VillasContent() {
               <div data-reveal className="lg:col-span-8">
                 {VILLAS_FAQS.map((faq) => (
                   <details key={faq.q} className="group py-5">
-                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#1A1A1A] transition-colors hover:text-[#7A5C10]">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#FBFBFD] transition-colors hover:text-[#D4AF37]">
                       <span>{faq.q}</span>
-                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#A6832A] transition-transform group-open:rotate-45">
+                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#A8871F] transition-transform group-open:rotate-45">
                         +
                       </span>
                     </summary>

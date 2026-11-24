@@ -1,0 +1,2302 @@
+{
+ "url": "http://localhost:54987/",
+ "at": "2026-11-24T12:53:25.592Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.43,
+    0.96,
+    0.96,
+    0.96,
+    0.91,
+    0.95,
+    0.51,
+    0.65,
+    0.68,
+    0.42,
+    0.25
+   ],
+   "motion": {
+    "elements": 20,
+    "css": 2,
+    "transitions": 17,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 9878,
+     "screens": 11,
+     "words": 833,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 10,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A verified property register.",
+     "words": 4,
+     "chars": 29,
+     "lines": 2,
+     "size": 80,
+     "vw": 5.6,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 587,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "A verified property register.",
+     "words": 4,
+     "lines": 2,
+     "size": 80,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "A verified property register.",
+      "words": 4,
+      "chars": 29,
+      "lines": 2,
+      "size": 80,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 587,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "A short list, held by one desk.",
+      "words": 7,
+      "chars": 31,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 1086,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The register, this week.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 3383,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The desk’s arithmetic.",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 4924,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why buyers work with the desk.",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 5815,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions buyers ask.",
+      "words": 3,
+      "chars": 21,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 7755,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 9343,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      52,
+      80
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 19.2
+     },
+     "measureChars": 94,
+     "max": {
+      "size": 80,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "text": "A verified property register."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0b192c",
+       "top": 80,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#070f1b",
+       "top": 523,
+       "hsl": {
+        "h": 216,
+        "s": 0.59,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 3239,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 4780,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#14294a",
+       "top": 6832,
+       "hsl": {
+        "h": 217,
+        "s": 0.57,
+        "l": 0.18
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.31
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.22
+      },
+      {
+       "color": "#4a5666",
+       "share": 0.2
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.14
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#0b192c",
+      "hsl": {
+       "h": 215,
+       "s": 0.6,
+       "l": 0.11
+      },
+      "fg": "#fbfbfd"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 2,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a visit",
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 3,
+     "boxRadius": 8,
+     "squareMedia": 7,
+     "roundedMedia": 3,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.42
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 9878,
+    "margins": {
+     "left": 100,
+     "right": 100
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 9263,
+      "words": 933,
+      "media": 11,
+      "middle": 0,
+      "heading": {
+       "text": "A verified property register.",
+       "size": 80,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 9263,
+      "height": 615,
+      "words": 145,
+      "media": 0,
+      "middle": 94,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 52,
+       "tag": "p"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A verified property register.",
+      "size": 80,
+      "top": 587,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 100,
+      "n": 22
+     },
+     {
+      "x": 611,
+      "n": 1
+     },
+     {
+      "x": 683,
+      "n": 1
+     },
+     {
+      "x": 952,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 25,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 720,
+     "y": 480,
+     "w": 480,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.48,
+    0.94,
+    0.94,
+    0.88,
+    0.92,
+    0.89,
+    0.75,
+    0.75,
+    0.61,
+    0.56,
+    0.17,
+    0.22
+   ],
+   "motion": {
+    "elements": 20,
+    "css": 2,
+    "transitions": 17,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 12034,
+     "screens": 11.8,
+     "words": 821,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 10,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A verified property register.",
+     "words": 4,
+     "chars": 29,
+     "lines": 2,
+     "size": 49.2,
+     "vw": 6.4,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.51,
+     "top": 579,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "A verified property register.",
+     "words": 4,
+     "lines": 2,
+     "size": 49.2,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "A verified property register.",
+      "words": 4,
+      "chars": 29,
+      "lines": 2,
+      "size": 49.2,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 579,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "A short list, held by one desk.",
+      "words": 7,
+      "chars": 31,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 1200,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The register, this week.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 3179,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The desk’s arithmetic.",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5088,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why buyers work with the desk.",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 6203,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions buyers ask.",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8483,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 10671,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      32,
+      49
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 19.2
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 49.2,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "text": "A verified property register."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0b192c",
+       "top": 80,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#070f1b",
+       "top": 523,
+       "hsl": {
+        "h": 216,
+        "s": 0.59,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 3059,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 4968,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#14294a",
+       "top": 7649,
+       "hsl": {
+        "h": 217,
+        "s": 0.57,
+        "l": 0.18
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.3
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.22
+      },
+      {
+       "color": "#4a5666",
+       "share": 0.2
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.14
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#0b192c",
+      "hsl": {
+       "h": 215,
+       "s": 0.6,
+       "l": 0.11
+      },
+      "fg": "#fbfbfd"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 3,
+     "boxRadius": 8,
+     "squareMedia": 7,
+     "roundedMedia": 3,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 12034,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 10591,
+      "words": 921,
+      "media": 11,
+      "middle": 0,
+      "heading": {
+       "text": "A verified property register.",
+       "size": 49,
+       "tag": "h1"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 10591,
+      "height": 1443,
+      "words": 145,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A verified property register.",
+      "size": 49,
+      "top": 579,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 22
+     },
+     {
+      "x": 80,
+      "n": 1
+     },
+     {
+      "x": 340,
+      "n": 1
+     },
+     {
+      "x": 418,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 25,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.55,
+    0.98,
+    0.96,
+    0.97,
+    0.92,
+    0.95,
+    0.91,
+    0.96,
+    0.66,
+    0.84,
+    0.67,
+    0.75
+   ],
+   "motion": {
+    "elements": 18,
+    "css": 2,
+    "transitions": 15,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 13150,
+     "screens": 15.6,
+     "words": 818,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1600585154340-be6161a56a0c?auto=format&fit",
+      "photo-1574362848149-11496d93a7c7?auto=format&fit",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1545324418-cc1a3fa10c00?auto=format&fit=cr",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1600585154340-be6161a56a0c?auto=format&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A verified property register.",
+     "words": 4,
+     "chars": 29,
+     "lines": 2,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.82,
+     "top": 483,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "A verified property register.",
+     "words": 4,
+     "lines": 2,
+     "size": 40,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 19,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "A verified property register.",
+      "words": 4,
+      "chars": 29,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 483,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Triton Nandi Luxury Villas (3, 4 & 5 BHK)",
+      "words": 9,
+      "chars": 41,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.38,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 844,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "A short list, held by one desk.",
+      "words": 7,
+      "chars": 31,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1271,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Oriaiyan Group",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.38,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1786,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "₹50 Lakhs - ₹2.0 Crore",
+      "words": 5,
+      "chars": 22,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1938,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "D1 Projects",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.38,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 2305,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "₹35 Lakhs - ₹90 Lakhs",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 2412,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Vinra Group",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.38,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 2779,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "₹59 Lakhs - ₹1.9 Crore",
+      "words": 5,
+      "chars": 22,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 2909,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The register, this week.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3136,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Open plots",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3322,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Villas",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4074,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Apartments",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4621,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Dubai",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5442,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The desk’s arithmetic.",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5968,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Oriaiyan Signature Plotted Developments",
+      "words": 4,
+      "chars": 39,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.38,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 6304,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "1,500 sq ft",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 6456,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "₹4,200 / sq ft",
+      "words": 4,
+      "chars": 14,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.34,
+      "top": 6456,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "₹63,00,000",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 6583,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5 years",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.34,
+      "top": 6583,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "12% a year",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 6669,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "₹1.11 Cr",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.34,
+      "top": 6669,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "Why buyers work with the desk.",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7215,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "6",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 8194,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 8194,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "Zero",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 8281,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "By appointment",
+      "words": 2,
+      "chars": 14,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 8281,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "The developers we represent",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 8974,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Puravankara · Oriaiyan Group · Triton Groups · Vinra Group · D1 Projects · Dubai Global Estates",
+      "words": 17,
+      "chars": 95,
+      "lines": 4,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.7,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 9303,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Questions buyers ask.",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9755,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Visit the desk",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 11066,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 11664,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The portfolio",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 12066,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Information",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 12410,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Next step",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 12714,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 36,
+     "maxLines": 4,
+     "over2Lines": 0,
+     "statements": 17,
+     "centered": 2,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      32,
+      40
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 19.2
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "text": "A verified property register."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0b192c",
+       "top": 80,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#070f1b",
+       "top": 443,
+       "hsl": {
+        "h": 216,
+        "s": 0.59,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 3048,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#f1f3f7",
+       "top": 3362,
+       "hsl": {
+        "h": 220,
+        "s": 0.27,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 5880,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#14294a",
+       "top": 8849,
+       "hsl": {
+        "h": 217,
+        "s": 0.57,
+        "l": 0.18
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.3
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.22
+      },
+      {
+       "color": "#4a5666",
+       "share": 0.2
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.14
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#0b192c",
+      "hsl": {
+       "h": 215,
+       "s": 0.6,
+       "l": 0.11
+      },
+      "fg": "#fbfbfd"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 3,
+     "boxRadius": 8,
+     "squareMedia": 6,
+     "roundedMedia": 3,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.36
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 13150,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 11584,
+      "words": 884,
+      "media": 9,
+      "middle": 0,
+      "heading": {
+       "text": "A verified property register.",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 11584,
+      "height": 1567,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 49,
+      "textLeft": 20,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A verified property register.",
+      "size": 40,
+      "top": 483,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 22
+     },
+     {
+      "x": 40,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 24,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 94 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\desktop-page-02.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\tablet-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\reg-images\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

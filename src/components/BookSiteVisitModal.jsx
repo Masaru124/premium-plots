@@ -5,8 +5,8 @@ import { X, Calendar, Clock, MapPin, Phone, User, Mail, CheckCircle2, MessageCir
 import { usePlots } from '../context/PlotsContext';
 
 const INPUT =
-  'min-h-11 w-full border border-[#0B1F3A]/20 bg-[#F8F8F5] px-3.5 py-3 text-[14px] text-[#1A1A1A] placeholder:text-[#5F5F5F] focus:border-[#0B1F3A] focus:outline-none';
-const LABEL = 'mb-1.5 block text-[13px] font-semibold uppercase tracking-[0.13em] text-[#555555]';
+  'min-h-11 w-full border border-[#FBFBFD]/15 bg-[#070F1B] px-3.5 py-3 text-[15px] text-[#FBFBFD] placeholder:text-[#8F9097] focus:border-[#D4AF37] focus:outline-none';
+const LABEL = 'mb-1.5 block text-[13px] font-semibold uppercase tracking-[0.13em] text-[#B0B8C4]';
 
 const EMPTY_FORM = {
   name: '',
@@ -135,7 +135,7 @@ export default function BookSiteVisitModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#071527]/80 p-4 animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#070F1B]/80 p-4 animate-fadeIn"
       onClick={(event) => {
         if (event.target === event.currentTarget) close();
       }}
@@ -146,11 +146,11 @@ export default function BookSiteVisitModal() {
         aria-modal="true"
         aria-labelledby="site-visit-title"
         aria-describedby="site-visit-description"
-        className="relative my-8 flex max-h-[90vh] w-full max-w-lg flex-col overflow-hidden border border-[#C8A34D]/40 bg-white"
+        className="relative my-8 flex max-h-[90vh] w-full max-w-lg flex-col overflow-hidden border border-[#D4AF37]/40 bg-[#11233D]"
       >
-        <div className="flex shrink-0 items-start justify-between gap-4 border-b border-[#C8A34D]/30 bg-[#0B1F3A] p-6 text-white">
+        <div className="flex shrink-0 items-start justify-between gap-4 bg-[#0B192C] p-6 text-white">
           <div>
-            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-[#DFC06E]">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-[#E9C349]">
               Private inspection
             </p>
             <h2 id="site-visit-title" className="mt-2 font-heading text-2xl text-white">
@@ -164,7 +164,7 @@ export default function BookSiteVisitModal() {
             type="button"
             onClick={close}
             aria-label="Close site visit form"
-            className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/25 text-white/80 transition-colors hover:border-[#C8A34D] hover:text-[#C8A34D]"
+            className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/25 text-white/80 transition-colors hover:border-[#D4AF37] hover:text-[#D4AF37]"
           >
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -173,11 +173,11 @@ export default function BookSiteVisitModal() {
         <div className="overflow-y-auto p-6">
           {submitted ? (
             <div className="space-y-4 py-8 text-center">
-              <CheckCircle2 className="mx-auto h-10 w-10 text-[#7A5C10]" aria-hidden="true" />
-              <h3 className="font-heading text-xl text-[#0B1F3A]">Request received</h3>
-              <p className="mx-auto max-w-[38ch] text-[14px] leading-relaxed text-[#555555]">
+              <CheckCircle2 className="mx-auto h-10 w-10 text-[#D4AF37]" aria-hidden="true" />
+              <h3 className="font-heading text-xl text-[#FBFBFD]">Request received</h3>
+              <p className="mx-auto max-w-[38ch] text-[14px] leading-relaxed text-[#B0B8C4]">
                 Thank you, {formData.name || 'and welcome'}. A WhatsApp conversation with{' '}
-                <strong className="text-[#0B1F3A]">{displayPhone}</strong> has opened with your visit
+                <strong className="text-[#FBFBFD]">{displayPhone}</strong> has opened with your visit
                 details; the advisor will confirm the slot there.
               </p>
               <button type="button" onClick={close} className="btn-gold mt-2 px-8">
@@ -220,7 +220,7 @@ export default function BookSiteVisitModal() {
                 </div>
 
                 <div>
-                  <label htmlFor="visit-email" className={LABEL}>Email <span className="normal-case tracking-normal text-[#5F5F5F]">(optional)</span></label>
+                  <label htmlFor="visit-email" className={LABEL}>Email <span className="normal-case tracking-normal text-[#B0B8C4]">(optional)</span></label>
                   <input
                     id="visit-email"
                     name="email"
@@ -265,19 +265,19 @@ export default function BookSiteVisitModal() {
                 </div>
               </div>
 
-              <fieldset className="border border-[#0B1F3A]/15 p-4">
-                <legend className="px-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[#555555]">
+              <fieldset className="border border-[#D4AF37]/15 p-4">
+                <legend className="px-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[#B0B8C4]">
                   Travel
                 </legend>
 
-                <label htmlFor="visit-cab" className="flex cursor-pointer items-center gap-3 text-[14px] font-medium text-[#0B1F3A]">
+                <label htmlFor="visit-cab" className="flex cursor-pointer items-center gap-3 text-[14px] font-medium text-[#FBFBFD]">
                   <input
                     id="visit-cab"
                     name="cabPickup"
                     type="checkbox"
                     checked={formData.cabPickup}
                     onChange={(e) => setFormData({ ...formData, cabPickup: e.target.checked })}
-                    className="h-4 w-4 accent-[#0B1F3A]"
+                    className="h-4 w-4 accent-[#0B192C]"
                   />
                   Complimentary chauffeured pickup
                 </label>
@@ -286,7 +286,7 @@ export default function BookSiteVisitModal() {
                   <div className="mt-3">
                     <label htmlFor="visit-pickup" className={LABEL}>Pickup address or landmark</label>
                     <div className="relative">
-                      <MapPin className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5F5F5F]" aria-hidden="true" />
+                      <MapPin className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#B0B8C4]" aria-hidden="true" />
                       <input
                         id="visit-pickup"
                         name="pickupLocation"
@@ -302,7 +302,7 @@ export default function BookSiteVisitModal() {
               </fieldset>
 
               {error && (
-                <p id="visit-error" role="alert" className="border-l-2 border-[#A6832A] bg-[#C8A34D]/10 px-3 py-2 text-[13px] text-[#7A5C10]">
+                <p id="visit-error" role="alert" className="border-l-2 border-[#A8871F] bg-[#D4AF37]/10 px-3 py-2 text-[13px] text-[#D4AF37]">
                   {error}
                 </p>
               )}
@@ -312,7 +312,7 @@ export default function BookSiteVisitModal() {
                 Confirm on WhatsApp
               </button>
 
-              <p className="flex items-center justify-center gap-2 text-[13px] uppercase tracking-[0.1em] text-[#5F5F5F]">
+              <p className="flex items-center justify-center gap-2 text-[13px] uppercase tracking-[0.1em] text-[#B0B8C4]">
                 <Phone className="h-3 w-3" aria-hidden="true" />
                 Or call {displayPhone}
               </p>

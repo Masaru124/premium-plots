@@ -28,7 +28,7 @@ const PLOTS_FAQS = [
   },
   {
     q: 'Why is there zero brokerage for buyers purchasing plots through Setty Relators?',
-    a: 'As an authorized developer channel partner for Oriaiyan Group, D1 Projects, and Tripon Groups, our consultancy is compensated directly by developers. All buyer services—including legal vetting, masterplan reviews, price negotiation, and chauffeured VIP site visits—are 100% free with 0% brokerage.'
+    a: 'As an authorized developer channel partner for Oriaiyan Group, D1 Projects, and Triton Groups, our consultancy is compensated directly by developers. All buyer services—including legal vetting, masterplan reviews, price negotiation, and chauffeured VIP site visits—are 100% free with 0% brokerage.'
   },
   {
     q: 'What plot sizes and configurations are available?',
@@ -88,7 +88,7 @@ function PlotsContent() {
   };
 
   return (
-    <div className="min-h-svh bg-[#F8F8F5] text-[#1A1A1A] flex flex-col justify-between">
+    <div className="min-h-svh bg-[#0B192C] text-[#FBFBFD] flex flex-col justify-between">
       <div>
         <Navbar activePage="plots" setActivePage={handleNavClick} />
 
@@ -98,16 +98,16 @@ function PlotsContent() {
             aria-label="Breadcrumb"
             className="shell flex flex-wrap items-center gap-2 py-4 text-[14px] text-[var(--text-soft)]"
           >
-            <Link href="/" className="hover:text-[#0B1F3A]">Home</Link>
+            <Link href="/" className="hover:text-[#FBFBFD]">Home</Link>
             <span aria-hidden="true">/</span>
-            <span className="text-[#0B1F3A]">Plots in Bangalore</span>
+            <span className="text-[#FBFBFD]">Plots in Bangalore</span>
           </nav>
 
           {/* hero */}
           <section className="shell pb-4 pt-12 lg:pt-16">
             <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
               <div data-reveal className="lg:col-span-8">
-                <h1 className="display-xl max-w-[18ch] text-[#0B1F3A]">
+                <h1 className="display-xl max-w-[18ch] text-[#FBFBFD]">
                   Plots, corridor by corridor.
                 </h1>
                 <p className="mt-6 max-w-[54ch] text-[19px] leading-relaxed text-[var(--text-soft)]">
@@ -123,7 +123,7 @@ function PlotsContent() {
                     href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello Setty Relators! Please share masterplan blueprints and pricing for verified plots in Bangalore.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-11 items-center gap-2 text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] hover:text-[#7A5C10]"
+                    className="inline-flex min-h-11 items-center gap-2 text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-[6px] hover:text-[#D4AF37]"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     Ask for the plots file
@@ -149,7 +149,7 @@ function PlotsContent() {
           <section className="page-section">
             <div className="shell">
               <div data-reveal className="grid gap-6 lg:grid-cols-12 lg:items-end">
-                <h2 className="display-lg lg:col-span-7 text-[#0B1F3A]">Prices by corridor.</h2>
+                <h2 className="display-lg lg:col-span-7 text-[#FBFBFD]">Prices by corridor.</h2>
                 <p className="lg:col-span-5 max-w-[44ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                   Indicative per-square-foot rates and the infrastructure each corridor is priced
                   against.
@@ -160,7 +160,7 @@ function PlotsContent() {
                 <table data-ui className="w-full min-w-[760px] border-collapse text-left">
                   <caption className="sr-only">Plot prices by Bengaluru corridor</caption>
                   <thead>
-                    <tr data-ui className="border-b border-[#0B1F3A]">
+                    <tr data-ui className="border-b border-[#0B192C]">
                       {['Corridor', 'Per sq ft', 'Growth', 'Drivers', 'Authority'].map((h) => (
                         <th key={h} scope="col" className="py-3 pr-6 font-normal text-[14px] text-[var(--text-soft)]">
                           {h}
@@ -171,11 +171,11 @@ function PlotsContent() {
                   <tbody>
                     {CORRIDORS.map((c) => (
                       <tr key={c.name} data-ui className="border-b border-[var(--rule)]">
-                        <th scope="row" className="py-4 pr-6 text-[16px] font-normal text-[#0B1F3A]">
+                        <th scope="row" className="py-4 pr-6 text-[16px] font-normal text-[#FBFBFD]">
                           {c.name}
                         </th>
-                        <td className="py-4 pr-6 text-[16px] text-[#1A1A1A] figures">{c.rate}</td>
-                        <td className="py-4 pr-6 text-[16px] text-[#1A1A1A] figures">{c.growth}</td>
+                        <td className="py-4 pr-6 text-[16px] text-[#FBFBFD] figures">{c.rate}</td>
+                        <td className="py-4 pr-6 text-[16px] text-[#FBFBFD] figures">{c.growth}</td>
                         <td className="py-4 pr-6 text-[16px] leading-relaxed text-[var(--text-soft)]">
                           {c.drivers}
                         </td>
@@ -202,9 +202,9 @@ function PlotsContent() {
               <div data-reveal className="lg:col-span-8">
                 {PLOTS_FAQS.map((faq) => (
                   <details key={faq.q} className="group py-5">
-                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-white transition-colors hover:text-[#DFC06E]">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-white transition-colors hover:text-[#E9C349]">
                       <span>{faq.q}</span>
-                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#DFC06E] transition-transform group-open:rotate-45">
+                      <span aria-hidden="true" className="mt-0.5 shrink-0 text-[#E9C349] transition-transform group-open:rotate-45">
                         +
                       </span>
                     </summary>

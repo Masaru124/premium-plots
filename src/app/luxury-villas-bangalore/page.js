@@ -12,7 +12,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Luxury Villas for Sale in Bengaluru | Setty Relators',
-    description: 'Bengaluru villa listings, including Tripon Nandi Hills homes and a seller-listed Purva Symphony resale off Bannerghatta Road. Verify unit details and availability.',
+    description: 'Bengaluru villa listings, including Triton Nandi Hills homes and a seller-listed Purva Symphony resale off Bannerghatta Road. Verify unit details and availability.',
     url: PAGE_URL,
     siteName: 'Setty Relators Advisory',
     locale: 'en_IN',
@@ -41,7 +41,7 @@ const jsonLdVillas = {
       '@type': 'RealEstateListing',
       '@id': `${PAGE_URL}/#listing`,
       'name': 'Luxury Villas in Bengaluru Portfolio',
-      'description': 'Curated villa listings in Bengaluru, including Tripon Nandi Hills homes and a seller-advertised resale unit at Purva Symphony, The Sound of Water, off Bannerghatta Road.',
+      'description': 'Curated villa listings in Bengaluru, including Triton Nandi Hills homes and a seller-advertised resale unit at Purva Symphony, The Sound of Water, off Bannerghatta Road.',
       'url': PAGE_URL
     },
     {
@@ -71,7 +71,7 @@ const jsonLdVillas = {
           'name': 'What are the top luxury villa projects available in Bangalore through Setty Relators?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'The portfolio includes Tripon Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as five-bedroom and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
+            'text': 'The portfolio includes Triton Nandi Hills villas and a seller-advertised resale at Purva Symphony, The Sound of Water, off Bannerghatta Road. The seller describes that individual unit as five-bedroom and quotes ₹9.0 Cr; verify its sanctioned plan, measurements, features, price and availability. Puravankara describes the wider community as offering 3- and 4-BHK residences.'
           }
         },
         {

@@ -113,19 +113,33 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
   // Each corridor shows its most distinctive entry, not the same first row.
   const heroProject =
     (corridor === 'all'
-      ? projects[0]
+      ? projects.find((p) => p.heroImage?.includes('1600585154340')) || projects[0]
       : projects.filter((p) => p.corridorId === corridor).slice(-1)[0]) || projects[0];
   const heroKey = `${corridor}-${heroProject.id}`;
 
+  // One entry, one line: a project is printed under the first group it belongs to.
+  const registerGroups = useMemo(() => {
+    const seen = new Set();
+    return GROUPS.map((group) => ({
+      ...group,
+      rows: projects.filter((p) => {
+        if (seen.has(p.id) || !group.match(p)) return false;
+        seen.add(p.id);
+        return true;
+      })
+    })).filter((group) => group.rows.length);
+  }, [projects]);
+
   const rail = projects.slice(0, 6);
-  const faqPhoto = projects.find((p) => p.id === 'project-tripon-nandi-villas') || projects[1];
+  const faqPhoto = projects.find((p) => p.id === 'project-triton-nandi-villas') || projects[1];
   const contactPhoto = projects.find((p) => p.id === 'project-vinra-kbr-residences') || projects[2];
   const deskPhoto = projects.find((p) => p.id === 'project-sun-valley-chikkaballapura') || projects[1];
 
   return (
     <div>
       {/* ------------------------------------------------------------- hero */}
-      <section className="relative isolate flex min-h-[calc(100svh-80px)] flex-col justify-between overflow-hidden bg-[#0B1F3A] text-white">
+      <section className="relative isolate flex min-h-[calc(100svh-80px)] flex-col overflow-hidden bg-[#0B192C] text-white">
+        <div className="relative min-h-[300px] flex-1 overflow-hidden sm:min-h-[380px]">
         {heroProject && (
           <img
             key={heroProject.id}
@@ -137,9 +151,10 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                           className="absolute inset-0 -z-20 h-full w-full hero-plate object-cover"
           />
         )}
-        <div className="absolute inset-0 -z-10 bg-[#071527]/70" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-[#070F1B]/30" aria-hidden="true" />
+        </div>
 
-        <div className="shell flex items-start justify-between gap-6 pt-8 text-[14px] leading-relaxed text-white/75">
+        <div className="shell flex items-start justify-between gap-6 pb-5 pt-5 text-[14px] leading-relaxed text-[var(--text-soft)]">
           <p>Independent advisory · Zero brokerage to buyers</p>
           <a
             href={MAPS_URL}
@@ -151,7 +166,10 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
           </a>
         </div>
 
-        <div className="shell grid gap-8 pb-20 pt-14 sm:gap-12 sm:pb-16 sm:pt-20 lg:grid-cols-12 lg:items-end lg:gap-10 lg:pb-10 lg:pt-24">
+        {/* The title band sits on solid ink, so the register line is legible over any
+            photograph and the plate above keeps its full colour. */}
+        <div className="relative mt-auto w-full bg-[#070F1B]">
+        <div className="shell grid gap-8 pb-24 pt-10 sm:gap-12 sm:pb-14 sm:pt-14 lg:grid-cols-12 lg:items-end lg:gap-10 lg:pb-14 lg:pt-16">
           <div className="lg:col-span-7">
             <h1 className="display-xl max-w-[13ch] text-white">A verified property register.</h1>
             <p className="mt-6 max-w-[44ch] text-[17px] leading-relaxed text-white/80 sm:text-[19px]">
@@ -166,7 +184,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               <button
                 type="button"
                 onClick={() => setActivePage('projects')}
-                className="inline-flex min-h-11 items-center gap-2 text-[17px] text-white underline decoration-[#C8A34D] decoration-2 underline-offset-[6px] transition-colors hover:text-[#DFC06E]"
+                className="inline-flex min-h-11 items-center gap-2 text-[17px] text-white underline decoration-[#D4AF37] decoration-2 underline-offset-[6px] transition-colors hover:text-[#E9C349]"
               >
                 Browse the register
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -195,14 +213,14 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             <div
               role="group"
               aria-label="Choose a corridor"
-              className="mt-7 flex flex-wrap gap-x-5 gap-y-2 pr-20"
+              className="mt-7 flex flex-wrap gap-x-5 gap-y-2 pr-16"
             >
               <button
                 type="button"
                 onClick={() => setCorridor('all')}
                 aria-pressed={corridor === 'all'}
                 className={`min-h-11 text-[14px] transition-colors ${
-                  corridor === 'all' ? 'text-white underline decoration-[#C8A34D] decoration-2 underline-offset-4' : 'text-white/60 hover:text-white'
+                  corridor === 'all' ? 'text-white underline decoration-[#D4AF37] decoration-2 underline-offset-4' : 'text-white/60 hover:text-white'
                 }`}
               >
                 All
@@ -214,7 +232,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                   onClick={() => setCorridor(c.id)}
                   aria-pressed={corridor === c.id}
                   className={`min-h-11 text-[14px] transition-colors ${
-                    corridor === c.id ? 'text-white underline decoration-[#C8A34D] decoration-2 underline-offset-4' : 'text-white/60 hover:text-white'
+                    corridor === c.id ? 'text-white underline decoration-[#D4AF37] decoration-2 underline-offset-4' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   {CORRIDOR_LABEL[c.id] || c.name}
@@ -223,17 +241,18 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* --------------------------------------------------------- showcase */}
-      <section aria-labelledby="collection" className="relative isolate overflow-hidden bg-[#0B1F3A] py-20 text-white lg:py-28">
+      <section aria-labelledby="collection" className="relative isolate overflow-hidden bg-[#070F1B] py-20 text-white lg:py-28">
         <img
           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-[#071527]/88" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-[#070F1B]/88" aria-hidden="true" />
 
         <div className="shell">
           <h2 data-reveal id="collection" className="display-lg max-w-[22ch] text-white">
@@ -269,17 +288,17 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                     className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
                   />
                 </button>
-                <div className="mt-0 bg-[var(--paper)] px-6 py-5 text-[#1A1A1A] sm:px-8">
-                  <h3 className="font-heading text-[1.5rem] leading-snug text-[#0B1F3A]">
+                <div className="sheet mt-0 px-6 py-5 sm:px-8">
+                  <h3 className="font-heading text-[1.5rem] leading-snug">
                     {project.groupName || project.title}
                   </h3>
-                  <p className="mt-2 max-w-[56ch] text-[14px] leading-relaxed text-[var(--text-soft)]">
+                  <p className="mt-2 max-w-[56ch] text-[14px] leading-relaxed text-[var(--sheet-soft)]">
                     {project.title}
                   </p>
-                  <p className="mt-1 max-w-[56ch] text-[14px] leading-relaxed text-[var(--text-soft)]">
+                  <p className="mt-1 max-w-[56ch] text-[14px] leading-relaxed text-[var(--sheet-soft)]">
                     {project.location}
                   </p>
-                  <p className="mt-4 font-heading text-[1.5rem] text-[#7A5C10] figures">
+                  <p className="mt-4 font-heading text-[1.5rem] text-[var(--gold-on-light)] figures">
                     {project.priceRange}
                   </p>
                 </div>
@@ -290,39 +309,53 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
       </section>
 
       {/* --------------------------------------------------------- register */}
-      <section aria-labelledby="register" className="section-stone page-section">
+      <section aria-labelledby="register" className="page-section bg-[var(--sheet)] text-[var(--sheet-ink)]">
         <div className="shell">
-          <h2 data-reveal id="register" className="display-lg max-w-[20ch]">
+          <h2 data-reveal id="register" className="display-lg max-w-[20ch] text-[var(--sheet-ink)]">
             The register, this week.
           </h2>
-          <p className="lede mt-5 max-w-[52ch]">
+          <p className="lede mt-5 max-w-[52ch] text-[var(--sheet-soft)]">
             The full list runs to seven entries. Every line is confirmed with the developer or
             seller before the desk quotes it.
           </p>
 
-          <div data-reveal className="mx-auto mt-12 max-w-[1080px] bg-[var(--paper)] px-6 py-10 sm:px-12 sm:py-14">
-            {GROUPS.map((group) => {
-              const rows = projects.filter((p) => group.match(p));
-              if (!rows.length) return null;
+          <div data-reveal className="mt-12">
+            {registerGroups.map((group) => {
+              const rows = group.rows;
               return (
-                <div key={group.id} className="mt-10 first:mt-0">
-                  <h3 className="font-heading text-[1.5rem] leading-none">{group.label}</h3>
-                  <ul className="mt-4">
+                <div key={group.id} className="mt-14 first:mt-0">
+                  <div className="flex items-baseline justify-between gap-6 pb-4">
+                    <h3 className="font-heading text-[1.5rem] leading-none text-[var(--sheet-ink)]">{group.label}</h3>
+                    <span className="shrink-0 text-[14px] text-[var(--sheet-soft)] figures">
+                      {rows.length} {rows.length === 1 ? 'entry' : 'entries'}
+                    </span>
+                  </div>
+                  <ul className={`grid gap-5 ${rows.length === 1 ? '' : 'sm:grid-cols-2'}`}>
                     {rows.map((project) => (
-                      <li key={project.id} className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-1 py-3">
+                      <li key={project.id}>
                         <button
                           type="button"
                           onClick={() => openProject(project)}
-                          className="min-w-0 max-w-full text-left"
+                          className="group relative block w-full overflow-hidden bg-[#070F1B] text-left transition-transform duration-500 hover:-translate-y-0.5"
                         >
-                          <span className="block text-[17px] leading-snug text-[#1A1A1A] underline-offset-4 hover:underline">
-                            {project.title}
-                          </span>
-                          <span className="mt-0.5 block max-w-[62ch] text-[14px] text-[var(--text-soft)]">
-                            {project.location}
-                          </span>
+                          <img
+                            src={hire(project.heroImage, 1000)}
+                            alt=""
+                            aria-hidden="true"
+                            width={1000}
+                            height={1250}
+                            loading="lazy"
+                            decoding="async"
+                            className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${
+                              rows.length === 1 ? 'aspect-[4/3] sm:aspect-[16/9]' : 'aspect-[4/3] sm:aspect-[3/4]'
+                            }`}
+                          />
+                          <div className="absolute inset-x-0 bottom-0 bg-[#070F1B]/92 px-5 py-4 sm:px-6 sm:py-5">
+                            <p className="font-heading text-[1.25rem] leading-snug text-white">{project.title}</p>
+                            <p className="mt-1 text-[14px] text-white/70">{project.location}</p>
+                            <p className="mt-2 font-heading text-[1.15rem] text-[#D4AF37] figures">{project.priceRange}</p>
+                          </div>
                         </button>
-                        <span className="max-w-[52ch] text-[14px] text-[#1A1A1A] figures">{project.priceRange}</span>
                       </li>
                     ))}
                   </ul>
@@ -331,10 +364,10 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             })}
 
             <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
-              <p className="text-[14px] text-[var(--text-soft)]">
+              <p className="text-[14px] text-[var(--sheet-soft)]">
                 Corridors, approvals and price bands for every entry.
               </p>
-              <button type="button" onClick={() => setActivePage('projects')} className="btn-primary">
+              <button type="button" onClick={() => setActivePage('projects')} className="btn-ink">
                 Open the full register
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </button>
@@ -360,15 +393,15 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             </p>
           </div>
 
-          <div data-reveal className="lg:col-span-7 bg-[var(--paper)] px-7 py-9 text-[#1A1A1A] sm:px-10 sm:py-11">
+          <div data-reveal className="sheet lg:col-span-7 px-7 py-9 sm:px-10 sm:py-11">
             <p className="font-heading text-[1.5rem] leading-snug">
               Oriaiyan Signature Plotted Developments
             </p>
-            <p className="mt-1 text-[14px] text-[var(--text-soft)]">
+            <p className="mt-1 text-[14px] text-[var(--sheet-soft)]">
               Kolar · 1,500 sq ft plot · seller-quoted rate
             </p>
 
-            <dl className="mt-8 grid gap-x-10 gap-y-5 sm:grid-cols-2">
+            <dl className="mt-8 grid grid-cols-2 gap-x-8 gap-y-5 sm:gap-x-10">
               {[
                 { term: 'Plot area', value: '1,500 sq ft' },
                 { term: 'Rate quoted', value: '₹4,200 / sq ft' },
@@ -378,13 +411,13 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                 { term: 'Value after 5 years', value: '₹1.11 Cr' }
               ].map((row) => (
                 <div key={row.term}>
-                  <dt className="text-[14px] text-[var(--text-soft)]">{row.term}</dt>
+                  <dt className="text-[14px] text-[var(--sheet-soft)]">{row.term}</dt>
                   <dd className="mt-1 font-heading text-[1.5rem] figures">{row.value}</dd>
                 </div>
               ))}
             </dl>
 
-            <p className="mt-8 max-w-[52ch] text-[14px] leading-relaxed text-[var(--text-soft)]">
+            <p className="mt-8 max-w-[52ch] text-[14px] leading-relaxed text-[var(--sheet-soft)]">
               ₹63,00,000 compounding at 12% for five years is ₹1,11,02,753 — a gain of ₹48.0 lakh
               before stamp duty, registration, taxes and holding costs. Ask for the current price
               sheet for the plot you are actually considering.
@@ -429,22 +462,22 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
                 decoding="async"
                 className="h-[320px] w-full object-cover sm:h-[440px]"
               />
-              <div className="bg-[var(--paper)] p-5 sm:absolute sm:right-0 sm:top-0 sm:w-[330px]">
-                <p className="text-[14px] leading-relaxed text-[#1A1A1A]">
+              <div className="sheet p-5 sm:absolute sm:right-0 sm:top-0 sm:w-[330px]">
+                <p className="text-[14px] leading-relaxed">
                   Six corridors, seven live entries, one desk. Nothing is published until its
                   approval record and title have been read.
                 </p>
               </div>
             </div>
 
-            <div data-reveal className="bg-[#0B1F3A] p-6 text-white lg:col-span-4">
+            <div data-reveal className="bg-[#133324] p-6 text-white lg:col-span-4">
               <svg viewBox="0 0 320 200" role="img" aria-label="Schematic of the corridors the desk follows, around Bengaluru" className="h-[170px] w-full">
                 <path d="M40 150 L120 40 L200 70 L280 130" fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" strokeDasharray="5 6" />
-                <circle cx="120" cy="40" r="4" fill="#C8A34D" />
-                <circle cx="200" cy="70" r="4" fill="#C8A34D" />
-                <circle cx="280" cy="130" r="4" fill="#C8A34D" />
-                <circle cx="40" cy="150" r="4" fill="#C8A34D" />
-                <circle cx="160" cy="110" r="9" fill="#DFC06E" />
+                <circle cx="120" cy="40" r="4" fill="#D4AF37" />
+                <circle cx="200" cy="70" r="4" fill="#D4AF37" />
+                <circle cx="280" cy="130" r="4" fill="#D4AF37" />
+                <circle cx="40" cy="150" r="4" fill="#D4AF37" />
+                <circle cx="160" cy="110" r="9" fill="#E9C349" />
                 <text x="160" y="140" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="var(--body-face)">Bengaluru</text>
                 <text x="120" y="28" textAnchor="middle" fill="rgba(255,255,255,0.65)" fontSize="11" fontFamily="var(--body-face)">Airport</text>
                 <text x="200" y="58" textAnchor="middle" fill="rgba(255,255,255,0.65)" fontSize="11" fontFamily="var(--body-face)">Nandi Hills</text>
@@ -468,17 +501,17 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             </div>
           </div>
 
-          <ul className="mt-12 grid gap-x-12 gap-y-4 text-[17px] leading-relaxed text-[#1A1A1A] sm:grid-cols-2">
+          <ul className="mt-12 grid gap-x-12 gap-y-4 text-[17px] leading-relaxed text-[#FBFBFD] sm:grid-cols-2">
             {[
               'Direct developer allocation and pricing',
               'Approval records read per project, not assumed',
-              'Channel partner for Puravankara, Oriaiyan, Tripon, Vinra and D1',
+              'Channel partner for Puravankara, Oriaiyan, Triton, Vinra and D1',
               'Site visits arranged with cab pickup',
               'Title and documentation support',
               'Loan coordination with SBI, HDFC and ICICI'
             ].map((point) => (
               <li key={point} className="flex gap-3">
-                <span aria-hidden="true" className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#C8A34D]" />
+                <span aria-hidden="true" className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#D4AF37]" />
                 {point}
               </li>
             ))}
@@ -487,8 +520,8 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
       </section>
 
       {/* ----------------------------------------------------------- proof */}
-      <section aria-labelledby="developers" className="section-stone overflow-hidden py-20 lg:py-28">
-        <div data-reveal className="mx-auto w-[90%] max-w-[720px] -rotate-1 bg-[var(--paper)] px-7 py-12 text-center sm:px-12">
+      <section aria-labelledby="developers" className="section-blue overflow-hidden py-20 lg:py-28">
+        <div data-reveal className="sheet mx-auto w-[90%] max-w-[720px] -rotate-1 px-7 py-12 text-center sm:px-12">
           <h2 data-reveal id="developers" className="font-heading text-[1.5rem]">
             The developers we represent
           </h2>
@@ -502,10 +535,10 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             className="mt-7 h-[190px] w-full object-cover"
           />
           <p className="mx-auto mt-8 max-w-[26ch] font-heading text-[1.5rem] leading-[1.7]">
-            Puravankara · Oriaiyan Group · Tripon Groups · Vinra Group · D1 Projects · Dubai Global
+            Puravankara · Oriaiyan Group · Triton Groups · Vinra Group · D1 Projects · Dubai Global
             Estates
           </p>
-          <p className="mx-auto mt-6 max-w-[46ch] text-[14px] leading-relaxed text-[var(--text-soft)]">
+          <p className="mx-auto mt-6 max-w-[46ch] text-[14px] leading-relaxed text-[var(--sheet-soft)]">
             Approvals are read per project, not inferred from the developer’s name.
           </p>
         </div>
@@ -525,9 +558,9 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             <div className="mt-8 space-y-1">
               {FAQ.map((item) => (
                 <details key={item.q} className="group py-4">
-                  <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#1A1A1A] transition-colors hover:text-[#7A5C10]">
+                  <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-6 text-[17px] leading-snug text-[#FBFBFD] transition-colors hover:text-[#D4AF37]">
                     <span>{item.q}</span>
-                    <span aria-hidden="true" className="mt-1 shrink-0 text-[#A6832A] transition-transform group-open:rotate-45">
+                    <span aria-hidden="true" className="mt-1 shrink-0 text-[#A8871F] transition-transform group-open:rotate-45">
                       +
                     </span>
                   </summary>
@@ -542,7 +575,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello Setty Relators. I have a question about approvals and title verification.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex min-h-11 items-center gap-2 text-[17px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+              className="mt-6 inline-flex min-h-11 items-center gap-2 text-[17px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
             >
               Ask the advisory desk
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -583,10 +616,10 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
           aria-hidden="true"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-[#071527]/45" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-[#070F1B]/45" aria-hidden="true" />
 
         <div className="shell flex min-h-[76svh] items-start justify-end py-14">
-          <div data-reveal className="w-full max-w-[420px] bg-[var(--paper)] px-7 py-8 text-[#1A1A1A] sm:px-8">
+          <div data-reveal className="sheet w-full max-w-[420px] px-7 py-8 sm:px-8">
             <h2 data-reveal id="visit" className="font-heading text-[1.5rem] leading-tight">
               Visit the desk
             </h2>
@@ -598,15 +631,15 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
 
             <dl className="mt-6 space-y-3 text-[14px]">
               <div className="flex items-baseline justify-between gap-4">
-                <dt className="text-[var(--text-soft)]">Site visits</dt>
+                <dt className="text-[var(--sheet-soft)]">Site visits</dt>
                 <dd className="text-right">By appointment</dd>
               </div>
               <div className="flex items-baseline justify-between gap-4">
-                <dt className="text-[var(--text-soft)]">Brokerage to buyers</dt>
+                <dt className="text-[var(--sheet-soft)]">Brokerage to buyers</dt>
                 <dd className="text-right">Zero</dd>
               </div>
               <div className="flex items-baseline justify-between gap-4">
-                <dt className="text-[var(--text-soft)]">Desk</dt>
+                <dt className="text-[var(--sheet-soft)]">Desk</dt>
                 <dd className="text-right figures">{PHONE_DISPLAY}</dd>
               </div>
             </dl>
@@ -616,7 +649,7 @@ export default function HomePage({ setActivePage, setSelectedProjectId }) {
             </button>
             <a
               href={`tel:+${WHATSAPP}`}
-              className="mt-3 flex min-h-11 items-center justify-center gap-2 text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4"
+              className="mt-3 flex min-h-11 items-center justify-center gap-2 text-[14px] text-[var(--sheet-ink)] underline decoration-[var(--gold-on-light)] decoration-2 underline-offset-4"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
               Speak to an advisor

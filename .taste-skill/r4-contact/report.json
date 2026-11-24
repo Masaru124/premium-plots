@@ -1,0 +1,1410 @@
+{
+ "url": "http://localhost:54987/?page=contact",
+ "at": "2026-11-24T12:40:45.404Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.45,
+    0.39,
+    0.32
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 2,
+    "transitions": 5,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2418,
+     "screens": 2.7,
+     "words": 279,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-swimming-pool.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Talk to a property advisor.",
+     "words": 5,
+     "chars": 27,
+     "lines": 2,
+     "size": 80,
+     "vw": 5.6,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.48,
+     "top": 161,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Talk to a property advisor.",
+     "words": 5,
+     "lines": 2,
+     "size": 80,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Talk to a property advisor.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 80,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 161,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The desk",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 557,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Send an inquiry",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 34.6,
+      "vw": 2.4,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.5,
+      "top": 597,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 1884,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      19,
+      24,
+      35,
+      52,
+      80
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.7
+     },
+     "measureChars": 94,
+     "max": {
+      "size": 80,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "text": "Talk to a property advisor."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#11233d",
+       "top": 557,
+       "hsl": {
+        "h": 215,
+        "s": 0.56,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 1804,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.56
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.27
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.12
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.03
+      },
+      {
+       "color": "#e9c349",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a visit",
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.12
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2418,
+    "margins": {
+     "left": 100,
+     "right": 100
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 1804,
+      "words": 167,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Talk to a property advisor.",
+       "size": 80,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 125,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 1804,
+      "height": 615,
+      "words": 145,
+      "media": 0,
+      "middle": 94,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 52,
+       "tag": "p"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Talk to a property advisor.",
+      "size": 80,
+      "top": 161,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 100,
+      "n": 4
+     },
+     {
+      "x": 575,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 6,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.05,
+    "voidBox": {
+     "x": 300,
+     "y": 420,
+     "w": 540,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.48,
+    0.44,
+    0.41,
+    0.16,
+    0.22
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 2,
+    "transitions": 5,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4124,
+     "screens": 4,
+     "words": 267,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-swimming-pool.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Talk to a property advisor.",
+     "words": 5,
+     "chars": 27,
+     "lines": 2,
+     "size": 49.2,
+     "vw": 6.4,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.63,
+     "top": 120,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Talk to a property advisor.",
+     "words": 5,
+     "lines": 2,
+     "size": 49.2,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Talk to a property advisor.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 49.2,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.63,
+      "top": 120,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2761,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      19,
+      24,
+      26,
+      32,
+      49
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 49.2,
+      "vw": 6.4,
+      "font": "Playfair Display",
+      "text": "Talk to a property advisor."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#11233d",
+       "top": 1477,
+       "hsl": {
+        "h": 215,
+        "s": 0.56,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 2681,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.55
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.28
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.12
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.03
+      },
+      {
+       "color": "#e9c349",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.28
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4124,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 2681,
+      "words": 155,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Talk to a property advisor.",
+       "size": 49,
+       "tag": "h1"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 51,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 2681,
+      "height": 1443,
+      "words": 145,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Talk to a property advisor.",
+      "size": 49,
+      "top": 120,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 4
+     },
+     {
+      "x": 80,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 6,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.54,
+    0.58,
+    0.56,
+    0.62,
+    0.38,
+    0.36
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 2,
+    "transitions": 5,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4822,
+     "screens": 5.7,
+     "words": 267,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "purva-villas-community.jpeg",
+      "purva-villa-front-portico.jpeg",
+      "purva-villa-handcrafted-kitchen.jpeg",
+      "purva-villa-swimming-pool.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Talk to a property advisor.",
+     "words": 5,
+     "chars": 27,
+     "lines": 2,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 120,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Talk to a property advisor.",
+     "words": 5,
+     "lines": 2,
+     "size": 40,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 19,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Talk to a property advisor.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 120,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The desk",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 790,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Send an inquiry",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 25.6,
+      "vw": 6.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1520,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3335,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The portfolio",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3738,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Information",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4082,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Next step",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4385,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      19,
+      24,
+      26,
+      32,
+      40
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.7
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "text": "Talk to a property advisor."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#11233d",
+       "top": 1488,
+       "hsl": {
+        "h": 215,
+        "s": 0.56,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#0b192c",
+       "top": 3255,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.55
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.28
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.12
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.03
+      },
+      {
+       "color": "#e9c349",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a site visit"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.26
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "playfair display fallback",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4822,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 3255,
+      "words": 155,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Talk to a property advisor.",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 3255,
+      "height": 1567,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 49,
+      "textLeft": 20,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Talk to a property advisor.",
+      "size": 40,
+      "top": 120,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 4
+     },
+     {
+      "x": 44,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 6,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 94 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 8 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\r4-contact\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\r4-contact\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\r4-contact\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\r4-contact\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\r4-contact\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\r4-contact\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

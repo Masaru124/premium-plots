@@ -1,4 +1,4 @@
-import { Playfair_Display, Poppins } from 'next/font/google';
+import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 
 const display = Playfair_Display({
@@ -8,7 +8,7 @@ const display = Playfair_Display({
   style: ['normal', 'italic']
 });
 
-const body = Poppins({
+const body = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],

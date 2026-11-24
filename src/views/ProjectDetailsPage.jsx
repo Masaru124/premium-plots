@@ -63,7 +63,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
           <button
             type="button"
             onClick={() => setActivePage('projects')}
-            className="inline-flex min-h-11 items-center gap-2 text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+            className="inline-flex min-h-11 items-center gap-2 text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back to the register
@@ -72,35 +72,33 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
         <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
-            <p className="text-[14px] text-[#7A5C10]">
+            <p className="text-[14px] text-[#D4AF37]">
               {project.propertyType}
               {project.groupName ? ` · ${project.groupName}` : ''}
               {project.corridorId ? ` · ${project.location}` : ''}
             </p>
-            <h1 className="mt-3 display-lg max-w-[24ch] text-[#0B1F3A]">{displayTitle}</h1>
-            <p className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[17px] leading-relaxed text-[var(--text-soft)]">
+            <h1 className="mt-3 display-lg max-w-[24ch] text-[#FBFBFD]">{displayTitle}</h1>
+            <p className="mt-5 text-[17px] leading-relaxed text-[var(--text-soft)]">
               <a
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-start gap-2 underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                className="inline-flex items-start gap-2 underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
               >
-                <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#7A5C10]" aria-hidden="true" />
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#D4AF37]" aria-hidden="true" />
                 {project.location}
               </a>
-              <span>
-                By <span className="text-[#1A1A1A]">{project.developer}</span>
-              </span>
             </p>
           </div>
 
           <div className="lg:col-span-4">
-            <p className="font-heading text-[2rem] leading-tight text-[#0B1F3A] figures sm:text-[2.5rem]">
+            <p className="font-heading text-[2rem] leading-tight text-[#FBFBFD] figures sm:text-[2.5rem]">
               {project.formattedStartPrice}
             </p>
             <p className="mt-1 text-[15px] text-[var(--text-soft)] figures">{project.priceRange}</p>
             <p className="mt-1 text-[14px] text-[var(--text-soft)]">
               {isResale ? 'Seller-quoted asking price' : 'Developer quote, confirmed before booking'}
+              <span className="block">By {project.developer}</span>
             </p>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
@@ -119,7 +117,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex min-h-11 w-full items-center gap-2 text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+              className="mt-2 inline-flex min-h-11 w-full items-center gap-2 text-[14px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
             >
               <Download className="h-4 w-4" aria-hidden="true" />
               {isResale ? 'Request unit details' : 'Request the brochure packet'}
@@ -188,9 +186,9 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               isResale ? 'Confirm with the desk' : String(project.availablePlots ?? '—')
             ]
           ].map(([term, value]) => (
-            <div key={term}>
+            <div key={term} className="min-w-0">
               <dt className="label">{term}</dt>
-              <dd className="mt-1 text-[16px] leading-relaxed text-[#1A1A1A] figures">{value}</dd>
+              <dd className="mt-1 min-w-0 text-[16px] leading-relaxed text-[#FBFBFD] figures [overflow-wrap:anywhere]">{value}</dd>
             </div>
           ))}
         </dl>
@@ -206,16 +204,16 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
         <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-14 lg:col-span-8">
             <div data-reveal>
-              <h2 className="display-md text-[#0B1F3A]">The project</h2>
+              <h2 className="display-md text-[#FBFBFD]">The project</h2>
               <p className="measure mt-4 text-[17px] leading-relaxed text-[var(--text-soft)] sm:text-[19px]">
                 {project.overview}
               </p>
 
               {(project.highlights || []).length > 0 && (
-                <ul className="mt-8 grid gap-x-10 gap-y-3 text-[17px] leading-relaxed text-[#1A1A1A] sm:grid-cols-2">
+                <ul className="mt-8 grid gap-x-10 gap-y-3 text-[17px] leading-relaxed text-[#FBFBFD] sm:grid-cols-2">
                   {project.highlights.map((h) => (
                     <li key={h} className="flex gap-3">
-                      <span aria-hidden="true" className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#C8A34D]" />
+                      <span aria-hidden="true" className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#D4AF37]" />
                       {h}
                     </li>
                   ))}
@@ -229,7 +227,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
             {project.id === 'project-vinra-alora' && (
               <div data-reveal className="section-navy on-ink px-6 py-10 sm:px-10">
-                <p className="label text-[#DFC06E]">Vinra Interiors &amp; Renovations · package add-ons</p>
+                <p className="label text-[#E9C349]">Vinra Interiors &amp; Renovations · package add-ons</p>
                 <h2 className="mt-3 display-md text-white">Turnkey construction and interiors</h2>
                 <p className="mt-3 max-w-[58ch] text-[17px] leading-relaxed text-white/70">
                   Three packages for Vinra Alora plot owners, priced by the square foot and itemised
@@ -269,7 +267,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                     <div key={pkg.name}>
                       <div className="flex flex-wrap items-baseline justify-between gap-3">
                         <dt className="font-heading text-[1.5rem] text-white">{pkg.name}</dt>
-                        <dd className="font-heading text-[1.25rem] text-[#DFC06E] figures">{pkg.rate}</dd>
+                        <dd className="font-heading text-[1.25rem] text-[#E9C349] figures">{pkg.rate}</dd>
                       </div>
                       <dd className="mt-3 grid gap-x-8 gap-y-2 text-[15px] leading-relaxed text-white/75 sm:grid-cols-3">
                         {pkg.rows.map(([term, value]) => (
@@ -286,7 +284,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
             )}
 
             <div data-reveal>
-              <h2 className="display-md text-[#0B1F3A]">What is nearby</h2>
+              <h2 className="display-md text-[#FBFBFD]">What is nearby</h2>
               <p className="mt-3 max-w-[58ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
                 Distances are as published by the developer for the wider project. Confirm the exact
                 pin and the route from the unit you are considering.
@@ -294,7 +292,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               <dl className="mt-8 grid gap-x-12 gap-y-4 sm:grid-cols-2">
                 {(project.landmarks || []).map((lm) => (
                   <div key={lm.name} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 text-[17px]">
-                    <dt className="text-[#1A1A1A]">{lm.name}</dt>
+                    <dt className="text-[#FBFBFD]">{lm.name}</dt>
                     <dd className="text-[var(--text-soft)] figures">{lm.distance}</dd>
                   </div>
                 ))}
@@ -303,7 +301,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
             {isResale && (
               <div data-reveal className="bg-[var(--stone)] px-6 py-9 sm:px-9">
-                <h2 className="display-md text-[#0B1F3A]">
+                <h2 className="display-md text-[#FBFBFD]">
                   Purva Symphony, off Bannerghatta Road
                 </h2>
                 <p className="mt-3 max-w-[62ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
@@ -316,7 +314,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                   4-BHK residences off Bannerghatta Road, which is separate from the seller’s
                   five-bedroom resale claim.{' '}
                   <a
-                    className="text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4"
+                    className="text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4"
                     href="https://www.puravankara.com/residential/bengaluru/purva-symphony"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -326,10 +324,10 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                   .
                 </p>
 
-                <h3 className="mt-8 font-heading text-[1.25rem] text-[#0B1F3A]">
+                <h3 className="mt-8 font-heading text-[1.25rem] text-[#FBFBFD]">
                   Details to verify before purchase
                 </h3>
-                <ul className="mt-3 grid gap-x-10 gap-y-2 text-[16px] leading-relaxed text-[#1A1A1A] sm:grid-cols-2">
+                <ul className="mt-3 grid gap-x-10 gap-y-2 text-[16px] leading-relaxed text-[#FBFBFD] sm:grid-cols-2 [overflow-wrap:anywhere]">
                   <li>Title, khata and occupancy records for the unit</li>
                   <li>Project RERA PRM/KA/RERA/1251/310/PR/210907/004300, phase confirmed</li>
                   <li>Seller-advertised five bedrooms against the sanctioned plan</li>
@@ -340,7 +338,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
 
                 <a
                   href="/purva-sounds-of-water"
-                  className="mt-7 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                  className="mt-7 inline-flex min-h-11 items-center gap-2 text-[16px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
                 >
                   The dedicated villa page
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -352,7 +350,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
           {/* ---------------------------------------------------------- aside */}
           <aside className="lg:col-span-4">
             <div className="sticky top-24 bg-[var(--stone)] px-6 py-7">
-              <p className="font-heading text-[1.25rem] leading-snug text-[#0B1F3A]">{project.title}</p>
+              <p className="font-heading text-[1.25rem] leading-snug text-[#FBFBFD]">{project.title}</p>
               <p className="mt-1 text-[14px] text-[var(--text-soft)]">By {project.developer}</p>
 
               <dl className="mt-6 space-y-3 text-[15px]">
@@ -370,7 +368,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                 ].map(([term, value]) => (
                   <div key={term} className="flex items-baseline justify-between gap-5">
                     <dt className="text-[var(--text-soft)]">{term}</dt>
-                    <dd className="text-right text-[#1A1A1A] figures">{value}</dd>
+                    <dd className="text-right text-[#FBFBFD] figures">{value}</dd>
                   </div>
                 ))}
               </dl>
@@ -378,7 +376,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
               {(project.bankApprovals || []).length > 0 && (
                 <div className="mt-6">
                   <p className="text-[14px] text-[var(--text-soft)]">Pre-approved lenders</p>
-                  <p className="mt-1 text-[15px] leading-relaxed text-[#1A1A1A]">
+                  <p className="mt-1 text-[15px] leading-relaxed text-[#FBFBFD]">
                     {(project.bankApprovals || []).join(' · ')}
                   </p>
                 </div>
@@ -406,7 +404,7 @@ export default function ProjectDetailsPage({ projectId, setActivePage }) {
                   href={googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex min-h-11 items-center justify-center text-[14px] text-[#0B1F3A] underline decoration-[#C8A34D] decoration-2 underline-offset-4 hover:text-[#7A5C10]"
+                  className="flex min-h-11 items-center justify-center text-[14px] text-[#FBFBFD] underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#D4AF37]"
                 >
                   Open the location pin
                 </a>

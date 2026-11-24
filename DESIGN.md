@@ -1,79 +1,105 @@
 # Setty Relators — design system
 
-Direction: **the place carries it** (tasteskill draw, seed 1950092125, sector real-estate, tone luxury,
-`--keep palette,type`). The photograph is the argument; type sets the listing the way a wall label sets
-a work. The name is small where it identifies and large where it titles.
+Direction: **Bengaluru Estate Sovereign**. Deep royal sapphire is the canvas, imperial forest green
+is the biophilic slab, champagne gold is the only accent and never fills a large surface. Type is
+alabaster on sapphire, set in Playfair Display over Plus Jakarta Sans. Surfaces are matte; separation
+comes from tone and a 1px gold hairline, never from a drop shadow.
 
-## The idea
+The editorial idea is unchanged from the tasteskill draw (`place-carries-it`, seed 1950092125): the
+photograph is the argument, and the desk's own listing line — corridor, project, quoted price — sits
+beneath it like a wall label. Choosing a corridor changes both photograph and line.
 
-On this page, **the desk's own listing line — corridor, project, quoted price — becomes the caption
-beneath a full-bleed photograph**, and choosing a corridor changes both the photograph and the line.
-
-Competitor test: a rival broker could not use the same sentence with its own content, because the
-corridors (Nandi Hills, Jiganki edge, Bannerghatta) and seller-quoted prices are this desk's own
-inventory.
-
-Live thing: the corridor selector in the hero. It uses the real corridor list and real project rows,
-works with a thumb, and renders the default project without JavaScript.
-
-## Palette (brand values, unchanged)
+## Palette
 
 | Token | Value | Role |
 | --- | --- | --- |
-| `--ink` | `#0B1F3A` | structural ground, headings, primary button |
-| `--ink-deep` | `#071527` | scrim over photographs, footer |
-| `--ink-soft` | `#142E54` | hover, secondary panels |
-| `--gold` | `#C8A34D` | the one accent: primary action, wordmark mark |
-| `--gold-light` | `#DFC06E` | gold on ink |
-| `--gold-ink` | `#7A5C10` | gold as text on paper (5.7:1) |
-| `--paper` | `#F8F8F5` | page ground, plates |
-| `--stone` | `#EFEEE8` | section tone step, form fields |
-| `--text` | `#1A1A1A` | running text |
-| `--text-soft` | `#4C4C4C` | secondary text |
+| `--ink` | `#0B192C` | base canvas, structural ground |
+| `--ink-deep` | `#070F1B` | recessed gallery band, scrim, footer/hero ground |
+| `--ink-soft` | `#11233D` | elevated container, cards, inputs |
+| `--blue` | `#1B3A5C` | raised royal blue: panel hover, inked button hover |
+| `--blue-deep` | `#14294A` | the blue chapter band (`.section-blue`) |
+| `--forest` | `#133324` | biophilic slab for a chapter set apart |
+| `--forest-deep` | `#0E2619` | forest hover |
+| `--green` | `#2F6B4E` | verified / available marks |
+| `--sheet` | `#FBFBFD` | the register printed on alabaster (`.sheet`) |
+| `--sheet-soft` | `#4A5666` | secondary copy on the sheet (7.4:1) |
+| `--sheet-tint` | `#F1F3F7` | alternating register row on the sheet |
+| `--gold-on-light` | `#8A6A12` | gold as type on alabaster (4.9:1) |
+| `--gold` | `#D4AF37` | the one accent: action, price, hairline |
+| `--gold-light` | `#E9C349` | gold on forest |
+| `--gold-pale` | `#FFE088` | focus and hover on dark |
+| `--gold-deep` | `#A8871F` | gold press |
+| `--white` | `#FBFBFD` | display and body type, primary button field |
+| `--text-soft` | `#B0B8C4` | secondary copy, captions, labels |
+| `--text-dim` | `#8F9097` | tertiary meta, placeholders |
+| `--rule` | `rgba(251,251,253,.10)` | tonal separation inside a panel |
+| `--rule-strong` | `rgba(212,175,55,.22)` | gold hairline between surfaces |
 
-One ground, one ink, one accent. Colour lives in the photographs; gold appears on the action and one
-other thing per screen. Surfaces separate by a tone step, not a line or a shadow.
+Rules: gold is never a large solid fill. Gold hairlines frame cards. Contrast checked — alabaster on
+sapphire 15:1, soft grey 7:1, gold on sapphire 6.6:1 (body size only).
 
-## Type
+## Typography
 
-- Display: Playfair Display (`--font-display`), 400, tracking −0.02 to −0.025em, leading 0.98–1.1.
-- Text: Poppins (`--font-body`), 400/500.
-- Five steps in use, and only these: **80 / 52 / 24 / 19 / 17 / 14** (display, section, plate heading,
-  lead, body, small). Body never below 17px; labels never below 13px. No uppercase or letter-spaced
-  micro-labels.
-- Measures cap at 52–62ch. Headlines stay inside two lines at every width.
+| Class | Face | Size | Use |
+| --- | --- | --- | --- |
+| `.display-xl` | Playfair Display 500 | clamp 40 → 80px, lh 1 | page headline, one per page |
+| `.display-lg` | Playfair Display 500 | clamp 32 → 52px, lh 1.06 | section headline |
+| `.display-md` | Playfair Display 500 | clamp 25.6 → 36px | sub-headline, panel title |
+| `.lede` | Plus Jakarta Sans | clamp 17 → 20px | standfirst |
+| body | Plus Jakarta Sans | 17px / 1.65 | running text, forms |
+| `.label` | Plus Jakarta Sans | 14px | caption above a figure or field |
+| `.label-caps` | Plus Jakarta Sans | 13px, 0.1em, uppercase | catalogue specimen label only |
 
-## Space and frame
+Muted copy is `--text-soft`; never set running text below 15px.
 
-- One shell: `max-width: 1320px`, equal gutters 20px (mobile) / 40px (desktop).
-- Sections: 88 / 120 / 144px block padding.
-- No hairlines, no outlined boxes, no shadows at rest. A table or a form field may keep its own lines.
-- Photographs are square-cornered and full-bleed where the composition allows.
+## Layout
 
-## Components
+`.shell` is 1320px with 20px gutters on mobile, 40px from 768px. `.page-section` is 88 / 120 / 144px
+block padding. Twelve columns, content usually 7/5 or 8/4. Text measures cap at 62ch.
 
-- **Button**: 48px minimum, 2px radius, one flat fill. Gold (primary), ink (primary alternate), toned
-  paper (secondary). Sentence case, 14px, no tracking.
-- **Plate**: photograph + `.plate-line` caption (project, corridor, price right-aligned, tabular figures).
-- **Register sheet**: a paper panel on a stone field, groups by category, prices right-aligned, no rules.
-- **Memo**: the desk's worked arithmetic — one named plot, one rate, one caveat, one action.
-- **Proof card**: developer names set as a printed list on a slightly rotated paper card, clipped by the
-  section edge.
-- **FAQ**: native `<details>`/`<summary>`, 44px targets, no dividers.
-- **Contact**: an opaque paper card on a full-bleed photograph.
+## Surfaces
+
+- **Canvas** `--ink`. Most of the site.
+- **Elevated** `--ink-soft`, used for cards and the sticky desk panel.
+- **Recessed** `--ink-deep`, used for the hero title band, the showcase and scrims over photographs.
+- **Blue band** `--blue-deep` (`.section-blue`) for the developer proof chapter.
+- **Forest slab** `--forest` for a chapter that should read as a different room (`.section-navy`).
+- **The sheet** `--sheet`: one white field on the page, the register itself, set in sapphire ink with
+  `--gold-on-light` prices and `--sheet-tint` alternating rows. A hero photograph carries the first
+  screen; the title band beneath it sits on solid ink so no type ever fights a picture.
+- **Fields** sit on `--ink` with a 1px alabaster hairline at 16% and a gold focus, never on the same
+  tone as their panel.
+- **Plates** are photographs with no border radius bleed; captions use `.plate-line` (15px, price in
+  Playfair gold).
+
+## Buttons
+
+| Class | Look | Use |
+| --- | --- | --- |
+| `.btn-gold` | alabaster field, sapphire type, 4px radius | the one action on a screen |
+| `.btn-primary` | transparent, 1px gold border, gold type | luxury secondary |
+| `.btn-quiet` | transparent, 1px alabaster hairline | tertiary and on-ink controls |
+
+Minimum height 48px, no shadows, hover changes colour only.
 
 ## Motion
 
-- Signature move: the hero plate drifts from 1.06 to 1 over 26s, as light settling.
-- Section entrances: headings, plates and cards rise 18px and fade, staggered 70ms per sibling, once.
-  Gated behind `.js-reveal`; without script nothing is hidden.
-- Every control has hover, focus-visible, active and disabled states.
-- `prefers-reduced-motion` removes travel and keeps state feedback.
+One authored entrance per page: `.hero-settle` on the hero, and `.js-reveal [data-reveal]` for
+sections as they arrive (the class is only added when motion is allowed, so content is never hidden
+without script). `.hero-plate` drifts a hero photograph from 1.06 to 1 once. Reduced motion turns all
+of it off.
+
+## Components
+
+- **Plate line** — corridor/project on the left, quoted price in Playfair gold on the right.
+- **Register row** — photograph, project, location, prose, specs, price and actions in one ruled row.
+- **Desk panel** — sticky elevated panel beside a listing: specs as a label/value list and two actions.
+- **Masterplan grid** — units as square tiles on raised sapphire, selected unit gold, sold struck out.
+- **Data tables** — real tables only, gold header rule, generous cell padding, `data-ui` so the
+  hairline audit treats them as interface rather than decoration.
 
 ## Accessibility
 
-- Focus ring: 2px `--gold-deep` on paper, `--gold-light` on ink, 3px offset.
-- Every control is a real button or link with a visible name; icon-only controls carry `aria-label`.
-- Toggles use `aria-pressed`; the dialog traps focus, locks scroll and returns focus to its trigger.
-- Text contrast: body `#1A1A1A` on `#F8F8F5` (15.9:1), soft `#4C4C4C` (7.4:1), gold text on paper
-  `#7A5C10` (5.7:1), white at ≥70% on ink (≥7:1).
+Focus is a 2px gold outline with 3px offset, pale gold on forest. Every photograph carries a caption
+that says what it is or states that it is representative. Interactive rows keep 44px targets. Paid or
+seller-quoted figures are labelled as such wherever they appear.

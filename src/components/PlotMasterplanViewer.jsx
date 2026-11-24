@@ -28,7 +28,7 @@ export default function PlotMasterplanViewer({ project }) {
   if (layoutGrid.length === 0) {
     return (
       <div>
-        <h3 className="font-heading text-[1.25rem] text-[#0B1F3A]">
+        <h3 className="font-heading text-[1.25rem] text-[#FBFBFD]">
           {project?.title || 'Project'} masterplan
         </h3>
         <p className="mt-2 max-w-[54ch] text-[17px] leading-relaxed text-[var(--text-soft)]">
@@ -45,7 +45,7 @@ export default function PlotMasterplanViewer({ project }) {
     <div>
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
-          <h3 className="font-heading text-[1.25rem] text-[#0B1F3A]">Select a unit</h3>
+          <h3 className="font-heading text-[1.25rem] text-[#FBFBFD]">Select a unit</h3>
           <p className="mt-1 max-w-[52ch] text-[16px] leading-relaxed text-[var(--text-soft)]">
             Choose a unit to see availability, orientation, dimensions and the total quoted cost.
           </p>
@@ -58,7 +58,7 @@ export default function PlotMasterplanViewer({ project }) {
 
       <div className="mt-7 grid gap-6 lg:grid-cols-12">
         {/* grid */}
-        <div className="bg-white px-5 py-6 lg:col-span-7">
+        <div className="bg-[#11233D] px-5 py-6 lg:col-span-7">
           <div className="flex flex-wrap items-center justify-between gap-3 pb-2 text-[14px] text-[var(--text-soft)]">
             <span>60-foot blacktopped boulevard</span>
             <span>Vastu orientations</span>
@@ -68,9 +68,9 @@ export default function PlotMasterplanViewer({ project }) {
             {layoutGrid.map((pt) => {
               const isSelected = selectedPlot && selectedPlot.plotNo === pt.plotNo;
 
-              let tone = 'bg-[#0B1F3A]/8 text-[#0B1F3A] hover:bg-[#0B1F3A]/16';
-              if (pt.status === 'reserved') tone = 'bg-[#C8A34D]/25 text-[#0B1F3A] hover:bg-[#C8A34D]/40';
-              else if (pt.status === 'sold') tone = 'bg-transparent text-[#B4B4B4] line-through cursor-not-allowed';
+              let tone = 'bg-[#FBFBFD]/6 text-[#FBFBFD] hover:bg-[#FBFBFD]/11';
+              if (pt.status === 'reserved') tone = 'bg-[#D4AF37]/25 text-[#FBFBFD] hover:bg-[#D4AF37]/40';
+              else if (pt.status === 'sold') tone = 'bg-transparent text-[#8F9097] line-through cursor-not-allowed';
 
               return (
                 <button
@@ -79,13 +79,13 @@ export default function PlotMasterplanViewer({ project }) {
                   onClick={() => setSelectedPlot(pt)}
                   aria-pressed={Boolean(isSelected)}
                   className={`flex min-h-14 flex-col items-center justify-center px-1 py-2 transition-colors ${tone} ${
-                    isSelected ? 'bg-[#0B1F3A] text-white hover:bg-[#0B1F3A]' : ''
+                    isSelected ? 'bg-[#D4AF37] text-[#0B192C] hover:bg-[#D4AF37]' : ''
                   }`}
                 >
                   <span className="text-[14px] figures">{pt.plotNo}</span>
                   <span className="text-[13px] opacity-75">{pt.dimension.split(' ')[0]}</span>
                   {pt.isCorner && (
-                    <span className="mt-0.5 text-[11px] text-[#A6832A]">corner</span>
+                    <span className="mt-0.5 text-[11px] text-[#A8871F]">corner</span>
                   )}
                 </button>
               );
@@ -98,7 +98,7 @@ export default function PlotMasterplanViewer({ project }) {
           {selectedPlot ? (
             <div className="flex h-full flex-col justify-between gap-6">
               <div>
-                <p className="text-[14px] text-[#DFC06E] figures">Unit {selectedPlot.plotNo}</p>
+                <p className="text-[14px] text-[#E9C349] figures">Unit {selectedPlot.plotNo}</p>
                 <p className="mt-2 font-heading text-[1.5rem] leading-tight text-white">
                   {selectedPlot.dimension}
                 </p>
@@ -117,7 +117,7 @@ export default function PlotMasterplanViewer({ project }) {
                   </div>
                   <div className="flex items-baseline justify-between gap-4 pt-2">
                     <dt className="text-white/55">Quoted total</dt>
-                    <dd className="font-heading text-[1.25rem] text-[#DFC06E] figures">
+                    <dd className="font-heading text-[1.25rem] text-[#E9C349] figures">
                       ₹{(selectedPlot.totalPrice / 100000).toFixed(2)} L
                     </dd>
                   </div>
@@ -129,7 +129,7 @@ export default function PlotMasterplanViewer({ project }) {
 
                 {isAdminLoggedIn && (
                   <div className="mt-6">
-                    <p className="text-[14px] text-[#DFC06E]">Inventory control</p>
+                    <p className="text-[14px] text-[#E9C349]">Inventory control</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {['available', 'reserved', 'sold'].map((status) => (
                         <button
@@ -138,7 +138,7 @@ export default function PlotMasterplanViewer({ project }) {
                           onClick={() => handleStatusChange(selectedPlot.plotNo, status)}
                           className={`min-h-10 px-3 text-[14px] capitalize transition-colors ${
                             selectedPlot.status === status
-                              ? 'bg-[#C8A34D] text-[#0B1F3A]'
+                              ? 'bg-[#D4AF37] text-[#0B192C]'
                               : 'bg-white/10 text-white/75 hover:bg-white/20'
                           }`}
                         >
