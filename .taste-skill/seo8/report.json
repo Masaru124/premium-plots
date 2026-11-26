@@ -1,0 +1,1526 @@
+{
+ "url": "http://localhost:54987/projects/sun-valley-plots-chikkaballapura-d1",
+ "at": "2026-11-26T07:10:09.765Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.47,
+    0.76,
+    0.49,
+    0.59,
+    0.31
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 0,
+    "transitions": 6,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3911,
+     "screens": 4.3,
+     "words": 483,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 11,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1512917774080-9991f1c4c750?auto=format&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+     "words": 6,
+     "chars": 44,
+     "lines": 2,
+     "size": 52,
+     "vw": 3.6,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.015,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.41,
+     "top": 327,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+     "words": 6,
+     "lines": 2,
+     "size": 52,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+      "words": 6,
+      "chars": 44,
+      "lines": 2,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 327,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What this project is.",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1067,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What is nearby.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 1969,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Before you visit.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 2415,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 3241,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.97,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      22,
+      24,
+      52
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.2
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 52,
+      "vw": 3.6,
+      "font": "Playfair Display",
+      "text": "Sun Valley Plotted Enclave - Chikkaballa"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0b192c",
+       "top": 0,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 923,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 2271,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.59
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.18
+      },
+      {
+       "color": "#4a5666",
+       "share": 0.09
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.07
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a visit",
+      "Ask about this listing"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.2
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3911,
+    "margins": {
+     "left": 100,
+     "right": 100
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 3161,
+      "words": 554,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+       "size": 52,
+       "tag": "h1"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 3161,
+      "height": 750,
+      "words": 162,
+      "media": 0,
+      "middle": 77,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 52,
+       "tag": "p"
+      },
+      "left": 100,
+      "right": 100,
+      "textLeft": 100,
+      "textRight": 100,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+      "size": 52,
+      "top": 327,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 100,
+      "n": 13
+     },
+     {
+      "x": 748,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.1,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 720,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.59,
+    0.8,
+    0.33,
+    0.89,
+    0.32,
+    0.23
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 0,
+    "transitions": 6,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5919,
+     "screens": 5.8,
+     "words": 471,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 11,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1512917774080-9991f1c4c750?auto=format&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+     "words": 6,
+     "chars": 44,
+     "lines": 1,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.015,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 159,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+     "words": 6,
+     "lines": 1,
+     "size": 32,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+      "words": 6,
+      "chars": 44,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 159,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What this project is.",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1503,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What is nearby.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2743,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Before you visit.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3286,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4356,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.97,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      22,
+      24,
+      32
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.2
+     },
+     "measureChars": 79,
+     "max": {
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "text": "Sun Valley Plotted Enclave - Chikkaballa"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0b192c",
+       "top": 0,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 1383,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 3166,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.59
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.18
+      },
+      {
+       "color": "#4a5666",
+       "share": 0.09
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.08
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ask about this listing"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.43
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5919,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 4276,
+      "words": 542,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 4276,
+      "height": 1643,
+      "words": 162,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+      "size": 32,
+      "top": 159,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 14
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.39,
+    0.89,
+    0.59,
+    0.38,
+    0.94,
+    0.54,
+    0.22,
+    0.35
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 0,
+    "transitions": 6,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 6280,
+     "screens": 7.4,
+     "words": 471,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 11,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "photo-1542314831-068cd1dbfeeb?auto=format&fit=cr",
+      "photo-1500382017468-9049fed747ef?auto=format&fit",
+      "photo-1512917774080-9991f1c4c750?auto=format&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+     "words": 6,
+     "chars": 44,
+     "lines": 2,
+     "size": 28,
+     "vw": 7.2,
+     "font": "Playfair Display",
+     "weight": 500,
+     "tracking": -0.015,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 159,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+     "words": 6,
+     "lines": 2,
+     "size": 28,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 19,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+      "words": 6,
+      "chars": 44,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 159,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What this project is.",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1296,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What is nearby.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2895,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Before you visit.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3467,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Setty Relators",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4593,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "The portfolio",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4996,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Information",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5500,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Next step",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Playfair Display",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.65,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5844,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.97,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      22,
+      24,
+      28,
+      32
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 17,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.2
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Playfair Display",
+      "text": "What this project is."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b192c",
+     "bodyBgHsl": {
+      "h": 215,
+      "s": 0.6,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0b192c",
+       "top": 0,
+       "hsl": {
+        "h": 215,
+        "s": 0.6,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#fbfbfd",
+       "top": 1208,
+       "hsl": {
+        "h": 240,
+        "s": 0.33,
+        "l": 0.99
+       }
+      },
+      {
+       "color": "#133324",
+       "top": 3379,
+       "hsl": {
+        "h": 152,
+        "s": 0.46,
+        "l": 0.14
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.59
+      },
+      {
+       "color": "#0b192c",
+       "share": 0.18
+      },
+      {
+       "color": "#4a5666",
+       "share": 0.09
+      },
+      {
+       "color": "#b0b8c4",
+       "share": 0.08
+      },
+      {
+       "color": "#fbfbfd",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#fbfbfd",
+      "hsl": {
+       "h": 240,
+       "s": 0.33,
+       "l": 0.99
+      },
+      "fg": "#0b192c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 4,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ask about this listing"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.14
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "playfair display",
+     "plus jakarta sans",
+     "plus jakarta sans fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 6280,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 0,
+      "height": 4513,
+      "words": 542,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "What this project is.",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": -5,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#0B192C].text-white",
+      "tag": "footer",
+      "top": 4513,
+      "height": 1767,
+      "words": 114,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Setty Relators",
+       "size": 32,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 49,
+      "textLeft": 20,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Sun Valley Plotted Enclave - Chikkaballapura",
+      "size": 28,
+      "top": 159,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 14
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 7 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\premium-plots\\.taste-skill\\seo8\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

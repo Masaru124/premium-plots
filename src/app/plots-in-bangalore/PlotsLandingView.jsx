@@ -23,8 +23,8 @@ const PLOTS_FAQS = [
     a: 'Verified plotted layouts start from ₹35 Lakhs in Chikkaballapura (Sun Valley by D1 Projects) up to ₹2.0 Crore for premium 4,499 sq.ft villa estates by Oriaiyan Group across 6 strategic corridors.'
   },
   {
-    q: 'Are all listed plots approved by BIAAPA, CUDDA, or BMRDA with RERA registration?',
-    a: 'Yes. Every project represented by Setty Relators is legally cleared with RERA Karnataka registration, BIAAPA / CUDDA / BDA / BMRDA sanctions, clear marketable titles, and A-Khata ownership.'
+    q: 'Which approvals should I check on a plot in Bangalore?',
+    a: 'Ask for four things: the layout sanction from the authority with jurisdiction over the survey number (BIAAPA, BMRDA, BDA or the local planning body), the RERA Karnataka registration for the phase being sold, the khata record, and the deed chain with its encumbrance certificate. The register carries the approval type stated for each project; verify it against the documents before you pay.'
   },
   {
     q: 'Why is there zero brokerage for buyers purchasing plots through Setty Relators?',
@@ -39,6 +39,7 @@ const PLOTS_FAQS = [
 const CORRIDORS = [
   {
     name: 'Airport & Chikkajala',
+    href: '/property-near-bangalore-airport',
     rate: '₹4,200 – ₹5,800',
     growth: '22.8%',
     drivers: 'KIADB Aerospace SEZ, Airport Expressway, upcoming Metro',
@@ -46,13 +47,15 @@ const CORRIDORS = [
   },
   {
     name: 'Chikkaballapura & Nandi Hills',
+    href: '/plots-in-chikkaballapura',
     rate: '₹2,800 – ₹3,900',
     growth: '21.5%',
     drivers: 'STRR northern arc, tourism infrastructure, medical hub',
-    authority: 'CUDDA & RERA'
+    authority: 'Local planning authority & RERA'
   },
   {
     name: 'South industrial belt (APC Circle, Jigani)',
+    href: '/plots-in-south-bangalore',
     rate: '₹3,200 – ₹4,400',
     growth: '16.9%',
     drivers: 'Electronic City link, NICE Expressway, manufacturing SEZs',
@@ -172,7 +175,13 @@ function PlotsContent() {
                     {CORRIDORS.map((c) => (
                       <tr key={c.name} data-ui className="border-b border-[var(--rule)]">
                         <th scope="row" className="py-4 pr-6 text-[16px] font-normal text-[#FBFBFD]">
-                          {c.name}
+                          {c.href ? (
+                            <Link href={c.href} className="underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#E9C349]">
+                              {c.name}
+                            </Link>
+                          ) : (
+                            c.name
+                          )}
                         </th>
                         <td className="py-4 pr-6 text-[16px] text-[#FBFBFD] figures">{c.rate}</td>
                         <td className="py-4 pr-6 text-[16px] text-[#FBFBFD] figures">{c.growth}</td>

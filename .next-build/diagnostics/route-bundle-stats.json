@@ -1,12 +1,12 @@
 [
   {
     "route": "/",
-    "firstLoadUncompressedJsBytes": 616151,
+    "firstLoadUncompressedJsBytes": 616526,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\1sb3ni7mt6bed.js",
-      ".next-build\\static\\chunks\\44tkv6nypaei-.js",
+      ".next-build\\static\\chunks\\3l0t68owcfsq1.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -16,12 +16,12 @@
   },
   {
     "route": "/purva-sounds-of-water",
-    "firstLoadUncompressedJsBytes": 612051,
+    "firstLoadUncompressedJsBytes": 615689,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\0az1ilixug9ks.js",
-      ".next-build\\static\\chunks\\1udqko76rwm5w.js",
+      ".next-build\\static\\chunks\\3va28n0_d3y7p.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -31,12 +31,12 @@
   },
   {
     "route": "/plots-in-bangalore",
-    "firstLoadUncompressedJsBytes": 598796,
+    "firstLoadUncompressedJsBytes": 602888,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\04wpsldkvbr_r.js",
-      ".next-build\\static\\chunks\\1udqko76rwm5w.js",
+      ".next-build\\static\\chunks\\03pb305dsrazo.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -46,12 +46,12 @@
   },
   {
     "route": "/luxury-villas-bangalore",
-    "firstLoadUncompressedJsBytes": 597621,
+    "firstLoadUncompressedJsBytes": 601259,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\1f4i4m93dz11k.js",
-      ".next-build\\static\\chunks\\1udqko76rwm5w.js",
+      ".next-build\\static\\chunks\\1zu_5-3u3pxjd.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -61,12 +61,12 @@
   },
   {
     "route": "/qna",
-    "firstLoadUncompressedJsBytes": 585638,
+    "firstLoadUncompressedJsBytes": 586013,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\0eax-fiirtbuv.js",
-      ".next-build\\static\\chunks\\1udqko76rwm5w.js",
+      ".next-build\\static\\chunks\\3xgdqi9p8-qx3.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -76,12 +76,12 @@
   },
   {
     "route": "/matchmaker",
-    "firstLoadUncompressedJsBytes": 585629,
+    "firstLoadUncompressedJsBytes": 586004,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\267dkjfba1wsn.js",
-      ".next-build\\static\\chunks\\1udqko76rwm5w.js",
+      ".next-build\\static\\chunks\\42ulmhd0wu9bf.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -91,12 +91,132 @@
   },
   {
     "route": "/property-finder",
-    "firstLoadUncompressedJsBytes": 585602,
+    "firstLoadUncompressedJsBytes": 585977,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next-build\\static\\chunks\\1tbi9yq914kyi.js",
-      ".next-build\\static\\chunks\\1udqko76rwm5w.js",
+      ".next-build\\static\\chunks\\1e0am2hf1ecsy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/guides",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/guides/[slug]",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/plots-in-chikkaballapura",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/plots-in-south-bangalore",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/premium-plots-in-bangalore",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/projects",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/projects/[slug]",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
+      ".next-build\\static\\chunks\\34l3sbam7skke.js",
+      ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
+      ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
+      ".next-build\\static\\chunks\\0cdi3bfr-9jl0.js",
+      ".next-build\\static\\chunks\\turbopack-1o5x8p-62qn81.js"
+    ]
+  },
+  {
+    "route": "/property-near-bangalore-airport",
+    "firstLoadUncompressedJsBytes": 581451,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\03_xea17-f0hy.js",
+      ".next-build\\static\\chunks\\0yuyr1v5d6hel.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",
@@ -106,12 +226,12 @@
   },
   {
     "route": "/admin",
-    "firstLoadUncompressedJsBytes": 579624,
+    "firstLoadUncompressedJsBytes": 579999,
     "firstLoadChunkPaths": [
       ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
       ".next-build\\static\\chunks\\1ctu8zn3s2sod.js",
-      ".next-build\\static\\chunks\\2yo__rrj7nlrk.js",
+      ".next-build\\static\\chunks\\38h3sa-qcxhe5.js",
       ".next-build\\static\\chunks\\34l3sbam7skke.js",
       ".next-build\\static\\chunks\\2kqrbujyxigm8.js",
       ".next-build\\static\\chunks\\25o46h8mdjlrg.js",

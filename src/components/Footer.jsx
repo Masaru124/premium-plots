@@ -8,7 +8,11 @@ export default function Footer({ setActivePage }) {
   const displayPhone = '+91 84319 09508';
 
   const portfolio = [
+    { label: 'Premium plots in Bangalore', href: '/premium-plots-in-bangalore' },
     { label: 'Open plots and villa plots', href: '/plots-in-bangalore' },
+    { label: 'Plots in Chikkaballapura', href: '/plots-in-chikkaballapura' },
+    { label: 'Plots in south Bangalore', href: '/plots-in-south-bangalore' },
+    { label: 'Property near the airport', href: '/property-near-bangalore-airport' },
     { label: 'Purva Symphony resale', href: '/purva-sounds-of-water' },
     { label: 'Luxury villas', href: '/luxury-villas-bangalore' },
     { label: 'Apartments', href: '/?page=apartments', page: 'apartments' },
@@ -17,6 +21,8 @@ export default function Footer({ setActivePage }) {
   ];
 
   const information = [
+    { label: 'Every project', href: '/projects' },
+    { label: 'Guides: approvals, loans', href: '/guides' },
     { label: 'The full register', href: '/?page=projects', page: 'projects' },
     { label: 'Property finder', href: '/?page=matchmaker', page: 'matchmaker' },
     { label: 'Market guides', href: '/?page=blog', page: 'blog' },

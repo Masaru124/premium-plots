@@ -78,6 +78,78 @@
       "destination": "/luxury-villas-bangalore",
       "statusCode": 308,
       "regex": "^(?!/_next)/luxury-villas(?:/)?$"
+    },
+    {
+      "source": "/premium-plots",
+      "destination": "/premium-plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/premium-plots(?:/)?$"
+    },
+    {
+      "source": "/premium-plots-bangalore",
+      "destination": "/premium-plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/premium-plots-bangalore(?:/)?$"
+    },
+    {
+      "source": "/premium-plots-in-bengaluru",
+      "destination": "/premium-plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/premium-plots-in-bengaluru(?:/)?$"
+    },
+    {
+      "source": "/plots-in-bengaluru",
+      "destination": "/plots-in-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/plots-in-bengaluru(?:/)?$"
+    },
+    {
+      "source": "/plots-near-nandi-hills",
+      "destination": "/plots-in-chikkaballapura",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/plots-near-nandi-hills(?:/)?$"
+    },
+    {
+      "source": "/plots-in-nandi-hills",
+      "destination": "/plots-in-chikkaballapura",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/plots-in-nandi-hills(?:/)?$"
+    },
+    {
+      "source": "/villa-plots-in-chikkaballapura",
+      "destination": "/plots-in-chikkaballapura",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/villa-plots-in-chikkaballapura(?:/)?$"
+    },
+    {
+      "source": "/plots-in-jigani",
+      "destination": "/plots-in-south-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/plots-in-jigani(?:/)?$"
+    },
+    {
+      "source": "/plots-on-kanakapura-road",
+      "destination": "/plots-in-south-bangalore",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/plots-on-kanakapura-road(?:/)?$"
+    },
+    {
+      "source": "/apartments-near-bangalore-airport",
+      "destination": "/property-near-bangalore-airport",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/apartments-near-bangalore-airport(?:/)?$"
+    },
+    {
+      "source": "/property-in-devanahalli",
+      "destination": "/property-near-bangalore-airport",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/property-in-devanahalli(?:/)?$"
+    },
+    {
+      "source": "/apartments-near-airport",
+      "destination": "/property-near-bangalore-airport",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/apartments-near-airport(?:/)?$"
     }
   ],
   "headers": [],
@@ -87,7 +159,24 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/guides/[slug]",
+      "regex": "^/guides/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/guides/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/projects/[slug]",
+      "regex": "^/projects/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/projects/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -144,6 +233,12 @@
       "namedRegex": "^/favicon\\.ico(?:/)?$"
     },
     {
+      "page": "/guides",
+      "regex": "^/guides(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides(?:/)?$"
+    },
+    {
       "page": "/luxury-villas-bangalore",
       "regex": "^/luxury\\-villas\\-bangalore(?:/)?$",
       "routeKeys": {},
@@ -156,16 +251,52 @@
       "namedRegex": "^/matchmaker(?:/)?$"
     },
     {
+      "page": "/opengraph-image",
+      "regex": "^/opengraph\\-image(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/opengraph\\-image(?:/)?$"
+    },
+    {
       "page": "/plots-in-bangalore",
       "regex": "^/plots\\-in\\-bangalore(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/plots\\-in\\-bangalore(?:/)?$"
     },
     {
+      "page": "/plots-in-chikkaballapura",
+      "regex": "^/plots\\-in\\-chikkaballapura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/plots\\-in\\-chikkaballapura(?:/)?$"
+    },
+    {
+      "page": "/plots-in-south-bangalore",
+      "regex": "^/plots\\-in\\-south\\-bangalore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/plots\\-in\\-south\\-bangalore(?:/)?$"
+    },
+    {
+      "page": "/premium-plots-in-bangalore",
+      "regex": "^/premium\\-plots\\-in\\-bangalore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/premium\\-plots\\-in\\-bangalore(?:/)?$"
+    },
+    {
+      "page": "/projects",
+      "regex": "^/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projects(?:/)?$"
+    },
+    {
       "page": "/property-finder",
       "regex": "^/property\\-finder(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/property\\-finder(?:/)?$"
+    },
+    {
+      "page": "/property-near-bangalore-airport",
+      "regex": "^/property\\-near\\-bangalore\\-airport(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/property\\-near\\-bangalore\\-airport(?:/)?$"
     },
     {
       "page": "/purva-sounds-of-water",

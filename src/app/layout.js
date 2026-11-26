@@ -26,7 +26,7 @@ export const metadata = {
   description:
     'Property listings and advisory in Bengaluru and Dubai — residential plots, villa plots and luxury villas. Ask Setty Relators for current availability and pricing.',
   alternates: {
-    canonical: SITE_URL
+    canonical: `${SITE_URL}/`
   },
   authors: [{ name: 'Setty Relators Advisory', url: SITE_URL }],
   creator: 'Setty Relators',
@@ -79,30 +79,67 @@ export const metadata = {
   }
 };
 
+// One graph shared by every page: the site, the desk, and where it works.
 const jsonLdRealEstate = {
   '@context': 'https://schema.org',
-  '@type': 'RealEstateAgent',
-  '@id': `${SITE_URL}/#organization`,
-  name: 'Setty Relators Advisory',
-  alternateName: 'Setty Relators Realestate & Developer Channel Partner',
-  url: SITE_URL,
-  telephone: '+918431909508',
-  email: 'advisory@settyrelators.com',
-  priceRange: '₹₹₹₹',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar',
-    addressLocality: 'Bengaluru',
-    addressRegion: 'Karnataka',
-    postalCode: '560001',
-    addressCountry: 'IN'
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Bengaluru' },
-    { '@type': 'City', name: 'Devanahalli' },
-    { '@type': 'City', name: 'Chikkaballapura' },
-    { '@type': 'Place', name: 'Bannerghatta Road' },
-    { '@type': 'City', name: 'Dubai' }
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'Setty Relators',
+      description:
+        'A verified register of plots, villa plots and luxury villas across Bengaluru and Dubai.',
+      inLanguage: 'en-IN',
+      publisher: { '@id': `${SITE_URL}/#organization` }
+    },
+    {
+      '@type': 'RealEstateAgent',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Setty Relators Advisory',
+      alternateName: 'Setty Relators Realestate & Developer Channel Partner',
+      url: SITE_URL,
+      telephone: '+918431909508',
+      email: 'advisory@settyrelators.com',
+      priceRange: '₹₹₹₹',
+      currenciesAccepted: 'INR, AED',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Level 5, Concorde Towers, UB City, Vittal Mallya Road & Indiranagar',
+        addressLocality: 'Bengaluru',
+        addressRegion: 'Karnataka',
+        postalCode: '560001',
+        addressCountry: 'IN'
+      },
+      geo: { '@type': 'GeoCoordinates', latitude: 12.9716, longitude: 77.5946 },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+918431909508',
+          contactType: 'sales',
+          areaServed: ['IN', 'AE'],
+          availableLanguage: ['en', 'hi', 'kn']
+        }
+      ],
+      knowsAbout: [
+        'Residential plots in Bangalore',
+        'Villa plots in Bengaluru',
+        'Luxury villas in Bangalore',
+        'RERA registration',
+        'BIAAPA, BMRDA and CUDDA layout approvals',
+        'A-Khata and title verification',
+        'Dubai Marina property investment'
+      ],
+      areaServed: [
+        { '@type': 'City', name: 'Bengaluru' },
+        { '@type': 'City', name: 'Devanahalli' },
+        { '@type': 'City', name: 'Chikkaballapura' },
+        { '@type': 'Place', name: 'Bannerghatta Road' },
+        { '@type': 'Place', name: 'Kanakapura Road' },
+        { '@type': 'Place', name: 'Jigani' },
+        { '@type': 'City', name: 'Dubai' }
+      ]
+    }
   ]
 };
 

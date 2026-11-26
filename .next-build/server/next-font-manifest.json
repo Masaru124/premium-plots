@@ -10,6 +10,16 @@
       "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
       "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
     ],
+    "[project]/src/app/guides/[slug]/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
+    "[project]/src/app/guides/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
     "[project]/src/app/luxury-villas-bangalore/page": [
       "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
       "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
@@ -30,7 +40,37 @@
       "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
       "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
     ],
+    "[project]/src/app/plots-in-chikkaballapura/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
+    "[project]/src/app/plots-in-south-bangalore/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
+    "[project]/src/app/premium-plots-in-bangalore/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
+    "[project]/src/app/projects/[slug]/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
+    "[project]/src/app/projects/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
     "[project]/src/app/property-finder/page": [
+      "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
+      "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    ],
+    "[project]/src/app/property-near-bangalore-airport/page": [
       "static/media/70e3db2de7f94926-s.p.39pl-v7c3qrze.woff2",
       "static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
       "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/property-near-bangalore-airport/layout,_N_T_/property-near-bangalore-airport/page,_N_T_/property-near-bangalore-airport"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/property-near-bangalore-airport/__PAGE__",
+    "/property-near-bangalore-airport",
+    "/_index",
+    "/_head"
+  ]
+}

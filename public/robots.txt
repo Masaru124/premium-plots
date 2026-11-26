@@ -3,23 +3,53 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-# Search and answer-engine crawlers
+# Search engines
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+User-agent: DuckDuckBot
+Allow: /
+
+# Answer-engine and AI search crawlers: these fetch pages to answer questions
+# and cite the source, so the public pages stay open to them.
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: GPTBot
+User-agent: Claude-User
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Training crawlers are allowed as well; the content is published for readers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://premium-plots.vercel.app/sitemap.xml

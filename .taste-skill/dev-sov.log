@@ -2,13 +2,54 @@ npm notice run premium-plots@0.1.0 dev
 npm notice run next dev --port 54987
 ▲ Next.js 16.2.12 (Turbopack)
 - Local:         http://localhost:54987
-- Network:       http://172.28.144.1:54987
+- Network:       http://192.168.29.46:54987
 - Environments: .env
-✓ Ready in 634ms
+✓ Ready in 848ms
 
- GET / 200 in 1659ms (next.js: 1543ms, application-code: 116ms)
- GET / 200 in 41ms (next.js: 4ms, application-code: 38ms)
-(node:44096) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+ GET / 200 in 585ms (next.js: 471ms, application-code: 114ms)
+ GET /premium-plots-in-bangalore 200 in 581ms (next.js: 457ms, application-code: 124ms)
+ GET /plots-in-chikkaballapura 200 in 441ms (next.js: 384ms, application-code: 57ms)
+ GET /plots-in-south-bangalore 200 in 422ms (next.js: 376ms, application-code: 47ms)
+ GET /property-near-bangalore-airport 200 in 431ms (next.js: 388ms, application-code: 44ms)
+ GET /projects 200 in 426ms (next.js: 376ms, application-code: 50ms)
+Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at <unknown> (src\app\projects\[slug]\page.js:42:64)
+    at Array.find (<anonymous>)
+    at ProjectPage (src\app\projects\[slug]\page.js:42:28)
+  40 |
+  41 | export default function ProjectPage({ params }) {
+> 42 |   const project = PROJECTS.find((item) => item.slug === params.slug);
+     |                                                                ^
+  43 |   if (!project) return null;
+  44 |
+  45 |   const faqs = projectFaqs(project);
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 757ms (next.js: 683ms, generate-params: 274ms, application-code: 74ms)
+ GET /sitemap.xml 200 in 313ms (next.js: 301ms, application-code: 12ms)
+ GET /opengraph-image 200 in 300ms (next.js: 160ms, application-code: 140ms)
+✓ Compiled in 216ms
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 129ms (next.js: 34ms, generate-params: 7ms, application-code: 95ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 48ms (next.js: 8ms, generate-params: 6ms, application-code: 39ms)
+ GET /opengraph-image 200 in 42ms (next.js: 8ms, application-code: 33ms)
+ GET /sitemap.xml 200 in 9ms (next.js: 5ms, application-code: 4ms)
+ GET / 200 in 51ms (next.js: 6ms, application-code: 45ms)
+ GET /premium-plots-in-bangalore 200 in 67ms (next.js: 6ms, application-code: 61ms)
+ GET /plots-in-bangalore 200 in 77ms (next.js: 35ms, application-code: 43ms)
+ GET /plots-in-chikkaballapura 200 in 46ms (next.js: 5ms, application-code: 41ms)
+ GET /plots-in-south-bangalore 200 in 48ms (next.js: 6ms, application-code: 42ms)
+ GET /property-near-bangalore-airport 200 in 45ms (next.js: 6ms, application-code: 39ms)
+ GET /projects 200 in 46ms (next.js: 6ms, application-code: 41ms)
+ GET /luxury-villas-bangalore 200 in 55ms (next.js: 19ms, application-code: 37ms)
+ GET /purva-sounds-of-water 200 in 71ms (next.js: 19ms, application-code: 51ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 53ms (next.js: 9ms, generate-params: 6ms, application-code: 44ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 43ms (next.js: 2ms, generate-params: 15µs, application-code: 41ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 50ms (next.js: 1822µs, generate-params: 16µs, application-code: 48ms)
+✓ Compiled in 219ms
+✓ Compiled in 206ms
+✓ Compiled in 196ms
+✓ Compiled in 180ms
+✓ Compiled in 186ms
+ GET /premium-plots-in-bangalore 200 in 196ms (next.js: 47ms, application-code: 149ms)
+(node:24240) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
 In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
 
 To prepare for this change:
@@ -17,1435 +58,400 @@ To prepare for this change:
 
 See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
 (Use `node --trace-warnings ...` to show where the warning was created)
- GET /api/admin/session 200 in 33ms (next.js: 28ms, application-code: 5ms)
- GET /api/projects 200 in 10.6s (next.js: 105ms, application-code: 10.5s)
- GET / 200 in 56ms (next.js: 19ms, application-code: 37ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 4.6s (next.js: 2ms, application-code: 4.6s)
- GET / 200 in 85ms (next.js: 53ms, application-code: 33ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET / 200 in 89ms (next.js: 38ms, application-code: 51ms)
- GET /api/admin/session 200 in 12ms (next.js: 9ms, application-code: 3ms)
- GET /api/projects 200 in 1476ms (next.js: 5ms, application-code: 1471ms)
- GET /?page=projects 200 in 36ms (next.js: 1867µs, application-code: 34ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1831µs, application-code: 2.8s)
- GET /?page=projects 200 in 59ms (next.js: 27ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 1737µs, application-code: 2.9s)
- GET /?page=projects 200 in 54ms (next.js: 6ms, application-code: 48ms)
+ GET /api/admin/session 200 in 89ms (next.js: 84ms, application-code: 5ms)
+ GET /api/projects 200 in 6.1s (next.js: 51ms, application-code: 6.0s)
+ GET /premium-plots-in-bangalore 200 in 111ms (next.js: 64ms, application-code: 47ms)
  GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.3s (next.js: 1950µs, application-code: 3.3s)
- GET /?page=projects 200 in 64ms (next.js: 29ms, application-code: 35ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1483ms (next.js: 2ms, application-code: 1481ms)
- GET /?page=about 200 in 43ms (next.js: 1960µs, application-code: 41ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 4.8s (next.js: 2ms, application-code: 4.8s)
- GET /?page=about 200 in 146ms (next.js: 112ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.2s (next.js: 1719µs, application-code: 3.2s)
- GET /?page=about 200 in 133ms (next.js: 97ms, application-code: 36ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.2s (next.js: 1656µs, application-code: 3.2s)
- GET /?page=about 200 in 132ms (next.js: 102ms, application-code: 31ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1472ms (next.js: 1886µs, application-code: 1471ms)
- GET /purva-sounds-of-water 200 in 105ms (next.js: 29ms, application-code: 76ms)
- GET /api/admin/session 200 in 9ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 4ms, application-code: 3.0s)
- GET /purva-sounds-of-water 200 in 149ms (next.js: 106ms, application-code: 43ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /purva-sounds-of-water 200 in 59ms (next.js: 17ms, application-code: 42ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 1801µs, application-code: 3.0s)
- GET /purva-sounds-of-water 200 in 94ms (next.js: 53ms, application-code: 41ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 1462ms (next.js: 2ms, application-code: 1460ms)
- GET /?page=contact 200 in 39ms (next.js: 3ms, application-code: 36ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 2.7s (next.js: 3ms, application-code: 2.7s)
- GET /?page=contact 200 in 135ms (next.js: 103ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.5s (next.js: 1842µs, application-code: 3.5s)
- GET /?page=contact 200 in 140ms (next.js: 107ms, application-code: 33ms)
- GET /api/admin/session 200 in 11ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 3.4s (next.js: 3ms, application-code: 3.4s)
- GET /?page=contact 200 in 141ms (next.js: 107ms, application-code: 35ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1485ms (next.js: 1777µs, application-code: 1484ms)
- GET /admin 200 in 576ms (next.js: 544ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 1976µs, application-code: 2.9s)
- GET /admin 200 in 138ms (next.js: 110ms, application-code: 27ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 1972µs, application-code: 2.9s)
- GET /admin 200 in 131ms (next.js: 105ms, application-code: 25ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 1739µs, application-code: 2.9s)
- GET /admin 200 in 134ms (next.js: 107ms, application-code: 27ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 1493ms (next.js: 2ms, application-code: 1491ms)
- GET /?page=projects 200 in 118ms (next.js: 46ms, application-code: 72ms)
- GET /api/admin/session 200 in 54ms (next.js: 49ms, application-code: 5ms)
- GET /api/projects 200 in 4.3s (next.js: 27ms, application-code: 4.3s)
- GET /?page=projects 200 in 100ms (next.js: 67ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1966µs, application-code: 2.8s)
- GET /?page=projects 200 in 77ms (next.js: 45ms, application-code: 32ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET /?page=projects 200 in 52ms (next.js: 22ms, application-code: 30ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1475ms (next.js: 1713µs, application-code: 1474ms)
- GET /?page=about 200 in 37ms (next.js: 2ms, application-code: 35ms)
- GET /api/admin/session 200 in 6ms (next.js: 2ms, application-code: 4ms)
- GET /api/projects 200 in 2.8s (next.js: 8ms, application-code: 2.8s)
- GET /?page=about 200 in 130ms (next.js: 98ms, application-code: 32ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET /?page=about 200 in 136ms (next.js: 103ms, application-code: 32ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 3ms, application-code: 2.8s)
- GET /?page=about 200 in 141ms (next.js: 107ms, application-code: 35ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 4ms)
- GET /api/projects 200 in 1480ms (next.js: 1976µs, application-code: 1478ms)
- GET /?page=contact 200 in 37ms (next.js: 2ms, application-code: 35ms)
- GET /api/admin/session 200 in 5ms (next.js: 1751µs, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 6ms, application-code: 2.8s)
- GET /?page=contact 200 in 127ms (next.js: 95ms, application-code: 32ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.4s (next.js: 2ms, application-code: 3.4s)
- GET /?page=contact 200 in 138ms (next.js: 102ms, application-code: 37ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 2ms, application-code: 3.1s)
- GET /?page=contact 200 in 151ms (next.js: 111ms, application-code: 40ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 4ms)
- GET /api/projects 200 in 1471ms (next.js: 1704µs, application-code: 1470ms)
- GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
- GET /api/admin/session 200 in 9ms (next.js: 3ms, application-code: 5ms)
- GET /api/projects 200 in 2.9s (next.js: 10ms, application-code: 2.9s)
- GET / 200 in 74ms (next.js: 21ms, application-code: 53ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET / 200 in 78ms (next.js: 44ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1645µs, application-code: 2.8s)
- GET / 200 in 88ms (next.js: 56ms, application-code: 31ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1470ms (next.js: 2ms, application-code: 1467ms)
- GET /purva-sounds-of-water 200 in 141ms (next.js: 51ms, application-code: 90ms)
- GET /api/admin/session 200 in 11ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 3ms, application-code: 3.1s)
- GET /purva-sounds-of-water 200 in 45ms (next.js: 3ms, application-code: 42ms)
- GET /api/admin/session 200 in 11ms (next.js: 8ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 4ms, application-code: 2.8s)
- GET /purva-sounds-of-water 200 in 58ms (next.js: 21ms, application-code: 37ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 3.1s (next.js: 1835µs, application-code: 3.1s)
- GET /purva-sounds-of-water 200 in 95ms (next.js: 56ms, application-code: 39ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1472ms (next.js: 2ms, application-code: 1470ms)
- GET /admin 200 in 106ms (next.js: 43ms, application-code: 62ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 1757µs, application-code: 2.8s)
- GET /admin 200 in 151ms (next.js: 122ms, application-code: 30ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 1984µs, application-code: 3.1s)
- GET /admin 200 in 132ms (next.js: 101ms, application-code: 31ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET /admin 200 in 132ms (next.js: 104ms, application-code: 29ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 1486ms (next.js: 1587µs, application-code: 1485ms)
- GET /purva-sounds-of-water 200 in 145ms (next.js: 47ms, application-code: 98ms)
- GET /api/admin/session 200 in 52ms (next.js: 46ms, application-code: 6ms)
- GET /api/projects 200 in 4.4s (next.js: 25ms, application-code: 4.4s)
- GET /purva-sounds-of-water 200 in 42ms (next.js: 2ms, application-code: 40ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 3ms, application-code: 3.0s)
- GET /purva-sounds-of-water 200 in 83ms (next.js: 46ms, application-code: 37ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET /purva-sounds-of-water 200 in 95ms (next.js: 60ms, application-code: 35ms)
- GET /api/admin/session 200 in 9ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 1472ms (next.js: 1815µs, application-code: 1470ms)
- GET /admin 200 in 117ms (next.js: 48ms, application-code: 69ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.7s (next.js: 3ms, application-code: 2.7s)
- GET /admin 200 in 158ms (next.js: 125ms, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 1733µs, application-code: 2.8s)
- GET /admin 200 in 130ms (next.js: 101ms, application-code: 28ms)
- GET /api/admin/session 200 in 4ms (next.js: 1138µs, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1462µs, application-code: 2.9s)
- GET /admin 200 in 144ms (next.js: 117ms, application-code: 28ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 1492ms (next.js: 2ms, application-code: 1490ms)
- GET /purva-sounds-of-water 200 in 124ms (next.js: 43ms, application-code: 81ms)
- GET /api/admin/session 200 in 44ms (next.js: 40ms, application-code: 4ms)
- GET /api/projects 200 in 4.2s (next.js: 23ms, application-code: 4.2s)
- GET /purva-sounds-of-water 200 in 43ms (next.js: 3ms, application-code: 40ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 3ms, application-code: 3.0s)
- GET /purva-sounds-of-water 200 in 87ms (next.js: 48ms, application-code: 38ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1657µs, application-code: 2.8s)
- GET /purva-sounds-of-water 200 in 97ms (next.js: 59ms, application-code: 38ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 1469ms (next.js: 1852µs, application-code: 1467ms)
- GET /purva-sounds-of-water 200 in 141ms (next.js: 49ms, application-code: 91ms)
- GET /api/admin/session 200 in 45ms (next.js: 40ms, application-code: 4ms)
- GET /api/projects 200 in 4.4s (next.js: 22ms, application-code: 4.4s)
- GET /purva-sounds-of-water 200 in 49ms (next.js: 4ms, application-code: 46ms)
- GET /api/admin/session 200 in 11ms (next.js: 8ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /purva-sounds-of-water 200 in 63ms (next.js: 20ms, application-code: 43ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 1974µs, application-code: 2.9s)
- GET /purva-sounds-of-water 200 in 98ms (next.js: 61ms, application-code: 37ms)
- GET /api/admin/session 200 in 11ms (next.js: 8ms, application-code: 3ms)
- GET /api/projects 200 in 1465ms (next.js: 5ms, application-code: 1460ms)
- GET /purva-sounds-of-water 200 in 38ms (next.js: 1766µs, application-code: 36ms)
- GET /api/admin/session 200 in 5ms (next.js: 2ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1468µs, application-code: 2.9s)
-✓ Compiled in 189ms
- GET /purva-sounds-of-water 200 in 100ms (next.js: 62ms, application-code: 38ms)
- GET /purva-sounds-of-water 200 in 113ms (next.js: 4ms, application-code: 109ms)
- GET /api/admin/session 200 in 59ms (next.js: 53ms, application-code: 6ms)
- GET /api/projects 200 in 4.5s (next.js: 31ms, application-code: 4.4s)
- GET /purva-sounds-of-water 200 in 65ms (next.js: 16ms, application-code: 49ms)
- GET /api/admin/session 200 in 15ms (next.js: 10ms, application-code: 5ms)
- GET /api/projects 200 in 3.0s (next.js: 4ms, application-code: 3.0s)
- GET /purva-sounds-of-water 200 in 128ms (next.js: 82ms, application-code: 46ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /purva-sounds-of-water 200 in 117ms (next.js: 76ms, application-code: 40ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1465ms (next.js: 1826µs, application-code: 1463ms)
- GET /?page=dubai 200 in 68ms (next.js: 11ms, application-code: 57ms)
- GET /api/admin/session 200 in 14ms (next.js: 10ms, application-code: 4ms)
- GET /api/projects 200 in 2.9s (next.js: 7ms, application-code: 2.9s)
- GET /?page=dubai 200 in 160ms (next.js: 126ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 1782µs, application-code: 3.0s)
- GET /?page=dubai 200 in 149ms (next.js: 112ms, application-code: 36ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 3.1s (next.js: 2ms, application-code: 3.1s)
- GET /?page=dubai 200 in 154ms (next.js: 119ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1481ms (next.js: 2ms, application-code: 1479ms)
- GET /?page=interior 200 in 36ms (next.js: 3ms, application-code: 33ms)
- GET /api/admin/session 200 in 13ms (next.js: 10ms, application-code: 3ms)
- GET /api/projects 200 in 4.5s (next.js: 2ms, application-code: 4.5s)
- GET /?page=interior 200 in 150ms (next.js: 117ms, application-code: 33ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 3ms, application-code: 2.8s)
- GET /?page=interior 200 in 155ms (next.js: 119ms, application-code: 37ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1944µs, application-code: 2.8s)
- GET /?page=interior 200 in 165ms (next.js: 131ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1485ms (next.js: 2ms, application-code: 1483ms)
- GET /?page=blog 200 in 37ms (next.js: 1902µs, application-code: 35ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 1617µs, application-code: 3.1s)
- GET /?page=blog 200 in 164ms (next.js: 129ms, application-code: 35ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 2ms, application-code: 3.1s)
- GET /?page=blog 200 in 167ms (next.js: 135ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1630µs, application-code: 2.8s)
- GET /?page=blog 200 in 153ms (next.js: 119ms, application-code: 34ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 1495ms (next.js: 1616µs, application-code: 1493ms)
- GET /matchmaker 200 in 618ms (next.js: 582ms, application-code: 37ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1795µs, application-code: 2.8s)
- GET /matchmaker 200 in 165ms (next.js: 137ms, application-code: 29ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET /matchmaker 200 in 160ms (next.js: 133ms, application-code: 28ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 1673µs, application-code: 2.8s)
- GET /matchmaker 200 in 170ms (next.js: 138ms, application-code: 32ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1482ms (next.js: 3ms, application-code: 1479ms)
- GET /?page=disclaimer 200 in 40ms (next.js: 3ms, application-code: 37ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.5s (next.js: 1785µs, application-code: 2.5s)
- GET /?page=disclaimer 200 in 169ms (next.js: 127ms, application-code: 42ms)
- GET /api/admin/session 200 in 9ms (next.js: 5ms, application-code: 4ms)
- GET /api/projects 200 in 2.8s (next.js: 1824µs, application-code: 2.8s)
- GET /?page=disclaimer 200 in 153ms (next.js: 121ms, application-code: 32ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET /?page=disclaimer 200 in 163ms (next.js: 130ms, application-code: 32ms)
+ GET /api/projects 200 in 2.9s (next.js: 1714µs, application-code: 2.9s)
+ GET /premium-plots-in-bangalore 200 in 136ms (next.js: 83ms, application-code: 53ms)
  GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 1477ms (next.js: 2ms, application-code: 1474ms)
- GET /luxury-villas-bangalore 200 in 80ms (next.js: 26ms, application-code: 55ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.2s (next.js: 2ms, application-code: 3.2s)
- GET /luxury-villas-bangalore 200 in 243ms (next.js: 189ms, application-code: 54ms)
- GET /api/admin/session 200 in 12ms (next.js: 8ms, application-code: 4ms)
- GET /api/projects 200 in 2.7s (next.js: 3ms, application-code: 2.7s)
- GET /luxury-villas-bangalore 200 in 216ms (next.js: 182ms, application-code: 34ms)
- GET /api/admin/session 200 in 11ms (next.js: 9ms, application-code: 2ms)
  GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /luxury-villas-bangalore 200 in 188ms (next.js: 154ms, application-code: 34ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1484ms (next.js: 1944µs, application-code: 1482ms)
- GET /purva-sounds-of-water 200 in 73ms (next.js: 35ms, application-code: 38ms)
- GET /purva-sounds-of-water 200 in 16ms (next.js: 1984µs, application-code: 14ms)
- GET /purva-sounds-of-water 200 in 75ms (next.js: 29ms, application-code: 46ms)
- GET /purva-sounds-of-water 200 in 61ms (next.js: 31ms, application-code: 30ms)
- GET /?page=dubai 200 in 221ms (next.js: 85ms, application-code: 137ms)
- GET /api/admin/session 200 in 68ms (next.js: 61ms, application-code: 7ms)
- GET /api/projects 200 in 5.0s (next.js: 30ms, application-code: 5.0s)
- GET /?page=dubai 200 in 154ms (next.js: 120ms, application-code: 34ms)
- GET /api/admin/session 200 in 11ms (next.js: 9ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 5ms, application-code: 2.9s)
- GET /?page=dubai 200 in 227ms (next.js: 187ms, application-code: 40ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /?page=dubai 200 in 187ms (next.js: 152ms, application-code: 35ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 1474ms (next.js: 3ms, application-code: 1471ms)
- GET /?page=interior 200 in 52ms (next.js: 4ms, application-code: 48ms)
- GET /api/admin/session 200 in 12ms (next.js: 8ms, application-code: 4ms)
- GET /api/projects 200 in 2.7s (next.js: 4ms, application-code: 2.7s)
- GET /?page=interior 200 in 169ms (next.js: 137ms, application-code: 32ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 4ms)
- GET /api/projects 200 in 3.7s (next.js: 2ms, application-code: 3.7s)
- GET /?page=interior 200 in 189ms (next.js: 158ms, application-code: 31ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /?page=interior 200 in 208ms (next.js: 171ms, application-code: 36ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1458ms (next.js: 3ms, application-code: 1455ms)
- GET /?page=blog 200 in 53ms (next.js: 3ms, application-code: 50ms)
- GET /api/admin/session 200 in 8ms (next.js: 4ms, application-code: 5ms)
- GET /api/projects 200 in 2.7s (next.js: 10ms, application-code: 2.7s)
- GET /?page=blog 200 in 210ms (next.js: 177ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1572µs, application-code: 2.9s)
- GET /?page=blog 200 in 193ms (next.js: 159ms, application-code: 35ms)
- GET /api/admin/session 200 in 9ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1734µs, application-code: 2.9s)
- GET /?page=blog 200 in 187ms (next.js: 156ms, application-code: 31ms)
- GET /api/admin/session 200 in 9ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 1466ms (next.js: 3ms, application-code: 1462ms)
- GET /matchmaker 200 in 165ms (next.js: 68ms, application-code: 96ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /matchmaker 200 in 207ms (next.js: 174ms, application-code: 32ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1723µs, application-code: 2.9s)
- GET /matchmaker 200 in 183ms (next.js: 158ms, application-code: 25ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /matchmaker 200 in 179ms (next.js: 148ms, application-code: 31ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 4ms)
- GET /api/projects 200 in 1479ms (next.js: 3ms, application-code: 1476ms)
- GET /luxury-villas-bangalore 200 in 211ms (next.js: 76ms, application-code: 134ms)
- GET /api/admin/session 200 in 14ms (next.js: 9ms, application-code: 5ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /luxury-villas-bangalore 200 in 160ms (next.js: 124ms, application-code: 36ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /luxury-villas-bangalore 200 in 158ms (next.js: 117ms, application-code: 41ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /luxury-villas-bangalore 200 in 156ms (next.js: 122ms, application-code: 35ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 1471ms (next.js: 4ms, application-code: 1467ms)
- GET /?page=disclaimer 200 in 54ms (next.js: 4ms, application-code: 50ms)
- GET /api/admin/session 200 in 11ms (next.js: 8ms, application-code: 4ms)
- GET /api/projects 200 in 2.6s (next.js: 3ms, application-code: 2.6s)
- GET /?page=disclaimer 200 in 209ms (next.js: 173ms, application-code: 36ms)
- GET /api/admin/session 200 in 9ms (next.js: 7ms, application-code: 2ms)
- GET /api/projects 200 in 3.2s (next.js: 1795µs, application-code: 3.2s)
- GET /?page=disclaimer 200 in 189ms (next.js: 154ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.2s (next.js: 1751µs, application-code: 3.2s)
- GET /?page=disclaimer 200 in 210ms (next.js: 170ms, application-code: 40ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 1474ms (next.js: 2ms, application-code: 1472ms)
- GET /purva-sounds-of-water 200 in 68ms (next.js: 3ms, application-code: 65ms)
- GET /api/admin/session 200 in 9ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 4.2s (next.js: 2ms, application-code: 4.2s)
-✓ Compiled in 372ms
- GET /purva-sounds-of-water 200 in 46ms (next.js: 3ms, application-code: 43ms)
- GET /api/admin/session 200 in 4ms (next.js: 1578µs, application-code: 3ms)
- GET /api/projects 200 in 4.7s (next.js: 3ms, application-code: 4.7s)
- GET / 200 in 39ms (next.js: 3ms, application-code: 35ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 5.1s (next.js: 1793µs, application-code: 5.1s)
+ GET /premium-plots-in-bangalore 200 in 136ms (next.js: 91ms, application-code: 44ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 1468ms (next.js: 2ms, application-code: 1466ms)
+✓ Compiled in 193ms
 ✓ Compiled in 246ms
- GET / 200 in 73ms (next.js: 47ms, application-code: 26ms)
-✓ Compiled in 227ms
- GET / 200 in 65ms (next.js: 39ms, application-code: 26ms)
- GET / 200 in 59ms (next.js: 2ms, application-code: 57ms)
- GET / 200 in 33ms (next.js: 2ms, application-code: 30ms)
- GET /api/admin/session 200 in 31ms (next.js: 26ms, application-code: 5ms)
- GET /api/projects 200 in 4.4s (next.js: 51ms, application-code: 4.4s)
- GET / 200 in 45ms (next.js: 4ms, application-code: 41ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET / 200 in 33ms (next.js: 3ms, application-code: 30ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 3ms, application-code: 3.1s)
- GET / 200 in 65ms (next.js: 35ms, application-code: 30ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1504ms (next.js: 1973µs, application-code: 1502ms)
- GET / 200 in 32ms (next.js: 2ms, application-code: 30ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 4.4s (next.js: 1708µs, application-code: 4.4s)
-⨯ ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  [90m227 |[0m           </div>
-  [90m228 |[0m         </div>
-[31m[1m>[0m [90m229 |[0m       </section>
-  [90m    |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-[31m[1m>[0m [90m230 |[0m
-  [90m    |[0m [31m[1m^[0m
-[31m[1m>[0m [90m231 |[0m       {[90m/* --------------------------------------------------------- showcase */[0m}
-  [90m    |[0m [31m[1m^^^^^^[0m
-  [90m232 |[0m       <section aria-labelledby=[32m"collection"[0m className=[32m"relative isolate overflow-hidden b...[0m
-  [90m233 |[0m         <img
-  [90m234 |[0m           src={hire(projects[[35m3[0m]?.heroImage || projects[[35m0[0m]?.heroImage, [35m2400[0m)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component]
-
-
-✓ Compiled in 304ms
-[browser] ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component] 
-[browser] ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component] 
-[browser] ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component] 
- GET / 500 in 2.3s (next.js: 2.0s, application-code: 267ms)
-[browser] ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component] 
-⨯ ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  [90m227 |[0m           </div>
-  [90m228 |[0m         </div>
-[31m[1m>[0m [90m229 |[0m       </section>
-  [90m    |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-[31m[1m>[0m [90m230 |[0m
-  [90m    |[0m [31m[1m^[0m
-[31m[1m>[0m [90m231 |[0m       {[90m/* --------------------------------------------------------- showcase */[0m}
-  [90m    |[0m [31m[1m^^^^^^[0m
-  [90m232 |[0m       <section aria-labelledby=[32m"collection"[0m className=[32m"relative isolate overflow-hidden b...[0m
-  [90m233 |[0m         <img
-  [90m234 |[0m           src={hire(projects[[35m3[0m]?.heroImage || projects[[35m0[0m]?.heroImage, [35m2400[0m)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component]
-
-
- GET / 500 in 11ms (next.js: 6ms, application-code: 6ms)
-[browser] Uncaught Error: ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component]
-
-
-    at <unknown> (Error: ./src/views/HomePage.jsx:229:17)
-    at <unknown> (Error: (./src/views/HomePage.jsx:229:17)
-[browser] ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component] 
-[browser] ./src/views/HomePage.jsx:229:17
-Expected '</', got 'jsx text'
-  227 |           </div>
-  228 |         </div>
-> 229 |       </section>
-      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 230 |
-      | ^
-> 231 |       {/* --------------------------------------------------------- showcase */}
-      | ^^^^^^
-  232 |       <section aria-labelledby="collection" className="relative isolate overflow-hidden b...
-  233 |         <img
-  234 |           src={hire(projects[3]?.heroImage || projects[0]?.heroImage, 2400)}
-
-Parsing ecmascript source code failed
-
-Import traces:
-  Client Component Browser:
-    ./src/views/HomePage.jsx [Client Component Browser]
-    ./src/app/page.js [Client Component Browser]
-    ./src/app/page.js [Server Component]
-
-  Client Component SSR:
-    ./src/views/HomePage.jsx [Client Component SSR]
-    ./src/app/page.js [Client Component SSR]
-    ./src/app/page.js [Server Component] 
- GET / 200 in 107ms (next.js: 44ms, application-code: 63ms)
- GET /api/admin/session 200 in 44ms (next.js: 40ms, application-code: 4ms)
- GET /api/projects 200 in 4.6s (next.js: 23ms, application-code: 4.6s)
- GET / 200 in 31ms (next.js: 2ms, application-code: 29ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 1846µs, application-code: 3.0s)
- GET / 200 in 29ms (next.js: 2ms, application-code: 27ms)
- GET / 200 in 33ms (next.js: 2ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 1573µs, application-code: 3.0s)
- GET / 200 in 51ms (next.js: 17ms, application-code: 35ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.1s (next.js: 1811µs, application-code: 3.1s)
- GET / 200 in 91ms (next.js: 60ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.4s (next.js: 2ms, application-code: 3.3s)
- GET / 200 in 101ms (next.js: 68ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1479ms (next.js: 2ms, application-code: 1477ms)
+✓ Compiled in 262ms
 ✓ Compiled in 218ms
- GET / 200 in 65ms (next.js: 41ms, application-code: 24ms)
- GET /?page=projects 200 in 62ms (next.js: 2ms, application-code: 60ms)
- GET /api/admin/session 200 in 44ms (next.js: 40ms, application-code: 4ms)
- GET /api/projects 200 in 4.4s (next.js: 22ms, application-code: 4.4s)
- GET /?page=projects 200 in 118ms (next.js: 85ms, application-code: 34ms)
+ GET /premium-plots-in-bangalore 200 in 184ms (next.js: 53ms, application-code: 131ms)
+ GET /api/admin/session 200 in 20ms (next.js: 17ms, application-code: 3ms)
+ GET /api/projects 200 in 4.2s (next.js: 10ms, application-code: 4.2s)
+ GET /premium-plots-in-bangalore 200 in 93ms (next.js: 46ms, application-code: 47ms)
  GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1857µs, application-code: 2.9s)
- GET /?page=projects 200 in 97ms (next.js: 65ms, application-code: 32ms)
- GET /api/admin/session 200 in 6ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 3.2s (next.js: 1599µs, application-code: 3.2s)
- GET /?page=projects 200 in 97ms (next.js: 65ms, application-code: 32ms)
+ GET /api/projects 200 in 2.8s (next.js: 1720µs, application-code: 2.8s)
+ GET /premium-plots-in-bangalore 200 in 131ms (next.js: 83ms, application-code: 48ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
+ GET /premium-plots-in-bangalore 200 in 119ms (next.js: 71ms, application-code: 48ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 1473ms (next.js: 1832µs, application-code: 1471ms)
+✓ Compiled in 212ms
+ GET /premium-plots-in-bangalore 200 in 152ms (next.js: 45ms, application-code: 107ms)
+ GET /api/admin/session 200 in 18ms (next.js: 16ms, application-code: 3ms)
+ GET /api/projects 200 in 4.1s (next.js: 10ms, application-code: 4.1s)
+ GET /premium-plots-in-bangalore 200 in 117ms (next.js: 72ms, application-code: 44ms)
  GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1488ms (next.js: 1831µs, application-code: 1486ms)
- GET /?page=about 200 in 38ms (next.js: 4ms, application-code: 35ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 4ms)
+ GET /api/projects 200 in 2.7s (next.js: 1682µs, application-code: 2.7s)
+ GET /premium-plots-in-bangalore 200 in 126ms (next.js: 80ms, application-code: 46ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
  GET /api/projects 200 in 2.7s (next.js: 2ms, application-code: 2.7s)
- GET /?page=about 200 in 164ms (next.js: 130ms, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1935µs, application-code: 2.9s)
- GET /?page=about 200 in 161ms (next.js: 130ms, application-code: 31ms)
- GET /api/admin/session 200 in 12ms (next.js: 9ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1641µs, application-code: 2.9s)
- GET /?page=about 200 in 159ms (next.js: 124ms, application-code: 35ms)
- GET /api/admin/session 200 in 6ms (next.js: 3ms, application-code: 3ms)
- GET /api/projects 200 in 1469ms (next.js: 7ms, application-code: 1462ms)
- GET /?page=contact 200 in 42ms (next.js: 5ms, application-code: 36ms)
+ GET /premium-plots-in-bangalore 200 in 141ms (next.js: 82ms, application-code: 58ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1482ms (next.js: 1960µs, application-code: 1480ms)
+ GET /plots-in-chikkaballapura 200 in 161ms (next.js: 48ms, application-code: 113ms)
  GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 4.1s (next.js: 1890µs, application-code: 4.1s)
- GET /?page=contact 200 in 152ms (next.js: 116ms, application-code: 36ms)
- GET /api/admin/session 200 in 10ms (next.js: 6ms, application-code: 4ms)
- GET /api/projects 200 in 3.1s (next.js: 2ms, application-code: 3.1s)
- GET /?page=contact 200 in 170ms (next.js: 132ms, application-code: 38ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /?page=contact 200 in 155ms (next.js: 123ms, application-code: 32ms)
+ GET /api/projects 200 in 4.5s (next.js: 2ms, application-code: 4.5s)
+ GET /plots-in-chikkaballapura 200 in 106ms (next.js: 63ms, application-code: 43ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 3.3s (next.js: 1790µs, application-code: 3.3s)
+ GET /plots-in-chikkaballapura 200 in 171ms (next.js: 124ms, application-code: 47ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 3.0s (next.js: 1813µs, application-code: 3.0s)
+ GET /plots-in-chikkaballapura 200 in 178ms (next.js: 134ms, application-code: 44ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1470ms (next.js: 1998µs, application-code: 1468ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 196ms (next.js: 55ms, generate-params: 8ms, application-code: 142ms)
+ GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 135ms (next.js: 84ms, generate-params: 7ms, application-code: 51ms)
  GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 1492ms (next.js: 1770µs, application-code: 1490ms)
-✓ Compiled in 230ms
-✓ Compiled in 223ms
- GET / 200 in 37ms (next.js: 2ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 4.5s (next.js: 1892µs, application-code: 4.5s)
- GET / 200 in 41ms (next.js: 4ms, application-code: 37ms)
- GET /api/admin/session 200 in 9ms (next.js: 5ms, application-code: 3ms)
  GET /api/projects 200 in 3.0s (next.js: 2ms, application-code: 3.0s)
- GET / 200 in 70ms (next.js: 36ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 1750µs, application-code: 2.9s)
- GET / 200 in 109ms (next.js: 76ms, application-code: 34ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 189ms (next.js: 134ms, generate-params: 7ms, application-code: 54ms)
+ GET /api/admin/session 200 in 9ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 3.0s (next.js: 1916µs, application-code: 3.0s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 170ms (next.js: 121ms, generate-params: 7ms, application-code: 50ms)
  GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1469ms (next.js: 1621µs, application-code: 1467ms)
- GET /?page=about 200 in 37ms (next.js: 2ms, application-code: 35ms)
- GET /api/admin/session 200 in 5ms (next.js: 2ms, application-code: 3ms)
- GET /api/projects 200 in 2.7s (next.js: 6ms, application-code: 2.7s)
- GET /?page=about 200 in 163ms (next.js: 127ms, application-code: 36ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 1776µs, application-code: 3.0s)
- GET /?page=about 200 in 161ms (next.js: 121ms, application-code: 39ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 3ms, application-code: 3.0s)
- GET /?page=about 200 in 191ms (next.js: 155ms, application-code: 36ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1474ms (next.js: 1751µs, application-code: 1473ms)
- GET /?page=contact 200 in 36ms (next.js: 2ms, application-code: 33ms)
- GET /api/admin/session 200 in 11ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 2.7s (next.js: 1755µs, application-code: 2.7s)
- GET /?page=contact 200 in 165ms (next.js: 129ms, application-code: 36ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.3s (next.js: 3ms, application-code: 3.3s)
- GET /?page=contact 200 in 153ms (next.js: 119ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.3s (next.js: 1918µs, application-code: 3.3s)
- GET /?page=contact 200 in 170ms (next.js: 136ms, application-code: 35ms)
+ GET /api/projects 200 in 1475ms (next.js: 1691µs, application-code: 1473ms)
+✓ Compiled in 194ms
+ GET /plots-in-chikkaballapura 200 in 165ms (next.js: 46ms, application-code: 119ms)
+ GET /api/admin/session 200 in 40ms (next.js: 36ms, application-code: 4ms)
+ GET /api/projects 200 in 4.3s (next.js: 20ms, application-code: 4.3s)
+ GET /plots-in-chikkaballapura 200 in 125ms (next.js: 80ms, application-code: 45ms)
  GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1472ms (next.js: 2ms, application-code: 1470ms)
- GET / 200 in 63ms (next.js: 4ms, application-code: 59ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /?page=contact 200 in 64ms (next.js: 3ms, application-code: 61ms)
- GET /api/admin/session 200 in 14ms (next.js: 10ms, application-code: 4ms)
- GET /api/projects 200 in 4.6s (next.js: 2ms, application-code: 4.6s)
- GET /api/projects 200 in 4.2s (next.js: 3ms, application-code: 4.2s)
- GET /?page=contact 200 in 196ms (next.js: 160ms, application-code: 36ms)
- GET /api/admin/session 200 in 11ms (next.js: 8ms, application-code: 4ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /?page=contact 200 in 140ms (next.js: 107ms, application-code: 33ms)
- GET /api/admin/session 200 in 9ms (next.js: 7ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /?page=contact 200 in 151ms (next.js: 116ms, application-code: 35ms)
- GET /api/admin/session 200 in 6ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 1472ms (next.js: 1656µs, application-code: 1470ms)
- GET / 200 in 39ms (next.js: 1891µs, application-code: 37ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 2.7s (next.js: 1691µs, application-code: 2.7s)
- GET / 200 in 53ms (next.js: 17ms, application-code: 36ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 1872µs, application-code: 3.0s)
- GET / 200 in 62ms (next.js: 28ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 3.3s (next.js: 2ms, application-code: 3.3s)
- GET / 200 in 103ms (next.js: 70ms, application-code: 32ms)
- GET /api/admin/session 200 in 8ms (next.js: 3ms, application-code: 5ms)
- GET /api/projects 200 in 1473ms (next.js: 9ms, application-code: 1464ms)
- GET /api/projects 200 in 4.4s (next.js: 1324µs, application-code: 4.4s)
-✓ Compiled in 224ms
- GET / 200 in 244ms (next.js: 44ms, application-code: 200ms)
- GET / 200 in 244ms (next.js: 71ms, application-code: 173ms)
- GET / 200 in 159ms (next.js: 3ms, application-code: 156ms)
- GET / 200 in 143ms (next.js: 12ms, application-code: 132ms)
- GET / 200 in 118ms (next.js: 3ms, application-code: 116ms)
- GET / 200 in 118ms (next.js: 39ms, application-code: 79ms)
- GET / 200 in 119ms (next.js: 14ms, application-code: 105ms)
- GET / 200 in 119ms (next.js: 25ms, application-code: 93ms)
- GET / 200 in 70ms (next.js: 5ms, application-code: 65ms)
- GET / 200 in 70ms (next.js: 18ms, application-code: 52ms)
- GET / 200 in 70ms (next.js: 32ms, application-code: 38ms)
- GET / 200 in 70ms (next.js: 44ms, application-code: 25ms)
- GET / 200 in 65ms (next.js: 4ms, application-code: 61ms)
- GET /api/admin/session 200 in 41ms (next.js: 36ms, application-code: 4ms)
- GET /api/projects 200 in 4.6s (next.js: 21ms, application-code: 4.5s)
- GET / 200 in 48ms (next.js: 15ms, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 1759µs, application-code: 3.0s)
- GET / 200 in 71ms (next.js: 41ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.3s (next.js: 3ms, application-code: 3.3s)
- GET / 200 in 100ms (next.js: 67ms, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1474ms (next.js: 1790µs, application-code: 1473ms)
-✓ Compiled in 236ms
- GET / 200 in 81ms (next.js: 39ms, application-code: 42ms)
- GET / 200 in 81ms (next.js: 59ms, application-code: 22ms)
-✓ Compiled in 383ms
-✓ Compiled in 375ms
- GET / 200 in 66ms (next.js: 3ms, application-code: 63ms)
- GET /api/admin/session 200 in 47ms (next.js: 43ms, application-code: 4ms)
- GET /api/projects 200 in 4.4s (next.js: 26ms, application-code: 4.4s)
- GET / 200 in 37ms (next.js: 4ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET / 200 in 86ms (next.js: 51ms, application-code: 35ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1998µs, application-code: 2.9s)
- GET / 200 in 110ms (next.js: 76ms, application-code: 34ms)
- GET /api/admin/session 200 in 6ms (next.js: 3ms, application-code: 3ms)
- GET /api/projects 200 in 1451ms (next.js: 6ms, application-code: 1445ms)
- GET /?page=projects 200 in 36ms (next.js: 3ms, application-code: 33ms)
- GET /api/admin/session 200 in 11ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 2.6s (next.js: 3ms, application-code: 2.6s)
- GET /?page=projects 200 in 114ms (next.js: 78ms, application-code: 36ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1750µs, application-code: 2.8s)
- GET /?page=projects 200 in 96ms (next.js: 65ms, application-code: 31ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 1538µs, application-code: 2.8s)
- GET /?page=projects 200 in 103ms (next.js: 67ms, application-code: 36ms)
- GET /api/admin/session 200 in 6ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 1475ms (next.js: 1598µs, application-code: 1474ms)
- GET /?page=about 200 in 36ms (next.js: 2ms, application-code: 34ms)
- GET /api/admin/session 200 in 11ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 2.7s (next.js: 4ms, application-code: 2.7s)
- GET /?page=about 200 in 159ms (next.js: 123ms, application-code: 35ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /?page=about 200 in 149ms (next.js: 116ms, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1664µs, application-code: 2.9s)
- GET /?page=about 200 in 169ms (next.js: 132ms, application-code: 36ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 1478ms (next.js: 1796µs, application-code: 1476ms)
- GET /?page=contact 200 in 37ms (next.js: 2ms, application-code: 34ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 4ms)
- GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
- GET /?page=contact 200 in 161ms (next.js: 126ms, application-code: 35ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 1551µs, application-code: 3.0s)
- GET /?page=contact 200 in 152ms (next.js: 119ms, application-code: 33ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET /?page=contact 200 in 154ms (next.js: 122ms, application-code: 32ms)
- GET /api/admin/session 200 in 5ms (next.js: 2ms, application-code: 3ms)
- GET /api/projects 200 in 1478ms (next.js: 6ms, application-code: 1473ms)
- GET /purva-sounds-of-water 200 in 145ms (next.js: 48ms, application-code: 97ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 1874µs, application-code: 2.9s)
- GET /purva-sounds-of-water 200 in 44ms (next.js: 3ms, application-code: 41ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 3.0s (next.js: 3ms, application-code: 3.0s)
- GET /purva-sounds-of-water 200 in 95ms (next.js: 50ms, application-code: 45ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 1803µs, application-code: 2.9s)
- GET /purva-sounds-of-water 200 in 118ms (next.js: 78ms, application-code: 40ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1463ms (next.js: 1647µs, application-code: 1462ms)
- GET / 200 in 46ms (next.js: 3ms, application-code: 43ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
-[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <SegmentViewNode type="page" pagePath="page.js">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-        <Home params={Promise} searchParams={Promise}>
-          <PlotsProvider>
-            <AppContent>
-              <div className="min-h-scre..." data-hash-route={true}>
-                <a>
-                <div>
-                  <Navbar>
-                  <main id="main-content" tabIndex={-1} className="animate-fa...">
-                    <HomePage setActivePage={function handleNavClick} ...>
-                      <div>
-                        <section>
-                        <section>
-                        <section>
-                        <section>
-                        <section>
-                        <section>
-                        <section aria-labelledby="questions" className="page-section">
-                          <div className="shell grid...">
-                            <div>
-                            <div data-reveal={true} className="relative l...">
-                              <img
-                                src={"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=cr..."}
-                                alt={"Triton Nandi Luxury Villas (3, 4 & 5 BHK), Chikkaballapura (Nandi Foothills)"}
-                                width={1000}
-                                height={1333}
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="h-[420px] w-full object-cover sm:h-[560px] lg:h-[640px]"
-                              >
-                              <img
-                                src={"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=cr..."}
-                                alt=""
-                                aria-hidden="true"
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="absolute bottom-[-32px] left-6 hidden h-[200px] w-[30%] object-cover sm:block"
-                              >
-                        ...
-                ...
-    ...
- 
- GET /api/projects 200 in 676ms (next.js: 4ms, application-code: 673ms)
- GET / 200 in 35ms (next.js: 1726µs, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
-[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <SegmentViewNode type="page" pagePath="page.js">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-        <Home params={Promise} searchParams={Promise}>
-          <PlotsProvider>
-            <AppContent>
-              <div className="min-h-scre..." data-hash-route={true}>
-                <a>
-                <div>
-                  <Navbar>
-                  <main id="main-content" tabIndex={-1} className="animate-fa...">
-                    <HomePage setActivePage={function handleNavClick} ...>
-                      <div>
-                        <section>
-                        <section aria-labelledby="collection" className="relative i...">
-                          <img>
-                          <div>
-                          <div>
-                          <ul className="shell mt-1...">
-                            <li data-reveal={true} className="lg:w-[76%]">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fi..."}
-                                    alt={"Oriaiyan Signature Plotted Developments & Villa Plots"}
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                            <li data-reveal={true} className="lg:ml-auto...">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=c..."}
-                                    alt="Sun Valley Plotted Enclave - Chikkaballapura"
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                            <li data-reveal={true} className="lg:w-[76%]">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=c..."}
-                                    alt={"Vinra KBR Residences - Chikkajala & Kothanur"}
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                        <section>
-                        <section>
-                        <section aria-labelledby="desk" className="page-section">
-                          <div className="shell">
-                            <h2>
-                            <p>
-                            <div className="mt-12 grid...">
-                              <div data-reveal={true} className="relative l...">
-                                <img
-                                  src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=cro..."}
-                                  alt="Sun Valley Plotted Enclave - Chikkaballapura, Chikkaballapura (Near Nandi Hills..."
-                                  width={1800}
-                                  height={1125}
-+                                 loading="lazy"
--                                 loading="eager"
-                                  decoding="async"
-                                  className="h-[320px] w-full object-cover sm:h-[440px]"
-                                >
-                                ...
-                              ...
-                            ...
-                        <section aria-labelledby="developers" className="section-bl...">
-                          <div data-reveal={true} className="sheet mx-a...">
-                            <h2>
-                            <img
-                              src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=..."}
-                              alt="Site at Sun Valley Plotted Enclave - Chikkaballapura"
-                              width={1200}
-                              height={675}
-+                             loading="lazy"
--                             loading="eager"
-                              decoding="async"
-                              className="mt-7 h-[190px] w-full object-cover"
-                            >
-                            ...
-                        <section aria-labelledby="questions" className="page-section">
-                          <div className="shell grid...">
-                            <div>
-                            <div data-reveal={true} className="relative l...">
-                              <img
-                                src={"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=cr..."}
-                                alt={"Triton Nandi Luxury Villas (3, 4 & 5 BHK), Chikkaballapura (Nandi Foothills)"}
-                                width={1000}
-                                height={1333}
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="h-[420px] w-full object-cover sm:h-[560px] lg:h-[640px]"
-                              >
-                              <img
-                                src={"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=cr..."}
-                                alt=""
-                                aria-hidden="true"
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="absolute bottom-[-32px] left-6 hidden h-[200px] w-[30%] object-cover sm:block"
-                              >
-                        ...
-                ...
-    ...
- 
- GET /api/projects 200 in 477ms (next.js: 1742µs, application-code: 475ms)
-✓ Compiled in 225ms
- GET / 200 in 81ms (next.js: 65ms, application-code: 16ms)
- GET / 200 in 82ms (next.js: 43ms, application-code: 39ms)
- GET / 200 in 66ms (next.js: 1819µs, application-code: 64ms)
- GET /api/admin/session 200 in 45ms (next.js: 40ms, application-code: 5ms)
-[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <SegmentViewNode type="page" pagePath="page.js">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-        <Home params={Promise} searchParams={Promise}>
-          <PlotsProvider>
-            <AppContent>
-              <div className="min-h-scre..." data-hash-route={true}>
-                <a>
-                <div>
-                  <Navbar>
-                  <main id="main-content" tabIndex={-1} className="animate-fa...">
-                    <HomePage setActivePage={function handleNavClick} ...>
-                      <div>
-                        <section>
-                        <section aria-labelledby="collection" className="relative i...">
-                          <img>
-                          <div>
-                          <div>
-                          <ul className="shell mt-1...">
-                            <li data-reveal={true} className="lg:w-[76%]">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fi..."}
-                                    alt={"Oriaiyan Signature Plotted Developments & Villa Plots"}
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                            <li data-reveal={true} className="lg:ml-auto...">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=c..."}
-                                    alt="Sun Valley Plotted Enclave - Chikkaballapura"
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                            <li data-reveal={true} className="lg:w-[76%]">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=c..."}
-                                    alt={"Vinra KBR Residences - Chikkajala & Kothanur"}
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                        <section>
-                        <section>
-                        <section aria-labelledby="desk" className="page-section">
-                          <div className="shell">
-                            <h2>
-                            <p>
-                            <div className="mt-12 grid...">
-                              <div data-reveal={true} className="relative l...">
-                                <img
-                                  src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=cro..."}
-                                  alt="Sun Valley Plotted Enclave - Chikkaballapura, Chikkaballapura (Near Nandi Hills..."
-                                  width={1800}
-                                  height={1125}
-+                                 loading="lazy"
--                                 loading="eager"
-                                  decoding="async"
-                                  className="h-[320px] w-full object-cover sm:h-[440px]"
-                                >
-                                ...
-                              ...
-                            ...
-                        <section aria-labelledby="developers" className="section-bl...">
-                          <div data-reveal={true} className="sheet mx-a...">
-                            <h2>
-                            <img
-                              src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=..."}
-                              alt="Site at Sun Valley Plotted Enclave - Chikkaballapura"
-                              width={1200}
-                              height={675}
-+                             loading="lazy"
--                             loading="eager"
-                              decoding="async"
-                              className="mt-7 h-[190px] w-full object-cover"
-                            >
-                            ...
-                        <section aria-labelledby="questions" className="page-section">
-                          <div className="shell grid...">
-                            <div>
-                            <div data-reveal={true} className="relative l...">
-                              <img
-                                src={"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=cr..."}
-                                alt={"Triton Nandi Luxury Villas (3, 4 & 5 BHK), Chikkaballapura (Nandi Foothills)"}
-                                width={1000}
-                                height={1333}
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="h-[420px] w-full object-cover sm:h-[560px] lg:h-[640px]"
-                              >
-                              <img
-                                src={"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=cr..."}
-                                alt=""
-                                aria-hidden="true"
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="absolute bottom-[-32px] left-6 hidden h-[200px] w-[30%] object-cover sm:block"
-                              >
-                        ...
-                ...
-    ...
- 
- GET /api/projects 200 in 666ms (next.js: 22ms, application-code: 644ms)
-✓ Compiled in 243ms
- GET / 200 in 90ms (next.js: 46ms, application-code: 44ms)
- GET / 200 in 22ms (next.js: 4ms, application-code: 18ms)
- GET / 200 in 59ms (next.js: 1905µs, application-code: 57ms)
- GET /api/admin/session 200 in 49ms (next.js: 44ms, application-code: 5ms)
- GET /api/projects 200 in 748ms (next.js: 23ms, application-code: 725ms)
- GET / 200 in 35ms (next.js: 2ms, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 3ms)
-[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <SegmentViewNode type="page" pagePath="page.js">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-        <Home params={Promise} searchParams={Promise}>
-          <PlotsProvider>
-            <AppContent>
-              <div className="min-h-scre..." data-hash-route={true}>
-                <a>
-                <div>
-                  <Navbar>
-                  <main id="main-content" tabIndex={-1} className="animate-fa...">
-                    <HomePage setActivePage={function handleNavClick} ...>
-                      <div>
-                        <section>
-                        <section aria-labelledby="collection" className="relative i...">
-                          <img>
-                          <div>
-                          <div>
-                          <ul className="shell mt-1...">
-                            <li data-reveal={true} className="lg:w-[76%]">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fi..."}
-                                    alt={"Oriaiyan Signature Plotted Developments & Villa Plots"}
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                            <li data-reveal={true} className="lg:ml-auto...">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=c..."}
-                                    alt="Sun Valley Plotted Enclave - Chikkaballapura"
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                            <li data-reveal={true} className="lg:w-[76%]">
-                              <article>
-                                <button type="button" onClick={function onClick} className="frame bloc..." ...>
-                                  <img
-                                    src={"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=c..."}
-                                    alt={"Vinra KBR Residences - Chikkajala & Kothanur"}
-                                    width={1600}
-                                    height={1000}
-+                                   loading="lazy"
--                                   loading="eager"
-                                    decoding="async"
-                                    className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-                                  >
-                                ...
-                        <section>
-                        <section>
-                        <section aria-labelledby="desk" className="page-section">
-                          <div className="shell">
-                            <h2>
-                            <p>
-                            <div className="mt-12 grid...">
-                              <div data-reveal={true} className="relative l...">
-                                <img
-                                  src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=cro..."}
-                                  alt="Sun Valley Plotted Enclave - Chikkaballapura, Chikkaballapura (Near Nandi Hills..."
-                                  width={1800}
-                                  height={1125}
-+                                 loading="lazy"
--                                 loading="eager"
-                                  decoding="async"
-                                  className="h-[320px] w-full object-cover sm:h-[440px]"
-                                >
-                                ...
-                              ...
-                            ...
-                        <section aria-labelledby="developers" className="section-bl...">
-                          <div data-reveal={true} className="sheet mx-a...">
-                            <h2>
-                            <img
-                              src={"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=..."}
-                              alt="Site at Sun Valley Plotted Enclave - Chikkaballapura"
-                              width={1200}
-                              height={675}
-+                             loading="lazy"
--                             loading="eager"
-                              decoding="async"
-                              className="mt-7 h-[190px] w-full object-cover"
-                            >
-                            ...
-                        <section aria-labelledby="questions" className="page-section">
-                          <div className="shell grid...">
-                            <div>
-                            <div data-reveal={true} className="relative l...">
-                              <img
-                                src={"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=cr..."}
-                                alt={"Triton Nandi Luxury Villas (3, 4 & 5 BHK), Chikkaballapura (Nandi Foothills)"}
-                                width={1000}
-                                height={1333}
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="h-[420px] w-full object-cover sm:h-[560px] lg:h-[640px]"
-                              >
-                              <img
-                                src={"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=cr..."}
-                                alt=""
-                                aria-hidden="true"
-+                               loading="lazy"
--                               loading="eager"
-                                decoding="async"
-                                className="absolute bottom-[-32px] left-6 hidden h-[200px] w-[30%] object-cover sm:block"
-                              >
-                        ...
-                ...
-    ...
- 
- GET /api/projects 200 in 504ms (next.js: 1769µs, application-code: 502ms)
- GET / 200 in 35ms (next.js: 1969µs, application-code: 33ms)
- GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 3ms)
  GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET / 200 in 54ms (next.js: 21ms, application-code: 33ms)
+ GET /plots-in-chikkaballapura 200 in 163ms (next.js: 125ms, application-code: 39ms)
  GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 2.8s (next.js: 1820µs, application-code: 2.8s)
+ GET /plots-in-chikkaballapura 200 in 157ms (next.js: 118ms, application-code: 39ms)
+ GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 3ms)
+ GET /api/projects 200 in 1476ms (next.js: 1937µs, application-code: 1474ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 174ms (next.js: 54ms, generate-params: 7ms, application-code: 120ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.6s (next.js: 1836µs, application-code: 2.6s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 149ms (next.js: 97ms, generate-params: 6ms, application-code: 52ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 203ms (next.js: 143ms, generate-params: 7ms, application-code: 61ms)
+ GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
  GET /api/projects 200 in 2.8s (next.js: 3ms, application-code: 2.8s)
- GET / 200 in 84ms (next.js: 50ms, application-code: 34ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
- GET /api/projects 200 in 3.1s (next.js: 2ms, application-code: 3.1s)
- GET / 200 in 97ms (next.js: 63ms, application-code: 34ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 163ms (next.js: 116ms, generate-params: 6ms, application-code: 47ms)
  GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
- GET /api/projects 200 in 1480ms (next.js: 1845µs, application-code: 1478ms)
- GET / 200 in 37ms (next.js: 1861µs, application-code: 35ms)
- GET / 200 in 34ms (next.js: 2ms, application-code: 32ms)
-⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "127.0.0.1".
-Cross-origin access to Next.js dev resources is blocked by default for safety.
-
-To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
-
-// next.config.js
-module.exports = {
-  allowedDevOrigins: ['127.0.0.1'],
-}
-
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
-✓ Compiled in 222ms
- GET / 200 in 90ms (next.js: 41ms, application-code: 49ms)
- GET / 200 in 30ms (next.js: 3ms, application-code: 28ms)
- GET / 200 in 105ms (next.js: 5ms, application-code: 99ms)
- GET /api/admin/session 200 in 73ms (next.js: 66ms, application-code: 7ms)
- GET /api/projects 200 in 4.4s (next.js: 35ms, application-code: 4.3s)
- GET / 200 in 69ms (next.js: 11ms, application-code: 58ms)
- GET /api/admin/session 200 in 13ms (next.js: 9ms, application-code: 5ms)
- GET / 200 in 37ms (next.js: 3ms, application-code: 35ms)
- GET /api/projects 200 in 3.2s (next.js: 3ms, application-code: 3.2s)
- GET / 200 in 93ms (next.js: 52ms, application-code: 41ms)
+ GET /api/projects 200 in 1473ms (next.js: 1671µs, application-code: 1471ms)
+✓ Compiled in 286ms
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 170ms (next.js: 56ms, generate-params: 7ms, application-code: 114ms)
+ GET /api/admin/session 200 in 18ms (next.js: 16ms, application-code: 3ms)
+ GET /api/projects 200 in 4.1s (next.js: 9ms, application-code: 4.1s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 156ms (next.js: 95ms, generate-params: 7ms, application-code: 61ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 2.7s (next.js: 2ms, application-code: 2.7s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 195ms (next.js: 142ms, generate-params: 7ms, application-code: 53ms)
+ GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
+ GET /api/projects 200 in 2.7s (next.js: 3ms, application-code: 2.7s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 181ms (next.js: 129ms, generate-params: 6ms, application-code: 51ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1470ms (next.js: 1976µs, application-code: 1468ms)
+✓ Compiled in 218ms
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 156ms (next.js: 51ms, generate-params: 7ms, application-code: 105ms)
+ GET /api/admin/session 200 in 18ms (next.js: 16ms, application-code: 3ms)
+ GET /api/projects 200 in 4.1s (next.js: 9ms, application-code: 4.1s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 133ms (next.js: 84ms, generate-params: 6ms, application-code: 48ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 2.7s (next.js: 3ms, application-code: 2.7s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 185ms (next.js: 130ms, generate-params: 7ms, application-code: 55ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 1847µs, application-code: 2.8s)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 190ms (next.js: 138ms, generate-params: 7ms, application-code: 53ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 1474ms (next.js: 2ms, application-code: 1472ms)
+ GET / 200 in 159ms (next.js: 93ms, application-code: 66ms)
+ GET /premium-plots-in-bangalore 200 in 142ms (next.js: 42ms, application-code: 100ms)
+ GET /plots-in-bangalore 200 in 50ms (next.js: 5ms, application-code: 45ms)
+ GET /plots-in-chikkaballapura 200 in 48ms (next.js: 6ms, application-code: 41ms)
+ GET /plots-in-south-bangalore 200 in 147ms (next.js: 40ms, application-code: 108ms)
+ GET /property-near-bangalore-airport 200 in 153ms (next.js: 43ms, application-code: 110ms)
+ GET /projects 200 in 120ms (next.js: 40ms, application-code: 80ms)
+ GET /luxury-villas-bangalore 200 in 44ms (next.js: 5ms, application-code: 39ms)
+ GET /purva-sounds-of-water 200 in 52ms (next.js: 5ms, application-code: 47ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 58ms (next.js: 14ms, generate-params: 7ms, application-code: 44ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 44ms (next.js: 1731µs, generate-params: 17µs, application-code: 42ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 53ms (next.js: 1697µs, generate-params: 21µs, application-code: 52ms)
+✓ Compiled in 197ms
+ GET / 200 in 369ms (next.js: 303ms, application-code: 65ms)
+ GET /premium-plots-in-bangalore 200 in 58ms (next.js: 5ms, application-code: 53ms)
+ GET /plots-in-chikkaballapura 200 in 48ms (next.js: 5ms, application-code: 43ms)
+ GET /plots-in-south-bangalore 200 in 42ms (next.js: 5ms, application-code: 37ms)
+ GET /property-near-bangalore-airport 200 in 44ms (next.js: 5ms, application-code: 39ms)
+ GET /projects 200 in 39ms (next.js: 5ms, application-code: 34ms)
+ GET /plots-in-bangalore 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET /luxury-villas-bangalore 200 in 32ms (next.js: 3ms, application-code: 30ms)
+ GET / 200 in 35ms (next.js: 1751µs, application-code: 33ms)
+✓ Compiled in 219ms
+✓ Compiled in 259ms
+ GET /sitemap.xml 200 in 27ms (next.js: 21ms, application-code: 6ms)
+ GET / 200 in 119ms (next.js: 41ms, application-code: 79ms)
+ GET /premium-plots-in-bangalore 200 in 131ms (next.js: 42ms, application-code: 88ms)
+ GET /plots-in-bangalore 200 in 101ms (next.js: 37ms, application-code: 63ms)
+ GET /luxury-villas-bangalore 200 in 99ms (next.js: 36ms, application-code: 63ms)
+ GET /purva-sounds-of-water 200 in 104ms (next.js: 37ms, application-code: 67ms)
+ GET /projects 200 in 109ms (next.js: 39ms, application-code: 70ms)
+ GET /guides 200 in 452ms (next.js: 403ms, application-code: 49ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 712ms (next.js: 617ms, generate-params: 254ms, application-code: 95ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 72ms (next.js: 8ms, generate-params: 6ms, application-code: 65ms)
+ GET /guides/plot-loan-bangalore 200 in 69ms (next.js: 3ms, generate-params: 19µs, application-code: 65ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 55ms (next.js: 1664µs, generate-params: 16µs, application-code: 54ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 46ms (next.js: 1698µs, generate-params: 16µs, application-code: 44ms)
+ GET /plots-in-chikkaballapura 200 in 123ms (next.js: 42ms, application-code: 81ms)
+ GET /property-near-bangalore-airport 200 in 127ms (next.js: 44ms, application-code: 82ms)
+ GET /plots-in-south-bangalore 200 in 129ms (next.js: 40ms, application-code: 89ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 142ms (next.js: 51ms, generate-params: 6ms, application-code: 92ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 57ms (next.js: 1751µs, generate-params: 16µs, application-code: 55ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 45ms (next.js: 1775µs, generate-params: 16µs, application-code: 44ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 49ms (next.js: 1701µs, generate-params: 17µs, application-code: 47ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 56ms (next.js: 8ms, generate-params: 6ms, application-code: 48ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 43ms (next.js: 1796µs, generate-params: 20µs, application-code: 42ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 56ms (next.js: 1727µs, generate-params: 19µs, application-code: 54ms)
+ GET /matchmaker 200 in 59ms (next.js: 26ms, application-code: 33ms)
+ GET /qna 200 in 404ms (next.js: 369ms, application-code: 35ms)
+ GET /property-finder 200 in 415ms (next.js: 384ms, application-code: 31ms)
+✓ Compiled in 199ms
+ GET /guides/verify-plot-approvals-bangalore 200 in 149ms (next.js: 41ms, generate-params: 8ms, application-code: 108ms)
+ GET /api/admin/session 200 in 50ms (next.js: 46ms, application-code: 4ms)
+ GET /api/projects 200 in 5.5s (next.js: 23ms, application-code: 5.5s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 162ms (next.js: 108ms, generate-params: 7ms, application-code: 54ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.9s (next.js: 1731µs, application-code: 2.9s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 207ms (next.js: 154ms, generate-params: 7ms, application-code: 53ms)
+ GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 3ms)
+ GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 146ms (next.js: 86ms, generate-params: 6ms, application-code: 60ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1470ms (next.js: 1613µs, application-code: 1468ms)
+ GET /guides 200 in 45ms (next.js: 4ms, application-code: 41ms)
  GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.8s (next.js: 2ms, application-code: 2.8s)
- GET / 200 in 105ms (next.js: 72ms, application-code: 32ms)
+ GET /api/projects 200 in 4.1s (next.js: 1777µs, application-code: 4.1s)
+ GET /guides 200 in 166ms (next.js: 132ms, application-code: 34ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 1845µs, application-code: 2.8s)
+ GET /guides 200 in 171ms (next.js: 139ms, application-code: 32ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.7s (next.js: 1832µs, application-code: 2.7s)
+ GET /guides 200 in 169ms (next.js: 132ms, application-code: 37ms)
+ GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
+ GET /api/projects 200 in 1484ms (next.js: 1702µs, application-code: 1482ms)
+✓ Compiled in 218ms
+✓ Compiled in 251ms
+ GET /guides/verify-plot-approvals-bangalore 200 in 208ms (next.js: 63ms, generate-params: 8ms, application-code: 145ms)
+ GET /api/admin/session 200 in 19ms (next.js: 17ms, application-code: 3ms)
+ GET /api/projects 200 in 4.4s (next.js: 10ms, application-code: 4.4s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 146ms (next.js: 93ms, generate-params: 7ms, application-code: 54ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.9s (next.js: 1858µs, application-code: 2.9s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 153ms (next.js: 102ms, generate-params: 6ms, application-code: 51ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.9s (next.js: 1996µs, application-code: 2.9s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 147ms (next.js: 93ms, generate-params: 7ms, application-code: 54ms)
+ GET /api/admin/session 200 in 5ms (next.js: 1799µs, application-code: 3ms)
+ GET /api/projects 200 in 1465ms (next.js: 6ms, application-code: 1460ms)
+ GET /guides 200 in 144ms (next.js: 49ms, application-code: 96ms)
+ GET /api/admin/session 200 in 11ms (next.js: 8ms, application-code: 3ms)
+ GET /api/projects 200 in 2.6s (next.js: 3ms, application-code: 2.6s)
+ GET /guides 200 in 178ms (next.js: 141ms, application-code: 37ms)
+ GET /api/admin/session 200 in 7ms (next.js: 4ms, application-code: 2ms)
+ GET /api/projects 200 in 2.9s (next.js: 1749µs, application-code: 2.9s)
+ GET /guides 200 in 172ms (next.js: 134ms, application-code: 37ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 2.9s (next.js: 1815µs, application-code: 2.9s)
+ GET /guides 200 in 160ms (next.js: 122ms, application-code: 37ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1478ms (next.js: 1851µs, application-code: 1477ms)
+✓ Compiled in 219ms
+ GET /guides/verify-plot-approvals-bangalore 200 in 225ms (next.js: 56ms, generate-params: 8ms, application-code: 169ms)
+ GET /api/admin/session 200 in 21ms (next.js: 17ms, application-code: 4ms)
+ GET /api/projects 200 in 4.5s (next.js: 10ms, application-code: 4.5s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 127ms (next.js: 73ms, generate-params: 6ms, application-code: 54ms)
  GET /api/admin/session 200 in 8ms (next.js: 6ms, application-code: 2ms)
- GET /api/projects 200 in 1478ms (next.js: 2ms, application-code: 1476ms)
-✓ Compiled in 227ms
- GET / 200 in 88ms (next.js: 39ms, application-code: 49ms)
- GET / 200 in 88ms (next.js: 62ms, application-code: 26ms)
- GET / 200 in 57ms (next.js: 1936µs, application-code: 55ms)
- GET / 200 in 38ms (next.js: 2ms, application-code: 36ms)
- GET /api/admin/session 200 in 54ms (next.js: 49ms, application-code: 5ms)
- GET /api/projects 200 in 4.4s (next.js: 27ms, application-code: 4.3s)
- GET / 200 in 39ms (next.js: 8ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.9s (next.js: 1670µs, application-code: 2.9s)
- GET / 200 in 92ms (next.js: 61ms, application-code: 30ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 3.2s (next.js: 4ms, application-code: 3.2s)
- GET / 200 in 110ms (next.js: 77ms, application-code: 32ms)
+ GET /api/projects 200 in 3.1s (next.js: 3ms, application-code: 3.1s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 149ms (next.js: 94ms, generate-params: 6ms, application-code: 55ms)
  GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1480ms (next.js: 1685µs, application-code: 1479ms)
- GET / 200 in 34ms (next.js: 2ms, application-code: 32ms)
- GET / 200 in 32ms (next.js: 2ms, application-code: 30ms)
- GET / 200 in 34ms (next.js: 1842µs, application-code: 32ms)
- GET / 200 in 34ms (next.js: 1924µs, application-code: 32ms)
+ GET /api/projects 200 in 2.8s (next.js: 1637µs, application-code: 2.8s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 137ms (next.js: 82ms, generate-params: 7ms, application-code: 55ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1465ms (next.js: 2ms, application-code: 1463ms)
+✓ Compiled in 256ms
+ GET /guides/verify-plot-approvals-bangalore 200 in 156ms (next.js: 52ms, generate-params: 7ms, application-code: 104ms)
+ GET /api/admin/session 200 in 21ms (next.js: 18ms, application-code: 3ms)
+ GET /api/projects 200 in 4.3s (next.js: 10ms, application-code: 4.3s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 136ms (next.js: 79ms, generate-params: 7ms, application-code: 57ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 1749µs, application-code: 2.8s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 133ms (next.js: 79ms, generate-params: 6ms, application-code: 54ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 1751µs, application-code: 2.8s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 137ms (next.js: 82ms, generate-params: 7ms, application-code: 55ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1467ms (next.js: 1928µs, application-code: 1465ms)
+✓ Compiled in 237ms
+ GET /guides/verify-plot-approvals-bangalore 200 in 191ms (next.js: 59ms, generate-params: 8ms, application-code: 132ms)
+ GET /api/admin/session 200 in 19ms (next.js: 17ms, application-code: 3ms)
+ GET /api/projects 200 in 4.3s (next.js: 9ms, application-code: 4.3s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 148ms (next.js: 92ms, generate-params: 7ms, application-code: 56ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 1593µs, application-code: 2.8s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 157ms (next.js: 96ms, generate-params: 6ms, application-code: 61ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 3ms)
+ GET /api/projects 200 in 2.8s (next.js: 1737µs, application-code: 2.8s)
+ GET /guides/verify-plot-approvals-bangalore 200 in 143ms (next.js: 90ms, generate-params: 6ms, application-code: 52ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1479ms (next.js: 2ms, application-code: 1477ms)
+ GET /sitemap.xml 200 in 32ms (next.js: 25ms, application-code: 7ms)
+ GET / 200 in 147ms (next.js: 73ms, application-code: 74ms)
+ GET /premium-plots-in-bangalore 200 in 56ms (next.js: 6ms, application-code: 50ms)
+ GET /plots-in-bangalore 200 in 50ms (next.js: 5ms, application-code: 45ms)
+ GET /luxury-villas-bangalore 200 in 48ms (next.js: 5ms, application-code: 43ms)
+ GET /purva-sounds-of-water 200 in 74ms (next.js: 6ms, application-code: 68ms)
+ GET /projects 200 in 46ms (next.js: 6ms, application-code: 40ms)
+ GET /guides 200 in 88ms (next.js: 29ms, application-code: 59ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 58ms (next.js: 8ms, generate-params: 6ms, application-code: 51ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 61ms (next.js: 1728µs, generate-params: 19µs, application-code: 60ms)
+ GET /guides/plot-loan-bangalore 200 in 59ms (next.js: 1850µs, generate-params: 20µs, application-code: 57ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 51ms (next.js: 1773µs, generate-params: 17µs, application-code: 49ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 51ms (next.js: 1717µs, generate-params: 17µs, application-code: 49ms)
+ GET /plots-in-chikkaballapura 200 in 64ms (next.js: 6ms, application-code: 58ms)
+ GET /property-near-bangalore-airport 200 in 58ms (next.js: 6ms, application-code: 52ms)
+ GET /plots-in-south-bangalore 200 in 47ms (next.js: 6ms, application-code: 41ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 61ms (next.js: 12ms, generate-params: 6ms, application-code: 49ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 47ms (next.js: 1985µs, generate-params: 16µs, application-code: 45ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 52ms (next.js: 1770µs, generate-params: 18µs, application-code: 50ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 53ms (next.js: 1686µs, generate-params: 20µs, application-code: 51ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 48ms (next.js: 1802µs, generate-params: 26µs, application-code: 46ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 51ms (next.js: 7ms, generate-params: 6ms, application-code: 43ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 48ms (next.js: 1682µs, generate-params: 17µs, application-code: 47ms)
+ GET /matchmaker 200 in 51ms (next.js: 6ms, application-code: 45ms)
+ GET /qna 200 in 37ms (next.js: 6ms, application-code: 31ms)
+ GET /property-finder 200 in 43ms (next.js: 5ms, application-code: 38ms)
+ GET /guides 200 in 34ms (next.js: 1676µs, application-code: 33ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 56ms (next.js: 7ms, generate-params: 6ms, application-code: 49ms)
+ GET /guides/plot-loan-bangalore 200 in 59ms (next.js: 7ms, generate-params: 6ms, application-code: 52ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 55ms (next.js: 8ms, generate-params: 6ms, application-code: 47ms)
+ GET /plots-in-bangalore 200 in 44ms (next.js: 2ms, application-code: 42ms)
+ GET /sitemap.xml 200 in 4ms (next.js: 1451µs, application-code: 3ms)
+ GET /sitemap.xml 200 in 4ms (next.js: 1496µs, application-code: 3ms)
+ GET /sitemap.xml 200 in 25ms (next.js: 20ms, application-code: 5ms)
+ GET / 200 in 65ms (next.js: 18ms, application-code: 47ms)
+ GET /premium-plots-in-bangalore 200 in 65ms (next.js: 5ms, application-code: 59ms)
+ GET /plots-in-bangalore 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET /luxury-villas-bangalore 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET /purva-sounds-of-water 200 in 56ms (next.js: 3ms, application-code: 54ms)
+ GET /projects 200 in 78ms (next.js: 6ms, application-code: 72ms)
+ GET /guides 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 62ms (next.js: 9ms, generate-params: 6ms, application-code: 52ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 53ms (next.js: 1667µs, generate-params: 17µs, application-code: 52ms)
+ GET /guides/plot-loan-bangalore 200 in 60ms (next.js: 1846µs, generate-params: 19µs, application-code: 58ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 59ms (next.js: 1604µs, generate-params: 17µs, application-code: 57ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 52ms (next.js: 1696µs, generate-params: 17µs, application-code: 50ms)
+ GET /plots-in-chikkaballapura 200 in 47ms (next.js: 5ms, application-code: 42ms)
+ GET /property-near-bangalore-airport 200 in 46ms (next.js: 5ms, application-code: 41ms)
+ GET /plots-in-south-bangalore 200 in 45ms (next.js: 5ms, application-code: 41ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 69ms (next.js: 11ms, generate-params: 6ms, application-code: 58ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 44ms (next.js: 1784µs, generate-params: 19µs, application-code: 42ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 43ms (next.js: 1565µs, generate-params: 18µs, application-code: 42ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 45ms (next.js: 1612µs, generate-params: 18µs, application-code: 44ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 46ms (next.js: 1661µs, generate-params: 17µs, application-code: 45ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 61ms (next.js: 8ms, generate-params: 6ms, application-code: 53ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 45ms (next.js: 1805µs, generate-params: 20µs, application-code: 43ms)
+ GET /matchmaker 200 in 31ms (next.js: 3ms, application-code: 28ms)
+ GET /qna 200 in 29ms (next.js: 3ms, application-code: 27ms)
+ GET /property-finder 200 in 29ms (next.js: 3ms, application-code: 27ms)
+✓ Compiled in 245ms
+ GET /sitemap.xml 200 in 26ms (next.js: 20ms, application-code: 6ms)
+ GET / 200 in 85ms (next.js: 33ms, application-code: 51ms)
+ GET /premium-plots-in-bangalore 200 in 109ms (next.js: 32ms, application-code: 77ms)
+ GET /plots-in-bangalore 200 in 76ms (next.js: 27ms, application-code: 49ms)
+ GET /luxury-villas-bangalore 200 in 79ms (next.js: 28ms, application-code: 51ms)
+ GET /purva-sounds-of-water 200 in 93ms (next.js: 31ms, application-code: 62ms)
+ GET /projects 200 in 86ms (next.js: 30ms, application-code: 57ms)
+ GET /guides 200 in 88ms (next.js: 29ms, application-code: 60ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 110ms (next.js: 34ms, generate-params: 7ms, application-code: 76ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 53ms (next.js: 1983µs, generate-params: 18µs, application-code: 51ms)
+ GET /guides/plot-loan-bangalore 200 in 60ms (next.js: 1792µs, generate-params: 16µs, application-code: 59ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 53ms (next.js: 1817µs, generate-params: 22µs, application-code: 51ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 60ms (next.js: 8ms, generate-params: 6ms, application-code: 52ms)
+ GET /plots-in-chikkaballapura 200 in 94ms (next.js: 32ms, application-code: 63ms)
+ GET /property-near-bangalore-airport 200 in 106ms (next.js: 33ms, application-code: 73ms)
+ GET /plots-in-south-bangalore 200 in 89ms (next.js: 31ms, application-code: 58ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 106ms (next.js: 36ms, generate-params: 6ms, application-code: 69ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 48ms (next.js: 1722µs, generate-params: 17µs, application-code: 46ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 57ms (next.js: 1699µs, generate-params: 17µs, application-code: 55ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 45ms (next.js: 1735µs, generate-params: 19µs, application-code: 43ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 57ms (next.js: 2ms, generate-params: 16µs, application-code: 55ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 50ms (next.js: 8ms, generate-params: 6ms, application-code: 42ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 47ms (next.js: 1815µs, generate-params: 16µs, application-code: 45ms)
+ GET /matchmaker 200 in 79ms (next.js: 31ms, application-code: 48ms)
+ GET /qna 200 in 67ms (next.js: 29ms, application-code: 38ms)
+ GET /property-finder 200 in 96ms (next.js: 34ms, application-code: 62ms)
  GET / 200 in 36ms (next.js: 2ms, application-code: 34ms)
-✓ Compiled in 233ms
- GET / 200 in 91ms (next.js: 39ms, application-code: 52ms)
- GET / 200 in 29ms (next.js: 3ms, application-code: 26ms)
- GET / 200 in 63ms (next.js: 2ms, application-code: 61ms)
- GET /api/admin/session 200 in 47ms (next.js: 41ms, application-code: 6ms)
- GET /api/projects 200 in 4.3s (next.js: 22ms, application-code: 4.3s)
- GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
- GET /api/admin/session 200 in 10ms (next.js: 7ms, application-code: 3ms)
- GET /api/projects 200 in 3.0s (next.js: 1955µs, application-code: 3.0s)
- GET / 200 in 35ms (next.js: 1936µs, application-code: 33ms)
- GET / 200 in 72ms (next.js: 42ms, application-code: 31ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 1966µs, application-code: 2.8s)
- GET / 200 in 101ms (next.js: 71ms, application-code: 30ms)
- GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 1477ms (next.js: 3ms, application-code: 1474ms)
- GET / 200 in 33ms (next.js: 1671µs, application-code: 31ms)
- GET / 200 in 38ms (next.js: 2ms, application-code: 36ms)
- GET / 200 in 31ms (next.js: 2ms, application-code: 29ms)
- GET / 200 in 34ms (next.js: 2ms, application-code: 32ms)
- GET / 200 in 35ms (next.js: 2ms, application-code: 32ms)
-✓ Compiled in 231ms
- GET / 200 in 80ms (next.js: 40ms, application-code: 40ms)
- GET / 200 in 80ms (next.js: 62ms, application-code: 18ms)
- GET / 200 in 62ms (next.js: 3ms, application-code: 58ms)
- GET /api/admin/session 200 in 44ms (next.js: 39ms, application-code: 6ms)
- GET /api/projects 200 in 4.2s (next.js: 21ms, application-code: 4.2s)
- GET / 200 in 34ms (next.js: 2ms, application-code: 31ms)
- GET /api/admin/session 200 in 9ms (next.js: 6ms, application-code: 3ms)
- GET /api/projects 200 in 2.9s (next.js: 3ms, application-code: 2.9s)
- GET / 200 in 96ms (next.js: 63ms, application-code: 33ms)
- GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
- GET /api/projects 200 in 2.8s (next.js: 1835µs, application-code: 2.8s)
- GET / 200 in 58ms (next.js: 3ms, application-code: 55ms)
- GET / 200 in 219ms (next.js: 186ms, application-code: 33ms)
- GET /api/admin/session 200 in 13ms (next.js: 8ms, application-code: 5ms)
- GET /api/projects 200 in 1457ms (next.js: 4ms, application-code: 1453ms)
+ GET /premium-plots-in-bangalore 200 in 42ms (next.js: 1793µs, application-code: 40ms)
+ GET /sitemap.xml 200 in 28ms (next.js: 21ms, application-code: 7ms)
+ GET / 200 in 65ms (next.js: 19ms, application-code: 46ms)
+ GET /premium-plots-in-bangalore 200 in 65ms (next.js: 5ms, application-code: 59ms)
+ GET /plots-in-bangalore 200 in 43ms (next.js: 3ms, application-code: 40ms)
+ GET /luxury-villas-bangalore 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET /purva-sounds-of-water 200 in 45ms (next.js: 3ms, application-code: 43ms)
+ GET /projects 200 in 52ms (next.js: 5ms, application-code: 47ms)
+ GET /guides 200 in 54ms (next.js: 4ms, application-code: 50ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 63ms (next.js: 10ms, generate-params: 6ms, application-code: 54ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 59ms (next.js: 1656µs, generate-params: 16µs, application-code: 57ms)
+ GET /guides/plot-loan-bangalore 200 in 56ms (next.js: 2ms, generate-params: 16µs, application-code: 54ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 59ms (next.js: 1781µs, generate-params: 17µs, application-code: 57ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 57ms (next.js: 1722µs, generate-params: 16µs, application-code: 55ms)
+ GET /plots-in-chikkaballapura 200 in 48ms (next.js: 5ms, application-code: 43ms)
+ GET /property-near-bangalore-airport 200 in 46ms (next.js: 5ms, application-code: 41ms)
+ GET /plots-in-south-bangalore 200 in 45ms (next.js: 5ms, application-code: 41ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 66ms (next.js: 11ms, generate-params: 6ms, application-code: 55ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 44ms (next.js: 1773µs, generate-params: 25µs, application-code: 42ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 44ms (next.js: 2ms, generate-params: 21µs, application-code: 42ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 47ms (next.js: 1760µs, generate-params: 18µs, application-code: 45ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 54ms (next.js: 1774µs, generate-params: 17µs, application-code: 52ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 50ms (next.js: 8ms, generate-params: 6ms, application-code: 42ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 51ms (next.js: 1732µs, generate-params: 19µs, application-code: 50ms)
+ GET /matchmaker 200 in 31ms (next.js: 3ms, application-code: 28ms)
+ GET /qna 200 in 30ms (next.js: 3ms, application-code: 27ms)
+ GET /property-finder 200 in 38ms (next.js: 3ms, application-code: 36ms)
+ GET /guides 200 in 35ms (next.js: 1840µs, application-code: 33ms)
+ GET / 200 in 32ms (next.js: 1704µs, application-code: 30ms)
+ GET /sitemap.xml 200 in 4ms (next.js: 1482µs, application-code: 3ms)
+ GET / 200 in 35ms (next.js: 1952µs, application-code: 33ms)
+ GET /premium-plots-in-bangalore 200 in 56ms (next.js: 2ms, application-code: 53ms)
+ GET /plots-in-bangalore 200 in 45ms (next.js: 1731µs, application-code: 44ms)
+ GET /luxury-villas-bangalore 200 in 71ms (next.js: 3ms, application-code: 69ms)
+ GET /purva-sounds-of-water 200 in 40ms (next.js: 1716µs, application-code: 38ms)
+ GET /projects 200 in 42ms (next.js: 1672µs, application-code: 40ms)
+ GET /guides 200 in 35ms (next.js: 1665µs, application-code: 33ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 57ms (next.js: 8ms, generate-params: 6ms, application-code: 49ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 54ms (next.js: 1688µs, generate-params: 17µs, application-code: 52ms)
+ GET /guides/plot-loan-bangalore 200 in 62ms (next.js: 1718µs, generate-params: 17µs, application-code: 60ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 67ms (next.js: 1767µs, generate-params: 20µs, application-code: 65ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 52ms (next.js: 1668µs, generate-params: 20µs, application-code: 50ms)
+ GET /plots-in-chikkaballapura 200 in 41ms (next.js: 1730µs, application-code: 40ms)
+ GET /property-near-bangalore-airport 200 in 43ms (next.js: 1754µs, application-code: 41ms)
+ GET /plots-in-south-bangalore 200 in 51ms (next.js: 1673µs, application-code: 49ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 54ms (next.js: 8ms, generate-params: 6ms, application-code: 47ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 46ms (next.js: 1721µs, generate-params: 19µs, application-code: 44ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 45ms (next.js: 1652µs, generate-params: 17µs, application-code: 43ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 47ms (next.js: 1788µs, generate-params: 20µs, application-code: 45ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 59ms (next.js: 1676µs, generate-params: 18µs, application-code: 57ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 51ms (next.js: 8ms, generate-params: 6ms, application-code: 43ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 52ms (next.js: 1686µs, generate-params: 18µs, application-code: 50ms)
+ GET /matchmaker 200 in 28ms (next.js: 2ms, application-code: 26ms)
+ GET /qna 200 in 27ms (next.js: 1605µs, application-code: 26ms)
+ GET /property-finder 200 in 28ms (next.js: 1566µs, application-code: 26ms)

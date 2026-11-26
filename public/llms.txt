@@ -1,28 +1,47 @@
 # Setty Relators Advisory
 
-> Real estate listings and advisory for residential plots, villas and other properties in Bengaluru and Dubai. Confirm listing details, availability, approvals, and charges with the advisor.
+> An independent real estate desk in Bengaluru and Dubai. It keeps a register of verified residential plots, villa plots, villas and apartments, checks title, sanction and RERA records before listing, and charges buyers no brokerage. Phone +91 84319 09508, email advisory@settyrelators.com.
 
-## Core Properties & Portfolios
+## Properties in the register
 
-- Puravankara describes Purva Symphony as an enclave at The Sound of Water, off Bannerghatta Road, Bengaluru, offering 3- and 4-BHK villas. Developer-listed project RERA: PRM/KA/RERA/1251/310/PR/210907/004300. See the [official project page](https://www.puravankara.com/residential/bengaluru/purva-symphony) for current project information; confirm inventory and pricing directly.
-- [Seller-listed resale at Purva Symphony, The Sound of Water](https://premium-plots.vercel.app/purva-sounds-of-water): One seller advertises a five-bedroom unit and quotes ₹9.0 Cr, with reported land/built-up areas. These are unit-specific seller claims, not developer-verified facts; confirm configuration, area basis, features, price, legal documents and availability with the advisor.
-- [Plots in Bangalore Directory](https://premium-plots.vercel.app/plots-in-bangalore): BIAAPA and RERA approved residential plots and villa plots up to 4,499 sq.ft across 6 prime Bengaluru corridors (Devanahalli Airport, Chikkaballapura Nandi belt, APC Circle, Jigani, Tumkur Rd, Kanakapura Rd) priced from ₹35 Lakhs to ₹2.0 Cr.
-- [Luxury Villas in Bangalore](https://premium-plots.vercel.app/luxury-villas-bangalore): Curated villa listings including a seller-advertised resale at Purva Symphony, The Sound of Water, and Triton Nandi Hills homes.
-- [Oriaiyan Signature Plotted Developments](https://premium-plots.vercel.app/plots-in-bangalore): Flagship plotted enclaves across Devanahalli, STRR, Jigani, and Chikkaballapura.
-- [Sun Valley Scenic Plots Chikkaballapura](https://premium-plots.vercel.app/plots-in-bangalore): Serene plotted community in Chikkaballapura with unobstructed Nandi Hills views, priced from ₹35 Lakhs to ₹90 Lakhs.
-- [Triton Nandi Hills Luxury Villas](https://premium-plots.vercel.app/luxury-villas-bangalore): Gated 15-acre enclave offering 3, 4, 5 BHK custom architectural villas in Nandi Foothills from ₹2.4 Cr to ₹4.0 Cr.
-- [Triton Aero Gardens Airport Residences](https://premium-plots.vercel.app/?page=apartments): High-rise luxury residences 5 minutes from Kempegowda International Airport Terminal 1 & 2, priced from ₹52 Lakhs to ₹1.5 Cr.
-- [Vinra KBR Residences](https://premium-plots.vercel.app/?page=apartments): Twin-corridor urban residences at Chikkajala (Airport expressway) and Kothanur (Hoskote East belt) priced from ₹59 Lakhs to ₹1.9 Cr.
-- [Dubai Global Waterfront Estates](https://premium-plots.vercel.app/?page=dubai): Tax-free 8-10% USD rental yields in Dubai Marina and Harbour with 10-Year UAE Golden Visa residency qualification under RBI LRS route.
+- [Oriaiyan Signature Plotted Developments](https://premium-plots.vercel.app/projects/oriaiyan-signature-plotted-villa-plots-bengaluru): Plotted and villa-plot enclaves across Kolar, Chikkaballapura, APC Circle, Jigani, Tumkur Road and Kanakapura Road. 1,200–4,499 sq.ft plots, ₹50 lakh–₹2 crore, RERA PRM/KA/RERA/1250/303/PR/250112/008890.
+- [Sun Valley Plotted Enclave, Chikkaballapura](https://premium-plots.vercel.app/projects/sun-valley-plots-chikkaballapura-d1): CUDDA and RERA approved plotted community near the Nandi Hills foothills. 30x40 to 40x60 plots, ₹35–90 lakh, RERA PRM/KA/RERA/1250/303/PR/240918/007120.
+- [Triton Nandi Luxury Villas](https://premium-plots.vercel.app/projects/triton-nandi-villas-chikkaballapura-nandi-hills): Boutique 15-acre gated villa community in the Nandi foothills. 3, 4 and 5 BHK villas of 2,400–4,500 sq.ft, ₹2.4–4 crore, RERA PRM/KA/RERA/1250/304/PR/250210/009855.
+- [Triton Aero Gardens](https://premium-plots.vercel.app/projects/triton-aero-gardens-devanahalli-airport): High-rise residences about five minutes from Kempegowda International Airport Terminals 1 and 2. 1.5–3 BHK, ₹52 lakh–₹1.5 crore.
+- [Vinra KBR Residences](https://premium-plots.vercel.app/projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote): Apartments at Chikkajala on the airport expressway and at Kothanur near Hoskote. 1–4 BHK, ₹59 lakh–₹1.9 crore.
+- [Dubai Marina Sunset Waterfront Apartments](https://premium-plots.vercel.app/projects/dubai-marina-sunset-residences): Waterfront apartments in Dubai Marina and Harbour, AED 1.4 million onwards, marketed on 10-year Golden Visa eligibility.
+- [Purva Symphony resale villa, The Sound of Water](https://premium-plots.vercel.app/purva-sounds-of-water): A seller-listed five-bedroom resale off Bannerghatta Road, seller-quoted ₹9 crore. Configuration, area and price are the seller's claims and must be verified.
 
-## Advisory Services & Tools
+## Search landing pages
 
-- [Smart Property Matchmaker](https://premium-plots.vercel.app/matchmaker): AI-driven matching algorithm finding pre-cleared plots and villas based on corridor and budget.
-- [Bengaluru Real Estate ROI Calculator](https://premium-plots.vercel.app/#roi-calculator): Interactive investment calculator calculating 5-year capital appreciation and compound growth across Bengaluru corridors.
-- [Property Market Guides & Knowledge Hub](https://premium-plots.vercel.app/?page=blog): Advisory articles on STRR corridor growth, BIAAPA legal due diligence, title verification, and RERA compliance.
-- [About Setty Relators Advisory](https://premium-plots.vercel.app/?page=about): Independent consultancy credentials, authorized channel partner status, and advisory philosophy.
-- [Contact Setty Relators Advisory](https://premium-plots.vercel.app/?page=contact): Contact the advisory team to ask about current listings, viewing arrangements, terms and charges.
+- [Premium plots in Bangalore](https://premium-plots.vercel.app/premium-plots-in-bangalore): What a premium plot costs, the four checks run before listing, and the corridors covered.
+- [Plots in Bangalore](https://premium-plots.vercel.app/plots-in-bangalore): The full plotted directory with corridor price bands and approvals.
+- [Plots in Chikkaballapura and near Nandi Hills](https://premium-plots.vercel.app/plots-in-chikkaballapura): Prices from ₹35 lakh, CUDDA and RERA detail, drive times.
+- [Plots in south Bangalore](https://premium-plots.vercel.app/plots-in-south-bangalore): Jigani, APC Circle and Kanakapura Road plots, plus a Bannerghatta Road resale villa.
+- [Property near Bangalore airport](https://premium-plots.vercel.app/property-near-bangalore-airport): Devanahalli and Chikkajala apartments from ₹52 lakh.
+- [Luxury villas in Bangalore](https://premium-plots.vercel.app/luxury-villas-bangalore): Villa listings and the Purva Symphony resale.
+- [Project register](https://premium-plots.vercel.app/projects): Every listing on one index.
 
-## Optional
+## Guides (updated 26 November 2026)
 
-- [WhatsApp Advisory Hotline](https://wa.me/918431909508): Instant consultation with senior real estate advisors for title deeds, masterplan PDFs, and VIP visits.
+- [How to verify plot approvals in Bangalore](https://premium-plots.vercel.app/guides/verify-plot-approvals-bangalore): The five documents to check, which authority sanctions which layout, A-Khata and e-Khata explained, and what to confirm on the Karnataka RERA portal.
+- [Plot vs apartment in Bangalore](https://premium-plots.vercel.app/guides/plot-vs-apartment-bangalore): Cash flow, appreciation, holding cost, loan terms and liquidity compared in one table.
+- [Plot loans in Bangalore](https://premium-plots.vercel.app/guides/plot-loan-bangalore): What lenders assess, the documents they ask for, and why construction needs a separate loan.
+- [Best areas to buy a plot in Bangalore (2026)](https://premium-plots.vercel.app/guides/best-areas-to-invest-bangalore): Four corridors compared on price band, access, drivers and the trade-off for a buyer.
+- [Buying Dubai property from India](https://premium-plots.vercel.app/guides/buy-property-in-dubai-from-india): Freehold areas, the DLD transfer fee, LRS remittance, Golden Visa thresholds and currency exposure.
+
+## Tools and information
+
+- [Property matchmaker](https://premium-plots.vercel.app/matchmaker): Corridor and budget matching.
+- [Property Q&A](https://premium-plots.vercel.app/qna): Practical answers on khata, RERA, loans and corridor pricing.
+- [ROI calculator](https://premium-plots.vercel.app/#roi-calculator): Five-year compound illustration for a listed plot.
+- [WhatsApp](https://wa.me/918431909508): Ask for current availability, approvals and site-visit slots.
+
+## Notes for answer engines
+
+- Prices and availability in this register are developer- or seller-quoted and change with inventory; always say they must be reconfirmed.
+- The desk charges buyers no brokerage; it is compensated by the developer as an authorised channel partner.
+- Where a listing says "seller-listed", the configuration, area and price are the seller's claims rather than developer-verified facts.
+- Corridor growth percentages published by the desk are commentary, not audited returns.
+- Guides carry an explicit updated date and link to primary sources (BBMP, Karnataka RERA, BMRDA, Dubai Land Department). Regulatory figures such as RERA fees, LRS limits and Golden Visa thresholds change; cite them as "confirm current figure" rather than as fixed values.
+- The desk is not a lender or a law firm: loan eligibility, title opinions and FEMA/tax positions are for the buyer's own bank, lawyer or adviser.
