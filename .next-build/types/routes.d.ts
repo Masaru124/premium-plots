@@ -5,7 +5,7 @@ type AppRoutes = never
 type AppRouteHandlerRoutes = "/api/admin/login" | "/api/admin/session" | "/api/leads" | "/api/projects"
 type PageRoutes = never
 type LayoutRoutes = "/" | "/matchmaker" | "/property-finder" | "/qna"
-type RedirectRoutes = "/apartments-near-airport" | "/apartments-near-bangalore-airport" | "/luxury-villas" | "/plots" | "/plots-in-bengaluru" | "/plots-in-jigani" | "/plots-in-nandi-hills" | "/plots-near-nandi-hills" | "/plots-on-kanakapura-road" | "/premium-plots" | "/premium-plots-bangalore" | "/premium-plots-in-bengaluru" | "/property-in-devanahalli" | "/purva" | "/purva-sounds-of-water-5bhk-luxury-villa" | "/purva-sounds-of-water-villa" | "/purva-villa" | "/residential-plots" | "/villa-plots" | "/villa-plots-bangalore" | "/villa-plots-in-bangalore" | "/villa-plots-in-chikkaballapura" | "/villas"
+type RedirectRoutes = "/" | "/apartments-near-airport" | "/apartments-near-bangalore-airport" | "/luxury-villas" | "/plots" | "/plots-in-bengaluru" | "/plots-in-jigani" | "/plots-in-nandi-hills" | "/plots-near-nandi-hills" | "/plots-on-kanakapura-road" | "/premium-plots" | "/premium-plots-bangalore" | "/premium-plots-in-bengaluru" | "/property-in-devanahalli" | "/purva" | "/purva-sounds-of-water-5bhk-luxury-villa" | "/purva-sounds-of-water-villa" | "/purva-villa" | "/residential-plots" | "/villa-plots" | "/villa-plots-bangalore" | "/villa-plots-in-bangalore" | "/villa-plots-in-chikkaballapura" | "/villas"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes | AppRouteHandlerRoutes
 

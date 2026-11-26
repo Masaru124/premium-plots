@@ -15,7 +15,7 @@ const body = Plus_Jakarta_Sans({
   variable: '--font-body'
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.settyrelators.in';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

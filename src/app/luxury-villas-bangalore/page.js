@@ -1,7 +1,7 @@
 import React from 'react';
 import VillasLandingView from './VillasLandingView';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.settyrelators.in';
 const PAGE_URL = `${SITE_URL}/luxury-villas-bangalore`;
 
 export const metadata = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PlotsLandingView from './PlotsLandingView';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.settyrelators.in';
 const PAGE_URL = `${SITE_URL}/plots-in-bangalore`;
 
 export const metadata = {

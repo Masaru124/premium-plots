@@ -86,6 +86,14 @@ const nextConfig = {
       { source: '/apartments-near-bangalore-airport', destination: '/property-near-bangalore-airport', permanent: true },
       { source: '/property-in-devanahalli', destination: '/property-near-bangalore-airport', permanent: true },
       { source: '/apartments-near-airport', destination: '/property-near-bangalore-airport', permanent: true },
+      // The in-app drawer still uses ?page=about; a direct hit goes to the
+      // server-rendered page instead of a second copy of the home document.
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'page', value: 'about' }],
+        destination: '/about',
+        permanent: true,
+      },
     ];
   },
 };

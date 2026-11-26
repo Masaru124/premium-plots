@@ -52,4 +52,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://premium-plots.vercel.app/sitemap.xml
+Sitemap: https://www.settyrelators.in/sitemap.xml

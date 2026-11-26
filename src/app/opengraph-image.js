@@ -34,7 +34,7 @@ export default async function OpengraphImage() {
           </div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', color: 'rgba(251,251,253,0.55)', fontSize: 24 }}>
-          <span>settyrelators.com</span>
+          <span>www.settyrelators.in</span>
           <span>+91 84319 09508</span>
         </div>
       </div>

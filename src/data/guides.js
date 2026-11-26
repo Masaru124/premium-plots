@@ -202,7 +202,7 @@ export const GUIDES = [
   },
   {
     slug: 'plot-loan-bangalore',
-    listingSlugs: ['sun-valley-plots-chikkaballapura-d1','oriaiyan-signature-plotted-villa-plots-bengaluru','vinra-kbr-apartments-chikkajala-kothanur-hoskote'],
+    listingSlugs: ['sun-valley-plots-chikkaballapura-d1','oriaiyan-signature-plotted-villa-plots-bengaluru'],
     shortTitle: 'Plot loans',
     imageProject: 'oriaiyan-signature-plotted-villa-plots-bengaluru',
     title: 'Plot Loan in Bangalore: Eligibility, LTV and Documents',
@@ -398,7 +398,7 @@ export const GUIDES = [
   },
   {
     slug: 'buy-property-in-dubai-from-india',
-    listingSlugs: ['dubai-marina-sunset-residences','vinra-kbr-apartments-chikkajala-kothanur-hoskote','triton-aero-gardens-devanahalli-airport'],
+    listingSlugs: ['dubai-marina-sunset-residences'],
     shortTitle: 'Dubai from India',
     imageProject: 'dubai-marina-sunset-residences',
     title: 'Buying Dubai Property From India: Costs and Rules',

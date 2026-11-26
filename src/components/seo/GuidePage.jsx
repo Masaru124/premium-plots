@@ -26,7 +26,10 @@ export default function GuidePage({ guide, image, listings = [] }) {
           <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-16">
             <div className="lg:col-span-5">
               <p className="text-[15px] text-[var(--text-soft)]">
-                Setty Relators desk · Updated{' '}
+                <Link href="/about" className="underline decoration-[#D4AF37] decoration-2 underline-offset-4 hover:text-[#E9C349]">
+                  Setty Relators desk
+                </Link>{' '}
+                · Updated{' '}
                 <time dateTime={guide.updated}>
                   {new Date(guide.updated).toLocaleDateString('en-IN', {
                     day: 'numeric',

@@ -26,7 +26,7 @@ export default function Footer({ setActivePage }) {
     { label: 'The full register', href: '/?page=projects', page: 'projects' },
     { label: 'Property finder', href: '/?page=matchmaker', page: 'matchmaker' },
     { label: 'Market guides', href: '/?page=blog', page: 'blog' },
-    { label: 'The desk', href: '/?page=about', page: 'about' },
+    { label: 'The desk', href: '/about' },
     { label: 'Contact', href: '/?page=contact', page: 'contact' }
   ];
 

@@ -455,3 +455,92 @@ See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode de
  GET /matchmaker 200 in 28ms (next.js: 2ms, application-code: 26ms)
  GET /qna 200 in 27ms (next.js: 1605µs, application-code: 26ms)
  GET /property-finder 200 in 28ms (next.js: 1566µs, application-code: 26ms)
+✓ Compiled in 222ms
+✓ Compiled in 283ms
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+▲ Next.js 16.2.12 (Turbopack)
+- Local:         http://localhost:54987
+- Network:       http://192.168.29.46:54987
+- Environments: .env
+✓ Ready in 275ms
+
+ GET /sitemap.xml 200 in 109ms (next.js: 89ms, application-code: 20ms)
+ GET / 200 in 159ms (next.js: 54ms, application-code: 105ms)
+ GET /premium-plots-in-bangalore 200 in 116ms (next.js: 17ms, application-code: 99ms)
+ GET /plots-in-bangalore 200 in 64ms (next.js: 18ms, application-code: 47ms)
+ GET /luxury-villas-bangalore 200 in 60ms (next.js: 18ms, application-code: 42ms)
+ GET /purva-sounds-of-water 200 in 69ms (next.js: 17ms, application-code: 52ms)
+ GET /projects 200 in 132ms (next.js: 33ms, application-code: 98ms)
+ GET /guides 200 in 93ms (next.js: 27ms, application-code: 66ms)
+ GET /guides/verify-plot-approvals-bangalore 200 in 403ms (next.js: 282ms, generate-params: 261ms, application-code: 120ms)
+ GET /guides/plot-vs-apartment-bangalore 200 in 77ms (next.js: 9ms, generate-params: 7ms, application-code: 68ms)
+ GET /guides/plot-loan-bangalore 200 in 55ms (next.js: 2ms, generate-params: 17µs, application-code: 53ms)
+ GET /guides/best-areas-to-invest-bangalore 200 in 61ms (next.js: 1774µs, generate-params: 18µs, application-code: 60ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 59ms (next.js: 1940µs, generate-params: 18µs, application-code: 57ms)
+ GET /plots-in-chikkaballapura 200 in 137ms (next.js: 23ms, application-code: 114ms)
+ GET /property-near-bangalore-airport 200 in 69ms (next.js: 24ms, application-code: 45ms)
+ GET /plots-in-south-bangalore 200 in 76ms (next.js: 23ms, application-code: 53ms)
+ GET /projects/oriaiyan-signature-plotted-villa-plots-bengaluru 200 in 366ms (next.js: 270ms, generate-params: 242ms, application-code: 96ms)
+ GET /projects/sun-valley-plots-chikkaballapura-d1 200 in 63ms (next.js: 8ms, generate-params: 6ms, application-code: 55ms)
+ GET /projects/vinra-kbr-apartments-chikkajala-kothanur-hoskote 200 in 47ms (next.js: 1762µs, generate-params: 19µs, application-code: 45ms)
+ GET /projects/triton-aero-gardens-devanahalli-airport 200 in 50ms (next.js: 1735µs, generate-params: 27µs, application-code: 48ms)
+ GET /projects/triton-nandi-villas-chikkaballapura-nandi-hills 200 in 54ms (next.js: 1666µs, generate-params: 22µs, application-code: 52ms)
+ GET /projects/dubai-marina-sunset-residences 200 in 46ms (next.js: 1768µs, generate-params: 15µs, application-code: 44ms)
+ GET /projects/purva-sounds-of-water-5bhk-luxury-villa-bannerghatta-road 200 in 52ms (next.js: 8ms, generate-params: 6ms, application-code: 44ms)
+ GET /matchmaker 200 in 60ms (next.js: 19ms, application-code: 41ms)
+ GET /qna 200 in 62ms (next.js: 24ms, application-code: 38ms)
+ GET /property-finder 200 in 55ms (next.js: 20ms, application-code: 35ms)
+ GET /about 200 in 825ms (next.js: 719ms, application-code: 107ms)
+ GET /sitemap.xml 200 in 9ms (next.js: 3ms, application-code: 6ms)
+ GET /about 200 in 48ms (next.js: 4ms, application-code: 44ms)
+ GET /guides/buy-property-in-dubai-from-india 200 in 98ms (next.js: 16ms, generate-params: 12ms, application-code: 82ms)
+ GET /about 200 in 145ms (next.js: 57ms, application-code: 88ms)
+(node:20232) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/admin/session 200 in 89ms (next.js: 86ms, application-code: 3ms)
+ GET /api/projects 200 in 5.0s (next.js: 57ms, application-code: 4.9s)
+ GET /about 200 in 279ms (next.js: 222ms, application-code: 57ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 3.1s (next.js: 1846µs, application-code: 3.1s)
+ GET /about 200 in 346ms (next.js: 300ms, application-code: 46ms)
+ GET /api/admin/session 200 in 12ms (next.js: 7ms, application-code: 5ms)
+ GET /api/projects 200 in 2.9s (next.js: 2ms, application-code: 2.9s)
+ GET /about 200 in 278ms (next.js: 213ms, application-code: 66ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1473ms (next.js: 2ms, application-code: 1471ms)
+✓ Compiled in 239ms
+ GET /about 200 in 150ms (next.js: 38ms, application-code: 112ms)
+ GET /api/admin/session 200 in 26ms (next.js: 23ms, application-code: 4ms)
+ GET /api/projects 200 in 4.2s (next.js: 13ms, application-code: 4.1s)
+ GET /about 200 in 130ms (next.js: 87ms, application-code: 43ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.7s (next.js: 2ms, application-code: 2.7s)
+ GET /about 200 in 182ms (next.js: 132ms, application-code: 50ms)
+ GET /api/admin/session 200 in 8ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.8s (next.js: 3ms, application-code: 2.8s)
+ GET /about 200 in 179ms (next.js: 141ms, application-code: 39ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1484ms (next.js: 1672µs, application-code: 1482ms)
+✓ Compiled in 214ms
+ GET /about 200 in 126ms (next.js: 26ms, application-code: 100ms)
+ GET /api/admin/session 200 in 21ms (next.js: 18ms, application-code: 3ms)
+ GET /api/projects 200 in 4.1s (next.js: 11ms, application-code: 4.1s)
+ GET /about 200 in 138ms (next.js: 90ms, application-code: 48ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.7s (next.js: 1843µs, application-code: 2.7s)
+ GET /about 200 in 146ms (next.js: 98ms, application-code: 49ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 2.7s (next.js: 1701µs, application-code: 2.7s)
+ GET /about 200 in 155ms (next.js: 108ms, application-code: 47ms)
+ GET /api/admin/session 200 in 7ms (next.js: 5ms, application-code: 2ms)
+ GET /api/projects 200 in 1483ms (next.js: 2ms, application-code: 1481ms)
+  Reload env: .env
+✓ Compiled in 1ms
+✓ Compiled in 290ms

@@ -1,6 +1,6 @@
 import { INITIAL_PROJECTS } from '../data/plotsData.js';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://premium-plots.vercel.app';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.settyrelators.in';
 export const SITE_NAME = 'Setty Relators';
 export const WHATSAPP_NUMBER = '918431909508';
 export const PHONE_DISPLAY = '+91 84319 09508';

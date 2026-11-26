@@ -1,6 +1,7 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
   "/admin/page": "/admin",
   "/api/admin/login/route": "/api/admin/login",
   "/api/admin/session/route": "/api/admin/session",
