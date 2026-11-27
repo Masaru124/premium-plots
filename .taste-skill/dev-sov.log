@@ -544,3 +544,4 @@ See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode de
   Reload env: .env
 ✓ Compiled in 1ms
 ✓ Compiled in 290ms
+[?25h
